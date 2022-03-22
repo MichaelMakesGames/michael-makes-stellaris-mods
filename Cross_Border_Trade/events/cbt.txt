@@ -1,0 +1,139 @@
+namespace = cbt
+event = {
+	id = cbt.0
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			limit = {
+				has_star_flag = cbt_has_cross_border_trade_value
+			}
+			remove_star_flag = cbt_has_cross_border_trade_value
+			clear_variable = cbt_relative_network_size
+			clear_variable = cbt_proposed_relative_network_size
+			clear_variable = cbt_relative_network_size_multiplier
+			star = {
+				remove_modifier = cbt_trade_with_bigger_network
+				remove_modifier = cbt_trade_with_smaller_network
+				while = {
+					limit = {
+						has_deposit = d_trade_value_10
+					}
+					remove_deposit = d_trade_value_10
+				}
+			}
+		}
+		every_playable_country = {
+			every_system_within_border = {
+				limit = {
+					any_neighbor_system = {
+						owner = {
+							has_commercial_pact = prevprevprev
+						}
+					}
+				}
+				set_star_flag = cbt_has_cross_border_trade_value
+				set_variable = {
+					which = cbt_relative_network_size
+					value = 0
+				}
+				# add 10 trade value for each neighboring system
+				# and update cbt_relative_network_size to the max
+				every_neighbor_system = {
+					limit = {
+						owner = {
+							has_commercial_pact = prevprevprev
+						}
+					}
+					prev.star = {
+						add_deposit = d_trade_value_10
+					}
+					prev = {
+						set_variable = {
+							which = cbt_proposed_relative_network_size
+							value = prev.owner.trigger:trade_income
+						}
+						divide_variable = {
+							which = cbt_proposed_relative_network_size
+							value = owner.trigger:trade_income
+						}
+						if = {
+							limit = {
+								check_variable = {
+									which = cbt_proposed_relative_network_size
+									value > this.cbt_relative_network_size
+								}
+							}
+							set_variable = {
+								which = cbt_relative_network_size
+								value = this.cbt_proposed_relative_network_size
+							}
+						}
+					}
+				}
+				# round network size for nicer number
+				round_variable_to_closest = {
+					which = cbt_relative_network_size
+					value = 0.05
+				}
+				# apply modifier based on relative network size
+				if = {
+					limit = {
+						check_variable = {
+							which = cbt_relative_network_size
+							value > 1
+						}
+					}
+					set_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = cbt_relative_network_size
+					}
+					subtract_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = 1
+					}
+					multiply_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = 2
+					}
+					star = {
+						add_modifier = {
+							modifier = cbt_trade_with_bigger_network
+							multiplier = prev.cbt_relative_network_size_multiplier
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = cbt_relative_network_size
+							value < 1
+						}
+					}
+					set_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = cbt_relative_network_size
+					}
+					multiply_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = -1
+					}
+					change_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = 1
+					}
+					multiply_variable = {
+						which = cbt_relative_network_size_multiplier
+						value = 2
+					}
+					star = {
+						add_modifier = {
+							modifier = cbt_trade_with_smaller_network
+							multiplier = prev.cbt_relative_network_size_multiplier
+						}
+					}
+				}
+			}
+		}
+	}
+}

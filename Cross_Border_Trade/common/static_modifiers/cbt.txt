@@ -1,0 +1,9 @@
+cbt_trade_with_bigger_network = {
+	icon_frame = 1
+	trade_value_mult = 0.5
+}
+
+cbt_trade_with_smaller_network = {
+	icon_frame = 3
+	trade_value_mult = -0.5
+}
