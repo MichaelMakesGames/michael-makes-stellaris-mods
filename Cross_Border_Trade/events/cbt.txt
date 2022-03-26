@@ -4,10 +4,9 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		# clean up all existing border trade
 		every_system = {
-			limit = {
-				has_star_flag = cbt_has_cross_border_trade_value
-			}
+			limit = { has_star_flag = cbt_has_cross_border_trade_value }
 			remove_star_flag = cbt_has_cross_border_trade_value
 			clear_variable = cbt_relative_network_size
 			clear_variable = cbt_proposed_relative_network_size
@@ -16,38 +15,88 @@ event = {
 				remove_modifier = cbt_trade_with_bigger_network
 				remove_modifier = cbt_trade_with_smaller_network
 				while = {
-					limit = {
-						has_deposit = d_trade_value_10
-					}
+					limit = { has_deposit = d_trade_value_10 }
 					remove_deposit = d_trade_value_10
+				}
+				while = {
+					limit = { has_deposit = d_trade_value_5 }
+					remove_deposit = d_trade_value_5
+				}
+				while = {
+					limit = { has_deposit = d_trade_value_2 }
+					remove_deposit = d_trade_value_2
 				}
 			}
 		}
+
 		every_playable_country = {
+			limit = {
+				is_country_type = default
+				is_gestalt = no
+				not = { has_valid_civic = civic_inwards_perfection }
+			}
 			every_system_within_border = {
 				limit = {
 					any_neighbor_system = {
-						owner = {
-							has_commercial_pact = prevprevprev
-						}
+						exists = owner
+						owner = { is_country = prevprevprev }
 					}
 				}
-				set_star_flag = cbt_has_cross_border_trade_value
+
+				# init/reset relative network size
 				set_variable = {
 					which = cbt_relative_network_size
 					value = 0
 				}
-				# add 10 trade value for each neighboring system
-				# and update cbt_relative_network_size to the max
+
+				# for each valid system, add trade value and check relative network size
 				every_neighbor_system = {
 					limit = {
 						owner = {
-							has_commercial_pact = prevprevprev
+							not = { is_country = prevprevprev }
+							is_country_type = default
+							is_gestalt = no
+							not = { has_valid_civic = civic_inwards_perfection }
+							or = {
+								has_commercial_pact = prevprevprev
+								is_in_federation_with = prevprevprev
+								has_overlord = prevprevprev
+								is_overlord_to = prevprevprev
+								# subjects of same overlord
+								and = {
+									is_subject = yes
+									overlord = {
+										is_overlord_to = prevprevprev
+									}
+								}
+							}
 						}
 					}
-					prev.star = {
-						add_deposit = d_trade_value_10
+
+					# set flag
+					prev = { set_star_flag = cbt_has_cross_border_trade_value }
+
+					# add deposits depending on technology
+					if = {
+						limit = { prev.owner = { has_technology = tech_galactic_markets } }
+						prev.star = {
+							add_deposit = d_trade_value_10
+							add_deposit = d_trade_value_10
+						}
 					}
+					else_if = {
+						limit = { prev.owner = { has_technology = tech_interstellar_economics } }
+						prev.star = { add_deposit = d_trade_value_10 }
+					}
+					else_if = {
+						limit = { prev.owner = { has_technology = tech_space_trading } }
+						prev.star = { add_deposit = d_trade_value_5 }
+					}
+					else = {
+						prev.star = { add_deposit = d_trade_value_2 }
+					}
+
+					# propose new relative network size
 					prev = {
 						set_variable = {
 							which = cbt_proposed_relative_network_size
@@ -57,6 +106,8 @@ event = {
 							which = cbt_proposed_relative_network_size
 							value = owner.trigger:trade_income
 						}
+
+						# use new proposed relative network size if bigger
 						if = {
 							limit = {
 								check_variable = {
@@ -71,67 +122,79 @@ event = {
 						}
 					}
 				}
-				# round network size for nicer number
-				round_variable_to_closest = {
-					which = cbt_relative_network_size
-					value = 0.05
-				}
-				# apply modifier based on relative network size
+
+				# set modifier if flagged (ie border trade value was added)
 				if = {
-					limit = {
-						check_variable = {
-							which = cbt_relative_network_size
-							value > 1
+					limit = { has_star_flag = cbt_has_cross_border_trade_value }
+
+					# round network size for nicer number
+					round_variable_to_closest = {
+						which = cbt_relative_network_size
+						value = 0.05
+					}
+	
+					# apply modifier based on relative network size
+					if = {
+						limit = {
+							check_variable = {
+								which = cbt_relative_network_size
+								value > 1
+							}
+						}
+						set_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = cbt_relative_network_size
+						}
+						subtract_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = 1
+						}
+						multiply_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = 2
+						}
+						star = {
+							add_modifier = {
+								modifier = cbt_trade_with_bigger_network
+								multiplier = prev.cbt_relative_network_size_multiplier
+							}
 						}
 					}
-					set_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = cbt_relative_network_size
-					}
-					subtract_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = 1
-					}
-					multiply_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = 2
-					}
-					star = {
-						add_modifier = {
-							modifier = cbt_trade_with_bigger_network
-							multiplier = prev.cbt_relative_network_size_multiplier
+					else_if = {
+						limit = {
+							check_variable = {
+								which = cbt_relative_network_size
+								value < 1
+							}
+						}
+						set_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = cbt_relative_network_size
+						}
+						multiply_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = -1
+						}
+						change_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = 1
+						}
+						multiply_variable = {
+							which = cbt_relative_network_size_multiplier
+							value = 2
+						}
+						star = {
+							add_modifier = {
+								modifier = cbt_trade_with_smaller_network
+								multiplier = prev.cbt_relative_network_size_multiplier
+							}
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							which = cbt_relative_network_size
-							value < 1
-						}
-					}
-					set_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = cbt_relative_network_size
-					}
-					multiply_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = -1
-					}
-					change_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = 1
-					}
-					multiply_variable = {
-						which = cbt_relative_network_size_multiplier
-						value = 2
-					}
-					star = {
-						add_modifier = {
-							modifier = cbt_trade_with_smaller_network
-							multiplier = prev.cbt_relative_network_size_multiplier
-						}
-					}
+				# otherwise clear variables
+				else = {
+					clear_variable = cbt_proposed_relative_network_size
+					clear_variable = cbt_relative_network_size
 				}
 			}
 		}
