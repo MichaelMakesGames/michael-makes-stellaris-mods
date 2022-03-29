@@ -42,10 +42,10 @@ country_event = {
 					controller = {
 						is_homicidal = no # homicidals never surrender
 						is_gestalt = no # gestalts never surrender
-						# NAND = { # capitals never surrender (if controlled by owner)
-						# 	is_country = prev.owner
-						# 	prev = { is_capital = yes }
-						# }
+						NAND = { # capitals never surrender (if controlled by owner)
+							is_country = prev.owner
+							prev = { is_capital = yes }
+						}
 					}
 					# no one surrenders to homicidals or crisis
 					solar_system.starbase.controller = {
