@@ -1,0 +1,170 @@
+namespace = mmg_us
+
+# main event, checks resource balances and progresses shortages
+country_event = {
+	id = mmg_us.0
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_controlled_planet = {
+			limit = {
+				solar_system.starbase.controller = { is_hostile = prevprev }
+			}
+			set_planet_flag = mmg_us_under_siege
+			if = {
+				limit = { is_variable_set = mmg_us_under_siege_months }
+				change_variable = {
+					which = mmg_us_under_siege_months
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = mmg_us_under_siege_months
+					value = 1
+				}
+			}
+			mmg_us_check_for_and_update_resource_shortage = { RESOURCE = food }
+			mmg_us_check_for_and_update_resource_shortage = { RESOURCE = minerals }
+			mmg_us_check_for_and_update_resource_shortage = { RESOURCE = energy }
+			mmg_us_check_for_and_update_resource_shortage = { RESOURCE = consumer_goods }
+
+
+			# check for surrender
+			if = {
+				limit = {
+					# under siege for at least 1 year
+					check_variable = {
+						which = mmg_us_under_siege_months
+						value >= 12
+					}
+					# controller checks
+					controller = {
+						is_homicidal = no # homicidals never surrender
+						is_gestalt = no # gestalts never surrender
+						# NAND = { # capitals never surrender (if controlled by owner)
+						# 	is_country = prev.owner
+						# 	prev = { is_capital = yes }
+						# }
+					}
+					# no one surrenders to homicidals or crisis
+					solar_system.starbase.controller = {
+						is_homicidal = no
+						is_crisis_faction = no
+						NOT = { has_ascension_perk = ap_become_the_crisis }
+					}
+					# don't surrender if the starbase is in combat
+					solar_system.starbase.fleet = {
+						is_in_combat = no
+					}
+					# don't surrender if there's ongoing ground combat
+					has_ground_combat = no
+					
+				}
+				# 1% chance to surrender for each stability below 40
+				set_variable = {
+					which = mmg_us_surrender_chance
+					value = 40
+				}
+				subtract_variable = {
+					which = mmg_us_surrender_chance
+					value = trigger:planet_stability
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = mmg_us_surrender_chance
+							value > 0
+						}
+					}
+					if = {
+						limit = { NOT = { has_modifier = mmg_us_considering_surrender } }
+						add_modifier = {
+							modifier = mmg_us_considering_surrender
+						}
+					}
+					random = {
+						chance = mmg_us_surrender_chance
+						every_planet_army = {
+							remove_army = yes
+						}
+						set_controller = solar_system.starbase.controller
+						clear_variable = mmg_us_surrender_chance
+						clear_variable = mmg_us_under_siege_months
+						remove_modifier = mmg_us_considering_surrender
+						root = {
+							country_event = {
+								id = mmg_us.1
+								scopes = {
+									from = prev
+									fromfrom = prev.solar_system.starbase.controller
+								}
+							}
+						}
+						solar_system.starbase.controller = {
+							country_event = {
+								id = mmg_us.2
+								scopes = {
+									from = prev
+									fromfrom = root
+								}
+							}
+						}
+					}
+				}
+				else = {
+					remove_modifier = mmg_us_considering_surrender
+				}
+			}
+			else = {
+				clear_variable = mmg_us_surrender_chance
+				remove_modifier = mmg_us_considering_surrender
+			}
+		}
+
+		every_controlled_planet = {
+			limit = {
+				OR = {
+					has_planet_flag = mmg_us_food_shortage
+					has_planet_flag = mmg_us_minerals_shortage
+					has_planet_flag = mmg_us_energy_shortage
+					has_planet_flag = mmg_us_consumer_goods_shortage
+					has_planet_flag = mmg_us_under_siege
+				}
+				controller = { is_country = prev.solar_system.starbase.controller }
+			}
+			remove_planet_flag = mmg_us_under_siege
+			clear_variable = mmg_us_under_siege_months
+			clear_variable = mmg_us_surrender_chance
+			remove_modifier = mmg_us_considering_surrender
+			mmg_us_check_for_and_update_resource_shortage_no_siege = { RESOURCE = food }
+			mmg_us_check_for_and_update_resource_shortage_no_siege = { RESOURCE = minerals }
+			mmg_us_check_for_and_update_resource_shortage_no_siege = { RESOURCE = energy }
+			mmg_us_check_for_and_update_resource_shortage_no_siege = { RESOURCE = consumer_goods }
+		}
+	}
+}
+
+# notify the surrenderer
+# from = planet that surrendered
+# fromfrom = surrender receiver
+country_event = {
+	id = mmg_us.1
+	is_triggered_only = yes
+	title = "mmg_us_planet_surrendered_to_enemy_title"
+	desc = "mmg_us_planet_surrendered_to_enemy_desc"
+	picture = GFX_evt_burning_city
+	location = from
+}
+
+# notify the surrender receiver
+# from = planet that surrendered
+# fromfrom = surrenderer
+country_event = {
+	id = mmg_us.2
+	is_triggered_only = yes
+	title = "mmg_us_enemy_planet_surrendered_title"
+	desc = "mmg_us_enemy_planet_surrendered_desc"
+	picture = GFX_evt_victorious_army
+	location = from
+}
