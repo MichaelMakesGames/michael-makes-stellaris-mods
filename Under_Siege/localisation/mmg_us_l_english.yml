@@ -2,6 +2,8 @@
  mmg_us_considering_surrender: "Considering Surrender"
  mmg_us_considering_surrender_desc: "Due to a prolonged siege and low stability, this planet is considering surrendering to the enemy. It has a §R[This.Planet.mmg_us_surrender_chance]%§! chance to surrender each month."
 
+ mod_ROBOT_pop_happiness: "Synthetic Pop Happiness"
+
  mmg_us_planet_surrendered_to_enemy_title: "Planet Surrenders to Enemy"
  mmg_us_planet_surrendered_to_enemy_desc: "After a hard-fought siege, our planet §H[From.GetName]§! has surrendered to our enemy, the §H[FromFrom.GetName]§!."
 

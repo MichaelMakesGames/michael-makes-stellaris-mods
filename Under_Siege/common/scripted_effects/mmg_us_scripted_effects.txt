@@ -114,7 +114,7 @@ mmg_us_increase_resource_shortage = {
 }
 
 mmg_us_decrease_resource_shortage = {
-	clear_variable = mmg_$RESOURCE$_shortage_progress
+	clear_variable = mmg_us_$RESOURCE$_shortage_progress
 	if = {
 		limit = { has_modifier = mmg_us_$RESOURCE$_shortage_critical }
 		remove_modifier = mmg_us_$RESOURCE$_shortage_critical
