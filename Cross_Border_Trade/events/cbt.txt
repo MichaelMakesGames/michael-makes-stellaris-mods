@@ -52,6 +52,7 @@ event = {
 				# for each valid system, add trade value and check relative network size
 				every_neighbor_system = {
 					limit = {
+						exists = owner
 						owner = {
 							not = { is_country = prevprevprev }
 							is_country_type = default
@@ -193,8 +194,14 @@ event = {
 				}
 				# otherwise clear variables
 				else = {
-					clear_variable = cbt_proposed_relative_network_size
-					clear_variable = cbt_relative_network_size
+					if = {
+						limit = { is_variable_set = cbt_proposed_relative_network_size }
+						clear_variable = cbt_proposed_relative_network_size
+					}
+					if = {
+						limit = { is_variable_set = cbt_relative_network_size }
+						clear_variable = cbt_relative_network_size
+					}
 				}
 			}
 		}

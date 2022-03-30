@@ -1,9 +1,11 @@
 cbt_trade_with_bigger_network = {
 	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	trade_value_mult = 0.5
 }
 
 cbt_trade_with_smaller_network = {
 	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	trade_value_mult = -0.5
 }
