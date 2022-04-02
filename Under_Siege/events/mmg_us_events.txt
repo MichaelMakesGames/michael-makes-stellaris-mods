@@ -47,6 +47,13 @@ country_event = {
 							prev = { is_capital = yes }
 						}
 					}
+					# avoid edgecases: make sure there's a war, but not a total war
+					controller = {
+						any_war = {
+							is_total_war = no
+							any_war_participant = { is_country = prevprevprev.solar_system.starbase.controller }
+						}
+					}
 					# no one surrenders to homicidals or crisis
 					solar_system.starbase.controller = {
 						is_homicidal = no
@@ -167,4 +174,30 @@ country_event = {
 	desc = "mmg_us_enemy_planet_surrendered_desc"
 	picture = GFX_evt_victorious_army
 	location = from
+}
+
+# special events to clean up bugs, etc
+
+# any planets occupied in a total war are returned to owner
+# fixes bug resulting from planets surrendering during total war
+event = {
+	id = mmg_us.1000
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			every_owned_planet = {
+				limit = {
+					controller = {
+						NOT = { is_country = prevprev }
+						any_war = {
+							is_total_war = yes
+							any_war_participant = { is_country = prevprevprevprev }
+						}
+					}
+				}
+				set_controller = prev
+			}
+		}
+	}
 }
