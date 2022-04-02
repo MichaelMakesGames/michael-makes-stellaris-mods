@@ -108,6 +108,33 @@ event = {
 							value = owner.trigger:trade_income
 						}
 
+						# max of 10x
+						if = {
+							limit = {
+								check_variable = {
+									which = cbt_proposed_relative_network_size
+									value > 10
+								}
+							}
+							set_variable = {
+								which = cbt_proposed_relative_network_size
+								value = 10
+							}
+						}
+						# min of 0.1x
+						if = {
+							limit = {
+								check_variable = {
+									which = cbt_proposed_relative_network_size
+									value < 0.1
+								}
+							}
+							set_variable = {
+								which = cbt_proposed_relative_network_size
+								value = 0.1
+							}
+						}
+
 						# use new proposed relative network size if bigger
 						if = {
 							limit = {
