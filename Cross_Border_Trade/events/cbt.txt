@@ -103,9 +103,12 @@ event = {
 							which = cbt_proposed_relative_network_size
 							value = prev.owner.trigger:trade_income
 						}
-						divide_variable = {
-							which = cbt_proposed_relative_network_size
-							value = owner.trigger:trade_income
+						if = {
+							limit = { owner = { trade_income > 1 } }
+							divide_variable = {
+								which = cbt_proposed_relative_network_size
+								value = owner.trigger:trade_income
+							}
 						}
 
 						# max of 10x
