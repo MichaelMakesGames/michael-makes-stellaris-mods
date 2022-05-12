@@ -1,0 +1,35 @@
+mmgtrade_cbt_with_bigger_network = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
+	trade_value_mult = 1.0
+}
+
+mmgtrade_long_term_cbt = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	trade_value_mult = 0.05
+}
+
+mmgtrade_cbt_early_trading = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	trade_value_add = 2
+}
+
+mmgtrade_cbt_space_trading = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	trade_value_add = 5
+}
+
+mmgtrade_cbt_interstellar_economics = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	trade_value_add = 10
+}
+
+mmgtrade_cbt_galactic_markets = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	trade_value_add = 20
+}

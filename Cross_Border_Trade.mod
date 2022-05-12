@@ -4,7 +4,7 @@ tags={
 	"economy"
 	"gameplay"
 }
-version="1.1.3"
-supported_version="3.3.*"
+version="2.0.0"
+supported_version="3.4.*"
 path="/home/mscottmoore/.local/share/Paradox Interactive/Stellaris/mod/Cross_Border_Trade"
 remote_file_id="2780180614"

@@ -1,0 +1,38 @@
+Borders produce trade value! (For Stellaris 3.4.*)
+
+Commercial pacts too static? Shouldn't smaller empires benefit more from trading with bigger empires? This mod aims to address both of these questions.
+
+Borders with Commercial Pacts produce dynamic Trade Value, which needs to be collected like other Trade Value. Bigger borders produce more Trade Value, and trading with bigger trade network gives you a bonus. The value will fluctuate with time and the fate of your neighbors.
+
+[h1]Details[/h1]
+Another country is considered a trading partner if you have a Commercial Pact with them, they are your overlord, they are your subject, you share the same overlord, or you are members of the same federation. Gestalt empires, inward perfectionists, fallen empires, and the great khan are excluded.
+
+Each system gets 2/5/10/20 Trade Value (depending on tech: none/Offworld Trade Companies/Interstellar Economics/Galactic Markets) added to its star, per bordering system owned by a trading partner.
+
+If your neighbor's trade network is bigger than yours, you get a proportional bonus. For example, if their network is twice as big, you get twice as much trade value. Only collected trade counts, so if your neighbor's network is disrupted by war or pirates, your bonus will decrease. The maximum is a 10x bonus.
+
+A system with long-term cross border trade will get a bonus of +5% trade value per year, reaching a maximum of +100% after 20 years.
+
+Border Trade Value is updated only at the start of each month. That means changes to Commercial Pacts, borders, etc will not update Trade Value until the next month.
+
+This does not modify the vanilla bonuses from Commercial Pacts; border trade value is in addition to vanilla effects.
+
+[h1]Compatibility[/h1]
+[list]
+  [*] For Stellaris 3.4.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998102]3.3 version here[/url])
+  [*] NOT achievement compatible
+  [*] Can be added to an existing game
+  [*] Can be removed from an existing game. You might see "empty" modifiers on stars
+  [*] Should be compatible with all other mods, unless they remove vanilla trade tech
+[/list]
+
+[h1]My Other Mods[/h1]
+[list]
+ [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2786268200]Under Siege: adds siege warfare to Stellaris[/url]
+[/list]
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods

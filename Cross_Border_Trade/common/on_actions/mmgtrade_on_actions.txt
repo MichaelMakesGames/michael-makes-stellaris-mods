@@ -1,5 +1,5 @@
 on_monthly_pulse = {
 	events = {
-		cbt.0
+		mmgtrade.1
 	}
 }
