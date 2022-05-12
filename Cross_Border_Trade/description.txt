@@ -1,0 +1,38 @@
+[h1]Legacy Version for Stellaris 3.3[/h1]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2780180614]Most recent version here.[/url]
+
+Borders produce trade value! (For Stellaris 3.3.*)
+
+Commercial pacts too simple? Shouldn't smaller empires benefit more from trading with bigger empires? This mod aims to address both of these concerns.
+
+Borders with Commercial Pacts produce dynamic Trade Value, which needs to be collected like other Trade Value. Bigger borders produce more Trade Value, and trading with bigger trade network gives you a bonus. The value will fluctuate with time and the fate of your neighbors.
+
+[h1]Details[/h1]
+Another country is considered a trading partner if you have a Commercial Pact with them, they are your overlord, they are your subject, you share the same overlord, or you are members of the same federation. Gestalt empires, inward perfectionists, fallen empires, and the great khan are excluded.
+
+Each system gets 2/5/10/20 Trade Value (depending on tech) added to its star, per bordering system owned by a trading partner. This is then modified by the relative trade value of the 2 empires. If their total collected Trade Value is twice as big as yours, you get 20 Trade Value and they get 5 Trade Value. If a single system borders multiple trading partners, the biggest one determines your bonus/penalty.
+
+Trade Value is updated only at the start of each month. That means changes to Commercial Pacts, borders, etc will not update Trade Value until the next month.
+
+This does not modify the vanilla bonuses from Commercial Pacts; you still get a flat increase to your trade value.
+
+[h1]Compatibility[/h1]
+[list]
+  [*] For Stellaris 3.3.*
+  [*] NOT achievement compatible
+  [*] Can be added to an existing game
+  [*] Can be removed from an existing game, but current Border Trade value will remain and never be removed
+  [*] Should be compatible with all other mods
+  [*] There might be some unintended interactions with other mods that add Trade Value to stars (but I don't know of any mods that do)
+[/list]
+
+[h1]My Other Mods[/h1]
+[list]
+ [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2786268200]Under Siege: adds siege warfare to Stellaris[/url]
+[/list]
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods
