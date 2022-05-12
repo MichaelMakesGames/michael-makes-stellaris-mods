@@ -1,5 +1,5 @@
 on_monthly_pulse_country = {
 	events = {
-		mmg_us.0
+		mmgsiege.1
 	}
 }

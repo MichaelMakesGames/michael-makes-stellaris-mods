@@ -1,25 +1,25 @@
-mmg_us_food_shortage_minor = {
+mmgsiege_food_shortage_minor = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
 	biological_pop_happiness = -0.10
 	BIOLOGICAL_pop_growth_speed_reduction = 0.10
 	planet_pop_assembly_organic_reduction = 0.10
 }
-mmg_us_food_shortage_moderate = {
+mmgsiege_food_shortage_moderate = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
 	biological_pop_happiness = -0.25
 	BIOLOGICAL_pop_growth_speed_reduction = 0.25
 	planet_pop_assembly_organic_reduction = 0.25
 }
-mmg_us_food_shortage_major = {
+mmgsiege_food_shortage_major = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
 	biological_pop_happiness = -0.50
 	BIOLOGICAL_pop_growth_speed_reduction = 0.50
 	planet_pop_assembly_organic_reduction = 0.50
 }
-mmg_us_food_shortage_critical = {
+mmgsiege_food_shortage_critical = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
 	biological_pop_happiness = -1.00
@@ -27,7 +27,7 @@ mmg_us_food_shortage_critical = {
 	planet_pop_assembly_organic_reduction = 1.00
 }
 
-mmg_us_minerals_shortage_minor = {
+mmgsiege_minerals_shortage_minor = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	lithoid_pop_happiness = -0.10
@@ -35,7 +35,7 @@ mmg_us_minerals_shortage_minor = {
 	planet_metallurgists_produces_mult = -0.05
 	planet_artisans_produces_mult = -0.05
 }
-mmg_us_minerals_shortage_moderate = {
+mmgsiege_minerals_shortage_moderate = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	lithoid_pop_happiness = -0.25
@@ -43,7 +43,7 @@ mmg_us_minerals_shortage_moderate = {
 	planet_metallurgists_produces_mult = -0.10
 	planet_artisans_produces_mult = -0.10
 }
-mmg_us_minerals_shortage_major = {
+mmgsiege_minerals_shortage_major = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	lithoid_pop_happiness = -0.50
@@ -51,7 +51,7 @@ mmg_us_minerals_shortage_major = {
 	planet_metallurgists_produces_mult = -0.25
 	planet_artisans_produces_mult = -0.25
 }
-mmg_us_minerals_shortage_critical = {
+mmgsiege_minerals_shortage_critical = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	lithoid_pop_happiness = -1.00
@@ -60,27 +60,27 @@ mmg_us_minerals_shortage_critical = {
 	planet_artisans_produces_mult = -0.50
 }
 
-mmg_us_energy_shortage_minor = {
+mmgsiege_energy_shortage_minor = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	ROBOT_pop_happiness = -0.10
 	planet_pop_assembly_reduction = 0.10
 }
-mmg_us_energy_shortage_moderate = {
+mmgsiege_energy_shortage_moderate = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	ROBOT_pop_happiness = -0.25
 	planet_pop_assembly_reduction = 0.25
 	pop_happiness = -0.05
 }
-mmg_us_energy_shortage_major = {
+mmgsiege_energy_shortage_major = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	ROBOT_pop_happiness = -0.50
 	planet_pop_assembly_reduction = 0.50
 	pop_happiness = -0.10
 }
-mmg_us_energy_shortage_critical = {
+mmgsiege_energy_shortage_critical = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	ROBOT_pop_happiness = -1.00
@@ -88,20 +88,20 @@ mmg_us_energy_shortage_critical = {
 	pop_happiness = -0.25
 }
 
-mmg_us_consumer_goods_shortage_minor = {
+mmgsiege_consumer_goods_shortage_minor = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	pop_cat_ruler_happiness = -0.05
 	pop_cat_bio_trophy_happiness = -0.05
 }
-mmg_us_consumer_goods_shortage_moderate = {
+mmgsiege_consumer_goods_shortage_moderate = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	pop_cat_ruler_happiness = -0.10
 	pop_cat_bio_trophy_happiness = -0.10
 	pop_cat_specialist_happiness = -0.05
 }
-mmg_us_consumer_goods_shortage_major = {
+mmgsiege_consumer_goods_shortage_major = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	pop_cat_ruler_happiness = -0.25
@@ -109,7 +109,7 @@ mmg_us_consumer_goods_shortage_major = {
 	pop_cat_specialist_happiness = -0.10
 	pop_cat_worker_happiness = -0.05
 }
-mmg_us_consumer_goods_shortage_critical = {
+mmgsiege_consumer_goods_shortage_critical = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	pop_cat_ruler_happiness = -0.50
@@ -118,7 +118,7 @@ mmg_us_consumer_goods_shortage_critical = {
 	pop_cat_worker_happiness = -0.10
 }
 
-mmg_us_considering_surrender = {
+mmgsiege_considering_surrender = {
 	icon_frame = 3
-	icon = "gfx/interface/icons/planet_modifiers/mmg_us_pm_surrender.dds"
+	icon = "gfx/interface/icons/planet_modifiers/mmgsiege_pm_surrender.dds"
 }

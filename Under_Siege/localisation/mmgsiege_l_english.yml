@@ -1,0 +1,47 @@
+﻿l_english:
+ mmgsiege_considering_surrender: "Considering Surrender"
+ mmgsiege_considering_surrender_desc: "Due to a prolonged siege and low stability, this planet is considering surrendering to the enemy. It has a §R[This.Planet.mmgsiege_surrender_chance]%§! chance to surrender each month."
+
+ mod_ROBOT_pop_happiness: "Synthetic Pop Happiness"
+
+ mmgsiege_planet_surrendered_to_enemy_title: "Planet Surrenders to Enemy"
+ mmgsiege_planet_surrendered_to_enemy_desc: "After a hard-fought siege, our planet §H[From.GetName]§! has surrendered to our enemy, the §H[FromFrom.GetName]§!."
+
+ mmgsiege_enemy_planet_surrendered_title: "Enemy Planet Surrenders"
+ mmgsiege_enemy_planet_surrendered_desc: "After a prolonged siege, the [FromFrom.GetAdjective] forces on §H[From.GetName]§! have recognized their inevitable defeat and surrendered."
+
+ mmgsiege_food_shortage_minor: "Minor Food Shortage"
+ mmgsiege_food_shortage_minor_desc: "Cut off from outside support, this colony is not able to produce enough food to support itself."
+ mmgsiege_food_shortage_moderate: "Moderate Food Shortage"
+ mmgsiege_food_shortage_moderate_desc: "Cut off from outside support, this colony is not able to produce enough food to support itself."
+ mmgsiege_food_shortage_major: "Major Food Shortage"
+ mmgsiege_food_shortage_major_desc: "Cut off from outside support, this colony is not able to produce enough food to support itself."
+ mmgsiege_food_shortage_critical: "Critical Food Shortage"
+ mmgsiege_food_shortage_critical_desc: "Cut off from outside support, this colony is not able to produce enough food to support itself."
+
+ mmgsiege_minerals_shortage_minor: "Minor Minerals Shortage"
+ mmgsiege_minerals_shortage_minor_desc: "Cut off from outside support, this colony is not able to produce enough minerals to support itself."
+ mmgsiege_minerals_shortage_moderate: "Moderate Minerals Shortage"
+ mmgsiege_minerals_shortage_moderate_desc: "Cut off from outside support, this colony is not able to produce enough minerals to support itself."
+ mmgsiege_minerals_shortage_major: "Major Minerals Shortage"
+ mmgsiege_minerals_shortage_major_desc: "Cut off from outside support, this colony is not able to produce enough minerals to support itself."
+ mmgsiege_minerals_shortage_critical: "Critical Minerals Shortage"
+ mmgsiege_minerals_shortage_critical_desc: "Cut off from outside support, this colony is not able to produce enough minerals to support itself."
+
+ mmgsiege_energy_shortage_minor: "Minor Energy Shortage"
+ mmgsiege_energy_shortage_minor_desc: "Cut off from outside support, this colony is not able to produce enough energy to support itself."
+ mmgsiege_energy_shortage_moderate: "Moderate Energy Shortage"
+ mmgsiege_energy_shortage_moderate_desc: "Cut off from outside support, this colony is not able to produce enough energy to support itself."
+ mmgsiege_energy_shortage_major: "Major Energy Shortage"
+ mmgsiege_energy_shortage_major_desc: "Cut off from outside support, this colony is not able to produce enough energy to support itself."
+ mmgsiege_energy_shortage_critical: "Critical Energy Shortage"
+ mmgsiege_energy_shortage_critical_desc: "Cut off from outside support, this colony is not able to produce enough energy to support itself."
+
+ mmgsiege_consumer_goods_shortage_minor: "Minor Consumer Goods Shortage"
+ mmgsiege_consumer_goods_shortage_minor_desc: "Cut off from outside support, this colony is not able to produce enough consumer goods to support itself."
+ mmgsiege_consumer_goods_shortage_moderate: "Moderate Consumer Goods Shortage"
+ mmgsiege_consumer_goods_shortage_moderate_desc: "Cut off from outside support, this colony is not able to produce enough consumer goods to support itself."
+ mmgsiege_consumer_goods_shortage_major: "Major Consumer Goods Shortage"
+ mmgsiege_consumer_goods_shortage_major_desc: "Cut off from outside support, this colony is not able to produce enough consumer goods to support itself."
+ mmgsiege_consumer_goods_shortage_critical: "Critical Consumer Goods Shortage"
+ mmgsiege_consumer_goods_shortage_critical_desc: "Cut off from outside support, this colony is not able to produce enough consumer goods to support itself."

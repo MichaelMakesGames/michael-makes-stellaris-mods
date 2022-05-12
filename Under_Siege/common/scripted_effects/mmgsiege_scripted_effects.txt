@@ -1,0 +1,141 @@
+mmgsiege_check_for_and_update_resource_shortage = {
+	# store these in variables for easier usage and so we don't recalc them
+	# (docs warn that this trigger is expensive)
+	export_trigger_value_to_variable = {
+		trigger = planet_resource_compare
+		parameters = {
+			resource = $RESOURCE$
+			type = balance
+		}
+		variable = mmgsiege_$RESOURCE$_balance
+	}
+	export_trigger_value_to_variable = {
+		trigger = planet_resource_compare
+		parameters = {
+			resource = $RESOURCE$
+			type = upkeep
+		}
+		variable = mmgsiege_$RESOURCE$_upkeep
+	}
+
+	# check is balance is negative
+	if = {
+		limit = {
+			check_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value < 0
+			}
+		}
+		# initialize variable if needed
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_$RESOURCE$_shortage_progress } }
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_shortage_progress
+				value = 0
+			}
+		}
+		# add progress
+		# balance is negative, so we subtract the balance to add it to the progress
+		subtract_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress
+			value = mmgsiege_$RESOURCE$_balance
+		}
+		# check progress
+		if = {
+			limit = {
+				check_variable = {
+					which = mmgsiege_$RESOURCE$_shortage_progress
+					value >= mmgsiege_$RESOURCE$_upkeep
+				}
+			}
+			mmgsiege_increase_resource_shortage = { RESOURCE = $RESOURCE$ }
+		}
+	}
+	# positive balance, reset progress and decrease or remove modifier
+	else = {
+		mmgsiege_decrease_resource_shortage = { RESOURCE = $RESOURCE$ }
+	}
+
+	# clean up these temp variables
+	clear_variable = mmgsiege_$RESOURCE$_balance
+	clear_variable = mmgsiege_$RESOURCE$_upkeep
+}
+
+# decrease shortages on planets without siege, never increase
+mmgsiege_check_for_and_update_resource_shortage_no_siege = {
+	if = {
+		# decrease/remove modifier if planet is positive or empire is positive
+		limit = {
+			OR = {
+				planet_resource_compare = {
+					resource = $RESOURCE$
+					type = balance
+					value >= 0
+				}
+				owner = {
+					OR = {
+						NOT = { has_deficit = $RESOURCE$ }
+						is_ai = yes # let's be nicer to AI to prevent post-war economic death spirals
+					}
+				}
+			}
+		}
+		mmgsiege_decrease_resource_shortage = { RESOURCE = $RESOURCE$ }
+	}
+}
+
+mmgsiege_increase_resource_shortage = {
+	# subtract upkeep from progress (keep leftover progres for next level)
+	subtract_variable = {
+		which = mmgsiege_$RESOURCE$_shortage_progress
+		value = mmgsiege_$RESOURCE$_upkeep
+	}
+	# increase or add modifier
+	if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_major }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_major
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_critical }
+	}
+	else_if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_moderate }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_moderate
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_major }
+	}
+	else_if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_minor }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_minor
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_moderate }
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = mmgsiege_$RESOURCE$_shortage_critical } }
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_minor }
+		set_planet_flag = mmgsiege_$RESOURCE$_shortage
+	}
+}
+
+mmgsiege_decrease_resource_shortage = {
+	if = {
+		limit = { is_variable_set = mmgsiege_$RESOURCE$_shortage_progress }
+		clear_variable = mmgsiege_$RESOURCE$_shortage_progress
+	}
+	if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_critical }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_critical
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_major }
+	}
+	else_if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_major }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_major
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_moderate }
+	}
+	else_if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_moderate }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_moderate
+		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_minor }
+	}
+	else_if = {
+		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_minor }
+		remove_modifier = mmgsiege_$RESOURCE$_shortage_minor
+		remove_planet_flag = mmgsiege_$RESOURCE$_shortage
+	}
+}
