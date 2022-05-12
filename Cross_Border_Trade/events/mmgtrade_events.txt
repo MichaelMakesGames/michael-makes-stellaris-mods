@@ -14,7 +14,10 @@ event = {
 			if = {
 				# only clear months if there's no owner so that we can keep incrementing it
 				# conditionally cleared later in event for owned systems
-				limit = { NOT = { exists = owner } }
+				limit = {
+					NOT = { exists = owner }
+					is_variable_set = mmgtrade_consecutive_cbt_months
+				}
 				clear_variable = mmgtrade_consecutive_cbt_months
 			}
 			# clear all the modifiers
@@ -249,7 +252,10 @@ event = {
 				}
 				else = {
 					# no trade, clean up variables including mmgtrade_consecutive_cbt_months
-					clear_variable = mmgtrade_consecutive_cbt_months
+					if = {
+						limit = { is_variable_set = mmgtrade_consecutive_cbt_months }
+						clear_variable = mmgtrade_consecutive_cbt_months
+					}
 					clear_variable = mmgtrade_relative_network_size
 					clear_variable = mmgtrade_num_cbt_systems
 				}
