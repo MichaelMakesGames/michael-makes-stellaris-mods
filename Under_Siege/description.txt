@@ -44,6 +44,9 @@ Known issue: catalytic empires will receive a metallurgist penalty when they hav
   [*] Can be added to an existing game
   [*] Can be removed from an existing game, but you might see empty modifiers left over on planets
   [*] Should be compatible with all other mods
+  [list]
+    [*] Exception: Occupied Resources adds its own conflicting siege mechanics. Use one or the other, not both.
+  [/list]
 [/list]
 
 [h1]My Other Mods[/h1]
