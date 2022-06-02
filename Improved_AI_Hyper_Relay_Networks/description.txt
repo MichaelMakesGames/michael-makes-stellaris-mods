@@ -1,0 +1,41 @@
+Smarter AI for building hyper relays (For 3.4.*)
+
+Does the AI seem a little haphazard when building hyper relays? And then builds them more-or-less everywhere? This mod fixes that.
+
+With this mod, AI empires build proper networks starting at capitals, branching to sector capitals, then to other colonies.
+
+[h1]Details[/h1]
+Every year, this mod finds and marks the shortest path from capitals to sector capitals, and from sector capitals to sector colonies. Paths to wormholes/gateways/catapults and fortresses bordering rivals are also found (if in a sector then from the sector capital, otherwise from the empire capital). A path along an existing relay is considered twice as short. The AI then only builds relays in systems that border an existing relay they own and are on one of those paths, with the following exceptions:
+[list]
+ [*]The empire's capital (this let's them get their network started)
+ [*]Sector capitals that are at least 10 years old and have no path to the capital (this let's them build a separate network if they have a non-contiguous empire, for example on the other side of a wormhole)
+ [*]Border systems that are adjacent to another owned relay (this encourages AI to connect their networks, and can be useful for war)
+[/list]
+
+Overlords will still build in subjects, but heavily prioritize themselves.
+
+This has been tested for performance on a huge galaxy and has no noticeable impact.
+
+[h1]Compatibility[/h1]
+[list]
+  [*] For Stellaris 3.4.*
+  [*] NOT achievement compatible
+  [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
+  [*] Can be removed from an existing game
+  [*] Should be compatible with all other mods, except other mods that override hyper relays
+  [list]
+    [*] Note for patch makers: this only overrides the hyper_relay megastructure, and within that, only changes the ai_weight
+  [/list]
+[/list]
+
+[h1]My Other Mods[/h1]
+[list]
+ [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2780180614]Cross Border Trade: borders generate trade value[/url]
+ [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2786268200]Under Siege: adds siege warfare to Stellaris[/url]
+[/list]
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods
