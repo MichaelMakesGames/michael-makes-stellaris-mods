@@ -22,6 +22,7 @@ This has been tested for performance on a huge galaxy and has no noticeable impa
   [*] NOT achievement compatible
   [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
   [*] Can be removed from an existing game
+  [*] Compatible with Gigastructural Engineering and More (load order does not matter)
   [*] Should be compatible with all other mods, except other mods that override hyper relays
   [list]
     [*] Note for patch makers: this only overrides the hyper_relay megastructure, and within that, only changes the ai_weight
