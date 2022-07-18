@@ -8,7 +8,9 @@ country_event = {
 	immediate = {
 		every_controlled_planet = {
 			limit = {
-				exists = solar_system # sometimes context switch to solar_system fails... why?
+				exists = solar_system
+				exists = solar_system.starbase
+				exists = solar_system.starbase.controller
 				solar_system.starbase.controller = { is_hostile = prevprev }
 			}
 			set_planet_flag = mmgsiege_under_siege
@@ -184,4 +186,175 @@ country_event = {
 	desc = "mmgsiege_enemy_planet_surrendered_desc"
 	picture = GFX_evt_victorious_army
 	location = from
+}
+
+# stockpile events
+# calc stockpile max
+planet_event = {
+	id = mmgsiege.11
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# initialize
+		set_variable = {
+			which = mmgsiege_stockpile_maximum_from_capital
+			value = 0
+		}
+
+		# capital tier
+		if = {
+			limit = { has_fully_upgraded_capital = yes }
+			change_variable = {
+				which = mmgsiege_stockpile_maximum_from_capital
+				value = 1000
+			}
+		}
+		else_if = {
+			limit = { has_major_upgraded_capital = yes }
+			change_variable = {
+				which = mmgsiege_stockpile_maximum_from_capital
+				value = 500
+			}
+		}
+		else_if = {
+			limit = { has_upgraded_capital = yes }
+			change_variable = {
+				which = mmgsiege_stockpile_maximum_from_capital
+				value = 300
+			}
+		}
+		else = {
+			change_variable = {
+				which = mmgsiege_stockpile_maximum_from_capital
+				value = 100
+			}
+		}
+
+		set_variable = {
+			which = mmgsiege_stockpile_maximum
+			value = mmgsiege_stockpile_maximum_from_capital
+		}
+
+		# other buildings
+		# resource silo
+		mmgsiege_increase_stockpile_max_from_buildings = {
+			BUILDING_TYPE = building_resource_silo
+			MULTIPLIER = 1000
+		}
+		# stronghold
+		mmgsiege_increase_stockpile_max_from_buildings = {
+			BUILDING_TYPE = building_stronghold
+			MULTIPLIER = 100
+		}
+		# fortress
+		mmgsiege_increase_stockpile_max_from_buildings = {
+			BUILDING_TYPE = building_fortress
+			MULTIPLIER = 200
+		}
+
+		# reduce stockpiles if above max
+		if = {
+			limit = {
+				is_variable_set = mmgsiege_energy_stockpile
+				check_variable = {
+					which = mmgsiege_energy_stockpile
+					value > mmgsiege_stockpile_maximum
+				}
+			}
+			set_variable = {
+				which = mmgsiege_energy_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+		}
+		if = {
+			limit = {
+				is_variable_set = mmgsiege_minerals_stockpile
+				check_variable = {
+					which = mmgsiege_minerals_stockpile
+					value > mmgsiege_stockpile_maximum
+				}
+			}
+			set_variable = {
+				which = mmgsiege_minerals_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+		}
+		if = {
+			limit = {
+				is_variable_set = mmgsiege_food_stockpile
+				check_variable = {
+					which = mmgsiege_food_stockpile
+					value > mmgsiege_stockpile_maximum
+				}
+			}
+			set_variable = {
+				which = mmgsiege_food_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+		}
+		if = {
+			limit = {
+				is_variable_set = mmgsiege_consumer_goods_stockpile
+				check_variable = {
+					which = mmgsiege_consumer_goods_stockpile
+					value > mmgsiege_stockpile_maximum
+				}
+			}
+			set_variable = {
+				which = mmgsiege_consumer_goods_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+		}
+	}
+}
+
+# init stockpile vars
+planet_event = {
+	id = mmgsiege.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_energy_stockpile } }
+			set_variable = {
+				which = mmgsiege_energy_stockpile
+				value = 0
+			}
+		}
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_minerals_stockpile } }
+			set_variable = {
+				which = mmgsiege_minerals_stockpile
+				value = 0
+			}
+		}
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_food_stockpile } }
+			set_variable = {
+				which = mmgsiege_food_stockpile
+				value = 0
+			}
+		}
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_consumer_goods_stockpile } }
+			set_variable = {
+				which = mmgsiege_consumer_goods_stockpile
+				value = 0
+			}
+		}
+	}
+}
+
+event = {
+	id = mmgsiege.13
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			every_owned_planet = {
+				planet_event = { id = mmgsiege.11 } # init stockpile maximum
+				planet_event = { id = mmgsiege.12 } # init stockpile resources
+			}
+		}
+	}
 }

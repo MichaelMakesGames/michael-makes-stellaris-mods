@@ -1,0 +1,288 @@
+mmgsiege_decision_manage_stockpile = {
+	owned_planets_only = yes
+	potential = {
+		NOT = { has_planet_flag = mmgsiege_managing_stockpile }
+	}
+	effect = {
+		custom_tooltip = "mmgsiege_decision_manage_stockpile_effect"
+		hidden_effect = {
+			set_timed_planet_flag = {
+				flag = mmgsiege_managing_stockpile
+				days = 360
+			}
+		}
+	}
+	# AI doesn't use manual stockpile decisions
+	ai_weight = {
+		weight = 0
+	}
+}
+
+mmgsiege_decision_close_stockpile = {
+	owned_planets_only = yes
+	potential = {
+		has_planet_flag = mmgsiege_managing_stockpile
+	}
+	effect = {
+		custom_tooltip = "mmgsiege_decision_close_stockpile_effect"
+		hidden_effect = {
+			remove_planet_flag = mmgsiege_managing_stockpile
+		}
+	}
+	# if AI conquers a planet with an open stockpile, close it quickly
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+mmgsiege_decision_stockpile_energy_100 = {
+	owned_planets_only = yes
+	potential = {
+		OR = {
+			has_planet_flag = mmgsiege_managing_stockpile
+		}
+	}
+	allow = {
+		mmgsiege_can_stockpile = {
+			RESOURCE = energy
+		}
+	}
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+	enactment_time = 15
+	effect = {
+		custom_tooltip = "mmgsiege_decision_stockpile_energy_100_effect"
+		hidden_effect = {
+			change_variable = {
+				which = mmgsiege_energy_stockpile
+				value = 100
+			}
+			if = {
+				# if more stockpiled than max
+				limit = {
+					check_variable = {
+						which = mmgsiege_energy_stockpile
+						value > mmgsiege_stockpile_maximum
+					}
+				}
+				# refund the extra
+				set_variable = {
+					which = mmgsiege_energy_stockpile_refund
+					value = mmgsiege_energy_stockpile
+				}
+				subtract_variable = {
+					which = mmgsiege_energy_stockpile_refund
+					value = mmgsiege_stockpile_maximum
+				}
+				owner = {
+					add_resource = {
+						energy = 1
+						multiplier = prev.mmgsiege_energy_stockpile_refund
+					}
+				}
+				clear_variable = mmgsiege_energy_stockpile_refund
+				# then set to max
+				set_variable = {
+					which = mmgsiege_energy_stockpile
+					value = mmgsiege_stockpile_maximum
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+mmgsiege_decision_stockpile_minerals_100 = {
+	owned_planets_only = yes
+	potential = {
+		OR = {
+			has_planet_flag = mmgsiege_managing_stockpile
+		}
+	}
+	allow = {
+		mmgsiege_can_stockpile = {
+			RESOURCE = minerals
+		}
+	}
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 100
+		}
+	}
+	enactment_time = 15
+	effect = {
+		custom_tooltip = "mmgsiege_decision_stockpile_minerals_100_effect"
+		hidden_effect = {
+			change_variable = {
+				which = mmgsiege_minerals_stockpile
+				value = 100
+			}
+			if = {
+				# if more stockpiled than max
+				limit = {
+					check_variable = {
+						which = mmgsiege_minerals_stockpile
+						value > mmgsiege_stockpile_maximum
+					}
+				}
+				# refund the extra
+				set_variable = {
+					which = mmgsiege_minerals_stockpile_refund
+					value = mmgsiege_minerals_stockpile
+				}
+				subtract_variable = {
+					which = mmgsiege_minerals_stockpile_refund
+					value = mmgsiege_stockpile_maximum
+				}
+				owner = {
+					add_resource = {
+						minerals = 1
+						multiplier = prev.mmgsiege_minerals_stockpile_refund
+					}
+				}
+				clear_variable = mmgsiege_minerals_stockpile_refund
+				# then set to max
+				set_variable = {
+					which = mmgsiege_minerals_stockpile
+					value = mmgsiege_stockpile_maximum
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+mmgsiege_decision_stockpile_food_100 = {
+	owned_planets_only = yes
+	potential = {
+		OR = {
+			has_planet_flag = mmgsiege_managing_stockpile
+		}
+	}
+	allow = {
+		mmgsiege_can_stockpile = {
+			RESOURCE = food
+		}
+	}
+	resources = {
+		category = decisions
+		cost = {
+			food = 100
+		}
+	}
+	enactment_time = 15
+	effect = {
+		custom_tooltip = "mmgsiege_decision_stockpile_food_100_effect"
+		hidden_effect = {
+			change_variable = {
+				which = mmgsiege_food_stockpile
+				value = 100
+			}
+			if = {
+				# if more stockpiled than max
+				limit = {
+					check_variable = {
+						which = mmgsiege_food_stockpile
+						value > mmgsiege_stockpile_maximum
+					}
+				}
+				# refund the extra
+				set_variable = {
+					which = mmgsiege_food_stockpile_refund
+					value = mmgsiege_food_stockpile
+				}
+				subtract_variable = {
+					which = mmgsiege_food_stockpile_refund
+					value = mmgsiege_stockpile_maximum
+				}
+				owner = {
+					add_resource = {
+						food = 1
+						multiplier = prev.mmgsiege_food_stockpile_refund
+					}
+				}
+				clear_variable = mmgsiege_food_stockpile_refund
+				# then set to max
+				set_variable = {
+					which = mmgsiege_food_stockpile
+					value = mmgsiege_stockpile_maximum
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+mmgsiege_decision_stockpile_consumer_goods_100 = {
+	owned_planets_only = yes
+	potential = {
+		OR = {
+			has_planet_flag = mmgsiege_managing_stockpile
+		}
+	}
+	allow = {
+		mmgsiege_can_stockpile = {
+			RESOURCE = consumer_goods
+		}
+	}
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 100
+		}
+	}
+	enactment_time = 15
+	effect = {
+		custom_tooltip = "mmgsiege_decision_stockpile_consumer_goods_100_effect"
+		hidden_effect = {
+			change_variable = {
+				which = mmgsiege_consumer_goods_stockpile
+				value = 100
+			}
+			if = {
+				# if more stockpiled than max
+				limit = {
+					check_variable = {
+						which = mmgsiege_consumer_goods_stockpile
+						value > mmgsiege_stockpile_maximum
+					}
+				}
+				# refund the extra
+				set_variable = {
+					which = mmgsiege_consumer_goods_stockpile_refund
+					value = mmgsiege_consumer_goods_stockpile
+				}
+				subtract_variable = {
+					which = mmgsiege_consumer_goods_stockpile_refund
+					value = mmgsiege_stockpile_maximum
+				}
+				owner = {
+					add_resource = {
+						consumer_goods = 1
+						multiplier = prev.mmgsiege_consumer_goods_stockpile_refund
+					}
+				}
+				clear_variable = mmgsiege_consumer_goods_stockpile_refund
+				# then set to max
+				set_variable = {
+					which = mmgsiege_consumer_goods_stockpile
+					value = mmgsiege_stockpile_maximum
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

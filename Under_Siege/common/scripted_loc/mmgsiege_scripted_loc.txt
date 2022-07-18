@@ -1,0 +1,43 @@
+defined_text = {
+	name = GetEnergyStockpile
+	text = {
+		localization_key = "[This.mmgsiege_energy_stockpile]"
+		trigger = {
+			is_variable_set = mmgsiege_energy_stockpile
+		}
+	}
+	default = "0"
+}
+
+defined_text = {
+	name = GetMineralsStockpile
+	text = {
+		localization_key = "[This.mmgsiege_minerals_stockpile]"
+		trigger = {
+			is_variable_set = mmgsiege_minerals_stockpile
+		}
+	}
+	default = "0"
+}
+
+defined_text = {
+	name = GetFoodStockpile
+	text = {
+		localization_key = "[This.mmgsiege_food_stockpile]"
+		trigger = {
+			is_variable_set = mmgsiege_food_stockpile
+		}
+	}
+	default = "0"
+}
+
+defined_text = {
+	name = GetConsumerGoodsStockpile
+	text = {
+		localization_key = "[This.mmgsiege_consumer_goods_stockpile]"
+		trigger = {
+			is_variable_set = mmgsiege_consumer_goods_stockpile
+		}
+	}
+	default = "0"
+}
