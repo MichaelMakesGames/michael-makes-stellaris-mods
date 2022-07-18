@@ -1,0 +1,141 @@
+mmgsiege_has_farming_designation = {
+	OR = {
+		has_designation = col_farming
+		has_designation = col_ring_farming
+	}
+}
+
+mmgsiege_has_mining_designation = {
+	OR = {
+		has_designation = col_mining
+		has_designation = col_habitat_mining
+	}
+}
+
+mmgsiege_has_generator_designation = {
+	OR = {
+		has_designation = col_generator
+		has_designation = col_habitat_energy
+		has_designation = col_ring_generator
+	}
+}
+
+mmgsiege_has_industrial_designation = {
+	OR = {
+		has_designation = col_industrial
+		has_designation = col_habitat_industrial
+		has_designation = col_ecu_industrial
+	}
+}
+
+mmgsiege_has_foundry_designation = {
+	OR = {
+		has_designation = col_foundry
+		has_designation = col_habitat_foundry
+		has_designation = col_ecu_foundry
+		has_designation = col_mac_foundry
+		has_designation = col_hiv_foundry
+	}
+}
+
+mmgsiege_has_factory_designation = {
+	OR = {
+		has_designation = col_factory
+		has_designation = col_habitat_factory
+		has_designation = col_ecu_factory
+		has_designation = col_mac_factory
+	}
+}
+
+mmgsiege_has_refinery_designation = {
+	OR = {
+		has_designation = col_refinery
+		has_designation = col_habitat_refinery
+	}
+}
+
+mmgsiege_has_manufacturing_designation = {
+	OR = {
+		mmgsiege_has_industrial_designation = yes
+		mmgsiege_has_foundry_designation = yes
+		mmgsiege_has_factory_designation = yes
+		mmgsiege_has_refinery_designation = yes
+	}
+}
+
+mmgsiege_has_rural_designation = {
+	OR = {
+		has_designation = col_rural
+		has_designation = col_rural_gestalt
+	}
+}
+
+mmgsiege_has_research_designation = {
+	OR = {
+		has_designation = col_research
+		has_designation = col_habitat_research
+		has_designation = col_ring_research
+		has_designation = col_ecu_research
+	}
+}
+
+mmgsiege_has_bureau_designation = {
+	OR = {
+		has_designation = col_bureau
+		has_designation = col_bureau_spiritualist
+		has_designation = col_bureau_hive
+		has_designation = col_bureau_machine
+		has_designation = col_habitat_bureau
+		has_designation = col_habitat_bureau_spiritualist
+		has_designation = col_habitat_bureau_hive
+		has_designation = col_habitat_bureau_machine
+	}
+}
+
+mmgsiege_has_fortress_designation = {
+	OR = {
+		has_designation = col_fortress
+		has_designation = col_habitat_fortress
+	}
+}
+
+mmgsiege_can_stockpile = {
+	# controlled by owner
+	exists = owner
+	exists = controller
+	owner = {
+		is_same_value = prev.controller
+	}
+	# has established colony
+	is_colony = yes
+	is_under_colonization = no
+	# not under siege
+	exists = solar_system
+	solar_system = {
+		exists = starbase
+		starbase = {
+			exists = controller
+			controller = {
+				is_same_value = prevprevprev.owner
+			}
+		}
+	}
+	# not above max
+	is_variable_set = mmgsiege_stockpile_maximum
+	OR = {
+		AND = {
+			is_variable_set = mmgsiege_$RESOURCE$_stockpile
+			check_variable = {
+				which = mmgsiege_stockpile_maximum
+				value > mmgsiege_$RESOURCE$_stockpile
+			}
+		}
+		AND = {
+			NOT = { is_variable_set = mmgsiege_$RESOURCE$_stockpile }
+			check_variable = {
+				which = mmgsiege_stockpile_maximum
+				value > 0
+			}
+		}
+	}
+}
