@@ -27,7 +27,10 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
 [/list]
 
 [h1]Credits[/h1]
-Thanks to tzverg for the Russian translation!
+[list]
+ [*] Thanks to tzverg for the Russian translation!
+ [*] Thanks to Root for the Japanese translation!
+[/list]
 
 [h1]My Other Mods[/h1]
 [list]
