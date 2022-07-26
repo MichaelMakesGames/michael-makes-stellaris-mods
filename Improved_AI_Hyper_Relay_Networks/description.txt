@@ -5,14 +5,19 @@ Does the AI seem a little haphazard when building hyper relays? And then builds 
 With this mod, AI empires build proper networks starting at capitals, branching to sector capitals, then to other colonies.
 
 [h1]Details[/h1]
-Every year, this mod finds and marks the shortest path from capitals to sector capitals, and from sector capitals to sector colonies. Paths to wormholes/gateways/catapults and fortresses bordering rivals are also found (if in a sector then from the sector capital, otherwise from the empire capital). A path along an existing relay is considered twice as short. The AI then only builds relays in systems that border an existing relay they own and are on one of those paths, with the following exceptions:
+Every year, this mod finds and marks the shortest path from capitals to sector capitals, and from sector capitals to sector colonies. Paths to wormholes/gateways/catapults and border fortresses are also found (from sector capital if in a sector, otherwise from empire capital). A path along an existing relay is considered twice as short, to encourage the AI to re-use existing relays. The AI then only builds relays in systems that border an existing relay they own and are on one of those paths, with the following exceptions:
 [list]
- [*]The empire's capital (this let's them get their network started)
- [*]Sector capitals that are at least 10 years old and have no path to the capital (this let's them build a separate network if they have a non-contiguous empire, for example on the other side of a wormhole)
- [*]Border systems that are adjacent to another owned relay (this encourages AI to connect their networks, and can be useful for war)
+ [*] The empire's capital (this let's them get their network started)
+ [*] Sector capitals that are at least 10 years old and have no path to the capital (this let's them build a separate network if they have a non-contiguous empire, for example on the other side of a wormhole)
 [/list]
 
-Overlords will still build in subjects, but heavily prioritize themselves.
+Overlords will build paths to the their subject capitals, and will build paths through subjects if they have an isolated sector on the other side.
+
+In addition to normal building of hyper relays using construction ships, the AI gets to build up to 1 hyper relay each year without using a construction ship. They still pay the resources for it, and only do it if they have a large stockpile of resources (10x the required resources). This is to address 2 vanilla issues with the AI:
+[list]
+ [*] The AI isn't good at managing it's construction ships, sometimes sending one from the east side of it's empire all the way build something in the west, while at the same time sending a one from the west to build in the east, wasting months or even years. This "cheat" helps make up for lost time.
+ [*] Sometimes, especially after unlocking other megastructures, the AI stops building hyper relays, even if their resource stockpiles are completely full. This "cheat" lets AIs with strong economies continue expanding their relay networks into the late game.
+[/list]
 
 This has been tested for performance on a huge galaxy and has no noticeable impact.
 
@@ -23,6 +28,7 @@ This has been tested for performance on a huge galaxy and has no noticeable impa
   [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
   [*] Can be removed from an existing game
   [*] Compatible with Gigastructural Engineering and More (load order does not matter)
+  [*] Compatible with Sparsity and Wild Space 3 (enables building hyper relays in unclaimable space for both player and AI; load order does not matter)
   [*] Should be compatible with all other mods, except other mods that override hyper relays
   [list]
     [*] Note for patch makers: this only overrides the hyper_relay megastructure, and within that, only changes the ai_weight

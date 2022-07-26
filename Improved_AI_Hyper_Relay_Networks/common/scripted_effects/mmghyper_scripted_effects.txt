@@ -7,7 +7,7 @@ mmghyper_initialize_distance_origin = {
 }
 
 mmghyper_initialize_path_origin = {
-	set_star_flag = $PATH$
+	set_star_flag = $PATH$@ROOT
 	set_star_flag = $PATH$_active_node
 }
 
@@ -28,11 +28,42 @@ mmghyper_calculate_distances = {
 			remove_star_flag = $DISTANCE$_active_node
 			every_neighbor_system = {
 				limit = {
-					[[SAME_OWNER] exists = owner]
-					[[SAME_OWNER] owner = { is_same_empire = prevprev.owner }]
-					[[SAME_SECTOR] exists = sector]
-					[[SAME_SECTOR] exists = prev.sector]
-					[[SAME_SECTOR] sector = { is_same_value = prevprev.sector }]
+					[[SAME_OWNER]
+					OR = {
+						mmghyper_is_starless = yes
+						AND = {
+							exists = owner
+							owner = { is_same_empire = root }
+						}
+					}
+					]
+					[[SAME_SECTOR]
+					# sectors will never cross sparsity/wild space, so don't need to handle that here
+					AND = {
+						exists = sector
+						exists = prev.sector
+						sector = { is_same_value = prevprev.sector }
+					}
+					]
+					[[SAME_OVERLORD]
+					OR = {
+						mmghyper_is_starless = yes
+						AND = {
+							exists = owner
+							owner = {
+								OR = {
+									is_same_empire = root
+									has_subject = root
+									has_overlord = root
+									AND = {
+										exists = root.overlord
+										has_overlord = root.overlord
+									}
+								}
+							}
+						}
+					}
+					]
 					OR = {
 						NOT = { is_variable_set = $DISTANCE$ }
 						OR = {
@@ -108,20 +139,35 @@ mmghyper_find_paths = {
 				}
 				ordered_neighbor_system = {
 					limit = {
-						exists = owner
-						owner = { is_same_empire = prevprev.owner }
 						is_variable_set = $DISTANCE$
 					}
 					position = 0
 					order_by = $DISTANCE$
 					inverse = yes
 					if = {
-						limit = { NOT = { has_star_flag = $PATH$ } }
-						set_star_flag = $PATH$
+						limit = { NOT = { has_star_flag = $PATH$@ROOT } }
+						set_star_flag = $PATH$@ROOT
 						set_star_flag = $PATH$_active_node
 					}
 				}
 			}
+		}
+	}
+}
+
+mmghyper_spawn_hyper_relay = {
+	spawn_megastructure = {
+		type = hyper_relay
+		random_pos = yes
+		orbit_angle = 360
+		graphical_culture = root
+		owner = root
+	}
+	root = {
+		add_resource = {
+			alloys = -500
+			rare_crystals = -100
+			influence = -25
 		}
 	}
 }
