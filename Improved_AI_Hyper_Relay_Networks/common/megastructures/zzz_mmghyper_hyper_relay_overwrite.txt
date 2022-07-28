@@ -25,10 +25,11 @@ hyper_relay = {
 	}
 
 	possible = {
-		exists = starbase
+		# exists = starbase # OVERWRITE sparsity / wild space support
 		custom_tooltip = {
 			fail_text = "requires_inside_border_or_subject"
 			OR = {
+				mmghyper_is_starless = yes # OVERWRITE sparsity / wild space support
 				is_inside_border = from
 				AND = {
 					exists = owner
@@ -78,18 +79,9 @@ hyper_relay = {
 
 	# root = system
 	# from = country
-	ai_weight = {
+	ai_weight = { # OVERWRITE entire AI weight for main functionality of mod
 		# double base factor
 		factor = 10
-
-		# de-prioritize subjects
-		modifier = {
-			factor = 0.2
-			owner = {
-				NOT = { is_country = from }
-			}
-		}
-		
 
 		# get started in capital very quickly
 		modifier = {
@@ -109,13 +101,13 @@ hyper_relay = {
 		# then prioritize paths to other sectors
 		modifier = {
 			factor = 3
-			has_star_flag = mmghyper_path_to_capital
+			has_star_flag = mmghyper_path_to_capital@FROM
 		}
 
-		# and finally paths within sector
+		# then paths within sector
 		modifier = {
 			factor = 2
-			has_star_flag = mmghyper_path_to_sector_capital
+			has_star_flag = mmghyper_path_to_sector_capital@FROM
 		}
 
 		# small boost for connecting planets to network
@@ -126,52 +118,11 @@ hyper_relay = {
 			}
 		}
 
-		# don't build unless
+		# don't build if not target (on path, etc)
 		modifier = {
 			factor = 0
-			NOR = {
-				# is capital
-				is_capital_system = yes
-				# or is isolated sector capital
-				AND = {
-					NOT = { has_star_flag = mmghyper_path_to_capital }
-					any_system_planet = {
-						is_sector_capital = yes
-						colony_age > 120 # wait at least 10 years
-					}
-				}
-				# or neighbor has hyper relay and is on path to (sector) capital
-				AND = {
-					# neighbor has relay
-					any_neighbor_system = {
-						exists = owner
-						owner = {
-							is_country = prevprev.owner
-						}
-						mmghyper_has_hyper_relay = yes
-					}
-					# on path to (sector) capital
-					OR = {
-						has_star_flag = mmghyper_path_to_capital
-						has_star_flag = mmghyper_path_to_sector_capital
-					}
-				}
-				# or owned neighbor has relay and on border
-				AND = {
-					any_neighbor_system = {
-						exists = owner
-						owner = {
-							is_country = prevprev.owner
-						}
-						mmghyper_has_hyper_relay = yes
-					}
-					any_neighbor_system = {
-						exists = owner
-						owner = {
-							NOT = { is_country = prevprev.owner }
-						}
-					}
-				}
+			NOT = {
+				mmghyper_is_ai_build_target = { COUNTRY = from }
 			}
 		}
 	}
@@ -180,8 +131,17 @@ hyper_relay = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		from = {
-			country_event = { id = tutorial.2131 }
+		if = { # OVERWRITE from won't always exist like it does in vanilla
+			limit = { exists = from }
+			from = {
+				country_event = { id = tutorial.2131 }
+			}
+		}
+		solar_system = { # OVERWRITE
+			system_event = {
+				id = mmghyper.11 # convert starless hyper relay to unowned
+				days = 1 # doing this immediately doesn't seem to work
+			}
 		}
 	}
 }
