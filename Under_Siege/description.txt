@@ -49,12 +49,6 @@ Known issue: catalytic empires will receive a metallurgist penalty when they hav
   [/list]
 [/list]
 
-[h1]My Other Mods[/h1]
-[list]
- [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2780180614]Cross Border Trade: borders generate trade value[/url]
- [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Improved AI Hyper Relay Networks[/url]
-[/list]
-
 [h1]Sharing[/h1]
 Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
 

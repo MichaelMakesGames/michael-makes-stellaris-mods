@@ -165,9 +165,10 @@ mmghyper_spawn_hyper_relay = {
 	}
 	root = {
 		add_resource = {
-			alloys = -500
-			rare_crystals = -100
-			influence = -25
+			alloys = @mmghyper_alloys_cost
+			rare_crystals = @mmghyper_rare_crystals_cost
+			influence = @mmghyper_influence_cost
+			multiplier = -1
 		}
 	}
 }

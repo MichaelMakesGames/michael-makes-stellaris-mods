@@ -119,8 +119,8 @@ mmghyper_can_auto_build_hyper_relay = {
 		mmghyper_has_hyper_relay = no
 		# no hostile fleet
 		NOT = {
-			any_system_fleet = {
-				exisits = controller
+			any_fleet_in_system = {
+				exists = controller
 				controller = {
 					is_hostile = root
 				}
@@ -128,7 +128,7 @@ mmghyper_can_auto_build_hyper_relay = {
 		}
 		# no one building megastructure (ie hyper relay)
 		NOT = {
-			any_system_fleet = {
+			any_fleet_in_system = {
 				has_fleet_order = build_megastructure_fleet_order
 			}
 		}

@@ -8,10 +8,10 @@ hyper_relay = {
 	build_time = 360
 	resources = {
 		category = megastructures_hyper_relay
-		cost = {
-			alloys = 500
-			rare_crystals = 100
-			influence = 25
+		cost = { # OVERWRITE for easier submodding
+			alloys = @mmghyper_alloys_cost
+			rare_crystals = @mmghyper_rare_crystals_cost
+			influence = @mmghyper_influence_cost
 		}
 
 		upkeep = {
