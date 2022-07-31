@@ -1,0 +1,15 @@
+Submod for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Smarter Hyper Relays: Improved AI (shrimpAI)[/url]. Load order does not matter. Without the shrimpAI base mod, this submod does nothing.
+
+Makes hyper relays cheaper.
+
+Before:
+Alloys: 500
+Rare Crystals: 100
+Influence: 25
+
+After:
+Alloys: 500
+Rare Crystals: 50
+Influence: 10
+
+This matches the values in Sparsity, but Sparsity is not required. Also to note: the shrimpAI base mod is compatible with Sparsity, but will use the vanilla hyper relay costs if this submod is not used.

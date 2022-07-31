@@ -28,14 +28,8 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
 
 [h1]Credits[/h1]
 [list]
- [*] Thanks to tzverg for the Russian translation!
- [*] Thanks to Root for the Japanese translation!
-[/list]
-
-[h1]My Other Mods[/h1]
-[list]
- [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2786268200]Under Siege: adds siege warfare to Stellaris[/url]
- [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Improved AI Hyper Relay Networks[/url]
+  [*] Thanks to tzverg for the Russian translation!
+  [*] Thanks to Root for the Japanese translation!
 [/list]
 
 [h1]Sharing[/h1]
