@@ -1,0 +1,62 @@
+{
+	"Color White": {
+		"prefix": "White",
+		"body": "§W$TM_SELECTED_TEXT$0§!",
+		"description": "Diplomatic attitudes"
+	},
+	"Color Light Grey": {
+		"prefix": "Lightgrey",
+		"body": "§T$TM_SELECTED_TEXT$0§!",
+		"description": "Standard color of all text"
+	},
+	"Color Brown": {
+		"prefix": "Brown",
+		"body": "§L$TM_SELECTED_TEXT$0§!",
+		"description": "Lore, back story, role playing"
+	},
+	"Color Light Light Red": {
+		"prefix": "Lightred",
+		"body": "§P$TM_SELECTED_TEXT$0§!",
+		"description": "Aggressive text"
+	},
+	"Color Red": {
+		"prefix": "Red",
+		"body": "§R$TM_SELECTED_TEXT$0§!",
+		"description": "Negative modifiers"
+	},
+	"Color Dark Orange": {
+		"prefix": "Darkorange",
+		"body": "§S$TM_SELECTED_TEXT$0§!",
+		"description": "Subtle highlighting"
+	},
+	"Color Orange": {
+		"prefix": "Orange",
+		"body": "§H$TM_SELECTED_TEXT$0§!",
+		"description": "Highlighting"
+	},
+	"Color Yellow": {
+		"prefix": "Yellow",
+		"body": "§Y$TM_SELECTED_TEXT$0§!",
+		"description": "Sub-optimal or neutral modifiers"
+	},
+	"Color Green": {
+		"prefix": "Green",
+		"body": "§G$TM_SELECTED_TEXT$0§!",
+		"description": "Positive modifiers"
+	},
+	"Color Teal": {
+		"prefix": "Teal",
+		"body": "§E$TM_SELECTED_TEXT$0§!",
+		"description": "Large chunks of text"
+	},
+	"Color Blue": {
+		"prefix": "Blue",
+		"body": "§B$TM_SELECTED_TEXT$0§!",
+		"description": "Effects that affect pops"
+	},
+	"Color Purple": {
+		"prefix": "Purple",
+		"body": "§M$TM_SELECTED_TEXT$0§!",
+		"description": "Rare technologies"
+	}
+}

@@ -36,102 +36,39 @@ country_event = {
 			# check for surrender
 			if = {
 				limit = {
-					# under siege for at least 1 year
-					check_variable = {
-						which = mmgsiege_under_siege_months
-						value >= 12
-					}
-					# controller checks
-					controller = {
-						is_homicidal = no # homicidals never surrender
-						is_gestalt = no # gestalts never surrender
-						NAND = { # capitals never surrender (if controlled by owner)
-							is_country = prev.owner
-							prev = { is_capital = yes }
-						}
-					}
-					# avoid edgecases: make sure there's a war, but not a total war
-					controller = {
-						any_war = {
-							is_total_war = no
-							any_war_participant = { is_country = prevprevprev.solar_system.starbase.controller }
-						}
-					}
-					# no one surrenders to homicidals or crisis
-					solar_system.starbase.controller = {
-						is_homicidal = no
-						is_crisis_faction = no
-						NOT = { has_ascension_perk = ap_become_the_crisis }
-					}
-					# don't surrender if the starbase is in combat
-					solar_system.starbase.fleet = {
-						is_in_combat = no
-					}
-					# don't surrender if there's ongoing ground combat
-					has_ground_combat = no
-					
-				}
-				# 1% chance to surrender for each stability below 40
-				set_variable = {
-					which = mmgsiege_surrender_chance
-					value = 40
-				}
-				subtract_variable = {
-					which = mmgsiege_surrender_chance
-					value = trigger:planet_stability
+					mmgsiege_planet_can_surrender = yes
+					planet_stability < 40
 				}
 				if = {
 					limit = {
-						check_variable = {
-							which = mmgsiege_surrender_chance
-							value > 0
-						}
-					}
-					if = {
-						limit = { NOT = { has_modifier = mmgsiege_considering_surrender } }
-						add_modifier = {
-							modifier = mmgsiege_considering_surrender
-						}
-					}
-					random = {
-						chance = mmgsiege_surrender_chance
-						every_planet_army = {
-							remove_army = yes
-						}
-						set_controller = solar_system.starbase.controller
-						clear_variable = mmgsiege_surrender_chance
-						clear_variable = mmgsiege_under_siege_months
-						remove_modifier = mmgsiege_considering_surrender
-						root = {
-							country_event = {
-								id = mmgsiege.2
-								scopes = {
-									from = prev
-									fromfrom = prev.solar_system.starbase.controller
-								}
-							}
-						}
-						solar_system.starbase.controller = {
-							country_event = {
-								id = mmgsiege.3
-								scopes = {
-									from = prev
-									fromfrom = root
-								}
+						NOT = {
+							any_targeting_situation = {
+								is_situation_type = mmgsiege_siege_surrender_defender_situation
 							}
 						}
 					}
+					controller = {
+						start_situation = {
+							type = mmgsiege_siege_surrender_defender_situation
+							target = prev
+						}
+					}
 				}
-				else = {
-					remove_modifier = mmgsiege_considering_surrender
-				}
-			}
-			else = {
 				if = {
-					limit = { is_variable_set = mmgsiege_surrender_chance }
-					clear_variable = mmgsiege_surrender_chance
+					limit = {
+						NOT = {
+							any_targeting_situation = {
+								is_situation_type = mmgsiege_siege_surrender_attacker_situation
+							}
+						}
+					}
+					solar_system.starbase.controller = {
+						start_situation = {
+							type = mmgsiege_siege_surrender_attacker_situation
+							target = prev
+						}
+					}
 				}
-				remove_modifier = mmgsiege_considering_surrender
 			}
 		}
 
@@ -174,6 +111,9 @@ country_event = {
 	desc = "mmgsiege_planet_surrendered_to_enemy_desc"
 	picture = GFX_evt_burning_city
 	location = from
+	option = {
+		name = CLOSE
+	}
 }
 
 # notify the surrender receiver
@@ -186,6 +126,9 @@ country_event = {
 	desc = "mmgsiege_enemy_planet_surrendered_desc"
 	picture = GFX_evt_victorious_army
 	location = from
+	option = {
+		name = CLOSE
+	}
 }
 
 # stockpile events
@@ -354,6 +297,52 @@ event = {
 			every_owned_planet = {
 				planet_event = { id = mmgsiege.11 } # init stockpile maximum
 				planet_event = { id = mmgsiege.12 } # init stockpile resources
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = mmgsiege.21
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		log_error = "mmgsiege.21 [GetDate]"
+		situation_event = {
+			id = mmgsiege.22
+			days = 1
+		}
+	}
+}
+
+situation_event = {
+	id = mmgsiege.22
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		log_error = "mmgsiege.22 [GetDate]"
+		target = {
+			if = {
+				limit = {
+					any_targeting_situation = {
+						is_situation_type = mmgsiege_siege_surrender_attacker_situation
+					}
+				}
+				random_targeting_situation = {
+					limit = {
+						is_situation_type = mmgsiege_siege_surrender_attacker_situation
+					}
+					set_variable = {
+						which = mmgsiege_sync_progress
+						value = root.trigger:situation_progress
+					}
+					subtract_variable = {
+						which = mmgsiege_sync_progress
+						value = trigger:situation_progress
+					}
+					add_situation_progress = mmgsiege_sync_progress
+					clear_variable = mmgsiege_sync_progress
+				}
 			}
 		}
 	}

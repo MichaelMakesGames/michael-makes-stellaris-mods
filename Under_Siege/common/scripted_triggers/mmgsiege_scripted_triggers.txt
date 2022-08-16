@@ -139,3 +139,51 @@ mmgsiege_can_stockpile = {
 		}
 	}
 }
+
+mmgsiege_is_under_siege = {
+	AND = {
+		exists = solar_system
+		exists = solar_system.starbase
+		exists = solar_system.starbase.controller
+		exists = controller
+		controller = {
+			NOT = {
+				is_same_value = prev.solar_system.starbase.controller
+			}
+			is_hostile = prev.solar_system.starbase.controller
+		}
+	}
+}
+
+mmgsiege_is_unoccupied_capital = {
+	AND = {
+		is_capital = yes
+		is_occupied_flag = no
+	}
+}
+
+mmgsiege_planet_can_surrender = {
+	AND = {
+		# must be under siege
+		mmgsiege_is_under_siege = yes
+		# gestalts never surrender
+		controller = {
+			is_gestalt = no
+		}
+		# capitals cannot surrender
+		# but occupied capitals can
+		mmgsiege_is_unoccupied_capital = no
+		# must be at war (but not total war)
+		solar_system.starbase.controller = {
+			is_at_war_with = prev.controller
+			NOT = {
+				any_war = {
+					any_war_participant = {
+						is_same_value = prevprevprev.controller
+					}
+					is_total_war = yes
+				}
+			}
+		}
+	}
+}

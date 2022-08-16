@@ -48,7 +48,9 @@ country_event = {
 			# initialize stockpile feature
 			if = {
 				limit = { exists = capital_scope }
-				planet_event = { id = mmgsiege_stockpile_automation.301 }
+				capital_scope = {
+					planet_event = { id = mmgsiege_stockpile_automation.301 }
+				}
 			}
 		}
 	}
