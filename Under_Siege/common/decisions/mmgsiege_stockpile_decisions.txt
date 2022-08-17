@@ -53,7 +53,6 @@ mmgsiege_decision_stockpile_energy_100 = {
 			energy = 100
 		}
 	}
-	enactment_time = 15
 	effect = {
 		custom_tooltip = "mmgsiege_decision_stockpile_energy_100_effect"
 		hidden_effect = {
@@ -116,7 +115,6 @@ mmgsiege_decision_stockpile_minerals_100 = {
 			minerals = 100
 		}
 	}
-	enactment_time = 15
 	effect = {
 		custom_tooltip = "mmgsiege_decision_stockpile_minerals_100_effect"
 		hidden_effect = {
@@ -179,7 +177,6 @@ mmgsiege_decision_stockpile_food_100 = {
 			food = 100
 		}
 	}
-	enactment_time = 15
 	effect = {
 		custom_tooltip = "mmgsiege_decision_stockpile_food_100_effect"
 		hidden_effect = {
@@ -242,7 +239,6 @@ mmgsiege_decision_stockpile_consumer_goods_100 = {
 			consumer_goods = 100
 		}
 	}
-	enactment_time = 15
 	effect = {
 		custom_tooltip = "mmgsiege_decision_stockpile_consumer_goods_100_effect"
 		hidden_effect = {

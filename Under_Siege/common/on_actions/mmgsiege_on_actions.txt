@@ -19,6 +19,12 @@ on_monthly_pulse_country = {
 	}
 }
 
+on_system_controller_changed = {
+	events = {
+		mmgsiege.31
+	}
+}
+
 on_building_complete = {
 	events = {
 		mmgsiege.11 # calc stockpile max
@@ -53,12 +59,21 @@ on_planet_transfer = {
 	events = {
 		mmgsiege.11 # calc stockpile max
 		mmgsiege_stockpile_automation.302 # clean up stockpile budget feature
+		mmgsiege.32 # update planet siege status
 	}
 }
 
 on_planet_ownerless = {
 	events = {
 		mmgsiege_stockpile_automation.302 # clean up stockpile budget feature
+		mmgsiege.32 # update planet siege status
+		mmgsiege.33 # clean up shortages
+	}
+}
+
+on_planet_occupied = {
+	events = {
+		mmgsiege.32 # update planet siege status
 	}
 }
 

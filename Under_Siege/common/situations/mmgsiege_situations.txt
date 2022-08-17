@@ -52,6 +52,9 @@ mmgsiege_siege_surrender_attacker_situation = {
 		icon = GFX_situation_approach_this_is_fine
 		icon_background = GFX_situation_approach_bg_yellow
 		default = yes
+		on_select = {
+			custom_tooltip = mmgsiege_siege_approach_do_nothing
+		}
 		ai_weight = {
 			weight = 10
 		}
@@ -280,6 +283,7 @@ mmgsiege_siege_surrender_attacker_situation = {
 			desc = mmgsiege_siege_approach_defender_propaganda
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_defender_situation
 					current_situation_approach = mmgsiege_siege_approach_defender_propaganda
 				}
 			}
@@ -289,6 +293,7 @@ mmgsiege_siege_surrender_attacker_situation = {
 			desc = mmgsiege_siege_approach_attacker_propaganda
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_attacker_situation
 					current_situation_approach = mmgsiege_siege_approach_attacker_propaganda
 				}
 			}
@@ -298,6 +303,7 @@ mmgsiege_siege_surrender_attacker_situation = {
 			desc = mmgsiege_siege_approach_harsh_occupation
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_defender_situation
 					current_situation_approach = mmgsiege_siege_approach_harsh_occupation
 				}
 			}
@@ -340,10 +346,34 @@ mmgsiege_siege_surrender_defender_situation = {
 	}
 	on_progress_complete = {
 		target = {
-			set_controller = solar_system.starbase.controller
 			hidden_effect = {
-				remove_modifier = mmgsiege_considering_surrender
+				remove_all_armies = yes
+				if = {
+					limit = {
+						solar_system.starbase.owner = {
+							is_at_war_with = root.target.owner
+							any_war = {
+								is_total_war = yes
+								OR = {
+									AND = {
+										any_attacker = { is_same_value = prevprev }
+										any_defender = { is_same_value = root.target.owner }
+									}
+									AND = {
+										any_defender = { is_same_value = prevprev }
+										any_attacker = { is_same_value = root.target.owner }
+									}
+								}
+							}
+						}
+					}
+					set_owner = solar_system.starbase.controller
+					solar_system.starbase = {
+						set_owner = controller
+					}
+				}
 			}
+			set_controller = solar_system.starbase.controller
 		}
 		hidden_effect = {
 			owner = {
@@ -402,6 +432,9 @@ mmgsiege_siege_surrender_defender_situation = {
 		icon = GFX_situation_approach_this_is_fine
 		icon_background = GFX_situation_approach_bg_yellow
 		default = yes
+		on_select = {
+			custom_tooltip = mmgsiege_siege_approach_do_nothing
+		}
 		ai_weight = {
 			weight = 10
 		}
@@ -695,6 +728,7 @@ mmgsiege_siege_surrender_defender_situation = {
 			desc = mmgsiege_siege_approach_defender_propaganda
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_defender_situation
 					current_situation_approach = mmgsiege_siege_approach_defender_propaganda
 				}
 			}
@@ -704,6 +738,7 @@ mmgsiege_siege_surrender_defender_situation = {
 			desc = mmgsiege_siege_approach_attacker_propaganda
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_attacker_situation
 					current_situation_approach = mmgsiege_siege_approach_attacker_propaganda
 				}
 			}
@@ -713,6 +748,7 @@ mmgsiege_siege_surrender_defender_situation = {
 			desc = mmgsiege_siege_approach_harsh_occupation
 			target = {
 				any_targeting_situation = {
+					is_situation_type = mmgsiege_siege_surrender_defender_situation
 					current_situation_approach = mmgsiege_siege_approach_harsh_occupation
 				}
 			}

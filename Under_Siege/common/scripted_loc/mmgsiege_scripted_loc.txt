@@ -6,7 +6,7 @@ defined_text = {
 			is_variable_set = mmgsiege_energy_stockpile
 		}
 	}
-	default = "0"
+	default = "mmgsiege_zero"
 }
 
 defined_text = {
@@ -17,7 +17,7 @@ defined_text = {
 			is_variable_set = mmgsiege_minerals_stockpile
 		}
 	}
-	default = "0"
+	default = "mmgsiege_zero"
 }
 
 defined_text = {
@@ -28,7 +28,7 @@ defined_text = {
 			is_variable_set = mmgsiege_food_stockpile
 		}
 	}
-	default = "0"
+	default = "mmgsiege_zero"
 }
 
 defined_text = {
@@ -39,5 +39,197 @@ defined_text = {
 			is_variable_set = mmgsiege_consumer_goods_stockpile
 		}
 	}
-	default = "0"
+	default = "mmgsiege_zero"
+}
+
+defined_text = {
+	name = GetEnergyShortageStatus
+	random = no
+	text = {
+		localization_key = "mmgsiege_shortage_status_minor"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_major"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_severe"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_catastrophic"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+		}
+	}
+	default = "mmgsiege_shortage_status_no_shortage"
+}
+
+defined_text = {
+	name = GetEnergyShortageSubstatus
+	random = no
+	text = {
+		localization_key = "BLANK_STRING"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_recovering"
+		trigger = {
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = energy }
+		}
+	}
+	default = "mmgsiege_shortage_substatus_progress_energy"
+}
+
+defined_text = {
+	name = GetMineralsShortageStatus
+	random = no
+	text = {
+		localization_key = "mmgsiege_shortage_status_minor"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_major"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_severe"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_catastrophic"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+		}
+	}
+	default = "mmgsiege_shortage_status_no_shortage"
+}
+
+defined_text = {
+	name = GetMineralsShortageSubstatus
+	random = no
+	text = {
+		localization_key = "BLANK_STRING"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = minerals } }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_recovering"
+		trigger = {
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = minerals }
+		}
+	}
+	default = "mmgsiege_shortage_substatus_progress_minerals"
+}
+
+defined_text = {
+	name = GetFoodShortageStatus
+	random = no
+	text = {
+		localization_key = "mmgsiege_shortage_status_minor"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_major"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_severe"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_catastrophic"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+		}
+	}
+	default = "mmgsiege_shortage_status_no_shortage"
+}
+
+defined_text = {
+	name = GetFoodShortageSubstatus
+	random = no
+	text = {
+		localization_key = "BLANK_STRING"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = food } }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_recovering"
+		trigger = {
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = food }
+		}
+	}
+	default = "mmgsiege_shortage_substatus_progress_food"
+}
+
+defined_text = {
+	name = GetConsumerGoodsShortageStatus
+	random = no
+	text = {
+		localization_key = "mmgsiege_shortage_status_minor"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_major"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 2 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_severe"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 3 }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_status_catastrophic"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
+		}
+	}
+	default = "mmgsiege_shortage_status_no_shortage"
+}
+
+defined_text = {
+	name = GetConsumerGoodsShortageSubstatus
+	random = no
+	text = {
+		localization_key = "BLANK_STRING"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods } }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_recovering"
+		trigger = {
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = consumer_goods }
+		}
+	}
+	default = "mmgsiege_shortage_substatus_progress_consumer_goods"
 }

@@ -7,69 +7,13 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		every_controlled_planet = {
-			limit = {
-				exists = solar_system
-				exists = solar_system.starbase
-				exists = solar_system.starbase.controller
-				solar_system.starbase.controller = { is_hostile = prevprev }
-			}
-			set_planet_flag = mmgsiege_under_siege
-			if = {
-				limit = { is_variable_set = mmgsiege_under_siege_months }
-				change_variable = {
-					which = mmgsiege_under_siege_months
-					value = 1
-				}
-			}
-			else = {
-				set_variable = {
-					which = mmgsiege_under_siege_months
-					value = 1
-				}
-			}
+			limit = { mmgsiege_is_under_siege = yes }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = food }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = minerals }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = energy }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = consumer_goods }
-
-
-			# check for surrender
-			if = {
-				limit = {
-					mmgsiege_planet_can_surrender = yes
-					planet_stability < 40
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_targeting_situation = {
-								is_situation_type = mmgsiege_siege_surrender_defender_situation
-							}
-						}
-					}
-					controller = {
-						start_situation = {
-							type = mmgsiege_siege_surrender_defender_situation
-							target = prev
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_targeting_situation = {
-								is_situation_type = mmgsiege_siege_surrender_attacker_situation
-							}
-						}
-					}
-					solar_system.starbase.controller = {
-						start_situation = {
-							type = mmgsiege_siege_surrender_attacker_situation
-							target = prev
-						}
-					}
-				}
-			}
+			mmgsiege_create_or_remove_shortage_modifiers = yes
+			mmgsiege_update_planet_status = yes
 		}
 
 		every_controlled_planet = {
@@ -81,22 +25,14 @@ country_event = {
 					has_planet_flag = mmgsiege_consumer_goods_shortage
 					has_planet_flag = mmgsiege_under_siege
 				}
-				controller = { is_country = prev.solar_system.starbase.controller }
+				mmgsiege_is_under_siege = no
 			}
-			remove_planet_flag = mmgsiege_under_siege
-			if = {
-				limit = { is_variable_set = mmgsiege_under_siege_months }
-				clear_variable = mmgsiege_under_siege_months
-			}
-			if = {
-				limit = { is_variable_set = mmgsiege_surrender_chance }
-				clear_variable = mmgsiege_surrender_chance
-			}
-			remove_modifier = mmgsiege_considering_surrender
 			mmgsiege_check_for_and_update_resource_shortage_no_siege = { RESOURCE = food }
 			mmgsiege_check_for_and_update_resource_shortage_no_siege = { RESOURCE = minerals }
 			mmgsiege_check_for_and_update_resource_shortage_no_siege = { RESOURCE = energy }
 			mmgsiege_check_for_and_update_resource_shortage_no_siege = { RESOURCE = consumer_goods }
+			mmgsiege_create_or_remove_shortage_modifiers = yes
+			mmgsiege_update_planet_status = yes
 		}
 	}
 }
@@ -307,7 +243,6 @@ situation_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		log_error = "mmgsiege.21 [GetDate]"
 		situation_event = {
 			id = mmgsiege.22
 			days = 1
@@ -320,7 +255,6 @@ situation_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		log_error = "mmgsiege.22 [GetDate]"
 		target = {
 			if = {
 				limit = {
@@ -345,5 +279,53 @@ situation_event = {
 				}
 			}
 		}
+	}
+}
+
+# update planet status on_system_controller_changed
+system_event = {
+	id = mmgsiege.31
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system_planet = {
+			limit = { is_colony = yes }
+			mmgsiege_update_planet_status = yes
+		}
+	}
+}
+
+# update planet status on_planet_transfer on_planet_occupied on_planet_ownerless
+planet_event = {
+	id = mmgsiege.32
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		mmgsiege_update_planet_status = yes
+	}
+}
+
+# clean up shortages up on_planet_ownerless
+planet_event = {
+	id = mmgsiege.33
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
 	}
 }

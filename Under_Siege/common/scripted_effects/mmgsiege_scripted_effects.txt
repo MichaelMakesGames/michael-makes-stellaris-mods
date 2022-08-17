@@ -109,17 +109,37 @@ mmgsiege_check_for_and_update_resource_shortage = {
 			}
 		}
 		# add progress
-		# balance is negative, so we subtract the balance to add it to the progress
-		subtract_variable = {
-			which = mmgsiege_$RESOURCE$_shortage_progress
+		set_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress_add
 			value = mmgsiege_$RESOURCE$_balance
 		}
+		multiply_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress_add
+			value = -100
+		}
+		divide_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress_add
+			value = mmgsiege_$RESOURCE$_upkeep
+		}
+		divide_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress_add
+			value = 2
+		}
+		ceiling_variable = mmgsiege_$RESOURCE$_shortage_progress_add
+		change_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_progress
+			value = mmgsiege_$RESOURCE$_shortage_progress_add
+		}
+		clear_variable = mmgsiege_$RESOURCE$_shortage_progress_add
 		# check progress
 		if = {
 			limit = {
-				check_variable = {
-					which = mmgsiege_$RESOURCE$_shortage_progress
-					value >= mmgsiege_$RESOURCE$_upkeep
+				OR = {
+					check_variable = {
+						which = mmgsiege_$RESOURCE$_shortage_progress
+						value >= 100
+					}
+					NOT = { mmgsiege_has_resource_shortage = { RESOURCE = $RESOURCE$ } }
 				}
 			}
 			mmgsiege_increase_resource_shortage = { RESOURCE = $RESOURCE$ }
@@ -140,80 +160,53 @@ mmgsiege_check_for_and_update_resource_shortage = {
 
 # decrease shortages on planets without siege, never increase
 mmgsiege_check_for_and_update_resource_shortage_no_siege = {
-	if = {
-		# decrease/remove modifier if planet is positive or empire is positive
-		limit = {
-			OR = {
-				planet_resource_compare = {
-					resource = $RESOURCE$
-					type = balance
-					value >= 0
-				}
-				owner = {
-					OR = {
-						NOT = { has_deficit = $RESOURCE$ }
-						is_ai = yes # let's be nicer to AI to prevent post-war economic death spirals
-					}
-				}
-			}
-		}
-		mmgsiege_decrease_resource_shortage = { RESOURCE = $RESOURCE$ }
-	}
+	mmgsiege_decrease_resource_shortage = { RESOURCE = $RESOURCE$ }
 }
 
 mmgsiege_increase_resource_shortage = {
-	# subtract upkeep from progress (keep leftover progres for next level)
-	subtract_variable = {
-		which = mmgsiege_$RESOURCE$_shortage_progress
-		value = mmgsiege_$RESOURCE$_upkeep
-	}
-	# increase or add modifier
 	if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_major }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_major
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_critical }
-	}
-	else_if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_moderate }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_moderate
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_major }
-	}
-	else_if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_minor }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_minor
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_moderate }
-	}
-	else_if = {
-		limit = { NOT = { has_modifier = mmgsiege_$RESOURCE$_shortage_critical } }
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_minor }
+		limit = { NOT = { mmgsiege_has_resource_shortage = { RESOURCE = $RESOURCE$ } } }
 		set_planet_flag = mmgsiege_$RESOURCE$_shortage
+		set_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_level
+			value = 0
+		}
+	}
+	change_variable = {
+		which = mmgsiege_$RESOURCE$_shortage_level
+		value = 1
+	}
+	set_variable = {
+		which = mmgsiege_$RESOURCE$_shortage_progress
+		value = 0
 	}
 }
 
 mmgsiege_decrease_resource_shortage = {
 	if = {
-		limit = { is_variable_set = mmgsiege_$RESOURCE$_shortage_progress }
-		clear_variable = mmgsiege_$RESOURCE$_shortage_progress
+		limit = { is_variable_set = mmgsiege_$RESOURCE$_shortage_level }
+		subtract_variable = {
+			which = mmgsiege_$RESOURCE$_shortage_level
+			value = 1
+		}
 	}
 	if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_critical }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_critical
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_major }
+		limit = {
+			is_variable_set = mmgsiege_$RESOURCE$_shortage_level
+			check_variable = { which = mmgsiege_$RESOURCE$_shortage_level value <= 0 }
+		}
+		clear_variable = mmgsiege_$RESOURCE$_shortage_level
 	}
-	else_if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_major }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_major
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_moderate }
-	}
-	else_if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_moderate }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_moderate
-		add_modifier = { modifier = mmgsiege_$RESOURCE$_shortage_minor }
-	}
-	else_if = {
-		limit = { has_modifier = mmgsiege_$RESOURCE$_shortage_minor }
-		remove_modifier = mmgsiege_$RESOURCE$_shortage_minor
+	if = {
+		limit = {
+			NOT = { is_variable_set = mmgsiege_$RESOURCE$_shortage_level }
+			has_planet_flag = mmgsiege_$RESOURCE$_shortage
+		}
 		remove_planet_flag = mmgsiege_$RESOURCE$_shortage
+	}
+	set_variable = {
+		which = mmgsiege_$RESOURCE$_shortage_progress
+		value = 0
 	}
 }
 
@@ -581,4 +574,144 @@ mmgsiege_set_stockpile_budget_percent = {
 		value = mmgsiege_new_$RESOURCE$_stockpile_budget
 	}
 	clear_variable = mmgsiege_new_$RESOURCE$_stockpile_budget
+}
+
+mmgsiege_remove_siege_modifier = {
+	if = {
+		limit = { has_modifier = mmgsiege_under_siege }
+		remove_modifier = mmgsiege_under_siege
+	}
+	if = {
+		limit = { has_modifier = mmgsiege_under_siege_never_surrender_capital }
+		remove_modifier = mmgsiege_under_siege_never_surrender_capital
+	}
+	if = {
+		limit = { has_modifier = mmgsiege_under_siege_never_surrender_gestalt }
+		remove_modifier = mmgsiege_under_siege_never_surrender_gestalt
+	}
+	if = {
+		limit = { has_modifier = mmgsiege_under_siege_never_surrender_total_war }
+		remove_modifier = mmgsiege_under_siege_never_surrender_total_war
+	}
+}
+
+mmgsiege_update_planet_status = {
+	if = {
+		limit = { mmgsiege_is_under_siege = yes }
+		set_planet_flag = mmgsiege_under_siege
+		# add temporary economy intel report, for intel_economy_colonies_high
+		# this will temporarily survey all colonies so besieger can see modifiers, etc
+		# using set_surveyed only works for day, then is automatically updated because of intel
+		solar_system.starbase.controller = {
+			add_intel_report = {
+				category = economy
+				level = 3
+				days = 31
+				who = prev.owner
+			}
+		}
+		# set or remove under_siege modifier
+		if = {
+			limit = { mmgsiege_planet_can_surrender = yes }
+			if = {
+				limit = { NOT = { has_modifier = mmgsiege_under_siege } }
+				mmgsiege_remove_siege_modifier = yes
+				add_modifier = { modifier = mmgsiege_under_siege }
+			}
+			# start situation if low stability and situation doesn't exist
+			if = {
+				limit = { planet_stability < 40 }
+				if = {
+					limit = {
+						NOT = {
+							any_targeting_situation = { is_situation_type = mmgsiege_siege_surrender_defender_situation }
+						}
+					}
+					controller = {
+						start_situation = {
+							type = mmgsiege_siege_surrender_defender_situation
+							target = prev
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_targeting_situation = {
+								is_situation_type = mmgsiege_siege_surrender_attacker_situation
+							}
+						}
+					}
+					solar_system.starbase.controller = {
+						start_situation = {
+							type = mmgsiege_siege_surrender_attacker_situation
+							target = prev
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			# capital cannot surrender
+			limit = { mmgsiege_is_unoccupied_capital = yes }
+			if = {
+				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_capital } }
+				mmgsiege_remove_siege_modifier = yes
+				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_capital }
+			}
+		}
+		else_if = {
+			# gestalt cannot surrender
+			limit = { controller = { is_gestalt = yes } }
+			if = {
+				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_gestalt } }
+				mmgsiege_remove_siege_modifier = yes
+				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_gestalt }
+			}
+		}
+		else = {
+			# total war cannot surrender (implied)
+			if = {
+				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_total_war } }
+				mmgsiege_remove_siege_modifier = yes
+				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_total_war }
+			}
+		}
+	}
+	else = {
+		remove_planet_flag = mmgsiege_under_siege
+		mmgsiege_remove_siege_modifier = yes
+	}
+}
+
+mmgsiege_create_or_remove_shortage_modifiers = {
+	if = {
+		limit = {
+			exists = owner
+			OR = {
+				has_planet_flag = mmgsiege_energy_shortage
+				has_planet_flag = mmgsiege_minerals_shortange
+				has_planet_flag = mmgsiege_food_shortage
+				has_planet_flag = mmgsiege_consumer_goods_shortage
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = mmgsiege_local_resource_shortages } }
+			add_modifier = { modifier = mmgsiege_local_resource_shortages }
+		}
+		if = {
+			limit = { NOT = { has_deposit = mmgsiege_shortage_feature } }
+			add_deposit = mmgsiege_shortage_feature
+		}
+	}
+	else = {
+		if = {
+			limit = { has_modifier = mmgsiege_local_resource_shortages }
+			remove_modifier = mmgsiege_local_resource_shortages
+		}
+		if = {
+			limit = { has_deposit = mmgsiege_shortage_feature }
+			remove_deposit = mmgsiege_shortage_feature
+		}
+	}
 }
