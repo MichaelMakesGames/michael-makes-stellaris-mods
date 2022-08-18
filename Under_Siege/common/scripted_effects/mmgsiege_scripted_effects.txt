@@ -234,6 +234,119 @@ mmgsiege_increase_stockpile_max_from_buildings = {
 	# clear_variable = mmgsiege_stockpile_from_$BUILDING_TYPE$
 }
 
+mmgsiege_calculate_stockpile_maximum = {
+	# initialize
+	set_variable = {
+		which = mmgsiege_stockpile_maximum_from_capital
+		value = 0
+	}
+
+	# capital tier
+	if = {
+		limit = { has_fully_upgraded_capital = yes }
+		change_variable = {
+			which = mmgsiege_stockpile_maximum_from_capital
+			value = 1000
+		}
+	}
+	else_if = {
+		limit = { has_major_upgraded_capital = yes }
+		change_variable = {
+			which = mmgsiege_stockpile_maximum_from_capital
+			value = 500
+		}
+	}
+	else_if = {
+		limit = { has_upgraded_capital = yes }
+		change_variable = {
+			which = mmgsiege_stockpile_maximum_from_capital
+			value = 300
+		}
+	}
+	else = {
+		change_variable = {
+			which = mmgsiege_stockpile_maximum_from_capital
+			value = 100
+		}
+	}
+
+	set_variable = {
+		which = mmgsiege_stockpile_maximum
+		value = mmgsiege_stockpile_maximum_from_capital
+	}
+
+	# other buildings
+	# resource silo
+	mmgsiege_increase_stockpile_max_from_buildings = {
+		BUILDING_TYPE = building_resource_silo
+		MULTIPLIER = 1000
+	}
+	# stronghold
+	mmgsiege_increase_stockpile_max_from_buildings = {
+		BUILDING_TYPE = building_stronghold
+		MULTIPLIER = 100
+	}
+	# fortress
+	mmgsiege_increase_stockpile_max_from_buildings = {
+		BUILDING_TYPE = building_fortress
+		MULTIPLIER = 200
+	}
+
+	# reduce stockpiles if above max
+	if = {
+		limit = {
+			is_variable_set = mmgsiege_energy_stockpile
+			check_variable = {
+				which = mmgsiege_energy_stockpile
+				value > mmgsiege_stockpile_maximum
+			}
+		}
+		set_variable = {
+			which = mmgsiege_energy_stockpile
+			value = mmgsiege_stockpile_maximum
+		}
+	}
+	if = {
+		limit = {
+			is_variable_set = mmgsiege_minerals_stockpile
+			check_variable = {
+				which = mmgsiege_minerals_stockpile
+				value > mmgsiege_stockpile_maximum
+			}
+		}
+		set_variable = {
+			which = mmgsiege_minerals_stockpile
+			value = mmgsiege_stockpile_maximum
+		}
+	}
+	if = {
+		limit = {
+			is_variable_set = mmgsiege_food_stockpile
+			check_variable = {
+				which = mmgsiege_food_stockpile
+				value > mmgsiege_stockpile_maximum
+			}
+		}
+		set_variable = {
+			which = mmgsiege_food_stockpile
+			value = mmgsiege_stockpile_maximum
+		}
+	}
+	if = {
+		limit = {
+			is_variable_set = mmgsiege_consumer_goods_stockpile
+			check_variable = {
+				which = mmgsiege_consumer_goods_stockpile
+				value > mmgsiege_stockpile_maximum
+			}
+		}
+		set_variable = {
+			which = mmgsiege_consumer_goods_stockpile
+			value = mmgsiege_stockpile_maximum
+		}
+	}
+}
+
 mmgsiege_calculate_stockpile_priority = {
 	# define balance/upkeep vars, only if needed
 	# they are updated via event every 6 months
@@ -340,6 +453,139 @@ mmgsiege_calculate_stockpile_priority = {
 	# cleanup
 	clear_variable = mmgsiege_$RESOURCE$_deficit_scale
 	clear_variable = mmgsiege_$RESOURCE$_stockpile_months
+}
+
+mmgsiege_increase_local_stockpile = {
+	# initialize temp variable
+	set_variable = {
+		which = mmgsiege_$RESOURCE$_stockpile_add
+		value = $AMOUNT$
+	}
+	# wrapping everything in an if gets rid of some logged error when hovering over buttons
+	if = {
+		limit = { is_variable_set = mmgsiege_$RESOURCE$_stockpile_add }
+		# define if needed
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_$RESOURCE$_stockpile } }
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_stockpile
+				value = 0
+			}
+		}
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_stockpile_maximum } }
+			mmgsiege_calculate_stockpile_maximum = yes
+		}
+		# don't spend more than is in empire stockpile
+		if = {
+			limit = {
+				owner = {
+					resource_stockpile_compare = {
+						resource = $RESOURCE$
+						value < mmgsiege_$RESOURCE$_stockpile_add
+					}
+				}
+			}
+			owner = {
+				export_resource_stockpile_to_variable = {
+					resource = $RESOURCE$
+					variable = mmgsiege_empire_$RESOURCE$_stockpile
+				}
+			}
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_stockpile_add
+				value = owner.mmgsiege_empire_$RESOURCE$_stockpile
+			}
+			floor_variable = mmgsiege_$RESOURCE$_stockpile_add
+			owner = {
+				clear_variable = mmgsiege_empire_$RESOURCE$_stockpile
+			}
+		}
+		# don't spend more than can fit
+		set_variable = {
+			which = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
+			value = mmgsiege_stockpile_maximum
+		}
+		subtract_variable = {
+			which = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
+			value = mmgsiege_$RESOURCE$_stockpile
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = mmgsiege_$RESOURCE$_stockpile_add
+					value > mmgsiege_$RESOURCE$_stockpile_remaining_capacity
+				}
+			}
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_stockpile_add
+				value = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
+			}
+		}
+		clear_variable = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
+		# finally
+		# add to stockpile
+		change_variable = {
+			which = mmgsiege_$RESOURCE$_stockpile
+			value = mmgsiege_$RESOURCE$_stockpile_add
+		}
+		# remove from empire stockpile
+		owner = {
+			add_resource = {
+				$RESOURCE$ = -1
+				mult = prev.mmgsiege_$RESOURCE$_stockpile_add
+			}
+		}
+		# and clear temp variable
+		clear_variable = mmgsiege_$RESOURCE$_stockpile_add
+	}
+}
+
+mmgsiege_decrease_local_stockpile = {
+	# initialize temp variable
+	set_variable = {
+		which = mmgsiege_$RESOURCE$_stockpile_subtract
+		value = $AMOUNT$
+	}
+	# wrapping everything in an if gets rid of some logged error when hovering over buttons
+	if = {
+		limit = { is_variable_set = mmgsiege_$RESOURCE$_stockpile_subtract }
+		# define if needed
+		if = {
+			limit = { NOT = { is_variable_set = mmgsiege_$RESOURCE$_stockpile } }
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_stockpile
+				value = 0
+			}
+		}
+		# don't remove more than there is
+		if = {
+			limit = {
+				check_variable = {
+					which = mmgsiege_$RESOURCE$_stockpile_subtract
+					value > mmgsiege_$RESOURCE$_stockpile
+				}
+			}
+			set_variable = {
+				which = mmgsiege_$RESOURCE$_stockpile_subtract
+				value = mmgsiege_$RESOURCE$_stockpile
+			}
+		}
+		# remove from stockpile
+		subtract_variable = {
+			which = mmgsiege_$RESOURCE$_stockpile
+			value = mmgsiege_$RESOURCE$_stockpile_subtract
+		}
+		# add to empire stockpile
+		owner = {
+			add_resource = {
+				$RESOURCE$ = 1
+				mult = prev.mmgsiege_$RESOURCE$_stockpile_subtract
+			}
+		}
+		# and clear temp variable
+		clear_variable = mmgsiege_$RESOURCE$_stockpile_subtract
+	}
 }
 
 mmgsiege_increase_stockpile_budget = {

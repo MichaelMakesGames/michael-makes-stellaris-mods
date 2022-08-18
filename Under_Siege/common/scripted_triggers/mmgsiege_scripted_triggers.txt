@@ -141,16 +141,20 @@ mmgsiege_can_stockpile = {
 }
 
 mmgsiege_is_under_siege = {
-	AND = {
-		exists = solar_system
-		exists = solar_system.starbase
-		exists = solar_system.starbase.controller
-		exists = controller
-		controller = {
-			NOT = {
-				is_same_value = prev.solar_system.starbase.controller
+	custom_tooltip = {
+		fail_text = "mmgsiege_is_not_under_siege_success"
+		success_text = "mmgsiege_is_not_under_siege_fail"
+		AND = {
+			exists = solar_system
+			exists = solar_system.starbase
+			exists = solar_system.starbase.controller
+			exists = controller
+			controller = {
+				NOT = {
+					is_same_value = prev.solar_system.starbase.controller
+				}
+				is_hostile = prev.solar_system.starbase.controller
 			}
-			is_hostile = prev.solar_system.starbase.controller
 		}
 	}
 }

@@ -43,6 +43,20 @@ country_event = {
 		}
 	}
 	option = {
+		name = mmgsiege_back_to_local_stockpile
+		trigger = {
+			exists = fromfrom
+			fromfrom = { is_scope_type = planet }
+		}
+		hidden_effect = {
+			fromfrom = {
+				planet_event = {
+					id = mmgsiege_local_stockpile.102
+				}
+			}
+		}
+	}
+	option = {
 		name = CLOSE
 		hidden_effect = {
 			# initialize stockpile feature

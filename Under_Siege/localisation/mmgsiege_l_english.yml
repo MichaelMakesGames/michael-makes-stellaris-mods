@@ -56,41 +56,33 @@
 
  mmgsiege_decision_manage_stockpile: " Open Stockpile"
  mmgsiege_decision_manage_stockpile_desc: "Stockpile Maximum: [This.mmgsiege_stockpile_maximum]\nFrom planet capital tier: +[This.mmgsiege_stockpile_maximum_from_capital]\nFrom 100 per Stronghold: +[This.mmgsiege_stockpile_maximum_from_building_stronghold]\nFrom 200 per Fortress: +[This.mmgsiege_stockpile_maximum_from_building_fortress]\nFrom 1000 per Resource Silos: +[This.mmgsiege_stockpile_maximum_from_building_resource_silo]"
- mmgsiege_decision_manage_stockpile_effect: "Show stockpile decisions.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]/[This.mmgsiege_stockpile_maximum]\n£minerals£ [This.GetMineralsStockpile]/[This.mmgsiege_stockpile_maximum]\n£food£ [This.GetFoodStockpile]/[This.mmgsiege_stockpile_maximum]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]/[This.mmgsiege_stockpile_maximum]"
+ mmgsiege_decision_manage_stockpile_effect: "Open Stockpile Management.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]/[This.mmgsiege_stockpile_maximum]\n£minerals£ [This.GetMineralsStockpile]/[This.mmgsiege_stockpile_maximum]\n£food£ [This.GetFoodStockpile]/[This.mmgsiege_stockpile_maximum]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]/[This.mmgsiege_stockpile_maximum]"
 
- mmgsiege_decision_close_stockpile: " Close Stockpile"
- mmgsiege_decision_close_stockpile_desc: "Stockpile Maximum: [This.mmgsiege_stockpile_maximum]\nFrom planet capital tier: +[This.mmgsiege_stockpile_maximum_from_capital]\nFrom 100 per Stronghold: +[This.mmgsiege_stockpile_maximum_from_building_stronghold]\nFrom 200 per Fortress: +[This.mmgsiege_stockpile_maximum_from_building_fortress]\nFrom 1000 per Resource Silos: +[This.mmgsiege_stockpile_maximum_from_building_resource_silo]"
- mmgsiege_decision_close_stockpile_effect: "Hide stockpile decisions.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]/[This.mmgsiege_stockpile_maximum]\n£minerals£ [This.GetMineralsStockpile]/[This.mmgsiege_stockpile_maximum]\n£food£ [This.GetFoodStockpile]/[This.mmgsiege_stockpile_maximum]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]/[This.mmgsiege_stockpile_maximum]"
-
- mmgsiege_decision_stockpile_energy_100: " Stockpile £energy£ Energy"
- mmgsiege_decision_stockpile_energy_100_desc: ""
- mmgsiege_decision_stockpile_energy_100_effect: "Adds £energy£§Y100§! to the local stockpile.\n\nResources that exceed the stockpile maximum will be refunded."
-
- mmgsiege_decision_stockpile_minerals_100: " Stockpile £minerals£ Minerals"
- mmgsiege_decision_stockpile_minerals_100_desc: ""
- mmgsiege_decision_stockpile_minerals_100_effect: "Adds £minerals£§Y100§! to the local stockpile.\n\nResources that exceed the stockpile maximum will be refunded."
-
- mmgsiege_decision_stockpile_food_100: " Stockpile £food£ Food"
- mmgsiege_decision_stockpile_food_100_desc: ""
- mmgsiege_decision_stockpile_food_100_effect: "Adds £food£§Y100§! to the local stockpile.\n\nResources that exceed the stockpile maximum will be refunded."
-
- mmgsiege_decision_stockpile_consumer_goods_100: " Stockpile £consumer_goods£ Consumer Goods"
- mmgsiege_decision_stockpile_consumer_goods_100_desc: ""
- mmgsiege_decision_stockpile_consumer_goods_100_effect: "Adds £consumer_goods£§Y100§! to the local stockpile.\n\nResources that exceed the stockpile maximum will be refunded."
-
- mmgsiege_energy_budget_var_value: "£energy£[FromFrom.mmgsiege_energy_stockpile_budget]"
- mmgsiege_minerals_budget_var_value: "£minerals£[FromFrom.mmgsiege_minerals_stockpile_budget]"
- mmgsiege_food_budget_var_value: "£food£[FromFrom.mmgsiege_food_stockpile_budget]"
- mmgsiege_consumer_goods_budget_var_value: "£consumer_goods£[FromFrom.mmgsiege_consumer_goods_stockpile_budget]"
+ mmgsiege_energy_budget_var_value: "£energy£[From.mmgsiege_energy_stockpile_budget]"
+ mmgsiege_minerals_budget_var_value: "£minerals£[From.mmgsiege_minerals_stockpile_budget]"
+ mmgsiege_food_budget_var_value: "£food£[From.mmgsiege_food_stockpile_budget]"
+ mmgsiege_consumer_goods_budget_var_value: "£consumer_goods£[From.mmgsiege_consumer_goods_stockpile_budget]"
+ mmgsiege_energy_stockpile_var_value: "£energy£[This.GetEnergyStockpile]"
+ mmgsiege_minerals_stockpile_var_value: "£minerals£[This.GetMineralsStockpile]"
+ mmgsiege_food_stockpile_var_value: "£food£[This.GetFoodStockpile]"
+ mmgsiege_consumer_goods_stockpile_var_value: "£consumer_goods£[This.GetConsumerGoodsStockpile]"
 
  mmgsiege_stockpile_budget_feature: "Siege Stockpile Budget"
  mmgsiege_stockpile_budget_feature_desc: "Monthly budget for transferring resources from the empire stockpile to planets, to prepare for siege. Manage it with the Manage Siege Stockpile Budget edict."
  mmgsiege_stockpile_budget: "Siege Stockpile Budget"
- mmgsiege_manage_stockpile_budget: "Manage Siege Stockpile Budget"
+ mmgsiege_manage_stockpile_budget: "Manage Stockpile Budget"
  mmgsiege_manage_stockpile_budget_desc: "Automatically stockpile the budgeted resources to your highest priority colonies each month to prepare for siege.\n\nEach planet receives at most 100 of each resource.\nColonies must have enough stockpile capacity (provided by capital buildings, Resource Silos, Strongholds, and Fortresses), and must not be under siege.\nExtras are automatically refunded to your empire stockpile.\n\nColony priority for each resource is determined by:\n£trigger_yes£ High population\n£trigger_yes£ Close to war front\n£trigger_no£ Produces resource locally\n£trigger_no£ Already stockpiled"
+ mmgsiege_manage_local_stockpile: "Manage Local Stockpile"
+ mmgsiege_manage_local_stockpile_desc: "During a siege, if a planet has a shortage of resources, it will receive gradually worsening shortages. However, if it has resources stockpiled, it will first consume resources from the stockpile before it receives any shortage penalties.\n\nStockpiles changed on planets already under siege.\n\nYou can also set up a Stockpile Budget to automatically transfer resources from your empire stockpile to your local planet stockpiles each month.\n\nStockpile Maximum: §H[From.mmgsiege_stockpile_maximum]§!\n§LCapital buildings, strongholds, fortresses, and resource silos increase maximum.§!"
+ mmgsiege_back_to_local_stockpile: "Back to Local Stockpile"
 
- edict_mmgsiege_manage_stockpile_automation: "Manage Siege Stockpile Budget"
- edict_mmgsiege_manage_stockpile_automation_desc: "Transfer resources from your empire stockpile to your planets each month to prepare for siege."
+ mmgsiege_must_open_planet_fail: "£trigger_no£ Must Open Planet view, and Close Other Windows"
+ mmgsiege_must_open_planet_success: "£trigger_yes£ Planet View is Open"
+ mmgsiege_is_not_under_siege_fail: "£trigger_no£ Planet is Under Siege"
+ mmgsiege_is_not_under_siege_success: "£trigger_yes£ Planet is NOT Under Siege"
+
+ edict_mmgsiege_manage_stockpile_automation: "Manage Stockpile Budget"
+ edict_mmgsiege_manage_stockpile_automation_desc: "Set up a budget to transfer resources from your empire stockpile to your planets each month to prepare for siege."
 
  mmgsiege_siege_surrender_attacker_situation: "Siege of [Target.GetName]"
  mmgsiege_siege_surrender_attacker_situation_desc: "[Owner.GetName] has besieged [Target.GetName], and with low stability, it's only a matter of time before the planet surrenders."
