@@ -34,16 +34,22 @@
  mmgsiege_shortage_substatus_progress_food: "([This.mmgsiege_food_shortage_progress]% to Next Level)"
  mmgsiege_shortage_substatus_progress_consumer_goods: "([This.mmgsiege_consumer_goods_shortage_progress]% to Next Level)"
 
- mmgsiege_energy_shortage: "Energy Shortage"
- mmgsiege_minerals_shortage: "Minerals Shortage"
- mmgsiege_food_shortage: "Food Shortage"
- mmgsiege_consumer_goods_shortage: "Consumer Goods Shortage"
- mmgsiege_metallurgist_shortage: "Metallurgist Shortage"
+ # these are never displayed to the user
+ # they only exists to suppress error logs
+ mmgsiege_energy_shortage: "!INTERNAL! Energy Shortage"
+ mmgsiege_minerals_shortage: "!INTERNAL! Minerals Shortage"
+ mmgsiege_food_shortage: "!INTERNAL! Food Shortage"
+ mmgsiege_consumer_goods_shortage: "!INTERNAL! Consumer Goods Shortage"
+ mmgsiege_metallurgist_shortage: "!INTERNAL! Metallurgist Shortage"
+ mmgsiege_administrator_shortage: "!INTERNAL! Administrator Shortage"
+ mmgsiege_researcher_shortage: "!INTERNAL! Researcher Shortage"
  mmgsiege_energy_shortage_desc: ""
  mmgsiege_minerals_shortage_desc: ""
  mmgsiege_food_shortage_desc: ""
  mmgsiege_consumer_goods_shortage_desc: ""
  mmgsiege_metallurgist_shortage_desc: ""
+ mmgsiege_administrator_shortage_desc: ""
+ mmgsiege_researcher_shortage_desc: ""
 
  mmgsiege_shortage_feature: "Local Resource Shortages"
  mmgsiege_shortage_feature_desc: ""

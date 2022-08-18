@@ -210,7 +210,7 @@ mmgsiege_has_recovering_resource_shortage = {
 			planet_resource_compare = {
 				resource = $RESOURCE$
 				type = balance
-				value >= 0
+				value >= value:mmgsiege_planet_production_offset_$RESOURCE$
 			}
 		}
 	}

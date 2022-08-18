@@ -19,12 +19,28 @@ mmgsiege_minerals_shortage = {
 	lithoid_pop_happiness = -0.05
 	LITHOID_pop_growth_speed_reduction = 0.10
 	planet_artisans_produces_mult = -0.05
+	planet_artisans_upkeep_mult = -0.05
 }
 
 mmgsiege_metallurgist_shortage = {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
 	planet_metallurgists_produces_mult = -0.05
+	planet_metallurgists_upkeep_mult = -0.05
+}
+
+mmgsiege_administrator_shortage = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
+	planet_administrators_produces_mult = -0.05
+	planet_administrators_upkeep_mult = -0.05
+}
+
+mmgsiege_researcher_shortage = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
+	planet_researchers_produces_mult = -0.05
+	planet_researchers_upkeep_mult = -0.05
 }
 
 mmgsiege_energy_shortage = {

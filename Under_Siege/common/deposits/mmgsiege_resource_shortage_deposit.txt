@@ -1,0 +1,344 @@
+mmgsiege_shortage_feature = {
+	icon = d_bunker_door
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	drop_weight = {
+		weight = 0
+	}
+
+	##########
+	# ENERGY #
+	##########
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
+		}
+		modifier = {
+			mmgsiege_energy_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+		}
+		modifier = {
+			mmgsiege_energy_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+		}
+		modifier = {
+			mmgsiege_energy_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+		}
+		modifier = {
+			mmgsiege_energy_shortage = 10
+		}
+	}
+
+	############
+	# MINERALS #
+	############
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
+		}
+		modifier = {
+			mmgsiege_minerals_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+		}
+		modifier = {
+			mmgsiege_minerals_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+		}
+		modifier = {
+			mmgsiege_minerals_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+		}
+		modifier = {
+			mmgsiege_minerals_shortage = 10
+		}
+	}
+
+	########
+	# FOOD #
+	########
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
+		}
+		modifier = {
+			mmgsiege_food_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+		}
+		modifier = {
+			mmgsiege_food_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+		}
+		modifier = {
+			mmgsiege_food_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+		}
+		modifier = {
+			mmgsiege_food_shortage = 10
+		}
+	}
+
+	##################
+	# CONSUMER GOODS #
+	##################
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
+		}
+		modifier = {
+			mmgsiege_consumer_goods_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 2 }
+		}
+		modifier = {
+			mmgsiege_consumer_goods_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 3 }
+		}
+		modifier = {
+			mmgsiege_consumer_goods_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
+		}
+		modifier = {
+			mmgsiege_consumer_goods_shortage = 10
+		}
+	}
+
+	##############
+	# RESEARCHER #
+	##############
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_researcher_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 2 }
+				}
+				AND = {
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_researcher_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 3 }
+				}
+				AND = {
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_researcher_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
+				}
+				AND = {
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_researcher_shortage = 10
+		}
+	}
+
+	#################
+	# ADMINISTRATOR #
+	#################
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes is_lithoid_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_hive_empire = yes is_lithoid_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_researcher_shortage = 1
+		}
+	}
+
+	################
+	# METALLURGIST #
+	################
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_catalytic_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
+				}
+				AND = {
+					owner = { is_catalytic_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_metallurgist_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_catalytic_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+				}
+				AND = {
+					owner = { is_catalytic_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_metallurgist_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_catalytic_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+				}
+				AND = {
+					owner = { is_catalytic_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_metallurgist_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					owner = { is_catalytic_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+				}
+				AND = {
+					owner = { is_catalytic_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_metallurgist_shortage = 10
+		}
+	}
+}

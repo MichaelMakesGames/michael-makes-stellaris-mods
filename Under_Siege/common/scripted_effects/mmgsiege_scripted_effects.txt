@@ -15,7 +15,6 @@ mmgsiege_export_planet_balance_and_upkeep = {
 		}
 		variable = mmgsiege_$RESOURCE$_upkeep
 	}
-	# remove the stockpile budget from capital
 	if = {
 		limit = {
 			has_deposit = mmgsiege_stockpile_budget_feature
@@ -23,6 +22,7 @@ mmgsiege_export_planet_balance_and_upkeep = {
 				is_variable_set = mmgsiege_$RESOURCE$_stockpile_budget
 			}
 		}
+		# remove the stockpile budget from capital
 		change_variable = {
 			which = mmgsiege_$RESOURCE$_balance
 			value = owner.mmgsiege_$RESOURCE$_stockpile_budget
@@ -30,6 +30,11 @@ mmgsiege_export_planet_balance_and_upkeep = {
 		subtract_variable = {
 			which = mmgsiege_$RESOURCE$_upkeep
 			value = owner.mmgsiege_$RESOURCE$_stockpile_budget
+		}
+		# add country base production to capital
+		change_variable = {
+			which = mmgsiege_$RESOURCE$_balance
+			value = owner.value:mmgsiege_country_base_production_$RESOURCE$
 		}
 	}
 }
@@ -608,6 +613,26 @@ mmgsiege_update_planet_status = {
 				level = 3
 				days = 31
 				who = prev.owner
+			}
+		}
+		# prevent revolts
+		if = {
+			# prevent non-slave revolts
+			limit = { has_planet_flag = unrest_timer }
+			remove_planet_flag = unrest_timer
+		}
+		if = {
+			# prevent slave revolts from progressing
+			limit = {
+				is_variable_set = unrest_50
+				check_variable = {
+					which = unrest_50
+					value >= 1
+				}
+			}
+			subtract_variable = {
+				which = unrest_50
+				value = 1
 			}
 		}
 		# set or remove under_siege modifier
