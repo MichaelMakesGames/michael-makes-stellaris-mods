@@ -4,36 +4,36 @@ Ever wanted to win a war without invading a single planet? Have you wondered how
 
 When the a starbase is controlled by a hostile country, planets need to produce their own resources, otherwise they face gradually worsening resource shortages. Eventually, the local forces of the planet may surrender to the enemy!
 
-[h1]Details[/h1]
-If a planet's controller is hostile to the system's starbase controller, the planet is considered under siege.
+[h1]Sieges[/h1]
+If a planet's controller is hostile to the system's starbase controller, the planet is considered under siege. It must produce its own resources, or face the consequences.
 
-When under siege, a planet must produce its own food, minerals, energy, and consumer goods. If a planet does not produce its full amount, then a resource shortage will develop, at 4 different levels (minor, moderate, major, and critical), tracked individually for each of those resources. The rate at which a shortage develops depends on how much of the local need the planet satisfies. If a planet provides none of its local need, then it will develop 1 level per month, if it produces 50% of its local need, then it will develop 1 shortage level per 2 months, etc.
+[h1]Resource Shortages[/h1]
+If energy, minerals, food, and consumer goods aren't produced locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food a shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if some food needs to be imported.
 
-Resource shortages have different effects depending on the resource. Sustenance is by far the most important. A food shortage will make biological pops very unhappy, minerals will make lithoids unhappy, etc.
-
-After 12 months of siege, a planet with low stability (less than 40) might surrender. The chance to surrender scales from 1% at 39 stability to 40% at 0 stability, checked monthly. This chance can be viewed in the tooltip of the "Considering Surrender" modifier on the planet.
+[h1]Surrender[/h1]
+A planet that is under siege and has less than 40 stability will start to consider surrender, starting a situation for both the attacker and defender. The lower the stability, the faster the situation will progress. At 100%, the planet surrenders and the besiegers take control.
 
 Some planets never surrender:
 [list]
  [*] Capital planets never surrender
  [*] Gestalt planets never surrender
- [*] No one surrenders to genocidal countries
- [*] No one surrenders to crisis factions or Become the Crisis countries
  [*] Planets will not surrender if there's active ground combat or if the starbase is currently in combat
  [*] Planets never surrender during total wars
 [/list]
 
-Known issue: catalytic empires will receive a metallurgist penalty when they have a mineral shortage, and will not receive a metallurgist penalty when they have a food shortage. An update to address this is planned.
+[h1]Stockpiles[/h1]
+You can transfer resources from your empire stockpile to local planet stockpiles. When besieged, planets will consume from that stockpile before they start receiving penalties. You can manually add and remove resources from the stockpile as long as the planet is not under siege. Additionally, you can set a budget to automatically stockpile to your highest priority planets. Priority is determined separately for each resource, based on local needs and production, how long the current stockpile could last in a siege, and proximity to a war front.
+
+A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier, +100 per stronghold, +200 per fortress, and +1000 per resource silo. Finally, a good use for resource silos! 
 
 [h1]Strategic Implications[/h1]
 [list]
  [*] Specialized planets may be more efficient, but they are fragile to sieges
  [*] Perhaps specializing planets should be reserved for your well-defended core, and outlying planets should be generalist to slow down enemies
- [*] Fortress worlds will greatly benefit from a local resource supplies
+ [*] Fortress worlds will greatly benefit from a local resource supplies, or a large stockpile
  [*] Trade planets are vulnerable to sieges because the trade value doesn't count towards any local resource production when under siege
  [*] Wars against hive minds and machines will be tougher since invasions are still needed, and the unhappiness penalties of resource shortages do not affect them
  [*] Genocidal empires will have more difficulty conquering since no planets will surrender to them
- [*] Prolonged sieges can cause political instability well after a war's end
  [*] Probably more things I haven't thought of!
 [/list]
 
@@ -42,10 +42,11 @@ Known issue: catalytic empires will receive a metallurgist penalty when they hav
   [*] For Stellaris 3.4.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998175]3.3 version here[/url])
   [*] NOT achievement compatible
   [*] Can be added to an existing game
-  [*] Can be removed from an existing game, but you might see empty modifiers left over on planets
+  [*] Can be removed from an existing game
   [*] Should be compatible with all other mods
   [list]
     [*] Exception: Occupied Resources adds its own conflicting siege mechanics. Use one or the other, not both.
+    [*] Exception: Overwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
   [/list]
 [/list]
 
