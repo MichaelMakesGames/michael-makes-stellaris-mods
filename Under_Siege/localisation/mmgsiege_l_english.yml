@@ -3,12 +3,14 @@
  mmgsiege_under_siege_desc: "A hostile empire controls this system's starbase, so this planet is under siege.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
  mmgsiege_under_siege_tooltip: "Will consider surrender below §Y40 Stability§!"
  mmgsiege_under_siege_never_surrender_capital: "Under Siege: Never Surrender the Capital"
- mmgsiege_under_siege_never_surrender_capital_desc: "Capital planets never surrender in sieges."
+ mmgsiege_under_siege_never_surrender_capital_desc: "Capital planets never surrender in sieges.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
  mmgsiege_under_siege_never_surrender_gestalt: "Under Siege: Never Surrender the Collective"
- mmgsiege_under_siege_never_surrender_gestalt_desc: "Hiveminds and Machine Consciousnesses never surrender."
+ mmgsiege_under_siege_never_surrender_gestalt_desc: "Hiveminds and Machine Consciousnesses never surrender.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
+ mmgsiege_under_siege_never_surrender_no_war: "Under Siege: Never Surrender in Informal Conflict"
+ mmgsiege_under_siege_never_surrender_no_war_desc: "The planet controller and the starbase controller are not at war.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
  mmgsiege_under_siege_never_surrender_total_war: "Under Siege: Never Surrender in Total War"
- mmgsiege_under_siege_never_surrender_total_war_desc: "Empires engaged in total war never surrender."
- mmgsiege_under_siege_never_surrender_tooltip: "Will never surrender\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
+ mmgsiege_under_siege_never_surrender_total_war_desc: "Empires engaged in total war never surrender.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
+ mmgsiege_under_siege_never_surrender_tooltip: "Will never surrender"
 
  mod_ROBOT_pop_happiness: "Synthetic Pop Happiness"
 
@@ -56,7 +58,7 @@
 
  mmgsiege_decision_manage_stockpile: " Open Stockpile"
  mmgsiege_decision_manage_stockpile_desc: "Stockpile Maximum: [This.mmgsiege_stockpile_maximum]\nFrom planet capital tier: +[This.mmgsiege_stockpile_maximum_from_capital]\nFrom 100 per Stronghold: +[This.mmgsiege_stockpile_maximum_from_building_stronghold]\nFrom 200 per Fortress: +[This.mmgsiege_stockpile_maximum_from_building_fortress]\nFrom 1000 per Resource Silos: +[This.mmgsiege_stockpile_maximum_from_building_resource_silo]"
- mmgsiege_decision_manage_stockpile_effect: "Open Stockpile Management.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]/[This.mmgsiege_stockpile_maximum]\n£minerals£ [This.GetMineralsStockpile]/[This.mmgsiege_stockpile_maximum]\n£food£ [This.GetFoodStockpile]/[This.mmgsiege_stockpile_maximum]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]/[This.mmgsiege_stockpile_maximum]"
+ mmgsiege_decision_manage_stockpile_effect: "Open Stockpile Management.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£minerals£ [This.GetMineralsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£food£ [This.GetFoodStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£consumer_goods£ [This.GetConsumerGoodsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!"
 
  mmgsiege_energy_budget_var_value: "£energy£[From.mmgsiege_energy_stockpile_budget]"
  mmgsiege_minerals_budget_var_value: "£minerals£[From.mmgsiege_minerals_stockpile_budget]"
@@ -73,7 +75,7 @@
  mmgsiege_manage_stockpile_budget: "Manage Stockpile Budget"
  mmgsiege_manage_stockpile_budget_desc: "Automatically stockpile the budgeted resources to your highest priority colonies each month to prepare for siege.\n\nEach planet receives at most 100 of each resource.\nColonies must have enough stockpile capacity (provided by capital buildings, Resource Silos, Strongholds, and Fortresses), and must not be under siege.\nExtras are automatically refunded to your empire stockpile.\n\nColony priority for each resource is determined by:\n£trigger_yes£ High population\n£trigger_yes£ Close to war front\n£trigger_no£ Produces resource locally\n£trigger_no£ Already stockpiled"
  mmgsiege_manage_local_stockpile: "Manage Local Stockpile"
- mmgsiege_manage_local_stockpile_desc: "During a siege, if a planet has a shortage of resources, it will receive gradually worsening shortages. However, if it has resources stockpiled, it will first consume resources from the stockpile before it receives any shortage penalties.\n\nStockpiles changed on planets already under siege.\n\nYou can also set up a Stockpile Budget to automatically transfer resources from your empire stockpile to your local planet stockpiles each month.\n\nStockpile Maximum: §H[From.mmgsiege_stockpile_maximum]§!\n§LCapital buildings, strongholds, fortresses, and resource silos increase maximum.§!"
+ mmgsiege_manage_local_stockpile_desc: "During a siege, if a planet has a shortage of resources, it will receive gradually worsening shortages. However, if it has resources stockpiled, it will first consume resources from the stockpile before it receives any shortage penalties.\n\nStockpiles cannot be changed on planets already under siege.\n\nYou can set up a Stockpile Budget to automatically transfer resources from your empire stockpile to your local planet stockpiles each month.\n\nStockpile Maximum: §H[From.mmgsiege_stockpile_maximum]§!\n§LCapital buildings, strongholds, fortresses, and resource silos increase maximum.§!"
  mmgsiege_back_to_local_stockpile: "Back to Local Stockpile"
 
  mmgsiege_must_open_planet_fail: "£trigger_no£ Must Open Planet view, and Close Other Windows"
@@ -85,12 +87,12 @@
  edict_mmgsiege_manage_stockpile_automation_desc: "Set up a budget to transfer resources from your empire stockpile to your planets each month to prepare for siege."
 
  mmgsiege_siege_surrender_attacker_situation: "Siege of [Target.GetName]"
- mmgsiege_siege_surrender_attacker_situation_desc: "[Owner.GetName] has besieged [Target.GetName], and with low stability, it's only a matter of time before the planet surrenders."
+ mmgsiege_siege_surrender_attacker_situation_desc: "We have besieged §H[Target.GetName]§!. Unless they manage to raise stability, it's only a matter of time before the colony surrenders."
  mmgsiege_siege_surrender_attacker_situation_monthly_change_tooltip: "Low stability is the main source of progress. Bombardment can help lower stability, by decreasing production, housing, and amenities."
  mmgsiege_siege_surrender_attacker_situation_type: "Siege"
  mmgsiege_siege_surrender_attacker_situation_outcome_effect: "([Target.GetName]):\n   §Y[Owner.GetName]§! becomes controller\nConcludes the §Y[This.GetName]§! Situation."
  mmgsiege_siege_surrender_defender_situation: "Siege of [Target.GetName]"
- mmgsiege_siege_surrender_defender_situation_desc: "[Owner.GetName]'s planet [Target.GetName] has been besieged, and with low stability, it's only a matter of time before the planet surrenders."
+ mmgsiege_siege_surrender_defender_situation_desc: "Our colony on §H[Target.GetName]§! has been besieged. Unless we can raise stability, it's only a matter of time before the colony surrenders."
  mmgsiege_siege_surrender_defender_situation_monthly_change_tooltip: "Low stability is the main source of progress. Increasing stability (such as with Martial Law) and happiness can slow or even reverse progress. However, the best way to end a siege is to retake the starbase in the system."
  mmgsiege_siege_surrender_defender_situation_type: "Siege"
  mmgsiege_siege_surrender_situation_stage_1: "Stage 1"

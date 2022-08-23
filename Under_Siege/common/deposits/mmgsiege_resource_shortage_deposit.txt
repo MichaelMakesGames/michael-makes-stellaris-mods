@@ -160,14 +160,17 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_gestalt = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_machine_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
 				}
@@ -181,14 +184,17 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_gestalt = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 2 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_machine_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
 				}
@@ -202,14 +208,17 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_gestalt = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 3 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_machine_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
 				}
@@ -223,14 +232,17 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_gestalt = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_machine_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
 				}
@@ -248,25 +260,116 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_gestalt = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_machine_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes is_lithoid_empire = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_hive_empire = yes is_lithoid_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
 				}
 			}
 		}
 		modifier = {
-			mmgsiege_researcher_shortage = 1
+			mmgsiege_administrator_shortage = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					exists = owner
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 2 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_administrator_shortage = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					exists = owner
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 3 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_administrator_shortage = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					exists = owner
+					owner = { is_gestalt = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_machine_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = no }
+					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+				}
+				AND = {
+					exists = owner
+					owner = { is_hive_empire = yes is_lithoid_empire = yes }
+					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+				}
+			}
+		}
+		modifier = {
+			mmgsiege_administrator_shortage = 10
 		}
 	}
 
@@ -277,10 +380,12 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 1 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 1 }
 				}
@@ -294,10 +399,12 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
 				}
@@ -311,10 +418,12 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
 				}
@@ -328,10 +437,12 @@ mmgsiege_shortage_feature = {
 		potential = {
 			OR = {
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = yes }
 					mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
 				}
 				AND = {
+					exists = owner
 					owner = { is_catalytic_empire = no }
 					mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
 				}

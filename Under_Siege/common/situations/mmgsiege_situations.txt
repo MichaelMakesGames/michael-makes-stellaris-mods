@@ -312,7 +312,7 @@ mmgsiege_siege_surrender_attacker_situation = {
 }
 
 mmgsiege_siege_surrender_defender_situation = {
-	picture = GFX_evt_burning_city
+	picture = GFX_evt_fleet_from_surface
 	category = negative
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame

@@ -841,6 +841,10 @@ mmgsiege_remove_siege_modifier = {
 		remove_modifier = mmgsiege_under_siege_never_surrender_gestalt
 	}
 	if = {
+		limit = { has_modifier = mmgsiege_under_siege_never_surrender_no_war }
+		remove_modifier = mmgsiege_under_siege_never_surrender_no_war
+	}
+	if = {
 		limit = { has_modifier = mmgsiege_under_siege_never_surrender_total_war }
 		remove_modifier = mmgsiege_under_siege_never_surrender_total_war
 	}
@@ -938,6 +942,15 @@ mmgsiege_update_planet_status = {
 				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_gestalt } }
 				mmgsiege_remove_siege_modifier = yes
 				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_gestalt }
+			}
+		}
+		else_if = {
+			# not at war
+			limit = { controller = { NOT = { is_at_war_with = prev.solar_system.starbase.controller } } }
+			if = {
+				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_no_war } }
+				mmgsiege_remove_siege_modifier = yes
+				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_no_war }
 			}
 		}
 		else = {

@@ -1,17 +1,14 @@
-Adds siege warfare to Stellaris! (For 3.4.*)
+AAdds siege warfare to Stellaris! (For 3.4.*)
 
 Ever wanted to win a war without invading a single planet? Have you wondered how that ecumenopolis feeds itself when you control the skies above it? This is the mod for you!
 
-When the a starbase is controlled by a hostile country, planets need to produce their own resources, otherwise they face gradually worsening resource shortages. Eventually, the local forces of the planet may surrender to the enemy!
-
-[h1]Sieges[/h1]
-If a planet's controller is hostile to the system's starbase controller, the planet is considered under siege. It must produce its own resources, or face the consequences.
+When a starbase is controlled by a hostile country, planets need to produce their own resources, otherwise they face gradually worsening resource shortages. Eventually, the local forces of the planet may surrender to the enemy!
 
 [h1]Resource Shortages[/h1]
-If energy, minerals, food, and consumer goods aren't produced locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food a shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if some food needs to be imported.
+If energy, minerals, food, and consumer goods aren't produced locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if some food needs to be imported.
 
 [h1]Surrender[/h1]
-A planet that is under siege and has less than 40 stability will start to consider surrender, starting a situation for both the attacker and defender. The lower the stability, the faster the situation will progress. At 100%, the planet surrenders and the besiegers take control.
+A planet that is under siege and has less than 40 stability will consider surrender, starting a situation for both the attacker and defender. The lower the stability, the faster the situation will progress. At 100%, the planet surrenders and the besiegers take control.
 
 Some planets never surrender:
 [list]
@@ -34,6 +31,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
  [*] Trade planets are vulnerable to sieges because the trade value doesn't count towards any local resource production when under siege
  [*] Wars against hive minds and machines will be tougher since invasions are still needed, and the unhappiness penalties of resource shortages do not affect them
  [*] Genocidal empires will have more difficulty conquering since no planets will surrender to them
+ [*] High stability / high happiness empires have a defensive advangtage
  [*] Probably more things I haven't thought of!
 [/list]
 
@@ -46,7 +44,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
   [*] Should be compatible with all other mods
   [list]
     [*] Exception: Occupied Resources adds its own conflicting siege mechanics. Use one or the other, not both.
-    [*] Exception: Overwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
+    [*] Exception: This mod verwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
   [/list]
 [/list]
 

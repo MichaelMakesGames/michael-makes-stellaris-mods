@@ -6,7 +6,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		every_controlled_planet = {
+		every_owned_planet = {
 			limit = { mmgsiege_is_under_siege = yes }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = food }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = minerals }
@@ -16,7 +16,7 @@ country_event = {
 			mmgsiege_update_planet_status = yes
 		}
 
-		every_controlled_planet = {
+		every_owned_planet = {
 			limit = {
 				OR = {
 					has_planet_flag = mmgsiege_food_shortage
@@ -45,7 +45,7 @@ country_event = {
 	is_triggered_only = yes
 	title = "mmgsiege_planet_surrendered_to_enemy_title"
 	desc = "mmgsiege_planet_surrendered_to_enemy_desc"
-	picture = GFX_evt_burning_city
+	picture = GFX_evt_surrender
 	location = from
 	option = {
 		name = CLOSE
@@ -186,7 +186,7 @@ system_event = {
 	}
 }
 
-# update planet status on_planet_transfer on_planet_occupied on_planet_ownerless
+# update planet status on_planet_transfer on_planet_occupied
 planet_event = {
 	id = mmgsiege.32
 	hide_window = yes
@@ -196,27 +196,64 @@ planet_event = {
 	}
 }
 
-# clean up shortages up on_planet_ownerless
+# clean up siege/shortage modifiers and features on_planet_ownerless on_colony_destroyed
 planet_event = {
 	id = mmgsiege.33
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = food }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
-		mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+		mmgsiege_remove_siege_modifier = yes
+		while = {
+			count = 4
+			mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+			mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+			mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+			mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+		}
+		mmgsiege_create_or_remove_shortage_modifiers = yes
+	}
+}
+
+# update planet status on_planet_attackers_win
+country_event = {
+	id = mmgsiege.34
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = {
+			mmgsiege_update_planet_status = yes
+		}
+	}
+}
+
+# fallback to occasionally clean up ownerless planets if various on_actions don't catch it
+country_event = {
+	id = mmgsiege.35
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_galaxy_planet = {
+			limit = {
+				has_planet_flag = mmgsiege_under_siege
+				NOT = { exists = owner }
+			}
+			mmgsiege_update_planet_status = yes
+			planet_event = { id = mmgsiege.33 }
+		}
+	}
+}
+
+# delay wrapper for the above
+event = {
+	id = mmgsiege.36
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = {
+				id = mmgsiege.35
+				days = 10
+			}
+		}
 	}
 }

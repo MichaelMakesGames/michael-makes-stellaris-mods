@@ -75,6 +75,11 @@ mmgsiege_under_siege_never_surrender_gestalt {
 	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
 	custom_tooltip = mmgsiege_under_siege_never_surrender_tooltip
 }
+mmgsiege_under_siege_never_surrender_no_war {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
+	custom_tooltip = mmgsiege_under_siege_never_surrender_tooltip
+}
 mmgsiege_under_siege_never_surrender_total_war {
 	icon_frame = 3
 	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
