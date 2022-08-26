@@ -11,7 +11,9 @@ Each system gets 2/5/10/20 Trade Value (depending on tech: none/Offworld Trade C
 
 If your neighbor's trade network is bigger than yours, you get a proportional bonus. For example, if their network is twice as big, you get twice as much trade value. Only collected trade counts, so if your neighbor's network is disrupted by war or pirates, your bonus will decrease. The maximum is a 10x bonus.
 
-A system with long-term cross border trade will get a bonus of +5% trade value per year, reaching a maximum of +100% after 20 years.
+A system with long-term cross border trade will get a bonus of +1% trade value per year, reaching a maximum of +200% after 200 years.
+
+A system also receives a +100% bonus if hyper relays connect the across the border, and both are connected to their owners' capitals.
 
 Border Trade Value is updated only at the start of each month. That means changes to Commercial Pacts, borders, etc will not update Trade Value until the next month.
 
@@ -23,13 +25,18 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game. You might see "empty" modifiers on stars
-  [*] Should be compatible with all other mods, unless they remove vanilla trade tech
+  [*] Should be compatible with all other mods, unless they remove vanilla trade tech, which is very rare except for total conversion mods. The follow total conversions are currently supported:
+  [list]
+    [*] Star Wars: Legacy of the Old Republic
+    [*] Star Wars: New Dawn
+    [*] Star Trek: New Civilizations
+  [/list]
 [/list]
 
 [h1]Credits[/h1]
 [list]
-  [*] Thanks to tzverg for the Russian translation!
-  [*] Thanks to Root for the Japanese translation!
+ [*] Thanks to tzverg for the Russian translation!
+ [*] Thanks to Root for the Japanese translation!
 [/list]
 
 [h1]Sharing[/h1]
