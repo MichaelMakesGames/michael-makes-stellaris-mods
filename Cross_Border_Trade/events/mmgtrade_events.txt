@@ -95,6 +95,11 @@ event = {
 								OR = {
 									has_megastructure = hyper_relay
 									has_megastructure = hyper_relay_restored
+									AND = {
+										# check for lotor's upgraded hyper relay
+										mmgtrade_is_lotor = yes
+										has_megastructure = hyper_relay_2
+									}
 								}
 								is_system_connected_to_relay_network = yes
 							}
@@ -221,34 +226,28 @@ event = {
 							value = 1
 						}
 					}
+
+					# calculate and set multiplier
+					set_variable = {
+						which = mmgtrade_long_term_cbt_multiplier
+						value = mmgtrade_consecutive_cbt_months
+					}
+					divide_variable = {
+						which = mmgtrade_long_term_cbt_multiplier
+						value = 12
+					}
+					floor_variable = mmgtrade_long_term_cbt_multiplier
+					# max 200 years bonus
 					if = {
 						limit = {
 							check_variable = {
-								which = mmgtrade_consecutive_cbt_months
-								value >= 12
+								which = mmgtrade_long_term_cbt_multiplier
+								value > 200
 							}
 						}
 						set_variable = {
 							which = mmgtrade_long_term_cbt_multiplier
-							value = mmgtrade_consecutive_cbt_months
-						}
-						divide_variable = {
-							which = mmgtrade_long_term_cbt_multiplier
-							value = 12
-						}
-						floor_variable = mmgtrade_long_term_cbt_multiplier
-						# max 200 years bonus
-						if = {
-							limit = {
-								check_variable = {
-									which = mmgtrade_long_term_cbt_multiplier
-									value > 200
-								}
-							}
-							set_variable = {
-								which = mmgtrade_long_term_cbt_multiplier
-								value = 200
-							}
+							value = 200
 						}
 					}
 
