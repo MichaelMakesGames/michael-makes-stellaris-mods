@@ -1,0 +1,5 @@
+﻿l_english:
+ mod_hostile_operation_steal_technology_difficulty_add: "Hostile Operation Difficulty ($operation_steal_technology$)"
+ mod_planet_miners_society_research_produces_add: "£society_research£ $society_research$ from £job_miner£ [GetMinerPlural]"
+ mod_planet_technician_physics_research_produces_add: "£physics_research£ $physics_research$ from £job_technician£ [GetTechnicianPlural]"
+ mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ from £job_soldier£ [GetSoldierPlural]"

@@ -1,0 +1,531 @@
+mmu_deposits_energy_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_energy_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_minerals_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_minerals_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_food_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_food_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_food_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_trade_value_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_trade_value_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_alloys_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_alloys_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_exotic_gases_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_exotic_gases_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_exotic_gases_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_exotic_gases_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_exotic_gases_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_exotic_gases_5 } }
+		mult = 5
+		mode = add
+	}
+}
+
+mmu_deposits_rare_crystals_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_rare_crystals_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_rare_crystals_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_rare_crystals_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_rare_crystals_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_rare_crystals_5 } }
+		mult = 5
+		mode = add
+	}
+}
+
+mmu_deposits_volatile_motes_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_volatile_motes_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_volatile_motes_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_volatile_motes_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_volatile_motes_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_volatile_motes_5 } }
+		mult = 5
+		mode = add
+	}
+}
+
+mmu_deposits_society_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_society_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_physics_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_physics_10 } }
+		mult = 10
+		mode = add
+	}
+}
+
+mmu_deposits_engineering_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_1 } }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_2 } }
+		mult = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_3 } }
+		mult = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_4 } }
+		mult = 4
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_5 } }
+		mult = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_6 } }
+		mult = 6
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_7 } }
+		mult = 7
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_8 } }
+		mult = 8
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_9 } }
+		mult = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_deposit
+		parameters = { limit = { is_deposit_type = d_engineering_10 } }
+		mult = 10
+		mode = add
+	}
+}

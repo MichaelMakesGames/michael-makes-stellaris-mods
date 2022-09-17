@@ -1,0 +1,51 @@
+namespace = uncivic_menu
+
+event = {
+	id = uncivic_menu.101
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		dmm_register_mod = {
+			DMM_NAME = edict_uncivic_menu
+			DMM_FLAG = uncivic_dmm_flag
+		}
+	}
+}
+
+country_event = {
+	id = uncivic_menu.201
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_leader_flag = uncivic_dmm_flag
+		}
+	}
+	immediate = {
+		country_event = { id = uncivic_menu.301 }
+	}
+}
+
+country_event = {
+	id = uncivic_menu.301
+	is_triggered_only = yes
+	title = edict_uncivic_menu
+	desc = edict_uncivic_menu_desc
+	picture = GFX_evt_spymaster
+
+	option = {
+		name = {
+			trigger = { has_global_flag = uncivic_technocracy_disabled }
+			text = uncivic_menu_technocracy_disabled
+		}
+		name = {
+			trigger = { NOT = { has_global_flag = uncivic_technocracy_disabled } }
+			text = uncivic_menu_technocracy_enabled
+		}
+		uncivic_menu_option = { CIVIC = technocracy }
+	}
+
+	option = {
+		name = CLOSE
+	}
+}

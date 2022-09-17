@@ -1,0 +1,19 @@
+uncivic_technocracy_reassign_technocrat = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	potential = {
+		has_valid_civic = civic_technocracy
+		NOT = { has_global_flag = uncivic_technocracy_disabled }
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		country_event = {
+			id = uncivic_technocracy.301
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

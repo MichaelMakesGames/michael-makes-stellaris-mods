@@ -1,0 +1,7 @@
+﻿l_english:
+ edict_uncivic_menu: "Uncivic Mod Options"
+ edict_uncivic_menu_desc: "Enable or disable Uncivic's new mechanics for specific civics."
+
+ uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocracy Enabled"
+ uncivic_menu_technocracy_disabled: "£trigger_no£ Technocracy Disabled"
+ uncivic_menu_technocracy_tooltip: "Enables converting scientists to governors\nEnables converting governors to scientists\nGovernors can start with scientist traits"

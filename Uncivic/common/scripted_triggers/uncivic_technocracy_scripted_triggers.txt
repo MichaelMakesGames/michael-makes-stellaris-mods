@@ -1,0 +1,8 @@
+uncivic_technocracy_has_page_leader = {
+	AND = {
+		exists = event_target:uncivic_technocracy_leader_$NUMBER$
+		event_target:uncivic_technocracy_leader_$NUMBER$ = {
+			has_leader_flag = uncivic_technocracy_open_page
+		}
+	}
+}

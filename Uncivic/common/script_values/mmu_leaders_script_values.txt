@@ -1,0 +1,8 @@
+mmu_leaders_num_with_trait = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = { limit = { has_trait = $TRAIT$ } }
+		mode = add
+	}
+}

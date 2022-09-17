@@ -1,0 +1,48 @@
+﻿l_english:
+ edict_uncivic_technocracy_reassign_technocrat: "Reassign Technocrat"
+ edict_uncivic_technocracy_reassign_technocrat_desc: "Scientist and governors are interchangeable in a technocracy. We can reassign a scientist to become a governor and vice versa."
+ uncivic_technocracy_reassign_scientist: "Reassign a Scientist"
+ uncivic_technocracy_reassign_scientist_desc: "The chosen scientist will become a governor, keeping all of their existing traits."
+ uncivic_technocracy_reassign_governor: "Reassign a Governor"
+ uncivic_technocracy_reassign_governor_desc: "The chosen governor will become a scientist, keeping all of their existing traits."
+
+ # paging
+ uncivic_technocracy_leader_0: "[uncivic_technocracy_leader_0.GetName]"
+ uncivic_technocracy_leader_1: "[uncivic_technocracy_leader_1.GetName]"
+ uncivic_technocracy_leader_2: "[uncivic_technocracy_leader_2.GetName]"
+ uncivic_technocracy_leader_3: "[uncivic_technocracy_leader_3.GetName]"
+ uncivic_technocracy_leader_4: "[uncivic_technocracy_leader_4.GetName]"
+ uncivic_technocracy_leader_5: "[uncivic_technocracy_leader_5.GetName]"
+ uncivic_technocracy_leader_6: "[uncivic_technocracy_leader_6.GetName]"
+ uncivic_technocracy_leader_7: "[uncivic_technocracy_leader_7.GetName]"
+ uncivic_technocracy_leader_8: "[uncivic_technocracy_leader_8.GetName]"
+ uncivic_technocracy_leader_9: "[uncivic_technocracy_leader_9.GetName]"
+
+ # trait tooltips
+ uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Immediately gain some resources when surveying mineable deposits"
+ uncivic_technocracy_scientist_trait_agrarian_upbringing_tooltip: "Chance to establish hydroponics sites (£food£ Food deposits) when surveying frozen worlds and ice asteroids"
+ uncivic_technocracy_scientist_trait_intellectual_tooltip: "All surveyed research deposits are increased by 1"
+ uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Remove 1-3 blockers from all surveyed planets"
+ uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Gain £unity£ Unity when fully surveying a system"
+ uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!"
+ uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits are doubled"
+ uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity"
+ uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "All surveyed mineable deposits are increased"
+ uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "All surveyed mineable deposits without energy gain 1 £energy£ Energy"
+ uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "All surveyed £minerals£ Minerals deposits are converted to strategic resource deposits"
+ uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip: "Small chance to discover £minor_artifacts£ Minor Artifacts if there is an archaeology site in the sector"
+ uncivic_technocracy_governor_trait_scholarium_explorer_tooltip: "Small chance to discover new planetary features"
+
+ # static modifiers
+ uncivic_technocracy_corrupt_scientists: "Corrupt Scientists"
+ uncivic_technocracy_corrupt_scientists_desc: "Corrupt scientists in our empire compromise our data security."
+ uncivic_technocracy_righteous_scientists: "Righteous Scientists"
+ uncivic_technocracy_righteous_scientists_desc: "By employing righteous scientists, we increase our data security."
+ uncivic_technocracy_research_waste_management: "Research Waste Management"
+ uncivic_technocracy_research_waste_management_desc: "1 or more of our Scientists are have the Righteous trait."
+
+ # events
+ uncivic_technocracy_artifacts_discovered: "Artifacts Discovered!"
+ uncivic_technocracy_artifacts_discovered_desc: "Our governor §H[This.GetName]§! has put their archaeological training to good use and discovered artifacts at an dig site in their sector."

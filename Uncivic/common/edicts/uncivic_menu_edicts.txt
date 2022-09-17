@@ -1,0 +1,14 @@
+uncivic_menu = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	potential = {
+		NOT = { has_global_flag = dmm_installed }
+	}
+	allow = { always = yes }
+	effect = {
+		country_event = { id = uncivic_menu.301 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
