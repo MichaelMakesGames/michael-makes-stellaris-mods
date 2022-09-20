@@ -1,4 +1,4 @@
-AAdds siege warfare to Stellaris! (For 3.4.*)
+AAdds siege warfare to Stellaris! (For 3.5.*)
 
 Ever wanted to win a war without invading a single planet? Have you wondered how that ecumenopolis feeds itself when you control the skies above it? This is the mod for you!
 
@@ -37,7 +37,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.4.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998175]3.3 version here[/url])
+  [*] For Stellaris 3.5.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998175]3.3 version here[/url])
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game
