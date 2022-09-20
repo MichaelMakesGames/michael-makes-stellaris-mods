@@ -1,4 +1,4 @@
-Borders produce trade value! (For Stellaris 3.4.*)
+Borders produce trade value! (For Stellaris 3.5.*)
 
 Commercial pacts too static? Shouldn't smaller empires benefit more from trading with bigger empires? This mod aims to address both of these questions.
 
@@ -21,7 +21,7 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.4.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998102]3.3 version here[/url])
+  [*] For Stellaris 3.5.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998102]3.3 version here[/url])
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game. You might see "empty" modifiers on stars
