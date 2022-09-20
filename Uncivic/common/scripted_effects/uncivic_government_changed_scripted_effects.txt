@@ -1,0 +1,33 @@
+uncivic_government_changed_pre_effect = {
+	if = {
+		limit = { has_civic = civic_$CIVIC$ }
+		set_timed_country_flag = {
+			flag = uncivic_had_$CIVIC$
+			days = 1
+		}
+	}
+	if = {
+		limit = { has_valid_civic = civic_$CIVIC$ }
+		set_timed_country_flag = {
+			flag = uncivic_had_valid_$CIVIC$
+			days = 1
+		}
+	}
+}
+
+uncivic_government_changed_post_effect = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = uncivic_had_valid_$CIVIC$ }
+			has_valid_civic = civic_$CIVIC$
+		}
+		country_event = { id = uncivic_$CIVIC$.111 }
+	}
+	if = {
+		limit = {
+			has_country_flag = uncivic_had_$CIVIC$
+			NOT = { has_valid_civic = civic_$CIVIC$ }
+		}
+		country_event = { id = uncivic_$CIVIC$.112 }
+	}
+}

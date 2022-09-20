@@ -1,0 +1,27 @@
+uncivic_parliamentary_system_can_rig_election = {
+	AND = {
+		owner = { any_pop_faction = { is_pop_faction_type = $FACTION$ } }
+		if = {
+			limit = { exists = event_target:uncivic_parliamentary_system_winner }
+			event_target:uncivic_parliamentary_system_winner = {
+				NOT = { is_pop_faction_type = $FACTION$ }
+			}
+		}
+	}
+}
+
+uncivic_parliamentary_system_has_representative = {
+	OR = {
+		has_modifier = uncivic_parliamentary_system_imperialist
+		has_modifier = uncivic_parliamentary_system_isolationist
+		has_modifier = uncivic_parliamentary_system_manifesti
+		has_modifier = uncivic_parliamentary_system_progressive
+		has_modifier = uncivic_parliamentary_system_prosperity
+		has_modifier = uncivic_parliamentary_system_supremacist
+		has_modifier = uncivic_parliamentary_system_technologist
+		has_modifier = uncivic_parliamentary_system_totalitarian
+		has_modifier = uncivic_parliamentary_system_traditionalist
+		has_modifier = uncivic_parliamentary_system_xenoist
+		has_modifier = uncivic_parliamentary_system_nonpartisan
+	}
+}

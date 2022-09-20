@@ -1,0 +1,21 @@
+namespace = uncivic_government_changed
+
+country_event = {
+	id = uncivic_government_changed.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		uncivic_government_changed_pre_effect = { CIVIC = parliamentary_system }
+		uncivic_government_changed_pre_effect = { CIVIC = technocracy }
+	}
+}
+
+country_event = {
+	id = uncivic_government_changed.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		uncivic_government_changed_post_effect = { CIVIC = parliamentary_system }
+		uncivic_government_changed_post_effect = { CIVIC = technocracy }
+	}
+}

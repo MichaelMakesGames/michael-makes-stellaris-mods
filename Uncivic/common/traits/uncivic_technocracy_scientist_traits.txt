@@ -20,7 +20,7 @@ uncivic_technocracy_scientist_trait_iron_fist = {
 		from = { allows_slavery = yes }
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 	initial = no
@@ -51,7 +51,7 @@ uncivic_technocracy_scientist_trait_army_veteran = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -75,7 +75,7 @@ uncivic_technocracy_scientist_trait_retired_fleet_officer = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -97,7 +97,7 @@ uncivic_technocracy_scientist_trait_architectural_interest = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -121,7 +121,7 @@ uncivic_technocracy_scientist_trait_agrarian_upbringing = {
 		is_lithoid = no
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -143,7 +143,7 @@ uncivic_technocracy_scientist_trait_intellectual = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -166,7 +166,7 @@ uncivic_technocracy_scientist_trait_environmental_engineer = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -189,7 +189,7 @@ uncivic_technocracy_scientist_trait_bureaucrat = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -211,7 +211,7 @@ uncivic_technocracy_scientist_trait_righteous = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -243,7 +243,7 @@ uncivic_technocracy_scientist_trait_corrupt = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -277,7 +277,7 @@ uncivic_technocracy_scientist_trait_governor_gray = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -296,7 +296,7 @@ uncivic_technocracy_scientist_trait_enclave_trader = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -321,7 +321,7 @@ uncivic_technocracy_scientist_trait_waste_management_specialist = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -344,7 +344,7 @@ uncivic_technocracy_scientist_trait_nuumismatic_priest = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -366,7 +366,7 @@ uncivic_technocracy_scientist_trait_governor_oracle = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -392,7 +392,7 @@ uncivic_technocracy_scientist_trait_prospectorium_extractor = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -411,7 +411,7 @@ uncivic_technocracy_scientist_trait_prospectorium_optimizer = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }
@@ -430,7 +430,7 @@ uncivic_technocracy_scientist_trait_prospectorium_refiner = {
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
-			NOT = { has_global_flag = uncivic_technocracy_disabled }
+			has_global_flag = uncivic_technocracy_enabled
 		}
 	}
 }

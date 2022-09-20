@@ -1,0 +1,356 @@
+namespace = uncivic_parliamentary_system
+
+# 101 enable (scopeless)
+event = {
+	id = uncivic_parliamentary_system.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_parliamentary_system.111 }
+		}
+	}
+}
+
+# 102 disable (scopeless)
+event = {
+	id = uncivic_parliamentary_system.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_parliamentary_system.112 }
+		}
+	}
+}
+
+# 111 enabled
+country_event = {
+	id = uncivic_parliamentary_system.111
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# nothing needed
+	}
+}
+
+# 112 disabled
+country_event = {
+	id = uncivic_parliamentary_system.112
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			every_owned_planet = {
+				uncivic_parliamentary_system_clear_planet = yes
+			}
+		}
+	}
+}
+
+# 121 government added civic
+event = {
+	id = uncivic_parliamentary_system.121
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# nothing needed
+	}
+}
+
+# 122 government removed civic
+event = {
+	id = uncivic_parliamentary_system.122
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_planet = {
+			uncivic_parliamentary_system_clear_planet = yes
+		}
+	}
+}
+
+
+# 888888 88     888888  dP""b8 888888 88  dP"Yb  88b 88
+# 88__   88     88__   dP   `"   88   88 dP   Yb 88Yb88
+# 88""   88  .o 88""   Yb        88   88 Yb   dP 88 Y88
+# 888888 88ood8 888888  YboodP   88   88  YbodP  88  Y8
+#
+# 888888 Yb    dP 888888 88b 88 888888 .dP"Y8
+# 88__    Yb  dP  88__   88Yb88   88   `Ybo."
+# 88""     YbdP   88""   88 Y88   88   o.`Y8b
+# 888888    YP    888888 88  Y8   88   8bodP'
+
+planet_event = {
+	id = uncivic_parliamentary_system.201
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		owner = {
+			has_valid_civic = civic_parliamentary_system
+			has_global_flag = uncivic_parliamentary_system_enabled
+		}
+		has_upgraded_capital = yes
+		any_owned_species = {
+			OR = {
+				has_citizenship_type = {
+					type = citizenship_full
+					country = root.owner
+				}
+				has_citizenship_type = {
+					type = citizenship_full_machine
+					country = root.owner
+				}
+				has_citizenship_type = {
+					type = citizenship_limited
+					country = root.owner
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_variable_set = uncivic_parliamentary_system_years
+						check_variable = {
+							which = uncivic_parliamentary_system_years
+							value >= 10
+						}
+					}
+					NOR = {
+						has_modifier = uncivic_parliamentary_system_imperialist
+						has_modifier = uncivic_parliamentary_system_isolationist
+						has_modifier = uncivic_parliamentary_system_manifesti
+						has_modifier = uncivic_parliamentary_system_progressive
+						has_modifier = uncivic_parliamentary_system_prosperity
+						has_modifier = uncivic_parliamentary_system_supremacist
+						has_modifier = uncivic_parliamentary_system_technologist
+						has_modifier = uncivic_parliamentary_system_totalitarian
+						has_modifier = uncivic_parliamentary_system_traditionalist
+						has_modifier = uncivic_parliamentary_system_xenoist
+						has_modifier = uncivic_parliamentary_system_nonpartisan
+					}
+				}
+			}
+			# clear support on factions
+			owner = {
+				every_pop_faction = {
+					set_variable = {
+						which = uncivic_parliamentary_system_planet_support
+						value = 0
+					}
+				}
+			}
+			# add pop power to faction
+			every_owned_pop = {
+				limit = { exists = pop_faction }
+				pop_faction = {
+					change_variable = {
+						which = uncivic_parliamentary_system_planet_support
+						value = prev.value:mmu_pops_political_power
+					}
+				}
+			}
+			# assign winner
+			if = {
+				limit = { owner = { any_pop_faction = {
+					check_variable = {
+						which = uncivic_parliamentary_system_planet_support
+						value > 0
+					}
+				} } }
+				owner = {
+					random_pop_faction = {
+						weights = {
+							base = 0
+							add = uncivic_parliamentary_system_planet_support
+							mult = uncivic_parliamentary_system_planet_support
+						}
+						save_event_target_as = uncivic_parliamentary_system_winner
+					}
+				}
+			}
+			# notification event w/ chance to rig election
+			# TODO check notification setting
+			set_timed_planet_flag = {
+				flag = uncivic_parliamentary_system_election_in_progress
+				days = 90
+			}
+			planet_event = { id = uncivic_parliamentary_system.202 }
+		} else_if = {
+			limit = { is_variable_set = uncivic_parliamentary_system_years }
+			change_variable = {
+				which = uncivic_parliamentary_system_years
+				value = 1
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = uncivic_parliamentary_system.202
+	is_triggered_only = yes
+	title = uncivic_parliamentary_system_election
+	desc = uncivic_parliamentary_system_election_desc
+	picture = GFX_evt_voting
+	location = this
+	abort_trigger = {
+		NOT = { has_planet_flag = uncivic_parliamentary_system_election_in_progress }
+	}
+	abort_effect = {
+		uncivic_parliamentary_system_finalize_election = yes
+	}
+	option = {
+		name = uncivic_parliamentary_system_do_not_interfere
+		uncivic_parliamentary_system_finalize_election = yes
+		ai_chance = { factor = 100 }
+	}
+	# option = {
+	# 	name = uncivic_parliamentary_system_disable_notifications
+	# 	uncivic_parliamentary_system_finalize_election = yes
+	# 	# TODO
+	# }
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_imperialist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = imperialist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = imperialist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_isolationist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = isolationist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = isolationist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_manifesti
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = manifesti } }
+		uncivic_parliamentary_system_rig_election = { FACTION = manifesti }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_progressive
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = progressive } }
+		uncivic_parliamentary_system_rig_election = { FACTION = progressive }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_prosperity
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = prosperity } }
+		uncivic_parliamentary_system_rig_election = { FACTION = prosperity }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_supremacist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = supremacist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = supremacist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_technologist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = technologist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = technologist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_totalitarian
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = totalitarian } }
+		uncivic_parliamentary_system_rig_election = { FACTION = totalitarian }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_traditionalist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = traditionalist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = traditionalist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = uncivic_parliamentary_system_rig_election_for_xenoist
+		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = xenoist } }
+		uncivic_parliamentary_system_rig_election = { FACTION = xenoist }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#  dP""b8 88     888888    db    88b 88 88   88 88""Yb
+# dP   `" 88     88__     dPYb   88Yb88 88   88 88__dP
+# Yb      88  .o 88""    dP__Yb  88 Y88 Y8   8P 88"""
+#  YboodP 88ood8 888888 dP""""Yb 88  Y8 `YbodP' 88
+#
+# 888888 Yb    dP 888888 88b 88 888888 .dP"Y8
+# 88__    Yb  dP  88__   88Yb88   88   `Ybo."
+# 88""     YbdP   88""   88 Y88   88   o.`Y8b
+# 888888    YP    888888 88  Y8   88   8bodP'
+
+# monthly check for planets in parliamentary empires that are no longer eligible
+# (no upgraded capital, or no species with residency/citizenship)
+country_event = {
+	id = uncivic_parliamentary_system.301
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			has_valid_civic = civic_parliamentary_system
+			has_global_flag = uncivic_parliamentary_system_enabled
+		}
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NAND = {
+					has_upgraded_capital = yes
+					any_owned_species = {
+						OR = {
+							has_citizenship_type = {
+								type = citizenship_full
+								country = root.owner
+							}
+							has_citizenship_type = {
+								type = citizenship_full_machine
+								country = root.owner
+							}
+							has_citizenship_type = {
+								type = citizenship_limited
+								country = root.owner
+							}
+						}
+					}
+				}
+			}
+			uncivic_parliamentary_system_clear_planet = yes
+		}
+	}
+}
+
+# on_planet_transfer on_planet_ownerless
+planet_event = {
+	id = uncivic_parliamentary_system.311
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		uncivic_parliamentary_system_has_representative = yes
+	}
+	immediate = {
+		uncivic_parliamentary_system_clear_planet = yes
+	}
+}

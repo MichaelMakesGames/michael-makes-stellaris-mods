@@ -2,11 +2,12 @@ uncivic_menu_option = {
 	custom_tooltip = uncivic_menu_$CIVIC$_tooltip
 	hidden_effect = {
 		if = {
-			limit = { has_global_flag = uncivic_$CIVIC$_disabled }
-			remove_global_flag = uncivic_$CIVIC$_disabled
-			country_event = { id = uncivic_$CIVIC$.101 }
+			limit = { has_global_flag = uncivic_$CIVIC$_enabled }
+			remove_global_flag = uncivic_$CIVIC$_enabled
+			country_event = { id = uncivic_$CIVIC$.112 }
 		} else = {
-			country_event = { id = uncivic_$CIVIC$.102 }
+			set_global_flag = uncivic_$CIVIC$_enabled
+			country_event = { id = uncivic_$CIVIC$.111 }
 		}
 		country_event = { id = uncivic_menu.301 }
 	}

@@ -9,6 +9,17 @@ event = {
 			DMM_NAME = edict_uncivic_menu
 			DMM_FLAG = uncivic_dmm_flag
 		}
+		if = {
+			limit = { NOT = { has_global_flag = uncivic_installed } }
+			set_global_flag = uncivic_installed
+			set_global_flag = uncivic_parliamentary_system_enabled
+			set_global_flag = uncivic_technocracy_enabled
+			event_target:global_event_country = {
+				country_event = { id = uncivic_parliamentary_system.111 }
+				country_event = { id = uncivic_technocracy.111 }
+			}
+		}
+		set_global_flag = uncivic_installed
 	}
 }
 
@@ -35,11 +46,23 @@ country_event = {
 
 	option = {
 		name = {
-			trigger = { has_global_flag = uncivic_technocracy_disabled }
+			trigger = { NOT = { has_global_flag = uncivic_parliamentary_system_enabled } }
+			text = uncivic_menu_parliamentary_system_disabled
+		}
+		name = {
+			trigger = { has_global_flag = uncivic_parliamentary_system_enabled }
+			text = uncivic_menu_parliamentary_system_enabled
+		}
+		uncivic_menu_option = { CIVIC = parliamentary_system }
+	}
+
+	option = {
+		name = {
+			trigger = { NOT = { has_global_flag = uncivic_technocracy_enabled } }
 			text = uncivic_menu_technocracy_disabled
 		}
 		name = {
-			trigger = { NOT = { has_global_flag = uncivic_technocracy_disabled } }
+			trigger = { has_global_flag = uncivic_technocracy_enabled }
 			text = uncivic_menu_technocracy_enabled
 		}
 		uncivic_menu_option = { CIVIC = technocracy }

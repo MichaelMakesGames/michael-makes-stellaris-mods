@@ -1,0 +1,77 @@
+mmu_pops_political_power = {
+	base = 1
+	add = modifier:pop_political_power
+	multiply = value:mmu_pops_political_power_pop_cat_mult
+}
+
+mmu_pops_political_power_pop_cat_mult = {
+	base = 1
+	modifier = {
+		add = modifier:pop_cat_ruler_political_power
+		is_pop_category = ruler
+	}
+	modifier = {
+		add = modifier:pop_cat_specialist_political_power
+		is_pop_category = specialist
+	}
+	modifier = {
+		add = modifier:pop_cat_worker_political_power
+		is_pop_category = worker
+	}
+	modifier = {
+		add = modifier:pop_cat_complex_drone_political_power
+		is_pop_category = complex_drone
+	}
+	modifier = {
+		add = modifier:pop_cat_complex_drone_political_power
+		is_pop_category = complex_drone
+	}
+	modifier = {
+		add = modifier:pop_cat_simple_drone_political_power
+		is_pop_category = simple_drone
+	}
+	modifier = {
+		add = modifier:pop_cat_purge_political_power
+		is_pop_category = purge
+	}
+	modifier = {
+		add = modifier:pop_cat_robot_servant_political_power
+		is_pop_category = robot_servant
+	}
+	modifier = {
+		add = modifier:pop_cat_slave_political_power
+		is_pop_category = slave
+	}
+	modifier = {
+		add = modifier:pop_cat_bio_trophy_political_power
+		is_pop_category = bio_trophy
+	}
+	modifier = {
+		add = modifier:pop_cat_criminal_political_power
+		is_pop_category = criminal
+	}
+	modifier = {
+		add = modifier:pop_cat_assimilation_political_power
+		is_pop_category = assimilation
+	}
+	modifier = {
+		add = modifier:pop_cat_deviant_drone_political_power
+		is_pop_category = deviant_drone
+	}
+	modifier = {
+		add = modifier:pop_cat_corrupt_drone_political_power
+		is_pop_category = corrupt_drone
+	}
+	modifier = {
+		add = modifier:pop_cat_precursor_political_power
+		is_pop_category = precursor
+	}
+	modifier = {
+		add = modifier:pop_cat_xeno_ward_political_power
+		is_pop_category = xeno_ward
+	}
+	modifier = {
+		add = modifier:pop_cat_pre_sapients_political_power
+		is_pop_category = pre_sapients
+	}
+}

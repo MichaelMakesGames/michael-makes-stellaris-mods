@@ -1,0 +1,164 @@
+uncivic_parliamentary_system_clear_planet = {
+	switch = {
+		trigger = has_modifier
+		uncivic_parliamentary_system_imperialist = {
+			remove_modifier = uncivic_parliamentary_system_imperialist
+		}
+		uncivic_parliamentary_system_isolationist = {
+			remove_modifier = uncivic_parliamentary_system_isolationist
+		}
+		uncivic_parliamentary_system_manifesti = {
+			remove_modifier = uncivic_parliamentary_system_manifesti
+		}
+		uncivic_parliamentary_system_progressive = {
+			remove_modifier = uncivic_parliamentary_system_progressive
+		}
+		uncivic_parliamentary_system_prosperity = {
+			remove_modifier = uncivic_parliamentary_system_prosperity
+		}
+		uncivic_parliamentary_system_supremacist = {
+			remove_modifier = uncivic_parliamentary_system_supremacist
+		}
+		uncivic_parliamentary_system_technologist = {
+			remove_modifier = uncivic_parliamentary_system_technologist
+		}
+		uncivic_parliamentary_system_totalitarian = {
+			remove_modifier = uncivic_parliamentary_system_totalitarian
+		}
+		uncivic_parliamentary_system_traditionalist = {
+			remove_modifier = uncivic_parliamentary_system_traditionalist
+		}
+		uncivic_parliamentary_system_xenoist = {
+			remove_modifier = uncivic_parliamentary_system_xenoist
+		}
+		uncivic_parliamentary_system_nonpartisan = {
+			remove_modifier = uncivic_parliamentary_system_nonpartisan
+		}
+	}
+	if = {
+		limit = { has_modifier = uncivic_parliamentary_system_uncovered_meddling }
+		remove_modifier = uncivic_parliamentary_system_uncovered_meddling
+	}
+	every_owned_pop = {
+		limit = { has_modifier = uncivic_parliamentary_system_well_represented }
+		remove_modifier = uncivic_parliamentary_system_well_represented
+	}
+}
+
+uncivic_parliamentary_system_finalize_election = {
+	hidden_effect = {
+		uncivic_parliamentary_system_clear_planet = yes
+		set_variable = {
+			which = uncivic_parliamentary_system_years
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			exists = event_target:uncivic_parliamentary_system_winner
+			event_target:uncivic_parliamentary_system_winner = {
+				OR = {
+					is_pop_faction_type = imperialist
+					is_pop_faction_type = isolationist
+					is_pop_faction_type = manifesti
+					is_pop_faction_type = progressive
+					is_pop_faction_type = prosperity
+					is_pop_faction_type = supremacist
+					is_pop_faction_type = technologist
+					is_pop_faction_type = totalitarian
+					is_pop_faction_type = traditionalist
+					is_pop_faction_type = xenoist
+				}
+			}
+		}
+		event_target:uncivic_parliamentary_system_winner = {
+			switch = {
+				trigger = is_pop_faction_type
+				imperialist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_imperialist } }
+				}
+				isolationist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_isolationist } }
+				}
+				manifesti = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_manifesti } }
+				}
+				progressive = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_progressive } }
+				}
+				prosperity = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_prosperity } }
+				}
+				supremacist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_supremacist } }
+				}
+				technologist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_technologist } }
+				}
+				totalitarian = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_totalitarian } }
+				}
+				traditionalist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_traditionalist } }
+				}
+				xenoist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_xenoist } }
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_pop = {
+				limit = { pop_faction = { is_same_value = event_target:uncivic_parliamentary_system_winner } }
+				add_modifier = {
+					modifier = uncivic_parliamentary_system_well_represented
+					days = 3600
+				}
+			}
+		}
+	} else = {
+		add_modifier = {
+			modifier = uncivic_parliamentary_system_nonpartisan
+		}
+	}
+}
+
+uncivic_parliamentary_system_rig_election = {
+	hidden_effect = {
+		owner = {
+			random_pop_faction = {
+				limit = { is_pop_faction_type = $FACTION$ }
+				save_event_target_as = uncivic_parliamentary_system_winner
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_valid_civic = civic_shadow_council } }
+		random_list = {
+			5 = {
+				add_modifier = {
+					modifier = uncivic_parliamentary_system_uncovered_meddling
+					days = 1800
+				}
+			}
+			95 = {
+				custom_tooltip = NO_EFFECT
+			}
+		}
+	} else = {
+		owner = {
+			add_resource = { unity = -500 }
+		}
+		random_list = {
+			25 = {
+				add_modifier = {
+					modifier = uncivic_parliamentary_system_uncovered_meddling
+					days = 1800
+				}
+			}
+			75 = {
+				custom_tooltip = NO_EFFECT
+			}
+		}
+	}
+	uncivic_parliamentary_system_finalize_election = yes
+}

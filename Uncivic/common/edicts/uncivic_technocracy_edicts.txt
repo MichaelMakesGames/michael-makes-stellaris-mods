@@ -3,7 +3,7 @@ uncivic_technocracy_reassign_technocrat = {
 	length = 0
 	potential = {
 		has_valid_civic = civic_technocracy
-		NOT = { has_global_flag = uncivic_technocracy_disabled }
+		has_global_flag = uncivic_technocracy_enabled
 	}
 	allow = {
 		always = yes

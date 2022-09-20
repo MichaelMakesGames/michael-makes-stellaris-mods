@@ -1,28 +1,45 @@
 namespace = uncivic_technocracy
 
-# 101 init event
+# 101 enable (scopeless)
 event = {
 	id = uncivic_technocracy.101
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = uncivic_technocracy_disabled }
-		NOT = { has_global_flag = uncivic_technocracy_initialized }
-	}
 	immediate = {
-		set_global_flag = uncivic_technocracy_initialized
-		# no additional initialization needed for technocracy
+		event_target:global_event_country = {
+			country_event = { id = uncivic_technocracy.111 }
+		}
 	}
 }
 
-# 102 disable/cleanup event
+# 102 disable (scopeless)
 event = {
 	id = uncivic_technocracy.102
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		set_global_flag = uncivic_technocracy_disabled
-		remove_global_flag = uncivic_technocracy_initialized
+		event_target:global_event_country = {
+			country_event = { id = uncivic_technocracy.112 }
+		}
+	}
+}
+
+# 111 enable
+country_event = {
+	id = uncivic_technocracy.111
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# no additional initialization needed for technocracy
+	}
+}
+
+# 112 disable
+country_event = {
+	id = uncivic_technocracy.112
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
 		every_country = {
 			every_owned_leader = {
 				while = {
@@ -49,6 +66,26 @@ event = {
 				MODIFIER = uncivic_technocracy_research_waste_management
 			}
 		}
+	}
+}
+
+# 121 government added civic
+event = {
+	id = uncivic_technocracy.121
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# nothing needed
+	}
+}
+
+# 122 government removed civic
+event = {
+	id = uncivic_technocracy.122
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# nothing needed
 	}
 }
 

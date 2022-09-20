@@ -36,7 +36,7 @@ mmghyper_has_border_fortress = {
 
 mmghyper_is_starless = {
 	OR = {
-		is_star_class = sc_dn # wild space support
+		# is_star_class = sc_dn # wild space support
 		NOT = { exists = system_star } # sparsity support
 	}
 }
