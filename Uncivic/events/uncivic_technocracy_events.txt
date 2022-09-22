@@ -70,7 +70,7 @@ country_event = {
 }
 
 # 121 government added civic
-event = {
+country_event = {
 	id = uncivic_technocracy.121
 	hide_window = yes
 	is_triggered_only = yes
@@ -80,7 +80,7 @@ event = {
 }
 
 # 122 government removed civic
-event = {
+country_event = {
 	id = uncivic_technocracy.122
 	hide_window = yes
 	is_triggered_only = yes

@@ -1,0 +1,36 @@
+New Mechanics for Vanilla Civics (For 3.5.*)
+
+Many civics in Stellaris are boring, simply providing modifiers. Sometimes boring is good, especially when you're first learning the game, but eventually, you might want something more. DLCs and mods provide interesting civics, but don't the base game civics deserve some love too?
+
+[h1]Design Principles[/h1]
+[list]
+ [*] [b]Interesting mechanics[/b] and [b]roleplay[/b] are the primary goals. Balance is still a (secondary) goal and feedback is welcome, but you probably don't want to use this in cut-throat competitive multiplayer
+ [*] Only [b]compatibility-friendly[/b] features are included. No vanilla content is overwritten.
+ [*] Every civic is individually [b]configurable[/b]. Access the menu via edict or Dynamic Mod Menu
+[/list]
+
+[h1]Parliamentary System[/h1]
+Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
+
+Minor incompatibility: new modded faction types do not have special planet modifiers
+
+[h1]Technocracy[/h1]
+Governors and Scientists are interchangeable. Convert scientists to governors (and vice versa) via the Manage Technocracts edict. Traits are converted to new variants as well, so you can get a governor with Expertise: Materials to boost your alloy and consumer goods production.
+
+Minor incompatibility: new modded leader traits will not be converted
+
+[h1]More to come![/h1]
+
+[h1]Compatibility[/h1]
+[list]
+  [*] For Stellaris 3.5.*
+  [*] NOT achievement compatible
+  [*] Can be added to an existing game
+  [*] Should be compatible with all other mods
+[/list]
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods

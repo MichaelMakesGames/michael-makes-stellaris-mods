@@ -134,13 +134,13 @@ uncivic_parliamentary_system_rig_election = {
 	if = {
 		limit = { owner = { has_valid_civic = civic_shadow_council } }
 		random_list = {
-			5 = {
+			10 = {
 				add_modifier = {
 					modifier = uncivic_parliamentary_system_uncovered_meddling
 					days = 1800
 				}
 			}
-			95 = {
+			90 = {
 				custom_tooltip = NO_EFFECT
 			}
 		}
@@ -149,13 +149,13 @@ uncivic_parliamentary_system_rig_election = {
 			add_resource = { unity = -500 }
 		}
 		random_list = {
-			25 = {
+			40 = {
 				add_modifier = {
 					modifier = uncivic_parliamentary_system_uncovered_meddling
 					days = 1800
 				}
 			}
-			75 = {
+			60 = {
 				custom_tooltip = NO_EFFECT
 			}
 		}

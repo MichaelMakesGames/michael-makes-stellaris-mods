@@ -21,13 +21,13 @@ uncivic_government_changed_post_effect = {
 			NOT = { has_country_flag = uncivic_had_valid_$CIVIC$ }
 			has_valid_civic = civic_$CIVIC$
 		}
-		country_event = { id = uncivic_$CIVIC$.111 }
+		country_event = { id = uncivic_$CIVIC$.121 }
 	}
 	if = {
 		limit = {
 			has_country_flag = uncivic_had_$CIVIC$
 			NOT = { has_valid_civic = civic_$CIVIC$ }
 		}
-		country_event = { id = uncivic_$CIVIC$.112 }
+		country_event = { id = uncivic_$CIVIC$.122 }
 	}
 }
