@@ -23,5 +23,6 @@ uncivic_parliamentary_system_has_representative = {
 		has_modifier = uncivic_parliamentary_system_traditionalist
 		has_modifier = uncivic_parliamentary_system_xenoist
 		has_modifier = uncivic_parliamentary_system_nonpartisan
+		has_modifier = uncivic_parliamentary_system_separatist
 	}
 }

@@ -42,7 +42,7 @@ country_event = {
 	immediate = {
 		every_country = {
 			every_owned_planet = {
-				uncivic_parliamentary_system_clear_planet = yes
+				uncivic_parliamentary_system_clear_planet = { CLEAR_NOTIFICATIONS_PREF = yes }
 			}
 		}
 	}
@@ -65,7 +65,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		every_owned_planet = {
-			uncivic_parliamentary_system_clear_planet = yes
+			uncivic_parliamentary_system_clear_planet = { CLEAR_NOTIFICATIONS_PREF = yes }
 		}
 	}
 }
@@ -119,19 +119,7 @@ planet_event = {
 							value >= 10
 						}
 					}
-					NOR = {
-						has_modifier = uncivic_parliamentary_system_imperialist
-						has_modifier = uncivic_parliamentary_system_isolationist
-						has_modifier = uncivic_parliamentary_system_manifesti
-						has_modifier = uncivic_parliamentary_system_progressive
-						has_modifier = uncivic_parliamentary_system_prosperity
-						has_modifier = uncivic_parliamentary_system_supremacist
-						has_modifier = uncivic_parliamentary_system_technologist
-						has_modifier = uncivic_parliamentary_system_totalitarian
-						has_modifier = uncivic_parliamentary_system_traditionalist
-						has_modifier = uncivic_parliamentary_system_xenoist
-						has_modifier = uncivic_parliamentary_system_nonpartisan
-					}
+					uncivic_parliamentary_system_has_representative = no
 				}
 			}
 			# clear support on factions
@@ -172,13 +160,16 @@ planet_event = {
 					}
 				}
 			}
-			# notification event w/ chance to rig election
-			# TODO check notification setting
-			set_timed_planet_flag = {
-				flag = uncivic_parliamentary_system_election_in_progress
-				days = 90
+			if = { # auto accept election if notifications disabled
+				limit = { has_planet_flag = uncivic_parliamentary_system_notifications_disabled }
+				uncivic_parliamentary_system_finalize_election = yes
+			} else = { # notification event w/ chance to rig election
+				set_timed_planet_flag = {
+					flag = uncivic_parliamentary_system_election_in_progress
+					days = 90
+				}
+				planet_event = { id = uncivic_parliamentary_system.202 }
 			}
-			planet_event = { id = uncivic_parliamentary_system.202 }
 		} else_if = {
 			limit = { is_variable_set = uncivic_parliamentary_system_years }
 			change_variable = {
@@ -205,19 +196,112 @@ planet_event = {
 	option = {
 		name = uncivic_parliamentary_system_do_not_interfere
 		uncivic_parliamentary_system_finalize_election = yes
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			base = 100
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = imperialist
+					owner = { is_militarist = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = isolationist
+					owner = { is_xenophobe = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = progressive
+					owner = { is_egalitarian = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = prosperity
+					owner = { is_pacifist = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = supremacist
+					owner = { is_xenophobe = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = technologist
+					owner = { is_materialist = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = totalitarian
+					owner = { is_authoritarian = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = traditionalist
+					owner = { is_spiritualist = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = xenoist
+					owner = { is_xenophile = yes }
+				}
+			}
+			modifier = {
+				multiply = 2
+				owner = { has_ethic = ethic_fanatic_egalitarian }
+			}
+			modifier = {
+				divide = 5
+				owner = { has_valid_civic = civic_shadow_council }
+			}
+		}
 	}
-	# option = {
-	# 	name = uncivic_parliamentary_system_disable_notifications
-	# 	uncivic_parliamentary_system_finalize_election = yes
-	# 	# TODO
-	# }
+	option = {
+		name = uncivic_parliamentary_system_disable_notifications_option
+		uncivic_parliamentary_system_finalize_election = yes
+		custom_tooltip = uncivic_parliamentary_system_disable_notifications_effect
+		hidden_effect = {
+			set_planet_flag = uncivic_parliamentary_system_notifications_disabled
+		}
+		ai_chance = { base = 0 }
+	}
 	option = {
 		name = uncivic_parliamentary_system_rig_election_for_imperialist
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = imperialist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = imperialist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_militarist = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_militarist }
+			}
+			modifier = {
+				add = 50
+				has_fortress_designation = yes
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_pacifist = yes }
+			}
 		}
 	}
 	option = {
@@ -225,21 +309,63 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = isolationist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = isolationist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_xenophobe = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_xenophobe }
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_xenophile = yes }
+			}
 		}
 	}
 	option = {
 		name = uncivic_parliamentary_system_rig_election_for_manifesti
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = manifesti } }
 		uncivic_parliamentary_system_rig_election = { FACTION = manifesti }
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 	}
 	option = {
 		name = uncivic_parliamentary_system_rig_election_for_progressive
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = progressive } }
 		uncivic_parliamentary_system_rig_election = { FACTION = progressive }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_egalitarian = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_egalitarian }
+			}
+			modifier = {
+				add = 50
+				OR = {
+					has_industrial_designation = yes
+					has_factory_designation = yes
+					has_foundry_designation = yes
+				}
+			}
+			modifier = {
+				add = 25
+				has_unity_designation = yes
+				owner = { is_spiritualist = no }
+			}
+			modifier = {
+				add = 25
+				has_research_designation = yes
+				owner = { is_materialist = no }
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_authoritarian = yes }
+			}
 		}
 	}
 	option = {
@@ -247,7 +373,23 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = prosperity } }
 		uncivic_parliamentary_system_rig_election = { FACTION = prosperity }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_pacifist = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_pacifist }
+			}
+			modifier = {
+				add = 50
+				has_trade_designation = yes
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_militarist = yes }
+			}
 		}
 	}
 	option = {
@@ -255,7 +397,19 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = supremacist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = supremacist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_xenophobe = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_xenophobe }
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_xenophile = yes }
+			}
 		}
 	}
 	option = {
@@ -263,7 +417,23 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = technologist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = technologist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_materialist = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_materialist }
+			}
+			modifier = {
+				add = 50
+				has_research_designation = yes
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_spiritualist = yes }
+			}
 		}
 	}
 	option = {
@@ -271,7 +441,28 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = totalitarian } }
 		uncivic_parliamentary_system_rig_election = { FACTION = totalitarian }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_authoritarian = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_authoritarian }
+			}
+			modifier = {
+				add = 50
+				OR = {
+					has_mining_designation = yes
+					has_farming_designation = yes
+					has_generator_designation = yes
+					has_rural_designation = yes
+				}
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_egalitarian = yes }
+			}
 		}
 	}
 	option = {
@@ -279,7 +470,23 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = traditionalist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = traditionalist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_spiritualist = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_spiritualist }
+			}
+			modifier = {
+				add = 50
+				has_unity_designation = yes
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_materialist = yes }
+			}
 		}
 	}
 	option = {
@@ -287,7 +494,19 @@ planet_event = {
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = xenoist } }
 		uncivic_parliamentary_system_rig_election = { FACTION = xenoist }
 		ai_chance = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 25
+				owner = { is_xenophile = yes }
+			}
+			modifier = {
+				add = 25
+				owner = { has_ethic = ethic_fanatic_xenophile }
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_xenophobe = yes }
+			}
 		}
 	}
 }
@@ -351,6 +570,6 @@ planet_event = {
 		uncivic_parliamentary_system_has_representative = yes
 	}
 	immediate = {
-		uncivic_parliamentary_system_clear_planet = yes
+		uncivic_parliamentary_system_clear_planet = { CLEAR_NOTIFICATIONS_PREF = yes }
 	}
 }

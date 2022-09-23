@@ -34,6 +34,9 @@ uncivic_parliamentary_system_clear_planet = {
 		uncivic_parliamentary_system_nonpartisan = {
 			remove_modifier = uncivic_parliamentary_system_nonpartisan
 		}
+		uncivic_parliamentary_system_separatist = {
+			remove_modifier = uncivic_parliamentary_system_separatist
+		}
 	}
 	if = {
 		limit = { has_modifier = uncivic_parliamentary_system_uncovered_meddling }
@@ -43,6 +46,12 @@ uncivic_parliamentary_system_clear_planet = {
 		limit = { has_modifier = uncivic_parliamentary_system_well_represented }
 		remove_modifier = uncivic_parliamentary_system_well_represented
 	}
+	[[CLEAR_NOTIFICATIONS_PREF]
+		if = {
+			limit = { has_planet_flag = uncivic_parliamentary_system_notifications_disabled }
+			remove_planet_flag = uncivic_parliamentary_system_notifications_disabled
+		}
+	]
 }
 
 uncivic_parliamentary_system_finalize_election = {
@@ -68,6 +77,8 @@ uncivic_parliamentary_system_finalize_election = {
 					is_pop_faction_type = totalitarian
 					is_pop_faction_type = traditionalist
 					is_pop_faction_type = xenoist
+					is_separatist_faction = yes
+					is_nationalist_faction = yes
 				}
 			}
 		}
@@ -104,6 +115,15 @@ uncivic_parliamentary_system_finalize_election = {
 				xenoist = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_xenoist } }
 				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_separatist_faction = yes
+						is_nationalist_faction = yes
+					}
+				}
+				prev = { add_modifier = { modifier = uncivic_parliamentary_system_separatist } }
 			}
 		}
 		hidden_effect = {

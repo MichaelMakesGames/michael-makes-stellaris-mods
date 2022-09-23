@@ -1,0 +1,15 @@
+uncivic_parliamentary_system_decision_enable_notifications = {
+	owned_planets_only = yes
+	potential = {
+		has_planet_flag = uncivic_parliamentary_system_notifications_disabled
+	}
+	effect = {
+		custom_tooltip = "uncivic_parliamentary_system_enable_notifications_effect"
+		hidden_effect = {
+			remove_planet_flag = uncivic_parliamentary_system_notifications_disabled
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

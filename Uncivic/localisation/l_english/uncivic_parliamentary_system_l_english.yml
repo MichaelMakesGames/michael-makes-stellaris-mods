@@ -21,16 +21,19 @@
  uncivic_parliamentary_system_xenoist: "Xenoist Parliamentarian"
  uncivic_parliamentary_system_xenoist_desc: "This planet has elected a member of the Xenoist faction to represent them in Parliament."
  uncivic_parliamentary_system_nonpartisan: "Nonpartisan Parliamentarian"
- uncivic_parliamentary_system_nonpartisan_desc: "This planet has elected a member nonpartisan politician to represent them in Parliament."
+ uncivic_parliamentary_system_nonpartisan_desc: "This planet has elected a nonpartisan politician to represent them in Parliament."
+ uncivic_parliamentary_system_separatist: "Separatist Parliamentarian"
+ uncivic_parliamentary_system_separatist_desc: "This planet has elected a separatist politician to represent them in Parliament."
  uncivic_parliamentary_system_well_represented: "Well Represented"
  uncivic_parliamentary_system_well_represented_desc: "This pop backed the winning Parliamentarian, who now represents their interests in the interplanetary government."
  uncivic_parliamentary_system_uncovered_meddling: "Parliamentary Election Meddling"
  uncivic_parliamentary_system_uncovered_meddling_desc: "The central government rigged the Parliamentary election on this planet, but failed to hide their efforts!"
+
  # events
  uncivic_parliamentary_system_election: "Parliamentary Election on [This.GetName]"
  uncivic_parliamentary_system_election_desc: "The residents of §H[This.GetName]§! have elected a politician from the §H[uncivic_parliamentary_system_winner.GetName]§! to represent them in Parliament. They will represent the planet for the next 10 years."
  uncivic_parliamentary_system_do_not_interfere: "We accept the election results."
- uncivic_parliamentary_system_disable_notifications: "Very well, but don't bother me with this planet's elections again."
+ uncivic_parliamentary_system_disable_notifications_option: "Very well, but don't bother me with this planet's elections again."
  uncivic_parliamentary_system_rig_election_for_imperialist: "Let's find more votes for the Imperialist politician..."
  uncivic_parliamentary_system_rig_election_for_isolationist: "Let's find more votes for the Isolationist politician..."
  uncivic_parliamentary_system_rig_election_for_manifesti: "Let's find more votes for the Manifesti politician..."
@@ -41,3 +44,9 @@
  uncivic_parliamentary_system_rig_election_for_totalitarian: "Let's find more votes for the Totalitarian politician..."
  uncivic_parliamentary_system_rig_election_for_traditionalist: "Let's find more votes for the Traditionalist politician..."
  uncivic_parliamentary_system_rig_election_for_xenoist: "Let's find more votes for the Xenoist politician..."
+
+ # notification pref
+ uncivic_parliamentary_system_disable_notifications_effect: "Disable Parliamentary Election Notifications"
+ uncivic_parliamentary_system_enable_notifications_effect: "Enable Parliamentary Election Notifications"
+ uncivic_parliamentary_system_decision_enable_notifications: "Enable Parliamentary Election Notifications"
+ uncivic_parliamentary_system_decision_enable_notifications_desc: "Receive an event whenever a Parliamentary election occurs on this planet, giving you a chance to intervene."

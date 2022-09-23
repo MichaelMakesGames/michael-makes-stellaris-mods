@@ -1,0 +1,14 @@
+# these are dumby triggers to be overwritten by other mods
+
+#  dP""b8 88 Yb    dP 88 88         Yb        dP    db    88""Yb .dP"Y8
+# dP   `" 88  Yb  dP  88 88          Yb  db  dP    dPYb   88__dP `Ybo."
+# Yb      88   YbdP   88 88  .o       YbdPYbdP    dP__Yb  88"Yb  o.`Y8b
+#  YboodP 88    YP    88 88ood8        YP  YP    dP""""Yb 88  Yb 8bodP'
+
+is_separatist_faction = {
+	always = no
+}
+
+is_nationalist_faction = {
+	always = no
+}
