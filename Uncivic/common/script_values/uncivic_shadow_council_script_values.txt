@@ -1,0 +1,38 @@
+# 0%, 0.5%, 1.5%, 3%, 5%, 7.5%, 10.5%, 14%...
+# etc (x^2-x)/2/2
+# EDIT actually, the above divided by 2 again
+# basically, when you add a councilor, the chance increases by half the number you already had
+uncivic_shadow_council_risk = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
+		mode = add
+	}
+	square = yes
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
+		mode = subtract
+	}
+	divide = 2
+	divide 2
+	modifier = {
+		add = 5
+		has_modifier = uncivic_shadow_council_scapegoated
+	}
+	multiply = 10
+	round = yes
+	divide = 10
+	max = 100
+}
+
+uncivic_shadow_council_risk_increase = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
+		mode = add
+	}
+	divide = 2
+}

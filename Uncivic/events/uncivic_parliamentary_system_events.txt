@@ -86,10 +86,13 @@ planet_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
+		exists = owner
 		owner = {
 			has_valid_civic = civic_parliamentary_system
 			has_global_flag = uncivic_parliamentary_system_enabled
 		}
+		is_colony = yes
+		is_under_colonization = no
 		has_upgraded_capital = yes
 		any_owned_species = {
 			OR = {

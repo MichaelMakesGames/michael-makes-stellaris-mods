@@ -1,0 +1,27 @@
+mmu_paging_current_page_has_entity = {
+	AND = {
+		exists = event_target:$PAGING_INSTANCE$_current_page_entity_$NUMBER$
+		event_target:$PAGING_INSTANCE$_current_page_entity_$NUMBER$ = {
+			mmu_flags_has = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+		}
+	}
+}
+
+mmu_paging_has_prev = {
+	check_variable = {
+		which = $PAGING_INSTANCE$_offset
+		value > 0
+	}
+}
+
+mmu_paging_has_next = {
+	any_$PAGED_ENTITY_TYPE$ = {
+		[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+		is_variable_set = $PAGING_INSTANCE$_index
+		check_variable_arithmetic = {
+			which = prev.$PAGING_INSTANCE$_offset
+			add = 10
+			value <= $PAGING_INSTANCE$_index
+		}
+	}
+}

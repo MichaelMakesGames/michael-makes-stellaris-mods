@@ -1,0 +1,80 @@
+uncivic_shadow_council_clear_shadow_councilor = {
+	remove_leader_flag = uncivic_shadow_council_shadow_councilor
+	switch = {
+		trigger = leader_class
+		ruler = {
+			mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+		}
+		admiral = {
+			mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_shadow_council_admiral_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		general = {
+			mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_shadow_council_general_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		governor = {
+			mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_shadow_council_governor_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		scientist = {
+			mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_shadow_council_scientist_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+	}
+}
+
+uncivic_shadow_council_make_shadow_councilor = {
+	set_leader_flag = uncivic_shadow_council_shadow_councilor
+	switch = {
+		trigger = leader_class
+		ruler = {
+			mmu_leaders_add_trait_if_absent = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+		}
+		admiral = {
+			mmu_leaders_add_trait_if_absent = { TRAIT = uncivic_shadow_council_admiral_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_add_ruler_trait_if_absent = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		general = {
+			mmu_leaders_add_trait_if_absent = { TRAIT = uncivic_shadow_council_general_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_add_ruler_trait_if_absent = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		governor = {
+			mmu_leaders_add_trait_if_absent = { TRAIT = uncivic_shadow_council_governor_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_add_ruler_trait_if_absent = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+		scientist = {
+			mmu_leaders_add_trait_if_absent = { TRAIT = uncivic_shadow_council_scientist_trait_shadow_councilor }
+			hidden_effect = {
+				mmu_leaders_add_ruler_trait_if_absent = { TRAIT = uncivic_shadow_council_ruler_trait_shadow_councilor }
+			}
+		}
+	}
+}
+
+uncivic_shadow_councilor_validate_leader = {
+	if = {
+		limit = {
+			has_global_flag = uncivic_shadow_council_enabled
+			owner = { has_valid_civic = civic_shadow_council }
+			uncivic_shadow_council_is_shadow_councilor = yes
+		}
+		uncivic_shadow_council_make_shadow_councilor = yes
+	} else = {
+		uncivic_shadow_council_clear_shadow_councilor = yes
+	}
+}

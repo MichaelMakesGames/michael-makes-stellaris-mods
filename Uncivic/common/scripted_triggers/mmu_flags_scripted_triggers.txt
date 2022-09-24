@@ -1,0 +1,33 @@
+mmu_flags_has = {
+	switch = {
+		trigger = is_scope_type
+		# note: global flags and relation flags not currently supported
+		agreement = { has_agreement_flag = $FLAG$ }
+		ambient_object = { has_ambient_object_flag = $FLAG$ }
+		army = { has_army_flag = $FLAG$ }
+		country = { has_country_flag = $FLAG$ }
+		deposit = { has_deposit_flag = $FLAG$ }
+		design = { has_design_flag = $FLAG$ }
+		espionage_asset = { has_espionage_asset_flag = $FLAG$ }
+		espionage_operation = { has_espionage_operation_flag = $FLAG$ }
+		federation = { has_federation_flag = $FLAG$ }
+		first_contact = { has_first_contact_flag = $FLAG$ }
+		fleet = { has_fleet_flag = $FLAG$ }
+		leader = { has_leader_flag = $FLAG$ }
+		megastructure = { has_megastructure_flag = $FLAG$ }
+		planet = { has_planet_flag = $FLAG$ }
+		pop = { has_pop_flag = $FLAG$ }
+		pop_faction = { has_pop_faction_flag = $FLAG$ }
+		sector = { has_sector_flag = $FLAG$ }
+		ship = { has_ship_flag = $FLAG$ }
+		situation = { has_situation_flag = $FLAG$ }
+		species = { has_species_flag = $FLAG$ }
+		starbase = { has_starbase_flag = $FLAG$ }
+		war = { has_war_flag = $FLAG$ }
+		# exceptions: these do not follow the pattern has_<scope>_flag
+		archaeological_site = { has_archaeology_flag = $FLAG$ }
+		galactic_object = { has_star_flag = $FLAG$ }
+		# for some reason this throws an error
+		# spy_network = { has_spynetwork_flag = $FLAG$ }
+	}
+}

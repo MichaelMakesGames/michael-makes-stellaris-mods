@@ -128,7 +128,10 @@ uncivic_parliamentary_system_finalize_election = {
 		}
 		hidden_effect = {
 			every_owned_pop = {
-				limit = { pop_faction = { is_same_value = event_target:uncivic_parliamentary_system_winner } }
+				limit = {
+					exists = pop_faction
+					pop_faction = { is_same_value = event_target:uncivic_parliamentary_system_winner }
+				}
 				add_modifier = {
 					modifier = uncivic_parliamentary_system_well_represented
 					days = 3600

@@ -1,0 +1,24 @@
+uncivic_shadow_council_is_shadow_councilor = {
+	has_leader_flag = uncivic_shadow_council_shadow_councilor
+}
+
+uncivic_shadow_council_can_elevate_shadow_councilor = {
+	AND = {
+		custom_tooltip = {
+			fail_text = uncivic_shadow_council_available_leader_fail
+			success_text = uncivic_shadow_council_available_leader_success
+			any_owned_leader = {
+				leader_class = $CLASS$
+				uncivic_shadow_council_is_shadow_councilor = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = uncivic_shadow_council_maximum_risk_fail
+			success_text = uncivic_shadow_council_maximum_risk_success
+			check_variable_arithmetic = {
+				which = value:uncivic_shadow_council_risk
+				value < 100
+			}
+		}
+	}
+}

@@ -29,8 +29,15 @@ on_monthly_pulse_country = {
 	}
 }
 
+on_yearly_pulse_country = {
+	events = {
+		uncivic_shadow_council.301 # shadow council exposure
+	}
+}
+
 on_five_year_pulse_country = {
 	events = {
+		uncivic_shadow_council.501 # AI appoint shadow councilors
 		uncivic_technocracy.501 # AI scientist-governor swapping
 	}
 }
@@ -123,5 +130,11 @@ on_leader_fired = {
 on_leader_spawned = {
 	events = {
 		uncivic_technocracy.422 # update leader-based country modifiers
+	}
+}
+
+on_ruler_back_to_pre_ruler_class = {
+	events = {
+		uncivic_shadow_council.401 # validate shadow councilor flag/traits
 	}
 }

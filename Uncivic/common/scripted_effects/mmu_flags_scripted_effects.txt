@@ -1,0 +1,65 @@
+mmu_flags_set = {
+	switch = {
+		trigger = is_scope_type
+		# note: global flags and relation flags not currently supported
+		agreement = { set_agreement_flag = $FLAG$ }
+		ambient_object = { set_ambient_object_flag = $FLAG$ }
+		army = { set_army_flag = $FLAG$ }
+		country = { set_country_flag = $FLAG$ }
+		deposit = { set_deposit_flag = $FLAG$ }
+		design = { set_design_flag = $FLAG$ }
+		espionage_asset = { set_espionage_asset_flag = $FLAG$ }
+		espionage_operation = { set_espionage_operation_flag = $FLAG$ }
+		federation = { set_federation_flag = $FLAG$ }
+		first_contact = { set_first_contact_flag = $FLAG$ }
+		fleet = { set_fleet_flag = $FLAG$ }
+		leader = { set_leader_flag = $FLAG$ }
+		megastructure = { set_megastructure_flag = $FLAG$ }
+		planet = { set_planet_flag = $FLAG$ }
+		pop = { set_pop_flag = $FLAG$ }
+		pop_faction = { set_pop_faction_flag = $FLAG$ }
+		sector = { set_sector_flag = $FLAG$ }
+		ship = { set_ship_flag = $FLAG$ }
+		situation = { set_situation_flag = $FLAG$ }
+		species = { set_species_flag = $FLAG$ }
+		starbase = { set_starbase_flag = $FLAG$ }
+		war = { set_war_flag = $FLAG$ }
+		# exceptions: these do not follow the pattern set_<scope>_flag
+		archaeological_site = { set_archaeology_flag = $FLAG$ }
+		galactic_object = { set_star_flag = $FLAG$ }
+		# spy_network = { set_spynetwork_flag = $FLAG$ }
+	}
+}
+
+mmu_flags_remove = {
+	switch = {
+		trigger = is_scope_type
+		# note: global flags and relation flags not currently supported
+		agreement = { remove_agreement_flag = $FLAG$ }
+		ambient_object = { remove_ambient_object_flag = $FLAG$ }
+		army = { remove_army_flag = $FLAG$ }
+		country = { remove_country_flag = $FLAG$ }
+		deposit = { remove_deposit_flag = $FLAG$ }
+		design = { remove_design_flag = $FLAG$ }
+		espionage_asset = { remove_espionage_asset_flag = $FLAG$ }
+		espionage_operation = { remove_espionage_operation_flag = $FLAG$ }
+		federation = { remove_federation_flag = $FLAG$ }
+		first_contact = { remove_first_contact_flag = $FLAG$ }
+		fleet = { remove_fleet_flag = $FLAG$ }
+		leader = { remove_leader_flag = $FLAG$ }
+		megastructure = { remove_megastructure_flag = $FLAG$ }
+		planet = { remove_planet_flag = $FLAG$ }
+		pop = { remove_pop_flag = $FLAG$ }
+		pop_faction = { remove_pop_faction_flag = $FLAG$ }
+		sector = { remove_sector_flag = $FLAG$ }
+		ship = { remove_ship_flag = $FLAG$ }
+		situation = { remove_situation_flag = $FLAG$ }
+		species = { remove_species_flag = $FLAG$ }
+		starbase = { remove_starbase_flag = $FLAG$ }
+		war = { remove_war_flag = $FLAG$ }
+		# exceptions: these do not follow the pattern remove_<scope>_flag
+		archaeological_site = { remove_archaeology_flag = $FLAG$ }
+		galactic_object = { remove_star_flag = $FLAG$ }
+		# spy_network = { remove_spynetwork_flag = $FLAG$ }
+	}
+}

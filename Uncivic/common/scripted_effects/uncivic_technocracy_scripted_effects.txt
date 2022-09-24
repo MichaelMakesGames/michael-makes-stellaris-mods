@@ -19,6 +19,10 @@ uncivic_technocracy_convert_scientist_to_governor = {
 				count = trigger:num_traits
 				uncivic_technocracy_replace_scientist_trait_with_governor_trait = yes
 			}
+			if = { # shadow council compat (I should check if flags are automatically copied with clone)
+				limit = { prevprev = { has_leader_flag = uncivic_shadow_council_shadow_councilor } }
+				set_leader_flag = uncivic_shadow_council_shadow_councilor
+			}
 		}
 	}
 	kill_leader = {
@@ -40,6 +44,10 @@ uncivic_technocracy_convert_governor_to_scientist = {
 			while = {
 				count = trigger:num_traits
 				uncivic_technocracy_replace_governor_trait_with_scientist_trait = yes
+			}
+			if = { # shadow council compat (I should check if flags are automatically copied with clone)
+				limit = { prevprev = { has_leader_flag = uncivic_shadow_council_shadow_councilor } }
+				set_leader_flag = uncivic_shadow_council_shadow_councilor
 			}
 		}
 	}
@@ -73,27 +81,27 @@ uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 		# vanilla convertable traits
 		leader_trait_scientist_erudite = {
 			remove_trait = leader_trait_scientist_erudite
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_erudite }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_erudite }
 		}
 		leader_trait_scientist_cyborg = {
 			remove_trait = leader_trait_scientist_cyborg
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_cyborg }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_cyborg }
 		}
 		leader_trait_scientist_synthetic = {
 			remove_trait = leader_trait_scientist_synthetic
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_synthetic }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_synthetic }
 		}
 		leader_trait_scientist_psionic = {
 			remove_trait = leader_trait_scientist_psionic
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_psionic }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_psionic }
 		}
 		leader_trait_scientist_chosen = {
 			remove_trait = leader_trait_scientist_chosen
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_chosen }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_chosen }
 		}
 		leader_trait_scientist_brainslug = {
 			remove_trait = leader_trait_scientist_brainslug
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_governor_brainslug }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_brainslug }
 		}
 		# vanilla inspired_* traits
 		# as far as I can tell, are not used. Remove them just in case
@@ -105,6 +113,11 @@ uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 		}
 		leader_trait_inspired_surveyor = {
 			remove_trait = leader_trait_inspired_surveyor
+		}
+		# uncivic traits (other civics)
+		uncivic_shadow_council_scientist_trait_shadow_councilor = {
+			remove_trait = uncivic_shadow_council_scientist_trait_shadow_councilor
+			add_trait = uncivic_shadow_council_governor_trait_shadow_councilor
 		}
 		# vanilla scientist traits
 		leader_trait_mindful = {
@@ -328,27 +341,32 @@ uncivic_technocracy_replace_governor_trait_with_scientist_trait = {
 		# vanilla convertable traits
 		leader_trait_governor_erudite = {
 			remove_trait = leader_trait_governor_erudite
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_erudite }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_erudite }
 		}
 		leader_trait_governor_cyborg = {
 			remove_trait = leader_trait_governor_cyborg
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_cyborg }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_cyborg }
 		}
 		leader_trait_governor_synthetic = {
 			remove_trait = leader_trait_governor_synthetic
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_synthetic }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_synthetic }
 		}
 		leader_trait_governor_psionic = {
 			remove_trait = leader_trait_governor_psionic
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_psionic }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_psionic }
 		}
 		leader_trait_governor_chosen = {
 			remove_trait = leader_trait_governor_chosen
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_chosen }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_chosen }
 		}
 		leader_trait_governor_brainslug = {
 			remove_trait = leader_trait_governor_brainslug
-			uncivic_technocracy_add_trait_no_dup = { TRAIT = leader_trait_scientist_brainslug }
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_brainslug }
+		}
+		# uncivic traits (other civics)
+		uncivic_shadow_council_governor_trait_shadow_councilor = {
+			remove_trait = uncivic_shadow_council_governor_trait_shadow_councilor
+			add_trait = uncivic_shadow_council_scientist_trait_shadow_councilor
 		}
 		# uncivic technocracy governor traits
 		uncivic_technocracy_governor_trait_mindful = {
@@ -1354,6 +1372,14 @@ uncivic_technocracy_display_traits = {
 		} }
 		custom_tooltip = leader_trait_scientist_brainslug
 	}
+	# uncivic traits
+	if = {
+		limit = { OR = {
+			has_trait = uncivic_shadow_council_scientist_trait_shadow_councilor
+			has_trait = uncivic_shadow_council_governor_trait_shadow_councilor
+		} }
+		custom_tooltip = uncivic_shadow_council_scientist_trait_shadow_councilor
+	}
 	# scientist traits
 	if = {
 		limit = { OR = {
@@ -1750,118 +1776,18 @@ uncivic_technocracy_force_leader_gui_update = {
 	}
 }
 
-uncivic_technocracy_add_trait_no_dup = {
-	if = {
-		limit = { NOT = { has_trait = $TRAIT$ } }
-		add_trait = $TRAIT$
-	}
-}
-
-uncivic_technocracy_clear_leader_paging = {
-	hidden_effect = {
-		uncivic_technocracy_clear_leader_page = yes
-		clear_variable = uncivic_technocracy_scientist_count
-		clear_variable = uncivic_technocracy_governor_count
-		clear_variable = uncivic_technocracy_leader_page
-		every_owned_leader = {
-			if = {
-				limit = { is_variable_set = uncivic_technocracy_leader_index }
-				clear_variable = uncivic_technocracy_leader_index
-			}
-		}
-	}
-}
-
-uncivic_technocracy_clear_leader_page = {
-	hidden_effect = {
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_0 }
-			event_target:uncivic_technocracy_leader_0 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_1 }
-			event_target:uncivic_technocracy_leader_1 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_2 }
-			event_target:uncivic_technocracy_leader_2 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_3 }
-			event_target:uncivic_technocracy_leader_3 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_4 }
-			event_target:uncivic_technocracy_leader_4 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_5 }
-			event_target:uncivic_technocracy_leader_5 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_6 }
-			event_target:uncivic_technocracy_leader_6 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_7 }
-			event_target:uncivic_technocracy_leader_7 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_8 }
-			event_target:uncivic_technocracy_leader_8 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-		if = {
-			limit = { exists = event_target:uncivic_technocracy_leader_9 }
-			event_target:uncivic_technocracy_leader_9 = {
-				remove_leader_flag = uncivic_technocracy_open_page
-			}
-		}
-	}
-}
-
-uncivic_technocracy_save_leader_as_event_target = {
-	random_owned_leader = {
-		limit = {
-			leader_class = $CLASS$
-			is_variable_set = uncivic_technocracy_leader_index
-			check_variable_arithmetic = {
-				which = uncivic_technocracy_leader_index
-				subtract = prev.uncivic_technocracy_leader_page
-				value = $NUMBER$
-			}
-		}
-		save_event_target_as = uncivic_technocracy_leader_$NUMBER$
-		set_leader_flag = uncivic_technocracy_open_page
-	}
-}
-
 uncivic_technocracy_leader_option_effect = {
-	event_target:uncivic_technocracy_leader_$NUMBER$ = {
+	event_target:uncivic_technocracy_leader_paging_current_page_entity_$NUMBER$ = {
 		uncivic_technocracy_display_traits = yes
 	}
 	hidden_effect = {
-		event_target:uncivic_technocracy_leader_$NUMBER$ = {
+		event_target:uncivic_technocracy_leader_paging_current_page_entity_$NUMBER$ = {
 			leader_event = { id = uncivic_technocracy.$CONVERSION_EVENT$ }
 		}
-		uncivic_technocracy_clear_leader_paging = yes
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+		}
 		country_event = { id = uncivic_technocracy.301 }
 	}
 }

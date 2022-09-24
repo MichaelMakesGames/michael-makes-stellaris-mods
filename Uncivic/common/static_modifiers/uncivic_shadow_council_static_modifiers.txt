@@ -1,0 +1,13 @@
+uncivic_shadow_council_exposed = {
+	planet_stability_add = -15
+}
+
+uncivic_shadow_council_scapegoated = {
+	planet_stability_add = 5
+	custom_tooltip = uncivic_shadow_council_scapegoated_tooltip
+}
+
+uncivic_shadow_council_disrupted = {
+	planet_jobs_ruler_produces_mult = -0.30
+	pop_cat_ruler_political_power = -3.00
+}

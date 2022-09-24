@@ -7,16 +7,16 @@
  uncivic_technocracy_reassign_governor_desc: "The chosen governor will become a scientist, keeping all of their existing traits."
 
  # paging
- uncivic_technocracy_leader_0: "[uncivic_technocracy_leader_0.GetName]"
- uncivic_technocracy_leader_1: "[uncivic_technocracy_leader_1.GetName]"
- uncivic_technocracy_leader_2: "[uncivic_technocracy_leader_2.GetName]"
- uncivic_technocracy_leader_3: "[uncivic_technocracy_leader_3.GetName]"
- uncivic_technocracy_leader_4: "[uncivic_technocracy_leader_4.GetName]"
- uncivic_technocracy_leader_5: "[uncivic_technocracy_leader_5.GetName]"
- uncivic_technocracy_leader_6: "[uncivic_technocracy_leader_6.GetName]"
- uncivic_technocracy_leader_7: "[uncivic_technocracy_leader_7.GetName]"
- uncivic_technocracy_leader_8: "[uncivic_technocracy_leader_8.GetName]"
- uncivic_technocracy_leader_9: "[uncivic_technocracy_leader_9.GetName]"
+ uncivic_technocracy_leader_0: "[uncivic_technocracy_leader_paging_current_page_entity_0.GetName]"
+ uncivic_technocracy_leader_1: "[uncivic_technocracy_leader_paging_current_page_entity_1.GetName]"
+ uncivic_technocracy_leader_2: "[uncivic_technocracy_leader_paging_current_page_entity_2.GetName]"
+ uncivic_technocracy_leader_3: "[uncivic_technocracy_leader_paging_current_page_entity_3.GetName]"
+ uncivic_technocracy_leader_4: "[uncivic_technocracy_leader_paging_current_page_entity_4.GetName]"
+ uncivic_technocracy_leader_5: "[uncivic_technocracy_leader_paging_current_page_entity_5.GetName]"
+ uncivic_technocracy_leader_6: "[uncivic_technocracy_leader_paging_current_page_entity_6.GetName]"
+ uncivic_technocracy_leader_7: "[uncivic_technocracy_leader_paging_current_page_entity_7.GetName]"
+ uncivic_technocracy_leader_8: "[uncivic_technocracy_leader_paging_current_page_entity_8.GetName]"
+ uncivic_technocracy_leader_9: "[uncivic_technocracy_leader_paging_current_page_entity_9.GetName]"
 
  # trait tooltips
  uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Immediately gain some resources when surveying mineable deposits"

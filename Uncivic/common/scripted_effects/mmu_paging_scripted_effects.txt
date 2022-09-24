@@ -1,0 +1,260 @@
+mmu_paging_clear_all = {
+	hidden_effect = {
+		mmu_paging_clear_page = { PAGING_INSTANCE = $PAGING_INSTANCE$ }
+		clear_variable = $PAGING_INSTANCE$_offset
+		every_$PAGED_ENTITY_TYPE$ = {
+			if = {
+				limit = { is_variable_set = $PAGING_INSTANCE$_index }
+				clear_variable = $PAGING_INSTANCE$_index
+			}
+		}
+	}
+}
+
+mmu_paging_clear_page = {
+	hidden_effect = {
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_0 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_0 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_1 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_1 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_2 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_2 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_3 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_3 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_4 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_4 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_5 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_5 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_6 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_6 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_7 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_7 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_8 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_8 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+		if = {
+			limit = { exists = event_target:$PAGING_INSTANCE$_current_page_entity_9 }
+			event_target:$PAGING_INSTANCE$_current_page_entity_9 = {
+				mmu_flags_remove = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+			}
+		}
+	}
+}
+
+mmu_paging_init = {
+	hidden_effect = {
+		set_variable = {
+			which = $PAGING_INSTANCE$_offset
+			value = 0
+		}
+		set_variable = {
+			which = $PAGING_INSTANCE$_temp_count
+			value = 0
+		}
+		if = { # wrapping in if fixes logged errors when hovering over event options
+			limit = { is_variable_set = $PAGING_INSTANCE$_temp_count }
+			every_$PAGED_ENTITY_TYPE$ = {
+				[[PAGED_ENTITY_LIMIT] limit = { $PAGED_ENTITY_LIMIT$ }]
+				set_variable = {
+					which = $PAGING_INSTANCE$_index
+					value = prev.$PAGING_INSTANCE$_temp_count
+				}
+				prev = {
+					change_variable = {
+						which = $PAGING_INSTANCE$_temp_count
+						value = 1
+					}
+				}
+			}
+			clear_variable = $PAGING_INSTANCE$_temp_count
+		}
+	}
+}
+
+mmu_paging_save_event_targets = {
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 0
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_0
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 1
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_1
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 2
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_2
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 3
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_3
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 4
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_4
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 5
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_5
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 6
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_6
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 7
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_7
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 8
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_8
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+	random_$PAGED_ENTITY_TYPE$ = {
+		limit = {
+			[[PAGED_ENTITY_LIMIT] $PAGED_ENTITY_LIMIT$]
+			is_variable_set = $PAGING_INSTANCE$_index
+			check_variable_arithmetic = {
+				which = $PAGING_INSTANCE$_index
+				subtract = prev.$PAGING_INSTANCE$_offset
+				value = 9
+			}
+		}
+		save_event_target_as = $PAGING_INSTANCE$_current_page_entity_9
+		mmu_flags_set = { FLAG = $PAGING_INSTANCE$_current_page_entity }
+	}
+}
+
+mmu_paging_prev = {
+	hidden_effect = {
+		subtract_variable = {
+			which = $PAGING_INSTANCE$_offset
+			value = 10
+		}
+		mmu_paging_clear_page = { PAGING_INSTANCE = $PAGING_INSTANCE$ }
+	}
+}
+
+mmu_paging_next = {
+	hidden_effect = {
+		change_variable = {
+			which = $PAGING_INSTANCE$_offset
+			value = 10
+		}
+		mmu_paging_clear_page = { PAGING_INSTANCE = $PAGING_INSTANCE$ }
+	}
+}

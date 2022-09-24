@@ -14,6 +14,9 @@ Planets with upgraded capitals hold Parliamentary elections every 10 years, elec
 
 Minor incompatibility: new modded faction types do not have special planet modifiers
 
+[h1]Shadow Council[/h1]
+Elevate your leaders to become powerful Shadow Councilors. However, the more you elevate, the greater the the chance one will be exposed, and you'll need to make a tough decision about what to do with them.
+
 [h1]Technocracy[/h1]
 Governors and Scientists are interchangeable. Convert scientists to governors (and vice versa) via the Manage Technocracts edict. Traits are converted to new variants as well, so you can get a governor with Expertise: Materials to boost your alloy and consumer goods production.
 

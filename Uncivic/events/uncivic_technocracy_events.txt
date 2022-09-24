@@ -153,57 +153,30 @@ country_event = {
 	title = edict_uncivic_technocracy_reassign_technocrat
 	desc = edict_uncivic_technocracy_reassign_technocrat_desc
 	picture = GFX_evt_decryption
-	immediate = {
-		set_variable = {
-			which = uncivic_technocracy_leader_page
-			value = 0
-		}
-		set_variable = {
-			which = uncivic_technocracy_scientist_count
-			value = 0
-		}
-		every_owned_leader = {
-			limit = { leader_class = scientist }
-			set_variable = {
-				which = uncivic_technocracy_leader_index
-				value = prev.uncivic_technocracy_scientist_count
-			}
-			prev = {
-				change_variable = {
-					which = uncivic_technocracy_scientist_count
-					value = 1
-				}
-			}
-		}
-		set_variable = {
-			which = uncivic_technocracy_governor_count
-			value = 0
-		}
-		every_owned_leader = {
-			limit = { leader_class = governor }
-			set_variable = {
-				which = uncivic_technocracy_leader_index
-				value = prev.uncivic_technocracy_governor_count
-			}
-			prev = {
-				change_variable = {
-					which = uncivic_technocracy_governor_count
-					value = 1
-				}
-			}
-		}
-	}
 	option = {
 		name = "uncivic_technocracy_reassign_scientist"
+		hidden_effect = {
+			mmu_paging_init = {
+				PAGING_INSTANCE = uncivic_technocracy_leader_paging
+				PAGED_ENTITY_TYPE = owned_leader
+				PAGED_ENTITY_LIMIT = "leader_class = scientist"
+			}
+		}
 		country_event = { id = uncivic_technocracy.311 }
 	}
 	option = {
 		name = "uncivic_technocracy_reassign_governor"
+		hidden_effect = {
+			mmu_paging_init = {
+				PAGING_INSTANCE = uncivic_technocracy_leader_paging
+				PAGED_ENTITY_TYPE = owned_leader
+				PAGED_ENTITY_LIMIT = "leader_class = governor"
+			}
+		}
 		country_event = { id = uncivic_technocracy.321 }
 	}
 	option = {
 		name = CLOSE
-		uncivic_technocracy_clear_leader_paging = yes
 	}
 }
 
@@ -214,111 +187,119 @@ country_event = {
 	desc = uncivic_technocracy_reassign_scientist_desc
 	picture = GFX_evt_decryption
 	immediate = {
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 0 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 1 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 2 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 3 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 4 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 5 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 6 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 7 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 8 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = scientist NUMBER = 9 }
+		mmu_paging_save_event_targets = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+			PAGED_ENTITY_LIMIT = "leader_class = scientist"
+		}
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 0 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 0
+		} }
 		name = uncivic_technocracy_leader_0
 		uncivic_technocracy_leader_option_effect = { NUMBER = 0 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 1 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 1
+		} }
 		name = uncivic_technocracy_leader_1
 		uncivic_technocracy_leader_option_effect = { NUMBER = 1 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 2 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 2
+		} }
 		name = uncivic_technocracy_leader_2
 		uncivic_technocracy_leader_option_effect = { NUMBER = 2 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 3 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 3
+		} }
 		name = uncivic_technocracy_leader_3
 		uncivic_technocracy_leader_option_effect = { NUMBER = 3 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 4 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 4
+		} }
 		name = uncivic_technocracy_leader_4
 		uncivic_technocracy_leader_option_effect = { NUMBER = 4 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 5 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 5
+		} }
 		name = uncivic_technocracy_leader_5
 		uncivic_technocracy_leader_option_effect = { NUMBER = 5 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 6 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 6
+		} }
 		name = uncivic_technocracy_leader_6
 		uncivic_technocracy_leader_option_effect = { NUMBER = 6 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 7 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 7
+		} }
 		name = uncivic_technocracy_leader_7
 		uncivic_technocracy_leader_option_effect = { NUMBER = 7 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 8 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 8
+		} }
 		name = uncivic_technocracy_leader_8
 		uncivic_technocracy_leader_option_effect = { NUMBER = 8 CONVERSION_EVENT = 201 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 9 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 9
+		} }
 		name = uncivic_technocracy_leader_9
 		uncivic_technocracy_leader_option_effect = { NUMBER = 9 CONVERSION_EVENT = 201 }
 	}
 	option = {
 		trigger = {
-			any_owned_leader = {
-				leader_class = scientist
-				is_variable_set = uncivic_technocracy_leader_index
-				prev = {
-					check_variable_arithmetic = {
-						which = uncivic_technocracy_leader_page
-						add = 10
-						value <= prev.uncivic_technocracy_leader_index
-					}
-				}
+			mmu_paging_has_next = {
+				PAGING_INSTANCE = uncivic_technocracy_leader_paging
+				PAGED_ENTITY_TYPE = owned_leader
+				PAGED_ENTITY_LIMIT = "leader_class = scientist"
 			}
 		}
 		name = NEXT
-		hidden_effect = {
-			change_variable = {
-				which = uncivic_technocracy_leader_page
-				value = 10
-			}
-			uncivic_technocracy_clear_leader_page = yes
-		}
+		mmu_paging_next = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		country_event = { id = uncivic_technocracy.311 }
 	}
 	option = {
 		trigger = {
-			check_variable = {
-				which = uncivic_technocracy_leader_page
-				value > 0
-			}
+			mmu_paging_has_prev = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		}
 		name = PREV
-		hidden_effect = {
-			subtract_variable = {
-				which = uncivic_technocracy_leader_page
-				value = 10
-			}
-			uncivic_technocracy_clear_leader_page = yes
-		}
+		mmu_paging_prev = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		country_event = { id = uncivic_technocracy.311 }
 	}
 	option = {
-		name = CLOSE
-		uncivic_technocracy_clear_leader_paging = yes
+		name = BACK
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+		}
+		country_event = { id = uncivic_technocracy.301 }
 	}
 }
 
@@ -329,111 +310,119 @@ country_event = {
 	desc = uncivic_technocracy_reassign_governor_desc
 	picture = GFX_evt_decryption
 	immediate = {
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 0 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 1 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 2 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 3 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 4 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 5 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 6 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 7 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 8 }
-		uncivic_technocracy_save_leader_as_event_target = { CLASS = governor NUMBER = 9 }
+		mmu_paging_save_event_targets = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+			PAGED_ENTITY_LIMIT = "leader_class = governor"
+		}
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 0 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 0
+		} }
 		name = uncivic_technocracy_leader_0
 		uncivic_technocracy_leader_option_effect = { NUMBER = 0 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 1 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 1
+		} }
 		name = uncivic_technocracy_leader_1
 		uncivic_technocracy_leader_option_effect = { NUMBER = 1 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 2 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 2
+		} }
 		name = uncivic_technocracy_leader_2
 		uncivic_technocracy_leader_option_effect = { NUMBER = 2 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 3 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 3
+		} }
 		name = uncivic_technocracy_leader_3
 		uncivic_technocracy_leader_option_effect = { NUMBER = 3 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 4 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 4
+		} }
 		name = uncivic_technocracy_leader_4
 		uncivic_technocracy_leader_option_effect = { NUMBER = 4 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 5 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 5
+		} }
 		name = uncivic_technocracy_leader_5
 		uncivic_technocracy_leader_option_effect = { NUMBER = 5 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 6 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 6
+		} }
 		name = uncivic_technocracy_leader_6
 		uncivic_technocracy_leader_option_effect = { NUMBER = 6 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 7 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 7
+		} }
 		name = uncivic_technocracy_leader_7
 		uncivic_technocracy_leader_option_effect = { NUMBER = 7 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 8 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 8
+		} }
 		name = uncivic_technocracy_leader_8
 		uncivic_technocracy_leader_option_effect = { NUMBER = 8 CONVERSION_EVENT = 202 }
 	}
 	option = {
-		trigger = { uncivic_technocracy_has_page_leader = { NUMBER = 9 } }
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			NUMBER = 9
+		} }
 		name = uncivic_technocracy_leader_9
 		uncivic_technocracy_leader_option_effect = { NUMBER = 9 CONVERSION_EVENT = 202 }
 	}
 	option = {
 		trigger = {
-			any_owned_leader = {
-				leader_class = governor
-				is_variable_set = uncivic_technocracy_leader_index
-				prev = {
-					check_variable_arithmetic = {
-						which = uncivic_technocracy_leader_page
-						add = 10
-						value <= prev.uncivic_technocracy_leader_index
-					}
-				}
+			mmu_paging_has_next = {
+				PAGING_INSTANCE = uncivic_technocracy_leader_paging
+				PAGED_ENTITY_TYPE = owned_leader
+				PAGED_ENTITY_LIMIT = "leader_class = governor"
 			}
 		}
 		name = NEXT
-		hidden_effect = {
-			change_variable = {
-				which = uncivic_technocracy_leader_page
-				value = 10
-			}
-			uncivic_technocracy_clear_leader_page = yes
-		}
+		mmu_paging_next = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		country_event = { id = uncivic_technocracy.321 }
 	}
 	option = {
 		trigger = {
-			check_variable = {
-				which = uncivic_technocracy_leader_page
-				value > 0
-			}
+			mmu_paging_has_prev = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		}
 		name = PREV
-		hidden_effect = {
-			subtract_variable = {
-				which = uncivic_technocracy_leader_page
-				value = 10
-			}
-			uncivic_technocracy_clear_leader_page = yes
-		}
+		mmu_paging_prev = { PAGING_INSTANCE = uncivic_technocracy_leader_paging }
 		country_event = { id = uncivic_technocracy.321 }
 	}
 	option = {
-		name = CLOSE
-		uncivic_technocracy_clear_leader_paging = yes
+		name = BACK
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_technocracy_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+		}
+		country_event = { id = uncivic_technocracy.301 }
 	}
 }
 

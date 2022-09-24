@@ -1,0 +1,19 @@
+uncivic_shadow_council_elevate_shadow_councilor = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	potential = {
+		has_valid_civic = civic_shadow_council
+		has_global_flag = uncivic_shadow_council_enabled
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		country_event = {
+			id = uncivic_shadow_council.201
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
