@@ -1,0 +1,37 @@
+# Occupied Resources deposits, to reduce logged errors
+# These will be overwritten
+d_occupier_capital = {
+	icon = d_bunker_door
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_occupied_capital = {
+	icon = d_bunker_door
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_siege_capital = {
+	icon = d_bunker_door
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

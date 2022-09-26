@@ -37,6 +37,120 @@ mmgsiege_export_planet_balance_and_upkeep = {
 			value = owner.value:mmgsiege_country_base_production_$RESOURCE$
 		}
 	}
+
+	if = { # handle Occupied Resources that gives production/upkeep to occupier
+		limit = {
+			has_deposit = d_occupier_capital
+			exists = owner
+			owner = { is_at_war = yes }
+		}
+		if = { # remove deposit production from balance
+			limit = {
+				is_variable_set = occupation_$RESOURCE$
+				check_variable = {
+					which = occupation_$RESOURCE$
+					value > 0
+				}
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = occupation_$RESOURCE$
+			}
+		}
+		if = { # add deposit upkeep to balance and remove from upkeep
+			limit = {
+				is_variable_set = occupation_$RESOURCE$_u
+				check_variable = {
+					which = occupation_$RESOURCE$_u
+					value > 0
+				}
+			}
+			change_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = occupation_$RESOURCE$_u
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_upkeep
+				value = occupation_$RESOURCE$_u
+			}
+		}
+	}
+
+	if = { # handle Occupied Resources deposit that removes production/upkeep from occupied
+		limit = {
+			has_deposit = d_occupied_capital
+			exists = owner
+			owner = { is_at_war = yes }
+		}
+		if = { # remove deposit production from balance
+			limit = {
+				is_variable_set = occupied_$RESOURCE$_u
+				check_variable = {
+					which = occupied_$RESOURCE$_u
+					value > 0
+				}
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = occupied_$RESOURCE$_u
+			}
+		}
+		if = { # add deposit upkeep to balance and remove from upkeep
+			limit = {
+				is_variable_set = occupied_$RESOURCE$
+				check_variable = {
+					which = occupied_$RESOURCE$
+					value > 0
+				}
+			}
+			change_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = occupied_$RESOURCE$
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_upkeep
+				value = occupied_$RESOURCE$
+			}
+		}
+	}
+
+	if = { # handle Occupied Resources deposit that removes production/upkeep from sieged
+		limit = {
+			has_deposit = d_siege_capital
+			exists = owner
+			owner = { is_at_war = yes }
+		}
+		if = { # remove deposit production from balance
+			limit = {
+				is_variable_set = $RESOURCE$_siege_cap_u
+				check_variable = {
+					which = $RESOURCE$_siege_cap_u
+					value > 0
+				}
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = $RESOURCE$_siege_cap_u
+			}
+		}
+		if = { # add deposit upkeep to balance and remove from upkeep
+			limit = {
+				is_variable_set = $RESOURCE$_siege_cap
+				check_variable = {
+					which = $RESOURCE$_siege_cap_p
+					value > 0
+				}
+			}
+			change_variable = {
+				which = mmgsiege_$RESOURCE$_balance
+				value = $RESOURCE$_siege_cap_p
+			}
+			subtract_variable = {
+				which = mmgsiege_$RESOURCE$_upkeep
+				value = $RESOURCE$_siege_cap_p
+			}
+		}
+	}
 }
 
 mmgsiege_check_for_and_update_resource_shortage = {

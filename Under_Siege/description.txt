@@ -1,4 +1,4 @@
-AAdds siege warfare to Stellaris! (For 3.5.*)
+Adds siege warfare to Stellaris! (For 3.5.*)
 
 Ever wanted to win a war without invading a single planet? Have you wondered how that ecumenopolis feeds itself when you control the skies above it? This is the mod for you!
 
@@ -31,7 +31,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
  [*] Trade planets are vulnerable to sieges because the trade value doesn't count towards any local resource production when under siege
  [*] Wars against hive minds and machines will be tougher since invasions are still needed, and the unhappiness penalties of resource shortages do not affect them
  [*] Genocidal empires will have more difficulty conquering since no planets will surrender to them
- [*] High stability / high happiness empires have a defensive advangtage
+ [*] High stability / high happiness empires have a defensive advantage
  [*] Probably more things I haven't thought of!
 [/list]
 
@@ -43,8 +43,8 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
   [*] Can be removed from an existing game
   [*] Should be compatible with all other mods
   [list]
-    [*] Exception: Occupied Resources adds its own conflicting siege mechanics. Use one or the other, not both.
-    [*] Exception: This mod verwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
+    [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]Occupied Resources[/url] is now fully compatible! (Previously it was not.)
+    [*] Exception: This mod overwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
   [/list]
 [/list]
 
