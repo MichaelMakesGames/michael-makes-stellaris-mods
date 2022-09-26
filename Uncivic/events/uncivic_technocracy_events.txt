@@ -832,6 +832,12 @@ leader_event = {
 	id = uncivic_technocracy.421
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		OR = {
+			leader_class = governor
+			leader_class = scientist
+		}
+	}
 	immediate = {
 		owner = {
 			uncivic_technocracy_update_leader_trait_country_modifier = {
