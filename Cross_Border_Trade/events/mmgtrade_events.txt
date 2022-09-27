@@ -133,6 +133,17 @@ event = {
 								value = owner.trigger:trade_income
 							}
 						}
+						# relative network size max of 10x
+						if = {
+							limit = { check_variable = {
+								which = mmgtrade_proposed_relative_network_size
+								value > 10
+							} }
+							set_variable = {
+								which = mmgtrade_proposed_relative_network_size
+								value = 10
+							}
+						}
 						# use new proposed relative network size if bigger
 						if = {
 							limit = {
