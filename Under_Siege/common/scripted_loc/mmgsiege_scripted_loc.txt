@@ -87,6 +87,12 @@ defined_text = {
 			mmgsiege_has_recovering_resource_shortage = { RESOURCE = energy }
 		}
 	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_max_level"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+		}
+	}
 	default = "mmgsiege_shortage_substatus_progress_energy"
 }
 
@@ -133,6 +139,12 @@ defined_text = {
 		localization_key = "mmgsiege_shortage_substatus_recovering"
 		trigger = {
 			mmgsiege_has_recovering_resource_shortage = { RESOURCE = minerals }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_max_level"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
 		}
 	}
 	default = "mmgsiege_shortage_substatus_progress_minerals"
@@ -183,6 +195,12 @@ defined_text = {
 			mmgsiege_has_recovering_resource_shortage = { RESOURCE = food }
 		}
 	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_max_level"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+		}
+	}
 	default = "mmgsiege_shortage_substatus_progress_food"
 }
 
@@ -229,6 +247,12 @@ defined_text = {
 		localization_key = "mmgsiege_shortage_substatus_recovering"
 		trigger = {
 			mmgsiege_has_recovering_resource_shortage = { RESOURCE = consumer_goods }
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_max_level"
+		trigger = {
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods LEVEL = 4 }
 		}
 	}
 	default = "mmgsiege_shortage_substatus_progress_consumer_goods"

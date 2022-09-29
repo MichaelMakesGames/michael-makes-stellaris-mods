@@ -31,6 +31,7 @@
  mmgsiege_shortage_status_severe: "§RSevere Shortage§!"
  mmgsiege_shortage_status_catastrophic: "§MCatastrophic Shortage§!"
  mmgsiege_shortage_substatus_recovering: "(Recovering)"
+ mmgsiege_shortage_substatus_max_level: "(Max Level)"
  mmgsiege_shortage_substatus_progress_energy: "([This.mmgsiege_energy_shortage_progress]% to Next Level)"
  mmgsiege_shortage_substatus_progress_minerals: "([This.mmgsiege_minerals_shortage_progress]% to Next Level)"
  mmgsiege_shortage_substatus_progress_food: "([This.mmgsiege_food_shortage_progress]% to Next Level)"
