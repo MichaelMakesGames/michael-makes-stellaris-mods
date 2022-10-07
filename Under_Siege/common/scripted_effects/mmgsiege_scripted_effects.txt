@@ -980,11 +980,14 @@ mmgsiege_update_planet_status = {
 		# this will temporarily survey all colonies so besieger can see modifiers, etc
 		# using set_surveyed only works for day, then is automatically updated because of intel
 		solar_system.starbase.controller = {
-			add_intel_report = {
-				category = economy
-				level = 3
-				days = 31
-				who = prev.owner
+			if = {
+				limit = { NOT = { is_same_value = prev.owner } }
+				add_intel_report = {
+					category = economy
+					level = 3
+					days = 31
+					who = prev.owner
+				}
 			}
 		}
 		# prevent revolts
