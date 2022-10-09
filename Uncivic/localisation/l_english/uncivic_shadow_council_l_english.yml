@@ -2,7 +2,7 @@
  # elevate shadow councilor edict/events
  edict_uncivic_shadow_council_elevate_shadow_councilor: "Elevate Shadow Councilor"
  edict_uncivic_shadow_council_elevate_shadow_councilor_desc: "Appoint a leader to the Shadow Council. They will be able to pull strings to ensure they have the resources they need, but the more Councilors we have, the greater our risk of exposure."
- uncivic_shadow_council_elevate_shadow_councilor_desc: "Appoint a leader to the Shadow Council. They will be able to pull strings to ensure they have the resources they need, but the more Councilors we have, the greater our risk of exposure.\n\nShadow Councilor Exposure Risk: §Y[This.UncivicShadowCouncilRisk]%§!\nNext Risk Increase: §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
+ uncivic_shadow_council_elevate_shadow_councilor_desc: "Appoint a leader to the Shadow Council. They will be able to pull strings to ensure they have the resources they need, but the more Councilors we have, the greater our risk of exposure (checked once per year).\n\nShadow Councilor Exposure Risk: §Y[This.UncivicShadowCouncilRisk]%§!\nIncrease from Next Shadow Councilor: §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
  uncivic_shadow_council_elevate_governor: "Elevate a Governor"
  uncivic_shadow_council_elevate_scientist: "Elevate a Scientist"
  uncivic_shadow_council_elevate_admiral: "Elevate a Admiral"

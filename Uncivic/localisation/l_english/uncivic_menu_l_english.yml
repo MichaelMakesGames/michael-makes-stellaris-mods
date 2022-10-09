@@ -12,4 +12,4 @@
 
  uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocracy Enabled"
  uncivic_menu_technocracy_disabled: "£trigger_no£ Technocracy Disabled"
- uncivic_menu_technocracy_tooltip: "Enables converting scientists to governors\nEnables converting governors to scientists\nGovernors can start with scientist traits"
+ uncivic_menu_technocracy_tooltip: "Enables converting scientists to governors\nEnables converting governors to scientists\nEnables Technocrat Recruitment Focus policy"

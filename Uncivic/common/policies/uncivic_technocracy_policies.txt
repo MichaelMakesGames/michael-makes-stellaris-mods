@@ -1,0 +1,23 @@
+uncivic_technocracy_recruitment_focus = {
+	potential = {
+		has_valid_civic = civic_technocracy
+		has_global_flag = uncivic_technocracy_enabled
+	}
+	allow = { always = yes }
+	option = {
+		name = uncivic_technocracy_recruitment_focus_theory
+		potential = { always = yes }
+		policy_flags = {
+			uncivic_technocracy_recruitment_focus_theory
+		}
+		ai_weight = { base = 100 }
+	}
+	option = {
+		name = uncivic_technocracy_recruitment_focus_practical
+		potential = { always = yes }
+		policy_flags = {
+			uncivic_technocracy_recruitment_focus_practical
+		}
+		ai_weight = { base = 0 }
+	}
+}

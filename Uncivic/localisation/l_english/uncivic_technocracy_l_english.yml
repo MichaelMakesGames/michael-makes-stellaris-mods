@@ -46,3 +46,11 @@
  # events
  uncivic_technocracy_artifacts_discovered: "Artifacts Discovered!"
  uncivic_technocracy_artifacts_discovered_desc: "Our governor §H[This.GetName]§! has put their archaeological training to good use and discovered artifacts at an dig site in their sector."
+
+ # policies
+ policy_uncivic_technocracy_recruitment_focus: "Technocrat Recruitment Focus"
+ policy_uncivic_technocracy_recruitment_focus_desc: "We can choose if our recruitment efforts should prioritize theoretical knowledge or practical experience."
+ uncivic_technocracy_recruitment_focus_theory_name: "Theoretical Knowledge"
+ uncivic_technocracy_recruitment_focus_theory_desc: "Without a strong theoretical foundation, our technocrats will not be able to solve the novel problems of managing an interstellar empire.\n\n§EGovernors can start with Scientist traits§!"
+ uncivic_technocracy_recruitment_focus_practical_name: "Practical Experience"
+ uncivic_technocracy_recruitment_focus_practical_desc: "Theory untested by practical experience cannot be entrusted to run our state.\n\n§EScientists can start with Governor trait§!s"

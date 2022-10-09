@@ -1,0 +1,56 @@
+﻿l_russian:
+ edict_uncivic_technocracy_reassign_technocrat: "Переназначение технократа"
+ edict_uncivic_technocracy_reassign_technocrat_desc: "В технократии ученые и губернаторы взаимозаменяемы. Мы можем переназначить ученого, чтобы он стал губернатором, и наоборот."
+ uncivic_technocracy_reassign_scientist: "Переназначить ученого"
+ uncivic_technocracy_reassign_scientist_desc: "Выбранный ученый станет губернатором, сохранив все свои существующие черты."
+ uncivic_technocracy_reassign_governor: "Переназначение губернатора"
+ uncivic_technocracy_reassign_governor_desc: "Выбранный правитель станет ученым, сохранив все свои существующие черты."
+
+ # paging
+ uncivic_technocracy_leader_0: "[uncivic_technocracy_leader_paging_current_page_entity_0.GetName]"
+ uncivic_technocracy_leader_1: "[uncivic_technocracy_leader_paging_current_page_entity_1.GetName]"
+ uncivic_technocracy_leader_2: "[uncivic_technocracy_leader_paging_current_page_entity_2.GetName]"
+ uncivic_technocracy_leader_3: "[uncivic_technocracy_leader_paging_current_page_entity_3.GetName]"
+ uncivic_technocracy_leader_4: "[uncivic_technocracy_leader_paging_current_page_entity_4.GetName]"
+ uncivic_technocracy_leader_5: "[uncivic_technocracy_leader_paging_current_page_entity_5.GetName]"
+ uncivic_technocracy_leader_6: "[uncivic_technocracy_leader_paging_current_page_entity_6.GetName]"
+ uncivic_technocracy_leader_7: "[uncivic_technocracy_leader_paging_current_page_entity_7.GetName]"
+ uncivic_technocracy_leader_8: "[uncivic_technocracy_leader_paging_current_page_entity_8.GetName]"
+ uncivic_technocracy_leader_9: "[uncivic_technocracy_leader_paging_current_page_entity_9.GetName]"
+
+ # trait tooltips
+ uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Немедленное получение определенных ресурсов при исследовании месторождений, пригодных для добычи полезных ископаемых"
+ uncivic_technocracy_scientist_trait_agrarian_upbringing_tooltip: "Возможность создания участков гидропоники (£food£ Пищевые отложения) при исследовании замерзших миров и ледяных астероидов"
+ uncivic_technocracy_scientist_trait_intellectual_tooltip: "Все месторождения исследований увеличиваются на 1"
+ uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Убрать 1-3 препятствий со всех исследованных планет"
+ uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Прирост £unity£ Единство при полном исследовании системы"
+ uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!"
+ uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Все исследованные месторождения £trade_value£ торговой ценности удваиваются"
+ uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Все исследованные месторождения  £trade_value£ Торговой ценности производят £unity£ Единство"
+ uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "Все исследованные месторождения, пригодные для разработки, увеличиваются"
+ uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "Все исследованные месторождения, пригодные для добычи, без энергии получают 1 £energy£ Энергии"
+ uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "Все разведанные месторождения  £minerals£ Минералов преобразованы в месторождения стратегических ресурсов"
+ uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip: "Небольшой шанс обнаружить £minor_artifacts£ Малые артефакты, если в секторе есть место археологических раскопок"
+ uncivic_technocracy_governor_trait_scholarium_explorer_tooltip: "Небольшой шанс обнаружить новые особенности планет"
+
+ # static modifiers
+ uncivic_technocracy_corrupt_scientists: "Коррумпированные учёные"
+ uncivic_technocracy_corrupt_scientists_desc: "Коррумпированные ученые в нашей империи ставят под угрозу безопасность наших данных."
+ uncivic_technocracy_righteous_scientists: "Проверенне ученые"
+ uncivic_technocracy_righteous_scientists_desc: "Нанимая правоверных ученых, мы повышаем безопасность наших данных."
+ uncivic_technocracy_research_waste_management: "Исследование Управление отходами"
+ uncivic_technocracy_research_waste_management_desc: "1 или более наших ученых имеют черту "Проверенный"."
+
+ # events
+ uncivic_technocracy_artifacts_discovered: "Обнаружены артефакты!"
+ uncivic_technocracy_artifacts_discovered_desc: "Наш губернатор §H[This.GetName]§! использовал свою археологическую подготовку на практике и обнаружил артефакты на месте раскопок в своем секторе."
+
+ # policies
+ policy_uncivic_technocracy_recruitment_focus: "Technocrat Recruitment Focus" # UNTRANSLATED
+ policy_uncivic_technocracy_recruitment_focus_desc: "We can choose if our recruitment efforts should prioritize theoretical knowledge or practical experience." # UNTRANSLATED
+ uncivic_technocracy_recruitment_focus_theory_name: "Theoretical Knowledge" # UNTRANSLATED
+ uncivic_technocracy_recruitment_focus_theory_desc: "Without a strong theoretical foundation, our technocrats will not be able to solve the novel problems of managing an interstellar empire.\n\n§EGovernors can start with Scientist traits§!" # UNTRANSLATED
+ uncivic_technocracy_recruitment_focus_practical_name: "Practical Experience" # UNTRANSLATED
+ uncivic_technocracy_recruitment_focus_practical_desc: "Theory untested by practical experience cannot be entrusted to run our state.\n\n§EScientists can start with Governor trait§!s" # UNTRANSLATED

@@ -9,14 +9,18 @@ uncivic_shadow_council_risk = {
 		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
 		mode = add
 	}
-	square = yes
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
+		mode = multiply
+	}
 	complex_trigger_modifier = {
 		trigger = count_owned_leader
 		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
 		mode = subtract
 	}
 	divide = 2
-	divide 2
+	divide = 2
 	modifier = {
 		add = 5
 		has_modifier = uncivic_shadow_council_scapegoated

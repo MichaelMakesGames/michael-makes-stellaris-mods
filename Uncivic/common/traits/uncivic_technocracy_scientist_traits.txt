@@ -21,10 +21,11 @@ uncivic_technocracy_scientist_trait_iron_fist = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey }
 
 	ai_weight = {
@@ -44,14 +45,15 @@ uncivic_technocracy_scientist_trait_army_veteran = {
 	leader_class = { scientist }
 	prerequisites = { tech_centralized_command }
 	opposites = { "uncivic_technocracy_scientist_trait_retired_fleet_officer" }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey society }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -68,14 +70,15 @@ uncivic_technocracy_scientist_trait_retired_fleet_officer = {
 	leader_class = { scientist }
 	prerequisites = { tech_interstellar_fleet_traditions }
 	opposites = { "uncivic_technocracy_scientist_trait_army_veteran" }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -90,14 +93,15 @@ uncivic_technocracy_scientist_trait_architectural_interest = {
 	}
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey engineering }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -113,8 +117,8 @@ uncivic_technocracy_scientist_trait_agrarian_upbringing = {
 	# chance locate suitable hydroponics sites, implemented in script
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey society }
 	
 	leader_potential_add = {
@@ -122,6 +126,7 @@ uncivic_technocracy_scientist_trait_agrarian_upbringing = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -136,14 +141,15 @@ uncivic_technocracy_scientist_trait_intellectual = {
 	# increases discovered science deposits, implemented in script
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey physics society engineering }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -159,14 +165,15 @@ uncivic_technocracy_scientist_trait_environmental_engineer = {
 	# clears 1-3 blockers on suvey, implemented in script
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey society }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -182,14 +189,15 @@ uncivic_technocracy_scientist_trait_bureaucrat = {
 	# generate unity when fully surveying a system, implemented in script
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	ai_categories = { survey society }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }
@@ -204,14 +212,15 @@ uncivic_technocracy_scientist_trait_righteous = {
 	# increased hostile steal technology difficulty, implemented in script
 	leader_trait = { scientist }
 	leader_class = { scientist }
-	initial = no
-	randomized = no
+	initial = yes
+	randomized = yes
 	opposites = { "uncivic_technocracy_scientist_trait_corrupt" }
 
 	leader_potential_add = {
 		from = {
 			has_valid_civic = civic_technocracy
 			has_global_flag = uncivic_technocracy_enabled
+			has_policy_flag = uncivic_technocracy_recruitment_focus_practical
 		}
 	}
 }

@@ -51,7 +51,7 @@ uncivic_shadow_council_admiral_trait_shadow_councilor = {
 	leader_trait = { admiral }
 	leader_class = { admiral }
 	modifier = {
-		ship_fire_rate_mult = 0.05
+		ship_disengage_chance_mult = 0.15
 	}
 	leader_potential_add = {
 		always = yes

@@ -19,9 +19,9 @@ uncivic_technocracy_convert_scientist_to_governor = {
 				count = trigger:num_traits
 				uncivic_technocracy_replace_scientist_trait_with_governor_trait = yes
 			}
-			if = { # shadow council compat (I should check if flags are automatically copied with clone)
-				limit = { prevprev = { has_leader_flag = uncivic_shadow_council_shadow_councilor } }
-				set_leader_flag = uncivic_shadow_council_shadow_councilor
+			fire_on_action = {
+				on_action = uncivic_on_leader_converted
+				scopes = { from = root }
 			}
 		}
 	}
@@ -45,9 +45,9 @@ uncivic_technocracy_convert_governor_to_scientist = {
 				count = trigger:num_traits
 				uncivic_technocracy_replace_governor_trait_with_scientist_trait = yes
 			}
-			if = { # shadow council compat (I should check if flags are automatically copied with clone)
-				limit = { prevprev = { has_leader_flag = uncivic_shadow_council_shadow_councilor } }
-				set_leader_flag = uncivic_shadow_council_shadow_councilor
+			fire_on_action = {
+				on_action = uncivic_on_leader_converted
+				scopes = { from = root }
 			}
 		}
 	}
