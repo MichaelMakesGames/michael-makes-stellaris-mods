@@ -32,6 +32,11 @@ Minor incompatibility: new modded leader traits will not be converted
   [*] Should be compatible with all other mods
 [/list]
 
+[h1]Credits[/h1]
+[list]
+ [*] Thanks to slimer91 for the Russian translation
+[/list]
+
 [h1]Sharing[/h1]
 Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
 
