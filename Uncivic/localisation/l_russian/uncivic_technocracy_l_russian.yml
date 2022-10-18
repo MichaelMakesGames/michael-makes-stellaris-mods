@@ -48,11 +48,9 @@
  uncivic_technocracy_artifacts_discovered_desc: "Наш губернатор §H[This.GetName]§! использовал свою археологическую подготовку на практике и обнаружил артефакты на месте раскопок в своем секторе."
 
  # policies
- policy_uncivic_technocracy_recruitment_focus: "Technocrat Recruitment Focus" # UNTRANSLATED
- policy_uncivic_technocracy_recruitment_focus_desc: "We can choose if our recruitment efforts should prioritize theoretical knowledge or practical experience." # UNTRANSLATED
- uncivic_technocracy_recruitment_focus_theory: "Theoretical Knowledge" # UNTRANSLATED
- uncivic_technocracy_recruitment_focus_theory_name: "$uncivic_technocracy_recruitment_focus_theory$"
- uncivic_technocracy_recruitment_focus_theory_desc: "Without a strong theoretical foundation, our technocrats will not be able to solve the novel problems of managing an interstellar empire.\n\n§EGovernors can start with Scientist traits§!" # UNTRANSLATED
- uncivic_technocracy_recruitment_focus_practical: "Practical Experience" # UNTRANSLATED
- uncivic_technocracy_recruitment_focus_practical_name: "$uncivic_technocracy_recruitment_focus_practical$"
- uncivic_technocracy_recruitment_focus_practical_desc: "Theory untested by practical experience cannot be entrusted to run our state.\n\n§EScientists can start with Governor trait§!s" # UNTRANSLATED
+ policy_uncivic_technocracy_recruitment_focus: "Фокус на найме технократов"
+ policy_uncivic_technocracy_recruitment_focus_desc: "Мы можем выбирать, чему уделять первостепенное внимание при подборе персонала - теоретическим знаниям или практическому опыту."
+ uncivic_technocracy_recruitment_focus_theory: "Теоретические знания"
+ uncivic_technocracy_recruitment_focus_theory_desc: "Без крепкого теоретического фундамента наши технократы не смогут решить новые проблемы управления межзвездной империей.\n\n§EГубернаторы могут начать с чертами характера, присущих ученым§!"
+ uncivic_technocracy_recruitment_focus_practical: "Практический опыт"
+ uncivic_technocracy_recruitment_focus_practical_desc: "Нельзя доверять управление государством теории, не проверенной практическим опытом.\n\n§EУченые могут начать с чертами губернатора§!"

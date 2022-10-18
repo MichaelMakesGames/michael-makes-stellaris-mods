@@ -45,6 +45,7 @@ country_event = {
 	title = edict_uncivic_menu
 	desc = edict_uncivic_menu_desc
 	picture = GFX_evt_spymaster
+	auto_opens = yes
 
 	option = {
 		name = {

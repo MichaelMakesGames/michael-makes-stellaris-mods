@@ -105,6 +105,7 @@ country_event = {
 	title = edict_uncivic_shadow_council_elevate_shadow_councilor
 	desc = uncivic_shadow_council_elevate_shadow_councilor_desc
 	picture = GFX_evt_necrophage
+	auto_opens = yes
 	option = {
 		name = uncivic_shadow_council_elevate_governor
 		allow = { uncivic_shadow_council_can_elevate_shadow_councilor = { CLASS = governor } }
@@ -154,6 +155,7 @@ country_event = {
 	title = edict_uncivic_shadow_council_elevate_shadow_councilor
 	desc = uncivic_shadow_council_elevate_shadow_councilor_desc
 	picture = GFX_evt_necrophage
+	auto_opens = yes
 	immediate = {
 		mmu_paging_save_event_targets = {
 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
