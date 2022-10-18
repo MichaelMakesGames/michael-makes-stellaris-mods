@@ -5,6 +5,7 @@ hyper_relay = {
 	place_entity_on_planet_plane = no
 	build_outside_gravity_well = yes
 	show_galactic_map_icon = no
+	show_in_outliner = no
 	build_time = 360
 	resources = {
 		category = megastructures_hyper_relay
