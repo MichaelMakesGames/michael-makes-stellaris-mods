@@ -4,7 +4,7 @@ tags={
 	"economy"
 	"gameplay"
 }
-version="3.0.6"
+version="3.0.7"
 supported_version="3.5.*"
 path="/home/mscottmoore/.local/share/Paradox Interactive/Stellaris/mod/Under_Siege"
 remote_file_id="2786268200"

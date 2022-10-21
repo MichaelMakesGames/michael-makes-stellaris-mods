@@ -48,6 +48,11 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
   [/list]
 [/list]
 
+[h1]Credits[/h1]
+[list]
+ [*] Thanks to tzverg for the Russian translation!
+[/list]
+
 [h1]Sharing[/h1]
 Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
 
