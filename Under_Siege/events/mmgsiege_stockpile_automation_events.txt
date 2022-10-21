@@ -12,6 +12,7 @@ country_event = {
 		portrait = root.owner_main_species
 		room = enclave_curator_room
 	}
+	auto_opens = yes
 	immediate = {
 		if = {
 			limit = { NOT = { is_variable_set = mmgsiege_energy_stockpile_budget } }
