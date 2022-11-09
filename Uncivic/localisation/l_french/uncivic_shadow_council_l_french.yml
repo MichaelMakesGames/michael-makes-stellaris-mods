@@ -1,0 +1,53 @@
+﻿l_french:
+ # elevate Conseiller Fantôme edict/events
+ edict_uncivic_shadow_council_elevate_shadow_councilor: "Promouvoir le Conseiller Fantôme"
+ edict_uncivic_shadow_council_elevate_shadow_councilor_desc: "Nommer un leader au Conseil Fantôme. Il pourra tirer les ficelles pour s'assurer d'avoir les ressources dont il a besoin, mais plus nous aurons de conseillers, plus nous risquons d'être dévoilés."
+ uncivic_shadow_council_elevate_shadow_councilor_desc: "Nommer un leader au Conseil Fantôme. Il pourra tirer les ficelles pour s'assurer d'avoir les ressources dont il a besoin, mais plus nous aurons de conseillers, plus nous risquons d'être dévoilés (vérifié une fois par an).\n\nRique de dévoilement du conseiller fantôme: §Y[This.UncivicShadowCouncilRisk]%§!\nAugmentation du prochain conseiller fantôme : §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
+ uncivic_shadow_council_elevate_governor: "Promouvoir un Governeur"
+ uncivic_shadow_council_elevate_scientist: "Promouvoir un Scientifique"
+ uncivic_shadow_council_elevate_admiral: "Promouvoir un Amiral"
+ uncivic_shadow_council_elevate_general: "Promouvoir un Général"
+
+ # exposed
+ uncivic_shadow_council_exposed: "Conseiller Fantôme Dévoilé"
+ uncivic_shadow_council_exposed_desc: "Le Conseil Fantôme a été dévoilé. Le peuple a perdu la foi en son gouvernement, mais ils finiront par oublier."
+ uncivic_shadow_council_exposed_event_desc: "Les journalistes ont découvert des preuves que notre conseiller fantôme §H[This.GetName]§! a été impliqué dans de nombreuses affaires clandestines, tirant secrètement les ficelles du gouvernement. Ils commencent à enquêter sur ses conaissances et connexions..."
+ uncivic_shadow_council_exposed_do_nothing: "Ne rien dire. Avec le temps, le peuple oubliera."
+ uncivic_shadow_council_exposed_scapegoat: "[This.GetName] était le ver dans la pomme."
+ uncivic_shadow_council_scapegoated: "Le Conseiller Fantôme Bouc-émissaire"
+ uncivic_shadow_council_scapegoated_desc: "Nous avons attribué toutes les preuves à la même personne et nous avons organisé un procès. Le peuple est apaisé, mais aussi plus attentif."
+ uncivic_shadow_council_scapegoated_tooltip: "Rique de dévoilement du conseiller fantôme: §R+5%§!"
+ uncivic_shadow_council_leader_fired: "§Y[This.GetName]§! §Ris fired§!"
+ uncivic_shadow_council_exposed_destroy_evidence: "Nous devons détruire §Rall§! les preuves."
+ uncivic_shadow_council_disrupted: "Conseil Fantôme Perturbé"
+ uncivic_shadow_council_disrupted_desc: "Les preuves ont été détruites, mais il faudra du temps pour reconstruire notre réseau secret et maintenir la société en bon état."
+
+ # triggers
+ uncivic_shadow_council_maximum_risk_fail: "Le risque de dévoilement actuel est de §R100%§!"
+ uncivic_shadow_council_maximum_risk_success: "Le risque de dévoilement actuel est à moins de 100%"
+ uncivic_shadow_council_available_leader_fail: "Tous les dirigeants sont des conseillers fantômes"
+ uncivic_shadow_council_available_leader_success: "Au moins un leader n'est pas un conseiller fantôme."
+
+ # paging
+ uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]"
+ uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]"
+ uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]"
+ uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]"
+ uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]"
+ uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]"
+ uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]"
+ uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]"
+ uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]"
+ uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]"
+
+ # traits
+ uncivic_shadow_council_ruler_trait_shadow_councilor: "Conseiller Fantôme"
+ uncivic_shadow_council_ruler_trait_shadow_councilor_desc: "Ce chef fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
+ uncivic_shadow_council_governor_trait_shadow_councilor: "Conseiller Fantôme"
+ uncivic_shadow_council_governor_trait_shadow_councilor_desc: "Ce gouverneur fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
+ uncivic_shadow_council_scientist_trait_shadow_councilor: "Conseiller Fantôme"
+ uncivic_shadow_council_scientist_trait_shadow_councilor_desc: "Ce scientifique fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
+ uncivic_shadow_council_admiral_trait_shadow_councilor: "Conseiller Fantôme"
+ uncivic_shadow_council_admiral_trait_shadow_councilor_desc: "Cet amiral fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
+ uncivic_shadow_council_general_trait_shadow_councilor: "Conseiller Fantôme"
+ uncivic_shadow_council_general_trait_shadow_councilor_desc: "Ce général fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."

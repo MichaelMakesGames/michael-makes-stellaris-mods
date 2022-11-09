@@ -35,6 +35,7 @@ Minor incompatibility: new modded leader traits will not be converted
 [h1]Credits[/h1]
 [list]
  [*] Thanks to slimer91 for the Russian translation
+ [*] Thanks to Iskusel for the French translation
 [/list]
 
 [h1]Sharing[/h1]
