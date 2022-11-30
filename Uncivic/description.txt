@@ -1,4 +1,4 @@
-New Mechanics for Vanilla Civics (For 3.5.*)
+New Mechanics for Vanilla Civics (For 3.6.*)
 
 Many civics in Stellaris are boring, simply providing modifiers. Sometimes boring is good, especially when you're first learning the game, but eventually, you might want something more. DLCs and mods provide interesting civics, but don't the base game civics deserve some love too?
 
@@ -24,9 +24,12 @@ Minor incompatibility: new modded leader traits will not be converted
 
 [h1]More to come![/h1]
 
+[h1]Corporate Civics?[/h1]
+Check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2892121750&searchtext=corporate+portfolio]Corporate Portfolio Revision[/url], which aims to do the same thing for all megacorp civics!
+
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.5.*
+  [*] For Stellaris 3.6.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Should be compatible with all other mods
