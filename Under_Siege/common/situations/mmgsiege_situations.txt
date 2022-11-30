@@ -122,146 +122,25 @@ mmgsiege_siege_surrender_attacker_situation = {
 	monthly_progress = {
 		base = 0
 		modifier = {
-			add = 1
+			add = target.value:mmgsiege_surrender_progress_from_stability
 			desc = planet_stability_low
 			target = {
 				planet_stability < 40
-				planet_stability >= 35
+				is_occupied_flag = no
 			}
 		}
 		modifier = {
-			add = 2
-			desc = planet_stability_low
+			add = target.value:mmgsiege_surrender_progress_from_stability
+			desc = planet_stability_high
 			target = {
-				planet_stability < 35
-				planet_stability >= 30
-			}
-		}
-		modifier = {
-			add = 3
-			desc = planet_stability_low
-			target = {
-				planet_stability < 30
-				planet_stability >= 25
+				planet_stability > 50
+				is_occupied_flag = no
 			}
 		}
 		modifier = {
 			add = 4
-			desc = planet_stability_low
-			target = {
-				planet_stability < 25
-				planet_stability >= 20
-			}
-		}
-		modifier = {
-			add = 5
-			desc = planet_stability_low
-			target = {
-				planet_stability < 20
-				planet_stability >= 15
-			}
-		}
-		modifier = {
-			add = 6
-			desc = planet_stability_low
-			target = {
-				planet_stability < 15
-				planet_stability >= 10
-			}
-		}
-		modifier = {
-			add = 7
-			desc = planet_stability_low
-			target = {
-				planet_stability < 10
-				planet_stability >= 5
-			}
-		}
-		modifier = {
-			add = 8
-			desc = planet_stability_low
-			target = {
-				planet_stability < 5
-			}
-		}
-		modifier = {
-			add = -1
-			desc = planet_stability_high
-			target = {
-				planet_stability > 50
-				planet_stability <= 55
-			}
-		}
-		modifier = {
-			add = -2
-			desc = planet_stability_high
-			target = {
-				planet_stability > 55
-				planet_stability <= 60
-			}
-		}
-		modifier = {
-			add = -3
-			desc = planet_stability_high
-			target = {
-				planet_stability > 60
-				planet_stability <= 65
-			}
-		}
-		modifier = {
-			add = -4
-			desc = planet_stability_high
-			target = {
-				planet_stability > 65
-				planet_stability <= 70
-			}
-		}
-		modifier = {
-			add = -5
-			desc = planet_stability_high
-			target = {
-				planet_stability > 70
-				planet_stability <= 75
-			}
-		}
-		modifier = {
-			add = -6
-			desc = planet_stability_high
-			target = {
-				planet_stability > 75
-				planet_stability <= 80
-			}
-		}
-		modifier = {
-			add = -7
-			desc = planet_stability_high
-			target = {
-				planet_stability > 80
-				planet_stability <= 85
-			}
-		}
-		modifier = {
-			add = -8
-			desc = planet_stability_high
-			target = {
-				planet_stability > 85
-				planet_stability <= 90
-			}
-		}
-		modifier = {
-			add = -9
-			desc = planet_stability_high
-			target = {
-				planet_stability > 90
-				planet_stability <= 95
-			}
-		}
-		modifier = {
-			add = -10
-			desc = planet_stability_high
-			target = {
-				planet_stability > 95
-			}
+			desc = IS_OCCUPIED
+			target = { is_occupied_flag = yes }
 		}
 		modifier = {
 			factor = 0
@@ -567,146 +446,25 @@ mmgsiege_siege_surrender_defender_situation = {
 	monthly_progress = {
 		base = 0
 		modifier = {
-			add = 1
+			add = target.value:mmgsiege_surrender_progress_from_stability
 			desc = planet_stability_low
 			target = {
 				planet_stability < 40
-				planet_stability >= 35
+				is_occupied_flag = no
 			}
 		}
 		modifier = {
-			add = 2
-			desc = planet_stability_low
+			add = target.value:mmgsiege_surrender_progress_from_stability
+			desc = planet_stability_high
 			target = {
-				planet_stability < 35
-				planet_stability >= 30
-			}
-		}
-		modifier = {
-			add = 3
-			desc = planet_stability_low
-			target = {
-				planet_stability < 30
-				planet_stability >= 25
+				planet_stability > 50
+				is_occupied_flag = no
 			}
 		}
 		modifier = {
 			add = 4
-			desc = planet_stability_low
-			target = {
-				planet_stability < 25
-				planet_stability >= 20
-			}
-		}
-		modifier = {
-			add = 5
-			desc = planet_stability_low
-			target = {
-				planet_stability < 20
-				planet_stability >= 15
-			}
-		}
-		modifier = {
-			add = 6
-			desc = planet_stability_low
-			target = {
-				planet_stability < 15
-				planet_stability >= 10
-			}
-		}
-		modifier = {
-			add = 7
-			desc = planet_stability_low
-			target = {
-				planet_stability < 10
-				planet_stability >= 5
-			}
-		}
-		modifier = {
-			add = 8
-			desc = planet_stability_low
-			target = {
-				planet_stability < 5
-			}
-		}
-		modifier = {
-			add = -1
-			desc = planet_stability_high
-			target = {
-				planet_stability > 50
-				planet_stability <= 55
-			}
-		}
-		modifier = {
-			add = -2
-			desc = planet_stability_high
-			target = {
-				planet_stability > 55
-				planet_stability <= 60
-			}
-		}
-		modifier = {
-			add = -3
-			desc = planet_stability_high
-			target = {
-				planet_stability > 60
-				planet_stability <= 65
-			}
-		}
-		modifier = {
-			add = -4
-			desc = planet_stability_high
-			target = {
-				planet_stability > 65
-				planet_stability <= 70
-			}
-		}
-		modifier = {
-			add = -5
-			desc = planet_stability_high
-			target = {
-				planet_stability > 70
-				planet_stability <= 75
-			}
-		}
-		modifier = {
-			add = -6
-			desc = planet_stability_high
-			target = {
-				planet_stability > 75
-				planet_stability <= 80
-			}
-		}
-		modifier = {
-			add = -7
-			desc = planet_stability_high
-			target = {
-				planet_stability > 80
-				planet_stability <= 85
-			}
-		}
-		modifier = {
-			add = -8
-			desc = planet_stability_high
-			target = {
-				planet_stability > 85
-				planet_stability <= 90
-			}
-		}
-		modifier = {
-			add = -9
-			desc = planet_stability_high
-			target = {
-				planet_stability > 90
-				planet_stability <= 95
-			}
-		}
-		modifier = {
-			add = -10
-			desc = planet_stability_high
-			target = {
-				planet_stability > 95
-			}
+			desc = IS_OCCUPIED
+			target = { is_occupied_flag = yes }
 		}
 		modifier = {
 			factor = 0

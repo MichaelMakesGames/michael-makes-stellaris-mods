@@ -152,3 +152,32 @@ mmgsiege_planet_production_offset_consumer_goods = {
 		owner = { is_variable_set = mmgsiege_consumer_goods_stockpile_budget }
 	}
 }
+
+mmgsiege_surrender_progress_from_stability = {
+	base = 0
+	modifier = {
+		subtract = trigger:planet_stability
+		planet_stability > 50
+	}
+	modifier = {
+		add = 50
+		planet_stability > 50
+	}
+	modifier = {
+		subtract = trigger:planet_stability
+		planet_stability < 40
+	}
+	modifier = {
+		add = 40
+		planet_stability < 40
+	}
+	divide = 5
+	modifier = {
+		floor = yes
+		planet_stability > 50
+	}
+	modifier = {
+		ceiling = yes
+		planet_stability < 40
+	}
+}

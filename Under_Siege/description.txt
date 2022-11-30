@@ -1,4 +1,4 @@
-Adds siege warfare to Stellaris! (For 3.5.*)
+Adds siege warfare to Stellaris! (For 3.6.*)
 
 Ever wanted to win a war without invading a single planet? Have you wondered how that ecumenopolis feeds itself when you control the skies above it? This is the mod for you!
 
@@ -7,8 +7,12 @@ When a starbase is controlled by a hostile country, planets need to produce thei
 [h1]Resource Shortages[/h1]
 If energy, minerals, food, and consumer goods aren't produced locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if some food needs to be imported.
 
+As of Stellaris 3.6, resource shortages are disabled on occupied planets, since they no longer produce or consume resources.
+
 [h1]Surrender[/h1]
 A planet that is under siege and has less than 40 stability will consider surrender, starting a situation for both the attacker and defender. The lower the stability, the faster the situation will progress. At 100%, the planet surrenders and the besiegers take control.
+
+Occupied planets will start considering surrender regardless of stability.
 
 Some planets never surrender:
 [list]
@@ -37,7 +41,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.5.* ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806998175]3.3 version here[/url])
+  [*] For Stellaris 3.6.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game

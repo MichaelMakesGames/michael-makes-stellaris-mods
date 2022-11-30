@@ -1020,7 +1020,10 @@ mmgsiege_update_planet_status = {
 			}
 			# start situation if low stability and situation doesn't exist
 			if = {
-				limit = { planet_stability < 40 }
+				limit = { OR = {
+					planet_stability < 40
+					is_occupied_flag = yes
+				} }
 				if = {
 					limit = {
 						NOT = {

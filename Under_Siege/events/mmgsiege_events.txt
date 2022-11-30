@@ -6,8 +6,12 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		# check resource shortages on besieged planets
 		every_owned_planet = {
-			limit = { mmgsiege_is_under_siege = yes }
+			limit = {
+				mmgsiege_is_under_siege = yes
+				is_occupied_flag = no
+			}
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = food }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = minerals }
 			mmgsiege_check_for_and_update_resource_shortage = { RESOURCE = energy }
@@ -16,6 +20,7 @@ country_event = {
 			mmgsiege_update_planet_status = yes
 		}
 
+		# recover resource shortages on planets not under siege
 		every_owned_planet = {
 			limit = {
 				OR = {
@@ -33,6 +38,27 @@ country_event = {
 			mmgsiege_check_for_and_update_resource_shortage_no_siege = { RESOURCE = consumer_goods }
 			mmgsiege_create_or_remove_shortage_modifiers = yes
 			mmgsiege_update_planet_status = yes
+		}
+
+		# clear resource shortages on occupied planets
+		every_owned_planet = {
+			limit = {
+				OR = {
+					has_planet_flag = mmgsiege_food_shortage
+					has_planet_flag = mmgsiege_minerals_shortage
+					has_planet_flag = mmgsiege_energy_shortage
+					has_planet_flag = mmgsiege_consumer_goods_shortage
+				}
+				is_occupied_flag = yes
+			}
+			while = {
+				count = 4
+				mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+			}
+			mmgsiege_create_or_remove_shortage_modifiers = yes
 		}
 	}
 }
@@ -192,6 +218,24 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = mmgsiege_food_shortage
+					has_planet_flag = mmgsiege_minerals_shortage
+					has_planet_flag = mmgsiege_energy_shortage
+					has_planet_flag = mmgsiege_consumer_goods_shortage
+				}
+				is_occupied_flag = yes
+			}
+			while = {
+				count = 4
+				mmgsiege_decrease_resource_shortage = { RESOURCE = energy }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = minerals }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = food }
+				mmgsiege_decrease_resource_shortage = { RESOURCE = consumer_goods }
+			}
+		}
 		mmgsiege_update_planet_status = yes
 	}
 }
