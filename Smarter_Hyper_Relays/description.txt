@@ -1,4 +1,4 @@
-Smarter AI for building hyper relays (For 3.5.*)
+Smarter AI for building hyper relays (For 3.6.*)
 
 Does the AI seem a little haphazard when building hyper relays? And then builds them more-or-less everywhere? This mod fixes that.
 
@@ -23,7 +23,7 @@ This has been tested for performance on a huge galaxy and has no noticeable impa
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.5.*
+  [*] For Stellaris 3.6.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
   [*] Can be removed from an existing game
