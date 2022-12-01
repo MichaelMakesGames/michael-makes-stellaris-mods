@@ -1,0 +1,53 @@
+﻿l_german:
+ # elevate shadow councilor edict/events
+ edict_uncivic_shadow_council_elevate_shadow_councilor: "Schattenratsmitglied befördern"
+ edict_uncivic_shadow_council_elevate_shadow_councilor_desc: "Ernenne einen Anführer für den Schattenrat. Sie werden in der Lage sein Fäden zu ziehen um sicherzustellen dass sie über die Ressourcen verfügen die sie benötigen. Je mehr Ratsmitglieder wir haben, desto größer ist unser Risiko einer Enttarnung."
+ uncivic_shadow_council_elevate_shadow_councilor_desc: "Ernenne einen Anführer für den Schattenrat. Sie werden in der Lage sein Fäden zu ziehen um sicherzustellen dass sie über die Ressourcen verfügen die sie benötigen. Je mehr Ratsmitglieder wir haben, desto größer ist unser Risiko einer Enttarnung (einmal im Jahr überprüft).\n\nSchattenratsmitglied Aufdeckungsrisiko: §Y[This.UncivicShadowCouncilRisk]%§!\nErhöhung durch das nächste Schattenratsmitglied: §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
+ uncivic_shadow_council_elevate_governor: "Gouverneur befördern"
+ uncivic_shadow_council_elevate_scientist: "Wissenschaftler befördern"
+ uncivic_shadow_council_elevate_admiral: "Admiral befördern"
+ uncivic_shadow_council_elevate_general: "General befördern"
+
+ # exposed
+ uncivic_shadow_council_exposed: "Schattenratsmitglied entdeckt"
+ uncivic_shadow_council_exposed_desc: "Der Schattenrat wurde entlarvt. Die Menschen haben das Vertrauen in ihre Regierung verloren, aber sie werden es irgendwann vergessen."
+ uncivic_shadow_council_exposed_event_desc: "Journalisten haben Beweise dafür aufgedeckt, dass unser Schattenratsmitglied §H[This.GetName]§! in viele geheime Geschäfte verwickelt war und die Regierung aus dem Schatten heraus manipulierte. Sie fangen an, Bekanntschaften und Verbindungen zu recherchieren..."
+ uncivic_shadow_council_exposed_do_nothing: "Sag nichts. Mit der Zeit werden die Leute es vergessen."
+ uncivic_shadow_council_exposed_scapegoat: "[This.GetName] war einfach ein schlechter Apfel."
+ uncivic_shadow_council_scapegoated: "Schattenratsmitglied wurde zum Sündenbock gemacht"
+ uncivic_shadow_council_scapegoated_desc: "Wir haben alle Beweise derselben Person zugeschrieben und einen Prozess organisiert. Die Leute sind besänftigt, aber auch aufmerksamer."
+ uncivic_shadow_council_scapegoated_tooltip: "Schattenratsmitglied Aufdeckungsrisiko: §R+5%§!"
+ uncivic_shadow_council_leader_fired: "§Y[This.GetName]§! §Rwird gefeuert§!"
+ uncivic_shadow_council_exposed_destroy_evidence: "Wir müssen §Ralle§! Beweisen zerstören."
+ uncivic_shadow_council_disrupted: "Schattenrat gestört"
+ uncivic_shadow_council_disrupted_desc: "Die Beweise wurden vernichtet, aber es wird einige Zeit dauern, die geheimen Verbindungen wieder aufzubauen, die die Gesellschaft am Laufen halten."
+
+ # triggers
+ uncivic_shadow_council_maximum_risk_fail: "Derzeitiges Entdeckungsrisiko ist §R100%§!"
+ uncivic_shadow_council_maximum_risk_success: "Derzeitiges Entdeckungsrisiko ist weniger als 100%"
+ uncivic_shadow_council_available_leader_fail: "Alle Anführer sind Schattenratsmitglieder"
+ uncivic_shadow_council_available_leader_success: "Mindestens 1 Anführer ist KEIN Schattenratsmitglied"
+
+ # paging
+ uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]"
+ uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]"
+ uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]"
+ uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]"
+ uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]"
+ uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]"
+ uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]"
+ uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]"
+ uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]"
+ uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]"
+
+ # traits
+ uncivic_shadow_council_ruler_trait_shadow_councilor: "Schattenratsmitglied"
+ uncivic_shadow_council_ruler_trait_shadow_councilor_desc: "Dieser Anführer ist Teil der Kabale, die die Regierung im Geheimen kontrolliert und dafür sorgt, dass alles reibungslos und wie erwartet läuft."
+ uncivic_shadow_council_governor_trait_shadow_councilor: "Schattenratsmitglied"
+ uncivic_shadow_council_governor_trait_shadow_councilor_desc: "Dieser Anführer ist Teil der Kabale, die die Regierung im Geheimen kontrolliert und dafür sorgt, dass alles reibungslos und wie erwartet läuft."
+ uncivic_shadow_council_scientist_trait_shadow_councilor: "Schattenratsmitglied"
+ uncivic_shadow_council_scientist_trait_shadow_councilor_desc: "Dieser Anführer ist Teil der Kabale, die die Regierung im Geheimen kontrolliert und dafür sorgt, dass alles reibungslos und wie erwartet läuft."
+ uncivic_shadow_council_admiral_trait_shadow_councilor: "Schattenratsmitglied"
+ uncivic_shadow_council_admiral_trait_shadow_councilor_desc: "Dieser Anführer ist Teil der Kabale, die die Regierung im Geheimen kontrolliert und dafür sorgt, dass alles reibungslos und wie erwartet läuft."
+ uncivic_shadow_council_general_trait_shadow_councilor: "Schattenratsmitglied"
+ uncivic_shadow_council_general_trait_shadow_councilor_desc: "Dieser Anführer ist Teil der Kabale, die die Regierung im Geheimen kontrolliert und dafür sorgt, dass alles reibungslos und wie erwartet läuft."

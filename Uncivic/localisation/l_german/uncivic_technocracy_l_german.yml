@@ -1,0 +1,58 @@
+﻿l_german:
+ edict_uncivic_technocracy_reassign_technocrat: "Technokrat neu zuweisen"
+ edict_uncivic_technocracy_reassign_technocrat_desc: "Wissenschaftler und Gouverneure sind in einer Technokratie austauschbar. Wir können einen Wissenschaftler zum Gouverneur ernennen und umgekehrt."
+ uncivic_technocracy_reassign_scientist: "Wissenschaftler neu zuweisen"
+ uncivic_technocracy_reassign_scientist_desc: "Der ausgewählte Wissenschaftler wird Gouverneur und behält alle seine bestehenden Eigenschaften."
+ uncivic_technocracy_reassign_governor: "Gouverneur neu zuweisen"
+ uncivic_technocracy_reassign_governor_desc: "Der gewählte Gouverneur wird ein Wissenschaftler, der alle seine bestehenden Eigenschaften behält."
+
+ # paging
+ uncivic_technocracy_leader_0: "[uncivic_technocracy_leader_paging_current_page_entity_0.GetName]"
+ uncivic_technocracy_leader_1: "[uncivic_technocracy_leader_paging_current_page_entity_1.GetName]"
+ uncivic_technocracy_leader_2: "[uncivic_technocracy_leader_paging_current_page_entity_2.GetName]"
+ uncivic_technocracy_leader_3: "[uncivic_technocracy_leader_paging_current_page_entity_3.GetName]"
+ uncivic_technocracy_leader_4: "[uncivic_technocracy_leader_paging_current_page_entity_4.GetName]"
+ uncivic_technocracy_leader_5: "[uncivic_technocracy_leader_paging_current_page_entity_5.GetName]"
+ uncivic_technocracy_leader_6: "[uncivic_technocracy_leader_paging_current_page_entity_6.GetName]"
+ uncivic_technocracy_leader_7: "[uncivic_technocracy_leader_paging_current_page_entity_7.GetName]"
+ uncivic_technocracy_leader_8: "[uncivic_technocracy_leader_paging_current_page_entity_8.GetName]"
+ uncivic_technocracy_leader_9: "[uncivic_technocracy_leader_paging_current_page_entity_9.GetName]"
+
+ # trait tooltips
+ uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Erhalten Sie sofort einige Ressourcen, wenn Sie abbaubare Lagerstätten untersuchen"
+ uncivic_technocracy_scientist_trait_agrarian_upbringing_tooltip: "Möglichkeit zur Einrichtung von Hydroponik-Standorten (£food£ Food deposits) bei der Vermessung gefrorener Welten und Eisasteroiden"
+ uncivic_technocracy_scientist_trait_intellectual_tooltip: "Alle untersuchten Forschungsanlagen werden um 1 erhöht"
+ uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Entferne 1-3 Blocker von allen untersuchten Planeten"
+ uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Erhalte £unity£ Einigkeit bei der vollständigen Überwachung eines Systems"
+ uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!"
+ uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Alle untersuchten £trade_value£ Handelswertanlagen werden verdoppelt"
+ uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!"
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Alle untersuchten £trade_value£ Handelswertanlagen pruduzieren £unity£ Einigkeit"
+ uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "Alle untersuchten abbaubaren Lagerstätten werden erhöht"
+ uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "Alle untersuchten abbaubaren Lagerstätten ohne Energie gewinnen 1 £energy£ Energie"
+ uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "Alle untersuchten £minerals£ Mineralvorkommen werden in strategische Ressourcenvorkommen umgewandelt"
+ uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip: "Kleine Entdeckungschance für £minor_artifacts£ kleine Artefakte wenn es im Sektor eine archäologische Stätte gibt"
+ uncivic_technocracy_governor_trait_scholarium_explorer_tooltip: "Kleine Chance, neue Planetenmerkmale zu entdecken"
+
+ # static modifiers
+ uncivic_technocracy_corrupt_scientists: "Korrupte Wissenschaftler"
+ uncivic_technocracy_corrupt_scientists_desc: "Korrupte Wissenschaftler in unserem Imperium gefährden unsere Datensicherheit."
+ uncivic_technocracy_righteous_scientists: "Gerechte Wissenschaftler"
+ uncivic_technocracy_righteous_scientists_desc: "Durch die Beschäftigung rechtschaffener Wissenschaftler erhöhen wir unsere Datensicherheit."
+ uncivic_technocracy_research_waste_management: "Forschung Abfallwirtschaft"
+ uncivic_technocracy_research_waste_management_desc: "1 oder mehr unserer Wissenschaftler haben das Merkmal Rechtschaffen."
+
+ # events
+ uncivic_technocracy_artifacts_discovered: "Artefakte entdeckt!"
+ uncivic_technocracy_artifacts_discovered_desc: "Unser Gouverneur §H[This.GetName]§! hat die archäologische Ausbildung gut genutzt und Artefakte an einer Ausgrabungsstätte im Sektor entdeckt."
+
+ # policies
+ policy_uncivic_technocracy_recruitment_focus: "Rekrutierung von Technokraten Fokus"
+ policy_uncivic_technocracy_recruitment_focus_desc: "Wir können wählen, ob unsere Rekrutierungsbemühungen theoretisches Wissen oder praktische Erfahrung priorisieren sollen."
+ uncivic_technocracy_recruitment_focus_theory: "Theoretisches Wissen"
+ uncivic_technocracy_recruitment_focus_theory_name: "$uncivic_technocracy_recruitment_focus_theory$"
+ uncivic_technocracy_recruitment_focus_theory_desc: "Ohne eine starke theoretische Grundlage werden unsere Technokraten nicht in der Lage sein, die neuartigen Probleme der Verwaltung eines interstellaren Imperiums zu lösen.\n\n§EGouverneure können mit Wissenschaftlereigenschaften beginnen§!"
+ uncivic_technocracy_recruitment_focus_practical: "Praktische Erfahrung"
+ uncivic_technocracy_recruitment_focus_practical_name: "$uncivic_technocracy_recruitment_focus_practical$"
+ uncivic_technocracy_recruitment_focus_practical_desc: "Theorie, die nicht durch praktische Erfahrung geprüft wurde, kann nicht damit betraut werden, unseren Staat zu führen.\n\n§EWissenschaftler können mit Gouverneurseigenschaften beginnen§!"
