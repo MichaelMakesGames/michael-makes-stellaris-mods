@@ -178,7 +178,7 @@ mmgsiege_siege_surrender_attacker_situation = {
 			}
 		}
 		modifier = {
-			add = 0.5
+			factor = 0.5
 			desc = mmgsiege_siege_approach_harsh_occupation
 			target = {
 				any_targeting_situation = {
@@ -502,7 +502,7 @@ mmgsiege_siege_surrender_defender_situation = {
 			}
 		}
 		modifier = {
-			add = 0.5
+			factor = 0.5
 			desc = mmgsiege_siege_approach_harsh_occupation
 			target = {
 				any_targeting_situation = {
