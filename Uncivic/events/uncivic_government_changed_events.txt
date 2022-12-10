@@ -5,7 +5,9 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		uncivic_government_changed_pre_effect = { CIVIC = exalted_priesthood }
 		uncivic_government_changed_pre_effect = { CIVIC = parliamentary_system }
+		uncivic_government_changed_pre_effect = { CIVIC = shadow_council }
 		uncivic_government_changed_pre_effect = { CIVIC = technocracy }
 	}
 }
@@ -15,7 +17,9 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		uncivic_government_changed_post_effect = { CIVIC = exalted_priesthood }
 		uncivic_government_changed_post_effect = { CIVIC = parliamentary_system }
+		uncivic_government_changed_post_effect = { CIVIC = shadow_council }
 		uncivic_government_changed_post_effect = { CIVIC = technocracy }
 	}
 }

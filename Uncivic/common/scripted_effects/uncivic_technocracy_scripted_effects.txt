@@ -9,6 +9,7 @@
 # 88ood8 888888 dP""""Yb 8888Y"  888888 88  Yb 8bodP'
 
 uncivic_technocracy_convert_scientist_to_governor = {
+	set_leader_flag = uncivic_technocracy_leader_is_being_converted
 	owner = {
 		clone_leader = {
 			target = prev
@@ -35,6 +36,7 @@ uncivic_technocracy_convert_scientist_to_governor = {
 }
 
 uncivic_technocracy_convert_governor_to_scientist = {
+	set_leader_flag = uncivic_technocracy_leader_is_being_converted
 	owner = {
 		clone_leader = {
 			target = prev
@@ -78,7 +80,7 @@ uncivic_technocracy_convert_governor_to_scientist = {
 uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 	switch = {
 		trigger = has_trait
-		# vanilla convertable traits
+		# vanilla convertible traits
 		leader_trait_scientist_erudite = {
 			remove_trait = leader_trait_scientist_erudite
 			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_erudite }
@@ -97,6 +99,23 @@ uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 		}
 		leader_trait_scientist_chosen = {
 			remove_trait = leader_trait_scientist_chosen
+			if = {
+				limit = { owner = { has_country_flag = eater_covenant_rank_3 } }
+				mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_eater_chosen }
+			} else = {
+				mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_chosen }
+			}
+		}
+		leader_trait_scientist_instrument_chosen = {
+			remove_trait = leader_trait_scientist_instrument_chosen
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_instrument_chosen }
+		}
+		leader_trait_scientist_composer_chosen = {
+			remove_trait = leader_trait_scientist_composer_chosen
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_composer_chosen }
+		}
+		leader_trait_scientist_whisperers_chosen = {
+			remove_trait = leader_trait_scientist_whisperers_chosen
 			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_governor_chosen }
 		}
 		leader_trait_scientist_brainslug = {
@@ -338,7 +357,7 @@ uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 uncivic_technocracy_replace_governor_trait_with_scientist_trait = {
 	switch = {
 		trigger = has_trait
-		# vanilla convertable traits
+		# vanilla convertible traits
 		leader_trait_governor_erudite = {
 			remove_trait = leader_trait_governor_erudite
 			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_erudite }
@@ -357,6 +376,23 @@ uncivic_technocracy_replace_governor_trait_with_scientist_trait = {
 		}
 		leader_trait_governor_chosen = {
 			remove_trait = leader_trait_governor_chosen
+			if = {
+				limit = { owner = { has_country_flag = whisperers_covenant_rank_3 } }
+				mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_whisperers_chosen }
+			} else = {
+				mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_chosen }
+			}
+		}
+		leader_trait_governor_instrument_chosen = {
+			remove_trait = leader_trait_governor_instrument_chosen
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_instrument_chosen }
+		}
+		leader_trait_governor_composer_chosen = {
+			remove_trait = leader_trait_governor_composer_chosen
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_composer_chosen }
+		}
+		leader_trait_governor_eater_chosen = {
+			remove_trait = leader_trait_governor_eater_chosen
 			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_chosen }
 		}
 		leader_trait_governor_brainslug = {
@@ -1367,6 +1403,32 @@ uncivic_technocracy_display_traits = {
 	}
 	if = {
 		limit = { OR = {
+			has_trait = leader_trait_scientist_instrument_chosen
+			has_trait = leader_trait_governor_instrument_chosen
+		} }
+		custom_tooltip = leader_trait_scientist_instrument_chosen
+	}
+	if = {
+		limit = { OR = {
+			has_trait = leader_trait_scientist_composer_chosen
+			has_trait = leader_trait_governor_composer_chosen
+		} }
+		custom_tooltip = leader_trait_scientist_composer_chosen
+	}
+	if = {
+		limit = {
+			has_trait = leader_trait_scientist_whisperers_chosen
+		}
+		custom_tooltip = leader_trait_scientist_whisperers_chosen
+	}
+	if = {
+		limit = {
+			has_trait = leader_trait_governor_eater_chosen
+		}
+		custom_tooltip = leader_trait_governor_eater_chosen
+	}
+	if = {
+		limit = { OR = {
 			has_trait = leader_trait_scientist_brainslug
 			has_trait = leader_trait_governor_brainslug
 		} }
@@ -1379,6 +1441,18 @@ uncivic_technocracy_display_traits = {
 			has_trait = uncivic_shadow_council_governor_trait_shadow_councilor
 		} }
 		custom_tooltip = uncivic_shadow_council_scientist_trait_shadow_councilor
+	}
+	if = {
+		limit = {
+			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+		}
+		custom_tooltip = uncivic_exalted_priesthood_leader_trait_hardliner
+	}
+	if = {
+		limit = {
+			has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+		}
+		custom_tooltip = uncivic_exalted_priesthood_leader_trait_unorthodox
 	}
 	# scientist traits
 	if = {

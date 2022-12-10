@@ -1,0 +1,47 @@
+uncivic_exalted_priesthood_call_council = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	potential = {
+		uncivic_exalted_priesthood_has_unorthodoxy = yes
+		uncivic_exalted_priesthood_has_heresy = no
+	}
+	allow = {
+		custom_tooltip = {
+			text = uncivic_exalted_priesthood_call_council_allow
+			check_variable_arithmetic = {
+				which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
+				value >= 25
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			unity = 5
+			multiplier = value:uncivic_exalted_priesthood_edict_multiplier
+		}
+	}
+	effect = {
+		start_situation = {
+			type = uncivic_exalted_priesthood_council
+			target = this
+		}
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @EdictLowPrio
+			check_variable_arithmetic = {
+				which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
+				value >= 40
+			}
+		}
+		modifier = {
+			add = @EdictMedPrio
+			check_variable_arithmetic = {
+				which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
+				value >= 60
+			}
+		}
+	}
+}

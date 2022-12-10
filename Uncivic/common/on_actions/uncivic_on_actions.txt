@@ -26,6 +26,7 @@ on_monthly_pulse_country = {
 	events = {
 		uncivic_technocracy.431 # technocracy governor scripted traits
 		uncivic_parliamentary_system.301 # clean up ineligible planets
+		uncivic_exalted_priesthood.201 # spread unorthodoxy/heresy
 	}
 }
 
@@ -55,12 +56,14 @@ on_colony_yearly_pulse = {
 
 on_planet_transfer = {
 	events = {
+		uncivic_exalted_priesthood.611 # clear various modifiers and poi
 		uncivic_parliamentary_system.311 # clear planet parliament
 	}
 }
 
 on_planet_ownerless = {
 	events = {
+		uncivic_exalted_priesthood.611 # clear various modifiers and poi
 		uncivic_parliamentary_system.311 # clear planet parliament
 	}
 }
@@ -136,6 +139,7 @@ on_leader_spawned = {
 on_ruler_back_to_pre_ruler_class = {
 	events = {
 		uncivic_shadow_council.401 # validate shadow councilor flag/traits
+		uncivic_exalted_priesthood.601 # remove hardliner/unorthodox if needed
 	}
 }
 

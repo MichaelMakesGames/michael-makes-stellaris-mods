@@ -1,0 +1,8 @@
+uncivic_exalted_priesthood_heresy_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_conclave
+	counter = {
+		uncivic_exalted_priesthood_heretic_planet_counter = {}
+		uncivic_exalted_priesthood_heretic_center_counter = {}
+	}
+}

@@ -1,0 +1,250 @@
+uncivic_exalted_priesthood_council = {
+	picture = GFX_evt_voting
+	category = neutral
+	
+	complete_icon = GFX_situation_outcome_revolt
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_blue
+
+	on_start = {
+		situation_event = { id = uncivic_exalted_priesthood.311 }
+	}
+	on_progress_complete = {
+		destroy_situation = this
+		custom_tooltip = uncivic_exalted_priesthood_council_on_progress_complete_tooltip
+		hidden_effect = {
+			owner = {
+				# set flag
+				set_country_flag = uncivic_exalted_priesthood_declared_heresy
+				# create heresy event chain
+				begin_event_chain = {
+					event_chain = uncivic_exalted_priesthood_heresy_chain
+					target = this
+				}
+				# convert unorthodox planets and add POIs
+				every_owned_planet = {
+					limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+					remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+					add_modifier = { modifier = uncivic_exalted_priesthood_heretical_beliefs }
+					uncivic_exalted_priesthood_create_poi = yes
+					owner = {
+						add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_planet_counter
+							amount = 1
+						}
+					}
+				}
+				every_owned_planet = {
+					limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+					remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+					add_modifier = { modifier = uncivic_exalted_priesthood_center_of_heresy }
+					uncivic_exalted_priesthood_create_poi = yes
+					owner = {
+						add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_planet_counter
+							amount = 1
+						}
+						add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_center_counter
+							amount = 1
+						}
+					}
+				}
+				# kill unorthodox leaders
+				every_owned_leader = {
+					limit = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
+					kill_leader = { show_notification = no }
+				}
+				# fire event to choose initial policy
+				country_event = {
+					id = uncivic_exalted_priesthood.302
+				}
+			}
+		}
+	}
+	on_fail = {
+		destroy_situation = this
+		custom_tooltip = uncivic_exalted_priesthood_council_on_fail_tooltip
+		hidden_effect = { owner = {
+			# remove flag
+			remove_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+			# remove all unorthodox planet modifiers
+			every_owned_planet = {
+				limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+				remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+			}
+			every_owned_planet = {
+				limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+				remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+			}
+			# remove all unorthodox leader traits
+			every_owned_leader = {
+				limit = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
+				remove_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+			}
+			# remove hardliner trait or fire
+			every_owned_leader = {
+				limit = { has_trait = uncivic_exalted_priesthood_leader_trait_hardliner }
+				random_list = {
+					50 = {
+						remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+						remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+					}
+					50 = { kill_leader = { show_notification = no fire = yes } }
+				}
+			}
+			# set unorthodoxy cooldown
+			set_timed_country_flag = {
+				flag = uncivic_exalted_priesthood_unorthodoxy_cooldown
+				years = 40
+			}
+			# add country modifier
+			add_modifier = {
+				modifier = uncivic_exalted_priesthood_revised_orthodoxy
+				years = 10
+			}
+			# fire flavor event
+			country_event = { id = uncivic_exalted_priesthood.301 }
+		} }
+	}
+	on_abort = {}
+	abort_trigger = {
+		owner = { uncivic_exalted_priesthood_has_unorthodoxy = no }
+	}
+	on_monthly = {}
+
+	start_value = 50
+	progress_direction = bidirectional
+	complete_category = negative
+	fail_category = neutral
+
+	stages = {
+		uncivic_exalted_priesthood_council_revise_orthodoxy_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 20
+		}
+		uncivic_exalted_priesthood_council_revise_orthodoxy_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 35
+		}
+		uncivic_exalted_priesthood_council_revise_orthodoxy_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+		}
+		uncivic_exalted_priesthood_council_declare_heresy_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 65
+		}
+		uncivic_exalted_priesthood_council_declare_heresy_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 80
+		}
+		uncivic_exalted_priesthood_council_declare_heresy_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+		}
+	}
+
+	approach = {
+		name = uncivic_exalted_priesthood_council_neutral
+		icon = GFX_situation_approach_scales
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = NO_EFFECT
+		}
+	}
+	approach = {
+		name = uncivic_exalted_priesthood_council_compromise
+		icon = GFX_situation_approach_handshake
+		icon_background = GFX_situation_approach_bg_yellow
+		modifier = {
+			country_unity_produces_mult = -0.10
+		}
+	}
+	approach = {
+		name = uncivic_exalted_priesthood_council_hardline
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_red
+		modifier = {
+			country_unity_produces_mult = -0.10
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
+			owner = { any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				NOT = { leader_class = ruler }
+			} }
+			desc = uncivic_exalted_priesthood_council_hardliner_leaders
+		}
+		modifier = {
+			subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+			owner = { any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				NOT = { leader_class = ruler }
+			} }
+			desc = uncivic_exalted_priesthood_council_unorthodox_leaders
+		}
+		modifier = {
+			add = 5
+			owner = { any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				leader_class = ruler
+			} }
+			desc = uncivic_exalted_priesthood_council_hardliner_ruler
+		}
+		modifier = {
+			subtract = 5
+			owner = { any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				leader_class = ruler
+			} }
+			desc = uncivic_exalted_priesthood_council_unorthodox_ruler
+		}
+		modifier = {
+			add = 2
+			current_stage = uncivic_exalted_priesthood_council_declare_heresy_2
+			desc = uncivic_exalted_priesthood_council_momentum
+		}
+		modifier = {
+			add = 4
+			current_stage = uncivic_exalted_priesthood_council_declare_heresy_3
+			desc = uncivic_exalted_priesthood_council_momentum
+		}
+		modifier = {
+			subtract = 2
+			current_stage = uncivic_exalted_priesthood_council_revise_orthodoxy_2
+			desc = uncivic_exalted_priesthood_council_momentum
+		}
+		modifier = {
+			subtract = 4
+			current_stage = uncivic_exalted_priesthood_council_revise_orthodoxy_3
+			desc = uncivic_exalted_priesthood_council_momentum
+		}
+		modifier = {
+			add = 5
+			current_situation_approach = uncivic_exalted_priesthood_council_hardline
+			desc = uncivic_exalted_priesthood_council_hardline
+		}
+		modifier = {
+			subtract = 5
+			current_situation_approach = uncivic_exalted_priesthood_council_compromise
+			desc = uncivic_exalted_priesthood_council_compromise
+		}
+	}
+}

@@ -2,6 +2,10 @@
  edict_uncivic_menu: "Uncivic Mod Optionen"
  edict_uncivic_menu_desc: "Aktiviere oder deaktiviere die neuen Uncivic-Mechaniken für bestimmte Staatselemente."
 
+ uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled"
+ uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled"
+ uncivic_menu_exalted_priesthood_tooltip: "Enables unorthodoxy and heresy mechanics in your empire"
+
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Parlamentarisches System Aktiviert"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Parlamentarisches System Deaktiviert"
  uncivic_menu_parliamentary_system_tooltip: "Aktiviert parlamentarische Wahlen auf Planeten mit verbesserten Hauptstadtgebäuden"

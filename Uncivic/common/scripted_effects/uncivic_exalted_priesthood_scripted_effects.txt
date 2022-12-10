@@ -1,0 +1,1437 @@
+uncivic_exalted_priesthood_create_poi = {
+	optimize_memory
+	if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.1 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.1
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.2 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.2
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.3 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.3
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.4 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.4
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.5 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.5
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.6 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.6
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.7 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.7
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.8 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.8
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.9 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.9
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.10 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.10
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.11 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.11
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.12 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.12
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.13 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.13
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.14 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.14
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.15 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.15
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.16 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.16
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.17 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.17
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.18 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.18
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.19 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.19
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.10 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.10
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.11 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.11
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.12 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.12
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.13 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.13
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.14 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.14
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.15 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.15
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.16 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.16
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.17 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.17
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.18 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.18
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.19 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.19
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.20 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.20
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.21 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.21
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.22 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.22
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.23 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.23
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.24 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.24
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.25 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.25
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.26 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.26
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.27 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.27
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.28 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.28
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.29 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.29
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.30 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.30
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.31 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.31
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.32 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.32
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.33 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.33
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.34 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.34
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.35 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.35
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.36 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.36
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.37 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.37
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.38 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.38
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.39 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.39
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.40 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.40
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.41 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.41
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.42 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.42
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.43 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.43
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.44 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.44
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.45 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.45
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.46 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.46
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.47 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.47
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.48 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.48
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.49 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.49
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.50 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.50
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.51 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.51
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.52 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.52
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.53 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.53
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.54 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.54
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.55 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.55
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.56 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.56
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.57 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.57
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.58 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.58
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.59 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.59
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.60 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.60
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.61 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.61
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.62 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.62
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.63 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.63
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.64 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.64
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.65 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.65
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.66 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.66
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.67 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.67
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.68 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.68
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.69 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.69
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.70 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.70
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.71 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.71
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.72 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.72
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.73 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.73
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.74 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.74
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.75 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.75
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.76 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.76
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.77 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.77
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.78 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.78
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.79 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.79
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.80 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.80
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.81 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.81
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.82 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.82
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.83 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.83
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.84 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.84
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.85 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.85
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.86 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.86
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.87 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.87
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.88 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.88
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.89 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.89
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+		else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.90 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.90
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.91 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.91
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.92 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.92
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.93 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.93
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.94 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.94
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.95 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.95
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.96 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.96
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.97 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.97
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.98 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.98
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.99 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.99
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+	else_if = {
+		limit = { NOT = { owner = { has_point_of_interest = { poi = uncivic_exalted_priesthood_heretic_planet_poi.100 } } } }
+		create_point_of_interest = {
+			id = uncivic_exalted_priesthood_heretic_planet_poi.100
+			name = uncivic_exalted_priesthood_heretic_planet_poi
+			event_chain = uncivic_exalted_priesthood_heresy_chain
+			location = this
+		}
+	}
+}
+
+uncivic_exalted_priesthood_remove_poi = {
+	optimize_memory
+	if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.1 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.1 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.2 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.2 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.3 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.3 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.4 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.4 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.5 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.5 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.6 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.6 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.7 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.7 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.8 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.8 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.9 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.9 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.10 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.10 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.11 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.11 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.12 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.12 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.13 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.13 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.14 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.14 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.15 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.15 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.16 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.16 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.17 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.17 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.18 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.18 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.19 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.19 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.10 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.10 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.11 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.11 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.12 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.12 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.13 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.13 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.14 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.14 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.15 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.15 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.16 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.16 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.17 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.17 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.18 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.18 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.19 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.19 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.20 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.20 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.21 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.21 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.22 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.22 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.23 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.23 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.24 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.24 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.25 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.25 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.26 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.26 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.27 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.27 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.28 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.28 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.29 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.29 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.30 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.30 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.31 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.31 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.32 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.32 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.33 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.33 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.34 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.34 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.35 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.35 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.36 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.36 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.37 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.37 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.38 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.38 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.39 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.39 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.40 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.40 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.41 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.41 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.42 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.42 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.43 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.43 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.44 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.44 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.45 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.45 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.46 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.46 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.47 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.47 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.48 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.48 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.49 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.49 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.50 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.50 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.51 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.51 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.52 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.52 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.53 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.53 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.54 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.54 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.55 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.55 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.56 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.56 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.57 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.57 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.58 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.58 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.59 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.59 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.60 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.60 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.61 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.61 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.62 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.62 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.63 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.63 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.64 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.64 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.65 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.65 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.66 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.66 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.67 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.67 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.68 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.68 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.69 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.69 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.70 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.70 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.71 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.71 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.72 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.72 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.73 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.73 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.74 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.74 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.75 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.75 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.76 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.76 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.77 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.77 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.78 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.78 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.79 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.79 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.80 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.80 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.81 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.81 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.82 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.82 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.83 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.83 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.84 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.84 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.85 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.85 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.86 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.86 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.87 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.87 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.88 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.88 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.89 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.89 }
+	}
+		else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.90 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.90 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.91 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.91 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.92 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.92 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.93 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.93 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.94 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.94 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.95 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.95 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.96 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.96 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.97 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.97 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.98 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.98 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.99 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.99 }
+	}
+	else_if = {
+		limit = { is_point_of_interest = { id = uncivic_exalted_priesthood_heretic_planet_poi.100 owner = $COUNTRY$ event_chain = uncivic_exalted_priesthood_heresy_chain } }
+		$COUNTRY$ = { remove_point_of_interest = uncivic_exalted_priesthood_heretic_planet_poi.100 }
+	}
+}

@@ -9,6 +9,9 @@ Many civics in Stellaris are boring, simply providing modifiers. Sometimes borin
  [*] Every civic is individually [b]configurable[/b]. Access the menu via edict or Dynamic Mod Menu
 [/list]
 
+[h1]Exalted Priesthood[/h1]
+A new event chain for the emergence and spread of unorthodox beliefs, with an interactive situation to debate incorporating the beliefs or declaring a heresy. If a heresy is declared, a new Inquisition policy is unlocked, along with more events for cleansing your planets of heresy. If you can weather this crisis, you will enter a golden age of unity!
+
 [h1]Parliamentary System[/h1]
 Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
 

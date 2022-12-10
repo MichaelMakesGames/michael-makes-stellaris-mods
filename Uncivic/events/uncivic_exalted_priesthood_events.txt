@@ -1,0 +1,871 @@
+namespace = uncivic_exalted_priesthood
+
+# 101 enabled (scopeless)
+event = {
+	id = uncivic_exalted_priesthood.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_exalted_priesthood.111 }
+		}
+	}
+}
+
+# 102 disabled (scopeless)
+event = {
+	id = uncivic_exalted_priesthood.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_exalted_priesthood.112 }
+		}
+	}
+}
+
+# 111 enabled (global event country)
+country_event = {
+	id = uncivic_exalted_priesthood.111
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# do nothing
+	}
+}
+
+# 112 disabled (global event country)
+country_event = {
+	id = uncivic_exalted_priesthood.112
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			every_situation = {
+				limit = {is_situation_type = uncivic_exalted_priesthood_council }
+				destroy_situation = this
+			}
+			if = {
+				limit = { has_event_chain = uncivic_exalted_priesthood_heresy_chain }
+				end_event_chain = uncivic_exalted_priesthood_heresy_chain
+			}
+			remove_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+			remove_country_flag = uncivic_exalted_priesthood_declared_heresy
+			remove_country_flag = uncivic_exalted_priesthood_recent_amnesty
+			remove_country_flag = uncivic_exalted_priesthood_recent_militia
+			remove_country_flag = uncivic_exalted_priesthood_recent_example
+			remove_country_flag = uncivic_exalted_priesthood_unorthodoxy_cooldown
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_revised_orthodoxy }
+				remove_modifier = uncivic_exalted_priesthood_revised_orthodoxy
+			}
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_heresy_cleansed }
+				remove_modifier = uncivic_exalted_priesthood_heresy_cleansed
+			}
+			every_owned_planet = {
+				remove_planet_flag = uncivic_exalted_priesthood_planet_recently_changed
+				if = {
+					limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+					remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+				}
+				if = {
+					limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+					remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+				}
+				if = {
+					limit = { has_modifier = uncivic_exalted_priesthood_heretical_beliefs }
+					remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+				}
+				if = {
+					limit = { has_modifier = uncivic_exalted_priesthood_center_of_heresy }
+					remove_modifier = uncivic_exalted_priesthood_center_of_heresy
+				}
+				if = {
+					limit = { has_modifier = uncivic_exalted_priesthood_heretic_amnesty }
+					remove_modifier = uncivic_exalted_priesthood_heretic_amnesty
+				}
+				if = {
+					limit = { exists = fromfrom }
+					uncivic_exalted_priesthood_remove_poi = { COUNTRY = owner }
+				}
+			}
+			every_owned_leader = {
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_unorthodox }
+				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_hardliner }
+				mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_unorthodox }
+				mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_hardliner }
+			}
+		}
+	}
+}
+
+# 121 government added civic
+country_event = {
+	id = uncivic_exalted_priesthood.121
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# do nothing
+	}
+}
+
+# 122 government removed civic
+country_event = {
+	id = uncivic_exalted_priesthood.122
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# mostly the same as disabling the civic, but:
+		# - don't removed timed flags or modifiers
+		# - don't remove leader traits
+		every_situation = {
+			limit = {is_situation_type = uncivic_exalted_priesthood_council }
+			destroy_situation = this
+		}
+		if = {
+			limit = { has_event_chain = uncivic_exalted_priesthood_heresy_chain }
+			end_event_chain = uncivic_exalted_priesthood_heresy_chain
+		}
+		remove_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+		remove_country_flag = uncivic_exalted_priesthood_declared_heresy
+		every_owned_planet = {
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+				remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+			}
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+				remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+			}
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_heretical_beliefs }
+				remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+			}
+			if = {
+				limit = { has_modifier = uncivic_exalted_priesthood_center_of_heresy }
+				remove_modifier = uncivic_exalted_priesthood_center_of_heresy
+			}
+			if = {
+				limit = { exists = fromfrom }
+				uncivic_exalted_priesthood_remove_poi = { COUNTRY = owner }
+			}
+		}
+	}
+}
+
+# 8b    d8    db    88 88b 88
+# 88b  d88   dPYb   88 88Yb88
+# 88YbdP88  dP__Yb  88 88 Y88
+# 88 YY 88 dP""""Yb 88 88  Y8
+#
+# 8b    d8  dP"Yb  88b 88 888888 88  88 88     Yb  dP
+# 88b  d88 dP   Yb 88Yb88   88   88  88 88      YbdP
+# 88YbdP88 Yb   dP 88 Y88   88   888888 88  .o   8P
+# 88 YY 88  YbodP  88  Y8   88   88  88 88ood8  dP
+#
+# 888888 88  dP""b8 88  dP
+#   88   88 dP   `" 88odP
+#   88   88 Yb      88"Yb
+#   88   88  YboodP 88  Yb
+#
+# unorthodoxy/heresy spread, autostart ecumenical council, inquisition event gates, check for heresy eradication, check for unorthodoxy start
+
+country_event = {
+	id = uncivic_exalted_priesthood.201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_exalted_priesthood
+		has_global_flag = uncivic_exalted_priesthood_enabled
+	}
+	immediate = {
+		# chance of inquisition effect/event
+		if = {
+			limit = { uncivic_exalted_priesthood_has_heresy = yes }
+			random_owned_planet = {
+				limit = {
+					uncivic_exalted_priesthood_planet_is_unorthodox = yes
+					NOT = { has_planet_flag = uncivic_exalted_priesthood_planet_recently_changed }
+				}
+				random = {
+					chance = value:uncivic_exalted_priesthood_heresy_removal_chance
+					set_timed_planet_flag = {
+						flag = uncivic_exalted_priesthood_planet_recently_changed
+						years = 5
+					}
+					uncivic_exalted_priesthood_remove_poi = { COUNTRY = owner }
+					if = {
+						limit = { has_modifier = uncivic_exalted_priesthood_heretical_beliefs }
+						remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+						owner = { add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_planet_counter
+							amount = -1
+						} }
+					}
+					if = {
+						limit = { has_modifier = uncivic_exalted_priesthood_center_of_heresy }
+						remove_modifier = uncivic_exalted_priesthood_center_of_heresy
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+						owner = { add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_planet_counter
+							amount = -1
+						} }
+						owner = { add_event_chain_counter = {
+							event_chain = uncivic_exalted_priesthood_heresy_chain
+							counter = uncivic_exalted_priesthood_heretic_center_counter
+							amount = -1
+						} }
+					}
+					random_list = {
+						15 = {
+							modifier = {
+								factor = 0.67
+								owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_balanced }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_aggressive }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_country_flag = uncivic_exalted_priesthood_recent_amnesty }
+							}
+							# amnesty event
+							planet_event = { id = uncivic_exalted_priesthood.401 }
+						}
+						15 = {
+							modifier = {
+								factor = 0.67
+								owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_balanced }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_country_flag = uncivic_exalted_priesthood_recent_militia }
+							}
+							planet_event = { id = uncivic_exalted_priesthood.411 }
+						}
+						15 = {
+							modifier = {
+								factor = 0.67
+								owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_balanced }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_focused }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_country_flag = uncivic_exalted_priesthood_recent_example }
+							}
+							planet_event = { id = uncivic_exalted_priesthood.421 }
+						}
+						70 = {
+							# do nothing
+						}
+					}
+					random = {
+						chance = value:uncivic_exalted_priesthood_inquisition_damage_chance
+						random_list = {
+							1 = {
+								add_planet_devastation = 40
+								create_message = {
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
+									days = 30
+									target = THIS
+									variable = { type = name localization = PLANET scope = THIS }
+								}
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									num_pops < 20
+								}
+								random_owned_pop = { kill_pop = yes }
+								random_owned_pop = { kill_pop = yes }
+								create_message = {
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
+									days = 30
+									target = THIS
+									variable = { type = name localization = PLANET scope = THIS }
+								}
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									num_pops < 10
+								}
+								random_owned_pop = { kill_pop = yes }
+								add_planet_devastation = 20
+								create_message = {
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
+									days = 30
+									target = THIS
+									variable = { type = name localization = PLANET scope = THIS }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		# check for heresy ended
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_has_heresy = yes
+				count_owned_planet = {
+					count = 0
+					limit = { uncivic_exalted_priesthood_planet_is_unorthodox = yes }
+				}
+			}
+			# remove unorthodoxy and heresy flags
+			remove_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+			remove_country_flag = uncivic_exalted_priesthood_declared_heresy
+			end_event_chain = uncivic_exalted_priesthood_heresy_chain
+			set_timed_country_flag = {
+				flag = uncivic_exalted_priesthood_unorthodoxy_cooldown
+				years = 25
+			}
+			# fire end heresy event (which awards unity and applies modifier)
+			country_event = { id = uncivic_exalted_priesthood.303 }
+		}
+		if = {
+			limit = { uncivic_exalted_priesthood_has_unorthodoxy = yes }
+			# chance of spread
+			random_owned_planet = {
+				limit = { uncivic_exalted_priesthood_planet_is_unorthodox = no }
+				random = {
+					chance = value:uncivic_exalted_priesthood_unorthodoxy_spread_chance
+					set_timed_planet_flag = {
+						flag = uncivic_exalted_priesthood_planet_recently_changed
+						years = 2
+					}
+					if = {
+						limit = { owner = { uncivic_exalted_priesthood_has_heresy = yes } }
+						add_modifier = { modifier = uncivic_exalted_priesthood_heretical_beliefs }
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_HERESY_SPREAD
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_SPREAD
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+						uncivic_exalted_priesthood_create_poi = yes
+						owner = {
+							add_event_chain_counter = {
+								event_chain = uncivic_exalted_priesthood_heresy_chain
+								counter = uncivic_exalted_priesthood_heretic_planet_counter
+								amount = 1
+							}
+						}
+					} else = {
+						add_modifier = { modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_SPREAD
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_SPREAD
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+					}
+				}
+			}
+			# chance of center
+			random_owned_planet = {
+				limit = {
+					uncivic_exalted_priesthood_planet_is_unorthodox = yes
+					uncivic_exalted_priesthood_planet_is_unorthodox_center = no
+				}
+				random = {
+					chance = value:uncivic_exalted_priesthood_unorthodoxy_center_formation_chance
+					set_timed_planet_flag = {
+						flag = uncivic_exalted_priesthood_planet_recently_changed
+						years = 2
+					}
+					if = {
+						limit = { owner = { uncivic_exalted_priesthood_has_heresy = yes } }
+						remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+						add_modifier = { modifier = uncivic_exalted_priesthood_center_of_heresy }
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+						uncivic_exalted_priesthood_create_poi = yes
+						owner = {
+							add_event_chain_counter = {
+								event_chain = uncivic_exalted_priesthood_heresy_chain
+								counter = uncivic_exalted_priesthood_heretic_planet_counter
+								amount = 1
+							}
+							add_event_chain_counter = {
+								event_chain = uncivic_exalted_priesthood_heresy_chain
+								counter = uncivic_exalted_priesthood_heretic_center_counter
+								amount = 1
+							}
+						}
+					} else = {
+						remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+						add_modifier = { modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED
+							days = 30
+							target = THIS
+							variable = { type = name localization = PLANET scope = THIS }
+						}
+					}
+				}
+			}
+			# chance of spread to leaders
+			random_owned_leader = {
+				limit = { NOR = {
+					leader_class = envoy
+					leader_class = ruler
+				} }
+				random = {
+					chance = value:uncivic_exalted_priesthood_leader_reaction_chance
+					random = {
+						chance = value:uncivic_exalted_priesthood_leader_unorthodox_chance
+						add_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+						add_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER
+							days = 30
+							variable = { type = name localization = LEADER scope = THIS }
+						}
+					}
+					if = {
+						limit = { NOT = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox } }
+						add_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+						add_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+						create_message = {
+							type = UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER
+							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER
+							days = 30
+							variable = { type = name localization = LEADER scope = THIS }
+						}
+					}
+				}
+			}
+			# check for council autostart
+			if = {
+				limit = { OR = {
+					check_variable_arithmetic = {
+						which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
+						value >= 75
+					}
+					count_owned_planet = {
+						count = all
+						limit = { OR = {
+							uncivic_exalted_priesthood_planet_is_unorthodox = yes
+							is_capital = yes
+						} }
+					}
+				} }
+				start_situation = {
+					type = uncivic_exalted_priesthood_council
+					target = this
+				}
+			}
+		}
+		# check for unorthodoxy start
+		if = {
+			limit = {
+				NOT = { has_country_flag = uncivic_exalted_priesthood_has_unorthodoxy }
+				NOT = { has_country_flag = uncivic_exalted_priesthood_unorthodoxy_cooldown }
+				years_passed > 50
+				num_owned_planets >= 3
+			}
+			random = {
+				chance = 2
+				random_owned_planet = {
+					limit = { is_capital = no }
+					planet_event = { id = uncivic_exalted_priesthood.501 }
+				}
+			}
+		}
+	}
+}
+
+# 888888  dP""b8 88   88 8b    d8 888888 88b 88 88  dP""b8    db    88
+# 88__   dP   `" 88   88 88b  d88 88__   88Yb88 88 dP   `"   dPYb   88
+# 88""   Yb      Y8   8P 88YbdP88 88""   88 Y88 88 Yb       dP__Yb  88  .o
+# 888888  YboodP `YbodP' 88 YY 88 888888 88  Y8 88  YboodP dP""""Yb 88ood8
+#
+#  dP""b8  dP"Yb  88   88 88b 88  dP""b8 88 88
+# dP   `" dP   Yb 88   88 88Yb88 dP   `" 88 88
+# Yb      Yb   dP Y8   8P 88 Y88 Yb      88 88  .o
+#  YboodP  YbodP  `YbodP' 88  Y8  YboodP 88 88ood8
+
+country_event = {
+	id = uncivic_exalted_priesthood.301
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.301.title
+	desc = uncivic_exalted_priesthood.301.desc
+	picture = GFX_evt_two_sided_deal
+	option = {
+		name = PRAISE
+		custom_tooltip = uncivic_exalted_priesthood_council_on_fail_tooltip
+	}
+}
+
+country_event = {
+	id = uncivic_exalted_priesthood.302
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.302.title
+	desc = uncivic_exalted_priesthood.302.desc
+	picture = GFX_evt_crisis_declared
+	option = {
+		name = uncivic_exalted_priesthood_inquisition_focused
+		custom_tooltip = uncivic_exalted_priesthood_inquisition_focused_tooltip
+		hidden_effect = {
+			set_policy = {
+				policy = uncivic_exalted_priesthood_inquisition
+				option = uncivic_exalted_priesthood_inquisition_focused
+				cooldown = no
+			}
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood_inquisition_balanced
+		custom_tooltip = uncivic_exalted_priesthood_inquisition_balanced_tooltip
+		hidden_effect = {
+			set_policy = {
+				policy = uncivic_exalted_priesthood_inquisition
+				option = uncivic_exalted_priesthood_inquisition_balanced
+				cooldown = no
+			}
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood_inquisition_aggressive
+		custom_tooltip = uncivic_exalted_priesthood_inquisition_aggressive_tooltip
+		hidden_effect = {
+			set_policy = {
+				policy = uncivic_exalted_priesthood_inquisition
+				option = uncivic_exalted_priesthood_inquisition_aggressive
+				cooldown = no
+			}
+		}
+	}
+}
+
+situation_event = {
+	id = uncivic_exalted_priesthood.311
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.311.title
+	desc = uncivic_exalted_priesthood.311.desc
+	picture = GFX_evt_voting
+	situation = this
+	option = {
+		name = PRAISE
+	}
+}
+
+# heresy cleansed
+country_event = {
+	id = uncivic_exalted_priesthood.303
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.303.title
+	desc = uncivic_exalted_priesthood.303.desc
+	picture = GFX_evt_coronation
+	option = {
+		name = PRAISE
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 12
+		}
+		add_modifier = {
+			modifier = uncivic_exalted_priesthood_heresy_cleansed
+			years = 10
+		}
+	}
+}
+
+# 88 88b 88  dP"Yb  88   88 88 .dP"Y8 88 888888 88  dP"Yb  88b 88
+# 88 88Yb88 dP   Yb 88   88 88 `Ybo." 88   88   88 dP   Yb 88Yb88
+# 88 88 Y88 Yb b dP Y8   8P 88 o.`Y8b 88   88   88 Yb   dP 88 Y88
+# 88 88  Y8  `"YoYo `YbodP' 88 8bodP' 88   88   88  YbodP  88  Y8
+
+# amnesty
+planet_event = {
+	id = uncivic_exalted_priesthood.401
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.401.title
+	desc = uncivic_exalted_priesthood.401.desc
+	picture = GFX_evt_worrying_signal
+	trigger = { owner = { any_owned_planet = { uncivic_exalted_priesthood_planet_is_unorthodox = yes } } }
+	option = {
+		name = DEAL
+		add_modifier = {
+			modifier = uncivic_exalted_priesthood_heretic_amnesty
+			years = 20
+		}
+		custom_tooltip = uncivic_exalted_priesthood.401.tooltip
+		hidden_effect = {
+			owner = {
+				remove_country_flag = uncivic_exalted_priesthood_recent_amnesty
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_recent_amnesty
+					years = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = NODEAL
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 20
+				num_pops >= 20
+			}
+			modifier = {
+				divide = 2
+				owner = { is_authoritarian = yes }
+			}
+		}
+	}
+}
+
+# militia
+planet_event = {
+	id = uncivic_exalted_priesthood.411
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.411.title
+	desc = uncivic_exalted_priesthood.411.desc
+	picture = GFX_evt_surrender
+	trigger = { owner = { any_owned_planet = { uncivic_exalted_priesthood_planet_is_unorthodox = yes } } }
+	option = {
+		name = PRAISE
+		custom_tooltip = uncivic_exalted_priesthood.411.tooltip
+		hidden_effect = {
+			owner = {
+				remove_country_flag = uncivic_exalted_priesthood_recent_militia
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_recent_militia
+					years = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = NOTIME
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 10
+				owner = { is_pacifist = yes }
+			}
+			modifier = {
+				multiply = 0
+				owner = { is_militarist = yes }
+			}
+		}
+	}
+}
+
+# make an example
+planet_event = {
+	id = uncivic_exalted_priesthood.421
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.421.title
+	desc = uncivic_exalted_priesthood.421.desc
+	picture = GFX_evt_surrender
+	trigger = { owner = { any_owned_planet = { uncivic_exalted_priesthood_planet_is_unorthodox = yes } } }
+	option = {
+		name = MAKE_IT_SO
+		add_planet_devastation = 40
+		if = {
+			limit = { num_pops >= 10 }
+			random_owned_pop = { kill_pop = yes }
+		} else_if = {
+			limit = { num_pops >= 20 }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+		} else_if = {
+			limit = { num_pops >= 30 }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+		}
+		custom_tooltip = uncivic_exalted_priesthood.421.tooltip
+		hidden_effect = {
+			owner = {
+				remove_country_flag = uncivic_exalted_priesthood_recent_example
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_recent_example
+					years = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+			add = owner.value:uncivic_exalted_priesthood_percent_unorthodox_planets
+			modifier = {
+				multiply = 0
+				owner = { is_pacifist = yes }
+			}
+		}
+	}
+	option = {
+		name = NOTIME
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# 88""Yb 888888  dP""b8 88 88b 88
+# 88__dP 88__   dP   `" 88 88Yb88
+# 88""Yb 88""   Yb  "88 88 88 Y88
+# 88oodP 888888  YboodP 88 88  Y8
+#
+# 88   88 88b 88  dP"Yb  88""Yb 888888 88  88  dP"Yb  8888b.   dP"Yb  Yb  dP Yb  dP
+# 88   88 88Yb88 dP   Yb 88__dP   88   88  88 dP   Yb  8I  Yb dP   Yb  YbdP   YbdP
+# Y8   8P 88 Y88 Yb   dP 88"Yb    88   888888 Yb   dP  8I  dY Yb   dP  dPYb    8P
+# `YbodP' 88  Y8  YbodP  88  Yb   88   88  88  YbodP  8888Y"   YbodP  dP  Yb  dP
+
+planet_event = {
+	id = uncivic_exalted_priesthood.501
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.501.title
+	desc = uncivic_exalted_priesthood.501.desc
+	picture = GFX_evt_surreal_visions
+	immediate = {
+		owner = {
+			set_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+		}
+		add_modifier = { modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+		hidden_effect = {
+			set_timed_planet_flag = {
+				flag = uncivic_exalted_priesthood_planet_recently_changed
+				years = 5
+			}
+		}
+	}
+	option = {
+		name = WORRYING
+	}
+}
+
+# 8b    d8 88 .dP"Y8  dP""b8
+# 88b  d88 88 `Ybo." dP   `"
+# 88YbdP88 88 o.`Y8b Yb
+# 88 YY 88 88 8bodP'  YboodP
+#
+#  dP"Yb  88b 88        db     dP""b8 888888 88  dP"Yb  88b 88 .dP"Y8
+# dP   Yb 88Yb88       dPYb   dP   `"   88   88 dP   Yb 88Yb88 `Ybo."
+# Yb   dP 88 Y88      dP__Yb  Yb        88   88 Yb   dP 88 Y88 o.`Y8b
+#  YbodP  88  Y8     dP""""Yb  YboodP   88   88  YbodP  88  Y8 8bodP'
+
+# on_ruler_back_to_pre_ruler_class
+country_event = {
+	id = uncivic_exalted_priesthood.601
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+					NOT = { has_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner }
+				}
+				remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+			}
+			if = {
+				limit = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+					NOT = { has_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
+				}
+				remove_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+			}
+		}
+	}
+}
+
+# on_planet_transfer
+# on_planet_ownerless
+planet_event = {
+	id = uncivic_exalted_priesthood.611
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = { exists = fromfrom }
+			uncivic_exalted_priesthood_remove_poi = { COUNTRY = fromfrom }
+			fromfrom = {
+				if = {
+					limit = { root = { OR = {
+						has_modifier = uncivic_exalted_priesthood_heretical_beliefs
+						has_modifier = uncivic_exalted_priesthood_center_of_heresy
+					} } }
+					add_event_chain_counter = {
+						event_chain = uncivic_exalted_priesthood_heresy_chain
+						counter = uncivic_exalted_priesthood_heretic_planet_counter
+						amount = -1
+					}
+				}
+				if = {
+					limit = { root = { has_modifier = uncivic_exalted_priesthood_center_of_heresy } }
+					add_event_chain_counter = {
+						event_chain = uncivic_exalted_priesthood_heresy_chain
+						counter = uncivic_exalted_priesthood_heretic_center_counter
+						amount = -1
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+			remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+			remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_heretical_beliefs }
+			remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_center_of_heresy }
+			remove_modifier = uncivic_exalted_priesthood_center_of_heresy
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_heretic_amnesty }
+			remove_modifier = uncivic_exalted_priesthood_heretic_amnesty
+		}
+	}
+}
+
+# TODO on_leader_fired
+# TODO on_leader_spawned
