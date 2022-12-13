@@ -4,6 +4,7 @@ uncivic_exalted_priesthood_call_council = {
 	potential = {
 		uncivic_exalted_priesthood_has_unorthodoxy = yes
 		uncivic_exalted_priesthood_has_heresy = no
+		NOT = { any_situation = { is_situation_type = uncivic_exalted_priesthood_council } }
 	}
 	allow = {
 		custom_tooltip = {
