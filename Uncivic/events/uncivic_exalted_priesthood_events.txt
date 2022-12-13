@@ -471,19 +471,23 @@ country_event = {
 			}
 			# check for council autostart
 			if = {
-				limit = { OR = {
-					check_variable_arithmetic = {
-						which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
-						value >= 75
+				limit = {
+					NOT = { any_situation = { is_situation_type = uncivic_exalted_priesthood_council } }
+					uncivic_exalted_priesthood_has_heresy = no
+					OR = {
+						check_variable_arithmetic = {
+							which = value:uncivic_exalted_priesthood_percent_unorthodox_planets
+							value >= 75
+						}
+						count_owned_planet = {
+							count = all
+							limit = { OR = {
+								uncivic_exalted_priesthood_planet_is_unorthodox = yes
+								is_capital = yes
+							} }
+						}
 					}
-					count_owned_planet = {
-						count = all
-						limit = { OR = {
-							uncivic_exalted_priesthood_planet_is_unorthodox = yes
-							is_capital = yes
-						} }
-					}
-				} }
+				}
 				start_situation = {
 					type = uncivic_exalted_priesthood_council
 					target = this
