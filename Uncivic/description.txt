@@ -4,9 +4,9 @@ Many civics in Stellaris are boring, simply providing modifiers. Sometimes borin
 
 [h1]Design Principles[/h1]
 [list]
- [*] [b]Interesting mechanics[/b] and [b]roleplay[/b] are the primary goals. Balance is still a (secondary) goal and feedback is welcome, but you probably don't want to use this in cut-throat competitive multiplayer
- [*] Only [b]compatibility-friendly[/b] features are included. No vanilla content is overwritten.
- [*] Every civic is individually [b]configurable[/b]. Access the menu via edict or Dynamic Mod Menu
+  [*] [b]Interesting mechanics[/b] and [b]roleplay[/b] are the primary goals. Balance is still a (secondary) goal and feedback is welcome, but you probably don't want to use this in cut-throat competitive multiplayer
+  [*] Only [b]compatibility-friendly[/b] features are included. No vanilla content is overwritten.
+  [*] [b]Configurable[/b]: each civic can be individually enabled/disabled. Access the menu via edict or Dynamic Mod Menu.
 [/list]
 
 [h1]Exalted Priesthood[/h1]
@@ -15,7 +15,7 @@ A new event chain for the emergence and spread of unorthodox beliefs, with an in
 [h1]Parliamentary System[/h1]
 Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
 
-Minor incompatibility: new modded faction types do not have special planet modifiers
+Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for E&C Bug Branch, E&C Classic, and Stellaris Evolved.
 
 [h1]Shadow Council[/h1]
 Elevate your leaders to become powerful Shadow Councilors. However, the more you elevate, the greater the the chance one will be exposed, and you'll need to make a tough decision about what to do with them.
@@ -23,7 +23,7 @@ Elevate your leaders to become powerful Shadow Councilors. However, the more you
 [h1]Technocracy[/h1]
 Governors and Scientists are interchangeable. Convert scientists to governors (and vice versa) via the Manage Technocracts edict. Traits are converted to new variants as well, so you can get a governor with Expertise: Materials to boost your alloy and consumer goods production.
 
-Minor incompatibility: new modded leader traits will not be converted
+Minor incompatibility: new modded leader traits will not be converted. Built-in support for E&C Bug Branch and E&C Classic. Not recommended (and disabled by default) with Stellaris Evolved.
 
 [h1]More to come![/h1]
 
@@ -35,14 +35,19 @@ Check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2892121750
   [*] For Stellaris 3.6.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
-  [*] Should be compatible with all other mods
+  [*] No overwrites, so should be compatible with most other mods. Advanced integration with E&C Bug Branch, E&C Classic, and Stellaris Evolved.
+[/list]
+
+[h1]Known Issues[/h1]
+[list]
+  [*] When adding to an in-progress game, all pop factions will disband. Large factions should immediately re-form, but smaller factions might take longer to come back.
 [/list]
 
 [h1]Credits[/h1]
 [list]
- [*] Thanks to slimer91 for the Russian translation
- [*] Thanks to Iskusel for the French translation
- [*] Thanks to Merlin1809 for the German translation
+  [*] Thanks to slimer91 for the Russian translation
+  [*] Thanks to Iskusel for the French translation
+  [*] Thanks to Merlin1809 for the German translation
 [/list]
 
 [h1]Sharing[/h1]

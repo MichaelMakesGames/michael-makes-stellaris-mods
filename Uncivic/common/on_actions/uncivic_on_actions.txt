@@ -16,6 +16,12 @@ on_single_player_save_game_load = {
 	}
 }
 
+on_press_begin = {
+	events = {
+		uncivic_menu.102 # mod compat setup
+	}
+}
+
 on_monthly_pulse = {
 	events = {
 		uncivic_menu.101 # register mod menu and init mod

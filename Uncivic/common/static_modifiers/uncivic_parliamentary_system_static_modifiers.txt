@@ -1,85 +1,77 @@
+# vanilla factions
 uncivic_parliamentary_system_imperialist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_martial_law_hive.dds"
 	icon_frame = 2
+	pop_ethic_militarist_attraction_mult = 0.50
 	job_soldier_per_pop = 0.2
 	planet_soldiers_unity_produces_add = 1
-	trade_value_mult = -0.50
-	pop_ethic_militarist_attraction_mult = 0.50
+	planet_jobs_specialist_produces_mult = -0.10
 }
-
 uncivic_parliamentary_system_isolationist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_tidal_locked.dds"
 	icon_frame = 2
+	pop_ethic_xenophobe_attraction_mult = 0.50
 	pop_growth_speed = 0.10
 	planet_immigration_pull_add = -20
-	pop_ethic_xenophobe_attraction_mult = 0.50
 }
-
 uncivic_parliamentary_system_manifesti = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon = "gfx/interface/icons/planet_modifiers/pm_minor_artifact_decision.dds"
 	icon_frame = 2
-	planet_amenities_mult = 0.10
-	planet_jobs_society_research_produces_mult = 0.25
-	pop_government_ethic_attraction = -1.00
-	pop_ethic_egalitarian_attraction_mult = 0.25
 	pop_ethic_pacifist_attraction_mult = 0.25
 	pop_ethic_xenophile_attraction_mult = 0.25
+	pop_ethic_egalitarian_attraction_mult = 0.25
+	planet_jobs_society_research_produces_mult = 0.25
+	planet_amenities_mult = 0.10
 	pop_ethics_shift_speed_mult = 1.00
+	pop_government_ethic_attraction = -1.00
 }
-
 uncivic_parliamentary_system_progressive = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_politics.dds"
 	icon_frame = 2
-	planet_jobs_specialist_produces_mult = 0.10
 	pop_ethic_egalitarian_attraction_mult = 0.50
+	species_empire_size_mult = -0.15
 	pop_ethics_shift_speed_mult = 0.50
 	pop_government_ethic_attraction = -0.25
 }
-
 uncivic_parliamentary_system_prosperity = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 2
-	trade_value_mult = 0.25
-	planet_pops_upkeep_mult = 0.25
 	pop_ethic_pacifist_attraction_mult = 0.50
+	planet_stability_add = 10
+	planet_pops_upkeep_mult = 0.25
 }
-
 uncivic_parliamentary_system_supremacist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
 	icon_frame = 2
+	pop_ethic_xenophobe_attraction_mult = 0.50
 	pop_citizen_happiness = 0.30
 	pop_happiness = -0.20
-	pop_ethic_xenophobe_attraction_mult = 0.50
 }
-
 uncivic_parliamentary_system_technologist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
 	icon_frame = 2
-	job_researcher_per_pop = 0.1
-	planet_researchers_produces_mult = 0.05
-	planet_researchers_upkeep_mult = 0.15
 	pop_ethic_materialist_attraction_mult = 0.50
+	job_researcher_per_pop = 0.1
+	planet_researchers_produces_mult = 0.10
+	planet_researchers_upkeep_mult = 0.25
 }
-
 uncivic_parliamentary_system_totalitarian = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
 	icon_frame = 2
-	planet_jobs_ruler_produces_mult = 0.10
-	planet_jobs_worker_produces_mult = 0.10
-	pop_cat_worker_happiness = -0.20
 	pop_ethic_authoritarian_attraction_mult = 0.50
+	pop_government_ethic_attraction = 0.25
+	planet_crime_mult = -0.50
+	species_empire_size_mult = 0.25
 }
-
 uncivic_parliamentary_system_traditionalist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_machine_sapience.dds"
 	icon_frame = 2
+	pop_ethic_spiritualist_attraction_mult = 0.50
 	job_priest_per_pop = 0.1
 	planet_jobs_unity_produces_mult = 0.10
 	planet_jobs_physics_research_produces_mult = -0.20
 	planet_jobs_engineering_research_produces_mult = -0.20
-	pop_ethic_spiritualist_attraction_mult = 0.50
 }
-
 uncivic_parliamentary_system_xenoist = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_galactic_senate.dds"
 	icon_frame = 2
@@ -88,18 +80,10 @@ uncivic_parliamentary_system_xenoist = {
 	pop_ethic_xenophile_attraction_mult = 0.50
 }
 
+# fallback for unsupported faction and unforeseen bugs
 uncivic_parliamentary_system_nonpartisan = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
 	icon_frame = 2
-}
-
-uncivic_parliamentary_system_separatist = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
-	icon_frame = 2
-	species_empire_size_mult = -0.25
-	planet_jobs_upkeep_mult = -0.25
-	planet_jobs_produces_mult = -0.25
-	pop_government_ethic_attraction = -0.25
 }
 
 uncivic_parliamentary_system_well_represented = {
@@ -112,4 +96,167 @@ uncivic_parliamentary_system_uncovered_meddling = {
 	icon_frame = 3
 	planet_stability_add = -15
 	pop_happiness = -0.15
+}
+
+# 8b    d8  dP"Yb  8888b.  8888b.  888888 8888b.      888888    db     dP""b8 888888 88  dP"Yb  88b 88 .dP"Y8
+# 88b  d88 dP   Yb  8I  Yb  8I  Yb 88__    8I  Yb     88__     dPYb   dP   `"   88   88 dP   Yb 88Yb88 `Ybo."
+# 88YbdP88 Yb   dP  8I  dY  8I  dY 88""    8I  dY     88""    dP__Yb  Yb        88   88 Yb   dP 88 Y88 o.`Y8b
+# 88 YY 88  YbodP  8888Y"  8888Y"  888888 8888Y"      88     dP""""Yb  YboodP   88   88  YbodP  88  Y8 8bodP'
+
+# civil wars
+uncivic_parliamentary_system_separatist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
+	icon_frame = 2
+	species_empire_size_mult = -0.25
+	planet_jobs_upkeep_mult = -0.25
+	planet_jobs_produces_mult = -0.25
+	pop_government_ethic_attraction = -0.25
+}
+
+# ethics & civics base modifiers
+uncivic_parliamentary_system_competitive_faction = {
+	pop_ethic_competitive_attraction_mult = 0.50
+	trade_value_mult = 0.25
+	planet_pops_upkeep_mult = 0.15
+	pop_cat_worker_happiness = -0.05
+}
+uncivic_parliamentary_system_elitist_faction = {
+	planet_jobs_ruler_produces_mult = 0.10
+	planet_jobs_worker_produces_mult = 0.10
+	pop_cat_worker_happiness = -0.20
+}
+uncivic_parliamentary_system_ecocentric_faction = {
+	planet_clear_blocker_speed_mult = -0.75
+	planet_pops_consumer_goods_upkeep_mult = -0.25
+	planet_jobs_worker_produces_mult = -0.10
+	planet_metallurgists_produces_mult = -0.05
+	planet_artisans_produces_mult = -0.05
+}
+uncivic_parliamentary_system_pluralist_faction = {
+	pop_cat_worker_happiness = 0.20
+	pop_cat_worker_political_power = 0.50
+	pop_cat_ruler_happiness = -0.50
+}
+uncivic_parliamentary_system_anthropocentric_faction = {
+	planet_miners_produces_mult = 0.15
+	planet_metallurgists_produces_mult = 0.10
+	planet_artisans_produces_mult = 0.10
+	habitability_ceil_add = -0.10
+}
+uncivic_parliamentary_system_cooperative_faction = {
+	trade_value_mult = -0.25
+	planet_amenities_mult = 0.25
+	pop_demotion_time_mult = -0.50
+}
+
+# bug branch
+uncivic_parliamentary_system_capitalist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
+	icon_frame = 2
+	pop_ethic_competitive_attraction_mult = 0.50
+	uncivic_parliamentary_system_competitive_faction = 1
+}
+uncivic_parliamentary_system_conservative = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_slave_colony.dds"
+	icon_frame = 2
+	pop_ethic_elitist_attraction_mult = 0.50
+	uncivic_parliamentary_system_elitist_faction = 1
+}
+uncivic_parliamentary_system_environmentalist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
+	icon_frame = 2
+	pop_ethic_ecocentric_attraction_mult = 0.50
+	uncivic_parliamentary_system_ecocentric_faction = 1
+}
+uncivic_parliamentary_system_populist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 2
+	pop_ethic_pluralist_attraction_mult = 0.50
+	uncivic_parliamentary_system_pluralist_faction = 1
+}
+uncivic_parliamentary_system_industrialist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	icon_frame = 2
+	pop_ethic_anthropocentric_attraction_mult = 0.50
+	uncivic_parliamentary_system_anthropocentric_faction = 1
+}
+uncivic_parliamentary_system_socialist = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
+	icon_frame = 2
+	pop_ethic_cooperative_attraction_mult = 0.50
+	uncivic_parliamentary_system_cooperative_faction = 1
+}
+
+# evolved/classic
+uncivic_parliamentary_system_competitive_faction = {
+	pop_ethic_competitive_attraction_mult = 0.50
+	trade_value_mult = 0.25
+	planet_pops_upkeep_mult = 0.15
+	pop_cat_worker_happiness = -0.05
+}
+uncivic_parliamentary_system_elitist_faction = {
+	planet_jobs_ruler_produces_mult = 0.10
+	planet_jobs_worker_produces_mult = 0.10
+	pop_cat_worker_happiness = -0.20
+}
+uncivic_parliamentary_system_ecocentric_faction = {
+	planet_clear_blocker_speed_mult = -0.75
+	planet_pops_consumer_goods_upkeep_mult = -0.25
+	planet_jobs_worker_produces_mult = -0.10
+	planet_metallurgists_produces_mult = -0.05
+	planet_artisans_produces_mult = -0.05
+}
+uncivic_parliamentary_system_pluralist_faction = {
+	pop_cat_worker_happiness = 0.20
+	pop_cat_worker_political_power = 0.50
+	pop_cat_ruler_happiness = -0.50
+}
+uncivic_parliamentary_system_anthropocentric_faction = {
+	planet_jobs_worker_produces_mult = 0.15
+	planet_metallurgists_produces_mult = 0.10
+	planet_artisans_produces_mult = 0.10
+	habitability_ceil_add = -0.10
+}
+uncivic_parliamentary_system_cooperative_faction = {
+	trade_value_mult = -0.25
+	planet_amenities_mult = 0.25
+	pop_demotion_time_mult = -0.50
+}
+
+# bug branch
+uncivic_parliamentary_system_bankers = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
+	icon_frame = 2
+	pop_ethic_capitalism_attraction_mult = 0.50
+	uncivic_parliamentary_system_competitive_faction = 1
+}
+uncivic_parliamentary_system_conservatives = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_slave_colony.dds"
+	icon_frame = 2
+	pop_ethic_elitist_attraction_mult = 0.50
+	uncivic_parliamentary_system_elitist_faction = 1
+}
+uncivic_parliamentary_system_environmentalists = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
+	icon_frame = 2
+	pop_ethic_green_attraction_mult = 0.50
+	uncivic_parliamentary_system_ecocentric_faction = 1
+}
+uncivic_parliamentary_system_labourites = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 2
+	pop_ethic_pluralist_attraction_mult = 0.50
+	uncivic_parliamentary_system_pluralist_faction = 1
+}
+uncivic_parliamentary_system_manufacturers = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	icon_frame = 2
+	pop_ethic_industrial_attraction_mult = 0.50
+	uncivic_parliamentary_system_anthropocentric_faction = 1
+}
+uncivic_parliamentary_system_socialists = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
+	icon_frame = 2
+	pop_ethic_socialism_attraction_mult = 0.50
+	uncivic_parliamentary_system_cooperative_faction = 1
 }

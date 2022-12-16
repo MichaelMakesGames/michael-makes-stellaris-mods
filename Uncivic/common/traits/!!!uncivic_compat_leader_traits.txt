@@ -1,0 +1,35 @@
+# bug branch
+leader_trait_expertise_bugged_good_trading = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_expertise_bugged_highborn_governor = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_expertise_bugged_highborn_scientist = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+# e&c classic
+leader_trait_expertise_good_trading = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}

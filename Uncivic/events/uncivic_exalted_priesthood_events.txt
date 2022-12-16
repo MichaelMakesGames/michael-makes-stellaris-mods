@@ -285,8 +285,8 @@ country_event = {
 							1 = {
 								add_planet_devastation = 40
 								create_message = {
-									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
-									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
 									days = 30
 									target = THIS
 									variable = { type = name localization = PLANET scope = THIS }
@@ -300,8 +300,8 @@ country_event = {
 								random_owned_pop = { kill_pop = yes }
 								random_owned_pop = { kill_pop = yes }
 								create_message = {
-									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
-									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS
 									days = 30
 									target = THIS
 									variable = { type = name localization = PLANET scope = THIS }
@@ -315,8 +315,8 @@ country_event = {
 								random_owned_pop = { kill_pop = yes }
 								add_planet_devastation = 20
 								create_message = {
-									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
-									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION
+									type = UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
+									localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION
 									days = 30
 									target = THIS
 									variable = { type = name localization = PLANET scope = THIS }

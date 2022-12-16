@@ -1,0 +1,4 @@
+dmm_register_mod = {
+	log = $DMM_FLAG$
+	log = $DMM_NAME$
+}

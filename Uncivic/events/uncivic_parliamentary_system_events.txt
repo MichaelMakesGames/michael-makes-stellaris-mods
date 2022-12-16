@@ -212,7 +212,7 @@ planet_event = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = isolationist
-					owner = { is_xenophobe = yes }
+					owner = { is_xenophobe = yes is_pacifist = yes }
 				}
 			}
 			modifier = {
@@ -233,7 +233,7 @@ planet_event = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = supremacist
-					owner = { is_xenophobe = yes }
+					owner = { is_xenophobe = yes is_pacifist = no }
 				}
 			}
 			modifier = {
@@ -266,6 +266,90 @@ planet_event = {
 			}
 			modifier = {
 				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = capitalist
+					owner = { OR = { has_ethic = ethic_competitive has_ethic = ethic_fanatic_competitive } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = conservative
+					owner = { OR = { has_ethic = ethic_elitist has_ethic = ethic_fanatic_elitist } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = environmentalist
+					owner = { OR = { has_ethic = ethic_ecocentric has_ethic = ethic_fanatic_ecocentric } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = industrialist
+					owner = { OR = { has_ethic = ethic_anthropocentric has_ethic = ethic_fanatic_anthropocentric } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = populist
+					owner = { OR = { has_ethic = ethic_pluralist has_ethic = ethic_fanatic_pluralist } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = socialist
+					owner = { OR = { has_ethic = ethic_cooperative has_ethic = ethic_fanatic_cooperative } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = bankers
+					owner = { OR = { has_ethic = ethic_capitalism has_ethic = ethic_fanatic_capitalism } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = conservatives
+					owner = { OR = { has_ethic = ethic_elitist has_ethic = ethic_fanatic_elitist } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = environmentalists
+					owner = { OR = { has_ethic = ethic_green has_ethic = ethic_fanatic_green } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = labourites
+					owner = { OR = { has_ethic = ethic_pluralist has_ethic = ethic_fanatic_pluralist } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = manufacturers
+					owner = { OR = { has_ethic = ethic_industrial has_ethic = ethic_fanatic_industrial } }
+				}
+			}
+			modifier = {
+				multiply = 2
+				event_target:uncivic_parliamentary_system_winner = {
+					is_pop_faction_type = socialists
+					owner = { OR = { has_ethic = ethic_socialism has_ethic = ethic_fanatic_socialism } }
+				}
+			}
+			modifier = {
+				multiply = 2
 				owner = { has_ethic = ethic_fanatic_egalitarian }
 			}
 			modifier = {
@@ -283,234 +367,163 @@ planet_event = {
 		}
 		ai_chance = { base = 0 }
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_imperialist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = imperialist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = imperialist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_militarist = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_militarist }
-			}
-			modifier = {
-				add = 50
-				has_fortress_designation = yes
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_pacifist = yes }
-			}
-		}
+	# rig election
+	# standard factions
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = imperialist
+		ETHIC = militarist
+		OPPOSITE = pacifist
+		BOOST = "has_fortress_designation = yes"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_isolationist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = isolationist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = isolationist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_xenophobe = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_xenophobe }
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_xenophile = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = isolationist
+		ETHIC = xenophobe
+		OPPOSITE = xenophile
+		BOOST = "always = no"
 	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = progressive
+		ETHIC = egalitarian
+		OPPOSITE = authoritarian
+		BOOST = "num_pops > 100"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = prosperity
+		ETHIC = pacifist
+		OPPOSITE = militarist
+		BOOST = "planet_stability < 40"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = supremacist
+		ETHIC = xenophobe
+		OPPOSITE = xenophile
+		BOOST = "always = no"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = technologist
+		ETHIC = materialist
+		OPPOSITE = spiritualist
+		BOOST = "has_research_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = totalitarian
+		ETHIC = authoritarian
+		OPPOSITE = egalitarian
+		BOOST = "planet_crime >= 30"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = traditionalist
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		BOOST = "has_unity_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = xenoist
+		ETHIC = xenophile
+		OPPOSITE = xenophobe
+		BOOST = "always = no"
+	}
+	# special
 	option = {
 		name = uncivic_parliamentary_system_rig_election_for_manifesti
 		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = manifesti } }
 		uncivic_parliamentary_system_rig_election = { FACTION = manifesti }
 		ai_chance = { base = 0 }
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_progressive
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = progressive } }
-		uncivic_parliamentary_system_rig_election = { FACTION = progressive }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_egalitarian = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_egalitarian }
-			}
-			modifier = {
-				add = 50
-				OR = {
-					has_industrial_designation = yes
-					has_factory_designation = yes
-					has_foundry_designation = yes
-				}
-			}
-			modifier = {
-				add = 25
-				has_unity_designation = yes
-				owner = { is_spiritualist = no }
-			}
-			modifier = {
-				add = 25
-				has_research_designation = yes
-				owner = { is_materialist = no }
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_authoritarian = yes }
-			}
-		}
+	# bug branch
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = capitalist
+		ETHIC = competitive
+		OPPOSITE = cooperative
+		BOOST = "has_trade_designation = yes"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_prosperity
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = prosperity } }
-		uncivic_parliamentary_system_rig_election = { FACTION = prosperity }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_pacifist = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_pacifist }
-			}
-			modifier = {
-				add = 50
-				has_trade_designation = yes
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_militarist = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = conservative
+		ETHIC = elitist
+		OPPOSITE = pluralist
+		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_supremacist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = supremacist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = supremacist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_xenophobe = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_xenophobe }
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_xenophile = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = environmentalist
+		ETHIC = ecocentric
+		OPPOSITE = anthropocentric
+		BOOST = "always = no"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_technologist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = technologist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = technologist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_materialist = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_materialist }
-			}
-			modifier = {
-				add = 50
-				has_research_designation = yes
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_spiritualist = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = industrialist
+		ETHIC = anthropocentric
+		OPPOSITE = ecocentric
+		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_totalitarian
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = totalitarian } }
-		uncivic_parliamentary_system_rig_election = { FACTION = totalitarian }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_authoritarian = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_authoritarian }
-			}
-			modifier = {
-				add = 50
-				OR = {
-					has_mining_designation = yes
-					has_farming_designation = yes
-					has_generator_designation = yes
-					has_rural_designation = yes
-				}
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_egalitarian = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = populist
+		ETHIC = pluralist
+		OPPOSITE = elitist
+		BOOST = "AND = { planet_stability < 50 OR = { has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes has_rural_designation = yes } }"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_traditionalist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = traditionalist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = traditionalist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_spiritualist = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_spiritualist }
-			}
-			modifier = {
-				add = 50
-				has_unity_designation = yes
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_materialist = yes }
-			}
-		}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = socialist
+		ETHIC = cooperative
+		OPPOSITE = competitive
+		BOOST = "free_amenities < 0"
 	}
-	option = {
-		name = uncivic_parliamentary_system_rig_election_for_xenoist
-		trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = xenoist } }
-		uncivic_parliamentary_system_rig_election = { FACTION = xenoist }
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				owner = { is_xenophile = yes }
-			}
-			modifier = {
-				add = 25
-				owner = { has_ethic = ethic_fanatic_xenophile }
-			}
-			modifier = {
-				multiply = 0
-				owner = { is_xenophobe = yes }
-			}
-		}
+	# evolved/classic
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = bankers
+		ETHIC = capitalism
+		OPPOSITE = socialism
+		BOOST = "has_trade_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = conservatives
+		ETHIC = elitist
+		OPPOSITE = pluralist
+		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = environmentalists
+		ETHIC = green
+		OPPOSITE = industrial
+		BOOST = "always = no"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = manufacturers
+		ETHIC = industrial
+		OPPOSITE = green
+		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = labourites
+		ETHIC = pluralist
+		OPPOSITE = elitist
+		BOOST = "AND = { planet_stability < 50 OR = { has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes has_rural_designation = yes } }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = socialists
+		ETHIC = socialism
+		OPPOSITE = capitalism
+		BOOST = "free_amenities < 0"
 	}
 }
 

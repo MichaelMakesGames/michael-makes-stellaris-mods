@@ -37,6 +37,42 @@ uncivic_parliamentary_system_clear_planet = {
 		uncivic_parliamentary_system_separatist = {
 			remove_modifier = uncivic_parliamentary_system_separatist
 		}
+		uncivic_parliamentary_system_capitalist = {
+			remove_modifier = uncivic_parliamentary_system_capitalist
+		}
+		uncivic_parliamentary_system_conservative = {
+			remove_modifier = uncivic_parliamentary_system_conservative
+		}
+		uncivic_parliamentary_system_environmentalist = {
+			remove_modifier = uncivic_parliamentary_system_environmentalist
+		}
+		uncivic_parliamentary_system_industrialist = {
+			remove_modifier = uncivic_parliamentary_system_industrialist
+		}
+		uncivic_parliamentary_system_populist = {
+			remove_modifier = uncivic_parliamentary_system_populist
+		}
+		uncivic_parliamentary_system_socialist = {
+			remove_modifier = uncivic_parliamentary_system_socialist
+		}
+		uncivic_parliamentary_system_bankers = {
+			remove_modifier = uncivic_parliamentary_system_bankers
+		}
+		uncivic_parliamentary_system_conservatives = {
+			remove_modifier = uncivic_parliamentary_system_conservatives
+		}
+		uncivic_parliamentary_system_environmentalists = {
+			remove_modifier = uncivic_parliamentary_system_environmentalists
+		}
+		uncivic_parliamentary_system_labourites = {
+			remove_modifier = uncivic_parliamentary_system_labourites
+		}
+		uncivic_parliamentary_system_manufacturers = {
+			remove_modifier = uncivic_parliamentary_system_manufacturers
+		}
+		uncivic_parliamentary_system_socialists = {
+			remove_modifier = uncivic_parliamentary_system_socialists
+		}
 	}
 	if = {
 		limit = { has_modifier = uncivic_parliamentary_system_uncovered_meddling }
@@ -114,6 +150,42 @@ uncivic_parliamentary_system_finalize_election = {
 				}
 				xenoist = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_xenoist } }
+				}
+				capitalist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_capitalist } }
+				}
+				conservative = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_conservative } }
+				}
+				environmentalist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_environmentalist } }
+				}
+				industrialist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_industrialist } }
+				}
+				populist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_populist } }
+				}
+				socialist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_socialist } }
+				}
+				bankers = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_bankers } }
+				}
+				conservatives = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_conservatives } }
+				}
+				environmentalists = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_environmentalists } }
+				}
+				labourites = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_labourites } }
+				}
+				manufacturers = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_manufacturers } }
+				}
+				socialists = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_socialists } }
 				}
 			}
 			if = {

@@ -133,6 +133,19 @@ uncivic_technocracy_replace_scientist_trait_with_governor_trait = {
 		leader_trait_inspired_surveyor = {
 			remove_trait = leader_trait_inspired_surveyor
 		}
+		# mod compat traits
+		leader_trait_bugged_highborn_scientist = {
+			remove_trait = leader_trait_bugged_highborn_scientist
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_bugged_highborn_governor }
+		}
+		leader_trait_expertise_bugged_good_trading = {
+			remove_trait = leader_trait_expertise_bugged_good_trading
+			add_trait = uncivic_technocracy_governor_trait_expertise_bugged_good_trading
+		}
+		leader_trait_expertise_good_trading = {
+			remove_trait = leader_trait_expertise_good_trading
+			add_trait = uncivic_technocracy_governor_trait_expertise_good_trading
+		}
 		# uncivic traits (other civics)
 		uncivic_shadow_council_scientist_trait_shadow_councilor = {
 			remove_trait = uncivic_shadow_council_scientist_trait_shadow_councilor
@@ -399,6 +412,19 @@ uncivic_technocracy_replace_governor_trait_with_scientist_trait = {
 			remove_trait = leader_trait_governor_brainslug
 			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_scientist_brainslug }
 		}
+		# mod compat convertible traits
+		leader_trait_bugged_highborn_governor = {
+			remove_trait = leader_trait_bugged_highborn_governor
+			mmu_leaders_add_trait_if_absent = { TRAIT = leader_trait_bugged_highborn_scientist }
+		}
+		uncivic_technocracy_governor_trait_expertise_bugged_good_trading = {
+			remove_trait = uncivic_technocracy_governor_trait_expertise_bugged_good_trading
+			add_trait = leader_trait_expertise_bugged_good_trading
+		}
+		uncivic_technocracy_governor_trait_expertise_good_trading = {
+			remove_trait = uncivic_technocracy_governor_trait_expertise_good_trading
+			add_trait = leader_trait_expertise_good_trading
+		}
 		# uncivic traits (other civics)
 		uncivic_shadow_council_governor_trait_shadow_councilor = {
 			remove_trait = uncivic_shadow_council_governor_trait_shadow_councilor
@@ -623,6 +649,15 @@ uncivic_technocracy_replace_governor_trait_with_scientist_trait = {
 uncivic_technocracy_replace_technocracy_trait_with_random = {
 	switch = {
 		trigger = has_trait
+		# mod compat traits
+		uncivic_technocracy_governor_trait_expertise_bugged_good_trading = {
+			remove_trait = uncivic_technocracy_governor_trait_expertise_bugged_good_trading
+			uncivic_technocracy_add_random_leader_trait = yes
+		}
+		uncivic_technocracy_governor_trait_expertise_good_trading = {
+			remove_trait = uncivic_technocracy_governor_trait_expertise_good_trading
+			uncivic_technocracy_add_random_leader_trait = yes
+		}
 		# uncivic technocracy governor traits
 		uncivic_technocracy_governor_trait_mindful = {
 			remove_trait = uncivic_technocracy_governor_trait_mindful
@@ -1433,6 +1468,28 @@ uncivic_technocracy_display_traits = {
 			has_trait = leader_trait_governor_brainslug
 		} }
 		custom_tooltip = leader_trait_scientist_brainslug
+	}
+	# mod compat traits
+	if = {
+		limit = { OR = {
+			has_trait = leader_trait_bugged_highborn_scientist
+			has_trait = leader_trait_bugged_highborn_governor
+		} }
+		custom_tooltip = leader_trait_bugged_highborn_scientist
+	}
+	if = {
+		limit = { OR = {
+			has_trait = uncivic_technocracy_governor_trait_expertise_bugged_good_trading
+			has_trait = leader_trait_expertise_bugged_good_trading
+		} }
+		custom_tooltip = leader_trait_expertise_bugged_good_trading
+	}
+	if = {
+		limit = { OR = {
+			has_trait = uncivic_technocracy_governor_trait_expertise_good_trading
+			has_trait = leader_trait_expertise_good_trading
+		} }
+		custom_tooltip = leader_trait_expertise_good_trading
 	}
 	# uncivic traits
 	if = {
