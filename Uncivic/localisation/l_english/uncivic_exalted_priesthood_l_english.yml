@@ -14,6 +14,12 @@
  uncivic_exalted_priesthood_heresy_cleansed_desc: "After a long struggle, society has been cleansed of the blasphemers."
  uncivic_exalted_priesthood_heretic_amnesty: "Heretic Amnesty"
  uncivic_exalted_priesthood_heretic_amnesty_desc: "The controversial decision to grant amnesty to all heretics was made on this planet."
+ uncivic_exalted_priesthood_leader_influence: "Head of a Galactic Faith"
+ uncivic_exalted_priesthood_leader_influence_desc: "By leading a multinational faith, this Exalted Priesthood wields considerable influence."
+ uncivic_exalted_priesthood_leader_diplo_weight: "$uncivic_exalted_priesthood_leader_influence$"
+ uncivic_exalted_priesthood_leader_diplo_weight_desc: "By leading a multinational faith, this Exalted Priesthood has substantial diplomatic weight."
+ uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith"
+ uncivic_exalted_priesthood_follower_desc: "By adopting an orthodoxy that transcends national borders, the priests of this nation are more effective."
 
  # traits
  uncivic_exalted_priesthood_leader_trait_unorthodox: "Unorthodox"

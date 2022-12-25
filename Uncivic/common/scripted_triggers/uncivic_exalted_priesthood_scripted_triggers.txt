@@ -37,3 +37,49 @@ uncivic_exalted_priesthood_planet_is_unorthodox_center = {
 		has_modifier = uncivic_exalted_priesthood_center_of_heresy
 	}
 }
+
+uncivic_exalted_priesthood_can_be_follower = {
+	has_global_flag = uncivic_exalted_priesthood_enabled
+	is_spiritualist = yes
+	is_homicidal = no
+	OR = {
+		is_subject = no
+		count_agreement = {
+			count = 0
+			limit = { has_term_value = {
+				term = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			} }
+		}
+	}
+}
+
+uncivic_exalted_priesthood_can_be_leader = {
+	has_global_flag = uncivic_exalted_priesthood_enabled
+	is_spiritualist = yes
+	is_homicidal = no
+	has_valid_civic = civic_exalted_priesthood
+	uncivic_exalted_priesthood_is_follower = no
+	OR = {
+		is_subject = no
+		count_agreement = {
+			count = 0
+			limit = { has_term_value = {
+				term = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			} }
+		}
+	}
+}
+
+uncivic_exalted_priesthood_is_follower = {
+	has_global_flag = uncivic_exalted_priesthood_enabled
+	has_country_flag = uncivic_exalted_priesthood_follower
+	[[OF] has_country_flag = uncivic_exalted_priesthood_follower_of_@$OF$]
+}
+
+uncivic_exalted_priesthood_is_leader = {
+	has_global_flag = uncivic_exalted_priesthood_enabled
+	has_country_flag = uncivic_exalted_priesthood_leader
+	[[OF] has_country_flag = uncivic_exalted_priesthood_leader_of_@$OF$]
+}
