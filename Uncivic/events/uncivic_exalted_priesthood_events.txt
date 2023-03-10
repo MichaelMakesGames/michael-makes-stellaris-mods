@@ -781,6 +781,771 @@ planet_event = {
 	}
 }
 
+#  dP""b8    db    88        db     dP""b8 888888 88  dP""b8
+# dP   `"   dPYb   88       dPYb   dP   `"   88   88 dP   `"
+# Yb  "88  dP__Yb  88  .o  dP__Yb  Yb        88   88 Yb
+#  YboodP dP""""Yb 88ood8 dP""""Yb  YboodP   88   88  YboodP
+#
+# 888888    db    88 888888 88  88 .dP"Y8
+# 88__     dPYb   88   88   88  88 `Ybo."
+# 88""    dP__Yb  88   88   888888 o.`Y8b
+# 88     dP""""Yb 88   88   88  88 8bodP'
+
+# AI requests to join Galactic Faith
+country_event = {
+	id = uncivic_exalted_priesthood.701
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_ai = yes
+		uncivic_exalted_priesthood_can_be_follower = yes
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				uncivic_exalted_priesthood_is_leader = { OF = root }
+			}
+			save_event_target_as = uncivic_exalted_priesthood_current_leader
+		}
+		# leave current leader
+		if = {
+			limit = {
+				check_variable_arithmetic = {
+					which = root.value:uncivic_exalted_priesthood_follower_acceptance
+					value > 0
+				}
+			}
+			uncivic_exalted_priesthood_stop_following = yes
+		}
+		# set acceptance
+		every_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				uncivic_exalted_priesthood_can_be_leader = yes
+				is_country_type = default
+				has_communications = root
+				NOT = { has_country_flag = uncivic_exalted_priesthood_rejected_follower_@root }
+				NOT = { uncivic_exalted_priesthood_is_leader = { OF = root } }
+			}
+			save_event_target_as = uncivic_exalted_priesthood_proposed_leader
+			set_variable = {
+				which = uncivic_exalted_priesthood_acceptance_for_leadership
+				value = root.value:uncivic_exalted_priesthood_follower_acceptance
+			}
+		}
+		# send event to highest acceptance
+		if = {
+			limit = {
+				any_country = {
+					is_variable_set = uncivic_exalted_priesthood_acceptance_for_leadership
+					check_variable_arithmetic = {
+						which = uncivic_exalted_priesthood_acceptance_for_leadership
+						value > 0
+					}
+				}
+			}
+			ordered_country = {
+				position = 0
+				order_by = uncivic_exalted_priesthood_acceptance_for_leadership
+				limit = { is_variable_set = uncivic_exalted_priesthood_acceptance_for_leadership }
+				save_event_target_as = uncivic_exalted_priesthood_proposed_leader
+				country_event = {
+					id = uncivic_exalted_priesthood.702
+					# scopes = { from = root }
+				}
+			}
+		}
+		# cleanup
+		every_country = {
+			limit = { is_variable_set = uncivic_exalted_priesthood_acceptance_for_leadership }
+			clear_variable = uncivic_exalted_priesthood_acceptance_for_leadership
+		}
+	}
+}
+
+# FROM requests to join ROOT's Galactic Faith
+country_event = {
+	id = uncivic_exalted_priesthood.702
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.702.title
+	desc = uncivic_exalted_priesthood.702.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	# accept
+	option = {
+		name = uncivic_exalted_priesthood.702.accept
+		hidden_effect = {
+			from = {
+				uncivic_exalted_priesthood_become_follower = yes
+			}
+		}
+		ai_chance = {
+			weight = 1000
+		}
+	}
+	# reject
+	option = {
+		name = uncivic_exalted_priesthood.702.reject
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uncivic_exalted_priesthood_rejected_follower_@from
+				years = 20
+			}
+		}
+		ai_chance = {
+			weight = 0
+		}
+	}
+}
+
+country_event = {
+	id = uncivic_exalted_priesthood.711
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.711.title
+	desc = uncivic_exalted_priesthood.711.desc
+	picture = GFX_evt_hand_shake
+	auto_opens = yes
+	immediate = {
+		mmu_paging_save_event_targets = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			PAGED_ENTITY_TYPE = country
+		}
+		save_event_target_as = uncivic_exalted_priesthood_proposed_leader
+		every_country = {
+			limit = { is_variable_set = uncivic_exalted_priesthood_follower_invite_paging_index }
+			random_country = {
+				limit = { uncivic_exalted_priesthood_is_leader = { OF = prev } }
+				save_event_target_as = uncivic_exalted_priesthood_current_leader
+				prev = {
+					set_variable = {
+						which = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
+						value = value:uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
+					}
+					set_variable = {
+						which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
+						value = value:uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
+					}
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8_leader
+				}
+				if = {
+					limit = {
+						exists = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9
+						prev = { is_same_value = event_target:uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9 }
+					}
+					save_event_target_as = uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9_leader
+				}
+			}
+			set_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance
+				value = value:uncivic_exalted_priesthood_follower_acceptance
+			}
+			set_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion
+				value = value:uncivic_exalted_priesthood_follower_acceptance_from_opinion
+			}
+			set_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power
+				value = value:uncivic_exalted_priesthood_follower_acceptance_from_relative_power
+			}
+		}
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 0
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_0
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 0 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 1
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_1
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 1 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 2
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_2
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 2 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 3
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_3
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 3 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 4
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_4
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 4 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 5
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_5
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 5 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 6
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_6
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 6 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 7
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_7
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 7 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 8
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_8
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 8 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			NUMBER = 9
+		} }
+		name = uncivic_exalted_priesthood_follower_invite_paging_9
+		uncivic_exalted_priesthood_follower_invite_paging_effect = { NUMBER = 9 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_next = {
+				PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+				PAGED_ENTITY_TYPE = country
+			}
+		}
+		name = NEXT
+		mmu_paging_next = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging }
+		country_event = { id = uncivic_exalted_priesthood.801 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging }
+		}
+		name = PREV
+		mmu_paging_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging }
+		country_event = { id = uncivic_exalted_priesthood.801 }
+	}
+	option = {
+		name = CLOSE
+		every_country = {
+			limit = { is_variable_set = uncivic_exalted_priesthood_follower_invite_paging_index }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_relative_power }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader }
+		}
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
+			PAGED_ENTITY_TYPE = country
+		}
+	}
+}
+
+# FROM invites ROOT to join faith
+country_event = {
+	id = uncivic_exalted_priesthood.712
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.712.title
+	desc = uncivic_exalted_priesthood.712.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	immediate = {
+		from = {
+			save_event_target_as = uncivic_exalted_priesthood_proposed_leader
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood.712.accept
+		custom_tooltip = uncivic_exalted_priesthood.712.accept.tooltip
+		hidden_effect = {
+			uncivic_exalted_priesthood_become_follower = yes
+		}
+		from = {
+			country_event = {
+				id = uncivic_exalted_priesthood.713
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1000
+				check_variable_arithmetic = {
+					which = value:uncivic_exalted_priesthood_follower_acceptance
+					value > 0
+				}
+			}
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood.712.reject
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uncivic_exalted_priesthood_rejected_invite_from_@from
+				years = 20
+			}
+		}
+		from = {
+			country_event = {
+				id = uncivic_exalted_priesthood.714
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1000
+				check_variable_arithmetic = {
+					which = value:uncivic_exalted_priesthood_follower_acceptance
+					value <= 0
+				}
+			}
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood.712.reject_forever
+		trigger = { from = { is_ai = yes } }
+		hidden_effect = {
+			set_country_flag = uncivic_exalted_priesthood_rejected_invite_from_@from
+		}
+		from = {
+			country_event = {
+				id = uncivic_exalted_priesthood.714
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# FROM accepted ROOT's invitation to join faith
+country_event = {
+	id = uncivic_exalted_priesthood.713
+	is_triggered_only = yes
+	diplomatic = yes
+	title = uncivic_exalted_priesthood.713.title
+	desc = uncivic_exalted_priesthood.713.desc
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	option = {
+		name = PRAISE
+	}
+}
+
+# FROM rejected ROOT's invitation to join faith
+country_event = {
+	id = uncivic_exalted_priesthood.714
+	is_triggered_only = yes
+	diplomatic = yes
+	title = uncivic_exalted_priesthood.714.title
+	desc = uncivic_exalted_priesthood.714.desc
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# AI invites player to join faith
+# on_monthly_pulse_country
+country_event = {
+	id = uncivic_exalted_priesthood.715
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		uncivic_exalted_priesthood_can_be_leader = yes
+		is_ai = yes
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				uncivic_exalted_priesthood_can_be_follower = yes
+				NOT = { uncivic_exalted_priesthood_is_follower = { OF = root } }
+				is_ai = no
+				their_opinion = {
+					who = root
+					value > 0
+				}
+			}
+			country_event = {
+				id = uncivic_exalted_priesthood.712
+			}
+		}
+	}
+}
+
+
+# Galactic Faith formed
+country_event = {
+	id = uncivic_exalted_priesthood.721
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.721.title
+	desc = uncivic_exalted_priesthood.721.desc
+	picture = GFX_evt_hyper_relay_conjunction
+	option = {
+		name = PRAISE
+		ai_chance = {
+			weight = 1000
+		}
+	}
+	option = {
+		name = WORRYING
+	}
+}
+
+# Yb    dP 88 888888 Yb        dP
+#  Yb  dP  88 88__    Yb  db  dP
+#   YbdP   88 88""     YbdPYbdP
+#    YP    88 888888    YP  YP
+#
+#  dP""b8    db    88        db     dP""b8 888888 88  dP""b8
+# dP   `"   dPYb   88       dPYb   dP   `"   88   88 dP   `"
+# Yb  "88  dP__Yb  88  .o  dP__Yb  Yb        88   88 Yb
+#  YboodP dP""""Yb 88ood8 dP""""Yb  YboodP   88   88  YboodP
+#
+# 888888    db    88 888888 88  88 .dP"Y8
+# 88__     dPYb   88   88   88  88 `Ybo."
+# 88""    dP__Yb  88   88   888888 o.`Y8b
+# 88     dP""""Yb 88   88   88  88 8bodP'
+
+country_event = {
+	id = uncivic_exalted_priesthood.801
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.801.title
+	desc = uncivic_exalted_priesthood.801.desc
+	picture = GFX_evt_hyper_relay_conjunction
+	auto_opens = yes
+	immediate = {
+		mmu_paging_save_event_targets = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			PAGED_ENTITY_TYPE = country
+		}
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 0
+		} }
+		name = uncivic_exalted_priesthood_leader_0
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 0 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 1
+		} }
+		name = uncivic_exalted_priesthood_leader_1
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 1 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 2
+		} }
+		name = uncivic_exalted_priesthood_leader_2
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 2 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 3
+		} }
+		name = uncivic_exalted_priesthood_leader_3
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 3 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 4
+		} }
+		name = uncivic_exalted_priesthood_leader_4
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 4 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 5
+		} }
+		name = uncivic_exalted_priesthood_leader_5
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 5 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 6
+		} }
+		name = uncivic_exalted_priesthood_leader_6
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 6 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 7
+		} }
+		name = uncivic_exalted_priesthood_leader_7
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 7 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 8
+		} }
+		name = uncivic_exalted_priesthood_leader_8
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 8 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			NUMBER = 9
+		} }
+		name = uncivic_exalted_priesthood_leader_9
+		uncivic_exalted_priesthood_leader_paging_effect = { NUMBER = 9 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_next = {
+				PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+				PAGED_ENTITY_TYPE = country
+			}
+		}
+		name = NEXT
+		mmu_paging_next = { PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging }
+		country_event = { id = uncivic_exalted_priesthood.801 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging }
+		}
+		name = PREV
+		mmu_paging_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging }
+		country_event = { id = uncivic_exalted_priesthood.801 }
+	}
+	option = {
+		name = CLOSE
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
+			PAGED_ENTITY_TYPE = country
+		}
+	}
+}
+
+country_event = {
+	id = uncivic_exalted_priesthood.802
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.802.title
+	desc = uncivic_exalted_priesthood.802.desc
+	picture = GFX_evt_hyper_relay_conjunction
+	auto_opens = yes
+	immediate = {
+		mmu_paging_save_event_targets = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			PAGED_ENTITY_TYPE = country
+		}
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 0
+		} }
+		name = uncivic_exalted_priesthood_follower_0
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 0 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 1
+		} }
+		name = uncivic_exalted_priesthood_follower_1
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 1 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 2
+		} }
+		name = uncivic_exalted_priesthood_follower_2
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 2 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 3
+		} }
+		name = uncivic_exalted_priesthood_follower_3
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 3 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 4
+		} }
+		name = uncivic_exalted_priesthood_follower_4
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 4 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 5
+		} }
+		name = uncivic_exalted_priesthood_follower_5
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 5 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 6
+		} }
+		name = uncivic_exalted_priesthood_follower_6
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 6 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 7
+		} }
+		name = uncivic_exalted_priesthood_follower_7
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 7 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 8
+		} }
+		name = uncivic_exalted_priesthood_follower_8
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 8 }
+	}
+	option = {
+		trigger = { mmu_paging_current_page_has_entity = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			NUMBER = 9
+		} }
+		name = uncivic_exalted_priesthood_follower_9
+		uncivic_exalted_priesthood_follower_paging_effect = { NUMBER = 9 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_next = {
+				PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+				PAGED_ENTITY_TYPE = country
+			}
+		}
+		name = NEXT
+		mmu_paging_next = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging }
+		country_event = { id = uncivic_exalted_priesthood.802 }
+	}
+	option = {
+		trigger = {
+			mmu_paging_has_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging }
+		}
+		name = PREV
+		mmu_paging_prev = { PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging }
+		country_event = { id = uncivic_exalted_priesthood.802 }
+	}
+	option = {
+		name = BACK
+		mmu_paging_clear_all = {
+			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_paging
+			PAGED_ENTITY_TYPE = country
+		}
+		country_event = { id = uncivic_exalted_priesthood.801 }
+	}
+}
+
 # 8b    d8 88 .dP"Y8  dP""b8
 # 88b  d88 88 `Ybo." dP   `"
 # 88YbdP88 88 o.`Y8b Yb
@@ -867,6 +1632,62 @@ planet_event = {
 		if = {
 			limit = { has_modifier = uncivic_exalted_priesthood_heretic_amnesty }
 			remove_modifier = uncivic_exalted_priesthood_heretic_amnesty
+		}
+	}
+}
+
+# on_monthly_pulse_country
+# recalc leader modifier
+# clean up invalid followers
+# clean up invalid leaders
+country_event = {
+	id = uncivic_exalted_priesthood.621
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_can_be_follower = no
+				uncivic_exalted_priesthood_is_follower = yes
+			}
+			uncivic_exalted_priesthood_stop_following = yes
+		}
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_can_be_leader = no
+				uncivic_exalted_priesthood_is_leader = yes
+			}
+			every_country = {
+				limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+				uncivic_exalted_priesthood_stop_following = yes
+			}
+		}
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_is_leader = yes
+				count_country = {
+					count = 0
+					limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+				}
+			}
+			remove_country_flag = uncivic_exalted_priesthood_leader
+			uncivic_exalted_priesthood_recalculate_leader_modifier = yes
+		}
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_is_follower = yes
+				count_country = {
+					count = 0
+					limit = { uncivic_exalted_priesthood_is_leader = { OF = prev } }
+				}
+			}
+			uncivic_exalted_priesthood_stop_following = yes
+		}
+		if = {
+			limit = {
+				uncivic_exalted_priesthood_is_leader = yes
+			}
+			uncivic_exalted_priesthood_recalculate_leader_modifier = yes
 		}
 	}
 }

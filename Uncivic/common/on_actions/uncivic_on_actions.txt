@@ -33,6 +33,9 @@ on_monthly_pulse_country = {
 		uncivic_technocracy.431 # technocracy governor scripted traits
 		uncivic_parliamentary_system.301 # clean up ineligible planets
 		uncivic_exalted_priesthood.201 # spread unorthodoxy/heresy
+		uncivic_exalted_priesthood.621 # recalc and validation
+		uncivic_exalted_priesthood.701 # AI requests to join faith
+		uncivic_exalted_priesthood.715 # AI invites player to join faith
 	}
 }
 

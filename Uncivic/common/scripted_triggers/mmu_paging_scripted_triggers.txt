@@ -25,3 +25,14 @@ mmu_paging_has_next = {
 		}
 	}
 }
+
+mmu_paging_instance_is_free = {
+	custom_tooltip = {
+		fail_text = mmu_paging_instance_being_used
+		NOT = {
+			any_$PAGED_ENTITY_TYPE$ = {
+				is_variable_set = $PAGING_INSTANCE$_index
+			}
+		}
+	}
+}

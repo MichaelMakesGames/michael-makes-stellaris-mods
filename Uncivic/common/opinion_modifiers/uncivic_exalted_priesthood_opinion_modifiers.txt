@@ -1,0 +1,127 @@
+uncivic_exalted_priesthood_opinion_modifier_same_faith = {
+	opinion = {
+		base = 100
+	}
+	trigger = {
+		OR = {
+			uncivic_exalted_priesthood_is_leader = yes
+			uncivic_exalted_priesthood_is_follower = yes
+		}
+		OR = {
+			uncivic_exalted_priesthood_is_leader = { OF = from }
+			uncivic_exalted_priesthood_is_follower = { OF = from }
+			any_country = {
+				uncivic_exalted_priesthood_is_leader = { OF = prev }
+				uncivic_exalted_priesthood_is_leader = { OF = from }
+			}
+		}
+	}
+}
+
+uncivic_exalted_priesthood_opinion_modifier_friendly_faith = {
+	opinion = {
+		base = 50
+	}
+	trigger = {
+		OR = {
+			# root's leader is friendly with from, who is leader (or could be)
+			AND = {
+				uncivic_exalted_priesthood_is_follower = yes
+				from = { uncivic_exalted_priesthood_can_be_leader = yes }
+				any_country = {
+					NOT = { is_same_value = from }
+					uncivic_exalted_priesthood_is_leader = { OF = prev }
+					opinion_level = {
+						who = from
+						level > neutral
+					}
+				}
+			}
+			# root's leader is friendly with from's leader
+			AND = {
+				uncivic_exalted_priesthood_is_follower = yes
+				from = { uncivic_exalted_priesthood_is_follower = yes }
+				any_country = {
+					uncivic_exalted_priesthood_is_leader = { OF = from }
+					any_country = {
+						NOT = { is_same_value = prev }
+						uncivic_exalted_priesthood_is_leader = { OF = prevprev }
+						opinion_level = {
+							who = prev
+							level > neutral
+						}
+					}
+				}
+			}
+			# root is leader and is friendly with from's leader
+			AND = {
+				uncivic_exalted_priesthood_can_be_leader = yes
+				from = { uncivic_exalted_priesthood_is_follower = yes }
+				any_country = {
+					uncivic_exalted_priesthood_is_leader = { OF = from }
+					NOT = { is_same_value = prev }
+					prev = {
+						opinion_level = {
+							who = prev
+							level > neutral
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+uncivic_exalted_priesthood_opinion_modifier_unfriendly_faith = {
+	opinion = {
+		base = -50
+	}
+	trigger = {
+		OR = {
+			# root's leader is unfriendly with from, who is leader (or could be)
+			AND = {
+				uncivic_exalted_priesthood_is_follower = yes
+				from = { uncivic_exalted_priesthood_can_be_leader = yes }
+				any_country = {
+					NOT = { is_same_value = from }
+					uncivic_exalted_priesthood_is_leader = { OF = prev }
+					opinion_level = {
+						who = from
+						level < neutral
+					}
+				}
+			}
+			# root's leader is unfriendly with from's leader
+			AND = {
+				uncivic_exalted_priesthood_is_follower = yes
+				from = { uncivic_exalted_priesthood_is_follower = yes }
+				any_country = {
+					uncivic_exalted_priesthood_is_leader = { OF = from }
+					any_country = {
+						NOT = { is_same_value = prev }
+						uncivic_exalted_priesthood_is_leader = { OF = prevprev }
+						opinion_level = {
+							who = prev
+							level < neutral
+						}
+					}
+				}
+			}
+			# root is leader and is unfriendly with from's leader
+			AND = {
+				uncivic_exalted_priesthood_can_be_leader = yes
+				from = { uncivic_exalted_priesthood_is_follower = yes }
+				any_country = {
+					uncivic_exalted_priesthood_is_leader = { OF = from }
+					NOT = { is_same_value = prev }
+					prev = {
+						opinion_level = {
+							who = prev
+							level < neutral
+						}
+					}
+				}
+			}
+		}
+	}
+}

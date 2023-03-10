@@ -38,10 +38,7 @@ uncivic_exalted_priesthood_planet_is_unorthodox_center = {
 	}
 }
 
-uncivic_exalted_priesthood_can_be_follower = {
-	has_global_flag = uncivic_exalted_priesthood_enabled
-	is_spiritualist = yes
-	is_homicidal = no
+uncivic_exalted_priesthood_has_unrestricted_diplomacy = {
 	OR = {
 		is_subject = no
 		count_agreement = {
@@ -54,22 +51,22 @@ uncivic_exalted_priesthood_can_be_follower = {
 	}
 }
 
+uncivic_exalted_priesthood_can_be_follower = {
+	has_global_flag = uncivic_exalted_priesthood_enabled
+	is_country_type = default
+	is_spiritualist = yes
+	is_homicidal = no
+	NOT = { has_valid_civic = civic_exalted_priesthood }
+	uncivic_exalted_priesthood_has_unrestricted_diplomacy = yes
+}
+
 uncivic_exalted_priesthood_can_be_leader = {
 	has_global_flag = uncivic_exalted_priesthood_enabled
+	is_country_type = default
 	is_spiritualist = yes
 	is_homicidal = no
 	has_valid_civic = civic_exalted_priesthood
-	uncivic_exalted_priesthood_is_follower = no
-	OR = {
-		is_subject = no
-		count_agreement = {
-			count = 0
-			limit = { has_term_value = {
-				term = subject_diplomacy
-				value = subject_can_not_do_diplomacy
-			} }
-		}
-	}
+	uncivic_exalted_priesthood_has_unrestricted_diplomacy = yes
 }
 
 uncivic_exalted_priesthood_is_follower = {

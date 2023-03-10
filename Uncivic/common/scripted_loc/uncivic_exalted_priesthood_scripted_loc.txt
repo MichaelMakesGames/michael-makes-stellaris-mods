@@ -1,0 +1,125 @@
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptance
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_opinion_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_opinion_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader"
+		trigger = {
+			is_variable_set = uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
+		}
+	}
+	default = BLANK_STRING
+}

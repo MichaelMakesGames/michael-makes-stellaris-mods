@@ -78,9 +78,11 @@ mmu_paging_clear_page = {
 
 mmu_paging_init = {
 	hidden_effect = {
-		set_variable = {
-			which = $PAGING_INSTANCE$_offset
-			value = 0
+		$PAGING_HOST|this$ = {
+			set_variable = {
+				which = $PAGING_INSTANCE$_offset
+				value = 0
+			}
 		}
 		set_variable = {
 			which = $PAGING_INSTANCE$_temp_count
