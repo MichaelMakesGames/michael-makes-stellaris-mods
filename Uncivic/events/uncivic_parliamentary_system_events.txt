@@ -85,6 +85,7 @@ planet_event = {
 	id = uncivic_parliamentary_system.201
 	is_triggered_only = yes
 	hide_window = yes
+	location = root
 	trigger = {
 		exists = owner
 		owner = {
@@ -189,7 +190,7 @@ planet_event = {
 	title = uncivic_parliamentary_system_election
 	desc = uncivic_parliamentary_system_election_desc
 	picture = GFX_evt_voting
-	location = this
+	location = root
 	abort_trigger = {
 		NOT = { has_planet_flag = uncivic_parliamentary_system_election_in_progress }
 	}

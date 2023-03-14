@@ -136,12 +136,14 @@ on_leader_death = {
 on_leader_fired = {
 	events = {
 		uncivic_technocracy.422 # update leader-based country modifiers
+		uncivic_exalted_priesthood.641 # unorthodox leader creates center of unorthodoxy
 	}
 }
 
 on_leader_spawned = {
 	events = {
 		uncivic_technocracy.422 # update leader-based country modifiers
+		uncivic_exalted_priesthood.631 # add unorthodox/hardliner trait to pool leader
 	}
 }
 

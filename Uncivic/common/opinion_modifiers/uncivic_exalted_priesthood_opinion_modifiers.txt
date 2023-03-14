@@ -125,3 +125,30 @@ uncivic_exalted_priesthood_opinion_modifier_unfriendly_faith = {
 		}
 	}
 }
+
+uncivic_exalted_priesthood_opinion_modifier_embraced_heresy = {
+	opinion = {
+		base = -1000
+	}
+	decay = {
+		base = 5
+	}
+}
+
+uncivic_exalted_priesthood_opinion_modifier_declared_heresy = {
+	opinion = {
+		base = -500
+	}
+	decay = {
+		base = 5
+	}
+}
+
+uncivic_exalted_priesthood_opinion_modifier_rejected_reform = {
+	opinion = {
+		base = -200
+	}
+	decay = {
+		base = 5
+	}
+}

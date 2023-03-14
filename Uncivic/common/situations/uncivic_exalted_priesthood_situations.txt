@@ -59,9 +59,21 @@ uncivic_exalted_priesthood_council = {
 					limit = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
 					kill_leader = { show_notification = no }
 				}
+				every_pool_leader = {
+					limit = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
+					kill_leader = { show_notification = no }
+				}
 				# fire event to choose initial policy
 				country_event = {
 					id = uncivic_exalted_priesthood.302
+				}
+				# follower reaction
+				every_relation = {
+					limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+					country_event = {
+						id = uncivic_exalted_priesthood.321
+						scopes = { from = prev }
+					}
 				}
 			}
 		}
@@ -98,10 +110,20 @@ uncivic_exalted_priesthood_council = {
 					50 = { kill_leader = { show_notification = no fire = yes } }
 				}
 			}
+			every_pool_leader = {
+				limit = { has_trait = uncivic_exalted_priesthood_leader_trait_hardliner }
+				random_list = {
+					50 = {
+						remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+						remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+					}
+					50 = { kill_leader = { show_notification = no fire = yes } }
+				}
+			}
 			# set unorthodoxy cooldown
 			set_timed_country_flag = {
 				flag = uncivic_exalted_priesthood_unorthodoxy_cooldown
-				years = 40
+				years = 80
 			}
 			# add country modifier
 			add_modifier = {
@@ -110,6 +132,14 @@ uncivic_exalted_priesthood_council = {
 			}
 			# fire flavor event
 			country_event = { id = uncivic_exalted_priesthood.301 }
+			# follower reaction
+			every_relation = {
+				limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+				country_event = {
+					id = uncivic_exalted_priesthood.331
+					scopes = { from = prev }
+				}
+			}
 		} }
 	}
 	on_abort = {}
@@ -202,19 +232,32 @@ uncivic_exalted_priesthood_council = {
 		}
 		modifier = {
 			add = 5
-			owner = { any_owned_leader = {
+			owner.ruler = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-				leader_class = ruler
-			} }
+			}
 			desc = uncivic_exalted_priesthood_council_hardliner_ruler
 		}
 		modifier = {
 			subtract = 5
-			owner = { any_owned_leader = {
+			owner.ruler = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-				leader_class = ruler
-			} }
+			}
 			desc = uncivic_exalted_priesthood_council_unorthodox_ruler
+		}
+		modifier = {
+			add = 1
+			desc = uncivic_exalted_priesthood_council_momentum
+			current_stage = uncivic_exalted_priesthood_council_declare_heresy_1
+			check_variable_arithmetic = {
+				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
+				value = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+			}
+			owner.ruler = {
+				NOR = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
 		}
 		modifier = {
 			add = 2
@@ -225,6 +268,21 @@ uncivic_exalted_priesthood_council = {
 			add = 4
 			current_stage = uncivic_exalted_priesthood_council_declare_heresy_3
 			desc = uncivic_exalted_priesthood_council_momentum
+		}
+		modifier = {
+			subtract = 1
+			desc = uncivic_exalted_priesthood_council_momentum
+			current_stage = uncivic_exalted_priesthood_council_revise_orthodoxy_1
+			check_variable_arithmetic = {
+				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
+				value = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+			}
+			owner.ruler = {
+				NOR = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
 		}
 		modifier = {
 			subtract = 2
