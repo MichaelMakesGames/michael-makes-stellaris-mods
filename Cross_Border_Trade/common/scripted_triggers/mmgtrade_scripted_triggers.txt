@@ -5,25 +5,12 @@ mmgtrade_is_stnc = {
 
 # star wars legacy of the old republic
 mmgtrade_is_lotor = {
-	OR = {
-		has_global_flag = lotor_era_1_foundation
-		has_global_flag = lotor_era_2_kotor
-		has_global_flag = lotor_era_3_swtor
-	}
+	has_global_flag = lotor_active
 }
 
 # star wars new dawn
 mmgtrade_is_swnd = {
-	OR = {
-		galaxy_size = swnd_canon_huge_map
-		galaxy_size = swnd_canon_large_map
-		galaxy_size = swnd_canon_medium_map
-		galaxy_size = swnd_canon_small_map
-		galaxy_size = swnd_sandbox_huge_map
-		galaxy_size = swnd_sandbox_large_map
-		galaxy_size = swnd_sandbox_medium_map
-		galaxy_size = swnd_sandbox_small_map
-	}
+	has_global_flag = star_wars_new_dawn
 }
 
 mmgtrade_is_supported_overhaul = {
