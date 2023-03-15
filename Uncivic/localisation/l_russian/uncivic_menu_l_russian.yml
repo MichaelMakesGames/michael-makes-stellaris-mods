@@ -16,4 +16,4 @@
 
  uncivic_menu_technocracy_enabled: "£trigger_yes£ Технократия включена"
  uncivic_menu_technocracy_disabled: "£trigger_no£ Технократия отключена"
- uncivic_menu_technocracy_tooltip: "Позволяет преобразовывать ученых в губернаторов\nПозволяет преобразовывать губернаторов в ученых\nВключает политику фокуса на найме технократов"
+ uncivic_menu_technocracy_tooltip: "Enables recruiting governors with scientific Expertise trait"

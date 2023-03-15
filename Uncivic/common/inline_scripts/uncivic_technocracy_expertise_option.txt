@@ -1,0 +1,16 @@
+option = {
+	name = leader_trait_expertise_$EXPERTISE$
+	event_target:uncivic_technocracy_new_leader = {
+		add_trait = uncivic_technocracy_governor_trait_expertise_$EXPERTISE$
+		hidden_effect = {
+			set_name = random
+			remove_trait = uncivic_technocracy_governor_trait_technocrat
+		}
+	}
+	hidden_effect = {
+		clear_variable = uncivic_technocracy_recruitment_cost
+	}
+	ai_chance = {
+		base = 1
+	}
+}

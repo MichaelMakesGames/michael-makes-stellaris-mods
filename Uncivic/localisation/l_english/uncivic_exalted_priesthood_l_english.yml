@@ -99,7 +99,7 @@
  uncivic_exalted_priesthood.331.accept: "We accept the teachings of the Exalted Priesthood."
  uncivic_exalted_priesthood.331.reject: "They may bow to the heretics, but we do not."
  uncivic_exalted_priesthood.332.title: "Reform Rejected"
- uncivic_exalted_priesthood.333.desc: "You have shown that you do not have the will to lead the faith. We cannot follow you down this path of heresy."
+ uncivic_exalted_priesthood.332.desc: "You have shown that you do not have the will to lead the faith. We cannot follow you down this path of heresy."
  uncivic_exalted_priesthood.401.title: "Amnesty for Heretics?"
  uncivic_exalted_priesthood.401.desc: "Some Inquisitors have negotiated a deal with the surrendered heretics of [This.GetName]. In exchange for amnesty, they will help convert the other heretics remaining in our empire. It would be controversial among the local population..."
  uncivic_exalted_priesthood.401.tooltip: "Increased chance to remove §HHeresy§! for 2 years"

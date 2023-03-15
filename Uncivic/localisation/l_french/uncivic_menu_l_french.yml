@@ -16,4 +16,4 @@
 
  uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocratie Activée"
  uncivic_menu_technocracy_disabled: "£trigger_no£ Technocratie Désactivée"
- uncivic_menu_technocracy_tooltip: "Autorise la reconversion des scientifiques en gouverneurs\nAutorise la reconversions des gouverneurs en scientifiques\nPermet la décisions de recrutement de Technocrate"
+ uncivic_menu_technocracy_tooltip: "Enables recruiting governors with scientific Expertise trait"
