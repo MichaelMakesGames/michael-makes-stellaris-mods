@@ -1,0 +1,6 @@
+mmu_variables_clear = {
+	if = {
+		limit = { is_variable_set = $WHICH$ }
+		clear_variable = $WHICH$
+	}
+}

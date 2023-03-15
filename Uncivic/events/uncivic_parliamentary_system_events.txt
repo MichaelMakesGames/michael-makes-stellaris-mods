@@ -85,6 +85,7 @@ planet_event = {
 	id = uncivic_parliamentary_system.201
 	is_triggered_only = yes
 	hide_window = yes
+	location = root
 	trigger = {
 		exists = owner
 		owner = {
@@ -189,7 +190,7 @@ planet_event = {
 	title = uncivic_parliamentary_system_election
 	desc = uncivic_parliamentary_system_election_desc
 	picture = GFX_evt_voting
-	location = this
+	location = root
 	abort_trigger = {
 		NOT = { has_planet_flag = uncivic_parliamentary_system_election_in_progress }
 	}
@@ -268,84 +269,84 @@ planet_event = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = capitalist
-					owner = { OR = { has_ethic = ethic_competitive has_ethic = ethic_fanatic_competitive } }
+					owner = { is_competitive = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = conservative
-					owner = { OR = { has_ethic = ethic_elitist has_ethic = ethic_fanatic_elitist } }
+					owner = { is_elitist = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = environmentalist
-					owner = { OR = { has_ethic = ethic_ecocentric has_ethic = ethic_fanatic_ecocentric } }
+					owner = { is_ecocentric = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = industrialist
-					owner = { OR = { has_ethic = ethic_anthropocentric has_ethic = ethic_fanatic_anthropocentric } }
+					owner = { is_anthropocentric = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = populist
-					owner = { OR = { has_ethic = ethic_pluralist has_ethic = ethic_fanatic_pluralist } }
+					owner = { is_pluralist = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = socialist
-					owner = { OR = { has_ethic = ethic_cooperative has_ethic = ethic_fanatic_cooperative } }
+					owner = { is_cooperative = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = bankers
-					owner = { OR = { has_ethic = ethic_capitalism has_ethic = ethic_fanatic_capitalism } }
+					owner = { is_capitalism = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = conservatives
-					owner = { OR = { has_ethic = ethic_elitist has_ethic = ethic_fanatic_elitist } }
+					owner = { is_elitist = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = environmentalists
-					owner = { OR = { has_ethic = ethic_green has_ethic = ethic_fanatic_green } }
+					owner = { is_green = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = labourites
-					owner = { OR = { has_ethic = ethic_pluralist has_ethic = ethic_fanatic_pluralist } }
+					owner = { is_pluralist = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = manufacturers
-					owner = { OR = { has_ethic = ethic_industrial has_ethic = ethic_fanatic_industrial } }
+					owner = { is_industrial = yes }
 				}
 			}
 			modifier = {
 				multiply = 2
 				event_target:uncivic_parliamentary_system_winner = {
 					is_pop_faction_type = socialists
-					owner = { OR = { has_ethic = ethic_socialism has_ethic = ethic_fanatic_socialism } }
+					owner = { is_socialism = yes }
 				}
 			}
 			modifier = {

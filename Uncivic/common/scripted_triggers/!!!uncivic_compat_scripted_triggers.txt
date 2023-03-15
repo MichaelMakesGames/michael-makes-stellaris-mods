@@ -12,3 +12,39 @@ is_separatist_faction = {
 is_nationalist_faction = {
 	always = no
 }
+
+# 888888        db    88b 88 8888b.       dP""b8
+# 88__         dPYb   88Yb88  8I  Yb     dP   `"
+# 88""        dP__Yb  88 Y88  8I  dY     Yb
+# 888888     dP""""Yb 88  Y8 8888Y"       YboodP
+
+is_anthropocentric = {
+	always = no
+}
+is_capitalism = {
+	always = no
+}
+is_competitive = {
+	always = no
+}
+is_cooperative = {
+	always = no
+}
+is_ecocentric = {
+	always = no
+}
+is_elitist = {
+	always = no
+}
+is_green = {
+	always = no
+}
+is_industrial = {
+	always = no
+}
+is_pluralist = {
+	always = no
+}
+is_socialism = {
+	always = no
+}

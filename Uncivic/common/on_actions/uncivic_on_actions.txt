@@ -33,6 +33,9 @@ on_monthly_pulse_country = {
 		uncivic_technocracy.431 # technocracy governor scripted traits
 		uncivic_parliamentary_system.301 # clean up ineligible planets
 		uncivic_exalted_priesthood.201 # spread unorthodoxy/heresy
+		uncivic_exalted_priesthood.621 # recalc and validation
+		uncivic_exalted_priesthood.701 # AI requests to join faith
+		uncivic_exalted_priesthood.715 # AI invites player to join faith
 	}
 }
 
@@ -45,7 +48,6 @@ on_yearly_pulse_country = {
 on_five_year_pulse_country = {
 	events = {
 		uncivic_shadow_council.501 # AI appoint shadow councilors
-		uncivic_technocracy.501 # AI scientist-governor swapping
 	}
 }
 
@@ -133,12 +135,14 @@ on_leader_death = {
 on_leader_fired = {
 	events = {
 		uncivic_technocracy.422 # update leader-based country modifiers
+		uncivic_exalted_priesthood.641 # unorthodox leader creates center of unorthodoxy
 	}
 }
 
 on_leader_spawned = {
 	events = {
 		uncivic_technocracy.422 # update leader-based country modifiers
+		uncivic_exalted_priesthood.631 # add unorthodox/hardliner trait to pool leader
 	}
 }
 
@@ -146,21 +150,5 @@ on_ruler_back_to_pre_ruler_class = {
 	events = {
 		uncivic_shadow_council.401 # validate shadow councilor flag/traits
 		uncivic_exalted_priesthood.601 # remove hardliner/unorthodox if needed
-	}
-}
-
-#  dP""b8 88   88 .dP"Y8 888888  dP"Yb  8b    d8
-# dP   `" 88   88 `Ybo."   88   dP   Yb 88b  d88
-# Yb      Y8   8P o.`Y8b   88   Yb   dP 88YbdP88
-#  YboodP `YbodP' 8bodP'   88    YbodP  88 YY 88
-#
-#  dP"Yb  88b 88               db     dP""b8 888888 88  dP"Yb  88b 88 .dP"Y8
-# dP   Yb 88Yb88              dPYb   dP   `"   88   88 dP   Yb 88Yb88 `Ybo."
-# Yb   dP 88 Y88             dP__Yb  Yb        88   88 Yb   dP 88 Y88 o.`Y8b
-#  YbodP  88  Y8 oooooooooo dP""""Yb  YboodP   88   88  YbodP  88  Y8 8bodP'
-
-uncivic_on_leader_converted = {
-	events = {
-		uncivic_parliamentary_system.321
 	}
 }

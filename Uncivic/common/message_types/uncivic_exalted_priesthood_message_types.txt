@@ -85,3 +85,11 @@ message_type = {
 	name = "MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION_TITLE"
 	ping = "ping_notification_red"
 }
+
+message_type = {
+	icon = "GFX_message_other_alert"
+	icon_frame = 2
+	key = "UNCIVIC_EXALTED_PRIESTHOOD_LOST_FOLLOWER"
+	name = "MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_LOST_FOLLOWER_TITLE"
+	ping = "ping_notification_red"
+}

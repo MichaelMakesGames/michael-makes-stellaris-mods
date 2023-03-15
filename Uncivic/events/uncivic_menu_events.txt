@@ -15,18 +15,12 @@ event = {
 			set_global_flag = uncivic_exalted_priesthood_enabled
 			set_global_flag = uncivic_parliamentary_system_enabled
 			set_global_flag = uncivic_shadow_council_enabled
-			if = {
-				limit = { NOT = { has_global_flag = stellarisevolved } }
-				set_global_flag = uncivic_technocracy_enabled
-			}
+			set_global_flag = uncivic_technocracy_enabled
 			event_target:global_event_country = {
 				country_event = { id = uncivic_exalted_priesthood.111 }
 				country_event = { id = uncivic_parliamentary_system.111 }
 				country_event = { id = uncivic_shadow_council.111 }
-				if = {
-					limit = { NOT = { has_global_flag = stellarisevolved } }
-					country_event = { id = uncivic_technocracy.111 }
-				}
+				country_event = { id = uncivic_technocracy.111 }
 			}
 		}
 		set_global_flag = uncivic_installed
@@ -39,14 +33,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		if = {
-			limit = { AND = { 
-				has_global_flag = uncivic_technocracy_enabled
-				has_global_flag = stellarisevolved
-			} }
-			remove_global_flag = uncivic_technocracy_enabled
-			country_event = { id = uncivic_technocracy.112 }
-		}
+		# nothing for now
 	}
 }
 

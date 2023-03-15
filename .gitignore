@@ -2,6 +2,7 @@
 /*/
 !.gitignore
 !.vscode/
+!scripts/
 !/Cross_Border_Trade.mod
 !/Cross_Border_Trade/
 !/Under_Siege.mod

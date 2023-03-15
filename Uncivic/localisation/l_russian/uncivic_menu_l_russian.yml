@@ -4,7 +4,7 @@
 
  uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled"
  uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled"
- uncivic_menu_exalted_priesthood_tooltip: "Enables unorthodoxy and heresy mechanics in your empire"
+ uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics"
 
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Парламентская система включена"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Парламентская система отключена"
@@ -16,4 +16,4 @@
 
  uncivic_menu_technocracy_enabled: "£trigger_yes£ Технократия включена"
  uncivic_menu_technocracy_disabled: "£trigger_no£ Технократия отключена"
- uncivic_menu_technocracy_tooltip: "Позволяет преобразовывать ученых в губернаторов\nПозволяет преобразовывать губернаторов в ученых\nВключает политику фокуса на найме технократов"
+ uncivic_menu_technocracy_tooltip: "Enables recruiting governors with scientific Expertise trait"

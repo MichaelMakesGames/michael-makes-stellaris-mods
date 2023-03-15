@@ -6,7 +6,7 @@ tags={
 	"gameplay"
 	"military"
 }
-version="1.5.2"
-supported_version="3.6.*"
+version="1.6.0"
+supported_version="3.7.*"
 path="/home/mscottmoore/.local/share/Paradox Interactive/Stellaris/mod/Uncivic"
 remote_file_id="2865524513"

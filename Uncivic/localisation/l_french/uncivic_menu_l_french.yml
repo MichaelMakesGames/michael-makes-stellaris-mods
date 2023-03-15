@@ -4,7 +4,7 @@
 
  uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled"
  uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled"
- uncivic_menu_exalted_priesthood_tooltip: "Enables unorthodoxy and heresy mechanics in your empire"
+ uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics"
 
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Système Parlementaire Activé"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Système Parlementaire Désactivé"
@@ -16,4 +16,4 @@
 
  uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocratie Activée"
  uncivic_menu_technocracy_disabled: "£trigger_no£ Technocratie Désactivée"
- uncivic_menu_technocracy_tooltip: "Autorise la reconversion des scientifiques en gouverneurs\nAutorise la reconversions des gouverneurs en scientifiques\nPermet la décisions de recrutement de Technocrate"
+ uncivic_menu_technocracy_tooltip: "Enables recruiting governors with scientific Expertise trait"
