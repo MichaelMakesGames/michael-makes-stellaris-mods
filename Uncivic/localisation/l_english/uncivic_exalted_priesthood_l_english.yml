@@ -241,6 +241,18 @@
  uncivic_exalted_priesthood_follower_invite_paging_8_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8_leader.GetName]§!"
  uncivic_exalted_priesthood_follower_invite_paging_9_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9_leader.GetName]§!"
 
+ # map mode
+ uncivic_exalted_priesthood_galactic_faiths_map_mode: "Galactic Faiths"
+ uncivic_exalted_priesthood_galactic_faiths_map_mode_desc: "Empire borders will be colored based on if they belong to same, different, or no Galactic Faith."
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_LEADER: "§H[This.GetName]§!\nLeads the Galactic Faith followed by §Y[From.GetName]§!"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_FOLLOWER: "§H[This.GetName]§!\nFollows §Y[From.GetName]§!'s Galactic Faith"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SAME_FAITH: "§H[This.GetName]§!\nFollows the same Galactic Faith as §Y[From.GetName]§!"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_LEADER: "§H[This.GetName]§!\nLeads a Galactic Faith"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_FOLLOWER: "§H[This.GetName]§!\nFollows a Galactic Faith"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SPIRITUALIST: "§H[This.GetName]§!\nIs Spiritualist but does not follow a Galactic Faith"
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_NON_SPIRITUALIST: "§H[This.GetName]§!\nIs not Spiritualist"
+
+
  # misc
  uncivic_exalted_priesthood_join_faith: "Join Galactic Faith"
  uncivic_exalted_priesthood_leave_faith: "Leave Galactic Faith"

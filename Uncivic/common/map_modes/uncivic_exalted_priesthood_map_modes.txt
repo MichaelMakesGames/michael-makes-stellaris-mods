@@ -1,0 +1,77 @@
+uncivic_exalted_priesthood_galactic_faiths_map_mode = {
+	icon = "GFX_map_mode_uncivic_exalted_priesthood_galactic_faiths"
+	enable_terra_incognita = yes
+
+	# same country
+	color = {
+		value = hsv { 0.58 1.0 0.8 1.0 }
+		custom_tooltip = "DIPLOMATIC_MAP_MODE_SAME_EMPIRE"
+		condition = {
+			exists = from
+			is_same_empire = from
+		}
+	}
+	# leader of FROM
+	color = {
+		value = hsv { 0.7 1.0 0.5 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_LEADER"
+		condition = {
+			exists = from
+			uncivic_exalted_priesthood_is_leader = { OF = from }
+		}
+	}
+	# follower of FROM
+	color = {
+		value = hsv { 0.58 0.7 0.7 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_FOLLOWER"
+		condition = {
+			exists = from
+			uncivic_exalted_priesthood_is_follower = { OF = from }
+		}
+	}
+	# same faith as FROM
+	color = {
+		value = hsv { 0.7 0.7 0.7 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SAME_FAITH"
+		condition = {
+			exists = from
+			any_country = {
+				is_country_type = default
+				uncivic_exalted_priesthood_is_leader = { OF = from }
+				uncivic_exalted_priesthood_is_leader = { OF = prev }
+			}
+		}
+	}
+	# follower of diff faith
+	color = {
+		value = hsv { 0.08 0.7 0.7 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_FOLLOWER"
+		condition = {
+			uncivic_exalted_priesthood_is_follower = yes
+		}
+	}
+	# leader of diff faith
+	color = {
+		value = hsv { 0.08 1.0 0.5 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_LEADER"
+		condition = {
+			uncivic_exalted_priesthood_is_leader = yes
+		}
+	}
+	# no faith spiritualist
+	color = {
+		value = hsv { 0.14 0.4 0.9 1.0 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SPIRITUALIST"
+		condition = {
+			is_spiritualist = yes
+		}
+	}
+	# no faith non-spiritualist
+	color = {
+		value = hsv { 0.0 0.0 0.8 0.7 }
+		custom_tooltip = "UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_NON_SPIRITUALIST"
+		condition = {
+			is_spiritualist = no
+		}
+	}
+}

@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_map_mode_uncivic_exalted_priesthood_galactic_faiths"
+		texturefile = "gfx/interface/icons/map_mode_uncivic_exalted_priesthood_galactic_faiths.dds"
+		noOfFrames = 2
+	}
+}

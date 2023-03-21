@@ -1483,11 +1483,13 @@ country_event = {
 		is_ai = yes
 	}
 	immediate = {
-		every_country = {
+		every_relation = {
 			limit = {
 				uncivic_exalted_priesthood_can_be_follower = yes
 				NOT = { uncivic_exalted_priesthood_is_follower = { OF = root } }
+				NOT = { has_country_flag = uncivic_exalted_priesthood_rejected_invite_from_@root }
 				is_ai = no
+				has_communications = root
 				their_opinion = {
 					who = root
 					value > 0
