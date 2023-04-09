@@ -1,0 +1,13 @@
+mmu_simple_trigger = {
+	base = $BASE|0$
+	add = trigger:$TRIGGER$
+	multiply = $MULTIPLY|1$
+}
+
+mmu_years_of_peace = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = years_of_peace
+		mode = add
+	}
+}

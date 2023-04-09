@@ -1,20 +1,20 @@
 ﻿l_german:
- edict_uncivic_technocracy_recruit_technocrat: "Recruit Technocrat"
- edict_uncivic_technocracy_recruit_technocrat_desc: "Recruit a governor with a specific scientific Expertise trait."
- uncivic_technocracy.201.title: "Recruit Technocrat"
- uncivic_technocracy.201.desc: "Choose a category of technocrat governor to recruit."
- uncivic_technocracy.201.physics: "£physics_research£ $PHYSICS$"
- uncivic_technocracy.201.society: "£society_research£ $SOCIETY$"
- uncivic_technocracy.201.engineering: "£engineering_research£ $ENGINEERING$"
- uncivic_technocracy.202.title: "Recruit Physicist"
- uncivic_technocracy.202.desc: "Choose the expertise of your new technocrat governor."
- uncivic_technocracy.203.title: "Recruit Social Scientist"
- uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$"
- uncivic_technocracy.204.title: "Recruit Engineer"
- uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$"
- uncivic_technocracy_new_leader: "New Technocrat Governor"
- uncivic_technocracy_governor_trait_technocrat: "Technocrat"
- uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet."
+ edict_uncivic_technocracy_recruit_technocrat: "Recruit Technocrat" # UNTRANSLATED
+ edict_uncivic_technocracy_recruit_technocrat_desc: "Recruit a governor with a specific scientific Expertise trait." # UNTRANSLATED
+ uncivic_technocracy.201.title: "Recruit Technocrat" # UNTRANSLATED
+ uncivic_technocracy.201.desc: "Choose a category of technocrat governor to recruit." # UNTRANSLATED
+ uncivic_technocracy.201.physics: "£physics_research£ $PHYSICS$" # UNTRANSLATED
+ uncivic_technocracy.201.society: "£society_research£ $SOCIETY$" # UNTRANSLATED
+ uncivic_technocracy.201.engineering: "£engineering_research£ $ENGINEERING$" # UNTRANSLATED
+ uncivic_technocracy.202.title: "Recruit Physicist" # UNTRANSLATED
+ uncivic_technocracy.202.desc: "Choose the expertise of your new technocrat governor." # UNTRANSLATED
+ uncivic_technocracy.203.title: "Recruit Social Scientist" # UNTRANSLATED
+ uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
+ uncivic_technocracy.204.title: "Recruit Engineer" # UNTRANSLATED
+ uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
+ uncivic_technocracy_new_leader: "New Technocrat Governor" # UNTRANSLATED
+ uncivic_technocracy_governor_trait_technocrat: "Technocrat" # UNTRANSLATED
+ uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet." # UNTRANSLATED
  ##############
  # DEPRECATED #
  ##############
@@ -28,11 +28,11 @@
  uncivic_technocracy_scientist_trait_intellectual_tooltip: "Alle untersuchten Forschungsanlagen werden um 1 erhöht"
  uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Entferne 1-3 Blocker von allen untersuchten Planeten"
  uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Erhalte £unity£ Einigkeit bei der vollständigen Überwachung eines Systems"
- uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!"
- uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!"
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Alle untersuchten £trade_value£ Handelswertanlagen werden verdoppelt"
- uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!"
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Alle untersuchten £trade_value£ Handelswertanlagen pruduzieren £unity£ Einigkeit"
+ uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!" # DO NOT TRANSLATE
+ uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!" # DO NOT TRANSLATE
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits are doubled" # UNTRANSLATED
+ uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!" # DO NOT TRANSLATE
+ uncivic_technocracy_scientist_trait_nuumismatic_priest_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity" # UNTRANSLATED
  uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "Alle untersuchten abbaubaren Lagerstätten werden erhöht"
  uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "Alle untersuchten abbaubaren Lagerstätten ohne Energie gewinnen 1 £energy£ Energie"
  uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "Alle untersuchten £minerals£ Mineralvorkommen werden in strategische Ressourcenvorkommen umgewandelt"

@@ -375,6 +375,7 @@ planet_event = {
 		FACTION = imperialist
 		ETHIC = militarist
 		OPPOSITE = pacifist
+		POTENTIAL = "always = yes"
 		BOOST = "has_fortress_designation = yes"
 	}
 	inline_script = {
@@ -382,6 +383,7 @@ planet_event = {
 		FACTION = isolationist
 		ETHIC = xenophobe
 		OPPOSITE = xenophile
+		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
 	inline_script = {
@@ -389,6 +391,7 @@ planet_event = {
 		FACTION = progressive
 		ETHIC = egalitarian
 		OPPOSITE = authoritarian
+		POTENTIAL = "always = yes"
 		BOOST = "num_pops > 100"
 	}
 	inline_script = {
@@ -396,6 +399,7 @@ planet_event = {
 		FACTION = prosperity
 		ETHIC = pacifist
 		OPPOSITE = militarist
+		POTENTIAL = "always = yes"
 		BOOST = "planet_stability < 40"
 	}
 	inline_script = {
@@ -403,6 +407,7 @@ planet_event = {
 		FACTION = supremacist
 		ETHIC = xenophobe
 		OPPOSITE = xenophile
+		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
 	inline_script = {
@@ -410,6 +415,7 @@ planet_event = {
 		FACTION = technologist
 		ETHIC = materialist
 		OPPOSITE = spiritualist
+		POTENTIAL = "always = yes"
 		BOOST = "has_research_designation = yes"
 	}
 	inline_script = {
@@ -417,6 +423,7 @@ planet_event = {
 		FACTION = totalitarian
 		ETHIC = authoritarian
 		OPPOSITE = egalitarian
+		POTENTIAL = "always = yes"
 		BOOST = "planet_crime >= 30"
 	}
 	inline_script = {
@@ -424,6 +431,7 @@ planet_event = {
 		FACTION = traditionalist
 		ETHIC = spiritualist
 		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
 		BOOST = "has_unity_designation = yes"
 	}
 	inline_script = {
@@ -431,6 +439,7 @@ planet_event = {
 		FACTION = xenoist
 		ETHIC = xenophile
 		OPPOSITE = xenophobe
+		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
 	# special
@@ -446,6 +455,7 @@ planet_event = {
 		FACTION = capitalist
 		ETHIC = competitive
 		OPPOSITE = cooperative
+		POTENTIAL = "always = yes"
 		BOOST = "has_trade_designation = yes"
 	}
 	inline_script = {
@@ -453,6 +463,7 @@ planet_event = {
 		FACTION = conservative
 		ETHIC = elitist
 		OPPOSITE = pluralist
+		POTENTIAL = "always = yes"
 		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
 	}
 	inline_script = {
@@ -460,6 +471,7 @@ planet_event = {
 		FACTION = environmentalist
 		ETHIC = ecocentric
 		OPPOSITE = anthropocentric
+		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
 	inline_script = {
@@ -467,6 +479,7 @@ planet_event = {
 		FACTION = industrialist
 		ETHIC = anthropocentric
 		OPPOSITE = ecocentric
+		POTENTIAL = "always = yes"
 		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
 	}
 	inline_script = {
@@ -474,6 +487,7 @@ planet_event = {
 		FACTION = populist
 		ETHIC = pluralist
 		OPPOSITE = elitist
+		POTENTIAL = "always = yes"
 		BOOST = "AND = { planet_stability < 50 OR = { has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes has_rural_designation = yes } }"
 	}
 	inline_script = {
@@ -481,6 +495,7 @@ planet_event = {
 		FACTION = socialist
 		ETHIC = cooperative
 		OPPOSITE = competitive
+		POTENTIAL = "always = yes"
 		BOOST = "free_amenities < 0"
 	}
 	# evolved/classic
@@ -489,6 +504,7 @@ planet_event = {
 		FACTION = bankers
 		ETHIC = capitalism
 		OPPOSITE = socialism
+		POTENTIAL = "always = yes"
 		BOOST = "has_trade_designation = yes"
 	}
 	inline_script = {
@@ -496,6 +512,7 @@ planet_event = {
 		FACTION = conservatives
 		ETHIC = elitist
 		OPPOSITE = pluralist
+		POTENTIAL = "always = yes"
 		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
 	}
 	inline_script = {
@@ -503,6 +520,7 @@ planet_event = {
 		FACTION = environmentalists
 		ETHIC = green
 		OPPOSITE = industrial
+		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
 	inline_script = {
@@ -510,6 +528,7 @@ planet_event = {
 		FACTION = manufacturers
 		ETHIC = industrial
 		OPPOSITE = green
+		POTENTIAL = "has_global_flag = bug_branch_active"
 		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
 	}
 	inline_script = {
@@ -517,6 +536,7 @@ planet_event = {
 		FACTION = labourites
 		ETHIC = pluralist
 		OPPOSITE = elitist
+		POTENTIAL = "always = yes"
 		BOOST = "AND = { planet_stability < 50 OR = { has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes has_rural_designation = yes } }"
 	}
 	inline_script = {
@@ -524,7 +544,115 @@ planet_event = {
 		FACTION = socialists
 		ETHIC = socialism
 		OPPOSITE = capitalism
+		POTENTIAL = "always = yes"
 		BOOST = "free_amenities < 0"
+	}
+	# divided loyalties
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = aristocrat
+		ETHIC = authoritarian
+		POTENTIAL = "always = yes"
+		BOOST = "NOR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes has_research_designation = yes has_unity_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = indentured
+		ETHIC = authoritarian
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { has_rural_designation = yes has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = elitist
+		ETHIC = egalitarian
+		POTENTIAL = "always = yes"
+		BOOST = "NOR = { has_rural_designation = yes has_mining_designation = yes has_generator_designation = yes has_farming_designation = yes has_fortress_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = labourite
+		ETHIC = egalitarian
+		POTENTIAL = "always = yes"
+		BOOST = "free_amenities < 5 num_unemployed = 0"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = adopter
+		ETHIC = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "has_research_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = perfectionist
+		ETHIC = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "planet_stability < 50 OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes has_research_designation = yes has_unity_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = survivalist
+		ETHIC = militarist
+		POTENTIAL = "always = yes"
+		BOOST = "has_trade_designation = no owner = { is_at_war = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = warmaker
+		ETHIC = militarist
+		POTENTIAL = "always = yes"
+		BOOST = "has_fortress_designation = yes owner = { years_of_peace { value < 10 } }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = activist
+		ETHIC = pacifist
+		POTENTIAL = "always = yes"
+		BOOST = "free_housing >= 5 owner = { is_at_war = no }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = industrialist
+		ETHIC = pacifist
+		POTENTIAL = "NOT = { has_global_flag = bug_branch_active }"
+		BOOST = "OR = { has_factory_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = crusader
+		ETHIC = spiritualist
+		POTENTIAL = "always = yes"
+		BOOST = "has_unity_designation = yes owner = { is_militarist = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = shepherd
+		ETHIC = spiritualist
+		POTENTIAL = "always = yes"
+		BOOST = "planet_stability < 50 free_amenities > 0"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = holistic
+		ETHIC = xenophile
+		POTENTIAL = "always = yes"
+		BOOST = "check_variable_arithmetic = { which = trigger:num_unique_species value > trigger:planet_crime } owner = { NOR = { is_pacifist = yes is_spiritualist = yes is_egalitarian = yes } }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = preservationist
+		ETHIC = xenophile
+		POTENTIAL = "always = yes"
+		BOOST = "NOR = {
+			has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes has_rural_designation = yes has_mining_designation = yes has_farming_designation = yes has_generator_designation = yes } num_uncleared_blockers > 2"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election_extremist
+		FACTION = enslaver
+		ETHIC = xenophobe
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { owner = { has_valid_civic = civic_slaver_guilds } count_owned_pop = { count >= 10 limit = { is_enslaved = yes } } }"
 	}
 }
 

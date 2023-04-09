@@ -2,9 +2,9 @@
  edict_uncivic_menu: "Uncivic Mod Optionen"
  edict_uncivic_menu_desc: "Aktiviere oder deaktiviere die neuen Uncivic-Mechaniken für bestimmte Staatselemente."
 
- uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled"
- uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled"
- uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics"
+ uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled" # UNTRANSLATED
+ uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled" # UNTRANSLATED
+ uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics" # UNTRANSLATED
 
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Parlamentarisches System Aktiviert"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Parlamentarisches System Deaktiviert"
@@ -14,6 +14,6 @@
  uncivic_menu_shadow_council_disabled: "£trigger_no£ Schattenrat Deaktiviert"
  uncivic_menu_shadow_council_tooltip: "Ermöglicht den Aufstieg von Anführern zu Schattenratsmitgliedern\nAktiviert Schattenrat Aufdeckung-Events"
 
- uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocracy Enabled"
- uncivic_menu_technocracy_disabled: "£trigger_no£ Technocracy Disabled"
+ uncivic_menu_technocracy_enabled: "£trigger_yes£ Technocracy Enabled" # UNTRANSLATED
+ uncivic_menu_technocracy_disabled: "£trigger_no£ Technocracy Disabled" # UNTRANSLATED
  uncivic_menu_technocracy_tooltip: "Enables recruiting governors with scientific Expertise trait"

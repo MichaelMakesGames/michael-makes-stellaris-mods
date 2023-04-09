@@ -1,10 +1,10 @@
 ﻿l_french:
- edict_uncivic_menu: "Uncivic Mod Options"
+ edict_uncivic_menu: "Uncivic Mod Options" # UNTRANSLATED
  edict_uncivic_menu_desc: "Activer ou Désactiver les mécanismes d'Uncivic pour des civismes spécifique."
 
- uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled"
- uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled"
- uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics"
+ uncivic_menu_exalted_priesthood_enabled: "£trigger_yes£ Exalted Priesthood Enabled" # UNTRANSLATED
+ uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled" # UNTRANSLATED
+ uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics" # UNTRANSLATED
 
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Système Parlementaire Activé"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Système Parlementaire Désactivé"

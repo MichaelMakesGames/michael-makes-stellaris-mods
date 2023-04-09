@@ -1,0 +1,259 @@
+﻿l_polish:
+ # modifiers
+ uncivic_exalted_priesthood_unorthodox_beliefs: "Unorthodox Beliefs" # UNTRANSLATED
+ uncivic_exalted_priesthood_unorthodox_beliefs_desc: "The population here has strayed from the officially sanctioned beliefs." # UNTRANSLATED
+ uncivic_exalted_priesthood_center_of_unorthodoxy: "Center of Unorthodoxy" # UNTRANSLATED
+ uncivic_exalted_priesthood_center_of_unorthodoxy_desc: "This planet has become a center of unorthodox thought and preaching." # UNTRANSLATED
+ uncivic_exalted_priesthood_heretical_beliefs: "Heretical Beliefs" # UNTRANSLATED
+ uncivic_exalted_priesthood_heretical_beliefs_desc: "The population here practices banned rituals and beliefs." # UNTRANSLATED
+ uncivic_exalted_priesthood_center_of_heresy: "Center of Heresy" # UNTRANSLATED
+ uncivic_exalted_priesthood_center_of_heresy_desc: "This planet has become a base of operations for false prophets and wayward preachers." # UNTRANSLATED
+ uncivic_exalted_priesthood_revised_orthodoxy: "Revised Orthodoxy" # UNTRANSLATED
+ uncivic_exalted_priesthood_revised_orthodoxy_desc: "Society is adjusting to the new official teachings of the priesthood." # UNTRANSLATED
+ uncivic_exalted_priesthood_heresy_cleansed: "Heresy Cleansed" # UNTRANSLATED
+ uncivic_exalted_priesthood_heresy_cleansed_desc: "After a long struggle, society has been cleansed of the blasphemers." # UNTRANSLATED
+ uncivic_exalted_priesthood_heretic_amnesty: "Heretic Amnesty" # UNTRANSLATED
+ uncivic_exalted_priesthood_heretic_amnesty_desc: "The controversial decision to grant amnesty to all heretics was made on this planet." # UNTRANSLATED
+ uncivic_exalted_priesthood_leader: "Leader of a Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_desc: "By leading a multinational faith, this Exalted Priesthood wields considerable influence." # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_desc: "By adopting the faith of an Exalted Priesthood, the priests of this nation are more effective." # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_diversity_of_belief: "Diversity of Belief" # UNTRANSLATED
+ uncivic_exalted_priesthood_diversity_of_belief_desc: "By welcoming the so-called heretics being persecuted elsewhere, new ideas are flourishing in our empire." # UNTRANSLATED
+ uncivic_exalted_priesthood_old_ways: "The Old Ways" # UNTRANSLATED
+ uncivic_exalted_priesthood_old_ways_desc: "The leader of our Galactic Faith has embraced heresy, but we still carry out the proper rites and rituals." # UNTRANSLATED
+
+ # traits
+ uncivic_exalted_priesthood_leader_trait_unorthodox: "Unorthodox" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_trait_unorthodox_desc: "This leader follows beliefs some consider to be unnatural." # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_trait_hardliner: "Hardliner" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_trait_hardliner_desc: "This leader believes there is no room for compromise with those who stray from the righteous path." # UNTRANSLATED
+
+ # messages
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_SPREAD_TITLE: "Unorthodox Beliefs Spread" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_SPREAD: "Unorthodox beliefs have taken root among the population of $PLANET|Y$" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_SPREAD_TITLE: "Heretical Beliefs Spread" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_SPREAD: "Heretical beliefs have taken root among the population of $PLANET|Y$" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED_TITLE: "Center of Unorthodoxy Formed" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED: "$PLANET|Y$ is now a center of unorthodox teachings" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED_TITLE: "Center of Heresy Formed" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED: "$PLANET|Y$ is now a center of heretical teachings" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER_TITLE: "Unorthodox Leader" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER: "$LEADER|Y$ is now unorthodox" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER_TITLE: "Hardliner Leader" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER: "$LEADER|Y$ is now an orthodox hardliner" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED_TITLE: "Heretical Beliefs Eradicated" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED: "Heretical beliefs are no longer present on $PLANET|Y$" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED_TITLE: "Center of Heresy Eradicated" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED: "$PLANET|Y$ is no longer a center of heretical teachings" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS_TITLE: "Pops Killed by Inquisition" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_TWO_POPS: "Two pops were killed by the Inquisition on $PLANET|Y$" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION_TITLE: "Planet Devastated and Pop Killed by Inquisition" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_POP_AND_DEVASTATION: "$PLANET|Y$ received §R+20§! Devastation and one pop was killed by the Inquisition." # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION_TITLE: "Planet Devastated by Inquisition" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_INQUISITION_DAMAGE_DEVASTATION: "$PLANET|Y$ received §R+40§! Devastation during the Inquisition." # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_LOST_FOLLOWER_TITLE: "Follower Left Faith" # UNTRANSLATED
+ MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_LOST_FOLLOWER: "$COUNTRY|Y$ no longer follows the teachings of our Exalted Priesthood." # UNTRANSLATED
+
+ # situation
+ uncivic_exalted_priesthood_council: "Ecumenical Council" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_type: "Ecumenical Council" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_desc: "A wave of unorthodox beliefs is sweeping through our empire. The priests must debate these new teachings, and decide whether to declare them a heresy or revise the orthodoxy." # UNTRANSLATED
+ uncivic_exalted_priesthood_council_monthly_change_tooltip: "Leaders with the §HUnorthodox§! and §HHardliner§! traits affect the monthly progress. You can dismiss them, but there may be consequences." # UNTRANSLATED
+ uncivic_exalted_priesthood_council_neutral: "Do Not Interfere" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_compromise: "Advocate Compromise" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_hardline: "Support Hardliners" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_hardliner_leaders: "Hardliner Leaders" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_unorthodox_leaders: "Unorthodox Leaders" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_hardliner_ruler: "Hardliner Ruler" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_unorthodox_ruler: "Unorthodox Ruler" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_momentum: "Debate Momentum" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_revise_orthodoxy_1: "$stage_1$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_1: "$stage_1$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_2: "$stage_2$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_3: "$stage_3$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_on_progress_complete_tooltip: "§H$uncivic_exalted_priesthood_unorthodox_beliefs$§! becomes §H$uncivic_exalted_priesthood_heretical_beliefs$§! on all planets\n§H$uncivic_exalted_priesthood_center_of_unorthodoxy$§! becomes §H$uncivic_exalted_priesthood_center_of_heresy$§! on all planets\nKill all §H$uncivic_exalted_priesthood_leader_trait_unorthodox$§! leaders\nEnables §HInquisition§! policy" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_on_fail_tooltip: "Remove §H$uncivic_exalted_priesthood_unorthodox_beliefs$§! from all planets\nRemove §H$uncivic_exalted_priesthood_center_of_unorthodoxy$§! from all planets\nRemove §H$uncivic_exalted_priesthood_leader_trait_unorthodox$§! from all leaders\nAll §H$uncivic_exalted_priesthood_leader_trait_hardliner$§! leaders:\n   50% remove §H$uncivic_exalted_priesthood_leader_trait_hardliner$§!\n   50% fire leader\nAdd country modifier §H$uncivic_exalted_priesthood_revised_orthodoxy$§! for 10 years:\n   §R-5§! $MOD_PLANET_STABILITY_ADD$\n   §Y+50%§! $MOD_POP_ETHICS_SHIFT_SPEED$" # UNTRANSLATED
+
+ # events
+ uncivic_exalted_priesthood.301.title: "Orthodoxy Revised" # UNTRANSLATED
+ uncivic_exalted_priesthood.301.desc: "After much debate, the Ecumenical Council has concluded that these new beliefs can be reconciled with the official teachings of the priesthood. It will take some time for everyone to adapt to these changes, but crisis has been averted." # UNTRANSLATED
+ uncivic_exalted_priesthood.302.title: "Heresy Declared" # UNTRANSLATED
+ uncivic_exalted_priesthood.302.desc: "The priesthood has decided that this heresy cannot be tolerated. An Inquisition has been formed. What will our approach be?\n\n§LYou can change this later in the§! §HInquisition§! §Lpolicy.§!" # UNTRANSLATED
+ uncivic_exalted_priesthood.303.title: "Heresy Cleansed" # UNTRANSLATED
+ uncivic_exalted_priesthood.303.desc: "This is a glorious day for our empire. The last of the heretics have been eradicated. This pestilence of our society is no more! This time will surely be remembered as a golden era, when our people were united in their unquestionable faith!" # UNTRANSLATED
+ uncivic_exalted_priesthood.311.title: "Ecumenical Council Called" # UNTRANSLATED
+ uncivic_exalted_priesthood.311.desc: "$uncivic_exalted_priesthood_council_desc$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.321.title: "Heresy Declared" # UNTRANSLATED
+ uncivic_exalted_priesthood.321.desc: "The §H[From.GetName]§!, leader of our §YGalactic Faith§!, has declared the unorthodox beliefs spreading through their empire to be heretical. They are now launching an inquisition. What cost will need to be paid to eradicate these heretics?" # UNTRANSLATED
+ uncivic_exalted_priesthood.321.accept: "Whatever the cost, we will follow the faith." # UNTRANSLATED
+ uncivic_exalted_priesthood.321.reject: "We cannot accept this. The heretics will find refuge in our lands." # UNTRANSLATED
+ uncivic_exalted_priesthood.322.title: "Inquisition Rejected" # UNTRANSLATED
+ uncivic_exalted_priesthood.322.desc: "We cannot participate in the slaughter your inquisition will surely bring. We will no longer follow your §YGalactic Faith§!, and will welcome the so-called heretics on our planets." # UNTRANSLATED
+ uncivic_exalted_priesthood.331.title: "Orthodoxy Reformed" # UNTRANSLATED
+ uncivic_exalted_priesthood.331.desc: "With unorthodox beliefs spreading on their planets, §H[From.GetName]§! has decided to reform the official teachings of their priests to accommodate the new ideas." # UNTRANSLATED
+ uncivic_exalted_priesthood.331.accept: "We accept the teachings of the Exalted Priesthood." # UNTRANSLATED
+ uncivic_exalted_priesthood.331.reject: "They may bow to the heretics, but we do not." # UNTRANSLATED
+ uncivic_exalted_priesthood.332.title: "Reform Rejected" # UNTRANSLATED
+ uncivic_exalted_priesthood.332.desc: "You have shown that you do not have the will to lead the faith. We cannot follow you down this path of heresy." # UNTRANSLATED
+ uncivic_exalted_priesthood.401.title: "Amnesty for Heretics?" # UNTRANSLATED
+ uncivic_exalted_priesthood.401.desc: "Some Inquisitors have negotiated a deal with the surrendered heretics of [This.GetName]. In exchange for amnesty, they will help convert the other heretics remaining in our empire. It would be controversial among the local population..." # UNTRANSLATED
+ uncivic_exalted_priesthood.401.tooltip: "Increased chance to remove §HHeresy§! for 2 years" # UNTRANSLATED
+ uncivic_exalted_priesthood.411.title: "Militia of the Faithful" # UNTRANSLATED
+ uncivic_exalted_priesthood.411.desc: "During the Inquisition on [This.GetName], militias of True Believers spontaneously formed to help hunt the heretics. They wish to continue helping the Inquisitors on other planets." # UNTRANSLATED
+ uncivic_exalted_priesthood.411.tooltip: "For 2 years:\n   Increased chance to remove §HHeresy§!\n   §RIncreased chance of causing devastation and killing pops§!" # UNTRANSLATED
+ uncivic_exalted_priesthood.421.title: "Making an Example" # UNTRANSLATED
+ uncivic_exalted_priesthood.421.desc: "The heretics of [This.GetName] have finally surrendered. The High Inquisitor recommends that we make a grim example of this blasphemous planet so that others are not tempted to stray from the true path. What shall we do?" # UNTRANSLATED
+ uncivic_exalted_priesthood.421.tooltip: "For 5 years:\n   §HHeretical Beliefs§! cannot spread to new planets\n   No new §HCenters of Heresy§! can be formed" # UNTRANSLATED
+ uncivic_exalted_priesthood.501.title: "Crisis of Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.501.desc: "Some eccentrics living on [This.GetName] have started to believe that the priesthood's answer to the question "[GetEcumenicalCouncilDebate]" is not correct. These new beliefs, unorthodox and verging on heresy, have spread rapidly among the population of [This.GetName]. They are now spreading to other planets, and even some priests are openly discussing them. Until a consensus is reached among the priests, there is little we can do.\n\n§LYou can call an Ecumenical Council in your Edicts, but it is more expensive when fewer planets are Unorthodox.\nEventually, the Council will be called automatically.§!" # UNTRANSLATED
+ uncivic_exalted_priesthood.642.title: "Ex-Leader Preaches Unorthodoxy" # UNTRANSLATED
+ uncivic_exalted_priesthood.642.desc: "Our fired leader, [From.GetName], has decided to settle on §H[This.GetName]§! to preach [From.GetHisHer] unorthodox beliefs. The planet has rapidly become a §YCenter of Unorthodoxy§! in its region." # UNTRANSLATED
+ uncivic_exalted_priesthood.702.title: "[From.GetName] Requests to Join Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.702.desc: "We would like to follow the §YGalactic Faith§! led by your Exalted Priesthood.\n\n§HWe will get:§!\n$uncivic_exalted_priesthood_leader_modifiers$\n\n§HThey will get:§!\n$uncivic_exalted_priesthood_follower_modifiers$\n\n§HAdditionally, relations will be improved.§!" # UNTRANSLATED
+ uncivic_exalted_priesthood.702.accept: "Welcome them to the fold." # UNTRANSLATED
+ uncivic_exalted_priesthood.702.reject: "We cannot accept everyone to our faith." # UNTRANSLATED
+ uncivic_exalted_priesthood.711.title: "Invite to Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.711.desc: "Invite other Spiritualist empires to join the §YGalactic Faith§! led by your Exalted Priesthoods. Other Exalted Priesthoods cannot be invited.\n\nFor each follower, you will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nAdditionally, all members of the §YGalactic Faith§! have improved relations with each other." # UNTRANSLATED
+ uncivic_exalted_priesthood.712.title: "Join a Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.712.desc: "We would like for you to join our §YGalactic Faith§!. With guidance from our Exalted Priesthood, your priests could accomplish so much. Together we will bring glory to the Divine!" # UNTRANSLATED
+ uncivic_exalted_priesthood.712.accept: "$PRAISE$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.712.accept.tooltip: "We will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n  §GImproved relations with all members§!\n\nThey will get:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.712.reject: "Our priests are doing fine on their own." # UNTRANSLATED
+ uncivic_exalted_priesthood.712.reject_forever: "Do not bother us with this again." # UNTRANSLATED
+ uncivic_exalted_priesthood.713.title: "Invitation to Galactic Faith Accepted" # UNTRANSLATED
+ uncivic_exalted_priesthood.713.desc: "We humbly submit to the teachings of your Exalted Priesthood. Together we will bring Glory to the Divine!" # UNTRANSLATED
+ uncivic_exalted_priesthood.714.title: "Invitation to Galactic Faith Rejected" # UNTRANSLATED
+ uncivic_exalted_priesthood.714.desc: "Our priests, although not "exalted", are doing just fine on their own. We do not need your guidance." # UNTRANSLATED
+ uncivic_exalted_priesthood.721.title: "Galactic Faith Formed" # UNTRANSLATED
+ uncivic_exalted_priesthood.721.desc: "Diplomats from the §H[FromFrom.GetName]§! have announced that they will now follow the teachings of the Exalted Priesthood in the §H[uncivic_exalted_priesthood_proposed_leader.GetName]§!, creating a multi-national §YGalactic Faith§!. They will now face the future together, united in their beliefs.\n\n§LYou can view Galactic Faiths and their members with the View Galactic Faiths edict.§!" # UNTRANSLATED
+ uncivic_exalted_priesthood.801.title: "Galactic Faiths" # UNTRANSLATED
+ uncivic_exalted_priesthood.801.desc: "These Exalted Priesthoods lead §YGalactic Faiths§!. Click on one to view the followers." # UNTRANSLATED
+ uncivic_exalted_priesthood.802.title: "Followers of Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.802.desc: "These empires follow the §YGalactic Faith§! of the §H[uncivic_exalted_priesthood_viewed_leader.GetName]§!." # UNTRANSLATED
+
+ # paging
+ uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_1: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_2: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_3: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_4: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_5: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_6: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_7: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_8: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_9: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_0: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_1: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_2: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_3: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_4: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_5: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_6: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_7: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_8: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_9: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_0: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_1: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_2: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_3: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_4: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_5: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_6: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_7: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_8: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_9: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+
+ # event chain
+ uncivic_exalted_priesthood_heresy_chain_title: "Heresy" # UNTRANSLATED
+ uncivic_exalted_priesthood_heresy_chain_desc: "We have declared a heresy, which must be crushed. Heretic planets, especially §HCenters of Heresy§!, spread heretical beliefs to nearby planets. Use the §HInquisition§! policy to deal with the heretics." # UNTRANSLATED
+ uncivic_exalted_priesthood_heretic_planet_counter: "Heretic Planets" # UNTRANSLATED
+ uncivic_exalted_priesthood_heretic_center_counter: "Centers of Heresy" # UNTRANSLATED
+ uncivic_exalted_priesthood_heretic_planet_poi: "Heretic Planet" # UNTRANSLATED
+
+ # policy
+ policy_uncivic_exalted_priesthood_inquisition: "Inquisition" # UNTRANSLATED
+ policy_uncivic_exalted_priesthood_inquisition_desc: "A heresy has been declared, and we must decide how to proceed with its eradication." # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_focused: "Focus on the Heretic Leaders" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_focused_name: "$uncivic_exalted_priesthood_inquisition_focused$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_inquisition_focused_desc: "By removing the head, we can kill this serpent with minimal damage to our society." # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_focused_tooltip: "Prevents formation of new §HCenters of Heresy§!\nHigh chance of removing §HCenters of Heresy§!\nLow chance of removing §HHeretical Beliefs§!" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_balanced: "Do Not Harm the Faithful" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_balanced_name: "$uncivic_exalted_priesthood_inquisition_balanced$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_inquisition_balanced_desc: "We must not harm the True Believers, but there will be no mercy for heretic leaders or their followers." # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_balanced_tooltip: "Moderate chance of removing §HCenters of Heresy§!\nModerate chance of removing §HHeretical Beliefs§!\n§RLow chance of causing devastation and killing pops§!" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_aggressive: "No Cost is Too Great" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_aggressive_name: "$uncivic_exalted_priesthood_inquisition_aggressive$" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_aggressive_desc: "We must purge our society of this poison before its too late. Some innocent may need to be sacrificed for the greater good." # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_aggressive_tooltip: "High chance of removing §HCenters of Heresy§!\nHigh chance of removing §HHeretical Beliefs§!\n§RHigh chance of causing devastation and killing pops!§!" # UNTRANSLATED
+
+ # edict
+ edict_uncivic_exalted_priesthood_call_council: "Call Ecumenical Council" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_call_council_desc: "We must convene all the high priests to debate the unorthodox beliefs spreading through our empire." # UNTRANSLATED
+ uncivic_exalted_priesthood_call_council_allow: "£trigger_no£ At least 25% of planets are §HUnorthodox§!" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_invite_to_galactic_faith: "Invite to Galactic Faith" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_invite_to_galactic_faith_desc: "Invite other Spiritualist empires to follow your Exalted Priesthood." # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_leave_galactic_faith: "Leave Galactic Faith" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_leave_galactic_faith_desc: "Leave your Galactic Faith, losing the associated modifier and relation bonuses." # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_view_galactic_faiths: "View Galactic Faiths" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_view_galactic_faiths_desc: "Other empires can choose to follow the faith of an Exalted Priesthood. Here you can view the leaders and followers of Galactic Faiths." # UNTRANSLATED
+
+ # opinion modifiers
+ uncivic_exalted_priesthood_opinion_modifier_same_faith: "Same Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_same_faith_desc: "This empire follows the same Exalted Priesthood that we do." # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_friendly_faith: "Friendly Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_friendly_faith_desc: "This empire follows a different Exalted Priesthood that is friendly with our Exalted Priesthood." # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_unfriendly_faith: "Unfriendly Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_unfriendly_faith_desc: "This empire follows a different Exalted Priesthood that is unfriendly with our Exalted Priesthood." # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_embraced_heresy: "Embraced Heresy" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_embraced_heresy_desc: "This empire did not have the will to purge the heretics, and instead embraced their beliefs." # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_declared_heresy: "Declared Inquisition" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_declared_heresy_desc: "This empire would rather shed the blood of the faithful than change their beliefs." # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_rejected_reform: "Rejected Reform" # UNTRANSLATED
+ uncivic_exalted_priesthood_opinion_modifier_rejected_reform_desc: "This empire rejected the reforms made to the Faith." # UNTRANSLATED
+
+ # acceptance tooltip
+ uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-50§!\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Opinion of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Relative Power of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_current_head_of_faith: "Current Head of Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_invite_paging_0_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_1_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_2_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_3_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_4_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_5_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_6_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_7_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_8_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_9_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9_leader.GetName]§!" # DO NOT TRANSLATE
+
+ # map mode
+ uncivic_exalted_priesthood_galactic_faiths_map_mode: "Galactic Faiths" # UNTRANSLATED
+ uncivic_exalted_priesthood_galactic_faiths_map_mode_desc: "Empire borders will be colored based on if they belong to same, different, or no Galactic Faith." # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_LEADER: "§H[This.GetName]§!\nLeads the Galactic Faith followed by §Y[From.GetName]§!" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_FOLLOWER: "§H[This.GetName]§!\nFollows §Y[From.GetName]§!'s Galactic Faith" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SAME_FAITH: "§H[This.GetName]§!\nFollows the same Galactic Faith as §Y[From.GetName]§!" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_LEADER: "§H[This.GetName]§!\nLeads a Galactic Faith" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_DIFF_FOLLOWER: "§H[This.GetName]§!\nFollows a Galactic Faith" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_SPIRITUALIST: "§H[This.GetName]§!\nIs Spiritualist but does not follow a Galactic Faith" # UNTRANSLATED
+ UNCIVIC_EXALTED_PRIESTHOOD_GALACTIC_FAITH_MAP_MODE_NON_SPIRITUALIST: "§H[This.GetName]§!\nIs not Spiritualist" # UNTRANSLATED
+
+
+ # misc
+ uncivic_exalted_priesthood_join_faith: "Join Galactic Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood_leave_faith: "Leave Galactic Faith" # UNTRANSLATED

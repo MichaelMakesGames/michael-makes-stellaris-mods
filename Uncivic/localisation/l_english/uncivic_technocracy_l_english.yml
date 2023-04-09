@@ -28,11 +28,11 @@
  uncivic_technocracy_scientist_trait_intellectual_tooltip: "All surveyed research deposits are increased by 1"
  uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Remove 1-3 blockers from all surveyed planets"
  uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Gain £unity£ Unity when fully surveying a system"
- uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!"
- uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!"
+ uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!" # DO NOT TRANSLATE
+ uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!" # DO NOT TRANSLATE
  uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits are doubled"
- uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!"
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity"
+ uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!" # DO NOT TRANSLATE
+ uncivic_technocracy_scientist_trait_nuumismatic_priest_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity"
  uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "All surveyed mineable deposits are increased"
  uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "All surveyed mineable deposits without energy gain 1 £energy£ Energy"
  uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "All surveyed £minerals£ Minerals deposits are converted to strategic resource deposits"

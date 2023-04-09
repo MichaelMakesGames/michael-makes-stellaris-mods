@@ -73,6 +73,55 @@ uncivic_parliamentary_system_clear_planet = {
 		uncivic_parliamentary_system_socialists = {
 			remove_modifier = uncivic_parliamentary_system_socialists
 		}
+		uncivic_parliamentary_system_aristocrat = {
+			remove_modifier = uncivic_parliamentary_system_aristocrat
+		}
+		uncivic_parliamentary_system_indentured = {
+			remove_modifier = uncivic_parliamentary_system_indentured
+		}
+		uncivic_parliamentary_system_elitist = {
+			remove_modifier = uncivic_parliamentary_system_elitist
+		}
+		uncivic_parliamentary_system_labourite = {
+			remove_modifier = uncivic_parliamentary_system_labourite
+		}
+		uncivic_parliamentary_system_adopter = {
+			remove_modifier = uncivic_parliamentary_system_adopter
+		}
+		uncivic_parliamentary_system_perfectionist = {
+			remove_modifier = uncivic_parliamentary_system_perfectionist
+		}
+		uncivic_parliamentary_system_survivalist = {
+			remove_modifier = uncivic_parliamentary_system_survivalist
+		}
+		uncivic_parliamentary_system_warmaker = {
+			remove_modifier = uncivic_parliamentary_system_warmaker
+		}
+		uncivic_parliamentary_system_activist = {
+			remove_modifier = uncivic_parliamentary_system_activist
+		}
+		uncivic_parliamentary_system_industrialist_divided_loyalties = {
+			remove_modifier = uncivic_parliamentary_system_industrialist_divided_loyalties
+		}
+		uncivic_parliamentary_system_crusader = {
+			remove_modifier = uncivic_parliamentary_system_crusader
+		}
+		uncivic_parliamentary_system_shepherd = {
+			remove_modifier = uncivic_parliamentary_system_shepherd
+		}
+		uncivic_parliamentary_system_holistic = {
+			remove_modifier = uncivic_parliamentary_system_holistic
+		}
+		uncivic_parliamentary_system_preservationist = {
+			remove_modifier = uncivic_parliamentary_system_preservationist
+		}
+		uncivic_parliamentary_system_enslaver = {
+			remove_modifier = uncivic_parliamentary_system_enslaver
+		}
+	}
+	if = {
+		limit = { has_deposit = uncivic_parliamentary_system_deposit }
+		remove_deposit = uncivic_parliamentary_system_deposit
 	}
 	if = {
 		limit = { has_modifier = uncivic_parliamentary_system_uncovered_meddling }
@@ -103,6 +152,7 @@ uncivic_parliamentary_system_finalize_election = {
 			exists = event_target:uncivic_parliamentary_system_winner
 			event_target:uncivic_parliamentary_system_winner = {
 				OR = {
+					# vanilla
 					is_pop_faction_type = imperialist
 					is_pop_faction_type = isolationist
 					is_pop_faction_type = manifesti
@@ -113,6 +163,7 @@ uncivic_parliamentary_system_finalize_election = {
 					is_pop_faction_type = totalitarian
 					is_pop_faction_type = traditionalist
 					is_pop_faction_type = xenoist
+					# ethics and civics
 					is_pop_faction_type = capitalist
 					is_pop_faction_type = conservative
 					is_pop_faction_type = environmentalist
@@ -125,8 +176,24 @@ uncivic_parliamentary_system_finalize_election = {
 					is_pop_faction_type = labourites
 					is_pop_faction_type = manufacturers
 					is_pop_faction_type = socialists
+					# civil wars
 					is_separatist_faction = yes
 					is_nationalist_faction = yes
+					# divided loyalties
+					is_pop_faction_type = aristocrat
+					is_pop_faction_type = indentured
+					is_pop_faction_type = elitist
+					is_pop_faction_type = labourite
+					is_pop_faction_type = adopter
+					is_pop_faction_type = perfectionist
+					is_pop_faction_type = survivalist
+					is_pop_faction_type = warmaker
+					is_pop_faction_type = activist
+					is_pop_faction_type = crusader
+					is_pop_faction_type = shepherd
+					is_pop_faction_type = holistic
+					is_pop_faction_type = preservationist
+					is_pop_faction_type = enslaver
 				}
 			}
 		}
@@ -173,10 +240,16 @@ uncivic_parliamentary_system_finalize_election = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_environmentalist } }
 				}
 				industrialist = {
-					prev = { add_modifier = { modifier = uncivic_parliamentary_system_industrialist } }
+					# bug branch and divided loyalties share a faction name
+					if = {
+						limit = { has_global_flag = bug_branch_active }
+						prev = { add_modifier = { modifier = uncivic_parliamentary_system_industrialist } }
+					} else = {
+						prev = { add_modifier = { modifier = uncivic_parliamentary_system_industrialist_divided_loyalties } }
+					}
 				}
 				populist = {
-					prev = { add_modifier = { modifier = uncivic_parliamentary_system_populist } }
+						prev = { add_modifier = { modifier = uncivic_parliamentary_system_populist } }
 				}
 				socialist = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_socialist } }
@@ -199,6 +272,48 @@ uncivic_parliamentary_system_finalize_election = {
 				socialists = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_socialists } }
 				}
+				aristocrat = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_aristocrat } }
+				}
+				indentured = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_indentured } }
+				}
+				elitist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_elitist } }
+				}
+				labourite = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_labourite } }
+				}
+				adopter = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_adopter } }
+				}
+				perfectionist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_perfectionist } }
+				}
+				survivalist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_survivalist } }
+				}
+				warmaker = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_warmaker } }
+				}
+				activist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_activist } }
+				}
+				crusader = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_crusader } }
+				}
+				shepherd = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_shepherd } }
+				}
+				holistic = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_holistic } }
+				}
+				preservationist = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_preservationist } }
+				}
+				enslaver = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_enslaver } }
+				}
 			}
 			if = {
 				limit = {
@@ -211,6 +326,7 @@ uncivic_parliamentary_system_finalize_election = {
 			}
 		}
 		hidden_effect = {
+			add_deposit = uncivic_parliamentary_system_deposit
 			every_owned_pop = {
 				limit = {
 					exists = pop_faction

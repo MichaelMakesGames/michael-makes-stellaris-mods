@@ -160,14 +160,17 @@ country_event = {
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = computing
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = field_manipulation
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = particles
+		POTENTIAL = "always = yes"
 	}
 	option = {
 		name = BACK
@@ -183,25 +186,71 @@ country_event = {
 	title = uncivic_technocracy.203.title
 	desc = uncivic_technocracy.203.desc
 	picture = GFX_evt_vivisection
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = uncivic_parliamentary_system_good_trading_detected
+					has_global_flag = uncivic_parliamentary_system_good_trading_undetected
+				}
+			}
+			event_target:global_event_country = {
+				create_leader = {
+					class = governor
+					species = root.species
+				}
+				last_created_leader = {
+					add_trait = leader_trait_expertise_good_trading
+					if = {
+						limit = { has_trait = leader_trait_expertise_good_trading }
+						set_global_flag = uncivic_parliamentary_system_good_trading_detected
+					} else = {
+						set_global_flag = uncivic_parliamentary_system_good_trading_undetected
+					}
+					kill_leader = { show_notification = no }
+				}
+			}
+		}
+	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = biology
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = military_theory
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = new_worlds
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = psionics
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = statecraft
+		POTENTIAL = "always = yes"
+	}
+	inline_script = {
+		script = uncivic_technocracy_expertise_option
+		EXPERTISE = archaeostudies
+		POTENTIAL = "root = { has_ancrel = yes }"
+	}
+	inline_script = {
+		script = uncivic_technocracy_expertise_option
+		EXPERTISE = bugged_good_trading
+		POTENTIAL = "has_global_flag = bug_branch_active"
+	}
+	inline_script = {
+		script = uncivic_technocracy_expertise_option
+		EXPERTISE = good_trading
+		POTENTIAL = "has_global_flag = uncivic_parliamentary_system_good_trading_detected"
 	}
 	option = {
 		name = BACK
@@ -220,18 +269,22 @@ country_event = {
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = industry
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = materials
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = propulsion
+		POTENTIAL = "always = yes"
 	}
 	inline_script = {
 		script = uncivic_technocracy_expertise_option
 		EXPERTISE = voidcraft
+		POTENTIAL = "always = yes"
 	}
 	option = {
 		name = BACK

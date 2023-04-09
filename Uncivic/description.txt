@@ -15,7 +15,7 @@ Invite other spiritualist empires to join your Galactic Faith, gaining influence
 [h1]Parliamentary System[/h1]
 Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
 
-Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for E&C Bug Branch, E&C Classic, and Stellaris Evolved.
+Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
 
 [h1]Shadow Council[/h1]
 Elevate your leaders to become powerful Shadow Councilors. However, the more you elevate, the greater the the chance one will be exposed, and you'll need to make a tough decision about what to do with them.
@@ -25,15 +25,12 @@ Recruit technocrat governors with your choice of powerful scientific Expertise t
 
 [h1]More to come![/h1]
 
-[h1]Corporate Civics?[/h1]
-Check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2892121750&searchtext=corporate+portfolio]Corporate Portfolio Revision[/url], which aims to do the same thing for all megacorp civics!
-
 [h1]Compatibility[/h1]
 [list]
   [*] For Stellaris 3.7.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
-  [*] No overwrites, so should be compatible with most other mods. Advanced integration with E&C Bug Branch, E&C Classic, and Stellaris Evolved.
+  [*] No overwrites, so should be compatible with most other mods. Advanced integration with Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
 [/list]
 
 [h1]Known Issues[/h1]

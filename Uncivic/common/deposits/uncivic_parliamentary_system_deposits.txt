@@ -1,0 +1,97 @@
+uncivic_parliamentary_system_deposit = {
+	icon = d_building
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	drop_weight = {
+		weight = 0
+	}
+
+	# labourite decreases stability per unemployed
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_labourite
+			num_unemployed > 0
+		}
+		planet_stability_add = -10
+		mult = value:mmu_simple_trigger|TRIGGER|num_unemployed|
+	}
+
+	# survivalist boosts production in defensive war
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_survivalist
+			owner = {
+				is_at_war = yes
+				any_war = {
+					any_defender = {
+						is_same_value = prevprev
+					}
+				}
+			}
+		}
+		planet_jobs_produces_mult = 0.50
+	}
+
+	# warmaker decreases stability per year of peace
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_warmaker
+			owner = {
+				is_at_war = no
+			}
+		}
+		planet_stability_add = -1
+		mult = owner.value:mmu_years_of_peace
+	}
+
+	# activist decreases stability while at war
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_activist
+			owner = {
+				is_at_war = yes
+			}
+		}
+		planet_stability_add = -20
+	}
+
+	# crusader increases/decreases unity while at war/peace
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_crusader
+			owner = {
+				is_at_war = yes
+			}
+		}
+		planet_jobs_unity_produces_mult = 0.50
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_crusader
+			owner = {
+				is_at_war = no
+			}
+		}
+		planet_jobs_unity_produces_mult = -0.50
+	}
+
+	# holistic increases stability per unique species
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_holistic
+		}
+		planet_stability_add = 2
+		mult = value:mmu_simple_trigger|TRIGGER|num_unique_species|
+	}
+	# holistic decreases stability per crime
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = uncivic_parliamentary_system_holistic
+		}
+		planet_stability_add = -1
+		mult = value:mmu_simple_trigger|TRIGGER|planet_crime|
+	}
+}

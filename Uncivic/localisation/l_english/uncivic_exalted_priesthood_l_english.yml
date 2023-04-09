@@ -19,7 +19,7 @@
  uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!"
  uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith"
  uncivic_exalted_priesthood_follower_desc: "By adopting the faith of an Exalted Priesthood, the priests of this nation are more effective."
- uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!"
+ uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_diversity_of_belief: "Diversity of Belief"
  uncivic_exalted_priesthood_diversity_of_belief_desc: "By welcoming the so-called heretics being persecuted elsewhere, new ideas are flourishing in our empire."
  uncivic_exalted_priesthood_old_ways: "The Old Ways"
@@ -70,12 +70,12 @@
  uncivic_exalted_priesthood_council_hardliner_ruler: "Hardliner Ruler"
  uncivic_exalted_priesthood_council_unorthodox_ruler: "Unorthodox Ruler"
  uncivic_exalted_priesthood_council_momentum: "Debate Momentum"
- uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$"
- uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$"
- uncivic_exalted_priesthood_council_revise_orthodoxy_1: "$stage_1$"
- uncivic_exalted_priesthood_council_declare_heresy_1: "$stage_1$"
- uncivic_exalted_priesthood_council_declare_heresy_2: "$stage_2$"
- uncivic_exalted_priesthood_council_declare_heresy_3: "$stage_3$"
+ uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_revise_orthodoxy_1: "$stage_1$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_1: "$stage_1$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_2: "$stage_2$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_council_declare_heresy_3: "$stage_3$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_council_on_progress_complete_tooltip: "§H$uncivic_exalted_priesthood_unorthodox_beliefs$§! becomes §H$uncivic_exalted_priesthood_heretical_beliefs$§! on all planets\n§H$uncivic_exalted_priesthood_center_of_unorthodoxy$§! becomes §H$uncivic_exalted_priesthood_center_of_heresy$§! on all planets\nKill all §H$uncivic_exalted_priesthood_leader_trait_unorthodox$§! leaders\nEnables §HInquisition§! policy"
  uncivic_exalted_priesthood_council_on_fail_tooltip: "Remove §H$uncivic_exalted_priesthood_unorthodox_beliefs$§! from all planets\nRemove §H$uncivic_exalted_priesthood_center_of_unorthodoxy$§! from all planets\nRemove §H$uncivic_exalted_priesthood_leader_trait_unorthodox$§! from all leaders\nAll §H$uncivic_exalted_priesthood_leader_trait_hardliner$§! leaders:\n   50% remove §H$uncivic_exalted_priesthood_leader_trait_hardliner$§!\n   50% fire leader\nAdd country modifier §H$uncivic_exalted_priesthood_revised_orthodoxy$§! for 10 years:\n   §R-5§! $MOD_PLANET_STABILITY_ADD$\n   §Y+50%§! $MOD_POP_ETHICS_SHIFT_SPEED$"
 
@@ -87,7 +87,7 @@
  uncivic_exalted_priesthood.303.title: "Heresy Cleansed"
  uncivic_exalted_priesthood.303.desc: "This is a glorious day for our empire. The last of the heretics have been eradicated. This pestilence of our society is no more! This time will surely be remembered as a golden era, when our people were united in their unquestionable faith!"
  uncivic_exalted_priesthood.311.title: "Ecumenical Council Called"
- uncivic_exalted_priesthood.311.desc: "$uncivic_exalted_priesthood_council_desc$"
+ uncivic_exalted_priesthood.311.desc: "$uncivic_exalted_priesthood_council_desc$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood.321.title: "Heresy Declared"
  uncivic_exalted_priesthood.321.desc: "The §H[From.GetName]§!, leader of our §YGalactic Faith§!, has declared the unorthodox beliefs spreading through their empire to be heretical. They are now launching an inquisition. What cost will need to be paid to eradicate these heretics?"
  uncivic_exalted_priesthood.321.accept: "Whatever the cost, we will follow the faith."
@@ -120,8 +120,8 @@
  uncivic_exalted_priesthood.711.title: "Invite to Galactic Faith"
  uncivic_exalted_priesthood.711.desc: "Invite other Spiritualist empires to join the §YGalactic Faith§! led by your Exalted Priesthoods. Other Exalted Priesthoods cannot be invited.\n\nFor each follower, you will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nAdditionally, all members of the §YGalactic Faith§! have improved relations with each other."
  uncivic_exalted_priesthood.712.title: "Join a Galactic Faith"
- uncivic_exalted_priesthood.712.desc: "We would like for your to join our §YGalactic Faith§!. With guidance from our Exalted Priesthood, your priests could accomplish so much. Together we will bring glory to the Divine!"
- uncivic_exalted_priesthood.712.accept: "$PRAISE$"
+ uncivic_exalted_priesthood.712.desc: "We would like for you to join our §YGalactic Faith§!. With guidance from our Exalted Priesthood, your priests could accomplish so much. Together we will bring glory to the Divine!"
+ uncivic_exalted_priesthood.712.accept: "$PRAISE$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood.712.accept.tooltip: "We will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n  §GImproved relations with all members§!\n\nThey will get:\n$uncivic_exalted_priesthood_leader_modifiers$"
  uncivic_exalted_priesthood.712.reject: "Our priests are doing fine on their own."
  uncivic_exalted_priesthood.712.reject_forever: "Do not bother us with this again."
@@ -137,36 +137,36 @@
  uncivic_exalted_priesthood.802.desc: "These empires follow the §YGalactic Faith§! of the §H[uncivic_exalted_priesthood_viewed_leader.GetName]§!."
 
  # paging
- uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]"
- uncivic_exalted_priesthood_leader_1: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_1.GetName]"
- uncivic_exalted_priesthood_leader_2: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_2.GetName]"
- uncivic_exalted_priesthood_leader_3: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_3.GetName]"
- uncivic_exalted_priesthood_leader_4: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_4.GetName]"
- uncivic_exalted_priesthood_leader_5: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_5.GetName]"
- uncivic_exalted_priesthood_leader_6: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_6.GetName]"
- uncivic_exalted_priesthood_leader_7: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_7.GetName]"
- uncivic_exalted_priesthood_leader_8: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_8.GetName]"
- uncivic_exalted_priesthood_leader_9: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_9.GetName]"
- uncivic_exalted_priesthood_follower_0: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_0.GetName]"
- uncivic_exalted_priesthood_follower_1: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_1.GetName]"
- uncivic_exalted_priesthood_follower_2: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_2.GetName]"
- uncivic_exalted_priesthood_follower_3: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_3.GetName]"
- uncivic_exalted_priesthood_follower_4: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_4.GetName]"
- uncivic_exalted_priesthood_follower_5: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_5.GetName]"
- uncivic_exalted_priesthood_follower_6: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_6.GetName]"
- uncivic_exalted_priesthood_follower_7: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_7.GetName]"
- uncivic_exalted_priesthood_follower_8: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_8.GetName]"
- uncivic_exalted_priesthood_follower_9: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_9.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_0: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_1: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_2: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_3: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_4: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_5: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_6: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_7: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_8: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8.GetName]"
- uncivic_exalted_priesthood_follower_invite_paging_9: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9.GetName]"
+ uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_1: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_2: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_3: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_4: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_5: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_6: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_7: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_8: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_9: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_0: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_1: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_2: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_3: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_4: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_5: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_6: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_7: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_8: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_9: "[uncivic_exalted_priesthood_follower_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_0: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_1: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_2: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_3: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_4: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_5: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_6: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_7: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_8: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_9: "[uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
 
  # event chain
  uncivic_exalted_priesthood_heresy_chain_title: "Heresy"
@@ -179,11 +179,11 @@
  policy_uncivic_exalted_priesthood_inquisition: "Inquisition"
  policy_uncivic_exalted_priesthood_inquisition_desc: "A heresy has been declared, and we must decide how to proceed with its eradication."
  uncivic_exalted_priesthood_inquisition_focused: "Focus on the Heretic Leaders"
- uncivic_exalted_priesthood_inquisition_focused_name: "$uncivic_exalted_priesthood_inquisition_focused$"
+ uncivic_exalted_priesthood_inquisition_focused_name: "$uncivic_exalted_priesthood_inquisition_focused$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_inquisition_focused_desc: "By removing the head, we can kill this serpent with minimal damage to our society."
  uncivic_exalted_priesthood_inquisition_focused_tooltip: "Prevents formation of new §HCenters of Heresy§!\nHigh chance of removing §HCenters of Heresy§!\nLow chance of removing §HHeretical Beliefs§!"
  uncivic_exalted_priesthood_inquisition_balanced: "Do Not Harm the Faithful"
- uncivic_exalted_priesthood_inquisition_balanced_name: "$uncivic_exalted_priesthood_inquisition_balanced$"
+ uncivic_exalted_priesthood_inquisition_balanced_name: "$uncivic_exalted_priesthood_inquisition_balanced$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_inquisition_balanced_desc: "We must not harm the True Believers, but there will be no mercy for heretic leaders or their followers."
  uncivic_exalted_priesthood_inquisition_balanced_tooltip: "Moderate chance of removing §HCenters of Heresy§!\nModerate chance of removing §HHeretical Beliefs§!\n§RLow chance of causing devastation and killing pops§!"
  uncivic_exalted_priesthood_inquisition_aggressive: "No Cost is Too Great"
@@ -219,27 +219,28 @@
  # acceptance tooltip
  uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-50§!\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
  uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Opinion of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Relative Power of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]"
- uncivic_exalted_priesthood_follower_acceptance_zero: "0"
- uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!"
- uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_opinion_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_opinion_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!"
- uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!"
- uncivic_exalted_priesthood_follower_invite_paging_0_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_1_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_2_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_3_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_4_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_5_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_6_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_7_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_8_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8_leader.GetName]§!"
- uncivic_exalted_priesthood_follower_invite_paging_9_leader: "§LCurrent Head of Faith: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9_leader.GetName]§!"
+ uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_current_head_of_faith: "Current Head of Faith"
+ uncivic_exalted_priesthood_follower_invite_paging_0_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_0_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_1_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_1_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_2_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_2_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_3_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_3_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_4_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_4_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_5_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_5_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_6_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_6_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_7_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_7_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_8_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_8_leader.GetName]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_invite_paging_9_leader: "§L$uncivic_exalted_priesthood_current_head_of_faith$: [uncivic_exalted_priesthood_follower_invite_paging_current_page_entity_9_leader.GetName]§!" # DO NOT TRANSLATE
 
  # map mode
  uncivic_exalted_priesthood_galactic_faiths_map_mode: "Galactic Faiths"

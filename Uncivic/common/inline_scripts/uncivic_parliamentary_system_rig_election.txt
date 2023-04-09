@@ -1,6 +1,9 @@
 option = {
 	name = uncivic_parliamentary_system_rig_election_for_$FACTION$
-	trigger = { uncivic_parliamentary_system_can_rig_election = { FACTION = $FACTION$ } }
+	trigger = {
+		uncivic_parliamentary_system_can_rig_election = { FACTION = $FACTION$ }
+		$POTENTIAL$
+	}
 	uncivic_parliamentary_system_rig_election = { FACTION = $FACTION$ }
 	ai_chance = {
 		base = 0

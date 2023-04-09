@@ -1,5 +1,5 @@
 ﻿l_russian:
- # elevate Теневой советник edict/events
+ # elevate shadow councilor edict/events
  edict_uncivic_shadow_council_elevate_shadow_councilor: "Возвысить теневого советника"
  edict_uncivic_shadow_council_elevate_shadow_councilor_desc: "Назначьте лидера в Теневой совет. Они смогут дергать за ниточки, чтобы обеспечить себя необходимыми ресурсами, но чем больше у нас будет членов Совета, тем выше риск разоблачения."
  uncivic_shadow_council_elevate_shadow_councilor_desc: "Назначить лидера в Теневой совет. Они смогут использовать свои связи, чтобы обеспечить себя необходимыми ресурсами, но чем больше у нас будет членов Совета, тем выше риск разоблачения. (Попытка разоблачения раз в год).\n\nРиск разоблачения теневого советника: §Y[This.UncivicShadowCouncilRisk]%§!\nПовышение от следующего теневого советника: §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
@@ -29,16 +29,16 @@
  uncivic_shadow_council_available_leader_success: "Как минимум 1 лидер не является Теневым советником"
 
  # paging
- uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]"
- uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]"
- uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]"
- uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]"
- uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]"
- uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]"
- uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]"
- uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]"
- uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]"
- uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]"
+ uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
 
  # traits
  uncivic_shadow_council_ruler_trait_shadow_councilor: "Теневой советник"

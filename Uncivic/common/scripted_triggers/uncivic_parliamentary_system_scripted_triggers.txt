@@ -7,6 +7,12 @@ uncivic_parliamentary_system_can_rig_election = {
 				NOT = { is_pop_faction_type = $FACTION$ }
 			}
 		}
+		any_owned_pop = {
+			exists = pop_faction
+			pop_faction = {
+				is_pop_faction_type = $FACTION$
+			}
+		}
 	}
 }
 

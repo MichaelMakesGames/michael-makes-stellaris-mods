@@ -1,3 +1,4 @@
+# ethics and civics
 bankers = { # classic/evolved capitalism
 	is_potential = { always = no }
 	resources = { category = pop_factions }
@@ -65,6 +66,92 @@ socialist = { # bug branch cooperative
 	can_join_faction = { always = no }
 }
 socialists = { # classic/evolved socialism
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+# divided loyalties
+aristocrat = { # dl extremist authoritarian
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+indentured = { # dl extremist authoritarian
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+elitist = { # dl extremist egalitarian
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+labourite = { # dl extremist egalitarian
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+adopter = { # dl extremist materialist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+perfectionist = { # dl extremist materialist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+survivalist = { # dl extremist militarist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+warmaker = { # dl extremist militarist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+activist = { # dl extremist pacifist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+# industrialist: dl extremist pacifist, same name as bug branch faction
+crusader = { # dl extremist spiritualist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+shepherd = { # dl extremist spiritualist
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+holistic = { # dl extremist xenophile
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+preservationist = { # dl extremist xenophile
+	is_potential = { always = no }
+	resources = { category = pop_factions }
+	unique = yes
+	can_join_faction = { always = no }
+}
+enslaver = { # dl extremist xenophobe
 	is_potential = { always = no }
 	resources = { category = pop_factions }
 	unique = yes

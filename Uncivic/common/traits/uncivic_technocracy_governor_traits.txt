@@ -8,13 +8,6 @@ uncivic_technocracy_governor_trait_technocrat = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 # 88""Yb    db    88b 88 8888b.   dP"Yb  8b    d8
@@ -34,22 +27,10 @@ uncivic_technocracy_governor_trait_mindful = {
 		planet_jobs_produces_mult = 0.05
 		empire_size_pops_mult = 0.05
 	}
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 	leader_trait =  { scientist }
 	leader_class = { scientist }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_carefree"
-		"uncivic_technocracy_governor_trait_meticulous"
-		"uncivic_technocracy_governor_trait_archaeologist_ancrel"
-		# Not regular Archaeologist, since that deals with precursors
-	}
 }
 
 uncivic_technocracy_governor_trait_meticulous = {
@@ -63,18 +44,6 @@ uncivic_technocracy_governor_trait_meticulous = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = { "uncivic_technocracy_governor_trait_carefree" }
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 50
-	}
 }
 
 uncivic_technocracy_governor_trait_spark_of_genius = {
@@ -88,17 +57,6 @@ uncivic_technocracy_governor_trait_spark_of_genius = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 200
-	}
 }
 
 uncivic_technocracy_governor_trait_carefree = {
@@ -112,18 +70,6 @@ uncivic_technocracy_governor_trait_carefree = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = { "uncivic_technocracy_governor_trait_meticulous" }
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 50
-	}
 }
 
 uncivic_technocracy_governor_trait_roamer = {
@@ -136,17 +82,6 @@ uncivic_technocracy_governor_trait_roamer = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_archaeologist_ancrel = {
@@ -163,18 +98,6 @@ uncivic_technocracy_governor_trait_archaeologist_ancrel = {
 	}
 	custom_tooltip_with_modifiers = uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip
 	# chance to discover minor artifacts, implemented in script
-
-	leader_potential_add = {
-		from = {
-			has_ancrel = yes
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_archaeologist = {
@@ -189,18 +112,6 @@ uncivic_technocracy_governor_trait_archaeologist = {
 	}
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_ancrel = no
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_maniacal = {
@@ -213,17 +124,6 @@ uncivic_technocracy_governor_trait_maniacal = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 110
-	}
 }
 
 uncivic_technocracy_governor_trait_custom_AI_assistant = {
@@ -237,18 +137,6 @@ uncivic_technocracy_governor_trait_custom_AI_assistant = {
 	prerequisites = { tech_self_aware_logic }
 	initial = no
 	randomized = no
-	opposites = { "uncivic_technocracy_governor_trait_sapient_AI_assistant" }
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_sapient_AI_assistant = {
@@ -262,19 +150,6 @@ uncivic_technocracy_governor_trait_sapient_AI_assistant = {
 	prerequisites = { tech_sapient_ai }
 	initial = no
 	randomized = no
-	opposites = { "uncivic_technocracy_governor_trait_custom_AI_assistant" }
-
-	leader_potential_add = {
-		from = {
-			NOT = { has_policy_flag = ai_outlawed }
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 300
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_materials = {
@@ -291,31 +166,6 @@ uncivic_technocracy_governor_trait_expertise_materials = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-	}
-	# higher chance to generate techs in category materials (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_propulsion = {
@@ -329,31 +179,6 @@ uncivic_technocracy_governor_trait_expertise_propulsion = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category propulsion (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_voidcraft = {
@@ -368,31 +193,6 @@ uncivic_technocracy_governor_trait_expertise_voidcraft = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category zero-g structures (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 70
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_industry = {
@@ -406,31 +206,6 @@ uncivic_technocracy_governor_trait_expertise_industry = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category planetary structures (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 70
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_field_manipulation = {
@@ -445,31 +220,6 @@ uncivic_technocracy_governor_trait_expertise_field_manipulation = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category field manipulation (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_particles = {
@@ -478,36 +228,11 @@ uncivic_technocracy_governor_trait_expertise_particles = {
 	modifier = {
 		planet_jobs_physics_research_produces_mult = @categorybonus
 		planet_technician_physics_research_produces_add = 0.5
-		planet_technician_energy_produces_add = -0.5
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_computing = {
@@ -522,31 +247,6 @@ uncivic_technocracy_governor_trait_expertise_computing = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category computing (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_psionics = {
@@ -561,31 +261,6 @@ uncivic_technocracy_governor_trait_expertise_psionics = {
 	prerequisites = { tech_psionic_theory }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category psionics (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_new_worlds = {
@@ -600,31 +275,6 @@ uncivic_technocracy_governor_trait_expertise_new_worlds = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category environmental systems (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_statecraft = {
@@ -639,31 +289,6 @@ uncivic_technocracy_governor_trait_expertise_statecraft = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category financial theory (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_biology = {
@@ -678,31 +303,6 @@ uncivic_technocracy_governor_trait_expertise_biology = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_military_theory"
-	}
-	# higher chance to generate techs in category biology (done in tech-script)
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_expertise_military_theory = {
@@ -717,31 +317,23 @@ uncivic_technocracy_governor_trait_expertise_military_theory = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-	opposites = {
-		"uncivic_technocracy_governor_trait_expertise_materials"
-		"uncivic_technocracy_governor_trait_expertise_propulsion"
-		"uncivic_technocracy_governor_trait_expertise_voidcraft"
-		"uncivic_technocracy_governor_trait_expertise_industry"
-		"uncivic_technocracy_governor_trait_expertise_field_manipulation"
-		"uncivic_technocracy_governor_trait_expertise_particles"
-		"uncivic_technocracy_governor_trait_expertise_psionics"
-		"uncivic_technocracy_governor_trait_expertise_computing"
-		"uncivic_technocracy_governor_trait_expertise_new_worlds"
-		"uncivic_technocracy_governor_trait_expertise_statecraft"
-		"uncivic_technocracy_governor_trait_expertise_biology"
-	}
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
+
+uncivic_technocracy_governor_trait_expertise_archaeostudies = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_archaeostudies.dds"
+	leader_potential_add = {
+		from = { has_ancrel = yes }
+	}
+	modifier = {
+		planet_jobs_society_research_produces_mult = @categorybonus
+		job_archaeoengineers_add = 1
+		job_archaeoengineers_per_pop = 0.1
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
 
 # 88b 88 888888  dP""b8    db    888888 88 Yb    dP 888888
 # 88Yb88 88__   dP   `"   dPYb     88   88  Yb  dP  88__
@@ -763,56 +355,30 @@ uncivic_technocracy_governor_trait_paranoid = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 uncivic_technocracy_governor_trait_traumatized = {
 	cost = 1
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_traumatized.dds"
-
 	modifier = {
 		planet_stability_add = -5
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
-
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 uncivic_technocracy_governor_trait_maimed = {
 	cost = 1
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_maimed.dds"
-
 	self_modifier = {
 		leader_age = -40
 	}
-
 	leader_trait = { governor }
 	leader_class = { governor }
-
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 # 888888 Yb    dP 888888 88b 88 888888
@@ -835,17 +401,6 @@ uncivic_technocracy_governor_trait_curator = {
 	randomized = no
 	leader_trait = { governor }
 	leader_class = { governor }
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 1000
-	}
 }
 
 uncivic_technocracy_governor_trait_towel = {
@@ -858,17 +413,6 @@ uncivic_technocracy_governor_trait_towel = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_percussive_maintainer = {
@@ -885,17 +429,6 @@ uncivic_technocracy_governor_trait_percussive_maintainer = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-	}
 }
 
 uncivic_technocracy_governor_trait_scholarium_investigator = {
@@ -908,13 +441,6 @@ uncivic_technocracy_governor_trait_scholarium_investigator = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 uncivic_technocracy_governor_trait_scholarium_explorer = {
@@ -926,13 +452,6 @@ uncivic_technocracy_governor_trait_scholarium_explorer = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 uncivic_technocracy_governor_trait_scholarium_observer = {
@@ -945,13 +464,6 @@ uncivic_technocracy_governor_trait_scholarium_observer = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-		}
-	}
 }
 
 # bug branch
@@ -966,14 +478,6 @@ uncivic_technocracy_governor_trait_expertise_bugged_good_trading = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-			has_global_flag = bug_branch_active
-		}
-	}
 }
 
 # e&c classic
@@ -988,12 +492,4 @@ uncivic_technocracy_governor_trait_expertise_good_trading = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
-
-	leader_potential_add = {
-		from = {
-			has_valid_civic = civic_technocracy
-			has_global_flag = uncivic_technocracy_enabled
-			has_global_flag = ethic_civic_classic_active
-		}
-	}
 }

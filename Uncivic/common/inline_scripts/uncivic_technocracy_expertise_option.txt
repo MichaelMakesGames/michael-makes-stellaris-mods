@@ -1,5 +1,6 @@
 option = {
 	name = leader_trait_expertise_$EXPERTISE$
+	trigger = { $POTENTIAL$ }
 	event_target:uncivic_technocracy_new_leader = {
 		add_trait = uncivic_technocracy_governor_trait_expertise_$EXPERTISE$
 		hidden_effect = {
