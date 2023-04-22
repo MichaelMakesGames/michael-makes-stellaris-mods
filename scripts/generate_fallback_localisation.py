@@ -14,8 +14,25 @@ target_languages = [
   "simp_chinese",
   "spanish",
 ]
+report_languages = [
+#   "braz_por",
+#   "french",
+#   "german",
+#   "japanese",
+#   "korean",
+#   "polish",
+#   "russian",
+#   "simp_chinese",
+#   "spanish",
+]
 
-line_regex = re.compile("^ ([\w\.]+)\s*:\s*\"(.*)\"\s*(#.*)?$")
+# set this to true when generating fallbacks for updated source string
+# set this to false when processing/validating updated target strings
+stash = False
+# set this to true to do a dry run, printing reports without editing files
+dry = False
+
+line_regex = re.compile("^\s*([\w\.]+)\s*:\s*\"(.*)\"\s*(#.*)?$")
 
 def main():
     cwd = Path.cwd()
@@ -28,8 +45,9 @@ def main():
         current_source_files[str(child.relative_to(source_language_dir))] = parsed_lines
         parse_file(child, parsed_lines, current_source_strings)
 
-    subprocess.run(["git", "add", "--all"])
-    subprocess.run(["git", "stash", "save", "generating fallback localisation"])
+    if stash:
+        subprocess.run(["git", "add", "--all"])
+        subprocess.run(["git", "stash", "save", "generating fallback localisation"])
 
     previous_source_files = {}
     previous_source_strings = {}
@@ -47,17 +65,17 @@ def main():
         for child in target_language_dir.iterdir():
             parse_file(child, [], previous_target_strings[target_language])
 
-    subprocess.run(["git" ,"stash", "apply"])
+    if stash:
+        subprocess.run(["git" ,"stash", "apply"])
 
     for target_language in target_languages:
+        untranslated_keys = []
         target_language_dir = cwd.joinpath("localisation", f"l_{target_language}")
-        if target_language_dir.exists():
-            subprocess.run(["rm", "-r", str(target_language_dir)])
-        target_language_dir.mkdir()
+        if not dry:
+            if target_language_dir.exists():
+                subprocess.run(["rm", "-r", str(target_language_dir)])
+            target_language_dir.mkdir()
         for file in current_source_files:
-            target_file_name = file.replace(source_language, target_language)
-            target_file_path = target_language_dir.joinpath(target_file_name)
-            target_file = open(target_file_path, "w", encoding="utf-8-sig")
             target_lines = [f"l_{target_language}:\n"]
             for source_line in current_source_files[file]:
                 if type(source_line) == str:
@@ -77,11 +95,32 @@ def main():
                         translation = None
                     if translation is None and not do_not_translate:
                         comment = "UNTRANSLATED"
+                        untranslated_keys.append(key)
                     string_to_write = current_source_string if translation is None else translation
                     comment_to_write = f" # {comment}" if comment is not None else ""
                     target_lines.append(f" {key}: \"{string_to_write}\"{comment_to_write}\n")
-            target_file.writelines(target_lines)
-            target_file.close()
+            if not dry:
+                target_file_name = file.replace(source_language, target_language)
+                target_file_path = target_language_dir.joinpath(target_file_name)
+                target_file = open(target_file_path, "w", encoding="utf-8-sig")
+                target_file.writelines(target_lines)
+                target_file.close()
+        if target_language in report_languages:
+            print()
+            print(f"{target_language} report:")
+            if untranslated_keys:
+                print("Untranslated keys:")
+                for key in untranslated_keys:
+                    print(f"\t{key}")
+            else:
+                print("Untranslated keys: None")
+            unrecognized_keys = [key for key in previous_target_strings[target_language] if key not in previous_source_strings]
+            if unrecognized_keys:
+                print("Unrecognized keys:")
+                for key in unrecognized_keys:
+                    print(f"\t{key}")
+            else:
+                print("Unrecognized keys: None")                
 
 
 def parse_file(path, lines, strings):
@@ -102,7 +141,12 @@ def parse_file(path, lines, strings):
                 comment = None
             lines.append((key, string, comment))
         else:
-            lines.append(line.strip())
+            stripped = line.strip()
+            if stripped.startswith("#") or stripped == "":
+                lines.append(stripped)
+            else:
+                print(f"Failed to parse line in {path.relative_to(Path.cwd())}:")
+                print(f"\t{stripped}")
     file.close()
 
 

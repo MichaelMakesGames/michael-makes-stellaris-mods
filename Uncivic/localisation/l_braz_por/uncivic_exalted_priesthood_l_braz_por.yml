@@ -16,7 +16,7 @@
  uncivic_exalted_priesthood_heretic_amnesty_desc: "The controversial decision to grant amnesty to all heretics was made on this planet." # UNTRANSLATED
  uncivic_exalted_priesthood_leader: "Leader of a Galactic Faith" # UNTRANSLATED
  uncivic_exalted_priesthood_leader_desc: "By leading a multinational faith, this Exalted Priesthood wields considerable influence." # UNTRANSLATED
- uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith" # UNTRANSLATED
  uncivic_exalted_priesthood_follower_desc: "By adopting the faith of an Exalted Priesthood, the priests of this nation are more effective." # UNTRANSLATED
  uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
@@ -187,7 +187,7 @@
  uncivic_exalted_priesthood_inquisition_balanced_desc: "We must not harm the True Believers, but there will be no mercy for heretic leaders or their followers." # UNTRANSLATED
  uncivic_exalted_priesthood_inquisition_balanced_tooltip: "Moderate chance of removing §HCenters of Heresy§!\nModerate chance of removing §HHeretical Beliefs§!\n§RLow chance of causing devastation and killing pops§!" # UNTRANSLATED
  uncivic_exalted_priesthood_inquisition_aggressive: "No Cost is Too Great" # UNTRANSLATED
- uncivic_exalted_priesthood_inquisition_aggressive_name: "$uncivic_exalted_priesthood_inquisition_aggressive$" # UNTRANSLATED
+ uncivic_exalted_priesthood_inquisition_aggressive_name: "$uncivic_exalted_priesthood_inquisition_aggressive$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_inquisition_aggressive_desc: "We must purge our society of this poison before its too late. Some innocent may need to be sacrificed for the greater good." # UNTRANSLATED
  uncivic_exalted_priesthood_inquisition_aggressive_tooltip: "High chance of removing §HCenters of Heresy§!\nHigh chance of removing §HHeretical Beliefs§!\n§RHigh chance of causing devastation and killing pops!§!" # UNTRANSLATED
 

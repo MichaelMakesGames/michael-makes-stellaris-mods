@@ -9,9 +9,9 @@
  uncivic_technocracy.202.title: "Recruit Physicist" # UNTRANSLATED
  uncivic_technocracy.202.desc: "Choose the expertise of your new technocrat governor." # UNTRANSLATED
  uncivic_technocracy.203.title: "Recruit Social Scientist" # UNTRANSLATED
- uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
+ uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
  uncivic_technocracy.204.title: "Recruit Engineer" # UNTRANSLATED
- uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
+ uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
  uncivic_technocracy_new_leader: "New Technocrat Governor" # UNTRANSLATED
  uncivic_technocracy_governor_trait_technocrat: "Technocrat" # UNTRANSLATED
  uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet." # UNTRANSLATED

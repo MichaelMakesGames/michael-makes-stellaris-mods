@@ -1,20 +1,20 @@
 ﻿l_russian:
- edict_uncivic_technocracy_recruit_technocrat: "Recruit Technocrat" # UNTRANSLATED
- edict_uncivic_technocracy_recruit_technocrat_desc: "Recruit a governor with a specific scientific Expertise trait." # UNTRANSLATED
- uncivic_technocracy.201.title: "Recruit Technocrat" # UNTRANSLATED
- uncivic_technocracy.201.desc: "Choose a category of technocrat governor to recruit." # UNTRANSLATED
- uncivic_technocracy.201.physics: "£physics_research£ $PHYSICS$" # UNTRANSLATED
- uncivic_technocracy.201.society: "£society_research£ $SOCIETY$" # UNTRANSLATED
- uncivic_technocracy.201.engineering: "£engineering_research£ $ENGINEERING$" # UNTRANSLATED
- uncivic_technocracy.202.title: "Recruit Physicist" # UNTRANSLATED
- uncivic_technocracy.202.desc: "Choose the expertise of your new technocrat governor." # UNTRANSLATED
- uncivic_technocracy.203.title: "Recruit Social Scientist" # UNTRANSLATED
- uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
- uncivic_technocracy.204.title: "Recruit Engineer" # UNTRANSLATED
- uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # UNTRANSLATED
- uncivic_technocracy_new_leader: "New Technocrat Governor" # UNTRANSLATED
- uncivic_technocracy_governor_trait_technocrat: "Technocrat" # UNTRANSLATED
- uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet." # UNTRANSLATED
+ edict_uncivic_technocracy_recruit_technocrat: "Нанять технократа"
+ edict_uncivic_technocracy_recruit_technocrat_desc: "Нанять губернатора с определенным признаком научной специализации."
+ uncivic_technocracy.201.title: "Нанять технократа"
+ uncivic_technocracy.201.desc: "Выберите категорию губернатора-технократа для найма."
+ uncivic_technocracy.201.physics: "£physics_research£ $ФИЗИКА$"
+ uncivic_technocracy.201.society: "£society_research£ $СОЦИОЛОГИЯ$"
+ uncivic_technocracy.201.engineering: "£engineering_research£ $ИНЖЕНЕРИЯ$"
+ uncivic_technocracy.202.title: "Нанять физика"
+ uncivic_technocracy.202.desc: "Выберите специалиста вашего нового губернатора-технократа."
+ uncivic_technocracy.203.title: "Нанять социального ученого"
+ uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
+ uncivic_technocracy.204.title: "Нанять инженера"
+ uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
+ uncivic_technocracy_new_leader: "Новый губернатор технократ"
+ uncivic_technocracy_governor_trait_technocrat: "Технократ"
+ uncivic_technocracy_governor_trait_technocrat_desc: "Технократ, которому еще не назначена специализация."
  ##############
  # DEPRECATED #
  ##############
@@ -30,7 +30,7 @@
  uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Прирост £unity£ Единство при полном исследовании системы"
  uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!" # DO NOT TRANSLATE
  uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits are doubled" # UNTRANSLATED
+ uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Все исследованные месторождения  £trade_value£ Торговой ценности производят £unity£ Единство"
  uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!" # DO NOT TRANSLATE
  uncivic_technocracy_scientist_trait_nuumismatic_priest_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity" # UNTRANSLATED
  uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "Все исследованные месторождения, пригодные для разработки, увеличиваются"

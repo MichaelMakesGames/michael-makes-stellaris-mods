@@ -3,5 +3,5 @@
  mod_planet_miners_society_research_produces_add: "£society_research£ $society_research$ от £job_miner£ [GetMinerPlural]"
  mod_planet_technician_physics_research_produces_add: "£physics_research£ $physics_research$ от £job_technician£ [GetTechnicianPlural]"
  mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ от £job_soldier£ [GetSoldierPlural]"
- mod_job_archaeoengineers_per_pop: "§G+1§! $job_archaeoengineers$ Job per $VALUE$ Pops" # UNTRANSLATED
- mod_job_archaeoengineers_per_pop_short: "\n§G+1§! £job_archaeoengineers£ per $VALUE$ £pop£" # UNTRANSLATED
+ mod_job_archaeoengineers_per_pop: "§G+1§! Работа $job_archaeoengineers$ за $VALUE$ населения"
+ mod_job_archaeoengineers_per_pop_short: "\n§G+1§! £job_archaeoengineers£ за каждое $VALUE$ £pop£"

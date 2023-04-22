@@ -1,2 +1,2 @@
 ﻿l_russian:
- mmu_paging_instance_being_used: "$TRIGGER_FAIL$Only one player may use this at a time" # UNTRANSLATED
+ mmu_paging_instance_being_used: "$TRIGGER_FAIL$Только один игрок может использовать его одновременно"
