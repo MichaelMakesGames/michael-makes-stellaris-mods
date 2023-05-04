@@ -22,6 +22,29 @@ defined_text = {
 }
 
 defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromTrust
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_trust_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_trust
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_trust_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_trust
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
 	name = UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion
 	text = {
 		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_opinion_green"
@@ -60,6 +83,29 @@ defined_text = {
 		trigger = {
 			check_variable = {
 				which = uncivic_exalted_priesthood_follower_acceptance_from_relative_power
+				value < 0
+			}
+		}
+	}
+	default = "uncivic_exalted_priesthood_follower_acceptance_zero"
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromTrustOfCurrentLeader
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_green"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader
+				value > 0
+			}
+		}
+	}
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_red"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader
 				value < 0
 			}
 		}

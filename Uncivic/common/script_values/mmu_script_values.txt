@@ -8,6 +8,26 @@ mmu_years_of_peace = {
 	base = 0
 	complex_trigger_modifier = {
 		trigger = years_of_peace
+		parameters = {
+			delay = $DELAY|0$
+		}
 		mode = add
 	}
+	multiply = $MULTIPLY|1$
+}
+
+mmu_num_envoys_with_task = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_envoy
+		parameters = {
+			limit = {
+				has_envoy_task = {
+					task = $TASK$
+				}
+			}
+		}
+		mode = add
+	}
+	multiply = $MULTIPLY|1$
 }

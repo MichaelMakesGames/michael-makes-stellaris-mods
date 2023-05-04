@@ -1,0 +1,302 @@
+namespace = uncivic_nationalistic_zeal
+
+# 101 enabled (scopeless)
+event = {
+	id = uncivic_nationalistic_zeal.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_nationalistic_zeal.111 }
+		}
+	}
+}
+
+# 102 disabled (scopeless)
+event = {
+	id = uncivic_nationalistic_zeal.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = uncivic_nationalistic_zeal.112 }
+		}
+	}
+}
+
+# 111 enabled (global event country)
+country_event = {
+	id = uncivic_nationalistic_zeal.111
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# do nothing
+	}
+}
+
+# 112 disabled (global event country)
+country_event = {
+	id = uncivic_nationalistic_zeal.112
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			remove_modifier = uncivic_nationalistic_zeal_hubris
+			remove_modifier = uncivic_nationalistic_zeal_disgrace
+			remove_country_flag = uncivic_nationalistic_zeal_disgrace
+		}
+	}
+}
+
+# 121 government added civic
+country_event = {
+	id = uncivic_nationalistic_zeal.121
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# do nothing
+	}
+}
+
+# 122 government removed civic
+country_event = {
+	id = uncivic_nationalistic_zeal.122
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# keep the modifier
+		remove_country_flag = uncivic_nationalistic_zeal_disgrace
+	}
+}
+
+# on_monthly_pulse_country
+country_event = {
+	id = uncivic_nationalistic_zeal.201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_nationalistic_zeal
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+		NOR = {
+			has_modifier = uncivic_nationalistic_zeal_hubris
+			has_modifier = uncivic_nationalistic_zeal_disgrace
+		}
+	}
+	immediate = {
+		start_situation = {
+			type = uncivic_nationalistic_zeal
+			target = root
+		}
+		random_situation = {
+			limit = {
+				is_situation_type = uncivic_nationalistic_zeal
+			}
+			situation_event = { id = uncivic_nationalistic_zeal.202 }
+		}
+	}
+}
+
+situation_event = {
+	id = uncivic_nationalistic_zeal.202
+	is_triggered_only = yes
+	situation = this
+	picture = GFX_evt_alien_propaganda
+	title = uncivic_nationalistic_zeal.202.title
+	desc = {
+		text = uncivic_nationalistic_zeal.202.desc.disgrace
+		trigger = { owner = { has_country_flag = uncivic_nationalistic_zeal_disgrace } }
+	}
+	desc = {
+		text = uncivic_nationalistic_zeal.202.desc
+		trigger = { NOT = { owner = { has_country_flag = uncivic_nationalistic_zeal_disgrace } } }
+	}
+	option = {
+		name = UNDERSTOOD
+	}
+	after = {
+		owner = {
+			remove_country_flag = uncivic_nationalistic_zeal_disgrace
+		}
+	}
+}
+
+country_event = {
+	id = uncivic_nationalistic_zeal.211
+	is_triggered_only = yes
+	picture = GFX_evt_alien_segregation
+	title = uncivic_nationalistic_zeal.211.title
+	desc = uncivic_nationalistic_zeal.211.desc
+	option = {
+		name = TERRIBLE
+		uncivic_nationalistic_zeal_disgrace_effect = yes
+	}
+}
+
+country_event = {
+	id = uncivic_nationalistic_zeal.212
+	is_triggered_only = yes
+	picture = GFX_evt_crisis_declared
+	title = uncivic_nationalistic_zeal.212.title
+	desc = uncivic_nationalistic_zeal.212.desc
+	option = {
+		name = WORRYING
+		add_modifier = {
+			modifier = uncivic_nationalistic_zeal_hubris
+		}
+	}
+}
+
+# hubris to disgrace, from losing system
+# fromfromfrom is system
+country_event = {
+	id = uncivic_nationalistic_zeal.221
+	is_triggered_only = yes
+	picture = GFX_evt_alien_segregation
+	title = uncivic_nationalistic_zeal.221.title
+	desc = uncivic_nationalistic_zeal.221.desc
+	location = fromfromfrom
+	trigger = {
+		has_modifier = uncivic_nationalistic_zeal_hubris
+	}
+	option = {
+		name = TERRIBLE
+		uncivic_nationalistic_zeal_disgrace_effect = yes
+	}
+}
+# hubris to disgrace, from losing war
+# fromfromfrom is war
+country_event = {
+	id = uncivic_nationalistic_zeal.222
+	is_triggered_only = yes
+	picture = GFX_evt_alien_segregation
+	title = uncivic_nationalistic_zeal.222.title
+	desc = uncivic_nationalistic_zeal.222.desc
+	trigger = {
+		has_modifier = uncivic_nationalistic_zeal_hubris
+	}
+	option = {
+		name = TERRIBLE
+		uncivic_nationalistic_zeal_disgrace_effect = yes
+	}
+}
+
+# on_space_battle_won
+# ROOT is winner country
+country_event = {
+	id = uncivic_nationalistic_zeal.301
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_valid_civic = civic_nationalistic_zeal
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+		any_situation = {
+			is_situation_type = uncivic_nationalistic_zeal
+		}
+	}
+	immediate = {
+		random_situation = {
+			limit = { is_situation_type = uncivic_nationalistic_zeal }
+			add_situation_progress = 0.5
+		}
+	}
+}
+
+# on_space_battle_lost
+# ROOT is loser country
+country_event = {
+	id = uncivic_nationalistic_zeal.302
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_valid_civic = civic_nationalistic_zeal
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+		any_situation = {
+			is_situation_type = uncivic_nationalistic_zeal
+		}
+	}
+	immediate = {
+		random_situation = {
+			limit = { is_situation_type = uncivic_nationalistic_zeal }
+			add_situation_progress = -0.5
+		}
+	}
+}
+
+# on_system_gained
+# ROOT is new owner
+country_event = {
+	id = uncivic_nationalistic_zeal.311
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_valid_civic = civic_nationalistic_zeal
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+	}
+	immediate = {
+		random_situation = {
+			limit = { is_situation_type = uncivic_nationalistic_zeal }
+			add_situation_progress = 1
+		}
+	}
+}
+
+# on_system_lost
+# ROOT is previous owner
+country_event = {
+	id = uncivic_nationalistic_zeal.312
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_valid_civic = civic_nationalistic_zeal
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+	}
+	immediate = {
+		random_situation = {
+			limit = { is_situation_type = uncivic_nationalistic_zeal }
+			add_situation_progress = -1
+		}
+		if = {
+			limit = { has_modifier = uncivic_nationalistic_zeal_hubris }
+			country_event = {
+				id = uncivic_nationalistic_zeal.221
+				days = 1 # delay so war loss can trigger first
+			}
+		}
+	}
+}
+
+# on_war_lost
+# ROOT is loser warleader
+# FROMFROM is war
+country_event = {
+	id = uncivic_nationalistic_zeal.321
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_global_flag = uncivic_nationalistic_zeal_enabled
+	}
+	immediate = {
+		fromfrom = {
+			if = {
+				limit = { any_defender = { is_same_value = root } }
+				every_defender = {
+					limit = {
+						has_valid_civic = civic_nationalistic_zeal
+						has_modifier = uncivic_nationalistic_zeal_hubris
+					}
+					country_event = { id = uncivic_nationalistic_zeal.222 }
+				}
+			}
+			if = {
+				limit = { any_attacker = { is_same_value = root } }
+				every_attacker = {
+					limit = {
+						has_valid_civic = civic_nationalistic_zeal
+						has_modifier = uncivic_nationalistic_zeal_hubris
+					}
+					country_event = { id = uncivic_nationalistic_zeal.222 }
+				}
+			}
+		}
+	}
+}

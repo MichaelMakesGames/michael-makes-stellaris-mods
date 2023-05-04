@@ -1082,7 +1082,7 @@ country_event = {
 				save_event_target_as = uncivic_exalted_priesthood_proposed_leader
 				country_event = {
 					id = uncivic_exalted_priesthood.702
-					# scopes = { from = root }
+					days = 15
 				}
 			}
 		}
@@ -1105,6 +1105,12 @@ country_event = {
 		portrait = from
 		room = from.ruler
 	}
+	trigger = {
+		uncivic_exalted_priesthood_can_be_leader = yes
+		from = {
+			uncivic_exalted_priesthood_can_be_follower = yes
+		}
+	}
 	# accept
 	option = {
 		name = uncivic_exalted_priesthood.702.accept
@@ -1114,7 +1120,17 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			weight = 1000
+			weight = 0
+			modifier = {
+				add = 1000
+				OR = {
+					has_attitude_behavior = {
+						target = from
+						behavior = coexist
+					}
+					is_overlord_to = from
+				}
+			}
 		}
 	}
 	# reject
@@ -1128,6 +1144,16 @@ country_event = {
 		}
 		ai_chance = {
 			weight = 0
+			modifier = {
+				add = 1000
+				NOR = {
+					has_attitude_behavior = {
+						target = from
+						behavior = coexist
+					}
+					is_overlord_to = from
+				}
+			}
 		}
 	}
 }
@@ -1379,6 +1405,12 @@ country_event = {
 			save_event_target_as = uncivic_exalted_priesthood_proposed_leader
 		}
 	}
+	trigger = {
+		uncivic_exalted_priesthood_can_be_follower = yes
+		from = {
+			uncivic_exalted_priesthood_can_be_leader = yes
+		}
+	}
 	option = {
 		name = uncivic_exalted_priesthood.712.accept
 		custom_tooltip = uncivic_exalted_priesthood.712.accept.tooltip
@@ -1475,7 +1507,7 @@ country_event = {
 }
 
 # AI invites player to join faith
-# on_monthly_pulse_country
+# on_yearly_pulse_country
 country_event = {
 	id = uncivic_exalted_priesthood.715
 	is_triggered_only = yes
@@ -1492,13 +1524,18 @@ country_event = {
 				NOT = { has_country_flag = uncivic_exalted_priesthood_rejected_invite_from_@root }
 				is_ai = no
 				has_communications = root
-				their_opinion = {
-					who = root
-					value > 0
+				OR = {
+					has_attitude_behavior = {
+						target = root
+						behavior = coexist
+					}
+					is_overlord_to = root
 				}
 			}
 			country_event = {
 				id = uncivic_exalted_priesthood.712
+				days = 1
+				random = 90
 			}
 		}
 	}

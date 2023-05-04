@@ -16,7 +16,7 @@
  uncivic_exalted_priesthood_heretic_amnesty_desc: "The controversial decision to grant amnesty to all heretics was made on this planet."
  uncivic_exalted_priesthood_leader: "Leader of a Galactic Faith"
  uncivic_exalted_priesthood_leader_desc: "By leading a multinational faith, this Exalted Priesthood wields considerable influence."
- uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!\n  $mod_planet_priests_upkeep_mult$: §R+10%§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith"
  uncivic_exalted_priesthood_follower_desc: "By adopting the faith of an Exalted Priesthood, the priests of this nation are more effective."
  uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
@@ -217,15 +217,19 @@
  uncivic_exalted_priesthood_opinion_modifier_rejected_reform_desc: "This empire rejected the reforms made to the Faith."
 
  # acceptance tooltip
- uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-50§!\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
- uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Opinion of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Relative Power of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]"
+ uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-100§!\n     Trust: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrust]\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
+ uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Trust of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrustOfCurrentLeader]\n     Opinion of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Relative Power of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]"
  uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_trust]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_trust]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE

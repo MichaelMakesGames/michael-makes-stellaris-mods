@@ -1,0 +1,16 @@
+uncivic_nationalistic_zeal_hubris = {
+	country_border_friction_mult = 2.00
+	army_morale = 0.50
+	country_power_projection_influence_produces_add = 1
+	ship_fire_rate_mult = 0.20
+	envoy_improve_relations_mult = -0.75
+	country_trust_cap_add = -100
+	country_trust_growth = -0.5
+}
+
+uncivic_nationalistic_zeal_disgrace = {
+	planet_stability_add = -15
+	pop_government_ethic_attraction = -0.50
+	pop_ethic_militarist_attraction_mult = -0.50
+	pop_ethic_pacifist_attraction_mult = 0.50
+}

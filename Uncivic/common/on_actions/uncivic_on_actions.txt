@@ -35,13 +35,14 @@ on_monthly_pulse_country = {
 		uncivic_exalted_priesthood.201 # spread unorthodoxy/heresy
 		uncivic_exalted_priesthood.621 # recalc and validation
 		uncivic_exalted_priesthood.701 # AI requests to join faith
-		uncivic_exalted_priesthood.715 # AI invites player to join faith
+		uncivic_nationalistic_zeal.201 # start zeal situation
 	}
 }
 
 on_yearly_pulse_country = {
 	events = {
 		uncivic_shadow_council.301 # shadow council exposure
+		uncivic_exalted_priesthood.715 # AI invites player to join faith
 	}
 }
 
@@ -150,5 +151,50 @@ on_ruler_back_to_pre_ruler_class = {
 	events = {
 		uncivic_shadow_council.401 # validate shadow councilor flag/traits
 		uncivic_exalted_priesthood.601 # remove hardliner/unorthodox if needed
+	}
+}
+
+# 88""Yb    db    888888 888888 88     888888 .dP"Y8
+# 88__dP   dPYb     88     88   88     88__   `Ybo."
+# 88""Yb  dP__Yb    88     88   88  .o 88""   o.`Y8b
+# 88oodP dP""""Yb   88     88   88ood8 888888 8bodP'
+
+on_space_battle_won = {
+	events = {
+		uncivic_nationalistic_zeal.301 # gain zeal
+	}
+}
+
+on_space_battle_lost = {
+	events = {
+		uncivic_nationalistic_zeal.302 # lose zeal
+	}
+}
+
+# .dP"Y8 Yb  dP .dP"Y8 888888 888888 8b    d8 .dP"Y8
+# `Ybo."  YbdP  `Ybo."   88   88__   88b  d88 `Ybo."
+# o.`Y8b   8P   o.`Y8b   88   88""   88YbdP88 o.`Y8b
+# 8bodP'  dP    8bodP'   88   888888 88 YY 88 8bodP'
+
+on_system_gained = {
+	events = {
+		uncivic_nationalistic_zeal.311 # gain zeal
+	}
+}
+
+on_system_lost = {
+	events = {
+		uncivic_nationalistic_zeal.312 # lose zeal, get disgraced
+	}
+}
+
+# Yb        dP    db    88""Yb .dP"Y8
+#  Yb  db  dP    dPYb   88__dP `Ybo."
+#   YbdPYbdP    dP__Yb  88"Yb  o.`Y8b
+#    YP  YP    dP""""Yb 88  Yb 8bodP'
+
+on_war_lost = {
+	events = {
+		uncivic_nationalistic_zeal.321 # get disgraced
 	}
 }
