@@ -41,13 +41,3 @@
  uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
 
  # traits
- uncivic_shadow_council_ruler_trait_shadow_councilor: "Conseiller Fantôme"
- uncivic_shadow_council_ruler_trait_shadow_councilor_desc: "Ce chef fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
- uncivic_shadow_council_governor_trait_shadow_councilor: "Conseiller Fantôme"
- uncivic_shadow_council_governor_trait_shadow_councilor_desc: "Ce gouverneur fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
- uncivic_shadow_council_scientist_trait_shadow_councilor: "Conseiller Fantôme"
- uncivic_shadow_council_scientist_trait_shadow_councilor_desc: "Ce scientifique fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
- uncivic_shadow_council_admiral_trait_shadow_councilor: "Conseiller Fantôme"
- uncivic_shadow_council_admiral_trait_shadow_councilor_desc: "Cet amiral fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."
- uncivic_shadow_council_general_trait_shadow_councilor: "Conseiller Fantôme"
- uncivic_shadow_council_general_trait_shadow_councilor_desc: "Ce général fait partie de la cabale qui contrôle le gouvernement en secret, s'assurant que tout se déroule comme prévu."

@@ -16,7 +16,7 @@
  uncivic_exalted_priesthood_heretic_amnesty_desc: "The controversial decision to grant amnesty to all heretics was made on this planet."
  uncivic_exalted_priesthood_leader: "Leader of a Galactic Faith"
  uncivic_exalted_priesthood_leader_desc: "By leading a multinational faith, this Exalted Priesthood wields considerable influence."
- uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!\n  $mod_planet_priests_upkeep_mult$: §R+10%§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!\n  $mod_planet_administrators_upkeep_mult$: §R+10%§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower: "Follower of a Galactic Faith"
  uncivic_exalted_priesthood_follower_desc: "By adopting the faith of an Exalted Priesthood, the priests of this nation are more effective."
  uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
@@ -27,8 +27,10 @@
 
  # traits
  uncivic_exalted_priesthood_leader_trait_unorthodox: "Unorthodox"
+ uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip: "Spreads unorthodoxy to other leaders and planets\nCauses the Ecumenical Council to progress towards compromise"
  uncivic_exalted_priesthood_leader_trait_unorthodox_desc: "This leader follows beliefs some consider to be unnatural."
  uncivic_exalted_priesthood_leader_trait_hardliner: "Hardliner"
+ uncivic_exalted_priesthood_leader_trait_hardliner_tooltip: "Reduces the spread of unorthodoxy and heresy\nCauses the Ecumenical Council to progress towards declaring heresy"
  uncivic_exalted_priesthood_leader_trait_hardliner_desc: "This leader believes there is no room for compromise with those who stray from the righteous path."
 
  # messages
@@ -40,10 +42,6 @@
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED: "$PLANET|Y$ is now a center of unorthodox teachings"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED_TITLE: "Center of Heresy Formed"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED: "$PLANET|Y$ is now a center of heretical teachings"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER_TITLE: "Unorthodox Leader"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER: "$LEADER|Y$ is now unorthodox"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER_TITLE: "Hardliner Leader"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER: "$LEADER|Y$ is now an orthodox hardliner"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED_TITLE: "Heretical Beliefs Eradicated"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED: "Heretical beliefs are no longer present on $PLANET|Y$"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED_TITLE: "Center of Heresy Eradicated"
@@ -67,8 +65,8 @@
  uncivic_exalted_priesthood_council_hardline: "Support Hardliners"
  uncivic_exalted_priesthood_council_hardliner_leaders: "Hardliner Leaders"
  uncivic_exalted_priesthood_council_unorthodox_leaders: "Unorthodox Leaders"
- uncivic_exalted_priesthood_council_hardliner_ruler: "Hardliner Ruler"
- uncivic_exalted_priesthood_council_unorthodox_ruler: "Unorthodox Ruler"
+ uncivic_exalted_priesthood_council_hardliner_councilors: "Hardliner Councilors"
+ uncivic_exalted_priesthood_council_unorthodox_councilors: "Unorthodox Councilors"
  uncivic_exalted_priesthood_council_momentum: "Debate Momentum"
  uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$" # DO NOT TRANSLATE
@@ -193,7 +191,7 @@
 
  # edict
  edict_uncivic_exalted_priesthood_call_council: "Call Ecumenical Council"
- edict_uncivic_exalted_priesthood_call_council_desc: "We must convene all the high priests to debate the unorthodox beliefs spreading through our empire."
+ edict_uncivic_exalted_priesthood_call_council_desc: "We must convene all the high priests to debate the unorthodox beliefs spreading through our empire.\n\n§LThis is costs less £unity£ Unity the more Unorthodox planets we have.§!"
  uncivic_exalted_priesthood_call_council_allow: "£trigger_no£ At least 25% of planets are §HUnorthodox§!"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith: "Invite to Galactic Faith"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith_desc: "Invite other Spiritualist empires to follow your Exalted Priesthood."

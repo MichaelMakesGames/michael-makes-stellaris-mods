@@ -91,8 +91,6 @@ country_event = {
 				}
 			}
 			every_owned_leader = {
-				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_unorthodox }
-				mmu_leaders_remove_ruler_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_hardliner }
 				mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_unorthodox }
 				mmu_leaders_remove_trait_if_present = { TRAIT = uncivic_exalted_priesthood_leader_trait_hardliner }
 			}
@@ -351,7 +349,6 @@ country_event = {
 			limit = { uncivic_exalted_priesthood_has_unorthodoxy = yes }
 			# chance of spread
 			random_owned_planet = {
-				limit = { uncivic_exalted_priesthood_planet_is_unorthodox = no }
 				random = {
 					chance = value:uncivic_exalted_priesthood_unorthodoxy_spread_chance
 					set_timed_planet_flag = {
@@ -411,16 +408,10 @@ country_event = {
 							target = THIS
 							variable = { type = name localization = PLANET scope = THIS }
 						}
-						uncivic_exalted_priesthood_create_poi = yes
 						owner = {
 							add_event_chain_counter = {
 								event_chain = uncivic_exalted_priesthood_heresy_chain
 								counter = uncivic_exalted_priesthood_heretic_planet_counter
-								amount = 1
-							}
-							add_event_chain_counter = {
-								event_chain = uncivic_exalted_priesthood_heresy_chain
-								counter = uncivic_exalted_priesthood_heretic_center_counter
 								amount = 1
 							}
 						}
@@ -439,33 +430,16 @@ country_event = {
 			}
 			# chance of spread to leaders
 			random_owned_leader = {
-				limit = { NOR = {
-					leader_class = envoy
-					leader_class = ruler
-				} }
+				limit = { NOT = { leader_class = envoy } }
 				random = {
 					chance = value:uncivic_exalted_priesthood_leader_reaction_chance
 					random = {
 						chance = value:uncivic_exalted_priesthood_leader_unorthodox_chance
 						add_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-						add_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-						create_message = {
-							type = UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER
-							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER
-							days = 30
-							variable = { type = name localization = LEADER scope = THIS }
-						}
 					}
 					if = {
 						limit = { NOT = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox } }
 						add_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-						add_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-						create_message = {
-							type = UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER
-							localization = MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER
-							days = 30
-							variable = { type = name localization = LEADER scope = THIS }
-						}
 					}
 				}
 			}
@@ -499,7 +473,7 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = uncivic_exalted_priesthood_has_unorthodoxy }
 				NOT = { has_country_flag = uncivic_exalted_priesthood_unorthodoxy_cooldown }
-				years_passed > 50
+				mid_game_years_passed >= 5
 				num_owned_planets >= 3
 			}
 			random = {
@@ -1178,6 +1152,10 @@ country_event = {
 				save_event_target_as = uncivic_exalted_priesthood_current_leader
 				prev = {
 					set_variable = {
+						which = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader
+						value = value:uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader
+					}
+					set_variable = {
 						which = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
 						value = value:uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader
 					}
@@ -1260,6 +1238,10 @@ country_event = {
 			set_variable = {
 				which = uncivic_exalted_priesthood_follower_acceptance
 				value = value:uncivic_exalted_priesthood_follower_acceptance
+			}
+			set_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_trust
+				value = value:uncivic_exalted_priesthood_follower_acceptance_from_trust
 			}
 			set_variable = {
 				which = uncivic_exalted_priesthood_follower_acceptance_from_opinion
@@ -1376,6 +1358,8 @@ country_event = {
 			every_country = {
 				limit = { is_variable_set = uncivic_exalted_priesthood_follower_invite_paging_index }
 				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance }
+				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust }
+				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader }
 				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion }
 				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader }
 				mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_relative_power }
@@ -1827,31 +1811,6 @@ country_event = {
 # dP   Yb 88Yb88       dPYb   dP   `"   88   88 dP   Yb 88Yb88 `Ybo."
 # Yb   dP 88 Y88      dP__Yb  Yb        88   88 Yb   dP 88 Y88 o.`Y8b
 #  YbodP  88  Y8     dP""""Yb  YboodP   88   88  YbodP  88  Y8 8bodP'
-
-# on_ruler_back_to_pre_ruler_class
-country_event = {
-	id = uncivic_exalted_priesthood.601
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		from = {
-			if = {
-				limit = {
-					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-					NOT = { has_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner }
-				}
-				remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-			}
-			if = {
-				limit = {
-					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-					NOT = { has_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
-				}
-				remove_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-			}
-		}
-	}
-}
 
 # on_planet_transfer
 # on_planet_ownerless

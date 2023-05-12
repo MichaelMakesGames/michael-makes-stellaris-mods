@@ -88,3 +88,27 @@ on_capital_changed = {
 		mmgsiege_stockpile_automation.301 # move stockpile budget feature to new capital
 	}
 }
+
+# on_leader_unassigned = {
+# 	events = {
+# 		mmgsiege.42 # clean up under supplied leader trait / temporary leader
+# 	}
+# }
+
+# on_leader_assigned = {
+# 	events = {
+# 		mmgsiege.43 # add under supplied army leader trait
+# 	}
+# }
+
+# on_leader_death = {
+# 	events = {
+# 		mmgsiege.44 # create temporary general if needed
+# 	}
+# }
+
+# on_leader_fired = {
+# 	events = {
+# 		mmgsiege.44 # create temporary general if needed
+# 	}
+# }

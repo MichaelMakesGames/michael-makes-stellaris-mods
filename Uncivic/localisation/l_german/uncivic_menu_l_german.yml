@@ -6,6 +6,10 @@
  uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Exalted Priesthood Disabled" # UNTRANSLATED
  uncivic_menu_exalted_priesthood_tooltip: "Enables leading a Galactic Faith, and enables unorthodoxy and heresy mechanics" # UNTRANSLATED
 
+ uncivic_menu_nationalistic_zeal_enabled: "£trigger_yes£ Nationalistic Zeal Enabled" # UNTRANSLATED
+ uncivic_menu_nationalistic_zeal_disabled: "£trigger_no£ Nationalistic Zeal Disabled" # UNTRANSLATED
+ uncivic_menu_nationalistic_zeal_tooltip: "Enables the Zeal mechanics, leading to Nationalist Hubris or Nationalist Disgrace if mismanaged" # UNTRANSLATED
+
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Parlamentarisches System Aktiviert"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Parlamentarisches System Deaktiviert"
  uncivic_menu_parliamentary_system_tooltip: "Aktiviert parlamentarische Wahlen auf Planeten mit verbesserten Hauptstadtgebäuden"

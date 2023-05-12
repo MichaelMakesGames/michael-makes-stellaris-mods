@@ -1,0 +1,3 @@
+mmgsiege_deposit_cat = {
+	important = yes # TODO make this unimportant again
+}

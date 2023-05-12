@@ -1558,6 +1558,8 @@ uncivic_exalted_priesthood_follower_invite_paging_effect = {
 		every_country = {
 			limit = { is_variable_set = uncivic_exalted_priesthood_follower_invite_paging_index }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_relative_power }

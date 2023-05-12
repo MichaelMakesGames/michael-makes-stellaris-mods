@@ -32,22 +32,6 @@ message_type = {
 
 message_type = {
 	icon = "GFX_message_other_alert"
-	icon_frame = 2
-	key = "UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER"
-	name = "MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER_TITLE"
-	ping = "ping_notification_red"
-}
-
-message_type = {
-	icon = "GFX_message_other_alert"
-	icon_frame = 1
-	key = "UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER"
-	name = "MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER_TITLE"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	icon = "GFX_message_other_alert"
 	icon_frame = 1
 	key = "UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED"
 	name = "MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED_TITLE"

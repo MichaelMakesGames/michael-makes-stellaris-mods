@@ -57,17 +57,17 @@
 
  # mod compat
  uncivic_parliamentary_system_competitive_faction: "INTERNAL competitive faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_competitive_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_competitive_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_elitist_faction: "INTERNAL elitist faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_elitist_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_elitist_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_ecocentric_faction: "INTERNAL ecocentric faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_ecocentric_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_ecocentric_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_pluralist_faction: "INTERNAL pluralist faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_pluralist_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_pluralist_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_anthropocentric_faction: "INTERNAL anthropocentric faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_anthropocentric_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_anthropocentric_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_cooperative_faction: "INTERNAL cooperative faction shared modifier" # DO NOT TRANSLATE
- uncivic_parliamentary_system_cooperative_faction_desc: "" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_cooperative_faction_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
  uncivic_parliamentary_system_capitalist: "Parlementaire capitaliste"
  uncivic_parliamentary_system_capitalist_desc: "Cette planète a élu un membre de la faction capitaliste pour la représenter au Parlement."
  uncivic_parliamentary_system_conservative: "Parlementaire conservateur"

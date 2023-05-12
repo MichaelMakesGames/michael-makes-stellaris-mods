@@ -1,29 +1,25 @@
-Adds siege warfare to Stellaris! (For 3.7.*)
+Adds siege warfare to Stellaris! (For 3.8.*)
 
-Ever wanted to win a war without invading a single planet? Have you wondered how that ecumenopolis feeds itself when you control the skies above it? This is the mod for you!
+Have you wondered how that ecumenopolis feeds itself when you control the skies above it? How does that besieged forge world get all its minerals? This is the mod for you!
 
-When a starbase is controlled by a hostile country, planets need to produce their own resources, otherwise they face gradually worsening resource shortages. Eventually, the local forces of the planet may surrender to the enemy!
+When a starbase is controlled by a hostile country, planets need to produce their own resources, otherwise they face gradually worsening resource shortages.
 
 [h1]Resource Shortages[/h1]
-If energy, minerals, food, and consumer goods aren't produced locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if some food needs to be imported.
+If energy, minerals, food, and consumer goods aren't produced or stockpiled locally, the planet will suffer gradually worsening penalties. The penalties are dynamic according to empire and species, so for example, a catalytic empire will suffer alloy production penalties during a food shortage, and their non-lithoid pops will be unhappy. Shortages will worsen slower if some of the local needs are met, so building a few farms can help even if not fully self-sufficient.
 
-As of Stellaris 3.6, resource shortages are disabled on occupied planets, since they no longer produce or consume resources.
-
-[h1]Surrender[/h1]
-A planet that is under siege and has less than 40 stability will consider surrender, starting a situation for both the attacker and defender. The lower the stability, the faster the situation will progress. At 100%, the planet surrenders and the besiegers take control.
-
-Occupied planets will start considering surrender regardless of stability.
-
-Some planets never surrender:
-[list]
- [*] Capital planets never surrender
- [*] Gestalt planets never surrender
- [*] Planets will not surrender if there's active ground combat or if the starbase is currently in combat
- [*] Planets never surrender during total wars
-[/list]
+Critically, Energy and Mineral shortages increase the damage from orbital bombardment, which means those planets will surrender more quickly (or turn into Tomb worlds if facing Armageddon bombardment).
 
 [h1]Stockpiles[/h1]
-You can transfer resources from your empire stockpile to local planet stockpiles. When besieged, planets will consume from that stockpile before they start receiving penalties. You can manually add and remove resources from the stockpile as long as the planet is not under siege. Additionally, you can set a budget to automatically stockpile to your highest priority planets. Priority is determined separately for each resource, based on local needs and production, how long the current stockpile could last in a siege, and proximity to a war front.
+You can transfer resources from your empire stockpile to local planet stockpiles. When besieged, planets will consume from that stockpile before they start receiving penalties. You can manually add and remove resources from the stockpile as long as the planet is not under siege.
+
+
+Does that sound like micro-management hell? You can set a budget to automatically stockpile to your highest priority planets, using the same system as the AI. Priority is determined separately for each resource, based on:
+[list]
+  [*] Population
+  [*] Local needs and production
+  [*] How long the current stockpile would last in a siege
+  [*] And proximity to a war front
+[/list]
 
 A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier, +100 per stronghold, +200 per fortress, and +1000 per resource silo. Finally, a good use for resource silos! 
 
@@ -33,21 +29,15 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
  [*] Perhaps specializing planets should be reserved for your well-defended core, and outlying planets should be generalist to slow down enemies
  [*] Fortress worlds will greatly benefit from a local resource supplies, or a large stockpile
  [*] Trade planets are vulnerable to sieges because the trade value doesn't count towards any local resource production when under siege
- [*] Wars against hive minds and machines will be tougher since invasions are still needed, and the unhappiness penalties of resource shortages do not affect them
- [*] Genocidal empires will have more difficulty conquering since no planets will surrender to them
- [*] High stability / high happiness empires have a defensive advantage
- [*] Probably more things I haven't thought of!
 [/list]
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.7.*
+  [*] For Stellaris 3.8.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
-  [*] Can be removed from an existing game
   [*] Should be compatible with all other mods
   [list]
-    [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]Occupied Resources[/url] is now fully compatible! (Previously it was not.)
     [*] Exception: This mod overwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)
   [/list]
 [/list]

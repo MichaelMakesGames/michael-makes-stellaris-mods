@@ -1,0 +1,313 @@
+@level_2_multiplier = 2
+@level_3_multiplier = 5
+@level_4_multiplier = 10
+
+@pop_happiness_base = -0.05
+@pop_growth_reduction_base = 0.10
+@pop_assembly_reduction_base = 0.10
+@job_produces_base = -0.05
+@amenities_base = -0.05
+
+mmgsiege_shortage_biological_pop_happiness = {
+	base = 0
+	modifier = {
+		add = @pop_happiness_base
+		mmgsiege_has_resource_shortage = { RESOURCE = food }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_lithoid_pop_happiness = {
+	base = 0
+	modifier = {
+		add = @pop_happiness_base
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_robot_pop_happiness = {
+	base = 0
+	modifier = {
+		add = @pop_happiness_base
+		mmgsiege_has_resource_shortage = { RESOURCE = energy }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_biological_pop_growth_reduction = {
+	base = 0
+	modifier = {
+		add = @pop_growth_reduction_base
+		mmgsiege_has_resource_shortage = { RESOURCE = food }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_lithoid_pop_growth_reduction = {
+	base = 0
+	modifier = {
+		add = @pop_growth_reduction_base
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_pop_assembly_reduction = {
+	base = 0
+	modifier = {
+		add = @pop_assembly_reduction_base
+		mmgsiege_has_resource_shortage = { RESOURCE = energy }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_pop_assembly_organic_reduction = {
+	base = 0
+	modifier = {
+		add = @pop_assembly_reduction_base
+		exists = owner
+		OR = {
+			AND = {
+				is_lithoid_empire = no
+				mmgsiege_has_resource_shortage = { RESOURCE = food }
+			}
+			AND = {
+				is_lithoid_empire = yes
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		exists = owner
+		OR = {
+			AND = {
+				is_lithoid_empire = no
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+			}
+			AND = {
+				is_lithoid_empire = yes
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		exists = owner
+		OR = {
+			AND = {
+				is_lithoid_empire = no
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+			}
+			AND = {
+				is_lithoid_empire = yes
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		exists = owner
+		OR = {
+			AND = {
+				is_lithoid_empire = no
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+			}
+			AND = {
+				is_lithoid_empire = yes
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+			}
+		}
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_artisans_produces = {
+	base = 0
+	modifier = {
+		add = @job_produces_base
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+
+mmgsiege_shortage_metallurgists_produces = {
+	base = 0
+	modifier = {
+		add = @job_produces_base
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_catalytic_empire = no }
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+			}
+			AND = {
+				owner = { is_catalytic_empire = yes }
+				mmgsiege_has_resource_shortage = { RESOURCE = food }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_2_multiply
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_catalytic_empire = no }
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+			}
+			AND = {
+				owner = { is_catalytic_empire = yes }
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_3_multiply
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_catalytic_empire = no }
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+			}
+			AND = {
+				owner = { is_catalytic_empire = yes }
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
+			}
+		}
+	}
+	modifier = {
+		multiply = @level_4_multiply
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_catalytic_empire = no }
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+			}
+			AND = {
+				owner = { is_catalytic_empire = yes }
+				mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
+			}
+		}
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
+mmgsiege_shortage_administrators_produces = {} # TODO
+mmgsiege_shortage_researchers_produces = {} # TODO
+mmgsiege_shortage_amenities = {} # TODO
+mmgsiege_shortage_energy_orbital_bombardment_damage = {} # TODO
+mmgsiege_shortage_minerals_orbital_bombardment_damage = {} # TODO
+mmgsiege_shortage_orbital_bombardment_damage = {} # TODO

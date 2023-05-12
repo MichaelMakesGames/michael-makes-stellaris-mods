@@ -153,31 +153,103 @@ mmgsiege_planet_production_offset_consumer_goods = {
 	}
 }
 
-mmgsiege_surrender_progress_from_stability = {
+mmgsiege_planet_biological_army_supply_shortage = {
 	base = 0
-	modifier = {
-		subtract = trigger:planet_stability
-		planet_stability > 50
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		parameters = {
+			limit = { mmgsiege_is_biological_army = yes }
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		mode = divide
 	}
 	modifier = {
-		add = 50
-		planet_stability > 50
+		multiply = 0
+		NOT = { mmgsiege_has_resource_shortage = { RESOURCE = food } }
 	}
 	modifier = {
-		subtract = trigger:planet_stability
-		planet_stability < 40
+		multiply = 2
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 2 }
 	}
 	modifier = {
-		add = 40
-		planet_stability < 40
-	}
-	divide = 5
-	modifier = {
-		floor = yes
-		planet_stability > 50
+		multiply = 5
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 3 }
 	}
 	modifier = {
-		ceiling = yes
-		planet_stability < 40
+		multiply = 10
+		mmgsiege_has_resource_shortage = { RESOURCE = food LEVEL = 4 }
 	}
+}
+
+mmgsiege_planet_lithoid_army_supply_shortage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		parameters = {
+			limit = { mmgsiege_is_lithoid_army = yes }
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		mode = divide
+	}
+	modifier = {
+		multiply = 0
+		NOT = { mmgsiege_has_resource_shortage = { RESOURCE = minerals } }
+	}
+	modifier = {
+		multiply = 2
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 2 }
+	}
+	modifier = {
+		multiply = 5
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 3 }
+	}
+	modifier = {
+		multiply = 10
+		mmgsiege_has_resource_shortage = { RESOURCE = minerals LEVEL = 4 }
+	}
+}
+
+mmgsiege_planet_mechanical_army_supply_shortage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		parameters = {
+			limit = { mmgsiege_is_mechanical_army = yes }
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_planet_army
+		mode = divide
+	}
+	modifier = {
+		multiply = 0
+		NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
+	}
+	modifier = {
+		multiply = 2
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+	}
+	modifier = {
+		multiply = 5
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+	}
+	modifier = {
+		multiply = 10
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+	}
+}
+
+mmgsiege_planet_average_army_supply_shortage = {
+	base = 0
+	add = value:mmgsiege_planet_biological_army_supply_shortage
+	add = value:mmgsiege_planet_lithoid_army_supply_shortage
+	add = value:mmgsiege_planet_mechanical_army_supply_shortage
+	round = yes
 }

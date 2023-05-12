@@ -253,13 +253,13 @@ country_event = {
 				}
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = energy
-					PERCENT = 25
+					PERCENT = 15
 				}
 			}
 			else = {
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = energy
-					PERCENT = 15
+					PERCENT = 10
 				}
 			}
 
@@ -273,13 +273,13 @@ country_event = {
 				}
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = minerals
-					PERCENT = 25
+					PERCENT = 15
 				}
 			}
 			else = {
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = minerals
-					PERCENT = 15
+					PERCENT = 10
 				}
 			}
 
@@ -298,13 +298,13 @@ country_event = {
 				}
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = food
-					PERCENT = 40
+					PERCENT = 20
 				}
 			}
 			else = {
 				mmgsiege_set_stockpile_budget_percent = {
 					RESOURCE = food
-					PERCENT = 25
+					PERCENT = 15
 				}
 			}
 
@@ -312,7 +312,7 @@ country_event = {
 			# higher base percent since stockpiled consumer aren't very useful
 			mmgsiege_set_stockpile_budget_percent = {
 				RESOURCE = consumer_goods
-				PERCENT = 25
+				PERCENT = 15
 			}
 		}
 	}

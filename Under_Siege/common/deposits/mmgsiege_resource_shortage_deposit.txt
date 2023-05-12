@@ -1,7 +1,7 @@
 mmgsiege_shortage_feature = {
 	icon = d_bunker_door
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = mmgsiege_deposit_cat
 	potential = {
 		always = no
 	}
@@ -452,4 +452,22 @@ mmgsiege_shortage_feature = {
 			mmgsiege_metallurgist_shortage = 10
 		}
 	}
+
+	########
+	# Army #
+	########
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		is_variable_set = mmgsiege_army_shortage
+	# 		check_variable = {
+	# 			which = mmgsiege_army_shortage
+	# 			value > 0
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		army_health = -0.05
+	# 		army_morale = -0.05
+	# 	}
+	# 	mult = mmgsiege_army_shortage
+	# }
 }

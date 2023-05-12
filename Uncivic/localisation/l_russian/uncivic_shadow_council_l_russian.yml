@@ -41,13 +41,3 @@
  uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
 
  # traits
- uncivic_shadow_council_ruler_trait_shadow_councilor: "Теневой советник"
- uncivic_shadow_council_ruler_trait_shadow_councilor_desc: "Этот лидер входит в группу, которая тайно контролирует правительство и следит за тем, чтобы все шло гладко и как положено."
- uncivic_shadow_council_governor_trait_shadow_councilor: "Теневой советник"
- uncivic_shadow_council_governor_trait_shadow_councilor_desc: "Этот лидер входит в группу, которая тайно контролирует правительство и следит за тем, чтобы все шло гладко и как положено."
- uncivic_shadow_council_scientist_trait_shadow_councilor: "Теневой советник"
- uncivic_shadow_council_scientist_trait_shadow_councilor_desc: "Этот лидер входит в группу, которая тайно контролирует правительство и следит за тем, чтобы все шло гладко и как положено."
- uncivic_shadow_council_admiral_trait_shadow_councilor: "Теневой советник"
- uncivic_shadow_council_admiral_trait_shadow_councilor_desc: "Этот лидер входит в группу, которая тайно контролирует правительство и следит за тем, чтобы все шло гладко и как положено."
- uncivic_shadow_council_general_trait_shadow_councilor: "Теневой советник"
- uncivic_shadow_council_general_trait_shadow_councilor_desc: "Этот лидер входит в группу, которая тайно контролирует правительство и следит за тем, чтобы все шло гладко и как положено."

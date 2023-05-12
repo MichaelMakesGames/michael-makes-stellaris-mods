@@ -10,7 +10,7 @@
  uncivic_nationalistic_zeal: "$civic_nationalistic_zeal$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_type: "$civic_nationalistic_zeal$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_desc: "A strong sense of nationalistic pride permeates all layers of our society. As the nation's zeal rises, so too does our will to fight, but if it rises too high, our pride might become our downfall."
- uncivic_nationalistic_zeal_monthly_change_tooltip: "§HThe following actions increase zeal:§!\nHarming Relations\nWar\nWar with Rival\nWinning Battles\nGaining Ownership of Systems\n\n§HThe following actions decrease zeal:§!\nImproving Relations\nLong-lasting Peace\nLosing Battles\nLosing Ownership of Systems"
+ uncivic_nationalistic_zeal_monthly_change_tooltip: "§HThe following increase zeal:§!\nMilitarist Councilors\nHarming Relations\nWar\nWar with Rival\nWinning Battles\nGaining Systems\n\n§HThe following decrease zeal:§!\nPacifist Councilors\nImproving Relations\nLong-lasting Peace\nLosing Battles\nLosing Systems"
  uncivic_nationalistic_zeal_stage_1: "$stage_1$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_stage_2: "$stage_2$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_stage_3: "$stage_3$" # DO NOT TRANSLATE
@@ -18,14 +18,16 @@
  uncivic_nationalistic_zeal_stage_5: "$stage_5$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_do_nothing: "$approach_default$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal_encourage_calm: "Encourage Calm"
- uncivic_nationalistic_zeal_encourage_calm_tooltip: "Monthly Progress: §Y-1§!"
+ uncivic_nationalistic_zeal_encourage_calm_tooltip: "Monthly Progress: §Y-2§!"
  uncivic_nationalistic_zeal_encourage_zeal: "Encourage Zeal"
- uncivic_nationalistic_zeal_encourage_zeal_tooltip: "Monthly Progress: §y+1§!"
+ uncivic_nationalistic_zeal_encourage_zeal_tooltip: "Monthly Progress: §Y+2§!"
  uncivic_nationalistic_zeal_progress_harm_relations: "Envoys Harming Relations"
  uncivic_nationalistic_zeal_progress_improve_relations: "Envoys Improving Relations"
  uncivic_nationalistic_zeal_progress_at_war: "At War"
  uncivic_nationalistic_zeal_progress_at_war_with_rival: "At War with Rival"
  uncivic_nationalistic_zeal_progress_long_peace: "Long-lasting Peace"
+ uncivic_nationalistic_zeal_progress_militarist_councilors: "Militarist Councilors"
+ uncivic_nationalistic_zeal_progress_pacifist_councilors: "Pacifist Councilors"
 
  # events
  # situation started

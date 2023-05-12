@@ -1,4 +1,4 @@
-New Mechanics for Vanilla Civics (For 3.7.*)
+New Mechanics for Vanilla Civics (For 3.8.*)
 
 Many civics in Stellaris are boring, simply providing modifiers. Sometimes boring is good, especially when you're first learning the game, but eventually, you might want something more. DLCs and mods provide interesting civics, but don't the base game civics deserve some love too?
 
@@ -12,22 +12,25 @@ Many civics in Stellaris are boring, simply providing modifiers. Sometimes borin
 [h1]Exalted Priesthood[/h1]
 Invite other spiritualist empires to join your Galactic Faith, gaining influence and diplomatic weight. Compete with other Exalted Priesthoods to win followers. Experience the spread of new beliefs, and decide whether to incorporate them into your orthodoxy or declare a heresy and launch an inquisition.
 
+[h1]Nationalistic Zeal[/h1]
+Balance the spirit of your nation. As your Zeal gets higher, you get stronger military bonuses and larger diplomatic penalties. If it gets too high, you'll suffer the consequences of Nationalistic Hubris. On the other hand, if it gets too low, you'll suffer Nationalistic Disgrace.
+
 [h1]Parliamentary System[/h1]
 Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
 
 Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
 
 [h1]Shadow Council[/h1]
-Elevate your leaders to become powerful Shadow Councilors. However, the more you elevate, the greater the the chance one will be exposed, and you'll need to make a tough decision about what to do with them.
+Temporary disabled while it is reworked for the 3.8 Gemini / Galactic Paragons update.
 
 [h1]Technocracy[/h1]
-Recruit technocrat governors with your choice of powerful scientific Expertise traits.
+Temporary disabled while it is reworked for the 3.8 Gemini / Galactic Paragons update.
 
 [h1]More to come![/h1]
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.7.*
+  [*] For Stellaris 3.8.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] No overwrites, so should be compatible with most other mods. Advanced integration with Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).

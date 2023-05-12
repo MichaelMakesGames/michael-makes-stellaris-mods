@@ -31,3 +31,18 @@ mmu_num_envoys_with_task = {
 	}
 	multiply = $MULTIPLY|1$
 }
+
+mmu_num_councilors_with_ethic = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				is_councilor = yes
+				is_$ETHIC$ = yes
+			}
+		}
+		mode = add
+	}
+	multiply = $MULTIPLY|1$
+}

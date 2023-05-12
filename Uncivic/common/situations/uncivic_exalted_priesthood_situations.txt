@@ -97,7 +97,6 @@ uncivic_exalted_priesthood_council = {
 			every_owned_leader = {
 				limit = { has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox }
 				remove_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-				remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
 			}
 			# remove hardliner trait or fire
 			every_owned_leader = {
@@ -105,7 +104,6 @@ uncivic_exalted_priesthood_council = {
 				random_list = {
 					50 = {
 						remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-						remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
 					}
 					50 = { kill_leader = { show_notification = no fire = yes } }
 				}
@@ -115,7 +113,6 @@ uncivic_exalted_priesthood_council = {
 				random_list = {
 					50 = {
 						remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-						remove_ruler_trait = uncivic_exalted_priesthood_leader_trait_hardliner
 					}
 					50 = { kill_leader = { show_notification = no fire = yes } }
 				}
@@ -218,7 +215,6 @@ uncivic_exalted_priesthood_council = {
 			add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
 			owner = { any_owned_leader = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-				NOT = { leader_class = ruler }
 			} }
 			desc = uncivic_exalted_priesthood_council_hardliner_leaders
 		}
@@ -226,23 +222,30 @@ uncivic_exalted_priesthood_council = {
 			subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
 			owner = { any_owned_leader = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-				NOT = { leader_class = ruler }
 			} }
 			desc = uncivic_exalted_priesthood_council_unorthodox_leaders
 		}
 		modifier = {
-			add = 5
-			owner.ruler = {
+			add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|yes|MULTIPLY|2|
+			owner = { any_owned_leader = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-			}
-			desc = uncivic_exalted_priesthood_council_hardliner_ruler
+				OR = {
+					is_ruler = yes
+					is_councilor = yes
+				}
+			} }
+			desc = uncivic_exalted_priesthood_council_hardliner_councilors
 		}
 		modifier = {
-			subtract = 5
-			owner.ruler = {
-				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-			}
-			desc = uncivic_exalted_priesthood_council_unorthodox_ruler
+			subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|yes|MULTIPLY|2|
+			owner = { any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				OR = {
+					is_ruler = yes
+					is_councilor = yes
+				}
+			} }
+			desc = uncivic_exalted_priesthood_council_unorthodox_councilors
 		}
 		modifier = {
 			add = 1
@@ -250,13 +253,10 @@ uncivic_exalted_priesthood_council = {
 			current_stage = uncivic_exalted_priesthood_council_declare_heresy_1
 			check_variable_arithmetic = {
 				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
-				value = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
-			}
-			owner.ruler = {
-				NOR = {
-					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-				}
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+				add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|yes|MULTIPLY|2|
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|yes|MULTIPLY|2|
+				value = 0
 			}
 		}
 		modifier = {
@@ -275,13 +275,10 @@ uncivic_exalted_priesthood_council = {
 			current_stage = uncivic_exalted_priesthood_council_revise_orthodoxy_1
 			check_variable_arithmetic = {
 				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
-				value = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
-			}
-			owner.ruler = {
-				NOR = {
-					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-				}
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+				add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|yes|MULTIPLY|2|
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|yes|MULTIPLY|2|
+				value = 0
 			}
 		}
 		modifier = {

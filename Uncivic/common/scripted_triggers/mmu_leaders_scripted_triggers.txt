@@ -1,0 +1,198 @@
+mmu_leader_has_government_conforming_ethic = {
+	OR = {
+		AND = {
+			is_authoritarian = yes
+			exists = owner
+			owner = { is_authoritarian = yes }
+		}
+		AND = {
+			is_egalitarian = yes
+			exists = owner
+			owner = { is_egalitarian = yes }
+		}
+		AND = {
+			is_materialist = yes
+			exists = owner
+			owner = { is_materialist = yes }
+		}
+		AND = {
+			is_spiritualist = yes
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		AND = {
+			is_militarist = yes
+			exists = owner
+			owner = { is_militarist = yes }
+		}
+		AND = {
+			is_pacifist = yes
+			exists = owner
+			owner = { is_pacifist = yes }
+		}
+		AND = {
+			is_xenophile = yes
+			exists = owner
+			owner = { is_xenophile = yes }
+		}
+		AND = {
+			is_xenophobe = yes
+			exists = owner
+			owner = { is_xenophobe = yes }
+		}
+		# support various e&c mods
+		AND = {
+			is_capitalism = yes
+			exists = owner
+			owner = { is_capitalism = yes }
+		}
+		AND = {
+			is_socialism = yes
+			exists = owner
+			owner = { is_socialism = yes }
+		}
+		AND = {
+			is_industrial = yes
+			exists = owner
+			owner = { is_industrial = yes }
+		}
+		AND = {
+			is_green = yes
+			exists = owner
+			owner = { is_green = yes }
+		}
+		AND = {
+			is_elitist = yes
+			exists = owner
+			owner = { is_elitist = yes }
+		}
+		AND = {
+			is_pluralist = yes
+			exists = owner
+			owner = { is_pluralist = yes }
+		}
+		AND = {
+			is_competitive = yes
+			exists = owner
+			owner = { is_competitive = yes }
+		}
+		AND = {
+			is_cooperative = yes
+			exists = owner
+			owner = { is_cooperative = yes }
+		}
+		AND = {
+			is_anthropocentric = yes
+			exists = owner
+			owner = { is_anthropocentric = yes }
+		}
+		AND = {
+			is_ecocentric = yes
+			exists = owner
+			owner = { is_ecocentric = yes }
+		}
+	}
+}
+
+mmu_leader_has_government_opposing_ethic = {
+	OR = {
+		AND = {
+			is_authoritarian = yes
+			exists = owner
+			owner = { is_egalitarian = yes }
+		}
+		AND = {
+			is_egalitarian = yes
+			exists = owner
+			owner = { is_authoritarian = yes }
+		}
+		AND = {
+			is_materialist = yes
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		AND = {
+			is_spiritualist = yes
+			exists = owner
+			owner = { is_materialist = yes }
+		}
+		AND = {
+			is_militarist = yes
+			exists = owner
+			owner = { is_pacifist = yes }
+		}
+		AND = {
+			is_pacifist = yes
+			exists = owner
+			owner = { is_militarist = yes }
+		}
+		AND = {
+			is_xenophile = yes
+			exists = owner
+			owner = { is_xenophobe = yes }
+		}
+		AND = {
+			is_xenophobe = yes
+			exists = owner
+			owner = { is_xenophile = yes }
+		}
+		# e&c classic / alt
+		AND = {
+			is_capitalism = yes
+			exists = owner
+			owner = { is_socialism = yes }
+		}
+		AND = {
+			is_socialism = yes
+			exists = owner
+			owner = { is_capitalism = yes }
+		}
+		AND = {
+			is_industrial = yes
+			exists = owner
+			owner = { is_green = yes }
+		}
+		AND = {
+			is_green = yes
+			exists = owner
+			owner = { is_industrial = yes }
+		}
+		# e&c alt / bug branch
+		AND = {
+			is_elitist = yes
+			exists = owner
+			owner = { is_pluralist = yes }
+		}
+		AND = {
+			is_pluralist = yes
+			exists = owner
+			owner = { is_elitist = yes }
+		}
+		# e&c bug branch
+		AND = {
+			is_competitive = yes
+			exists = owner
+			owner = { is_cooperative = yes }
+		}
+		AND = {
+			is_cooperative = yes
+			exists = owner
+			owner = { is_competitive = yes }
+		}
+		AND = {
+			is_anthropocentric = yes
+			exists = owner
+			owner = { is_ecocentric = yes }
+		}
+		AND = {
+			is_ecocentric = yes
+			exists = owner
+			owner = { is_anthropocentric = yes }
+		}
+	}
+}
+
+mmu_leader_has_government_neutral_ethic = {
+	mmu_leader_has_government_conforming_ethic = no
+	mmu_leader_has_government_opposing_ethic = no
+}

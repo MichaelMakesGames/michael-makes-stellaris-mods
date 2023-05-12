@@ -16,7 +16,7 @@
  uncivic_exalted_priesthood_heretic_amnesty_desc: "Спорное решение об амнистии всех еретиков было принято на этой планете."
  uncivic_exalted_priesthood_leader: "Лидер галактической веры"
  uncivic_exalted_priesthood_leader_desc: "Возглавляя межнациональную веру, это Возвышенное Священство обладает значительным влиянием."
- uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_leader_modifiers: "  £influence£ $mod_country_base_influence_produces_add$: §G+0.1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §G+5%§!\n  $mod_planet_administrators_upkeep_mult$: §R+10%§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower: "Последователь галактической веры"
  uncivic_exalted_priesthood_follower_desc: "Приняв веру Возвышенного Священства, священники этого народа становятся более эффективными."
  uncivic_exalted_priesthood_follower_modifiers: "  $mod_planet_priests_unity_produces_add$: §G+1§!\n  £diplo_weight£ $MOD_DIPLO_WEIGHT_MULT$: §R-10%§!" # DO NOT TRANSLATE
@@ -27,8 +27,10 @@
 
  # traits
  uncivic_exalted_priesthood_leader_trait_unorthodox: "Неортодоксальный"
+ uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip: "Spreads unorthodoxy to other leaders and planets\nCauses the Ecumenical Council to progress towards compromise" # UNTRANSLATED
  uncivic_exalted_priesthood_leader_trait_unorthodox_desc: "Этот лидер следует убеждениям, которые некоторые считают неправильными."
  uncivic_exalted_priesthood_leader_trait_hardliner: "Сторонник жесткой линии"
+ uncivic_exalted_priesthood_leader_trait_hardliner_tooltip: "Reduces the spread of unorthodoxy and heresy\nCauses the Ecumenical Council to progress towards declaring heresy" # UNTRANSLATED
  uncivic_exalted_priesthood_leader_trait_hardliner_desc: "Этот лидер считает, что нет места для компромисса с теми, кто сбился с праведного пути."
 
  # messages
@@ -40,10 +42,6 @@
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOXY_CENTER_FORMED: "$PLANET|Y$ теперь является центром неортодоксальных учений."
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED_TITLE: "Основан центр ереси"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_FORMED: "$PLANET|Y$ теперь является центром еретических учений"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER_TITLE: "Неортодоксальный лидер"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_UNORTHODOX_LEADER: "$LEADER|Y$ теперь неортодокс"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER_TITLE: "Лидер сторонник жесткой линии"
- MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HARDLINER_LEADER: "$LEADER|Y$ теперь стал ортодоксальным сторонником жесткой линии"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED_TITLE: "Искоренение еретических верований"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_REMOVED: "Еретические верования больше нет на $PLANET|Y$"
  MESSAGE_UNCIVIC_EXALTED_PRIESTHOOD_HERESY_CENTER_REMOVED_TITLE: "Центр ереси уничтожен"
@@ -67,8 +65,8 @@
  uncivic_exalted_priesthood_council_hardline: "Поддержка сторонников жесткой линии"
  uncivic_exalted_priesthood_council_hardliner_leaders: "Лидеры сторонников жесткой линии"
  uncivic_exalted_priesthood_council_unorthodox_leaders: "Неортодоксальные лидеры"
- uncivic_exalted_priesthood_council_hardliner_ruler: "Правитель сторонник жесткой линии"
- uncivic_exalted_priesthood_council_unorthodox_ruler: "Неортодоксальный правитель"
+ uncivic_exalted_priesthood_council_hardliner_councilors: "Hardliner Councilors" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_unorthodox_councilors: "Unorthodox Councilors" # UNTRANSLATED
  uncivic_exalted_priesthood_council_momentum: "Момент дебатов"
  uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$" # DO NOT TRANSLATE
@@ -193,7 +191,7 @@
 
  # edict
  edict_uncivic_exalted_priesthood_call_council: "Созвать Вселенский Совет"
- edict_uncivic_exalted_priesthood_call_council_desc: "Мы должны созвать всех первосвященников, чтобы обсудить неортодоксальные верования, распространяющиеся по нашей империи."
+ edict_uncivic_exalted_priesthood_call_council_desc: "We must convene all the high priests to debate the unorthodox beliefs spreading through our empire.\n\n§LThis is costs less £unity£ Unity the more Unorthodox planets we have.§!" # UNTRANSLATED
  uncivic_exalted_priesthood_call_council_allow: "£trigger_no£ Не менее 25% планет являются §HНеортодоксальными§!"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith: "Пригласить в Галактическую Веру"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith_desc: "Приглашайте другие спиритуалистические империи следовать за вашим Верховным Духовенством."
@@ -222,10 +220,14 @@
  uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_trust]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_trust]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader]§!" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader]§!" # DO NOT TRANSLATE

@@ -60,36 +60,46 @@ country_event = {
 			}
 			mmgsiege_create_or_remove_shortage_modifiers = yes
 		}
-	}
-}
 
-# notify the surrenderer
-# from = planet that surrendered
-# fromfrom = surrender receiver
-country_event = {
-	id = mmgsiege.2
-	is_triggered_only = yes
-	title = "mmgsiege_planet_surrendered_to_enemy_title"
-	desc = "mmgsiege_planet_surrendered_to_enemy_desc"
-	picture = GFX_evt_surrender
-	location = from
-	option = {
-		name = CLOSE
-	}
-}
+		# # clean up temporary generals that are no longer needed
+		# every_owned_leader = {
+		# 	limit = {
+		# 		has_trait = mmgsiege_leader_trait_temporary_general
+		# 		mmgsiege_general_is_on_planet_with_army_supply_shortage = no
+		# 	}
+		# 	set_leader_flag = mmgsiege_killing_temporary_general
+		# 	kill_leader = { show_notification = no }
+		# }
 
-# notify the surrender receiver
-# from = planet that surrendered
-# fromfrom = surrenderer
-country_event = {
-	id = mmgsiege.3
-	is_triggered_only = yes
-	title = "mmgsiege_enemy_planet_surrendered_title"
-	desc = "mmgsiege_enemy_planet_surrendered_desc"
-	picture = GFX_evt_victorious_army
-	location = from
-	option = {
-		name = CLOSE
+		# # clean up under supplied traits that are no longer valid
+		# every_owned_leader = {
+		# 	limit = {
+		# 		leader_class = general
+		# 		OR = {
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_1
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_2
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_3
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_4
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_5
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_6
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_7
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_8
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_9
+		# 			has_trait = mmgsiege_leader_trait_under_supplied_10
+		# 		}
+		# 		mmgsiege_general_is_on_planet_with_army_supply_shortage = no
+		# 	}
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_1
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_2
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_3
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_4
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_5
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_6
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_7
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_8
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_9
+		# 	remove_trait = mmgsiege_leader_trait_under_supplied_10
+		# }
 	}
 }
 
@@ -150,50 +160,6 @@ event = {
 			every_owned_planet = {
 				planet_event = { id = mmgsiege.11 } # init stockpile maximum
 				planet_event = { id = mmgsiege.12 } # init stockpile resources
-			}
-		}
-	}
-}
-
-situation_event = {
-	id = mmgsiege.21
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		situation_event = {
-			id = mmgsiege.22
-			days = 1
-		}
-	}
-}
-
-situation_event = {
-	id = mmgsiege.22
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		target = {
-			if = {
-				limit = {
-					any_targeting_situation = {
-						is_situation_type = mmgsiege_siege_surrender_attacker_situation
-					}
-				}
-				random_targeting_situation = {
-					limit = {
-						is_situation_type = mmgsiege_siege_surrender_attacker_situation
-					}
-					set_variable = {
-						which = mmgsiege_sync_progress
-						value = root.trigger:situation_progress
-					}
-					subtract_variable = {
-						which = mmgsiege_sync_progress
-						value = trigger:situation_progress
-					}
-					add_situation_progress = mmgsiege_sync_progress
-					clear_variable = mmgsiege_sync_progress
-				}
 			}
 		}
 	}
@@ -301,3 +267,225 @@ event = {
 		}
 	}
 }
+
+# # on_leader_unassigned
+# leader_event = {
+# 	id = mmgsiege.42
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		leader_class = general
+# 		exists = owner
+# 	}
+# 	immediate = {
+# 		owner = {
+# 			if = {
+# 				limit = { NOT = { has_country_flag = mmgsiege_leader_cleanup_scheduled } }
+# 				set_country_flag = mmgsiege_leader_cleanup_scheduled
+# 				country_event = {
+# 					id = mmgsiege.45
+# 					days = 1
+# 				}
+# 			}
+# 		}
+# 		# remove under supplied trait
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_1
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_2
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_3
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_4
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_5
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_6
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_7
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_8
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_9
+# 		remove_trait = mmgsiege_leader_trait_under_supplied_10
+# 		# kill unassigned temporary generals
+# 		if = {
+# 			limit = { has_trait = mmgsiege_leader_trait_temporary_general }
+# 			set_leader_flag = mmgsiege_killing_temporary_general
+# 			kill_leader = { show_notification = no }
+# 		}
+# 	}
+# }
+
+# # on_leader_assigned
+# leader_event = {
+# 	id = mmgsiege.43
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		leader_class = general
+# 		exists = owner
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = { mmgsiege_general_is_on_planet_with_army_supply_shortage = no }
+# 			if = {
+# 				# kill temporary leader
+# 				limit = { has_trait = mmgsiege_leader_trait_temporary_general }
+# 				set_leader_flag = mmgsiege_killing_temporary_general
+# 				kill_leader = { show_notification = no }
+# 			} else = {
+# 				# remove under supplied trait
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_1
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_2
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_3
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_4
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_5
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_6
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_7
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_8
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_9
+# 				remove_trait = mmgsiege_leader_trait_under_supplied_10
+# 			}
+# 		}
+# 		owner = {
+# 			random_owned_planet = {
+# 				limit = {
+# 					mmgsiege_planet_has_army_supply_shortage = yes
+# 					exists = army_leader
+# 					OR = {
+# 						army_leader = { is_same_value = root }
+# 						any_planet_army = {
+# 							exists = leader
+# 							leader = { is_same_value = root }
+# 						}
+# 						any_ground_combat_defender = {
+# 							exists = leader
+# 							leader = { is_same_value = root }
+# 						}
+# 					}
+# 				}
+# 				root = {
+# 					# scripted effect assumes prev is planet
+# 					mmgsiege_add_under_supplied_general_trait = yes
+# 				}
+# 				# check for temp general that needs to be removed
+# 				if = {
+# 					limit = { NOT = { has_planet_flag = mmgsiege_assigning_temporary_general } }
+# 					random_planet_army = {
+# 						limit = {
+# 							exists = leader
+# 							leader = { has_trait = mmgsiege_leader_trait_temporary_general }
+# 						}
+# 						leader = {
+# 							set_leader_flag = mmgsiege_killing_temporary_general
+# 							kill_leader = { show_notification = no }
+# 						}
+# 					}
+# 					random_ground_combat_defender = {
+# 						limit = {
+# 							exists = leader
+# 							leader = { has_trait = mmgsiege_leader_trait_temporary_general }
+# 						}
+# 						leader = {
+# 							set_leader_flag = mmgsiege_killing_temporary_general
+# 							kill_leader = { show_notification = no }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = { NOT = { has_country_flag = mmgsiege_leader_cleanup_scheduled } }
+# 				set_country_flag = mmgsiege_leader_cleanup_scheduled
+# 				country_event = {
+# 					id = mmgsiege.45
+# 					days = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# # on_leader_death
+# # on_leader_fired
+# # from = leader
+# country_event = {
+# 	id = mmgsiege.44
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		from = {
+# 			leader_class = general
+# 			NOT = { has_leader_flag = mmgsiege_killing_temporary_general }
+# 		}
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = { NOT = { has_country_flag = mmgsiege_leader_cleanup_scheduled } }
+# 			set_country_flag = mmgsiege_leader_cleanup_scheduled
+# 			country_event = {
+# 				id = mmgsiege.45
+# 				days = 1
+# 			}
+# 		}
+# 		every_owned_planet = {
+# 			limit = {
+# 				OR = {
+# 					NOT = { exists = army_leader }
+# 					army_leader = { is_same_value = from }
+# 				}
+# 				mmgsiege_planet_has_army_supply_shortage = yes
+# 				is_occupied_flag = no
+# 			}
+# 			mmgsiege_assign_temporary_general = yes
+# 		}
+# 	}
+# }
+
+# # clean up
+# country_event = {
+# 	id = mmgsiege.45
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		remove_country_flag = mmgsiege_leader_cleanup_scheduled
+# 		# check for planets that need temporary general
+# 		every_owned_planet = {
+# 			limit = {
+# 				is_occupied_flag = no
+# 				mmgsiege_planet_has_army_supply_shortage = yes
+# 				NOT = { exists = army_leader }
+# 				NOT = { has_planet_flag = mmgsiege_assigning_temporary_general }
+# 			}
+# 			mmgsiege_assign_temporary_general = yes
+# 		}
+# 		# check for temporary generals that are not needed
+# 		every_owned_leader = {
+# 			limit = {
+# 				has_trait = mmgsiege_leader_trait_temporary_general
+# 				mmgsiege_general_is_on_planet_with_army_supply_shortage = no
+# 			}
+# 			set_leader_flag = mmgsiege_killing_temporary_general
+# 			kill_leader = { show_notification = no }
+# 		}
+# 		# check for leaders with unneeded under supplied trait
+# 		every_owned_leader = {
+# 			limit = {
+# 				OR = {
+# 					has_trait = mmgsiege_leader_trait_under_supplied_1
+# 					has_trait = mmgsiege_leader_trait_under_supplied_2
+# 					has_trait = mmgsiege_leader_trait_under_supplied_3
+# 					has_trait = mmgsiege_leader_trait_under_supplied_4
+# 					has_trait = mmgsiege_leader_trait_under_supplied_5
+# 					has_trait = mmgsiege_leader_trait_under_supplied_6
+# 					has_trait = mmgsiege_leader_trait_under_supplied_7
+# 					has_trait = mmgsiege_leader_trait_under_supplied_8
+# 					has_trait = mmgsiege_leader_trait_under_supplied_9
+# 					has_trait = mmgsiege_leader_trait_under_supplied_10
+# 				}
+# 				mmgsiege_general_is_on_planet_with_army_supply_shortage = no
+# 			}
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_1
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_2
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_3
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_4
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_5
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_6
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_7
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_8
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_9
+# 			remove_trait = mmgsiege_leader_trait_under_supplied_10
+# 		}
+# 	}
+# }

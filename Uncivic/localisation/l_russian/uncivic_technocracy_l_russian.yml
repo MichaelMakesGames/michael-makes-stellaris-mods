@@ -15,36 +15,3 @@
  uncivic_technocracy_new_leader: "Новый губернатор технократ"
  uncivic_technocracy_governor_trait_technocrat: "Технократ"
  uncivic_technocracy_governor_trait_technocrat_desc: "Технократ, которому еще не назначена специализация."
- ##############
- # DEPRECATED #
- ##############
- # Unattainable, and will be removed
- # kept around for save game compat
- # translators: do not waste your time translating
- ##############
- # trait tooltips
- uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Немедленное получение определенных ресурсов при исследовании месторождений, пригодных для добычи полезных ископаемых"
- uncivic_technocracy_scientist_trait_agrarian_upbringing_tooltip: "Возможность создания участков гидропоники (£food£ Пищевые отложения) при исследовании замерзших миров и ледяных астероидов"
- uncivic_technocracy_scientist_trait_intellectual_tooltip: "Все месторождения исследований увеличиваются на 1"
- uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Убрать 1-3 препятствий со всех исследованных планет"
- uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Прирост £unity£ Единство при полном исследовании системы"
- uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "Все исследованные месторождения  £trade_value£ Торговой ценности производят £unity£ Единство"
- uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_nuumismatic_priest_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "Все исследованные месторождения, пригодные для разработки, увеличиваются"
- uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "Все исследованные месторождения, пригодные для добычи, без энергии получают 1 £energy£ Энергии"
- uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "Все разведанные месторождения  £minerals£ Минералов преобразованы в месторождения стратегических ресурсов"
- uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip: "Небольшой шанс обнаружить £minor_artifacts£ Малые артефакты, если в секторе есть место археологических раскопок"
- uncivic_technocracy_governor_trait_scholarium_explorer_tooltip: "Небольшой шанс обнаружить новые особенности планет"
- # static modifiers
- uncivic_technocracy_corrupt_scientists: "Коррумпированные учёные"
- uncivic_technocracy_corrupt_scientists_desc: "Коррумпированные ученые в нашей империи ставят под угрозу безопасность наших данных."
- uncivic_technocracy_righteous_scientists: "Проверенне ученые"
- uncivic_technocracy_righteous_scientists_desc: "Нанимая правоверных ученых, мы повышаем безопасность наших данных."
- uncivic_technocracy_research_waste_management: "Исследование Управление отходами"
- uncivic_technocracy_research_waste_management_desc: "1 или более наших ученых имеют черту "Проверенный"."
- # events
- uncivic_technocracy_artifacts_discovered: "Обнаружены артефакты!"
- uncivic_technocracy_artifacts_discovered_desc: "Наш губернатор §H[This.GetName]§! использовал свою археологическую подготовку на практике и обнаружил артефакты на месте раскопок в своем секторе."

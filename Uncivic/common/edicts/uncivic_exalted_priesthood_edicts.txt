@@ -1,6 +1,6 @@
 uncivic_exalted_priesthood_call_council = {
 	icon = "GFX_edict_type_policy"
-	length = 0
+	length = 1
 	potential = {
 		uncivic_exalted_priesthood_has_unorthodoxy = yes
 		uncivic_exalted_priesthood_has_heresy = no
@@ -49,7 +49,7 @@ uncivic_exalted_priesthood_call_council = {
 
 uncivic_exalted_priesthood_invite_to_galactic_faith = {
 	icon = "GFX_edict_type_policy"
-	length = 0
+	length = 1
 	potential = {
 		has_global_flag = uncivic_exalted_priesthood_enabled
 		uncivic_exalted_priesthood_can_be_leader = yes
@@ -77,7 +77,7 @@ uncivic_exalted_priesthood_invite_to_galactic_faith = {
 
 uncivic_exalted_priesthood_leave_galactic_faith = {
 	icon = "GFX_edict_type_policy"
-	length = 0
+	length = 1
 	potential = {
 		uncivic_exalted_priesthood_is_follower = yes
 	}
@@ -94,7 +94,7 @@ uncivic_exalted_priesthood_leave_galactic_faith = {
 
 uncivic_exalted_priesthood_view_galactic_faiths = {
 	icon = "GFX_edict_type_policy"
-	length = 0
+	length = 1
 	potential = {
 		has_global_flag = uncivic_exalted_priesthood_enabled
 	}
@@ -109,7 +109,7 @@ uncivic_exalted_priesthood_view_galactic_faiths = {
 			mmu_paging_init = {
 				PAGING_INSTANCE = uncivic_exalted_priesthood_leader_paging
 				PAGED_ENTITY_TYPE = country
-				PAGED_ENTITY_LIMIT = "has_country_flag = uncivic_exalted_priesthood_leader has_communications = prev"
+				PAGED_ENTITY_LIMIT = "has_country_flag = uncivic_exalted_priesthood_leader OR = { has_communications = prev is_same_value = prev }"
 			}
 		}
 		country_event = { id = uncivic_exalted_priesthood.801 }

@@ -80,6 +80,9 @@ country_event = {
 		NOR = {
 			has_modifier = uncivic_nationalistic_zeal_hubris
 			has_modifier = uncivic_nationalistic_zeal_disgrace
+			any_situation = {
+				is_situation_type = uncivic_nationalistic_zeal
+			}
 		}
 	}
 	immediate = {
@@ -196,7 +199,7 @@ country_event = {
 	immediate = {
 		random_situation = {
 			limit = { is_situation_type = uncivic_nationalistic_zeal }
-			add_situation_progress = 0.5
+			add_situation_progress = 1
 		}
 	}
 }
@@ -217,7 +220,7 @@ country_event = {
 	immediate = {
 		random_situation = {
 			limit = { is_situation_type = uncivic_nationalistic_zeal }
-			add_situation_progress = -0.5
+			add_situation_progress = -1
 		}
 	}
 }
@@ -235,7 +238,7 @@ country_event = {
 	immediate = {
 		random_situation = {
 			limit = { is_situation_type = uncivic_nationalistic_zeal }
-			add_situation_progress = 1
+			add_situation_progress = 5
 		}
 	}
 }
@@ -253,7 +256,7 @@ country_event = {
 	immediate = {
 		random_situation = {
 			limit = { is_situation_type = uncivic_nationalistic_zeal }
-			add_situation_progress = -1
+			add_situation_progress = -5
 		}
 		if = {
 			limit = { has_modifier = uncivic_nationalistic_zeal_hubris }

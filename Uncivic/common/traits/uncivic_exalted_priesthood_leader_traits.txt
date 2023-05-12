@@ -1,33 +1,25 @@
 uncivic_exalted_priesthood_leader_trait_unorthodox = {
-	cost = 1
-	icon = "gfx/interface/icons/traits/trait_deviants.dds"
-	leader_potential_add = {
-		AND = {
-			NOT = { leader_class = ruler }
-			has_global_flag = uncivic_exalted_priesthood_enabled
-			from = { uncivic_exalted_priesthood_has_unorthodoxy = yes }
-		}
+	inline_script = {
+		script = trait/icon_negative_no_tiers
+		ICON = "GFX_leader_trait_mind_wipe"
+		COUNCIL = no
 	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip
 	leader_class = { admiral scientist general governor }
-	opposites = { "uncivic_exalted_priesthood_leader_trait_hardliner" }
-	leader_trait = all
 	initial = no
 	randomized = no
 }
 
 uncivic_exalted_priesthood_leader_trait_hardliner = {
-	cost = 1
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_stubborn.dds"
-	leader_potential_add = {
-		AND = {
-			NOT = { leader_class = ruler }
-			has_global_flag = uncivic_exalted_priesthood_enabled
-			from = { uncivic_exalted_priesthood_has_orthodoxy = yes }
-		}
+	inline_script = {
+		script = trait/icon_negative_no_tiers
+		ICON = "GFX_leader_trait_venerated"
+		COUNCIL = no
 	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_exalted_priesthood_leader_trait_hardliner_tooltip
 	leader_class = { admiral scientist general governor }
-	opposites = { "uncivic_exalted_priesthood_leader_trait_unorthodox" }
-	leader_trait = all
 	initial = no
 	randomized = no
 }

@@ -80,3 +80,45 @@ uncivic_exalted_priesthood_is_leader = {
 	has_country_flag = uncivic_exalted_priesthood_leader
 	[[OF] has_country_flag = uncivic_exalted_priesthood_leader_of_@$OF$]
 }
+
+uncivic_exalted_priesthood_has_unorthodox_reactive_trait = {
+	OR = {
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_adventurous_spirit }
+		has_trait_tier1or2 = { TRAIT = leader_trait_adaptable }
+		has_trait_tier1or2 = { TRAIT = trait_ruler_champion_of_the_people }
+		has_trait = subclass_governor_visionary
+		has_trait = leader_trait_intellectual
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_academic }
+		has_trait = leader_trait_utopian_idealist
+		has_trait = leader_trait_shroud_preacher
+		has_trait_tier1or2 = { TRAIT = leader_trait_volatile }
+	}
+}
+
+uncivic_exalted_priesthood_has_hardliner_reactive_trait = {
+	OR = {
+		has_trait = trait_imperial_heir
+		has_trait_tier1or2 = { TRAIT = leader_trait_intolerant }
+		has_trait = leader_trait_totalitarian
+		has_trait_tier1or2 = { TRAIT = leader_trait_iron_fist }
+		has_trait_tier1or2 = { TRAIT = leader_trait_narrow_minded }
+		has_trait = leader_trait_zealot
+	}
+}
+
+uncivic_exalted_priesthood_has_neutral_reactive_trait = {
+	OR = {
+		has_trait_tier1or2 = { TRAIT = leader_trait_stubborn }
+		has_trait_tier1or2 = { TRAIT = leader_trait_venerated }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_crusader }
+		has_trait = leader_trait_bellicose
+		has_trait = leader_trait_intellectual
+		has_trait = leader_trait_galvanizer
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_inquisitive }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_maniacal }
+		has_trait_tier1or2 = { TRAIT = leader_trait_opinionated }
+		has_trait_tier1or2 = { TRAIT = leader_trait_principled }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_par_zealot }
+		has_trait = leader_trait_fanatic
+	}
+}

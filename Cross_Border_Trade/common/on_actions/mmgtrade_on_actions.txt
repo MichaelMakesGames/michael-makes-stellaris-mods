@@ -3,3 +3,9 @@ on_monthly_pulse = {
 		mmgtrade.1
 	}
 }
+
+on_sign_commercial_pact = {
+	events = {
+		mmgtrade.2
+	}
+}

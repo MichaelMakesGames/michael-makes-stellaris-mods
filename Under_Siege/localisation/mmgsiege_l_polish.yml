@@ -1,29 +1,13 @@
 ﻿l_polish:
  mmgsiege_under_siege: "Under Siege"
- mmgsiege_under_siege_desc: "A hostile empire controls this system's starbase, so this planet is under siege.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
- mmgsiege_under_siege_tooltip: "Will consider surrender below §Y40 Stability§!"
- mmgsiege_under_siege_never_surrender_capital: "Under Siege: Never Surrender the Capital"
- mmgsiege_under_siege_never_surrender_capital_desc: "Capital planets never surrender in sieges.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
- mmgsiege_under_siege_never_surrender_gestalt: "Under Siege: Never Surrender the Collective"
- mmgsiege_under_siege_never_surrender_gestalt_desc: "Hiveminds and Machine Consciousnesses never surrender.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
- mmgsiege_under_siege_never_surrender_no_war: "Under Siege: Never Surrender in Informal Conflict"
- mmgsiege_under_siege_never_surrender_no_war_desc: "The planet controller and the starbase controller are not at war.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
- mmgsiege_under_siege_never_surrender_total_war: "Under Siege: Never Surrender in Total War"
- mmgsiege_under_siege_never_surrender_total_war_desc: "Empires engaged in total war never surrender.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]"
- mmgsiege_under_siege_never_surrender_tooltip: "Will never surrender"
+ mmgsiege_under_siege_desc: "This planet is Under Siege or is still recovering from Resource Shortages from an earlier siege.\n\nCurrent Stockpile:\n£energy£ [This.GetEnergyStockpile]\n£minerals£ [This.GetMineralsStockpile]\n£food£ [This.GetFoodStockpile]\n£consumer_goods£ [This.GetConsumerGoodsStockpile]\n\n$mmgsiege_local_resource_shortages_desc$"
 
  mod_ROBOT_pop_happiness: "Synthetic Pop Happiness"
 
  mmgsiege_zero: "0"
 
- mmgsiege_planet_surrendered_to_enemy_title: "Planet Surrenders to Enemy"
- mmgsiege_planet_surrendered_to_enemy_desc: "After a hard-fought siege, our planet §H[From.GetName]§! has surrendered to our enemy, the §H[FromFrom.GetName]§!."
-
- mmgsiege_enemy_planet_surrendered_title: "Enemy Planet Surrenders"
- mmgsiege_enemy_planet_surrendered_desc: "After a prolonged siege, the [FromFrom.GetAdjective] forces on §H[From.GetName]§! have recognized their inevitable defeat and surrendered."
-
  mmgsiege_local_resource_shortages: "Local Resource Shortages"
- mmgsiege_local_resource_shortages_desc: "£energy£ [This.GetEnergyShortageStatus] [This.GetEnergyShortageSubstatus]\n£minerals£ [This.GetMineralsShortageStatus] [This.GetMineralsShortageSubstatus]\n£food£ [This.GetFoodShortageStatus] [This.GetFoodShortageSubstatus]\n£consumer_goods£ [This.GetConsumerGoodsShortageStatus] [This.GetConsumerGoodsShortageSubstatus]\n\nIf resources are not locally produced, planets suffer shortages during siege.\n\nShortages worsen from Minor to Major to Severe to Catastrophic, with speed depending on the extent of local production.\n\nWhen not under siege, shortages recover by 1 level per month."
+ mmgsiege_local_resource_shortages_desc: "Current Shortages:\n£energy£ [This.GetEnergyShortageStatus] [This.GetEnergyShortageSubstatus]\n£minerals£ [This.GetMineralsShortageStatus] [This.GetMineralsShortageSubstatus]\n£food£ [This.GetFoodShortageStatus] [This.GetFoodShortageSubstatus]\n£consumer_goods£ [This.GetConsumerGoodsShortageStatus] [This.GetConsumerGoodsShortageSubstatus]\n\nIf resources are not locally produced, planets suffer shortages during siege.\n\nShortages worsen from Minor to Major to Severe to Catastrophic, with speed depending on the extent of local production.\n\nWhen not under siege, shortages recover by 1 level per month.\n\nOccupied planets are not affected."
  mmgsiege_local_resource_shortages_tooltip: "See Planet Features for Effects"
  mmgsiege_shortage_status_no_shortage: "No Shortage"
  mmgsiege_shortage_status_minor: "§YMinor Shortage§!"
@@ -39,23 +23,23 @@
 
  # these are never displayed to the user
  # they only exists to suppress error logs
- mmgsiege_energy_shortage: "!INTERNAL! Energy Shortage"
- mmgsiege_minerals_shortage: "!INTERNAL! Minerals Shortage"
- mmgsiege_food_shortage: "!INTERNAL! Food Shortage"
- mmgsiege_consumer_goods_shortage: "!INTERNAL! Consumer Goods Shortage"
- mmgsiege_metallurgist_shortage: "!INTERNAL! Metallurgist Shortage"
- mmgsiege_administrator_shortage: "!INTERNAL! Administrator Shortage"
- mmgsiege_researcher_shortage: "!INTERNAL! Researcher Shortage"
- mmgsiege_energy_shortage_desc: ""
- mmgsiege_minerals_shortage_desc: ""
- mmgsiege_food_shortage_desc: ""
- mmgsiege_consumer_goods_shortage_desc: ""
- mmgsiege_metallurgist_shortage_desc: ""
- mmgsiege_administrator_shortage_desc: ""
- mmgsiege_researcher_shortage_desc: ""
+ mmgsiege_energy_shortage: "!INTERNAL! Energy Shortage" # DO NOT TRANSLATE
+ mmgsiege_minerals_shortage: "!INTERNAL! Minerals Shortage" # DO NOT TRANSLATE
+ mmgsiege_food_shortage: "!INTERNAL! Food Shortage" # DO NOT TRANSLATE
+ mmgsiege_consumer_goods_shortage: "!INTERNAL! Consumer Goods Shortage" # DO NOT TRANSLATE
+ mmgsiege_metallurgist_shortage: "!INTERNAL! Metallurgist Shortage" # DO NOT TRANSLATE
+ mmgsiege_administrator_shortage: "!INTERNAL! Administrator Shortage" # DO NOT TRANSLATE
+ mmgsiege_researcher_shortage: "!INTERNAL! Researcher Shortage" # DO NOT TRANSLATE
+ mmgsiege_energy_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_minerals_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_food_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_consumer_goods_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_metallurgist_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_administrator_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
+ mmgsiege_researcher_shortage_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
 
  mmgsiege_shortage_feature: "Local Resource Shortages"
- mmgsiege_shortage_feature_desc: ""
+ mmgsiege_shortage_feature_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
 
  mmgsiege_decision_manage_stockpile: " Open Stockpile"
  mmgsiege_decision_manage_stockpile_desc: "Stockpile Maximum: [This.mmgsiege_stockpile_maximum]\nFrom planet capital tier: +[This.mmgsiege_stockpile_maximum_from_capital]\nFrom 100 per Stronghold: +[This.mmgsiege_stockpile_maximum_from_building_stronghold]\nFrom 200 per Fortress: +[This.mmgsiege_stockpile_maximum_from_building_fortress]\nFrom 1000 per Resource Silos: +[This.mmgsiege_stockpile_maximum_from_building_resource_silo]"
@@ -86,24 +70,3 @@
 
  edict_mmgsiege_manage_stockpile_automation: "Manage Stockpile Budget"
  edict_mmgsiege_manage_stockpile_automation_desc: "Set up a budget to transfer resources from your empire stockpile to your planets each month to prepare for siege."
-
- mmgsiege_siege_surrender_attacker_situation: "Siege of [Target.GetName]"
- mmgsiege_siege_surrender_attacker_situation_desc: "We have besieged §H[Target.GetName]§!. Unless they manage to raise stability, it's only a matter of time before the colony surrenders."
- mmgsiege_siege_surrender_attacker_situation_monthly_change_tooltip: "Low stability is the main source of progress. Bombardment can help lower stability, by decreasing production, housing, and amenities."
- mmgsiege_siege_surrender_attacker_situation_type: "Siege"
- mmgsiege_siege_surrender_attacker_situation_outcome_effect: "([Target.GetName]):\n   §Y[Owner.GetName]§! becomes controller\nConcludes the §Y[This.GetName]§! Situation."
- mmgsiege_siege_surrender_defender_situation: "Siege of [Target.GetName]"
- mmgsiege_siege_surrender_defender_situation_desc: "Our colony on §H[Target.GetName]§! has been besieged. Unless we can raise stability, it's only a matter of time before the colony surrenders."
- mmgsiege_siege_surrender_defender_situation_monthly_change_tooltip: "Low stability is the main source of progress. Increasing stability (such as with Martial Law) and happiness can slow or even reverse progress. However, the best way to end a siege is to retake the starbase in the system."
- mmgsiege_siege_surrender_defender_situation_type: "Siege"
- mmgsiege_siege_surrender_situation_stage_1: "Stage 1"
- mmgsiege_siege_surrender_situation_stage_2: "Stage 2"
- mmgsiege_siege_surrender_situation_stage_3: "Stage 3"
- mmgsiege_siege_surrender_situation_stage_4: "Stage 4"
- mmgsiege_siege_approach_defender_propaganda: "Rallying Propaganda"
- mmgsiege_siege_approach_defender_propaganda_tooltip: "Siege Monthly Progress: §G-50%§!"
- mmgsiege_siege_approach_attacker_propaganda: "Demoralizing Propaganda"
- mmgsiege_siege_approach_attacker_propaganda_tooltip: "Siege Monthly Progress: §G+4§!"
- mmgsiege_siege_approach_harsh_occupation: "Harsh Occupation"
- mmgsiege_siege_approach_harsh_occupation_tooltip: "Siege Monthly Progress: §G-50%§!\nAdd §R+40§! Devastation"
- mmgsiege_siege_approach_do_nothing: "Do Nothing"

@@ -1,0 +1,48 @@
+﻿l_korean:
+ # static modifiers
+ uncivic_nationalistic_zeal_hubris: "Nationalistic Hubris" # UNTRANSLATED
+ uncivic_nationalistic_zeal_hubris_desc: "This nation's military zeal has gone unchecked. They now believe themselves invincible. Proof to the contrary would be disastrous." # UNTRANSLATED
+ uncivic_nationalistic_zeal_hubris_tooltip: "Replace this modifier with Nationalistic Disgrace upon losing a war or losing any system" # UNTRANSLATED
+ uncivic_nationalistic_zeal_disgrace: "Nationalistic Disgrace" # UNTRANSLATED
+ uncivic_nationalistic_zeal_disgrace_tooltip: "This empire has been humiliated on the field of battle." # UNTRANSLATED
+
+ # situation
+ uncivic_nationalistic_zeal: "$civic_nationalistic_zeal$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_type: "$civic_nationalistic_zeal$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_desc: "A strong sense of nationalistic pride permeates all layers of our society. As the nation's zeal rises, so too does our will to fight, but if it rises too high, our pride might become our downfall." # UNTRANSLATED
+ uncivic_nationalistic_zeal_monthly_change_tooltip: "§HThe following increase zeal:§!\nMilitarist Councilors\nHarming Relations\nWar\nWar with Rival\nWinning Battles\nGaining Systems\n\n§HThe following decrease zeal:§!\nPacifist Councilors\nImproving Relations\nLong-lasting Peace\nLosing Battles\nLosing Systems" # UNTRANSLATED
+ uncivic_nationalistic_zeal_stage_1: "$stage_1$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_stage_2: "$stage_2$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_stage_3: "$stage_3$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_stage_4: "$stage_4$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_stage_5: "$stage_5$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_do_nothing: "$approach_default$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal_encourage_calm: "Encourage Calm" # UNTRANSLATED
+ uncivic_nationalistic_zeal_encourage_calm_tooltip: "Monthly Progress: §Y-2§!" # UNTRANSLATED
+ uncivic_nationalistic_zeal_encourage_zeal: "Encourage Zeal" # UNTRANSLATED
+ uncivic_nationalistic_zeal_encourage_zeal_tooltip: "Monthly Progress: §Y+2§!" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_harm_relations: "Envoys Harming Relations" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_improve_relations: "Envoys Improving Relations" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_at_war: "At War" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_at_war_with_rival: "At War with Rival" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_long_peace: "Long-lasting Peace" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_militarist_councilors: "Militarist Councilors" # UNTRANSLATED
+ uncivic_nationalistic_zeal_progress_pacifist_councilors: "Pacifist Councilors" # UNTRANSLATED
+
+ # events
+ # situation started
+ uncivic_nationalistic_zeal.202.title: "$civic_nationalistic_zeal$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal.202.desc: "$uncivic_nationalistic_zeal_desc$" # DO NOT TRANSLATE
+ uncivic_nationalistic_zeal.202.desc.disgrace: "After a long period of disgrace, the spirit of our nation has recovered." # UNTRANSLATED
+ # situation failed
+ uncivic_nationalistic_zeal.211.title: "Nationalistic Disgrace" # UNTRANSLATED
+ uncivic_nationalistic_zeal.211.desc: "Our nation has lost all sense of pride. We are entering a dark period of our history." # UNTRANSLATED
+ # situation completed
+ uncivic_nationalistic_zeal.212.title: "Nationalistic Hubris" # UNTRANSLATED
+ uncivic_nationalistic_zeal.212.desc: "" # UNTRANSLATED
+ # lost system causes disgrace
+ uncivic_nationalistic_zeal.221.title: "Nationalistic Hubris Laid Bare" # UNTRANSLATED
+ uncivic_nationalistic_zeal.221.desc: "We believed ourselves invincible, but our recent loss of [FromFromFrom.GetName] proves otherwise. Our nation will need to a lot of soul-searching before we can regain our confidence." # UNTRANSLATED
+ # lost war causes disgrace
+ uncivic_nationalistic_zeal.221.title: "Nationalistic Hubris Laid Bare" # UNTRANSLATED
+ uncivic_nationalistic_zeal.222.desc: "We believed ourselves invincible, but our recently lost war proves otherwise. Our nation will need to a lot of soul-searching before we can regain our confidence." # UNTRANSLATED

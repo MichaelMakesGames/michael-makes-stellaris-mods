@@ -1,6 +1,6 @@
 uncivic_technocracy_recruit_technocrat = {
 	icon = "GFX_edict_type_policy"
-	length = 0
+	length = 1
 	potential = {
 		has_valid_civic = civic_technocracy
 		has_global_flag = uncivic_technocracy_enabled
@@ -11,28 +11,19 @@ uncivic_technocracy_recruit_technocrat = {
 	resources = {
 		category = edicts
 		cost = {
-			unity = 1.5
-			multiplier = value:leader_cost
+			# TODO?
+			unity = 150
 		}
 	}
 	effect = {
-		hidden_effect = {
-			set_variable = {
-				which = uncivic_technocracy_recruitment_cost
-				value = value:leader_cost
-			}
-			multiply_variable = {
-				which = uncivic_technocracy_recruitment_cost
-				value = 1.5
-			}
-		}
 		country_event = { id = uncivic_technocracy.201 }
 	}
 	ai_weight = {
 		weight = 0
 		modifier = {
 			add = 1000
-			any_owned_sector = {
+			any_owned_planet = {
+				is_sector_capital = yes
 				NOT = { exists = leader }
 			}
 		}

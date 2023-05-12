@@ -15,36 +15,3 @@
  uncivic_technocracy_new_leader: "New Technocrat Governor" # UNTRANSLATED
  uncivic_technocracy_governor_trait_technocrat: "Technocrat" # UNTRANSLATED
  uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet." # UNTRANSLATED
- ##############
- # DEPRECATED #
- ##############
- # Unattainable, and will be removed
- # kept around for save game compat
- # translators: do not waste your time translating
- ##############
- # trait tooltips
- uncivic_technocracy_scientist_trait_iron_fist_tooltip: "Immediately gain some resources when surveying mineable deposits" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_agrarian_upbringing_tooltip: "Chance to establish hydroponics sites (£food£ Food deposits) when surveying frozen worlds and ice asteroids" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_intellectual_tooltip: "All surveyed research deposits are increased by 1" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_environmental_engineer_tooltip: "Remove 1-3 blockers from all surveyed planets" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_bureaucrat_tooltip: "Gain £unity£ Unity when fully surveying a system" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_righteous_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G+1§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_corrupt_tooltip: "$mod_hostile_operation_steal_technology_difficulty_add$: §G-1§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_enclave_trader_tooltip: "All surveyed £trade_value£ Trade Value deposits are doubled" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_waste_management_specialist_tooltip: "$mod_planet_researchers_upkeep_mult$: §G-25%§!" # DO NOT TRANSLATE
- uncivic_technocracy_scientist_trait_nuumismatic_priest_tooltip: "All surveyed £trade_value£ Trade Value deposits produce £unity£ Unity" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_prospectorium_extractor_tooltip: "All surveyed mineable deposits are increased" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_prospectorium_optimizer_tooltip: "All surveyed mineable deposits without energy gain 1 £energy£ Energy" # UNTRANSLATED
- uncivic_technocracy_scientist_trait_prospectorium_refiner_tooltip: "All surveyed £minerals£ Minerals deposits are converted to strategic resource deposits" # UNTRANSLATED
- uncivic_technocracy_governor_trait_archaeologist_ancrel_tooltip: "Small chance to discover £minor_artifacts£ Minor Artifacts if there is an archaeology site in the sector" # UNTRANSLATED
- uncivic_technocracy_governor_trait_scholarium_explorer_tooltip: "Small chance to discover new planetary features" # UNTRANSLATED
- # static modifiers
- uncivic_technocracy_corrupt_scientists: "Corrupt Scientists" # UNTRANSLATED
- uncivic_technocracy_corrupt_scientists_desc: "Corrupt scientists in our empire compromise our data security." # UNTRANSLATED
- uncivic_technocracy_righteous_scientists: "Righteous Scientists" # UNTRANSLATED
- uncivic_technocracy_righteous_scientists_desc: "By employing righteous scientists, we increase our data security." # UNTRANSLATED
- uncivic_technocracy_research_waste_management: "Research Waste Management" # UNTRANSLATED
- uncivic_technocracy_research_waste_management_desc: "1 or more of our Scientists are have the Righteous trait." # UNTRANSLATED
- # events
- uncivic_technocracy_artifacts_discovered: "Artifacts Discovered!" # UNTRANSLATED
- uncivic_technocracy_artifacts_discovered_desc: "Our governor §H[This.GetName]§! has put their archaeological training to good use and discovered artifacts at an dig site in their sector." # UNTRANSLATED

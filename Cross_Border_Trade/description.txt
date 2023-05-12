@@ -1,4 +1,4 @@
-Borders produce trade value! (For Stellaris 3.7.*)
+Borders produce trade value! (For Stellaris 3.8.*)
 
 Commercial pacts too static? Shouldn't smaller empires benefit more from trading with bigger empires? This mod aims to address both of these questions.
 
@@ -7,21 +7,21 @@ Borders with Commercial Pacts produce dynamic Trade Value, which needs to be col
 [h1]Details[/h1]
 Another country is considered a trading partner if you have a Commercial Pact with them, they are your overlord, they are your subject, you share the same overlord, or you are members of the same federation. Gestalt empires, inward perfectionists, fallen empires, and the great khan are excluded.
 
-Each system gets 2/5/10/20 Trade Value (depending on tech: none/Offworld Trade Companies/Interstellar Economics/Galactic Markets) added to its star, per bordering system owned by a trading partner.
+Each system gets 2/5/10/20 Trade Value (depending on tech: none/Offworld Trade Companies/Interstellar Economics/Galactic Markets) added to its star, per bordering system owned by a trading partner, affected by the following bonuses:
+[list]
+  [*] Proportional bonus for trading with a bigger network
+  [*] Long-term bonus +1% trade value per year, reaching a maximum of +200% after 200 years.
+  [*] +100% bonus if hyper relays connect across the border, and both are connected to their owners' capitals
+  [*] Bonus equal to your empire's Commercial Pact Efficiency modifier
+[/list]
 
-If your neighbor's trade network is bigger than yours, you get a proportional bonus. For example, if their network is twice as big, you get twice as much trade value. Only collected trade counts, so if your neighbor's network is disrupted by war or pirates, your bonus will decrease. The maximum is a 10x bonus.
-
-A system with long-term cross border trade will get a bonus of +1% trade value per year, reaching a maximum of +200% after 200 years.
-
-A system also receives a +100% bonus if hyper relays connect the across the border, and both are connected to their owners' capitals.
-
-Border Trade Value is updated only at the start of each month. That means changes to Commercial Pacts, borders, etc will not update Trade Value until the next month.
+Border Trade Value is updated only at the start of each month, and when a Commercial Pact is formed. That means changes to borders, canceled Commercial Pacts, etc will not update Trade Value until the next month.
 
 This does not modify the vanilla bonuses from Commercial Pacts; border trade value is in addition to vanilla effects.
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.7.*
+  [*] For Stellaris 3.8.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game. You might see "empty" modifiers on stars

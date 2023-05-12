@@ -5,4 +5,3 @@
  mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ from £job_soldier£ [GetSoldierPlural]"
  mod_job_archaeoengineers_per_pop: "§G+1§! $job_archaeoengineers$ Job per $VALUE$ Pops"
  mod_job_archaeoengineers_per_pop_short: "\n§G+1§! £job_archaeoengineers£ per $VALUE$ £pop£"
- mod_planet_priests_upkeep_mult:1 "[GetPriestIcon] [GetPriest] Upkeep"

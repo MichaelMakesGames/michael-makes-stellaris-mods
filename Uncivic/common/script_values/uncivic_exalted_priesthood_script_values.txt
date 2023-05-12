@@ -95,19 +95,60 @@ uncivic_exalted_priesthood_unorthodoxy_spread_chance = {
 
 	modifier = {
 		add = 10
-		exists = sector
-		exists = sector.leader
-		sector.leader = {
-			has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+		OR = {
+			AND = {
+				exists = leader
+				leader = { 
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
+			AND = {
+				NOT = { exists = leader }
+				exists = sector
+				exists = sector.sector_capital.leader
+				sector.sector_capital.leader = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
 		}
 	}
 
 	modifier = {
-		subtract = 5
-		exists = sector
-		exists = sector.leader
-		sector.leader = {
-			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+		subtract = 20
+		OR = {
+			AND = {
+				exists = leader
+				leader = { 
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
+			AND = {
+				NOT = { exists = leader }
+				exists = sector
+				exists = sector.sector_capital.leader
+				sector.sector_capital.leader = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				}
+			}
+		}
+	}
+
+	modifier = {
+		add = 10
+		owner = {
+			any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+				is_background_planet = prevprev
+			}
+		}
+	}
+	modifier = {
+		subtract = 10
+		owner = {
+			any_owned_leader = {
+				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				is_background_planet = prevprev
+			}
 		}
 	}
 
@@ -144,6 +185,7 @@ uncivic_exalted_priesthood_unorthodoxy_spread_chance = {
 			has_planet_flag = uncivic_exalted_priesthood_planet_recently_changed
 			has_modifier = uncivic_exalted_priesthood_heretic_amnesty
 			owner = { has_country_flag = uncivic_exalted_priesthood_recent_example }
+			uncivic_exalted_priesthood_planet_is_unorthodox = yes
 		}
 	}
 }
@@ -206,26 +248,25 @@ uncivic_exalted_priesthood_leader_reaction_chance = {
 		leader_class = governor
 		owner = {
 			any_owned_sector = {
-				exists = leader
-				leader = { is_same_value = prevprevprev }
+				any_owned_planet = {
+					exists = leader
+					leader = { is_same_value = prevprevprevprev }
+				}
 				any_owned_planet = {
 					uncivic_exalted_priesthood_planet_is_unorthodox_center = yes
 				}
 			}
 		}
 	}
-	# governor and capital in sector is unorthodox center
+	# governor and governed planet is unorthodox center
 	modifier = {
 		add = 10
 		leader_class = governor
 		owner = {
-			any_owned_sector = {
+			any_owned_planet = {
 				exists = leader
 				leader = { is_same_value = prevprevprev }
-				any_owned_planet = {
-					is_sector_capital = yes
-					uncivic_exalted_priesthood_planet_is_unorthodox = yes
-				}
+				uncivic_exalted_priesthood_planet_is_unorthodox = yes
 			}
 		}
 	}
@@ -266,12 +307,52 @@ uncivic_exalted_priesthood_leader_reaction_chance = {
 			}
 		}
 	}
+	# leader has conforming or opposing ethic
+	modifier = {
+		add = 5
+		OR = {
+			mmu_leader_has_government_conforming_ethic = yes
+			mmu_leader_has_government_opposing_ethic = yes
+		}
+	}
+	# leader homeworld is unorthodox
+	modifier = {
+		add = 20
+		owner = {
+			any_owned_planet = {
+				uncivic_exalted_priesthood_planet_is_unorthodox = yes
+				prevprev = {
+					is_background_planet = prev
+				}
+			}
+		}
+	}
+	# traits
+	modifier = {
+		add = 20
+		OR = {
+			uncivic_exalted_priesthood_has_unorthodox_reactive_trait = yes
+			uncivic_exalted_priesthood_has_hardliner_reactive_trait = yes
+			uncivic_exalted_priesthood_has_neutral_reactive_trait = yes
+		}
+	}
+	# councilors more likely to react
+	modifier = {
+		add = 10
+		is_councilor = yes
+	}
+
 	# reduce chances if heresy declared
 	modifier = {
-		divide = 2
+		divide = 5
 		owner = {
 			uncivic_exalted_priesthood_has_heresy = yes
 		}
+	}
+	# reduce chances if materialist
+	modifier = {
+		divide = 2
+		is_materialist = yes
 	}
 
 	min = 0
@@ -283,56 +364,76 @@ uncivic_exalted_priesthood_leader_reaction_chance = {
 			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
 			owner = { uncivic_exalted_priesthood_has_unorthodoxy = no }
 			leader_class = envoy
-			leader_class = ruler
 		}
 	}
 }
 
 uncivic_exalted_priesthood_leader_unorthodox_chance = {
 	base = 50
+	# traits
 	modifier = {
 		add = 25
-		OR = {
-			has_trait = leader_trait_adaptable
-			has_trait = leader_trait_intellectual
-			has_trait = uncivic_technocracy_scientist_trait_intellectual
-			has_trait = leader_trait_corrupt
-			has_trait = uncivic_technocracy_scientist_trait_corrupt
-			has_trait = leader_trait_maniacal
-			has_trait = uncivic_technocracy_governor_trait_maniacal
-		}
+		uncivic_exalted_priesthood_has_unorthodox_reactive_trait = yes
 	}
 	modifier = {
 		subtract = 25
-		OR = {
-			has_trait = leader_trait_stubborn
-			has_trait = leader_trait_righteous
-			has_trait = uncivic_technocracy_scientist_trait_righteous
-		}
+		uncivic_exalted_priesthood_has_hardliner_reactive_trait = yes
+	}
+	# young leaders more likely unorthodox
+	modifier = {
+		add = 5
+		leader_age < 30
 	}
 	modifier = {
-		add = 10
+		add = 5
+		leader_age < 40
+	}
+	modifier = {
+		add = 5
 		leader_age < 50
+	}
+	# old leaders more likely hardliner
+	modifier = {
+		subtract = 5
+		leader_age > 60
 	}
 	modifier = {
 		subtract = 5
 		leader_age > 70
 	}
 	modifier = {
-		add = 15
-		owner = {
-			any_pop_faction = {
-				faction_approval < 0.5
-				prevprev = { leader_of_faction = prev }
-			}
+		subtract = 5
+		leader_age > 80
+	}
+	# opposing ethic leaders more likely unorthodox
+	modifier = {
+		add = 20
+		mmu_leader_has_government_opposing_ethic = yes
+	}
+	# conforming ethic leaders more likely hardliner
+	modifier = {
+		subtract = 10
+		mmu_leader_has_government_conforming_ethic = yes
+		is_materialist = no
+	}
+	# ruler/heir/archpriest less likely to go unorthodox
+	modifier = {
+		subtract = 20
+		OR = {
+			is_ruler = yes
+			is_heir = yes
+			is_councilor_type = councilor_exalted_priesthood
 		}
 	}
+	# never unorthodox while heresy declared
 	modifier = {
 		multiply = 0
 		owner = {
 			uncivic_exalted_priesthood_has_heresy = yes
 		}
 	}
+	min = 0
+	max = 100
 }
 
 # 888888  dP""b8 88   88 8b    d8 888888 88b 88 88  dP""b8    db    88
@@ -351,10 +452,11 @@ uncivic_exalted_priesthood_num_unorthodox_leaders = {
 		trigger = count_owned_leader
 		parameters = { limit = {
 			has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-			NOT = { leader_class = ruler }
+			[[COUNCILOR]OR][[!COUNCILOR]NOR] = { is_ruler = yes is_councilor = yes }
 		} }
 		mode = add
 	}
+	multiply = $MULTIPLY|1$
 }
 
 uncivic_exalted_priesthood_num_hardliner_leaders = {
@@ -363,10 +465,11 @@ uncivic_exalted_priesthood_num_hardliner_leaders = {
 		trigger = count_owned_leader
 		parameters = { limit = {
 			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-			NOT = { leader_class = ruler }
+			[[COUNCILOR]OR][[!COUNCILOR]NOR] = { is_ruler = yes is_councilor = yes }
 		} }
 		mode = add
 	}
+	multiply = $MULTIPLY|1$
 }
 
 uncivic_exalted_priesthood_percent_unorthodox_planets = {
@@ -405,14 +508,14 @@ uncivic_exalted_priesthood_heresy_removal_chance = {
 	modifier = {
 		add = 10
 		owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_focused }
-		uncivic_exalted_priesthood_planet_is_unorthodox_center = yes
+		uncivic_exalted_priesthood_planet_is_unorthodox_center = no
 	}
 	modifier = {
 		add = 20
 		owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_balanced }
 	}
 	modifier = {
-		add = 40
+		add = 30
 		owner = { has_policy_flag = uncivic_exalted_priesthood_inquisition_aggressive }
 	}
 	modifier = {
@@ -425,10 +528,20 @@ uncivic_exalted_priesthood_heresy_removal_chance = {
 	}
 	modifier = {
 		multiply = 1.5
-		exists = sector
-		exists = sector.leader
-		sector.leader = {
-			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				}
+			}
+			AND = {
+				exists = sector
+				exists = sector.sector_capital.leader
+				sector.sector_capital.leader = {
+					has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
+				}
+			}
 		}
 	}
 	modifier = {
@@ -512,7 +625,7 @@ uncivic_exalted_priesthood_follower_acceptance_from_opinion = {
 			who = event_target:uncivic_exalted_priesthood_proposed_leader
 			value > 0
 		}
-		divide = 5
+		divide = 10
 	}
 	modifier = {
 		opinion = {
@@ -536,7 +649,7 @@ uncivic_exalted_priesthood_follower_acceptance_from_opinion_of_current_leader = 
 			who = event_target:uncivic_exalted_priesthood_current_leader
 			value > 0
 		}
-		divide = 5
+		divide = 10
 	}
 	modifier = {
 		opinion = {

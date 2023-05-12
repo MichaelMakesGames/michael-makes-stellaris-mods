@@ -13,19 +13,3 @@ mmu_leaders_remove_trait_if_present = {
 		remove_trait = $TRAIT$
 	}
 }
-
-mmu_leaders_add_ruler_trait_if_absent = {
-	optimize_memory
-	if = {
-		limit = { NOT = { has_ruler_trait = $TRAIT$ } }
-		add_ruler_trait = $TRAIT$
-	}
-}
-
-mmu_leaders_remove_ruler_trait_if_present = {
-	optimize_memory
-	if = {
-		limit = { has_ruler_trait = $TRAIT$ }
-		remove_ruler_trait = $TRAIT$
-	}
-}

@@ -37,120 +37,6 @@ mmgsiege_export_planet_balance_and_upkeep = {
 			value = owner.value:mmgsiege_country_base_production_$RESOURCE$
 		}
 	}
-
-	if = { # handle Occupied Resources that gives production/upkeep to occupier
-		limit = {
-			has_deposit = d_occupier_capital
-			exists = owner
-			owner = { is_at_war = yes }
-		}
-		if = { # remove deposit production from balance
-			limit = {
-				is_variable_set = occupation_$RESOURCE$
-				check_variable = {
-					which = occupation_$RESOURCE$
-					value > 0
-				}
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = occupation_$RESOURCE$
-			}
-		}
-		if = { # add deposit upkeep to balance and remove from upkeep
-			limit = {
-				is_variable_set = occupation_$RESOURCE$_u
-				check_variable = {
-					which = occupation_$RESOURCE$_u
-					value > 0
-				}
-			}
-			change_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = occupation_$RESOURCE$_u
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_upkeep
-				value = occupation_$RESOURCE$_u
-			}
-		}
-	}
-
-	if = { # handle Occupied Resources deposit that removes production/upkeep from occupied
-		limit = {
-			has_deposit = d_occupied_capital
-			exists = owner
-			owner = { is_at_war = yes }
-		}
-		if = { # remove deposit production from balance
-			limit = {
-				is_variable_set = occupied_$RESOURCE$_u
-				check_variable = {
-					which = occupied_$RESOURCE$_u
-					value > 0
-				}
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = occupied_$RESOURCE$_u
-			}
-		}
-		if = { # add deposit upkeep to balance and remove from upkeep
-			limit = {
-				is_variable_set = occupied_$RESOURCE$
-				check_variable = {
-					which = occupied_$RESOURCE$
-					value > 0
-				}
-			}
-			change_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = occupied_$RESOURCE$
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_upkeep
-				value = occupied_$RESOURCE$
-			}
-		}
-	}
-
-	if = { # handle Occupied Resources deposit that removes production/upkeep from sieged
-		limit = {
-			has_deposit = d_siege_capital
-			exists = owner
-			owner = { is_at_war = yes }
-		}
-		if = { # remove deposit production from balance
-			limit = {
-				is_variable_set = $RESOURCE$_siege_cap_u
-				check_variable = {
-					which = $RESOURCE$_siege_cap_u
-					value > 0
-				}
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = $RESOURCE$_siege_cap_u
-			}
-		}
-		if = { # add deposit upkeep to balance and remove from upkeep
-			limit = {
-				is_variable_set = $RESOURCE$_siege_cap
-				check_variable = {
-					which = $RESOURCE$_siege_cap_p
-					value > 0
-				}
-			}
-			change_variable = {
-				which = mmgsiege_$RESOURCE$_balance
-				value = $RESOURCE$_siege_cap_p
-			}
-			subtract_variable = {
-				which = mmgsiege_$RESOURCE$_upkeep
-				value = $RESOURCE$_siege_cap_p
-			}
-		}
-	}
 }
 
 mmgsiege_check_for_and_update_resource_shortage = {
@@ -949,26 +835,8 @@ mmgsiege_set_stockpile_budget_percent = {
 }
 
 mmgsiege_remove_siege_modifier = {
-	if = {
-		limit = { has_modifier = mmgsiege_under_siege }
-		remove_modifier = mmgsiege_under_siege
-	}
-	if = {
-		limit = { has_modifier = mmgsiege_under_siege_never_surrender_capital }
-		remove_modifier = mmgsiege_under_siege_never_surrender_capital
-	}
-	if = {
-		limit = { has_modifier = mmgsiege_under_siege_never_surrender_gestalt }
-		remove_modifier = mmgsiege_under_siege_never_surrender_gestalt
-	}
-	if = {
-		limit = { has_modifier = mmgsiege_under_siege_never_surrender_no_war }
-		remove_modifier = mmgsiege_under_siege_never_surrender_no_war
-	}
-	if = {
-		limit = { has_modifier = mmgsiege_under_siege_never_surrender_total_war }
-		remove_modifier = mmgsiege_under_siege_never_surrender_total_war
-	}
+	remove_planet_flag = mmgsiege_under_siege
+	remove_modifier = mmgsiege_under_siege
 }
 
 mmgsiege_update_planet_status = {
@@ -1010,88 +878,47 @@ mmgsiege_update_planet_status = {
 				value = 1
 			}
 		}
-		# set or remove under_siege modifier
+		# set under_siege modifier
 		if = {
-			limit = { mmgsiege_planet_can_surrender = yes }
-			if = {
-				limit = { NOT = { has_modifier = mmgsiege_under_siege } }
-				mmgsiege_remove_siege_modifier = yes
-				add_modifier = { modifier = mmgsiege_under_siege }
-			}
-			# start situation if low stability and situation doesn't exist
-			if = {
-				limit = { OR = {
-					planet_stability < 40
-					is_occupied_flag = yes
-				} }
-				if = {
-					limit = {
-						NOT = {
-							any_targeting_situation = { is_situation_type = mmgsiege_siege_surrender_defender_situation }
-						}
-					}
-					controller = {
-						start_situation = {
-							type = mmgsiege_siege_surrender_defender_situation
-							target = prev
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							any_targeting_situation = {
-								is_situation_type = mmgsiege_siege_surrender_attacker_situation
-							}
-						}
-					}
-					solar_system.starbase.controller = {
-						start_situation = {
-							type = mmgsiege_siege_surrender_attacker_situation
-							target = prev
-						}
-					}
-				}
-			}
+			limit = { NOT = { has_modifier = mmgsiege_under_siege } }
+			add_modifier = { modifier = mmgsiege_under_siege }
 		}
-		else_if = {
-			# capital cannot surrender
-			limit = { mmgsiege_is_unoccupied_capital = yes }
-			if = {
-				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_capital } }
-				mmgsiege_remove_siege_modifier = yes
-				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_capital }
-			}
-		}
-		else_if = {
-			# gestalt cannot surrender
-			limit = { controller = { is_gestalt = yes } }
-			if = {
-				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_gestalt } }
-				mmgsiege_remove_siege_modifier = yes
-				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_gestalt }
-			}
-		}
-		else_if = {
-			# not at war
-			limit = { controller = { NOT = { is_at_war_with = prev.solar_system.starbase.controller } } }
-			if = {
-				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_no_war } }
-				mmgsiege_remove_siege_modifier = yes
-				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_no_war }
-			}
-		}
-		else = {
-			# total war cannot surrender (implied)
-			if = {
-				limit = { NOT = { has_modifier = mmgsiege_under_siege_never_surrender_total_war } }
-				mmgsiege_remove_siege_modifier = yes
-				add_modifier = { modifier = mmgsiege_under_siege_never_surrender_total_war }
-			}
-		}
+		# # make armies under supplied
+		# if = {
+		# 	limit = {
+		# 		is_occupied_flag = no
+		# 		has_ground_combat = no
+		# 		count_planet_army = { count >= 1 }
+		# 	}
+		# 	set_variable = {
+		# 		which = mmgsiege_army_shortage
+		# 		value = value:mmgsiege_planet_average_army_supply_shortage
+		# 	}
+		# }
+		# # add under supplied trait to general / create temporary general
+		# if = {
+		# 	limit = { mmgsiege_planet_has_army_supply_shortage = yes }
+		# 	if = {
+		# 		limit = { NOT = { exists = army_leader } }
+		# 		mmgsiege_assign_temporary_general = yes
+		# 		# on_leader_assigned will add the trait
+		# 	} else = {
+		# 		limit = { exists = army_leader }
+		# 		army_leader = {
+		# 			mmgsiege_add_under_supplied_general_trait = yes
+		# 		}
+		# 	}
+		# }
 	}
-	else = {
-		remove_planet_flag = mmgsiege_under_siege
+	else_if = {
+		limit = {
+			NOR = {
+				mmgsiege_has_resource_shortage = { RESOURCE = energy }
+				mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+				mmgsiege_has_resource_shortage = { RESOURCE = food }
+				mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods }
+			}
+		}
 		mmgsiege_remove_siege_modifier = yes
 	}
 }
@@ -1108,8 +935,8 @@ mmgsiege_create_or_remove_shortage_modifiers = {
 			}
 		}
 		if = {
-			limit = { NOT = { has_modifier = mmgsiege_local_resource_shortages } }
-			add_modifier = { modifier = mmgsiege_local_resource_shortages }
+			limit = { NOT = { has_modifier = mmgsiege_under_siege } }
+			add_modifier = { modifier = mmgsiege_under_siege }
 		}
 		if = {
 			limit = { NOT = { has_deposit = mmgsiege_shortage_feature } }
@@ -1118,8 +945,11 @@ mmgsiege_create_or_remove_shortage_modifiers = {
 	}
 	else = {
 		if = {
-			limit = { has_modifier = mmgsiege_local_resource_shortages }
-			remove_modifier = mmgsiege_local_resource_shortages
+			limit = {
+				has_modifier = mmgsiege_under_siege
+				mmgsiege_is_under_siege = no
+			}
+			mmgsiege_remove_siege_modifier = yes
 		}
 		if = {
 			limit = { has_deposit = mmgsiege_shortage_feature }
@@ -1150,3 +980,163 @@ mmgsiege_fix_invalid_shortage_levels = {
 	mmgsiege_fix_invalid_resource_shortage_level = { RESOURCE = food }
 	mmgsiege_fix_invalid_resource_shortage_level = { RESOURCE = consumer_goods }
 }
+
+# # this = leader
+# # prev = planet
+# mmgsiege_add_under_supplied_general_trait = {
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_1
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_2
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_3
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_4
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_5
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_6
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_7
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_8
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_9
+# 	remove_trait = mmgsiege_leader_trait_under_supplied_10
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 1 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_1
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 2 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_2
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 3 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_3
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 4 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_4
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 5 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_5
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 6 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_6
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 7 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_7
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 8 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_8
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value = 9 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_9
+# 	}
+# 	if = {
+# 		limit = { prev = {
+# 			is_variable_set = mmgsiege_army_shortage
+# 			check_variable = { which = mmgsiege_army_shortage value >= 10 }
+# 		} }
+# 		add_trait_no_notify = mmgsiege_leader_trait_under_supplied_10
+# 	}
+# }
+
+# # this = planet
+# mmgsiege_assign_temporary_general = {
+# 	if = {
+# 		limit = {
+# 			NOT = { has_planet_flag = mmgsiege_assigning_temporary_general }
+# 			is_occupied_flag = no
+# 			OR = {
+# 				count_planet_army = { count >= 1 }
+# 				count_ground_combat_defender = { count >= 1 }
+# 			}
+# 		}
+# 		set_planet_flag = mmgsiege_assigning_temporary_general
+# 		owner = {
+# 			# create species if needed
+# 			if = {
+# 				limit = { NOT = { exists = event_target:mmgsiege_temporary_general_species } }
+# 				create_species = {
+# 					name = mmgsiege_leader_trait_temporary_general
+# 					name_list = owner_main_species
+# 					class = ROBOT
+# 					portrait = default_robot
+# 					traits = { }
+# 					effect = {
+# 						save_global_event_target_as = mmgsiege_temporary_general_species
+# 					}
+# 				}
+# 			}
+# 			# create temporary general
+# 			create_leader = {
+# 				species = event_target:mmgsiege_temporary_general_species
+# 				class = general
+# 				name = mmgsiege_leader_trait_temporary_general
+# 				custom_description = mmgsiege_leader_trait_temporary_general_desc
+# 				skill = 1
+# 				set_age = 0
+# 				hide_age = yes
+# 				immortal = yes
+# 				event_leader = yes
+# 				can_assign_to_council = no
+# 				randomize_traits = no
+# 				background_ethic = ethic_gestalt_consciousness
+# 				skip_background_generation = yes
+# 				traits = {
+# 					trait = mmgsiege_leader_trait_temporary_general
+# 				}
+# 			}
+# 		}
+# 		# find the first army in the list
+# 		if = {
+# 			limit = { count_planet_army = { count >= 1 } }
+# 			every_planet_army = {
+# 				if = {
+# 					limit = { NOT = { exists = event_target:mmgsiege_first_army } }
+# 					save_event_target_as = mmgsiege_first_army
+# 				}
+# 			}
+# 		} else = {
+# 			every_ground_combat_defender = {
+# 				if = {
+# 					limit = { NOT = { exists = event_target:mmgsiege_first_army } }
+# 					save_event_target_as = mmgsiege_first_army
+# 				}
+# 			}
+# 		}
+# 		# assign to army
+# 		event_target:mmgsiege_first_army = {
+# 			assign_leader = last_created_leader
+# 		}
+# 		last_created_leader = {
+# 			mmgsiege_add_under_supplied_general_trait = yes
+# 		}
+# 		remove_planet_flag = mmgsiege_assigning_temporary_general
+# 	}
+# }
