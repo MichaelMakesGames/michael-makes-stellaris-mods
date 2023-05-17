@@ -16,7 +16,7 @@ target_languages = [
 ]
 report_languages = [
 #   "braz_por",
-  "french",
+#   "french",
 #   "german",
 #   "japanese",
 #   "korean",
@@ -28,7 +28,7 @@ report_languages = [
 
 # set this to true when generating fallbacks for updated source string
 # set this to false when processing/validating updated target strings
-stash = True
+stash = False
 # set this to true to do a dry run, printing reports without editing files
 dry = False
 

@@ -12,7 +12,6 @@ Critically, Energy and Mineral shortages increase the damage from orbital bombar
 [h1]Stockpiles[/h1]
 You can transfer resources from your empire stockpile to local planet stockpiles. When besieged, planets will consume from that stockpile before they start receiving penalties. You can manually add and remove resources from the stockpile as long as the planet is not under siege.
 
-
 Does that sound like micro-management hell? You can set a budget to automatically stockpile to your highest priority planets, using the same system as the AI. Priority is determined separately for each resource, based on:
 [list]
   [*] Population

@@ -43,7 +43,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetEnergyShortageStatus
+	name = MmgsiegeEnergyShortageStatus
 	random = no
 	text = {
 		localization_key = "mmgsiege_shortage_status_minor"
@@ -73,18 +73,37 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetEnergyShortageSubstatus
+	name = MmgsiegeEnergyShortageSubstatus
 	random = no
 	text = {
-		localization_key = "BLANK_STRING"
+		localization_key = "mmgsiege_shortage_substatus_recovering_energy"
 		trigger = {
-			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = energy }
 		}
 	}
 	text = {
-		localization_key = "mmgsiege_shortage_substatus_recovering"
+		localization_key = "mmgsiege_shortage_substatus_not_under_siege"
 		trigger = {
-			mmgsiege_has_recovering_resource_shortage = { RESOURCE = energy }
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
+			mmgsiege_is_under_siege = no
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_produced_locally"
+		trigger = {
+			mmgsiege_is_under_siege = yes
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
+			planet_resource_compare = {
+				resource = energy
+				type = balance
+				value >= value:mmgsiege_planet_production_offset_energy
+			}
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_stockpile_empty_energy"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = energy } }
 		}
 	}
 	text = {
@@ -97,7 +116,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetMineralsShortageStatus
+	name = MmgsiegeMineralsShortageStatus
 	random = no
 	text = {
 		localization_key = "mmgsiege_shortage_status_minor"
@@ -127,18 +146,37 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetMineralsShortageSubstatus
+	name = MmgsiegeMineralsShortageSubstatus
 	random = no
 	text = {
-		localization_key = "BLANK_STRING"
+		localization_key = "mmgsiege_shortage_substatus_recovering_minerals"
 		trigger = {
-			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = minerals } }
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = minerals }
 		}
 	}
 	text = {
-		localization_key = "mmgsiege_shortage_substatus_recovering"
+		localization_key = "mmgsiege_shortage_substatus_not_under_siege"
 		trigger = {
-			mmgsiege_has_recovering_resource_shortage = { RESOURCE = minerals }
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = minerals } }
+			mmgsiege_is_under_siege = no
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_produced_locally"
+		trigger = {
+			mmgsiege_is_under_siege = yes
+			mmgsiege_has_resource_shortage = { RESOURCE = minerals }
+			planet_resource_compare = {
+				resource = minerals
+				type = balance
+				value >= value:mmgsiege_planet_production_offset_minerals
+			}
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_stockpile_empty_minerals"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = minerals } }
 		}
 	}
 	text = {
@@ -151,7 +189,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetFoodShortageStatus
+	name = MmgsiegeFoodShortageStatus
 	random = no
 	text = {
 		localization_key = "mmgsiege_shortage_status_minor"
@@ -181,18 +219,37 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetFoodShortageSubstatus
+	name = MmgsiegeFoodShortageSubstatus
 	random = no
 	text = {
-		localization_key = "BLANK_STRING"
+		localization_key = "mmgsiege_shortage_substatus_recovering_food"
 		trigger = {
-			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = food } }
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = food }
 		}
 	}
 	text = {
-		localization_key = "mmgsiege_shortage_substatus_recovering"
+		localization_key = "mmgsiege_shortage_substatus_not_under_siege"
 		trigger = {
-			mmgsiege_has_recovering_resource_shortage = { RESOURCE = food }
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = food } }
+			mmgsiege_is_under_siege = no
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_produced_locally"
+		trigger = {
+			mmgsiege_is_under_siege = yes
+			mmgsiege_has_resource_shortage = { RESOURCE = food }
+			planet_resource_compare = {
+				resource = food
+				type = balance
+				value >= value:mmgsiege_planet_production_offset_food
+			}
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_stockpile_empty_food"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = food } }
 		}
 	}
 	text = {
@@ -205,7 +262,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetConsumerGoodsShortageStatus
+	name = MmgsiegeConsumerGoodsShortageStatus
 	random = no
 	text = {
 		localization_key = "mmgsiege_shortage_status_minor"
@@ -235,18 +292,37 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetConsumerGoodsShortageSubstatus
+	name = MmgsiegeConsumerGoodsShortageSubstatus
 	random = no
 	text = {
-		localization_key = "BLANK_STRING"
+		localization_key = "mmgsiege_shortage_substatus_recovering_consumer_goods"
 		trigger = {
-			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods } }
+			mmgsiege_has_recovering_resource_shortage = { RESOURCE = consumer_goods }
 		}
 	}
 	text = {
-		localization_key = "mmgsiege_shortage_substatus_recovering"
+		localization_key = "mmgsiege_shortage_substatus_not_under_siege"
 		trigger = {
-			mmgsiege_has_recovering_resource_shortage = { RESOURCE = consumer_goods }
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods } }
+			mmgsiege_is_under_siege = no
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_produced_locally"
+		trigger = {
+			mmgsiege_is_under_siege = yes
+			mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods }
+			planet_resource_compare = {
+				resource = consumer_goods
+				type = balance
+				value >= value:mmgsiege_planet_production_offset_consumer_goods
+			}
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_shortage_substatus_stockpile_empty_consumer_goods"
+		trigger = {
+			NOT = { mmgsiege_has_resource_shortage = { RESOURCE = consumer_goods } }
 		}
 	}
 	text = {
@@ -256,4 +332,23 @@ defined_text = {
 		}
 	}
 	default = "mmgsiege_shortage_substatus_progress_consumer_goods"
+}
+
+defined_text = {
+	name = MmgsiegeStatus
+	text = {
+		localization_key = "mmgsiege_status_under_siege"
+		trigger = {
+			is_occupied_flag = no
+			mmgsiege_is_under_siege = yes
+		}
+	}
+	text = {
+		localization_key = "mmgsiege_status_under_siege_occupied"
+		trigger = {
+			is_occupied_flag = yes
+			mmgsiege_is_under_siege = yes
+		}
+	}
+	default = "mmgsiege_status_not_under_siege"
 }
