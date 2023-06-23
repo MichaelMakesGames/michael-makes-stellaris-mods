@@ -16,6 +16,21 @@ mmu_years_of_peace = {
 	multiply = $MULTIPLY|1$
 }
 
+mmu_count_owned_leader = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				always = yes
+				[[YES]$YES$ = yes]
+				[[NO]$NO$ = no]
+			}
+		}
+		mode = add
+	}
+}
+
 mmu_num_envoys_with_task = {
 	base = 0
 	complex_trigger_modifier = {

@@ -8,6 +8,55 @@ uncivic_shadow_council_scapegoated = {
 }
 
 uncivic_shadow_council_disrupted = {
-	planet_jobs_ruler_produces_mult = -0.30
-	pop_cat_ruler_political_power = -3.00
+	pop_cat_ruler_political_power = -0.50
+	custom_tooltip = uncivic_shadow_council_disrupted_tooltip
+}
+
+uncivic_shadow_council_empty = {
+	planet_stability_add = -5
+	pop_cat_ruler_political_power = -0.50
+	planet_jobs_ruler_produces_mult = -0.50
+}
+
+uncivic_shadow_council_overshadowed = {
+	councilor_exp_gain = -0.05
+}
+
+uncivic_shadow_council_extortion_modifier = {
+	country_trust_growth = @uncivic_shadow_council_extortion_trust_growth
+	# envoy extortion implemented in script
+}
+
+uncivic_shadow_council_kickbacks_modifier = {
+	trade_value_mult = @uncivic_shadow_council_kickbacks_trade_value_mult
+	# ruler political power needs to be scaled separately
+	# shadow councilor exp gain handled by shadow councilor traits
+}
+
+uncivic_shadow_council_kickbacks_edict_fund_modifier = {
+	country_edict_fund_add = 1
+	# scaled according to trade value by script
+}
+
+uncivic_shadow_council_oversight_modifier = {
+	council_agenda_progress_speed = @uncivic_shadow_council_oversight_agenda_progress_speed
+	councilor_exp_gain = @uncivic_shadow_council_oversight_councilor_exp_gain
+}
+
+uncivic_shadow_council_propaganda_modifier = {
+	pop_government_ethic_attraction = @uncivic_shadow_council_propaganda_government_ethic_attraction
+	country_war_exhaustion_mult = @uncivic_shadow_council_propaganda_war_exhaustion_mult
+	pop_job_amenities_mult = @uncivic_shadow_council_propaganda_job_amenities_mult
+}
+
+uncivic_shadow_council_silence_modifier = {
+	intel_encryption_add = @uncivic_shadow_council_silence_encryption_add
+	diplo_weight_mult = @uncivic_shadow_council_silence_diplo_weight_mult
+	# exposure implemented in script
+}
+
+uncivic_shadow_council_suppression_modifier = {
+	planet_crime_add = @uncivic_shadow_council_suppression_crime_add
+	planet_stability_add = @uncivic_shadow_council_suppression_stability_add
+	pop_happiness = @uncivic_shadow_council_suppression_pop_happiness
 }

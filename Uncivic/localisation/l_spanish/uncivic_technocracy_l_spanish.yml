@@ -1,17 +1,12 @@
 ﻿l_spanish:
- edict_uncivic_technocracy_recruit_technocrat: "Recruit Technocrat" # UNTRANSLATED
- edict_uncivic_technocracy_recruit_technocrat_desc: "Recruit a governor with a specific scientific Expertise trait." # UNTRANSLATED
- uncivic_technocracy.201.title: "Recruit Technocrat" # UNTRANSLATED
- uncivic_technocracy.201.desc: "Choose a category of technocrat governor to recruit." # UNTRANSLATED
- uncivic_technocracy.201.physics: "£physics_research£ $PHYSICS$" # UNTRANSLATED
- uncivic_technocracy.201.society: "£society_research£ $SOCIETY$" # UNTRANSLATED
- uncivic_technocracy.201.engineering: "£engineering_research£ $ENGINEERING$" # UNTRANSLATED
- uncivic_technocracy.202.title: "Recruit Physicist" # UNTRANSLATED
- uncivic_technocracy.202.desc: "Choose the expertise of your new technocrat governor." # UNTRANSLATED
- uncivic_technocracy.203.title: "Recruit Social Scientist" # UNTRANSLATED
- uncivic_technocracy.203.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
- uncivic_technocracy.204.title: "Recruit Engineer" # UNTRANSLATED
- uncivic_technocracy.204.desc: "$uncivic_technocracy.202.desc$" # DO NOT TRANSLATE
- uncivic_technocracy_new_leader: "New Technocrat Governor" # UNTRANSLATED
- uncivic_technocracy_governor_trait_technocrat: "Technocrat" # UNTRANSLATED
- uncivic_technocracy_governor_trait_technocrat_desc: "A technocrat who has not been assigned an expertise yet." # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat: "Technocrat" # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_desc: "This leader, although not a scientist, has a scientific education." # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_tooltip: "§YWill gain a specialized Technocrat trait at Level 4§!" # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_physics: "Technocrat: Physicist" # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_physics_desc: "This leader has a scientific education, and a particular interest in physics." # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_society: "Technocrat: Social Scientist" # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_society_desc: "This leader has a scientific education, and a particular interest in the social sciences." # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_engineering: "Technocrat: Engineer" # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat_engineering_desc: "This leader has a scientific education, and a particular interest in engineering." # UNTRANSLATED
+ uncivic_technocracy.221.title: "Specialize Technocrat" # UNTRANSLATED
+ uncivic_technocracy.221.desc: "Choose a specialization for Technocrat §H[From.GetName]§!." # UNTRANSLATED

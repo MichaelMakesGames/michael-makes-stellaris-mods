@@ -1,0 +1,383 @@
+uncivic_shadow_council_appoint_leader = {
+	if = {
+		limit = {
+			exists = event_target:uncivic_shadow_council_$POSITION$
+			event_target:uncivic_shadow_council_$POSITION$ = {
+				has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			}
+		}
+		event_target:uncivic_shadow_council_$POSITION$ = {
+			uncivic_shadow_council_dismiss_leader = yes
+		}
+	}
+	uncivic_shadow_council_clear_leader = yes
+	add_trait = uncivic_shadow_council_leader_trait_$POSITION$
+	hidden_effect = {
+		owner = { uncivic_shadow_council_update_modifiers = yes }
+	}
+}
+
+uncivic_shadow_council_dismiss_leader = {
+	uncivic_shadow_council_clear_leader = yes
+	add_trait = uncivic_shadow_council_leader_trait_former_shadow_councilor
+	hidden_effect = {
+		owner = { uncivic_shadow_council_update_modifiers = yes }
+	}
+}
+
+uncivic_shadow_council_clear_leader = {
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_extortion }
+		remove_trait = uncivic_shadow_council_leader_trait_extortion
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_kickbacks }
+		remove_trait = uncivic_shadow_council_leader_trait_kickbacks
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_oversight }
+		remove_trait = uncivic_shadow_council_leader_trait_oversight
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_propaganda }
+		remove_trait = uncivic_shadow_council_leader_trait_propaganda
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_silence }
+		remove_trait = uncivic_shadow_council_leader_trait_silence
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_suppression }
+		remove_trait = uncivic_shadow_council_leader_trait_suppression
+	}
+	if = {
+		limit = { has_trait = uncivic_shadow_council_leader_trait_former_shadow_councilor }
+		remove_trait = uncivic_shadow_council_leader_trait_former_shadow_councilor
+	}
+}
+
+uncivic_shadow_council_clear_appointing = {
+	hidden_effect = {
+		remove_country_flag = uncivic_shadow_council_appointing
+		remove_country_flag = uncivic_shadow_council_appointing_extortion
+		remove_country_flag = uncivic_shadow_council_appointing_kickbacks
+		remove_country_flag = uncivic_shadow_council_appointing_oversight
+		remove_country_flag = uncivic_shadow_council_appointing_propaganda
+		remove_country_flag = uncivic_shadow_council_appointing_silence
+		remove_country_flag = uncivic_shadow_council_appointing_suppression
+	}
+}
+
+uncivic_shadow_council_save_event_targets = {
+	every_owned_leader = {
+		switch = {
+			trigger = has_trait
+			uncivic_shadow_council_leader_trait_extortion = {
+				save_event_target_as = uncivic_shadow_council_extortion
+			}
+			uncivic_shadow_council_leader_trait_kickbacks = {
+				save_event_target_as = uncivic_shadow_council_kickbacks
+			}
+			uncivic_shadow_council_leader_trait_oversight = {
+				save_event_target_as = uncivic_shadow_council_oversight
+			}
+			uncivic_shadow_council_leader_trait_propaganda = {
+				save_event_target_as = uncivic_shadow_council_propaganda
+			}
+			uncivic_shadow_council_leader_trait_silence = {
+				save_event_target_as = uncivic_shadow_council_silence
+			}
+			uncivic_shadow_council_leader_trait_suppression = {
+				save_event_target_as = uncivic_shadow_council_suppression
+			}
+		}
+	}
+}
+
+uncivic_shadow_council_update_modifiers = {
+	remove_modifier = uncivic_shadow_council_extortion_modifier
+	remove_modifier = uncivic_shadow_council_kickbacks_modifier
+	remove_modifier = uncivic_shadow_council_kickbacks_edict_fund_modifier
+	remove_modifier = uncivic_shadow_council_oversight_modifier
+	remove_modifier = uncivic_shadow_council_propaganda_modifier
+	remove_modifier = uncivic_shadow_council_silence_modifier
+	remove_modifier = uncivic_shadow_council_suppression_modifier
+	remove_modifier = uncivic_shadow_council_empty
+	# councilor modifiers
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_extortion_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|extortion|
+		}
+	}
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_kickbacks_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+		}
+		add_modifier = {
+			modifier = uncivic_shadow_council_kickbacks_edict_fund_modifier
+			multiplier = value:mmu_simple_trigger|TRIGGER|trade_income|MULTIPLY|@uncivic_shadow_council_kickbacks_edict_fund_trade_value_percent|
+		}
+	}
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = oversight } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_oversight_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|oversight|
+		}
+	}
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = propaganda } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_propaganda_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|propaganda|
+		}
+	}
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = silence } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_silence_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|silence|
+		}
+	}
+	if = {
+		limit = { uncivic_shadow_council_has_shadow_councilor = { POSITION = suppression } }
+		add_modifier = {
+			modifier = uncivic_shadow_council_suppression_modifier
+			multiplier = value:uncivic_shadow_council_position_level|POSITION|suppression|
+		}
+	}
+	# empty council modifier
+	if = {
+		limit = {
+			count_owned_leader = {
+				limit = { uncivic_shadow_council_is_shadow_councilor = yes }
+				count = 0
+			}
+		}
+		add_modifier = { modifier = uncivic_shadow_council_empty }
+		if = {
+			limit = { NOT = { has_country_flag = uncivic_shadow_council_empty_recent_alert } }
+			set_timed_country_flag = {
+				flag = uncivic_shadow_council_empty_recent_alert
+				days = 30
+			}
+			create_message = {
+				type = UNCIVIC_SHADOW_COUNCIL_EMPTY
+				localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_EMPTY
+				days = 30
+				target = this
+			}
+		}
+	} else = {
+		# overshadowed modifier
+		add_modifier = {
+			modifier = uncivic_shadow_council_overshadowed
+			multiplier = value:mmu_count_owned_leader|YES|uncivic_shadow_council_is_shadow_councilor|
+		}
+	}
+}
+
+uncivic_shadow_council_dismiss_shadow_councilors_on_standard_council = {
+	every_owned_leader = {
+		limit = {
+			is_councilor = yes
+			uncivic_shadow_council_is_shadow_councilor = yes
+		}
+		uncivic_shadow_council_dismiss_leader = yes
+		owner = {
+			create_message = {
+				type = UNCIVIC_SHADOW_COUNCIL_COUNCILOR_REMOVED
+				localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_COUNCILOR_REMOVED
+				days = 30
+				target = capital_scope
+				variable = { type = name localization = LEADER scope = PREV }
+			}
+		}
+	}
+}
+
+# this = envoy
+uncivic_shadow_council_save_extort_target = {
+	random_country = {
+		limit = {
+			NOT = { is_same_value = prev.owner }
+			prev = {
+				OR = {
+					has_envoy_task = {
+						task = improve_relations
+						target = prev
+					}
+					has_envoy_task = {
+						task = harm_relations
+						target = prev
+					}
+					has_envoy_task = {
+						task = spy_network
+						target = prev
+					}
+					AND = {
+						has_envoy_task = { task = galactic_community }
+						prev = { is_galactic_community_member = yes }
+					}
+					AND = {
+						has_envoy_task = { task = federation }
+						owner = { is_in_federation_with = prevprev }
+					}
+					AND = {
+						has_envoy_task = { task = strengthen_imperial_authority }
+						prev = { any_envoy = { has_envoy_task = { task = undermine_imperial_authority } } }
+					}
+					AND = {
+						has_envoy_task = { task = undermine_imperial_authority }
+						prev = { is_galactic_emperor = yes }
+					}
+				}
+			}
+		}
+		save_event_target_as = uncivic_shadow_council_extort_target
+	}
+}
+
+# this/root = envoy
+uncivic_shadow_council_extort = {
+	if = {
+		limit = { exists = event_target:uncivic_shadow_council_extort_target }
+		event_target:uncivic_shadow_council_extort_target = {
+			random_list = {
+				10 = {
+					# favor
+					modifier = {
+						multiply = 0
+						is_homicidal = yes
+					}
+					prev.owner = {
+						add_favors = {
+							target = event_target:uncivic_shadow_council_extort_target
+							value = 1
+						}
+						create_message = {
+							type = UNCIVIC_SHADOW_COUNCIL_EXTORTED_FAVOR
+							localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_FAVOR
+							days = 30
+							target = ROOT
+							variable = { type = name localization = ENVOY scope = ROOT }
+							variable = { type = name localization = TARGET scope = event_target:uncivic_shadow_council_extort_target }
+						}
+					}
+				}
+				5 = {
+					# asset
+					modifier = {
+						multiply = 0
+						NAND = {
+							has_nemesis = yes
+							root.owner = {
+								any_spynetwork = {
+									target = { is_same_value = event_target:uncivic_shadow_council_extort_target }
+									owner = { is_same_value = root.owner }
+									exists = leader
+								}
+							}
+						}
+					}
+					if = {
+						limit = { is_regular_empire = yes }
+						root.owner = {
+							random_spynetwork = {
+								limit = {
+									target = { is_same_value = event_target:uncivic_shadow_council_extort_target }
+									owner = { is_same_value = root.owner }
+								}
+								espionage_create_asset_regular = yes
+								root.owner = {
+									set_country_flag = uncivic_shadow_council_asset_created
+								}
+							}
+						}
+					} else_if = {
+						limit = { is_hive_empire = yes }
+						root.owner = {
+							random_spynetwork = {
+								limit = {
+									target = { is_same_value = event_target:uncivic_shadow_council_extort_target }
+									owner = { is_same_value = root.owner }
+								}
+								espionage_create_asset_hive = yes
+								root.owner = {
+									set_country_flag = uncivic_shadow_council_asset_created
+								}
+							}
+						}
+					} else_if = {
+						limit = { is_machine_empire = yes }
+						root.owner = {
+							random_spynetwork = {
+								limit = {
+									target = { is_same_value = event_target:uncivic_shadow_council_extort_target }
+									owner = { is_same_value = root.owner }
+								}
+								espionage_create_asset_machine = yes
+								root.owner = {
+									set_country_flag = uncivic_shadow_council_asset_created
+								}
+							}
+						}
+					}
+					root.owner = {
+						if = {
+							limit = { has_country_flag = uncivic_shadow_council_asset_created }
+							remove_country_flag = uncivic_shadow_council_asset_created
+							create_message = {
+								type = UNCIVIC_SHADOW_COUNCIL_EXTORTED_ASSET
+								localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_ASSET
+								days = 30
+								target = ROOT
+								variable = { type = name localization = ENVOY scope = ROOT }
+								variable = { type = name localization = TARGET scope = event_target:uncivic_shadow_council_extort_target }
+							}
+						}
+					}
+				}
+				10 = {
+					# intel
+					modifier = {
+						multiply = 0
+						is_in_federation_with = prev.owner
+					}
+					root.owner = {
+						add_intel = {
+							amount = 10
+							who = event_target:uncivic_shadow_council_extort_target
+						}
+						create_message = {
+							type = UNCIVIC_SHADOW_COUNCIL_EXTORTED_INTEL
+							localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INTEL
+							days = 30
+							target = ROOT
+							variable = { type = name localization = ENVOY scope = ROOT }
+							variable = { type = name localization = TARGET scope = event_target:uncivic_shadow_council_extort_target }
+						}
+					}
+				}
+				5 = {
+					# influence
+					root.owner = {
+						add_resource = { influence = 10 }
+						create_message = {
+							type = UNCIVIC_SHADOW_COUNCIL_EXTORTED_INFLUENCE
+							localization = MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INFLUENCE
+							days = 30
+							target = ROOT
+							variable = { type = name localization = ENVOY scope = ROOT }
+							variable = { type = name localization = TARGET scope = event_target:uncivic_shadow_council_extort_target }
+						}
+					}
+				}
+			}
+		}
+	}
+}

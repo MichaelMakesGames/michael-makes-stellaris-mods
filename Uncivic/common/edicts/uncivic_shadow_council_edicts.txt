@@ -1,4 +1,4 @@
-uncivic_shadow_council_elevate_shadow_councilor = {
+uncivic_shadow_council_manage_shadow_council = {
 	icon = "GFX_edict_type_policy"
 	length = 1
 	potential = {
@@ -13,7 +13,28 @@ uncivic_shadow_council_elevate_shadow_councilor = {
 			id = uncivic_shadow_council.201
 		}
 	}
+	# ai requires economic category
+	resources = {
+		category = edicts
+	}
 	ai_weight = {
 		weight = 0
+		# has a non-councilor non-shadow-councilor leader
+		# and an available shadow council position
+		modifier = {
+			add = 1000
+			any_owned_leader = {
+				is_councilor = no
+				uncivic_shadow_council_is_shadow_councilor = no
+			}
+			count_owned_leader = {
+				limit = { uncivic_shadow_council_is_shadow_councilor = yes }
+				count < 6
+			}
+		}
+		modifier = {
+			mult = 0
+			has_country_flag = uncivic_shadow_council_manage_shadow_council_recently_closed
+		}
 	}
 }

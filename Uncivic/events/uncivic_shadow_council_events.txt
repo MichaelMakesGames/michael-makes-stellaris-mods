@@ -41,23 +41,22 @@ country_event = {
 	hide_window = yes
 	immediate = {
 		every_country = {
-			if = {
-				limit = { has_modifier = uncivic_shadow_council_exposed }
-				remove_modifier = uncivic_shadow_council_exposed
+			remove_modifier = uncivic_shadow_council_exposed
+			remove_modifier = uncivic_shadow_council_scapegoated
+			remove_modifier = uncivic_shadow_council_disrupted
+			remove_modifier = uncivic_shadow_council_overshadowed
+			remove_modifier = uncivic_shadow_council_empty
+			remove_modifier = uncivic_shadow_council_extortion_modifier
+			remove_modifier = uncivic_shadow_council_kickbacks_modifier
+			remove_modifier = uncivic_shadow_council_kickbacks_edict_fund_modifier
+			remove_modifier = uncivic_shadow_council_oversight_modifier
+			remove_modifier = uncivic_shadow_council_propaganda_modifier
+			remove_modifier = uncivic_shadow_council_silence_modifier
+			remove_modifier = uncivic_shadow_council_suppression_modifier
+			every_owned_leader = {
+				limit = { uncivic_shadow_council_is_current_or_former_shadow_councilor = yes }
+				uncivic_shadow_council_clear_leader = yes
 			}
-			if = {
-				limit = { has_modifier = uncivic_shadow_council_scapegoated }
-				remove_modifier = uncivic_shadow_council_scapegoated
-			}
-			if = {
-				limit = { has_modifier = uncivic_shadow_council_disrupted }
-				remove_modifier = uncivic_shadow_council_disrupted
-			}
-			# TODO
-			# every_owned_leader = {
-			# 	limit = { uncivic_shadow_council_is_shadow_councilor = yes }
-			# 	uncivic_shadow_council_clear_shadow_councilor = yes
-			# }
 		}
 	}
 }
@@ -78,242 +77,486 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		# TODO
-		# every_owned_leader = {
-		# 	limit = { uncivic_shadow_council_is_shadow_councilor = yes }
-		# 	uncivic_shadow_council_clear_shadow_councilor = yes
-		# }
+		remove_modifier = uncivic_shadow_council_exposed
+		remove_modifier = uncivic_shadow_council_scapegoated
+		remove_modifier = uncivic_shadow_council_disrupted
+		remove_modifier = uncivic_shadow_council_overshadowed
+		remove_modifier = uncivic_shadow_council_empty
+		remove_modifier = uncivic_shadow_council_extortion_modifier
+		remove_modifier = uncivic_shadow_council_kickbacks_modifier
+		remove_modifier = uncivic_shadow_council_kickbacks_edict_fund_modifier
+		remove_modifier = uncivic_shadow_council_oversight_modifier
+		remove_modifier = uncivic_shadow_council_propaganda_modifier
+		remove_modifier = uncivic_shadow_council_silence_modifier
+		remove_modifier = uncivic_shadow_council_suppression_modifier
+		every_owned_leader = {
+			limit = { uncivic_shadow_council_is_current_or_former_shadow_councilor = yes }
+			uncivic_shadow_council_clear_leader = yes
+		}
 	}
 }
 
-# 888888 88     888888 Yb    dP    db    888888 888888
-# 88__   88     88__    Yb  dP    dPYb     88   88__
-# 88""   88  .o 88""     YbdP    dP__Yb    88   88""
-# 888888 88ood8 888888    YP    dP""""Yb   88   888888
+# 8b    d8    db    88b 88    db     dP""b8 888888
+# 88b  d88   dPYb   88Yb88   dPYb   dP   `" 88__
+# 88YbdP88  dP__Yb  88 Y88  dP__Yb  Yb  "88 88""
+# 88 YY 88 dP""""Yb 88  Y8 dP""""Yb  YboodP 888888
 #
 # .dP"Y8 88  88    db    8888b.   dP"Yb  Yb        dP
 # `Ybo." 88  88   dPYb    8I  Yb dP   Yb  Yb  db  dP
 # o.`Y8b 888888  dP__Yb   8I  dY Yb   dP   YbdPYbdP
 # 8bodP' 88  88 dP""""Yb 8888Y"   YbodP     YP  YP
 #
-#  dP""b8  dP"Yb  88   88 88b 88  dP""b8 88 88      dP"Yb  88""Yb
-# dP   `" dP   Yb 88   88 88Yb88 dP   `" 88 88     dP   Yb 88__dP
-# Yb      Yb   dP Y8   8P 88 Y88 Yb      88 88  .o Yb   dP 88"Yb
-#  YboodP  YbodP  `YbodP' 88  Y8  YboodP 88 88ood8  YbodP  88  Yb
+#  dP""b8  dP"Yb  88   88 88b 88  dP""b8 88 88
+# dP   `" dP   Yb 88   88 88Yb88 dP   `" 88 88
+# Yb      Yb   dP Y8   8P 88 Y88 Yb      88 88  .o
+#  YboodP  YbodP  `YbodP' 88  Y8  YboodP 88 88ood8
 
 country_event = {
 	id = uncivic_shadow_council.201
 	is_triggered_only = yes
-	title = edict_uncivic_shadow_council_elevate_shadow_councilor
-	desc = uncivic_shadow_council_elevate_shadow_councilor_desc
-	picture = GFX_evt_necrophage
-	auto_opens = yes
-	option = {
-		name = uncivic_shadow_council_elevate_governor
-		allow = { uncivic_shadow_council_can_elevate_shadow_councilor = { CLASS = governor } }
-		mmu_paging_init = {
-			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-			PAGED_ENTITY_TYPE = owned_leader
-			PAGED_ENTITY_LIMIT = "AND = { leader_class = governor uncivic_shadow_council_is_shadow_councilor = no }"
-		}
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
-	}
-	option = {
-		name = uncivic_shadow_council_elevate_scientist
-		allow = { uncivic_shadow_council_can_elevate_shadow_councilor = { CLASS = scientist } }
-		mmu_paging_init = {
-			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-			PAGED_ENTITY_TYPE = owned_leader
-			PAGED_ENTITY_LIMIT = "AND = { leader_class = scientist uncivic_shadow_council_is_shadow_councilor = no }"
-		}
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
-	}
-	option = {
-		name = uncivic_shadow_council_elevate_admiral
-		allow = { uncivic_shadow_council_can_elevate_shadow_councilor = { CLASS = admiral } }
-		mmu_paging_init = {
-			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-			PAGED_ENTITY_TYPE = owned_leader
-			PAGED_ENTITY_LIMIT = "AND = { leader_class = admiral uncivic_shadow_council_is_shadow_councilor = no }"
-		}
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
-	}
-	option = {
-		name = uncivic_shadow_council_elevate_general
-		allow = { uncivic_shadow_council_can_elevate_shadow_councilor = { CLASS = general } }
-		mmu_paging_init = {
-			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-			PAGED_ENTITY_TYPE = owned_leader
-			PAGED_ENTITY_LIMIT = "AND = { leader_class = general uncivic_shadow_council_is_shadow_councilor = no }"
-		}
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
-	}
-	option = { name = CLOSE }
-}
-
-country_event = {
-	id = uncivic_shadow_council.202
-	is_triggered_only = yes
-	title = edict_uncivic_shadow_council_elevate_shadow_councilor
-	desc = uncivic_shadow_council_elevate_shadow_councilor_desc
+	title = uncivic_shadow_council.201.title
+	desc = uncivic_shadow_council.201.desc
 	picture = GFX_evt_necrophage
 	auto_opens = yes
 	immediate = {
+		uncivic_shadow_council_save_event_targets = yes
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = extortion
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = kickbacks
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = oversight
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = propaganda
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = silence
+	}
+	inline_script = {
+		script = uncivic_shadow_council/manage_position_options
+		POSITION = suppression
+	}
+	option = {
+		name = CLOSE
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uncivic_shadow_council_manage_shadow_council_recently_closed
+				days = 360
+			}
+		}
+		ai_chance = { base = 1 } # fallback to not get stuck in loop
+	}
+}
+
+# view leader
+country_event = {
+	id = uncivic_shadow_council.211
+	is_triggered_only = yes
+	auto_opens = yes
+	event_window_type = leader_recruit
+	picture = GFX_leader_recruitment_bg_renowned
+	picture_event_data = {
+		portrait = event_target:uncivic_shadow_council_viewed_leader
+		room = ethic_spaceship_room
+	}
+	show_sound = no_sound
+	title = uncivic_shadow_council.211.title
+	desc = {
+		text = uncivic_shadow_council.211.desc.extortion_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_extortion
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.extortion_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_extortion
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.kickbacks_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_kickbacks
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.kickbacks_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_kickbacks
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.oversight_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_oversight
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = oversight }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.oversight_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_oversight
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = oversight } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.propaganda_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_propaganda
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = propaganda }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.propaganda_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_propaganda
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = propaganda } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.silence_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_silence
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = silence }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.silence_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_silence
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = silence } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.suppression_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_suppression
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = suppression }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.suppression_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_suppression
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = suppression } }
+		}
+	}
+	immediate = {
+		uncivic_shadow_council_save_event_targets = yes
+	}
+	option = {
+		name = uncivic_shadow_council.211.option.view_leaders
+		mmu_paging_init = {
+			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+			PAGED_ENTITY_LIMIT = "is_event_leader = no uncivic_shadow_council_scoped_leader_is_appointed = no"
+		}
+		country_event = {
+			id = uncivic_shadow_council.221
+			scopes = { from = root } # break event_target inheritance
+		}
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = uncivic_shadow_council.211.option.view_positions
+		uncivic_shadow_council_clear_appointing = yes
+		country_event = {
+			id = uncivic_shadow_council.201
+			scopes = { from = root } # break event_target inheritance
+		}
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = CLOSE
+		uncivic_shadow_council_clear_appointing = yes
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uncivic_shadow_council_manage_shadow_council_recently_closed
+				days = 360
+			}
+		}
+		ai_chance = { base = 1 } # fallback to not get stuck in loop
+	}
+	option = {
+		name = uncivic_shadow_council.211.option.dismiss
+		tag = dismiss_leader
+		allow = {
+			if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_extortion }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_extortion
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_kickbacks }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_kickbacks
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_oversight }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_oversight
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_propaganda }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_propaganda
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_silence }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_silence
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_suppression }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					has_trait = uncivic_shadow_council_leader_trait_suppression
+				}
+			}
+		}
+		if = {
+			limit = { uncivic_shadow_council_viewed_leader_is_appointed = yes }
+			event_target:uncivic_shadow_council_viewed_leader = {
+				uncivic_shadow_council_dismiss_leader = yes
+			}
+		}
+		uncivic_shadow_council_clear_appointing = yes
+		country_event = {
+			id = uncivic_shadow_council.201
+			scopes = { from = root } # break event_target inheritance
+		}
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = uncivic_shadow_council.211.option.appoint
+		tag = hire_leader
+		allow = {
+			if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_extortion }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_extortion }
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_kickbacks }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_kickbacks }
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_oversight }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_oversight }
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_propaganda }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_propaganda }
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_silence }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_silence }
+				}
+			} else_if = {
+				limit = { has_country_flag = uncivic_shadow_council_appointing_suppression }
+				event_target:uncivic_shadow_council_viewed_leader = {
+					NOT = { has_trait = uncivic_shadow_council_leader_trait_suppression }
+				}
+			}
+		}
+		if = {
+			limit = { uncivic_shadow_council_viewed_leader_is_appointed = no }
+			switch = {
+				trigger = has_country_flag
+				uncivic_shadow_council_appointing_extortion = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = extortion }
+					}
+				}
+				uncivic_shadow_council_appointing_kickbacks = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = kickbacks }
+					}
+				}
+				uncivic_shadow_council_appointing_oversight = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = oversight }
+					}
+				}
+				uncivic_shadow_council_appointing_propaganda = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = propaganda }
+					}
+				}
+				uncivic_shadow_council_appointing_silence = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = silence }
+					}
+				}
+				uncivic_shadow_council_appointing_suppression = {
+					event_target:uncivic_shadow_council_viewed_leader = {
+						uncivic_shadow_council_appoint_leader = { POSITION = suppression }
+					}
+				}
+			}
+		}
+		uncivic_shadow_council_clear_appointing = yes
+		country_event = {
+			id = uncivic_shadow_council.201
+			scopes = { from = root } # break event_target inheritance
+		}
+		ai_chance = { base = 1000 } # if the AI has opened this up, it's already decided to appoint
+	}
+}
+
+country_event = {
+	id = uncivic_shadow_council.221
+	is_triggered_only = yes
+	title = uncivic_shadow_council.221.title
+	desc = {
+		text = uncivic_shadow_council.211.desc.extortion_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_extortion
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.extortion_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_extortion
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.kickbacks_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_kickbacks
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.kickbacks_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_kickbacks
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.oversight_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_oversight
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = oversight }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.oversight_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_oversight
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = oversight } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.propaganda_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_propaganda
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = propaganda }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.propaganda_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_propaganda
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = propaganda } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.silence_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_silence
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = silence }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.silence_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_silence
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = silence } }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.suppression_current
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_suppression
+			uncivic_shadow_council_has_shadow_councilor = { POSITION = suppression }
+		}
+	}
+	desc = {
+		text = uncivic_shadow_council.211.desc.suppression_empty
+		trigger = {
+			has_country_flag = uncivic_shadow_council_appointing_suppression
+			NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = suppression } }
+		}
+	}
+	picture = GFX_evt_necrophage
+	auto_opens = yes
+	immediate = {
+		uncivic_shadow_council_save_event_targets = yes
 		mmu_paging_save_event_targets = {
 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
 			PAGED_ENTITY_TYPE = owned_leader
 		}
 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 0
-# 		} }
-# 		name = uncivic_shadow_council_leader_0
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_0 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 1
-# 		} }
-# 		name = uncivic_shadow_council_leader_1
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_1 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 2
-# 		} }
-# 		name = uncivic_shadow_council_leader_2
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_2 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 3
-# 		} }
-# 		name = uncivic_shadow_council_leader_3
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_3 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 4
-# 		} }
-# 		name = uncivic_shadow_council_leader_4
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_4 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 5
-# 		} }
-# 		name = uncivic_shadow_council_leader_5
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_5 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 6
-# 		} }
-# 		name = uncivic_shadow_council_leader_6
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_6 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 7
-# 		} }
-# 		name = uncivic_shadow_council_leader_7
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_7 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 8
-# 		} }
-# 		name = uncivic_shadow_council_leader_8
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_8 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
-# 	option = {
-# 		trigger = { mmu_paging_current_page_has_entity = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			NUMBER = 9
-# 		} }
-# 		name = uncivic_shadow_council_leader_9
-# 		event_target:uncivic_shadow_council_leader_paging_current_page_entity_9 = {
-# 			uncivic_shadow_council_make_shadow_councilor = yes
-# 		}
-# 		mmu_paging_clear_all = {
-# 			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-# 			PAGED_ENTITY_TYPE = owned_leader
-# 		}
-# 		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
-# 	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 0
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 1
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 2
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 3
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 4
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 5
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 6
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 7
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 8
+	}
+	inline_script = {
+		script = uncivic_shadow_council/view_leader_option
+		NUMBER = 9
+	}
 	option = {
 		trigger = {
 			mmu_paging_has_next = {
@@ -323,7 +566,8 @@ country_event = {
 		}
 		name = NEXT
 		mmu_paging_next = { PAGING_INSTANCE = uncivic_shadow_council_leader_paging }
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
+		hidden_effect = { country_event = { id = uncivic_shadow_council.221 } }
+		ai_chance = { base = 10 }
 	}
 	option = {
 		trigger = {
@@ -331,15 +575,32 @@ country_event = {
 		}
 		name = PREV
 		mmu_paging_prev = { PAGING_INSTANCE = uncivic_shadow_council_leader_paging }
-		hidden_effect = { country_event = { id = uncivic_shadow_council.202 } }
+		hidden_effect = { country_event = { id = uncivic_shadow_council.221 } }
+		ai_chance = { base = 0 }
 	}
 	option = {
-		name = BACK
-		mmu_paging_clear_all = {
-			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
-			PAGED_ENTITY_TYPE = owned_leader
+		name = uncivic_shadow_council.211.option.view_positions
+		hidden_effect = {
+			mmu_paging_clear_all = {
+				PAGING_INSTANCE = uncivic_shadow_council_leader_paging
+				PAGED_ENTITY_TYPE = owned_leader
+			}
+			uncivic_shadow_council_clear_appointing = yes
+			country_event = { id = uncivic_shadow_council.201 }
 		}
-		hidden_effect = { country_event = { id = uncivic_shadow_council.201 } }
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = CLOSE
+		trigger = { is_ai = yes }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uncivic_shadow_council_manage_shadow_council_recently_closed
+				days = 360
+			}
+			uncivic_shadow_council_clear_appointing = yes
+		}
+		ai_chance = { base = 1 } # fallback to not get stuck in loop
 	}
 }
 
@@ -414,39 +675,97 @@ leader_event = {
 					modifier = uncivic_shadow_council_disrupted
 					days = 1800
 				}
+				hidden_effect = {
+					uncivic_shadow_council_update_modifiers = yes
+				}
 			}
 		}
 		ai_chance = { base = 1 }
 	}
 }
 
-#    db    88
-#   dPYb   88
-#  dP__Yb  88
-# dP""""Yb 88
+#  dP"Yb  88b 88               db     dP""b8 888888 88  dP"Yb  88b 88 .dP"Y8
+# dP   Yb 88Yb88              dPYb   dP   `"   88   88 dP   Yb 88Yb88 `Ybo."
+# Yb   dP 88 Y88             dP__Yb  Yb        88   88 Yb   dP 88 Y88 o.`Y8b
+#  YbodP  88  Y8 oooooooooo dP""""Yb  YboodP   88   88  YbodP  88  Y8 8bodP'
 
+# on_monthly_pulse_country
 country_event = {
-	id = uncivic_shadow_council.501
-	is_triggered_only = yes
+	id = uncivic_shadow_council.401
 	hide_window = yes
+	is_triggered_only = yes
 	trigger = {
-		is_ai = yes
 		has_valid_civic = civic_shadow_council
 		has_global_flag = uncivic_shadow_council_enabled
 	}
-	# TODO
-	# immediate = {
-	# 	if = {
-	# 		limit = {
-	# 			check_variable_arithmetic = {
-	# 				which = value:uncivic_shadow_council_risk
-	# 				value < 10
-	# 			}
-	# 		}
-	# 		random_owned_leader = {
-	# 			limit = { uncivic_shadow_council_is_shadow_councilor = no }
-	# 			uncivic_shadow_council_make_shadow_councilor = yes
-	# 		}
-	# 	}
-	# }
+	immediate = {
+		uncivic_shadow_council_dismiss_shadow_councilors_on_standard_council = yes
+		uncivic_shadow_council_update_modifiers = yes
+	}
+}
+
+# on_yearly_pulse_country
+# envoy extortion gateway event
+country_event = {
+	id = uncivic_shadow_council.411
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_shadow_council
+		has_global_flag = uncivic_shadow_council_enabled
+		uncivic_shadow_council_has_shadow_councilor = { POSITION = extortion }
+	}
+	immediate = {
+		every_envoy = {
+			random = {
+				chance = root.value:uncivic_shadow_council_position_level|POSITION|extortion|MULTIPLY|uncivic_shadow_council_extortion_envoy_extort_chance|
+				leader_event = {
+					id = uncivic_shadow_council.412
+					days = 15
+					random = 330
+				}
+			}
+		}
+	}
+}
+leader_event = {
+	id = uncivic_shadow_council.412
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_shadow_council
+			has_global_flag = uncivic_shadow_council_enabled
+		}
+		NOR = {
+			has_envoy_task = { task = none }
+			has_envoy_task = { task = first_contact }
+		}
+	}
+	immediate = {
+		uncivic_shadow_council_save_extort_target = yes
+		uncivic_shadow_council_extort = yes
+	}
+}
+
+# on_game_start_country
+country_event = {
+	id = uncivic_shadow_council.421
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_shadow_council
+		has_global_flag = uncivic_shadow_council_enabled
+		is_ai = no
+	}
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				is_councilor = no
+				NOT = { leader_class = envoy }
+			}
+			uncivic_shadow_council_appoint_leader = { POSITION = oversight }
+		}
+	}
 }

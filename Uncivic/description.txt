@@ -21,10 +21,10 @@ Planets with upgraded capitals hold Parliamentary elections every 10 years, elec
 Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
 
 [h1]Shadow Council[/h1]
-Temporary disabled while it is reworked for the 3.8 Gemini / Galactic Paragons update.
+Appoint leaders to the Shadow Council for unique and powerful effects, but your Councilors gain less experience as they become mere figureheads.
 
 [h1]Technocracy[/h1]
-Temporary disabled while it is reworked for the 3.8 Gemini / Galactic Paragons update.
+Your non-scientist leaders can start with the Technocrat trait, producing a small amount of research. At Level 4, they specialize into one of the 3 branches of science with effects depending on their class.
 
 [h1]More to come![/h1]
 

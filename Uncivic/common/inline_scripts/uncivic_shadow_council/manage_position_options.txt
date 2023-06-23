@@ -1,0 +1,43 @@
+option = {
+	name = uncivic_shadow_council.201.option.filled_$POSITION$
+	trigger = { uncivic_shadow_council_has_shadow_councilor = { POSITION = $POSITION$ } }
+	allow = {
+		NOT = { has_country_flag = uncivic_shadow_council_appointing }
+	}
+	custom_tooltip = uncivic_shadow_council_leader_trait_$POSITION$_tooltip
+	hidden_effect = {
+		set_country_flag = uncivic_shadow_council_appointing
+		set_country_flag = uncivic_shadow_council_appointing_$POSITION$
+		event_target:uncivic_shadow_council_$POSITION$ = {
+			save_event_target_as = uncivic_shadow_council_viewed_leader
+		}
+		country_event = {
+			id = uncivic_shadow_council.211
+		}
+	}
+	ai_chance = { base = 0 }
+}
+option = {
+	name = uncivic_shadow_council.201.option.empty_$POSITION$
+	trigger = { NOT = { uncivic_shadow_council_has_shadow_councilor = { POSITION = $POSITION$ } } }
+	allow = {
+		NOT = { has_country_flag = uncivic_shadow_council_appointing }
+	}
+	custom_tooltip = uncivic_shadow_council_leader_trait_$POSITION$_tooltip
+	hidden_effect = {
+		set_country_flag = uncivic_shadow_council_appointing
+		set_country_flag = uncivic_shadow_council_appointing_$POSITION$
+		mmu_paging_init = {
+			PAGING_INSTANCE = uncivic_shadow_council_leader_paging
+			PAGED_ENTITY_TYPE = owned_leader
+			PAGED_ENTITY_LIMIT = "is_event_leader = no"
+		}
+		country_event = {
+			id = uncivic_shadow_council.221
+		}
+	}
+	ai_chance = {
+		base = 0
+		add = value:uncivic_shadow_council_$POSITION$_ai_chance
+	}
+}

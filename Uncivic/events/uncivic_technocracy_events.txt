@@ -42,16 +42,16 @@ country_event = {
 	immediate = {
 		every_country = {
 			every_owned_leader = {
-				while = {
-					count = trigger:num_traits
-					uncivic_technocracy_remove_technocracy_trait = yes
-				}
+				remove_trait = uncivic_technocracy_leader_trait_technocrat
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_physics
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_society
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_engineering
 			}
 			every_pool_leader = {
-				while = {
-					count = trigger:num_traits
-					uncivic_technocracy_remove_technocracy_trait = yes
-				}
+				remove_trait = uncivic_technocracy_leader_trait_technocrat
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_physics
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_society
+				remove_trait = uncivic_technocracy_leader_trait_technocrat_engineering
 			}
 		}
 	}
@@ -77,207 +77,118 @@ country_event = {
 	}
 }
 
-# 88""Yb 888888  dP""b8 88""Yb 88   88 88 888888
-# 88__dP 88__   dP   `" 88__dP 88   88 88   88
-# 88"Yb  88""   Yb      88"Yb  Y8   8P 88   88
-# 88  Yb 888888  YboodP 88  Yb `YbodP' 88   88
-#
-# 888888 888888  dP""b8 88  88 88b 88  dP"Yb   dP""b8 88""Yb    db    888888
-#   88   88__   dP   `" 88  88 88Yb88 dP   Yb dP   `" 88__dP   dPYb     88
-#   88   88""   Yb      888888 88 Y88 Yb   dP Yb      88"Yb   dP__Yb    88
-#   88   888888  YboodP 88  88 88  Y8  YbodP   YboodP 88  Yb dP""""Yb   88
-
+# on_added_to_leader_pool
+# root = country
+# from = leader
 country_event = {
 	id = uncivic_technocracy.201
+	hide_window = yes
 	is_triggered_only = yes
-	auto_opens = yes
-	title = uncivic_technocracy.201.title
-	desc = uncivic_technocracy.201.desc
-	picture = GFX_evt_decryption
+	trigger = {
+		has_global_flag = uncivic_technocracy_enabled
+		exists = from.creator
+		from.creator = { has_valid_civic = civic_technocracy }
+		from = { NOT = { leader_class = scientist } }
+	}
 	immediate = {
-		create_leader = {
-			class = governor
-			species = owner.species
-			name = uncivic_technocracy_new_leader
-			traits = {
-				# TODO
-				# trait = uncivic_technocracy_governor_trait_technocrat
+		random = {
+			chance = 50
+			from = {
+				add_trait = uncivic_technocracy_leader_trait_technocrat
 			}
-			
-		}
-		last_created_leader = {
-			save_event_target_as = uncivic_technocracy_new_leader
 		}
 	}
-	option = {
-		name = uncivic_technocracy.201.physics
-		country_event = { id = uncivic_technocracy.202 }
+}
+
+# on_game_start_country
+country_event = {
+	id = uncivic_technocracy.211
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = uncivic_technocracy_enabled
+		has_valid_civic = civic_technocracy
 	}
-	option = {
-		name = uncivic_technocracy.201.society
-		country_event = { id = uncivic_technocracy.203 }
-	}
-	option = {
-		name = uncivic_technocracy.201.engineering
-		country_event = { id = uncivic_technocracy.204 }
-	}
-	option = {
-		name = CANCEL
-		add_resource = {
-			unity = 150
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				is_ruler = no
+				leader_class = governor
+			}
+			add_trait = uncivic_technocracy_leader_trait_technocrat
 		}
-		hidden_effect = {
-			event_target:uncivic_technocracy_new_leader = {
-				kill_leader = {
-					show_notification = no
+	}
+}
+
+# on_leader_level_up
+country_event = {
+	id = uncivic_technocracy.221
+	title = uncivic_technocracy.221.title
+	desc = uncivic_technocracy.221.desc
+	is_triggered_only = yes
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+	picture = GFX_evt_physics_research
+	picture_event_data = {
+		portrait = from
+	}
+	trigger = {
+		from = {
+			has_skill = 4
+			has_trait = uncivic_technocracy_leader_trait_technocrat
+		}
+	}
+	option = {
+		name = uncivic_technocracy_leader_trait_technocrat_physics
+		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_physics }
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				exists = from.planet
+				from.planet = {
+					OR = {
+						has_generator_designation = yes
+						has_research_designation = yes
+					}
 				}
 			}
 		}
 	}
-}
-
-# physics
-country_event = {
-	id = uncivic_technocracy.202
-	is_triggered_only = yes
-	auto_opens = yes
-	title = uncivic_technocracy.202.title
-	desc = uncivic_technocracy.202.desc
-	picture = GFX_evt_star_chart
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = computing
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = field_manipulation
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = particles
-	# 	POTENTIAL = "always = yes"
-	# }
 	option = {
-		name = BACK
-		country_event = { id = uncivic_technocracy.201 }
-	}
-}
-
-# society
-country_event = {
-	id = uncivic_technocracy.203
-	is_triggered_only = yes
-	auto_opens = yes
-	title = uncivic_technocracy.203.title
-	desc = uncivic_technocracy.203.desc
-	picture = GFX_evt_vivisection
-	# immediate = {
-	# 	if = {
-	# 		limit = {
-	# 			NOR = {
-	# 				has_global_flag = uncivic_parliamentary_system_good_trading_detected
-	# 				has_global_flag = uncivic_parliamentary_system_good_trading_undetected
-	# 			}
-	# 		}
-	# 		event_target:global_event_country = {
-	# 			create_leader = {
-	# 				class = governor
-	# 				species = root.species
-	# 			}
-	# 			last_created_leader = {
-	# 				add_trait = leader_trait_expertise_good_trading
-	# 				if = {
-	# 					limit = { has_trait = leader_trait_expertise_good_trading }
-	# 					set_global_flag = uncivic_parliamentary_system_good_trading_detected
-	# 				} else = {
-	# 					set_global_flag = uncivic_parliamentary_system_good_trading_undetected
-	# 				}
-	# 				kill_leader = { show_notification = no }
-	# 			}
-	# 		}
-	# 	}
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = biology
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = military_theory
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = new_worlds
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = psionics
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = statecraft
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = archaeostudies
-	# 	POTENTIAL = "root = { has_ancrel = yes }"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = bugged_good_trading
-	# 	POTENTIAL = "has_global_flag = bug_branch_active"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = good_trading
-	# 	POTENTIAL = "has_global_flag = uncivic_parliamentary_system_good_trading_detected"
-	# }
-	option = {
-		name = BACK
-		country_event = { id = uncivic_technocracy.201 }
-	}
-}
-
-# engineering
-country_event = {
-	id = uncivic_technocracy.204
-	is_triggered_only = yes
-	auto_opens = yes
-	title = uncivic_technocracy.204.title
-	desc = uncivic_technocracy.204.desc
-	picture = GFX_evt_engineering_bay
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = industry
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = materials
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = propulsion
-	# 	POTENTIAL = "always = yes"
-	# }
-	# inline_script = {
-	# 	script = uncivic_technocracy_expertise_option
-	# 	EXPERTISE = voidcraft
-	# 	POTENTIAL = "always = yes"
-	# }
-	option = {
-		name = BACK
-		country_event = { id = uncivic_technocracy.201 }
+		name = uncivic_technocracy_leader_trait_technocrat_society
+		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_society }
 		ai_chance = {
-			base = 0
+			base = 1
+			modifier = {
+				add = 5
+				exists = from.planet
+				from.planet = {
+					OR = {
+						has_farming_designation = yes
+						has_unity_designation = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = uncivic_technocracy_leader_trait_technocrat_engineering
+		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_engineering }
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				exists = from.planet
+				from.planet = {
+					OR = {
+						has_mining_designation = yes
+						has_factory_designation = yes
+						has_foundry_designation = yes
+						has_industrial_designation = yes
+					}
+				}
+			}
 		}
 	}
 }

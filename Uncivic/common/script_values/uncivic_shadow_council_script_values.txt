@@ -11,32 +11,262 @@ uncivic_shadow_council_risk = {
 	}
 	complex_trigger_modifier = {
 		trigger = count_owned_leader
-		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
-		mode = multiply
+		parameters = { limit = { has_trait = uncivic_shadow_council_leader_trait_former_shadow_councilor } }
+		mode = add
 	}
-	complex_trigger_modifier = {
-		trigger = count_owned_leader
-		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
-		mode = subtract
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 1
+		}
 	}
-	divide = 2
-	divide = 2
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 2
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 3
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 4
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 5
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 6
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 7
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 8
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 9
+		}
+	}
+	modifier = {
+		subtract = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_silence
+			has_skill >= 10
+		}
+	}
 	modifier = {
 		add = 5
 		has_modifier = uncivic_shadow_council_scapegoated
 	}
-	multiply = 10
-	round = yes
-	divide = 10
-	max = 100
+	min = 0
 }
 
-uncivic_shadow_council_risk_increase = {
+uncivic_shadow_council_position_level = {
+	base = 0
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 1
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 2
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 3
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 4
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 5
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 6
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 7
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 8
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 9
+		}
+	}
+	modifier = {
+		add = 1
+		any_owned_leader = {
+			has_trait = uncivic_shadow_council_leader_trait_$POSITION$
+			has_skill >= 10
+		}
+	}
+	modifier = {
+		subtract = 2
+		has_modifier = uncivic_shadow_council_disrupted
+	}
+	multiply = $MULTIPLY|1$
+	min = 0
+}
+
+uncivic_shadow_council_extortion_ai_chance = {
 	base = 0
 	complex_trigger_modifier = {
-		trigger = count_owned_leader
-		parameters = { limit = { uncivic_shadow_council_is_shadow_councilor = yes } }
+		trigger = count_envoy
+		parameters = {
+			limit = {
+				NOR = {
+					has_envoy_task = { task = none }
+					has_envoy_task = { task = first_contact }
+				}
+			}
+		}
 		mode = add
 	}
-	divide = 2
+	multiply = 1000
+}
+
+uncivic_shadow_council_kickbacks_ai_chance = {
+	base = 1000
+	add = trigger:trade_income
+	complex_trigger_modifier = {
+		trigger = resource_income_compare
+		parameters = { resource = energy }
+		mode = add
+	}
+	modifier = {
+		multiply = 0
+		has_deficit = energy
+	}
+}
+
+uncivic_shadow_council_oversight_ai_chance = {
+	base = -1
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				is_councilor = yes
+			}
+		}
+		mode = add
+	}
+	multiply = 1000
+}
+
+uncivic_shadow_council_propaganda_ai_chance = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_pop_faction
+		parameters = {
+			limit = {
+				support > 0.10
+				mmu_leader_has_government_opposing_ethic = yes
+			}
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_pop_faction
+		parameters = {
+			limit = {
+				support > 0.20
+				mmu_leader_has_government_neutral_ethic = yes
+			}
+		}
+		mode = add
+	}
+	multiply = 1000
+	modifier = {
+		add = 1000
+		is_militarist = yes
+	}
+	modifier = {
+		add = 1000
+		is_at_war = yes
+	}
+}
+
+uncivic_shadow_council_silence_ai_chance = {
+	base = 1000
+	multiply = value:uncivic_shadow_council_risk
+}
+
+uncivic_shadow_council_suppression_ai_chance = {
+	base = 1000
+	complex_trigger_modifier = {
+		trigger = count_owned_planet
+		parameters = {
+			limit = {
+				OR = {
+					planet_stability <= 20
+					planet_crime >= 30
+				}
+			}
+		}
+		mult = 500
+		mode = add
+	}
 }

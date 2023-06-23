@@ -1,0 +1,156 @@
+uncivic_shadow_council_leader_trait_former_shadow_councilor = {
+	inline_script = {
+		script = trait/icon_negative_no_tiers
+		ICON = "GFX_leader_trait_overseer"
+		COUNCIL = no
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_former_shadow_councilor_tooltip
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_extortion = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_extortion_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_kickbacks = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_kickbacks_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_oversight = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_oversight_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_propaganda = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_propaganda_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_silence = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_silence_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}
+
+uncivic_shadow_council_leader_trait_suppression = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = leader
+		ICON = "GFX_leader_trait_overseer"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	is_councilor_trait_for_ruler = yes
+	custom_tooltip = uncivic_shadow_council_leader_trait_suppression_tooltip
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = { uncivic_shadow_council_has_shadow_councilor = { POSITION = kickbacks } }
+		}
+		species_leader_exp_gain = @uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain
+		mult = owner.value:uncivic_shadow_council_position_level|POSITION|kickbacks|
+	}
+	leader_class = { admiral scientist general governor }
+	initial = no
+	randomized = no
+}

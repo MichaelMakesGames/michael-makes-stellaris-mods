@@ -21,14 +21,14 @@ report_languages = [
 #   "japanese",
 #   "korean",
 #   "polish",
-  "russian",
+#   "russian",
 #   "simp_chinese",
 #   "spanish",
 ]
 
 # set this to true when generating fallbacks for updated source string
 # set this to false when processing/validating updated target strings
-stash = False
+stash = True
 # set this to true to do a dry run, printing reports without editing files
 dry = False
 

@@ -2,8 +2,3 @@ defined_text = {
 	name = UncivicShadowCouncilRisk
 	value = value:uncivic_shadow_council_risk
 }
-
-defined_text = {
-	name = UncivicShadowCouncilRiskIncrease
-	value = value:uncivic_shadow_council_risk_increase
-}

@@ -1,12 +1,41 @@
 ﻿l_french:
  # elevate shadow councilor edict/events
- edict_uncivic_shadow_council_elevate_shadow_councilor: "Promouvoir le Conseiller Fantôme"
- edict_uncivic_shadow_council_elevate_shadow_councilor_desc: "Nommer un leader au Conseil Fantôme. Il pourra tirer les ficelles pour s'assurer d'avoir les ressources dont il a besoin, mais plus nous aurons de conseillers, plus nous risquons d'être dévoilés."
- uncivic_shadow_council_elevate_shadow_councilor_desc: "Nommer un leader au Conseil Fantôme. Il pourra tirer les ficelles pour s'assurer d'avoir les ressources dont il a besoin, mais plus nous aurons de conseillers, plus nous risquons d'être dévoilés (vérifié une fois par an).\n\nRique de dévoilement du conseiller fantôme: §Y[This.UncivicShadowCouncilRisk]%§!\nAugmentation du prochain conseiller fantôme : §R+[This.UncivicShadowCouncilRiskIncrease]%§!"
- uncivic_shadow_council_elevate_governor: "Promouvoir un Governeur"
- uncivic_shadow_council_elevate_scientist: "Promouvoir un Scientifique"
- uncivic_shadow_council_elevate_admiral: "Promouvoir un Amiral"
- uncivic_shadow_council_elevate_general: "Promouvoir un Général"
+ edict_uncivic_shadow_council_manage_shadow_council: "Manage Shadow Council" # UNTRANSLATED
+ edict_uncivic_shadow_council_manage_shadow_council_desc: "View your Shadow Council, and appoint or dismiss leaders." # UNTRANSLATED
+
+ uncivic_shadow_council.201.title: "Manage Shadow Council" # UNTRANSLATED
+ uncivic_shadow_council.201.desc: "Each §YShadow Councilor§! provides a unique effect dependent on the leader's Skill Level, but also decreases Councilor Experience Gain by §R-5%§!. Select a position below to view the effect and appoint a leader.\n\nEach current and former §YShadow Councilor§! increases §YExposure Risk§! (the chance the public discovers a member of the Shadow Council). The §YShadow Councilor of Silence§! decreases risk.\n\nYearly Exposure Risk: §R[This.UncivicShadowCouncilRisk]%§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_extortion: "Extortion: [uncivic_shadow_council_extortion.GetTitle] §H[uncivic_shadow_council_extortion.GetName]§! §L(Level [uncivic_shadow_council_extortion.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_extortion: "Extortion: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_kickbacks: "Kickbacks: [uncivic_shadow_council_kickbacks.GetTitle] §H[uncivic_shadow_council_kickbacks.GetName]§! §L(Level [uncivic_shadow_council_kickbacks.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_kickbacks: "Kickbacks: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_oversight: "Oversight: [uncivic_shadow_council_oversight.GetTitle] §H[uncivic_shadow_council_oversight.GetName]§! §L(Level [uncivic_shadow_council_oversight.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_oversight: "Oversight: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_propaganda: "Propaganda: [uncivic_shadow_council_propaganda.GetTitle] §H[uncivic_shadow_council_propaganda.GetName]§! §L(Level [uncivic_shadow_council_propaganda.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_propaganda: "Propaganda: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_silence: "Silence: [uncivic_shadow_council_silence.GetTitle] §H[uncivic_shadow_council_silence.GetName]§! §L(Level [uncivic_shadow_council_silence.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_silence: "Silence: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.filled_suppression: "Suppression: [uncivic_shadow_council_suppression.GetTitle] §H[uncivic_shadow_council_suppression.GetName]§! §L(Level [uncivic_shadow_council_suppression.GetSkill])§!" # UNTRANSLATED
+ uncivic_shadow_council.201.option.empty_suppression: "Suppression: §LEmpty§!" # UNTRANSLATED
+ uncivic_shadow_council.211.title: "View [uncivic_shadow_council_viewed_leader.GetTitle] [uncivic_shadow_council_viewed_leader.GetName]" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.no_councilor_traits: "§PShadow Councilors cannot serve on the standard Council, and their Councilor Traits have no effect.§!" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.extortion_current: "Current $uncivic_shadow_council_leader_trait_extortion$§!: [uncivic_shadow_council_extortion.GetTitle] §H[uncivic_shadow_council_extortion.GetName]§! §L(Level [uncivic_shadow_council_extortion.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_extortion_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_extortion_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.extortion_empty: "Current $uncivic_shadow_council_leader_trait_extortion$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_extortion_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_extortion_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.kickbacks_current: "Current $uncivic_shadow_council_leader_trait_kickbacks$§!: [uncivic_shadow_council_kickbacks.GetTitle] §H[uncivic_shadow_council_kickbacks.GetName]§! §L(Level [uncivic_shadow_council_kickbacks.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_kickbacks_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_kickbacks_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.kickbacks_empty: "Current $uncivic_shadow_council_leader_trait_kickbacks$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_kickbacks_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_kickbacks_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.oversight_current: "Current $uncivic_shadow_council_leader_trait_oversight$§!: [uncivic_shadow_council_oversight.GetTitle] §H[uncivic_shadow_council_oversight.GetName]§! §L(Level [uncivic_shadow_council_oversight.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_oversight_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_oversight_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.oversight_empty: "Current $uncivic_shadow_council_leader_trait_oversight$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_oversight_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_oversight_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.propaganda_current: "Current $uncivic_shadow_council_leader_trait_propaganda$§!: [uncivic_shadow_council_propaganda.GetTitle] §H[uncivic_shadow_council_propaganda.GetName]§! §L(Level [uncivic_shadow_council_propaganda.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_propaganda_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_propaganda_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.propaganda_empty: "Current $uncivic_shadow_council_leader_trait_propaganda$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_propaganda_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_propaganda_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.silence_current: "Current $uncivic_shadow_council_leader_trait_silence$§!: [uncivic_shadow_council_silence.GetTitle] §H[uncivic_shadow_council_silence.GetName]§! §L(Level [uncivic_shadow_council_silence.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_silence_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_silence_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.silence_empty: "Current $uncivic_shadow_council_leader_trait_silence$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_silence_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_silence_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.suppression_current: "Current $uncivic_shadow_council_leader_trait_suppression$§!: [uncivic_shadow_council_suppression.GetTitle] §H[uncivic_shadow_council_suppression.GetName]§! §L(Level [uncivic_shadow_council_suppression.GetSkill])§!§H \n\n$uncivic_shadow_council_leader_trait_suppression_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_suppression_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.desc.suppression_empty: "Current $uncivic_shadow_council_leader_trait_suppression$§!: §LNone§!\n\n$uncivic_shadow_council_leader_trait_suppression_tooltip$\n\n§L$uncivic_shadow_council_leader_trait_suppression_desc$§!\n\n$uncivic_shadow_council.211.desc.no_councilor_traits$" # UNTRANSLATED
+ uncivic_shadow_council.211.option.appoint: "Appoint" # UNTRANSLATED
+ uncivic_shadow_council.211.option.dismiss: "Dismiss" # UNTRANSLATED
+ uncivic_shadow_council.211.option.view_leaders: "Appoint Someone Else" # UNTRANSLATED
+ uncivic_shadow_council.211.option.view_positions: "Manage Another Position" # UNTRANSLATED
+ uncivic_shadow_council.221.title: "Select Leader" # UNTRANSLATED
 
  # exposed
  uncivic_shadow_council_exposed: "Conseiller Fantôme Dévoilé"
@@ -21,23 +50,80 @@
  uncivic_shadow_council_exposed_destroy_evidence: "Nous devons détruire §Rall§! les preuves."
  uncivic_shadow_council_disrupted: "Conseil Fantôme Perturbé"
  uncivic_shadow_council_disrupted_desc: "Les preuves ont été détruites, mais il faudra du temps pour reconstruire notre réseau secret et maintenir la société en bon état."
-
- # triggers
- uncivic_shadow_council_maximum_risk_fail: "Le risque de dévoilement actuel est de §R100%§!"
- uncivic_shadow_council_maximum_risk_success: "Le risque de dévoilement actuel est à moins de 100%"
- uncivic_shadow_council_available_leader_fail: "Tous les dirigeants sont des conseillers fantômes"
- uncivic_shadow_council_available_leader_success: "Au moins un leader n'est pas un conseiller fantôme."
+ uncivic_shadow_council_disrupted_tooltip: "Effective Shadow Councilor Skill: §R-2§!" # UNTRANSLATED
 
  # paging
- uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
- uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_0: "[uncivic_shadow_council_leader_paging_current_page_entity_0.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_1: "[uncivic_shadow_council_leader_paging_current_page_entity_1.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_1.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_2: "[uncivic_shadow_council_leader_paging_current_page_entity_2.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_2.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_3: "[uncivic_shadow_council_leader_paging_current_page_entity_3.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_3.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_4: "[uncivic_shadow_council_leader_paging_current_page_entity_4.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_4.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_5: "[uncivic_shadow_council_leader_paging_current_page_entity_5.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_5.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_6: "[uncivic_shadow_council_leader_paging_current_page_entity_6.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_6.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_7: "[uncivic_shadow_council_leader_paging_current_page_entity_7.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_7.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_8: "[uncivic_shadow_council_leader_paging_current_page_entity_8.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_8.GetName]" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_9: "[uncivic_shadow_council_leader_paging_current_page_entity_9.GetTitle] [uncivic_shadow_council_leader_paging_current_page_entity_9.GetName]" # DO NOT TRANSLATE
 
  # traits
+ uncivic_shadow_council_leader_trait_extortion: "Shadow Councilor of Extortion" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_extortion_desc: "We can use the mistakes of foreign envoys to our advantage." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_extortion_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§TYearly§! §G$@uncivic_shadow_council_extortion_envoy_extort_chance|0$%§! §Tchance envoys extort favors, intel, or assets§!\n$t$§T$MOD_COUNTRY_TRUST_GROWTH$:§! §R$@uncivic_shadow_council_extortion_trust_growth|%0$§!" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_kickbacks: "Shadow Councilor of Kickbacks" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_kickbacks_desc: "Corporations need to pay their fair share." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_kickbacks_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_COUNTRY_EDICT_FUND_ADD$:§! §G+$@uncivic_shadow_council_kickbacks_edict_fund_trade_value_percent|%1$§! §Tof $COLLECTED_TRADE$§!\n$t$§TShadow Councilor Experience Gain:§! §G+$@uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain|%0$§!\n$t$§T$MOD_TRADE_VALUE_MULT$:§! §R$@uncivic_shadow_council_kickbacks_trade_value_mult|%0$§!" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_oversight: "Shadow Councilor of Oversight" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_oversight_desc: "The 'legitimate' Council requires oversight to do what is best." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_oversight_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$:§! §G+$@uncivic_shadow_council_oversight_agenda_progress_speed|%0$§!\n$t$§T$MOD_LEADER_COUNCILOR_EXP_GAIN$:§! §R$@uncivic_shadow_council_oversight_councilor_exp_gain|%0$§!" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_trait_propaganda: "Shadow Councilor of Propaganda" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_propaganda_desc: "By controlling the media, we control the narrative. By controlling the narrative, we control our future." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_propaganda_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$:§! §G+$@uncivic_shadow_council_propaganda_government_ethic_attraction|%0$§!\n$t$§T$MOD_COUNTRY_WAR_EXHAUSTION_MULT$:§! §G$@uncivic_shadow_council_propaganda_war_exhaustion_mult|%0$§!\n$t$§T$mod_pop_job_amenities_mult$:§! §R$@uncivic_shadow_council_propaganda_job_amenities_mult|%1$§!" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_trait_silence: "Shadow Councilor of Silence" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_silence_desc: "Without secrecy, there can be no Shadow Council." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_silence_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$uncivic_shadow_council_exposure_risk$:§! §G$@uncivic_shadow_council_silence_exposure_risk|0$%§!\n$t$§T$MOD_INTEL_ENCRYPTION_ADD$:§! §G+$@uncivic_shadow_council_silence_encryption_add|1$§!\n$t$§T$MOD_DIPLO_WEIGHT_MULT$:§! §R$@uncivic_shadow_council_silence_diplo_weight_mult|%0$§!" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_trait_suppression: "Shadow Councilor of Suppression" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_suppression_desc: "The discrete application of force is necessary for a well-functioning society." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_suppression_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_PLANET_CRIME_ADD$:§! §G$@uncivic_shadow_council_suppression_crime_add|0$§!\n$t$§T$MOD_PLANET_STABILITY_ADD$:§! §G+$@uncivic_shadow_council_suppression_stability_add|0$§!\n$t$§T$MOD_POP_HAPPINESS$:§! §R$@uncivic_shadow_council_suppression_pop_happiness|%0$§!" # DO NOT TRANSLATE
+ uncivic_shadow_council_leader_trait_former_shadow_councilor: "Former Shadow Councilor" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_former_shadow_councilor_desc: "This leader knows too much." # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_former_shadow_councilor_tooltip: "$uncivic_shadow_council_exposure_risk$: §R+1%§!" # UNTRANSLATED
+ uncivic_shadow_council_exposure_risk: "Shadow Council Exposure Risk" # UNTRANSLATED
+
+ # modifiers
+ uncivic_shadow_council_empty: "Empty Shadow Council" # UNTRANSLATED
+ uncivic_shadow_council_empty_desc: "Will we really let the masses guide the ship of state?" # UNTRANSLATED
+ uncivic_shadow_council_overshadowed: "Overshadowed" # UNTRANSLATED
+ uncivic_shadow_council_overshadowed_desc: "Our Councilors are just figureheads for our Shadow Councilors." # UNTRANSLATED
+ uncivic_shadow_council_extortion_modifier: "$uncivic_shadow_council_leader_trait_extortion$" # UNTRANSLATED
+ uncivic_shadow_council_extortion_modifier_desc: "$uncivic_shadow_council_leader_trait_extortion_desc$" # UNTRANSLATED
+ uncivic_shadow_council_kickbacks_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$" # UNTRANSLATED
+ uncivic_shadow_council_kickbacks_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$" # UNTRANSLATED
+ uncivic_shadow_council_kickbacks_edict_fund_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$" # UNTRANSLATED
+ uncivic_shadow_council_kickbacks_edict_fund_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$" # UNTRANSLATED
+ uncivic_shadow_council_oversight_modifier: "$uncivic_shadow_council_leader_trait_oversight$" # UNTRANSLATED
+ uncivic_shadow_council_oversight_modifier_desc: "$uncivic_shadow_council_leader_trait_oversight_desc$" # UNTRANSLATED
+ uncivic_shadow_council_propaganda_modifier: "$uncivic_shadow_council_leader_trait_propaganda$" # UNTRANSLATED
+ uncivic_shadow_council_propaganda_modifier_desc: "$uncivic_shadow_council_leader_trait_propaganda_desc$" # UNTRANSLATED
+ uncivic_shadow_council_silence_modifier: "$uncivic_shadow_council_leader_trait_silence$" # UNTRANSLATED
+ uncivic_shadow_council_silence_modifier_desc: "$uncivic_shadow_council_leader_trait_silence_desc$" # UNTRANSLATED
+ uncivic_shadow_council_suppression_modifier: "$uncivic_shadow_council_leader_trait_suppression$" # UNTRANSLATED
+ uncivic_shadow_council_suppression_modifier_desc: "$uncivic_shadow_council_leader_trait_suppression_desc$" # UNTRANSLATED
+
+ # messages
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EMPTY_TITLE: "Shadow Council Empty" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EMPTY: "We will suffer penalties to §YStability§!, §YRuler Political Power§!, and §YRuler Output§! until we appoint at least one Shadow Councilor (use the §YManage Shadow Council§! Edict)." # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_FAVOR_TITLE: "Favor Extorted" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_FAVOR: "Under the guidance of our Shadow Councilor of Extortion, Envoy $ENVOY|Y$ has extorted a favor from the $Y|TARGET$." # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_ASSET_TITLE: "Asset Extorted" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_ASSET: "Under the guidance of our Shadow Councilor of Extortion, Envoy $ENVOY|Y$ has extorted an espionage asset from the $Y|TARGET$." # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INTEL_TITLE: "Intel Extorted" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INTEL: "Under the guidance of our Shadow Councilor of Extortion, Envoy $ENVOY|Y$ has extorted intel from the $Y|TARGET$." # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INFLUENCE_TITLE: "Influence Extorted" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_EXTORTED_INFLUENCE: "Under the guidance of our Shadow Councilor of Extortion, Envoy $ENVOY|Y$ has extorted influence from the $Y|TARGET$." # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_COUNCILOR_REMOVED_TITLE: "Councilor Removed from Shadow Council" # UNTRANSLATED
+ MESSAGE_UNCIVIC_SHADOW_COUNCIL_COUNCILOR_REMOVED: "$LEADER|Y$ is now serving on the Council, and has been automatically dismissed from their role in the Shadow Council." # UNTRANSLATED
+
+
+ # overwrite
+ councilor_shadow_council: "Minister of Transparency" # UNTRANSLATED
+ councilor_shadow_council_female: "$councilor_shadow_council$" # DO NOT TRANSLATE
+ councilor_shadow_council_desc: "Officially, the $TITLE$ manages anti-corruption and government transparency efforts, but no one is quite sure exactly what they do." # UNTRANSLATED
