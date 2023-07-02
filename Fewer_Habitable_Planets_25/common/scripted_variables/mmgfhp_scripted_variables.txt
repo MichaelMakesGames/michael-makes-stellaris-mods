@@ -1,0 +1,8 @@
+@mmgfhp_star_close_min = 0
+@mmgfhp_star_close_max = 60
+@mmgfhp_star_mid_min = 60
+@mmgfhp_star_mid_max = 100
+@mmgfhp_star_far_min = 100
+@mmgfhp_star_far_max = 200
+@mmgfhp_star_very_far_min = 200
+@mmgfhp_star_very_far_max = 9999

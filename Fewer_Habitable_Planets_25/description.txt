@@ -1,0 +1,26 @@
+Fewer Habitable Planets: 25% (For 3.8.4)
+
+Reduces the number of habitable planets from unique and randomly generated systems to 25%. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work...
+
+Number of uncolonized habitable planets in a huge galaxy, not counting Guaranteed Habitable Worlds or Holy Worlds:
+[list]
+  [*] Vanilla 1x Habitable Worlds: 190
+	[*] Vanilla 0.25x Habitable Worlds: 109 (57% of vanilla 1x)
+	[*] Modded 1x Habitable Worlds: 50 (26% of vanilla 1x)
+[/list]
+
+Want a number of than 25%? Let me know. If there's enough demand, I'll make an alternate version.
+
+[h1]Compatibility[/h1]
+[list]
+  [*] For Stellaris 3.8.4
+  [*] NOT achievement compatible
+  [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
+  [*] If you are using multiple mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
+[/list]
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods
