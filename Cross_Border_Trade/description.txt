@@ -37,6 +37,7 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
 [list]
  [*] Thanks to tzverg for the Russian translation!
  [*] Thanks to Root for the Japanese translation!
+ [*] Thanks to Kucige for the German translation!
 [/list]
 
 [h1]Sharing[/h1]
