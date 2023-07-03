@@ -85,7 +85,7 @@
  uncivic_shadow_council_leader_trait_suppression_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_PLANET_CRIME_ADD$:§! §G$@uncivic_shadow_council_suppression_crime_add|0$§!\n$t$§T$MOD_PLANET_STABILITY_ADD$:§! §G+$@uncivic_shadow_council_suppression_stability_add|0$§!\n$t$§T$MOD_POP_HAPPINESS$:§! §R$@uncivic_shadow_council_suppression_pop_happiness|%0$§!" # DO NOT TRANSLATE
  uncivic_shadow_council_leader_trait_former_shadow_councilor: "Former Shadow Councilor"
  uncivic_shadow_council_leader_trait_former_shadow_councilor_desc: "This leader knows too much."
- uncivic_shadow_council_leader_trait_former_shadow_councilor_tooltip: "$uncivic_shadow_council_exposure_risk$: §R+1%§!"
+ uncivic_shadow_council_leader_trait_former_shadow_councilor_tooltip: "$uncivic_shadow_council_exposure_risk$: §R+1%§!" # DO NOT TRANSLATE
  uncivic_shadow_council_exposure_risk: "Shadow Council Exposure Risk"
 
  # modifiers
@@ -93,20 +93,20 @@
  uncivic_shadow_council_empty_desc: "Will we really let the masses guide the ship of state?"
  uncivic_shadow_council_overshadowed: "Overshadowed"
  uncivic_shadow_council_overshadowed_desc: "Our Councilors are just figureheads for our Shadow Councilors."
- uncivic_shadow_council_extortion_modifier: "$uncivic_shadow_council_leader_trait_extortion$"
- uncivic_shadow_council_extortion_modifier_desc: "$uncivic_shadow_council_leader_trait_extortion_desc$"
- uncivic_shadow_council_kickbacks_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$"
- uncivic_shadow_council_kickbacks_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$"
- uncivic_shadow_council_kickbacks_edict_fund_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$"
- uncivic_shadow_council_kickbacks_edict_fund_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$"
- uncivic_shadow_council_oversight_modifier: "$uncivic_shadow_council_leader_trait_oversight$"
- uncivic_shadow_council_oversight_modifier_desc: "$uncivic_shadow_council_leader_trait_oversight_desc$"
- uncivic_shadow_council_propaganda_modifier: "$uncivic_shadow_council_leader_trait_propaganda$"
- uncivic_shadow_council_propaganda_modifier_desc: "$uncivic_shadow_council_leader_trait_propaganda_desc$"
- uncivic_shadow_council_silence_modifier: "$uncivic_shadow_council_leader_trait_silence$"
- uncivic_shadow_council_silence_modifier_desc: "$uncivic_shadow_council_leader_trait_silence_desc$"
- uncivic_shadow_council_suppression_modifier: "$uncivic_shadow_council_leader_trait_suppression$"
- uncivic_shadow_council_suppression_modifier_desc: "$uncivic_shadow_council_leader_trait_suppression_desc$"
+ uncivic_shadow_council_extortion_modifier: "$uncivic_shadow_council_leader_trait_extortion$" # DO NOT TRANSLATE
+ uncivic_shadow_council_extortion_modifier_desc: "$uncivic_shadow_council_leader_trait_extortion_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_kickbacks_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$" # DO NOT TRANSLATE
+ uncivic_shadow_council_kickbacks_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_kickbacks_edict_fund_modifier: "$uncivic_shadow_council_leader_trait_kickbacks$" # DO NOT TRANSLATE
+ uncivic_shadow_council_kickbacks_edict_fund_modifier_desc: "$uncivic_shadow_council_leader_trait_kickbacks_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_oversight_modifier: "$uncivic_shadow_council_leader_trait_oversight$" # DO NOT TRANSLATE
+ uncivic_shadow_council_oversight_modifier_desc: "$uncivic_shadow_council_leader_trait_oversight_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_propaganda_modifier: "$uncivic_shadow_council_leader_trait_propaganda$" # DO NOT TRANSLATE
+ uncivic_shadow_council_propaganda_modifier_desc: "$uncivic_shadow_council_leader_trait_propaganda_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_silence_modifier: "$uncivic_shadow_council_leader_trait_silence$" # DO NOT TRANSLATE
+ uncivic_shadow_council_silence_modifier_desc: "$uncivic_shadow_council_leader_trait_silence_desc$" # DO NOT TRANSLATE
+ uncivic_shadow_council_suppression_modifier: "$uncivic_shadow_council_leader_trait_suppression$" # DO NOT TRANSLATE
+ uncivic_shadow_council_suppression_modifier_desc: "$uncivic_shadow_council_leader_trait_suppression_desc$" # DO NOT TRANSLATE
 
  # messages
  MESSAGE_UNCIVIC_SHADOW_COUNCIL_EMPTY_TITLE: "Shadow Council Empty"

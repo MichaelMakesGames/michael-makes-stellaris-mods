@@ -1,12 +1,12 @@
 ﻿l_russian:
- uncivic_technocracy_leader_trait_technocrat: "Technocrat" # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_desc: "This leader, although not a scientist, has a scientific education." # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_tooltip: "§YWill gain a specialized Technocrat trait at Level 4§!" # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_physics: "Technocrat: Physicist" # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_physics_desc: "This leader has a scientific education, and a particular interest in physics." # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_society: "Technocrat: Social Scientist" # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_society_desc: "This leader has a scientific education, and a particular interest in the social sciences." # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_engineering: "Technocrat: Engineer" # UNTRANSLATED
- uncivic_technocracy_leader_trait_technocrat_engineering_desc: "This leader has a scientific education, and a particular interest in engineering." # UNTRANSLATED
- uncivic_technocracy.221.title: "Specialize Technocrat" # UNTRANSLATED
- uncivic_technocracy.221.desc: "Choose a specialization for Technocrat §H[From.GetName]§!." # UNTRANSLATED
+ uncivic_technocracy_leader_trait_technocrat: "Технократ"
+ uncivic_technocracy_leader_trait_technocrat_desc: "Этот лидер, хотя и не является ученым, имеет научное образование."
+ uncivic_technocracy_leader_trait_technocrat_tooltip: "§YПолучает особое качество Технократа на 4 уровне§!"
+ uncivic_technocracy_leader_trait_technocrat_physics: "Технократ: Физик"
+ uncivic_technocracy_leader_trait_technocrat_physics_desc: "Этот лидер имеет научное образование и проявляет особый интерес к физике."
+ uncivic_technocracy_leader_trait_technocrat_society: "Технократ: Социальный ученый"
+ uncivic_technocracy_leader_trait_technocrat_society_desc: "Этот руководитель имеет научное образование и проявляет особый интерес к социальным наукам."
+ uncivic_technocracy_leader_trait_technocrat_engineering: "Технократ: Инженер"
+ uncivic_technocracy_leader_trait_technocrat_engineering_desc: "Этот лидер имеет научное образование и проявляет особый интерес к инженерии."
+ uncivic_technocracy.221.title: "Специализация Технократ"
+ uncivic_technocracy.221.desc: "Выберите специализацию для Технократа §H[From.GetName]§!."

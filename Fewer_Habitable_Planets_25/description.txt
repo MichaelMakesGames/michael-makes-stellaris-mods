@@ -6,10 +6,10 @@ Number of uncolonized habitable planets in a huge galaxy, not counting Guarantee
 [list]
   [*] Vanilla 1x Habitable Worlds: 190
 	[*] Vanilla 0.25x Habitable Worlds: 109 (57% of vanilla 1x)
-	[*] Modded 1x Habitable Worlds: 50 (26% of vanilla 1x)
+	[*] This Mod 1x Habitable Worlds: 50 (26% of vanilla 1x)
 [/list]
 
-Want a number of than 25%? Let me know. If there's enough demand, I'll make an alternate version.
+Want a number other than 25%? Let me know. If there's enough demand, I'll make an alternate version.
 
 [h1]Compatibility[/h1]
 [list]
