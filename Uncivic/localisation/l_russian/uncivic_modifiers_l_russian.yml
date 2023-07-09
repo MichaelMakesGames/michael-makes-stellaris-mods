@@ -1,7 +1,7 @@
 ﻿l_russian:
  mod_planet_technician_physics_research_produces_add: "£physics_research£ $physics_research$ от £job_technician£ [GetTechnicianPlural]"
- mod_planet_farmers_society_research_produces_add: "£society_research£ $society_research$ from £job_farmer£ [GetFarmerPlural]" # UNTRANSLATED
- mod_planet_miners_engineering_research_produces_add: "£engineering_research£ $engineering_research$ from £job_miner£ [GetMinerPlural]" # UNTRANSLATED
- mod_planet_soldiers_physics_research_produces_add: "£physics_research£ $physics_research$ from £job_soldier£ [GetSoldierPlural]" # UNTRANSLATED
- mod_planet_soldiers_society_research_produces_add: "£society_research£ $society_research$ from £job_soldier£ [GetSoldierPlural]" # UNTRANSLATED
+ mod_planet_farmers_society_research_produces_add: "£society_research£ $society_research$ от £job_farmer£ [GetFarmerPlural]"
+ mod_planet_miners_engineering_research_produces_add: "£engineering_research£ $engineering_research$ от £job_miner£ [GetMinerPlural]"
+ mod_planet_soldiers_physics_research_produces_add: "£physics_research£ $physics_research$ от £job_soldier£ [GetSoldierPlural]"
+ mod_planet_soldiers_society_research_produces_add: "£society_research£ $society_research$ от £job_soldier£ [GetSoldierPlural]"
  mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ от £job_soldier£ [GetSoldierPlural]"

@@ -6,9 +6,9 @@
  uncivic_menu_exalted_priesthood_disabled: "£trigger_no£ Верховное Духовенство отключено"
  uncivic_menu_exalted_priesthood_tooltip: "Позволяет возглавить Галактическую Веру, а также позволяет использовать механику неортодоксальности и ереси"
 
- uncivic_menu_nationalistic_zeal_enabled: "£trigger_yes£ Nationalistic Zeal Enabled" # UNTRANSLATED
- uncivic_menu_nationalistic_zeal_disabled: "£trigger_no£ Nationalistic Zeal Disabled" # UNTRANSLATED
- uncivic_menu_nationalistic_zeal_tooltip: "Enables the Zeal mechanics, leading to Nationalist Hubris or Nationalist Disgrace if mismanaged" # UNTRANSLATED
+ uncivic_menu_nationalistic_zeal_enabled: "£trigger_yes£ Рвение нации включено"
+ uncivic_menu_nationalistic_zeal_disabled: "£trigger_no£ Рвение нации отключено"
+ uncivic_menu_nationalistic_zeal_tooltip: "Включает механику Рвение, что приводит к Высокомерию нации или Позору нации при неверном управлении"
 
  uncivic_menu_parliamentary_system_enabled: "£trigger_yes£ Парламентская система включена"
  uncivic_menu_parliamentary_system_disabled: "£trigger_no£ Парламентская система отключена"

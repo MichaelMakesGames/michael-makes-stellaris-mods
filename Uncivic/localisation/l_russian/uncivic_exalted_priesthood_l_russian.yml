@@ -27,10 +27,10 @@
 
  # traits
  uncivic_exalted_priesthood_leader_trait_unorthodox: "Неортодоксальный"
- uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip: "Spreads unorthodoxy to other leaders and planets\nCauses the Ecumenical Council to progress towards compromise" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip: "Распространяет неортодоксальность среди других лидеров и планет\nПриводит Вселенский собор к компромиссу"
  uncivic_exalted_priesthood_leader_trait_unorthodox_desc: "Этот лидер следует убеждениям, которые некоторые считают неправильными."
  uncivic_exalted_priesthood_leader_trait_hardliner: "Сторонник жесткой линии"
- uncivic_exalted_priesthood_leader_trait_hardliner_tooltip: "Reduces the spread of unorthodoxy and heresy\nCauses the Ecumenical Council to progress towards declaring heresy" # UNTRANSLATED
+ uncivic_exalted_priesthood_leader_trait_hardliner_tooltip: "Уменьшает распространение неортодоксальности и ереси\nУвеличивает прогресс Вселенского Собора объявления ереси"
  uncivic_exalted_priesthood_leader_trait_hardliner_desc: "Этот лидер считает, что нет места для компромисса с теми, кто сбился с праведного пути."
 
  # messages
@@ -65,8 +65,8 @@
  uncivic_exalted_priesthood_council_hardline: "Поддержка сторонников жесткой линии"
  uncivic_exalted_priesthood_council_hardliner_leaders: "Лидеры сторонников жесткой линии"
  uncivic_exalted_priesthood_council_unorthodox_leaders: "Неортодоксальные лидеры"
- uncivic_exalted_priesthood_council_hardliner_councilors: "Hardliner Councilors" # UNTRANSLATED
- uncivic_exalted_priesthood_council_unorthodox_councilors: "Unorthodox Councilors" # UNTRANSLATED
+ uncivic_exalted_priesthood_council_hardliner_councilors: "Советники жестокой линии"
+ uncivic_exalted_priesthood_council_unorthodox_councilors: "Неортодоксальные советники"
  uncivic_exalted_priesthood_council_momentum: "Момент дебатов"
  uncivic_exalted_priesthood_council_revise_orthodoxy_3: "$stage_3$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_council_revise_orthodoxy_2: "$stage_2$" # DO NOT TRANSLATE
@@ -191,7 +191,7 @@
 
  # edict
  edict_uncivic_exalted_priesthood_call_council: "Созвать Вселенский Совет"
- edict_uncivic_exalted_priesthood_call_council_desc: "We must convene all the high priests to debate the unorthodox beliefs spreading through our empire.\n\n§LThis is costs less £unity£ Unity the more Unorthodox planets we have.§!" # UNTRANSLATED
+ edict_uncivic_exalted_priesthood_call_council_desc: "Мы должны созвать всех первосвященников, чтобы обсудить неортодоксальные верования, распространяющиеся по нашей империи.\n\n§LЭто стоит тем меньше £единства£, чем больше у нас неортодоксальных планет.§!"
  uncivic_exalted_priesthood_call_council_allow: "£trigger_no£ Не менее 25% планет являются §HНеортодоксальными§!"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith: "Пригласить в Галактическую Веру"
  edict_uncivic_exalted_priesthood_invite_to_galactic_faith_desc: "Приглашайте другие спиритуалистические империи следовать за вашим Верховным Духовенством."

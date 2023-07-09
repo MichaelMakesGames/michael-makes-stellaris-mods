@@ -67,10 +67,10 @@
  # traits
  uncivic_shadow_council_leader_trait_extortion: "Теневой советник вымогательства"
  uncivic_shadow_council_leader_trait_extortion_desc: "Мы можем использовать ошибки иностранных посланников в своих интересах."
- uncivic_shadow_council_leader_trait_extortion_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§TYearly§! §G$@uncivic_shadow_council_extortion_envoy_extort_chance|0$%§! §Tchance envoys extort favors, intel, or assets§!\n$t$§T$MOD_COUNTRY_TRUST_GROWTH$:§! §R$@uncivic_shadow_council_extortion_trust_growth|%0$§!" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_extortion_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§TYearly§! §G$@uncivic_shadow_council_extortion_envoy_extort_chance|0$%§! §Возможность того, что послы будут вымогать услуги, информацию или активы.§!\n$t$§T$MOD_COUNTRY_TRUST_GROWTH$:§! §R$@uncivic_shadow_council_extortion_trust_growth|%0$§!"
  uncivic_shadow_council_leader_trait_kickbacks: "Теневой советник откатов"
  uncivic_shadow_council_leader_trait_kickbacks_desc: "Корпорации должны платить свою справедливую долю."
- uncivic_shadow_council_leader_trait_kickbacks_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_COUNTRY_EDICT_FUND_ADD$:§! §G+$@uncivic_shadow_council_kickbacks_edict_fund_trade_value_percent|%1$§! §Tof $COLLECTED_TRADE$§!\n$t$§TShadow Councilor Experience Gain:§! §G+$@uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain|%0$§!\n$t$§T$MOD_TRADE_VALUE_MULT$:§! §R$@uncivic_shadow_council_kickbacks_trade_value_mult|%0$§!" # UNTRANSLATED
+ uncivic_shadow_council_leader_trait_kickbacks_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_COUNTRY_EDICT_FUND_ADD$:§! §G+$@uncivic_shadow_council_kickbacks_edict_fund_trade_value_percent|%1$§! §Tof $COLLECTED_TRADE$§!\n$t$§TПрирост опыта теневого советника:§! §G+$@uncivic_shadow_council_kickbacks_shadow_councilor_exp_gain|%0$§!\n$t$§T$MOD_TRADE_VALUE_MULT$:§! §R$@uncivic_shadow_council_kickbacks_trade_value_mult|%0$§!"
  uncivic_shadow_council_leader_trait_oversight: "Теневой советник надзора"
  uncivic_shadow_council_leader_trait_oversight_desc: "'Легитимный' Совет нуждается в надзоре, чтобы поступать наилучшим образом."
  uncivic_shadow_council_leader_trait_oversight_tooltip: "$COUNCIL_POSITION_MODIFIER_BASE$\n$t$§T$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$:§! §G+$@uncivic_shadow_council_oversight_agenda_progress_speed|%0$§!\n$t$§T$MOD_LEADER_COUNCILOR_EXP_GAIN$:§! §R$@uncivic_shadow_council_oversight_councilor_exp_gain|%0$§!" # DO NOT TRANSLATE
