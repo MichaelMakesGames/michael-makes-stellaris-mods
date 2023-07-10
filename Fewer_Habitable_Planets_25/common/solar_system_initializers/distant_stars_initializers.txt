@@ -157,7 +157,7 @@ big_rip_system = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	flags = { big_rip_system }
 
 	planet = {
@@ -225,7 +225,7 @@ time_loop_world_system = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	flags = { time_loop_world_system }
 
 	planet = {
@@ -1033,7 +1033,7 @@ ice_system = {
 	}
 
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 
 	flags = { ice_system }
 
@@ -1774,7 +1774,7 @@ superflare_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { superflare_system }
@@ -2658,7 +2658,7 @@ living_planet_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { living_planet_system }
@@ -2759,7 +2759,7 @@ elderly_tiyanki_system = {
 			is_bottleneck_system = yes
 		}
 	}
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { elderly_tiyanki_system guardian hostile_system }
@@ -3002,7 +3002,7 @@ ratling_1_1 = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 1 # OVERWRITE (from 8)
+	scaled_spawn_chance = 1 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { ruined_empire ratling_home_system ratling_system }
@@ -4011,7 +4011,7 @@ distar_phaseshift_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { phaseshift_system }

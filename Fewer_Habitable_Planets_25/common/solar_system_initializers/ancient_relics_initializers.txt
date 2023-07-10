@@ -834,7 +834,7 @@ mechanocalibrator_system = {
 			has_star_flag = empire_cluster
 		}
 	}
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 	max_instances = 1
 
 	flags = { mechanocalibrator_system }

@@ -1258,7 +1258,7 @@ megacorp_interstellar_assembly_init_01 = {
 	}
 
 	max_instances = 1
-	spawn_chance = 1 # OVERWRITE (from 4)
+	scaled_spawn_chance = 1 # OVERWRITE (from 4)
 
 	flags = { ruined_interstellar_assembly_system }
 

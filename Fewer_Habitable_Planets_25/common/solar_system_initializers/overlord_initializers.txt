@@ -166,7 +166,7 @@ salvager_enclave_init_02 = {
 	}
 	max_instances = 1
 	#spawn_chance = 100 #Guaranteed, assuming usage_odds passes
-	spawn_chance = 4 # OVERWRITE (from 16)
+	scaled_spawn_chance = 4 # OVERWRITE (from 16)
 
 	flags = {
 		salvager_enclave_system
@@ -1248,7 +1248,7 @@ orbital_ring_init_01 = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 2 # OVERWRITE (from 8)
 
 	planet = {
 		count = 1

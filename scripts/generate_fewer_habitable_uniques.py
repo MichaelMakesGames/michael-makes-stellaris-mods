@@ -337,7 +337,7 @@ def scale_prop(prop, scale, current_initializer, lines_copy, round_value):
             scaled_value = max(MIN, round(scaled_value))
         lines_copy[
             current_initializer[prop]["line_index"]
-        ] = f"\tspawn_chance = {scaled_value} # OVERWRITE (from {current_initializer[prop]['value']})\n"
+        ] = f"\t{prop} = {scaled_value} # OVERWRITE (from {current_initializer[prop]['value']})\n"
 
 
 def should_overwrite(initializer):

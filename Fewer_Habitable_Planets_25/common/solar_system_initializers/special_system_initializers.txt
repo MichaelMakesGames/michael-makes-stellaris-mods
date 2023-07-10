@@ -311,7 +311,7 @@ special_init_06 = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 1 # OVERWRITE (from 3)
+	scaled_spawn_chance = 1 # OVERWRITE (from 3)
 
 	flags = { guardians_of_zanaam hostile_system }
 
@@ -990,7 +990,7 @@ trappist_initializer = {
 	usage = misc_system_init
 	usage_odds = 2000000
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 10)
+	scaled_spawn_chance = 2 # OVERWRITE (from 10)
 
 	planet = {
 		class = "pc_m_star"
@@ -1080,7 +1080,7 @@ parvus_system = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 1 # OVERWRITE (from 3)
+	scaled_spawn_chance = 1 # OVERWRITE (from 3)
 
 	planet = {
 		count = 1
@@ -1178,7 +1178,7 @@ polaris_civilization = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 1 # OVERWRITE (from 5)
+	scaled_spawn_chance = 1 # OVERWRITE (from 5)
 
 	planet = {
 		name = "NAME_PolarisAa"
@@ -2317,7 +2317,7 @@ Holibrae_initializer = {
 		}
 	}
 	max_instances = 1
-	spawn_chance = 2 # OVERWRITE (from 10)
+	scaled_spawn_chance = 2 # OVERWRITE (from 10)
 	flags = { holibrae_system hostile_system }
 
 	#create nebula

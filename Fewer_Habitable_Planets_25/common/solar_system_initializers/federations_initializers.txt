@@ -2015,7 +2015,7 @@ planet_with_too_many_moons_system = {
 	}
 
 	max_instances = 1
-	spawn_chance = 1 # OVERWRITE (from 3)
+	scaled_spawn_chance = 1 # OVERWRITE (from 3)
 
 	flags = { planet_with_too_many_moons_system hostile_system }
 
