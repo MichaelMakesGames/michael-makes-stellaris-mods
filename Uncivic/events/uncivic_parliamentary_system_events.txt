@@ -85,7 +85,6 @@ planet_event = {
 	id = uncivic_parliamentary_system.201
 	is_triggered_only = yes
 	hide_window = yes
-	location = root
 	trigger = {
 		exists = owner
 		owner = {
@@ -602,7 +601,7 @@ planet_event = {
 		FACTION = warmaker
 		ETHIC = militarist
 		POTENTIAL = "always = yes"
-		BOOST = "has_fortress_designation = yes owner = { years_of_peace { value < 10 } }"
+		BOOST = "has_fortress_designation = yes owner = { years_of_peace = { value < 10 } }"
 	}
 	inline_script = {
 		script = uncivic_parliamentary_system_rig_election_extremist

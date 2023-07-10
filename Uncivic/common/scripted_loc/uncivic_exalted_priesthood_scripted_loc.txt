@@ -22,6 +22,34 @@ defined_text = {
 }
 
 defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromExaltedPriesthood
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood
+				value < 0
+			}
+		}
+	}
+	default = BLANK_STRING
+}
+
+defined_text = {
+	name = UncivicExaltedPriesthoodFollowerAcceptanceFromFollowers
+	text = {
+		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_followers"
+		trigger = {
+			check_variable = {
+				which = uncivic_exalted_priesthood_follower_acceptance_from_followers
+				value < 0
+			}
+		}
+	}
+	default = BLANK_STRING
+}
+
+defined_text = {
 	name = UncivicExaltedPriesthoodFollowerAcceptanceFromTrust
 	text = {
 		localization_key = "uncivic_exalted_priesthood_follower_acceptance_from_trust_green"

@@ -452,7 +452,7 @@ uncivic_exalted_priesthood_num_unorthodox_leaders = {
 		trigger = count_owned_leader
 		parameters = { limit = {
 			has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
-			[[COUNCILOR]OR][[!COUNCILOR]NOR] = { is_ruler = yes is_councilor = yes }
+			is_councilor = $COUNCILOR$
 		} }
 		mode = add
 	}
@@ -465,7 +465,7 @@ uncivic_exalted_priesthood_num_hardliner_leaders = {
 		trigger = count_owned_leader
 		parameters = { limit = {
 			has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
-			[[COUNCILOR]OR][[!COUNCILOR]NOR] = { is_ruler = yes is_councilor = yes }
+			is_councilor = $COUNCILOR$
 		} }
 		mode = add
 	}
@@ -579,6 +579,14 @@ uncivic_exalted_priesthood_inquisition_damage_chance = {
 uncivic_exalted_priesthood_follower_acceptance = {
 	base = -100
 	modifier = {
+		has_valid_civic = civic_exalted_priesthood
+		add = value:uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood
+	}
+	modifier = {
+		uncivic_exalted_priesthood_is_leader = yes
+		add = value:uncivic_exalted_priesthood_follower_acceptance_from_followers
+	}
+	modifier = {
 		exists = event_target:uncivic_exalted_priesthood_proposed_leader
 		add = value:uncivic_exalted_priesthood_follower_acceptance_from_trust
 	}
@@ -611,6 +619,26 @@ uncivic_exalted_priesthood_follower_acceptance = {
 		}
 		add = value:uncivic_exalted_priesthood_follower_acceptance_from_relative_power_of_current_leader
 	}
+}
+
+uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood = {
+	base = 0
+	modifier = {
+		has_valid_civic = civic_exalted_priesthood
+		add = -50
+	}
+}
+
+uncivic_exalted_priesthood_follower_acceptance_from_followers = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+		}
+		mode = add
+	}
+	multiply = -100
 }
 
 uncivic_exalted_priesthood_follower_acceptance_from_opinion = {

@@ -44,5 +44,5 @@
  uncivic_nationalistic_zeal.221.title: "Nationalistic Hubris Laid Bare" # UNTRANSLATED
  uncivic_nationalistic_zeal.221.desc: "We believed ourselves invincible, but our recent loss of [FromFromFrom.GetName] proves otherwise. Our nation will need to a lot of soul-searching before we can regain our confidence." # UNTRANSLATED
  # lost war causes disgrace
- uncivic_nationalistic_zeal.221.title: "Nationalistic Hubris Laid Bare" # UNTRANSLATED
+ uncivic_nationalistic_zeal.222.title: "$uncivic_nationalistic_zeal.221.title$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal.222.desc: "We believed ourselves invincible, but our recently lost war proves otherwise. Our nation will need to a lot of soul-searching before we can regain our confidence." # UNTRANSLATED

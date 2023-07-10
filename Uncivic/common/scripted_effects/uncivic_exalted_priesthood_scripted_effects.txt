@@ -1438,6 +1438,14 @@ uncivic_exalted_priesthood_remove_poi = {
 
 uncivic_exalted_priesthood_become_follower = {
 	if = {
+		limit = { has_valid_civic = civic_exalted_priesthood }
+		uncivic_exalted_priesthood_clean_unorthodoxy_and_heresy = yes
+		every_relation = {
+			limit = { uncivic_exalted_priesthood_is_follower = { OF = prev } }
+			uncivic_exalted_priesthood_stop_following = yes
+		}
+	}
+	if = {
 		limit = { uncivic_exalted_priesthood_is_follower = yes }
 		uncivic_exalted_priesthood_stop_following = yes
 	}
@@ -1473,6 +1481,7 @@ uncivic_exalted_priesthood_stop_following = {
 		random_country = {
 			limit = { uncivic_exalted_priesthood_is_leader = { OF = prev } }
 			prev = {
+				remove_country_flag = uncivic_exalted_priesthood_faith_imposed
 				remove_country_flag = uncivic_exalted_priesthood_follower
 				remove_country_flag = uncivic_exalted_priesthood_follower_of_@prev
 				remove_modifier = uncivic_exalted_priesthood_follower
@@ -1495,6 +1504,7 @@ uncivic_exalted_priesthood_stop_following = {
 			log = "Uncivic Exalted Priesthood: \\[Prev.GetName] stopped following \\[This.GetName] on \\[GetDate]"
 		}
 	} else = {
+		remove_country_flag = uncivic_exalted_priesthood_faith_imposed
 		remove_country_flag = uncivic_exalted_priesthood_follower
 		remove_modifier = uncivic_exalted_priesthood_follower
 		log = "Uncivic Exalted Priesthood: \\[Prev.GetName] stopped following non-existent empire on \\[GetDate]"
@@ -1558,6 +1568,8 @@ uncivic_exalted_priesthood_follower_invite_paging_effect = {
 		every_country = {
 			limit = { is_variable_set = uncivic_exalted_priesthood_follower_invite_paging_index }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood }
+			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_followers }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_trust_of_current_leader }
 			mmu_variables_clear = { WHICH = uncivic_exalted_priesthood_follower_acceptance_from_opinion }
@@ -1569,5 +1581,61 @@ uncivic_exalted_priesthood_follower_invite_paging_effect = {
 			PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
 			PAGED_ENTITY_TYPE = country
 		}
+	}
+}
+
+uncivic_exalted_priesthood_clean_unorthodoxy_and_heresy = {
+	every_situation = {
+		limit = {is_situation_type = uncivic_exalted_priesthood_council }
+		destroy_situation = this
+	}
+	if = {
+		limit = { has_event_chain = uncivic_exalted_priesthood_heresy_chain }
+		end_event_chain = uncivic_exalted_priesthood_heresy_chain
+	}
+	remove_country_flag = uncivic_exalted_priesthood_has_unorthodoxy
+	remove_country_flag = uncivic_exalted_priesthood_declared_heresy
+	remove_country_flag = uncivic_exalted_priesthood_recent_amnesty
+	remove_country_flag = uncivic_exalted_priesthood_recent_militia
+	remove_country_flag = uncivic_exalted_priesthood_recent_example
+	remove_country_flag = uncivic_exalted_priesthood_unorthodoxy_cooldown
+	if = {
+		limit = { has_modifier = uncivic_exalted_priesthood_revised_orthodoxy }
+		remove_modifier = uncivic_exalted_priesthood_revised_orthodoxy
+	}
+	if = {
+		limit = { has_modifier = uncivic_exalted_priesthood_heresy_cleansed }
+		remove_modifier = uncivic_exalted_priesthood_heresy_cleansed
+	}
+	every_owned_planet = {
+		remove_planet_flag = uncivic_exalted_priesthood_planet_recently_changed
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_unorthodox_beliefs }
+			remove_modifier = uncivic_exalted_priesthood_unorthodox_beliefs
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy }
+			remove_modifier = uncivic_exalted_priesthood_center_of_unorthodoxy
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_heretical_beliefs }
+			remove_modifier = uncivic_exalted_priesthood_heretical_beliefs
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_center_of_heresy }
+			remove_modifier = uncivic_exalted_priesthood_center_of_heresy
+		}
+		if = {
+			limit = { has_modifier = uncivic_exalted_priesthood_heretic_amnesty }
+			remove_modifier = uncivic_exalted_priesthood_heretic_amnesty
+		}
+		if = {
+			limit = { exists = fromfrom }
+			uncivic_exalted_priesthood_remove_poi = { COUNTRY = owner }
+		}
+	}
+	every_owned_leader = {
+		remove_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
+		remove_trait = uncivic_exalted_priesthood_leader_trait_hardliner
 	}
 }

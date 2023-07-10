@@ -5,3 +5,4 @@
  mod_planet_soldiers_physics_research_produces_add: "£physics_research£ $physics_research$ from £job_soldier£ [GetSoldierPlural]" # UNTRANSLATED
  mod_planet_soldiers_society_research_produces_add: "£society_research£ $society_research$ from £job_soldier£ [GetSoldierPlural]" # UNTRANSLATED
  mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ de £job_soldier£ [GetSoldierPlural]"
+ count_agreement_trigger: "Number of Agreements$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$" # UNTRANSLATED

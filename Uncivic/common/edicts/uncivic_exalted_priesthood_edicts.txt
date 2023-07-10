@@ -65,7 +65,7 @@ uncivic_exalted_priesthood_invite_to_galactic_faith = {
 			mmu_paging_init = {
 				PAGING_INSTANCE = uncivic_exalted_priesthood_follower_invite_paging
 				PAGED_ENTITY_TYPE = country
-				PAGED_ENTITY_LIMIT = "uncivic_exalted_priesthood_can_be_follower = yes NOT = { uncivic_exalted_priesthood_is_follower = { OF = prev } } has_communications = prev"
+				PAGED_ENTITY_LIMIT = "uncivic_exalted_priesthood_can_join_faith = yes NOT = { uncivic_exalted_priesthood_is_follower = { OF = prev } } has_communications = prev"
 			}
 		}
 		country_event = { id = uncivic_exalted_priesthood.711 }

@@ -180,3 +180,15 @@ on_war_lost = {
 		uncivic_nationalistic_zeal.321 # get disgraced
 	}
 }
+
+on_war_won = {
+	events = {
+		uncivic_exalted_priesthood.902 # impose faith
+	}
+}
+
+on_status_quo = {
+	events = {
+		uncivic_exalted_priesthood.901 # impose faith
+	}
+}

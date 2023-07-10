@@ -44,5 +44,5 @@
  uncivic_nationalistic_zeal.221.title: "Последствие Высокомерие нации"
  uncivic_nationalistic_zeal.221.desc: "Мы считали себя непобедимыми, но недавняя потеря [FromFromFrom.GetName] доказывает обратное. Нашей нации придется многое переосмыслить, прежде чем мы сможем вернуть себе уверенность."
  # lost war causes disgrace
- uncivic_nationalistic_zeal.221.title: "Последствие Высокомерие нации"
+ uncivic_nationalistic_zeal.222.title: "$uncivic_nationalistic_zeal.221.title$" # DO NOT TRANSLATE
  uncivic_nationalistic_zeal.222.desc: "Мы считали себя непобедимыми, но наша недавно проигранная война доказывает обратное. Нашей нации придется многое переосмыслить, прежде чем мы сможем вернуть себе уверенность."

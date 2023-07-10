@@ -212,14 +212,14 @@ uncivic_exalted_priesthood_council = {
 	monthly_progress = {
 		base = 0
 		modifier = {
-			add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
+			add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|no|
 			owner = { any_owned_leader = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_hardliner
 			} }
 			desc = uncivic_exalted_priesthood_council_hardliner_leaders
 		}
 		modifier = {
-			subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+			subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|no|
 			owner = { any_owned_leader = {
 				has_trait = uncivic_exalted_priesthood_leader_trait_unorthodox
 			} }
@@ -252,8 +252,8 @@ uncivic_exalted_priesthood_council = {
 			desc = uncivic_exalted_priesthood_council_momentum
 			current_stage = uncivic_exalted_priesthood_council_declare_heresy_1
 			check_variable_arithmetic = {
-				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
-				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|no|
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|no|
 				add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|yes|MULTIPLY|2|
 				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|yes|MULTIPLY|2|
 				value = 0
@@ -274,8 +274,8 @@ uncivic_exalted_priesthood_council = {
 			desc = uncivic_exalted_priesthood_council_momentum
 			current_stage = uncivic_exalted_priesthood_council_revise_orthodoxy_1
 			check_variable_arithmetic = {
-				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders
-				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders
+				which = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|no|
+				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|no|
 				add = owner.value:uncivic_exalted_priesthood_num_hardliner_leaders|COUNCILOR|yes|MULTIPLY|2|
 				subtract = owner.value:uncivic_exalted_priesthood_num_unorthodox_leaders|COUNCILOR|yes|MULTIPLY|2|
 				value = 0

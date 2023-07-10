@@ -133,6 +133,12 @@
  uncivic_exalted_priesthood.801.desc: "These Exalted Priesthoods lead §YGalactic Faiths§!. Click on one to view the followers."
  uncivic_exalted_priesthood.802.title: "Followers of Galactic Faith"
  uncivic_exalted_priesthood.802.desc: "These empires follow the §YGalactic Faith§! of the §H[uncivic_exalted_priesthood_viewed_leader.GetName]§!."
+ uncivic_exalted_priesthood.911.title: "Impose Faith on Liberated Nation"
+ uncivic_exalted_priesthood.911.desc: "The §H[From.GetName]§! has been liberated and now follows our ethics. If we wish, we can force them to follow our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nWe will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$"
+ uncivic_exalted_priesthood.911.option.impose_faith: "Impose Faith"
+ uncivic_exalted_priesthood.911.option.do_not_impose_faith: "Do Not Impose Faith"
+ uncivic_exalted_priesthood.912.title: "Galactic Faith Imposed"
+ uncivic_exalted_priesthood.912.desc: "Our liberators, the §H[From.GetName]§!, have imposed their §YGalactic Faith§!. We cannot leave it for 10 years.\n\nWe get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nThey get:\n$uncivic_exalted_priesthood_leader_modifiers$"
 
  # paging
  uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
@@ -215,8 +221,10 @@
  uncivic_exalted_priesthood_opinion_modifier_rejected_reform_desc: "This empire rejected the reforms made to the Faith."
 
  # acceptance tooltip
- uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-100§!\n     Trust: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrust]\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
+ uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-100§![This.UncivicExaltedPriesthoodFollowerAcceptanceFromExaltedPriesthood][This.UncivicExaltedPriesthoodFollowerAcceptanceFromFollowers]\n     Trust: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrust]\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
  uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Trust of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrustOfCurrentLeader]\n     Opinion of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Relative Power of Head of Faith: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]"
+ uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood: "\n     Is Exalted Priesthood: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood]§!"
+ uncivic_exalted_priesthood_follower_acceptance_from_followers: "\n     Followers of Own Faith: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_followers]§!"
  uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
@@ -259,3 +267,4 @@
  # misc
  uncivic_exalted_priesthood_join_faith: "Join Galactic Faith"
  uncivic_exalted_priesthood_leave_faith: "Leave Galactic Faith"
+ uncivic_exalted_priesthood_faith_imposed: "Galactic Faith Imposed"
