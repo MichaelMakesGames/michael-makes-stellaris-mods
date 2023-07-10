@@ -24,5 +24,36 @@ mmgfhp_in_range_of_star = {
 				same_solar_system = yes
 			}
 		}
+		AND = {
+			exists = orbit
+			orbit = { is_star = no }
+			exists = orbit.orbit
+			orbit.orbit = { is_star = yes }
+			distance = {
+				source = orbit.orbit
+				min_distance >= @mmgfhp_star_$RANGE$_min
+				max_distance <= @mmgfhp_star_$RANGE$_max
+				type = euclidean
+				same_solar_system = yes
+			}
+		}
+		AND = {
+			OR = {
+				NOT = { exists = orbit }
+				AND = {
+					exists = orbit
+					orbit = { is_star = no }
+					NOT = { exists = orbit.orbit }
+				}
+			}
+			exists = star
+			distance = {
+				source = star
+				min_distance >= @mmgfhp_star_$RANGE$_min
+				max_distance <= @mmgfhp_star_$RANGE$_max
+				type = euclidean
+				same_solar_system = yes
+			}
+		}
 	}
 }

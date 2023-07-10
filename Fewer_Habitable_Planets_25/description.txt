@@ -16,7 +16,7 @@ Want a number other than 25%? Let me know. If there's enough demand, I'll make a
   [*] For Stellaris 3.8.4
   [*] NOT achievement compatible
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
-  [*] If you are using multiple mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
+  [*] If you are using any mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
 [/list]
 
 [h1]Sharing[/h1]
