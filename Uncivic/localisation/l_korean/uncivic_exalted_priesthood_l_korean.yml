@@ -135,10 +135,22 @@
  uncivic_exalted_priesthood.802.desc: "These empires follow the §YGalactic Faith§! of the §H[uncivic_exalted_priesthood_viewed_leader.GetName]§!." # UNTRANSLATED
  uncivic_exalted_priesthood.911.title: "Impose Faith on Liberated Nation" # UNTRANSLATED
  uncivic_exalted_priesthood.911.desc: "The §H[From.GetName]§! has been liberated and now follows our ethics. If we wish, we can force them to follow our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nWe will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$" # UNTRANSLATED
- uncivic_exalted_priesthood.911.option.impose_faith: "Impose Faith" # UNTRANSLATED
- uncivic_exalted_priesthood.911.option.do_not_impose_faith: "Do Not Impose Faith" # UNTRANSLATED
+ uncivic_exalted_priesthood.911.option.impose_faith: "Impose faith." # UNTRANSLATED
+ uncivic_exalted_priesthood.911.option.do_not_impose_faith: "Do not impose faith." # UNTRANSLATED
  uncivic_exalted_priesthood.912.title: "Galactic Faith Imposed" # UNTRANSLATED
- uncivic_exalted_priesthood.912.desc: "Our liberators, the §H[From.GetName]§!, have imposed their §YGalactic Faith§!. We cannot leave it for 10 years.\n\nWe get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nThey get:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.912.desc: "Our liberators, the §H[From.GetName]§!, have imposed their §YGalactic Faith§!. We cannot leave it for 10 years.\n\nWe get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\Head of Faith gets:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.921.title: "$uncivic_exalted_priesthood.911.title$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.921.desc: "The §H[From.GetName]§! has been liberated and now follows our ethics. If we wish and our Head of Faith permits, we can force them to follow our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\Head of Faith gets:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.921.option.impose_faith: "Send a request to the [uncivic_exalted_priesthood_leader_of_root.GetName]." # UNTRANSLATED
+ uncivic_exalted_priesthood.921.option.do_not_impose_faith: "$uncivic_exalted_priesthood.911.option.do_not_impose_faith$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.922.title: "$uncivic_exalted_priesthood.911.title$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.922.desc: "The §H[FromFrom.GetName]§! has been liberated by our follower, the §H[From.GetName]§!. At our follower's request, we can force the liberated nation to join our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nWe will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.922.option.impose_faith: "$uncivic_exalted_priesthood.911.option.impose_faith$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.922.option.do_not_impose_faith: "$uncivic_exalted_priesthood.911.option.do_not_impose_faith$" # DO NOT TRANSLATE
+ uncivic_exalted_priesthood.923.title: "Galactic Faith Imposed" # UNTRANSLATED
+ uncivic_exalted_priesthood.923.desc: "An excellent suggestion. We are sending priesting to the §H[FromFromFromFrom]§! to formalize the agreement. Thank you for bringing them into the fold." # UNTRANSLATED
+ uncivic_exalted_priesthood.924.title: "Forced Conversion Rejected" # UNTRANSLATED
+ uncivic_exalted_priesthood.924.desc: "We will not force our §YGalactic Faith§! upon the §H[FromFromFromFrom.GetName]§!." # UNTRANSLATED
 
  # paging
  uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE

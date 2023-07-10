@@ -1468,6 +1468,7 @@ country_event = {
 		every_relation = {
 			limit = {
 				uncivic_exalted_priesthood_can_join_faith = yes
+				NOT = { has_valid_civic = civic_exalted_priesthood }
 				NOT = { uncivic_exalted_priesthood_is_follower = { OF = root } }
 				NOT = { has_country_flag = uncivic_exalted_priesthood_rejected_invite_from_@root }
 				is_ai = no
@@ -2040,7 +2041,10 @@ country_event = {
 						type = wg_force_ideology
 					}
 					defender = {
-						uncivic_exalted_priesthood_can_be_leader = yes
+						OR = {
+							uncivic_exalted_priesthood_can_be_leader = yes
+							uncivic_exalted_priesthood_is_follower = yes
+						}
 					}
 				}
 				defender = {
@@ -2057,7 +2061,10 @@ country_event = {
 						type = wg_force_ideology
 					}
 					attacker = {
-						uncivic_exalted_priesthood_can_be_leader = yes
+						OR = {
+							uncivic_exalted_priesthood_can_be_leader = yes
+							uncivic_exalted_priesthood_is_follower = yes
+						}
 					}
 				}
 				attacker = {
@@ -2081,7 +2088,10 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_global_flag = uncivic_exalted_priesthood_enabled
-		uncivic_exalted_priesthood_can_be_leader = yes
+		OR = {
+			uncivic_exalted_priesthood_can_be_leader = yes
+			uncivic_exalted_priesthood_is_follower = yes
+		}
 	}
 	immediate = {
 		country_event = {
@@ -2102,9 +2112,17 @@ country_event = {
 				has_opinion_modifier = { modifier = opinion_liberated_us who = root }
 			}
 			root = {
-				country_event = {
-					id = uncivic_exalted_priesthood.911
-					scopes = { from = prev }
+				if = {
+					limit = { uncivic_exalted_priesthood_is_follower = yes }
+					country_event = {
+						id = uncivic_exalted_priesthood.921
+						scopes = { from = prev }
+					}
+				} else = {
+					country_event = {
+						id = uncivic_exalted_priesthood.911
+						scopes = { from = prev }
+					}
 				}
 			}
 		}
@@ -2124,6 +2142,8 @@ country_event = {
 			# this doesn't check for faith_imposed flag
 			# so you can impose your faith on someone who has a different faith imposed
 			uncivic_exalted_priesthood_can_be_follower = yes
+			# not already following faith
+			NOT = { uncivic_exalted_priesthood_is_follower = { OF = root } }
 			has_opinion_modifier = { modifier = opinion_liberated_us who = root }
 			NOT = { has_country_flag = uncivic_exalted_priesthood_faith_not_imposed@root }
 		}
@@ -2166,4 +2186,151 @@ country_event = {
 	option = {
 		name = PRAISE
 	}
+}
+
+# root decides whether to request imposition of faith
+# root = liberator
+# from = liberated
+country_event = {
+	id = uncivic_exalted_priesthood.921
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.921.title
+	desc = uncivic_exalted_priesthood.921.desc
+	picture = GFX_evt_signing
+	immediate = {
+		random_country = {
+			limit = { uncivic_exalted_priesthood_is_leader = { OF = root } }
+			save_event_target_as = uncivic_exalted_priesthood_leader_of_root
+		}
+	}
+	trigger = {
+		uncivic_exalted_priesthood_is_follower = yes
+		from = {
+			# using can_be_follower instead of can_join_faith
+			# this doesn't check for faith_imposed flag
+			# so you can impose your faith on someone who has a different faith imposed
+			uncivic_exalted_priesthood_can_be_follower = yes
+			# not already following same faith
+			NOT = {
+				any_country = {
+					uncivic_exalted_priesthood_is_leader = { OF = from }
+					uncivic_exalted_priesthood_is_leader = { OF = root }
+				}
+			}
+			has_opinion_modifier = { modifier = opinion_liberated_us who = root }
+			NOT = { has_country_flag = uncivic_exalted_priesthood_faith_not_imposed@root }
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood.921.option.impose_faith
+		event_target:uncivic_exalted_priesthood_leader_of_root = {
+			country_event = { id = uncivic_exalted_priesthood.922 }
+		}
+		ai_chance = { base = 1000 }
+	}
+	option = {
+		name = uncivic_exalted_priesthood.921.option.do_not_impose_faith
+		hidden_effect = {
+			from = {
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_faith_not_imposed@root
+					years = 10
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+# head of faith receives request to impose faith on liberated country
+# root = head of faith
+# from = liberator, follower of faith
+# fromfrom = liberated country, not follower of faith
+country_event = {
+	id = uncivic_exalted_priesthood.922
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.922.title
+	desc = uncivic_exalted_priesthood.922.desc
+	picture = GFX_evt_signing
+	trigger = {
+		uncivic_exalted_priesthood_can_be_leader = yes
+		fromfrom = {
+			# using can_be_follower instead of can_join_faith
+			# this doesn't check for faith_imposed flag
+			# so you can impose your faith on someone who has a different faith imposed
+			uncivic_exalted_priesthood_can_be_follower = yes
+			# not already following faith
+			NOT = { uncivic_exalted_priesthood_is_follower = { OF = root } }
+		}
+	}
+	option = {
+		name = uncivic_exalted_priesthood.922.option.impose_faith
+		hidden_effect = {
+			save_event_target_as = uncivic_exalted_priesthood_proposed_leader
+			fromfrom = {
+				uncivic_exalted_priesthood_become_follower = yes
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_faith_imposed
+					years = 10
+				}
+				country_event = {
+					id = uncivic_exalted_priesthood.912
+					scopes = { from = from }
+				}
+			}
+			from = {
+				country_event = { id = uncivic_exalted_priesthood.923 }
+			}
+		}
+		ai_chance = { base = 1000 }
+	}
+	option = {
+		name = uncivic_exalted_priesthood.922.option.do_not_impose_faith
+		hidden_effect = {
+			fromfrom = {
+				set_timed_country_flag = {
+					flag = uncivic_exalted_priesthood_faith_not_imposed@from
+					years = 10
+				}
+			}
+			from = {
+				country_event = { id = uncivic_exalted_priesthood.924 }
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+# head of faith accepts imposition of faith
+# root = fromfrom = liberator, follower of faith
+# from = head of faith
+# fromfromfromfrom = liberated country, not follower of faith
+country_event = {
+	id = uncivic_exalted_priesthood.923
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.923.title
+	desc = uncivic_exalted_priesthood.923.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	option = { name = PRAISE }
+}
+
+# head of faith rejects imposition of faith
+# root = fromfrom = liberator, follower of faith
+# from = head of faith
+# fromfromfromfrom = liberated country, not follower of faith
+country_event = {
+	id = uncivic_exalted_priesthood.924
+	is_triggered_only = yes
+	title = uncivic_exalted_priesthood.924.title
+	desc = uncivic_exalted_priesthood.924.desc
+	diplomatic = yes
+	picture_event_data = {
+		portrait = from
+		room = from.ruler
+	}
+	option = { name = ACKNOWLEDGED }
 }

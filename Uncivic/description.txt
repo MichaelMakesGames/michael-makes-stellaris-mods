@@ -10,7 +10,7 @@ Many civics in Stellaris are boring, simply providing modifiers. Sometimes borin
 [/list]
 
 [h1]Exalted Priesthood[/h1]
-Invite other spiritualist empires to join your Galactic Faith, gaining influence and diplomatic weight. Compete with other Exalted Priesthoods to win followers. Experience the spread of new beliefs, and decide whether to incorporate them into your orthodoxy or declare a heresy and launch an inquisition.
+Invite other spiritualist empires to join your Galactic Faith, gaining influence and diplomatic weight. Compete with other Exalted Priesthoods to win followers with diplomacy or by force. Experience the spread of new beliefs, and decide whether to incorporate them into your orthodoxy or declare a heresy and launch an inquisition.
 
 [h1]Nationalistic Zeal[/h1]
 Balance the spirit of your nation. As your Zeal gets higher, you get stronger military bonuses and larger diplomatic penalties. If it gets too high, you'll suffer the consequences of Nationalistic Hubris. On the other hand, if it gets too low, you'll suffer Nationalistic Disgrace.
