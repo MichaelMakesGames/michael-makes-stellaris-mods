@@ -1,21 +1,11 @@
-Fewer Habitable Planets: 25%: Real Space Patch
+A patch for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997968164]Fewer Habitable Planets: 25%[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=937289339]Real Space[/url].
 (For Stellaris v3.8.4 and Real Space v3.8.9)
 
-A patch for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997968164]Fewer Habitable Planets: 25%[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=937289339]Real Space[/url].
-
-Load Order:
+[h1]Load Order:[/h1]
 [list]
   [*] Fewer Habitable Planets: 25%
   [*] Real Space
   [*] Fewer Habitable Planets: 25%: Real Space Patch
-[/list]
-
-[h1]Compatibility[/h1]
-[list]
-  [*] For Stellaris 3.8.4
-  [*] NOT achievement compatible
-  [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
-  [*] If you are using any mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
 [/list]
 
 [h1]Sharing[/h1]

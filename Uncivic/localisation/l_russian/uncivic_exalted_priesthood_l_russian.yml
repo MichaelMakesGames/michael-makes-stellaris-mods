@@ -133,24 +133,24 @@
  uncivic_exalted_priesthood.801.desc: "Эти Возвышенные Священники возглавляют §YГалактические Веры§! Щелкните на одном из них, чтобы увидеть последователей."
  uncivic_exalted_priesthood.802.title: "Последователи Галактической Веры"
  uncivic_exalted_priesthood.802.desc: "Эти империи следуют §YГалактической вере§! §H[uncivic_exalted_priesthood_viewed_leader.GetName]§!"
- uncivic_exalted_priesthood.911.title: "Impose Faith on Liberated Nation" # UNTRANSLATED
- uncivic_exalted_priesthood.911.desc: "The §H[From.GetName]§! has been liberated and now follows our ethics. If we wish, we can force them to follow our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nWe will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$" # UNTRANSLATED
- uncivic_exalted_priesthood.911.option.impose_faith: "Impose faith." # UNTRANSLATED
- uncivic_exalted_priesthood.911.option.do_not_impose_faith: "Do not impose faith." # UNTRANSLATED
- uncivic_exalted_priesthood.912.title: "Galactic Faith Imposed" # UNTRANSLATED
- uncivic_exalted_priesthood.912.desc: "Our liberators, the §H[From.GetName]§!, have imposed their §YGalactic Faith§!. We cannot leave it for 10 years.\n\nWe get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nHead of Faith gets:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.911.title: "Навязывание веры освобожденной стороне"
+ uncivic_exalted_priesthood.911.desc: "§H[From.GetName]§! были освобождены и теперь следуют нашей этике. Если мы захотим, мы можем заставить их следовать нашей §YГалактической вере§!, и они не смогут покинуть ее в течение 10 лет.\n\nМы получим:\n$uncivic_exalted_priesthood_leadder_modifiers$\n\nОни получат:\n$uncivic_exalted_priesthood_follower_modifiers$\n\n"
+ uncivic_exalted_priesthood.911.option.impose_faith: "Навязать веру."
+ uncivic_exalted_priesthood.911.option.do_not_impose_faith: "Не навязывать веру."
+ uncivic_exalted_priesthood.912.title: "Навязаная галактическая вера"
+ uncivic_exalted_priesthood.912.desc: "Наши освободители, §H[From.GetName]§!, навязали нам свою §YГалактическую веру§! Мы не можем покинуть ее в течение 10 лет.\n\nМы получим:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nЛидер Веры получит:\n$uncivic_exalted_priesthood_leader_modifiers$"
  uncivic_exalted_priesthood.921.title: "$uncivic_exalted_priesthood.911.title$" # DO NOT TRANSLATE
- uncivic_exalted_priesthood.921.desc: "The §H[From.GetName]§! has been liberated and now follows our ethics. If we wish and our Head of Faith permits, we can force them to follow our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nHead of Faith gets:\n$uncivic_exalted_priesthood_leader_modifiers$" # UNTRANSLATED
- uncivic_exalted_priesthood.921.option.impose_faith: "Send a request to the [uncivic_exalted_priesthood_leader_of_root.GetName]." # UNTRANSLATED
+ uncivic_exalted_priesthood.921.desc: "§H[From.GetName]§! был освобожден и теперь следует нашей этике. Если мы захотим и наш Глава Веры позволит, мы можем заставить их следовать нашей §YГалактической Вере§!, и они не смогут покинуть ее в течение 10 лет.\n\nОни получат:\n$uncivic_exalted_priesthood_follower_modifiers$\n\nЛидер Веры получит:\n$uncivic_exalted_priesthood_leader_modifiers$."
+ uncivic_exalted_priesthood.921.option.impose_faith: "Отправьте запрос [uncivic_exalted_priesthood_leader_of_root.GetName]."
  uncivic_exalted_priesthood.921.option.do_not_impose_faith: "$uncivic_exalted_priesthood.911.option.do_not_impose_faith$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood.922.title: "$uncivic_exalted_priesthood.911.title$" # DO NOT TRANSLATE
- uncivic_exalted_priesthood.922.desc: "The §H[FromFrom.GetName]§! has been liberated by our follower, the §H[From.GetName]§!. At our follower's request, we can force the liberated nation to join our §YGalactic Faith§!, and they will not be able to leave it for 10 years.\n\nWe will get:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nThey will get:\n$uncivic_exalted_priesthood_follower_modifiers$" # UNTRANSLATED
+ uncivic_exalted_priesthood.922.desc: "§H[FromFrom.GetName]§! была освобождена нашим последователем, §H[From.GetName]§! По желанию нашего последователя, мы можем заставить освобожденный народ присоединиться к нашей §YГалактической Вере§!, и они не смогут покинуть ее в течение 10 лет.\n\nМы получим:\n$uncivic_exalted_priesthood_leader_modifiers$\n\nОни получат:\n$uncivic_exalted_priesthood_follower_modifiers$."
  uncivic_exalted_priesthood.922.option.impose_faith: "$uncivic_exalted_priesthood.911.option.impose_faith$" # DO NOT TRANSLATE
  uncivic_exalted_priesthood.922.option.do_not_impose_faith: "$uncivic_exalted_priesthood.911.option.do_not_impose_faith$" # DO NOT TRANSLATE
- uncivic_exalted_priesthood.923.title: "Galactic Faith Imposed" # UNTRANSLATED
- uncivic_exalted_priesthood.923.desc: "An excellent suggestion. We are sending priesting to the §H[FromFromFromFrom]§! to formalize the agreement. Thank you for bringing them into the fold." # UNTRANSLATED
- uncivic_exalted_priesthood.924.title: "Forced Conversion Rejected" # UNTRANSLATED
- uncivic_exalted_priesthood.924.desc: "We will not force our §YGalactic Faith§! upon the §H[FromFromFromFrom.GetName]§!." # UNTRANSLATED
+ uncivic_exalted_priesthood.923.title: "Навязана галактическая вера"
+ uncivic_exalted_priesthood.923.desc: "Отличное предложение. Мы направляем священников к §H[FromFromFromFrom]§! для оформления соглашения. Спасибо, что решили привлечь их к сотрудничеству."
+ uncivic_exalted_priesthood.924.title: "Насильственное обращение отклонено"
+ uncivic_exalted_priesthood.924.desc: "Мы не будем навязывать нашу §YГалактическую Веру§! §Н[FromFromFromFrom.GetName]§!."
 
  # paging
  uncivic_exalted_priesthood_leader_0: "[uncivic_exalted_priesthood_leader_paging_current_page_entity_0.GetName]" # DO NOT TRANSLATE
@@ -233,10 +233,10 @@
  uncivic_exalted_priesthood_opinion_modifier_rejected_reform_desc: "Эта империя отвергла реформы, внесенные в Веру."
 
  # acceptance tooltip
- uncivic_exalted_priesthood_follower_acceptance_tooltip: "Acceptance: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Base: §R-100§![This.UncivicExaltedPriesthoodFollowerAcceptanceFromExaltedPriesthood][This.UncivicExaltedPriesthoodFollowerAcceptanceFromFollowers]\n     Trust: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrust]\n     Opinion: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Relative Power: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_acceptance_tooltip: "Принятие: [This.UncivicExaltedPriesthoodFollowerAcceptance]\n     Базовое значение: §R-100§![This.UncivicExaltedPriesthoodFollowerAcceptanceFromExaltedPriesthood][This.UncivicExaltedPriesthoodFollowerAcceptanceFromFollowers]\n     Доверие: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromTrust]\n     Мнение: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinion]\n     Сравнительная сила: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePower][This.UncivicExaltedPriesthoodFollowerAcceptanceFromCurrentLeader]"
  uncivic_exalted_priesthood_follower_acceptance_tooltip_current_leader: "\n     Мнение о Главе Веры: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromOpinionOfCurrentLeader]\n     Относительная власть Главы Веры: [This.UncivicExaltedPriesthoodFollowerAcceptanceFromRelativePowerOfCurrentLeader]"
- uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood: "\n     Is Exalted Priesthood: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood]§!" # UNTRANSLATED
- uncivic_exalted_priesthood_follower_acceptance_from_followers: "\n     Followers of Own Faith: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_followers]§!" # UNTRANSLATED
+ uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood: "\n     Верховное духовенство: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_exalted_priesthood]§!"
+ uncivic_exalted_priesthood_follower_acceptance_from_followers: "\n     Последователи собственной веры: §R[This.uncivic_exalted_priesthood_follower_acceptance_from_followers]§!"
  uncivic_exalted_priesthood_follower_acceptance_zero: "0" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_green: "§G+[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
  uncivic_exalted_priesthood_follower_acceptance_red: "§R[This.uncivic_exalted_priesthood_follower_acceptance]§!" # DO NOT TRANSLATE
@@ -279,4 +279,4 @@
  # misc
  uncivic_exalted_priesthood_join_faith: "Присоединяйтесь к Галактической вере"
  uncivic_exalted_priesthood_leave_faith: "Покинуть Галактическую Веру"
- uncivic_exalted_priesthood_faith_imposed: "Galactic Faith Imposed" # UNTRANSLATED
+ uncivic_exalted_priesthood_faith_imposed: "Навязана галактическая вера"

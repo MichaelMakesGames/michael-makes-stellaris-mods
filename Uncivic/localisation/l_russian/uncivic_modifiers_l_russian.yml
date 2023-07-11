@@ -5,4 +5,4 @@
  mod_planet_soldiers_physics_research_produces_add: "£physics_research£ $physics_research$ от £job_soldier£ [GetSoldierPlural]"
  mod_planet_soldiers_society_research_produces_add: "£society_research£ $society_research$ от £job_soldier£ [GetSoldierPlural]"
  mod_planet_soldiers_engineering_research_produces_add: "£engineering_research£ $engineering_research$ от £job_soldier£ [GetSoldierPlural]"
- count_agreement_trigger: "Number of Agreements$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$" # UNTRANSLATED
+ count_agreement_trigger: "Количество соглашений$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
