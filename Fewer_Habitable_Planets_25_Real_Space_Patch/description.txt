@@ -1,21 +1,19 @@
-Fewer Habitable Planets: 25% (For 3.8.4)
+Fewer Habitable Planets: 25%: Real Space Patch
+(For Stellaris v3.8.4 and Real Space v3.8.9)
 
-Reduces the number of habitable planets from unique and randomly generated systems to 25%. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work...
+A patch for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997968164]Fewer Habitable Planets: 25%[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=937289339]Real Space[/url].
 
-Number of uncolonized habitable planets in a huge galaxy, not counting Guaranteed Habitable Worlds or Holy Worlds:
+Load Order:
 [list]
-  [*] Vanilla 1x Habitable Worlds: 190
-	[*] Vanilla 0.25x Habitable Worlds: 109 (57% of vanilla 1x)
-	[*] This Mod 1x Habitable Worlds: 50 (26% of vanilla 1x)
+  [*] Fewer Habitable Planets: 25%
+  [*] Real Space
+  [*] Fewer Habitable Planets: 25%: Real Space Patch
 [/list]
-
-Want a number other than 25%? Let me know. If there's enough demand, I'll make an alternate version.
 
 [h1]Compatibility[/h1]
 [list]
   [*] For Stellaris 3.8.4
   [*] NOT achievement compatible
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url]
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
   [*] If you are using any mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
 [/list]

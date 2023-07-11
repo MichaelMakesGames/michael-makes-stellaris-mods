@@ -1,15 +1,27 @@
+import argparse
 import shutil
 import os
 from pathlib import Path
 import pprint
 import re
 
+sources = {
+    "vanilla": "~/.steam/root/steamapps/common/Stellaris",
+    "realspace": "~/.local/share/Steam/steamapps/workshop/content/281990/937289339"
+}
+
+parser = argparse.ArgumentParser(prog="generate_fewer_habitable_uniques")
+parser.add_argument("--scale", type=int, default=25)
+parser.add_argument("--source", choices=sources.keys(), default="vanilla")
+parser.add_argument("--debug", action='store_true', default=False)
+args = parser.parse_args()
+
 pp = pprint.PrettyPrinter(indent=4)
-copy_data_from = os.path.expanduser("~/.steam/root/steamapps/common/Stellaris")
-spawn_chance_mult = 0.25
+copy_data_from = os.path.expanduser(sources[args.source])
+spawn_chance_mult = float(args.scale) / 100.0
 spawn_chance_mult_extra_scale = spawn_chance_mult**1.5
 
-DEBUG = True
+DEBUG = args.debug
 MIN = 1
 
 # assume proper indentation
@@ -117,6 +129,25 @@ non_colonizable_planet_classes = {
     "rl_unhabitable_planets",
     "rl_voidspawn_egg",
     "star",
+    # real space
+    "pc_o_super_star",
+    "pc_k_giant_star",
+    "pc_y_star",
+    "pc_o_hyper_star",
+    "red_giant",
+    "blue_supergiant",
+    "pc_d_star",
+    "yellow_supergiant",
+    "yellow_stars",
+    "pc_t_star",
+    "pc_g_giant_star",
+    "pc_m_hyper_star",
+    "pc_k_super_star",
+    "pc_b_super_star",
+    "blue_stars",
+    "pc_o_star",
+    "pc_f_super_star",
+    "none",
 }
 all_recognized_planet_classes = colonizable_planet_classes.union(
     potentially_colonizable_planet_classes
