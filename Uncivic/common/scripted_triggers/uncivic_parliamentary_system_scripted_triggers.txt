@@ -30,5 +30,35 @@ uncivic_parliamentary_system_has_representative = {
 		has_modifier = uncivic_parliamentary_system_xenoist
 		has_modifier = uncivic_parliamentary_system_nonpartisan
 		has_modifier = uncivic_parliamentary_system_separatist
+		# bug branch
+		has_modifier = uncivic_parliamentary_system_capitalist
+		has_modifier = uncivic_parliamentary_system_conservative
+		has_modifier = uncivic_parliamentary_system_environmentalist
+		has_modifier = uncivic_parliamentary_system_populist
+		has_modifier = uncivic_parliamentary_system_industrialist
+		has_modifier = uncivic_parliamentary_system_socialist
+		# ecc
+		has_modifier = uncivic_parliamentary_system_bankers
+		has_modifier = uncivic_parliamentary_system_conservatives
+		has_modifier = uncivic_parliamentary_system_environmentalists
+		has_modifier = uncivic_parliamentary_system_labourites
+		has_modifier = uncivic_parliamentary_system_manufacturers
+		has_modifier = uncivic_parliamentary_system_socialists
+		# divided loyalties
+		has_modifier = uncivic_parliamentary_system_aristocrat
+		has_modifier = uncivic_parliamentary_system_indentured
+		has_modifier = uncivic_parliamentary_system_elitist
+		has_modifier = uncivic_parliamentary_system_labourite
+		has_modifier = uncivic_parliamentary_system_adopter
+		has_modifier = uncivic_parliamentary_system_perfectionist
+		has_modifier = uncivic_parliamentary_system_survivalist
+		has_modifier = uncivic_parliamentary_system_warmaker
+		has_modifier = uncivic_parliamentary_system_activist
+		has_modifier = uncivic_parliamentary_system_industrialist_divided_loyalties
+		has_modifier = uncivic_parliamentary_system_crusader
+		has_modifier = uncivic_parliamentary_system_shepherd
+		has_modifier = uncivic_parliamentary_system_holistic
+		has_modifier = uncivic_parliamentary_system_preservationist
+		has_modifier = uncivic_parliamentary_system_enslaver
 	}
 }
