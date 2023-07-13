@@ -19,24 +19,6 @@ mmgsiege_can_stockpile = {
 			}
 		}
 	}
-	# not above max
-	is_variable_set = mmgsiege_stockpile_maximum
-	OR = {
-		AND = {
-			is_variable_set = mmgsiege_$RESOURCE$_stockpile
-			check_variable = {
-				which = mmgsiege_stockpile_maximum
-				value > mmgsiege_$RESOURCE$_stockpile
-			}
-		}
-		AND = {
-			NOT = { is_variable_set = mmgsiege_$RESOURCE$_stockpile }
-			check_variable = {
-				which = mmgsiege_stockpile_maximum
-				value > 0
-			}
-		}
-	}
 }
 
 mmgsiege_is_under_siege = {

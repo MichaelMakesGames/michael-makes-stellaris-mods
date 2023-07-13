@@ -306,71 +306,27 @@ guiTypes = {
 			# ENERGY #
 			##########
 			effectbuttonType = {
-				name = mmgsiege_decrease_energy_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 33 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_energy_budget_1000
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_energy_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 86 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_energy_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
 				name = mmgsiege_decrease_energy_budget_10
 				quadTextureSprite = "GFX_button_35_24"
 				position = { x = 124 y = -10 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-10"
+				buttonText = "-10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_decrease_energy_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_energy_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_energy_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
 				name = mmgsiege_energy_budget_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = -2 }
-				size = { x = 60 y = 32 }
+				position = { x = 176 y = -2 }
+				size = { x = 120 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = mmgsiege_energy_budget_var_value
+				buttonText = mmgsiege_energy_budget_percent_and_value
 				orientation = CENTER_LEFT
 				effect = mmgsiege_energy_budget_value
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_energy_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_energy_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
@@ -379,31 +335,9 @@ guiTypes = {
 				position = { x = 294 y = -10 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "+10"
+				buttonText = "+10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_increase_energy_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_energy_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 332 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_energy_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_energy_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 370 y = -10 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_energy_budget_1000
 				# shortCut = j
 			}
 
@@ -411,71 +345,27 @@ guiTypes = {
 			# MINERALS #
 			############
 			effectbuttonType = {
-				name = mmgsiege_decrease_minerals_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 33 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_minerals_budget_1000
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_minerals_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 86 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_minerals_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
 				name = mmgsiege_decrease_minerals_budget_10
 				quadTextureSprite = "GFX_button_35_24"
 				position = { x = 124 y = 20 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-10"
+				buttonText = "-10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_decrease_minerals_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_minerals_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_minerals_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
 				name = mmgsiege_minerals_budget_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 28 }
-				size = { x = 60 y = 32 }
+				position = { x = 176 y = 28 }
+				size = { x = 120 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = mmgsiege_minerals_budget_var_value
+				buttonText = mmgsiege_minerals_budget_percent_and_value
 				orientation = CENTER_LEFT
 				effect = mmgsiege_minerals_budget_value
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_minerals_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_minerals_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
@@ -484,31 +374,9 @@ guiTypes = {
 				position = { x = 294 y = 20 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "+10"
+				buttonText = "+10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_increase_minerals_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_minerals_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 332 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_minerals_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_minerals_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 370 y = 20 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_minerals_budget_1000
 				# shortCut = j
 			}
 
@@ -516,71 +384,27 @@ guiTypes = {
 			# FOOD #
 			########
 			effectbuttonType = {
-				name = mmgsiege_decrease_food_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 33 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_food_budget_1000
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_food_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 86 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_food_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
 				name = mmgsiege_decrease_food_budget_10
 				quadTextureSprite = "GFX_button_35_24"
 				position = { x = 124 y = 50 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-10"
+				buttonText = "-10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_decrease_food_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_food_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_food_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
 				name = mmgsiege_food_budget_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 58 }
-				size = { x = 60 y = 32 }
+				position = { x = 176 y = 58 }
+				size = { x = 120 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = mmgsiege_food_budget_var_value
+				buttonText = mmgsiege_food_budget_percent_and_value
 				orientation = CENTER_LEFT
 				effect = mmgsiege_food_budget_value
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_food_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_food_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
@@ -589,31 +413,9 @@ guiTypes = {
 				position = { x = 294 y = 50 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "+10"
+				buttonText = "+10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_increase_food_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_food_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 332 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_food_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_food_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 370 y = 50 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_food_budget_1000
 				# shortCut = j
 			}
 
@@ -621,71 +423,27 @@ guiTypes = {
 			# CONSUMER_GOODS #
 			##################
 			effectbuttonType = {
-				name = mmgsiege_decrease_consumer_goods_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 33 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_consumer_goods_budget_1000
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_consumer_goods_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 86 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_consumer_goods_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
 				name = mmgsiege_decrease_consumer_goods_budget_10
 				quadTextureSprite = "GFX_button_35_24"
 				position = { x = 124 y = 80 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "-10"
+				buttonText = "-10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_decrease_consumer_goods_budget_10
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_decrease_consumer_goods_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "-1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_decrease_consumer_goods_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
 				name = mmgsiege_consumer_goods_budget_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 88 }
-				size = { x = 60 y = 32 }
+				position = { x = 176 y = 88 }
+				size = { x = 120 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = mmgsiege_consumer_goods_budget_var_value
+				buttonText = mmgsiege_consumer_goods_budget_percent_and_value
 				orientation = CENTER_LEFT
 				effect = mmgsiege_consumer_goods_budget_value
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_consumer_goods_budget_1
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_consumer_goods_budget_1
 				# shortCut = j
 			}
 			effectbuttonType = {
@@ -694,34 +452,11 @@ guiTypes = {
 				position = { x = 294 y = 80 }
 				scale = 1
 				buttonFont = cg_16b
-				buttonText = "+10"
+				buttonText = "+10%"
 				orientation = CENTER_LEFT
 				effect = mmgsiege_increase_consumer_goods_budget_10
 				# shortCut = j
 			}
-			effectbuttonType = {
-				name = mmgsiege_increase_consumer_goods_budget_100
-				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 332 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+100"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_consumer_goods_budget_100
-				# shortCut = j
-			}
-			effectbuttonType = {
-				name = mmgsiege_increase_consumer_goods_budget_1000
-				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 370 y = 80 }
-				scale = 1
-				buttonFont = cg_16b
-				buttonText = "+1000"
-				orientation = CENTER_LEFT
-				effect = mmgsiege_increase_consumer_goods_budget_1000
-				# shortCut = j
-			}
-
 
 			instantTextBoxType={
 				name = "action_desc"

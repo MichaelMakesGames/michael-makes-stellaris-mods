@@ -10,15 +10,16 @@ If energy, minerals, food, and consumer goods aren't produced or stockpiled loca
 Critically, Energy and Mineral shortages increase the damage from orbital bombardment, which means those planets will surrender more quickly (or turn into Tomb worlds if facing Armageddon bombardment).
 
 [h1]Stockpiles[/h1]
-You can transfer resources from your empire stockpile to local planet stockpiles. When besieged, planets will consume from that stockpile before they start receiving penalties. You can manually add and remove resources from the stockpile as long as the planet is not under siege.
+You can budget some of your resource income to be transferred to local planet stockpiles. During a siege, planets will consume any deficits from their stockpiles, and only face shortages once the stockpile is empty. Planets stockpiles are intelligently prioritized by the following:
 
-Does that sound like micro-management hell? You can set a budget to automatically stockpile to your highest priority planets, using the same system as the AI. Priority is determined separately for each resource, based on:
 [list]
   [*] Population
   [*] Local needs and production
   [*] How long the current stockpile would last in a siege
   [*] And proximity to a war front
 [/list]
+
+If you ever need more control, you can manually transfer to/from the local stockpile.
 
 A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier, +100 per stronghold, +200 per fortress, and +1000 per resource silo. Finally, a good use for resource silos! 
 

@@ -15,16 +15,6 @@ country_event = {
 	auto_opens = yes
 	immediate = {}
 	option = {
-		name = mmgsiege_manage_stockpile_budget
-		hidden_effect = {
-			from.owner = {
-				country_event = {
-					id = mmgsiege_stockpile_automation.101
-				}
-			}
-		}
-	}
-	option = {
 		name = CLOSE
 	}
 }

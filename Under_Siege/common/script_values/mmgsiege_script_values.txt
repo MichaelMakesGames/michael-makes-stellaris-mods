@@ -110,22 +110,12 @@ mmgsiege_planet_production_offset_energy = {
 		subtract = owner.value:mmgsiege_country_base_production_energy
 		is_capital = yes
 	}
-	modifier = {
-		subtract = owner.mmgsiege_energy_stockpile_budget
-		is_capital = yes
-		owner = { is_variable_set = mmgsiege_energy_stockpile_budget }
-	}
 }
 
 mmgsiege_planet_production_offset_minerals = {
 	modifier = {
 		subtract = owner.value:mmgsiege_country_base_production_minerals
 		is_capital = yes
-	}
-	modifier = {
-		subtract = owner.mmgsiege_minerals_stockpile_budget
-		is_capital = yes
-		owner = { is_variable_set = mmgsiege_minerals_stockpile_budget }
 	}
 }
 
@@ -134,22 +124,12 @@ mmgsiege_planet_production_offset_food = {
 		subtract = owner.value:mmgsiege_country_base_production_food
 		is_capital = yes
 	}
-	modifier = {
-		subtract = owner.mmgsiege_food_stockpile_budget
-		is_capital = yes
-		owner = { is_variable_set = mmgsiege_food_stockpile_budget }
-	}
 }
 
 mmgsiege_planet_production_offset_consumer_goods = {
 	modifier = {
 		subtract = owner.value:mmgsiege_country_base_production_consumer_goods
 		is_capital = yes
-	}
-	modifier = {
-		subtract = owner.mmgsiege_consumer_goods_stockpile_budget
-		is_capital = yes
-		owner = { is_variable_set = mmgsiege_consumer_goods_stockpile_budget }
 	}
 }
 
@@ -252,4 +232,40 @@ mmgsiege_planet_average_army_supply_shortage = {
 	add = value:mmgsiege_planet_lithoid_army_supply_shortage
 	add = value:mmgsiege_planet_mechanical_army_supply_shortage
 	round = yes
+}
+
+mmgsiege_stockpile_maximum = {
+	base = 0
+	add = value:mmgsiege_stockpile_maximum_from_capital
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|resource_silo|MULT|1000|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|stronghold|MULT|100|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fortress|MULT|200|
+}
+
+mmgsiege_stockpile_maximum_from_capital = {
+	base = 100
+	modifier = {
+		add = 200
+		has_upgraded_capital = yes
+	}
+	modifier = {
+		add = 200
+		has_major_upgraded_capital = yes
+	}
+	modifier = {
+		add = 500
+		has_fully_upgraded_capital = yes
+	}
+}
+
+mmgsiege_stockpile_maximum_from_buildings = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_$BUILDING_TYPE$
+		}
+		mode = add
+		mult = $MULT$
+	}
 }
