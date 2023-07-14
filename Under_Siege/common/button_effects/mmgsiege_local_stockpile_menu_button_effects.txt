@@ -803,3 +803,171 @@ mmgsiege_consumer_goods_stockpile_value = {
 		# dumby effect, do nothing
 	}
 }
+
+mmgsiege_max_energy_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_max_stockpile = { RESOURCE = energy }
+		}
+	}
+}
+
+mmgsiege_max_minerals_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_max_stockpile = { RESOURCE = minerals }
+		}
+	}
+}
+
+mmgsiege_max_food_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_max_stockpile = { RESOURCE = food }
+		}
+	}
+}
+
+mmgsiege_max_consumer_goods_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_max_stockpile = { RESOURCE = consumer_goods }
+		}
+	}
+}
+
+mmgsiege_empty_energy_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_empty_stockpile = { RESOURCE = energy }
+		}
+	}
+}
+
+mmgsiege_empty_minerals_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_empty_stockpile = { RESOURCE = minerals }
+		}
+	}
+}
+
+mmgsiege_empty_food_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_empty_stockpile = { RESOURCE = food }
+		}
+	}
+}
+
+mmgsiege_empty_consumer_goods_stockpile = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = {
+			fail_text = mmgsiege_must_open_planet_fail
+			success_text = mmgsiege_must_open_planet_success
+			is_scope_type = planet
+		}
+		mmgsiege_is_under_siege = no
+		is_occupied_flag = no
+		controller = {
+			is_same_empire = fromfrom
+		}
+	}
+	effect = {
+		hidden_effect = {
+			mmgsiege_empty_stockpile = { RESOURCE = consumer_goods }
+		}
+	}
+}

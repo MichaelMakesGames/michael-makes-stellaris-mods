@@ -89,6 +89,8 @@
  mmgsiege_manage_stockpile_budget_desc: "Automatically transfer a percentage of your monthly income to local planet stockpiles, to prepare for siege. Planets are prioritized by:\n£trigger_yes£ High population\n£trigger_yes£ Close to war front\n£trigger_no£ Produces resource locally\n£trigger_no£ Already stockpiled\n\nResource shortages hurt the production of jobs that use that resource, and additionally affect:\n£energy£ Energy: Bombardment Damage, Robot Assembly\n£minerals£ Minerals: Bombardment Damage, Lithoid Growth and Happiness\n£food£ Food: Biological Growth and Happiness."
  mmgsiege_manage_local_stockpile: "Manage Local Stockpile"
  mmgsiege_manage_local_stockpile_desc: "During a siege, planets must produce their own resources or consume them from a local stockpile, otherwise suffer resource shortages.\n\nResource shortages hurt the production of jobs that use that resource, and additionally affect:\n£energy£ Energy: Bombardment Damage, Robot Assembly\n£minerals£ Minerals: Bombardment Damage, Lithoid Growth and Happiness\n£food£ Food: Biological Growth and Happiness.\n\nUse the §H$edict_mmgsiege_stockpile_automation$§! edict to automatically transfer resources to local stockpiles.\n\nStockpile Maximum: §H[From.mmgsiege_stockpile_maximum]§!\n§LIncreased by capital tier, strongholds, fortresses, and resource silos.§!"
+ mmgsiege_stockpile_empty: "Empty"
+ mmgsiege_stockpile_max: "Max"
 
  mmgsiege_must_open_planet_fail: "£trigger_no£ Must Open Planet view, and Close Other Windows"
  mmgsiege_must_open_planet_success: "£trigger_yes£ Planet View is Open"
