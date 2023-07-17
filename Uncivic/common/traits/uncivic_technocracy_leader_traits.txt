@@ -42,7 +42,6 @@ uncivic_technocracy_leader_trait_technocrat_physics = {
 		TIER = none
 	}
 	is_councilor_trait_for_ruler = yes
-	replace_traits = { "uncivic_technocracy_leader_trait_technocrat" }
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = physics_research
@@ -101,7 +100,6 @@ uncivic_technocracy_leader_trait_technocrat_society = {
 		TIER = none
 	}
 	is_councilor_trait_for_ruler = yes
-	replace_traits = { "uncivic_technocracy_leader_trait_technocrat" }
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = society_research
@@ -161,7 +159,6 @@ uncivic_technocracy_leader_trait_technocrat_engineering = {
 		TIER = none
 	}
 	is_councilor_trait_for_ruler = yes
-	replace_traits = { "uncivic_technocracy_leader_trait_technocrat" }
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = engineering_research

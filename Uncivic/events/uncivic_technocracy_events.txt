@@ -140,7 +140,10 @@ country_event = {
 	}
 	option = {
 		name = uncivic_technocracy_leader_trait_technocrat_physics
-		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_physics }
+		from = {
+			remove_trait = uncivic_technocracy_leader_trait_technocrat
+			add_trait = uncivic_technocracy_leader_trait_technocrat_physics
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
@@ -157,7 +160,10 @@ country_event = {
 	}
 	option = {
 		name = uncivic_technocracy_leader_trait_technocrat_society
-		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_society }
+		from = {
+			remove_trait = uncivic_technocracy_leader_trait_technocrat
+			add_trait = uncivic_technocracy_leader_trait_technocrat_society
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
@@ -174,7 +180,10 @@ country_event = {
 	}
 	option = {
 		name = uncivic_technocracy_leader_trait_technocrat_engineering
-		from = { add_trait = uncivic_technocracy_leader_trait_technocrat_engineering }
+		from = {
+			remove_trait = uncivic_technocracy_leader_trait_technocrat
+			add_trait = uncivic_technocracy_leader_trait_technocrat_engineering
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
