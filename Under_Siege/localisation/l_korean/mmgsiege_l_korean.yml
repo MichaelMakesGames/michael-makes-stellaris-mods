@@ -89,6 +89,8 @@
  mmgsiege_manage_stockpile_budget_desc: "Automatically transfer a percentage of your monthly income to local planet stockpiles, to prepare for siege. Planets are prioritized by:\n£trigger_yes£ High population\n£trigger_yes£ Close to war front\n£trigger_no£ Produces resource locally\n£trigger_no£ Already stockpiled\n\nResource shortages hurt the production of jobs that use that resource, and additionally affect:\n£energy£ Energy: Bombardment Damage, Robot Assembly\n£minerals£ Minerals: Bombardment Damage, Lithoid Growth and Happiness\n£food£ Food: Biological Growth and Happiness." # UNTRANSLATED
  mmgsiege_manage_local_stockpile: "Manage Local Stockpile" # UNTRANSLATED
  mmgsiege_manage_local_stockpile_desc: "During a siege, planets must produce their own resources or consume them from a local stockpile, otherwise suffer resource shortages.\n\nResource shortages hurt the production of jobs that use that resource, and additionally affect:\n£energy£ Energy: Bombardment Damage, Robot Assembly\n£minerals£ Minerals: Bombardment Damage, Lithoid Growth and Happiness\n£food£ Food: Biological Growth and Happiness.\n\nUse the §H$edict_mmgsiege_stockpile_automation$§! edict to automatically transfer resources to local stockpiles.\n\nStockpile Maximum: §H[From.mmgsiege_stockpile_maximum]§!\n§LIncreased by capital tier, strongholds, fortresses, and resource silos.§!" # UNTRANSLATED
+ mmgsiege_stockpile_empty: "Empty" # UNTRANSLATED
+ mmgsiege_stockpile_max: "Max" # UNTRANSLATED
 
  mmgsiege_must_open_planet_fail: "£trigger_no£ Must Open Planet view, and Close Other Windows" # UNTRANSLATED
  mmgsiege_must_open_planet_success: "£trigger_yes£ Planet View is Open" # UNTRANSLATED
@@ -99,5 +101,26 @@
  edict_mmgsiege_stockpile_automation_desc: "Transfer some of your monthly income to planetary stockpiles, so planets are prepared for sieges.\n\n§YSiege Stockpile Budget§! §Rmust be closed in order to turn this on.§!" # UNTRANSLATED
  edict_mmgsiege_stockpile_automation_alt: "$edict_mmgsiege_stockpile_automation$" # DO NOT TRANSLATE
  edict_mmgsiege_stockpile_automation_alt_desc: "$edict_mmgsiege_stockpile_automation_desc$" # DO NOT TRANSLATE
+ edict_mmgsiege_stockpile_automation_with_shipping: "$edict_mmgsiege_stockpile_automation$" # DO NOT TRANSLATE
+ edict_mmgsiege_stockpile_automation_with_shipping_desc: "$edict_mmgsiege_stockpile_automation_desc$\n\n§YShipping Costs active and included in upkeep.§!" # UNTRANSLATED
+ edict_mmgsiege_stockpile_automation_with_shipping_alt: "$edict_mmgsiege_stockpile_automation$" # DO NOT TRANSLATE
+ edict_mmgsiege_stockpile_automation_with_shipping_alt_desc: "$edict_mmgsiege_stockpile_automation_with_shipping_desc$" # DO NOT TRANSLATE
  edict_mmgsiege_manage_stockpile_automation: "Open Siege Stockpile Budget" # UNTRANSLATED
  edict_mmgsiege_manage_stockpile_automation_desc: "Configure how much your monthly income is transferred to planetary stockpiles when Siege Stockpile Automation is on.\n\n§YSiege Stockpile Automation§! §Rmust be off in order to open this.§!" # UNTRANSLATED
+
+ mmgsiege_shipping_cost: "Shipping Cost" # UNTRANSLATED
+ mmgsiege_stockpile_budget_shipping_cost: "\n\n$mmgsiege_shipping_cost$: £energy£§R[This.mmgsiege_stockpile_budget_shipping_cost]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_base_10: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostBase10]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_base_100: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostBase100]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_base_1000: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostBase1000]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_adv_10: "$mmgsiege_shipping_cost$: §R[This.MmgsiegeShippingCostAdv10]§! £energy£$energy$" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_adv_100: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostAdv100]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_adv_1000: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostAdv1000]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_energy_max: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostEnergyMax]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_minerals_max: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostMineralsMax]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_food_max: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostFoodMax]§!" # DO NOT TRANSLATE
+ mmgsiege_shipping_cost_consumer_goods_max: "$mmgsiege_shipping_cost$: £energy£§R[This.MmgsiegeShippingCostConsumerGoodsMax]§!" # DO NOT TRANSLATE
+ mmgsiege_energy_budget_shipping_cost: "$mmgsiege_shipping_cost$: £energy£§R[From.MmgsiegeEnergyBudgetShippingCost]§!" # DO NOT TRANSLATE
+ mmgsiege_minerals_budget_shipping_cost: "$mmgsiege_shipping_cost$: £energy£§R[From.MmgsiegeMineralsBudgetShippingCost]§!" # DO NOT TRANSLATE
+ mmgsiege_food_budget_shipping_cost: "$mmgsiege_shipping_cost$: £energy£§R[From.MmgsiegeFoodBudgetShippingCost]§!" # DO NOT TRANSLATE
+ mmgsiege_consumer_goods_budget_shipping_cost: "$mmgsiege_shipping_cost$: £energy£§R[From.MmgsiegeConsumerGoodsBudgetShippingCost]§!" # DO NOT TRANSLATE

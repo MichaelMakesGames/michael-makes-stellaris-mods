@@ -1,0 +1,5 @@
+shipping_cost = {
+	base = 0
+	[[balance] add = 0]
+	[[shipping_cost] add = 0]
+}

@@ -1,0 +1,59 @@
+defined_text = {
+	name = MmgsiegeShippingCostBase10
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|10|SHIPPING_COST|@base_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeShippingCostBase100
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|100|SHIPPING_COST|@base_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeShippingCostBase1000
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|1000|SHIPPING_COST|@base_shipping_cost|
+}
+
+defined_text = {
+	name = MmgsiegeShippingCostAdv10
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|10|SHIPPING_COST|@adv_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeShippingCostAdv100
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|100|SHIPPING_COST|@adv_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeShippingCostAdv1000
+	value = value:mmgsiege_shipping_cost_capital_sensitive|BALANCE|1000|SHIPPING_COST|@adv_shipping_cost|
+}
+
+defined_text = {
+	name = MmgsiegeShippingCostEnergyMax
+	value = value:mmgsiege_max_transferable_to_local_stockpile_shipping_cost|RESOURCE|energy|SHIPPING_COST|@base_shipping_cost|ENERGY|yes|
+}
+defined_text = {
+	name = MmgsiegeShippingCostMineralsMax
+	value = value:mmgsiege_max_transferable_to_local_stockpile_shipping_cost|RESOURCE|minerals|SHIPPING_COST|@base_shipping_cost|ENERGY|no|
+}
+defined_text = {
+	name = MmgsiegeShippingCostFoodMax
+	value = value:mmgsiege_max_transferable_to_local_stockpile_shipping_cost|RESOURCE|food|SHIPPING_COST|@base_shipping_cost|ENERGY|no|
+}
+defined_text = {
+	name = MmgsiegeShippingCostConsumerGoodsMax
+	value = value:mmgsiege_max_transferable_to_local_stockpile_shipping_cost|RESOURCE|consumer_goods|SHIPPING_COST|@adv_shipping_cost|ENERGY|no|
+}
+
+defined_text = {
+	name = MmgsiegeEnergyBudgetShippingCost
+	value = value:shipping_cost|balance|mmgsiege_energy_stockpile_budget|shipping_cost|@base_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeMineralsBudgetShippingCost
+	value = value:shipping_cost|balance|mmgsiege_minerals_stockpile_budget|shipping_cost|@base_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeFoodBudgetShippingCost
+	value = value:shipping_cost|balance|mmgsiege_food_stockpile_budget|shipping_cost|@base_shipping_cost|
+}
+defined_text = {
+	name = MmgsiegeConsumerGoodsBudgetShippingCost
+	value = value:shipping_cost|balance|mmgsiege_consumer_goods_stockpile_budget|shipping_cost|@base_shipping_cost|
+}

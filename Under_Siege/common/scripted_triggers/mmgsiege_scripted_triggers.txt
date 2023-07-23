@@ -192,3 +192,21 @@ mmgsiege_is_other_army = {
 		army_type = shroud_army
 	}
 }
+
+mmgsiege_is_capital_or_orbits_capital = {
+	OR = {
+		is_capital = yes
+		AND = {
+			exists = orbit
+			orbit = {
+				is_capital = yes
+			}
+		}
+		AND = {
+			exists = orbit.orbit
+			orbit.orbit = {
+				is_capital = yes
+			}
+		}
+	}
+}

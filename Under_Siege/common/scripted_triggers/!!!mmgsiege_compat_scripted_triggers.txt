@@ -1,0 +1,3 @@
+roci_shipping_module_active = {
+	always = no
+}

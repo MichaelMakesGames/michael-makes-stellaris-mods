@@ -36,6 +36,12 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
   [*] For Stellaris 3.8.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
+  [*] Advanced integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2670609971]Rise of Cosmic Industry[/url]
+  [list]
+    [*] Shortages affect Autofab production
+    [*] Pay shipping costs to transfer resources to local stockpiles
+    [*] Planets do not pay shipping costs while under siege
+  [/list]
   [*] Should be compatible with all other mods
   [list]
     [*] Exception: This mod overwrites a few war priority defines, and will have minor conflicts with other mods that do that. StarNet/StarTech is compatible (its changes will take precedence)

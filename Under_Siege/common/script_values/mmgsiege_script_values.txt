@@ -269,3 +269,85 @@ mmgsiege_stockpile_maximum_from_buildings = {
 		mult = $MULT$
 	}
 }
+
+mmgsiege_max_transferable_to_local_stockpile_shipping_cost = {
+	base = 0
+	add = value:mmgsiege_max_transferable_to_local_stockpile|RESOURCE|$RESOURCE$|SHIPPING_COST|$SHIPPING_COST$|ENERGY|$ENERGY$|
+	multiply = value:shipping_cost|balance|1|shipping_cost|$SHIPPING_COST$|
+}
+
+mmgsiege_max_transferable_to_local_stockpile = {
+	base = 0
+	# start with amount in empire stockpile
+	complex_trigger_modifier = {
+		trigger = resource_stockpile_compare
+		trigger_scope = owner
+		parameters = { resource = $RESOURCE$ }
+		mode = add
+	}
+	# special case for energy, since energy is used to pay for shipping cost:
+	# X is amount transferred, R is shipping cost rate, S is current energy stockpile
+	# X + HX = S
+	# X (1 + H) = S
+	# X = S / (1 + H)
+	modifier = {
+		divide = value:mmgsiege_one_plus_shipping_cost|SHIPPING_COST|$SHIPPING_COST$|
+		roci_shipping_module_active = yes
+		always = $ENERGY$
+	}
+	# handle shipping cost for resources other than energy
+	modifier = {
+		max = value:mmgsiege_max_can_pay_shipping_cost|SHIPPING_COST|$SHIPPING_COST$|
+		roci_shipping_module_active = yes
+	}
+	# available capacity
+	max = value:mmgsiege_available_stockpile|RESOURCE|$RESOURCE$|
+	# max parameter
+	[[MAX] max = $MAX$]
+	# min and floor
+	min = 0
+	floor = yes
+}
+
+mmgsiege_max_can_pay_shipping_cost = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = resource_stockpile_compare
+		trigger_scope = owner
+		parameters = { resource = energy }
+		mode = add
+	}
+	divide = value:shipping_cost|balance|1|shipping_cost|$SHIPPING_COST$|
+	modifier = {
+		multiply = 2
+		mmgsiege_is_capital_or_orbits_capital = yes
+	}
+}
+
+mmgsiege_one_plus_shipping_cost = {
+	base = 0
+	add = value:shipping_cost|balance|1|shipping_cost|$SHIPPING_COST$|
+	modifier = {
+		multiply = 0.5
+		mmgsiege_is_capital_or_orbits_capital = yes
+	}
+	add = 1
+}
+
+mmgsiege_shipping_cost_capital_sensitive = {
+	base = 0
+	add = value:shipping_cost|balance|$BALANCE$|shipping_cost|$SHIPPING_COST$|
+	modifier = {
+		multiply = 0.5
+		mmgsiege_is_capital_or_orbits_capital = yes
+	}
+}
+
+mmgsiege_available_stockpile = {
+	base = 0
+	add = value:mmgsiege_stockpile_maximum
+	modifier = {
+		subtract = mmgsiege_$RESOURCE$_stockpile
+		is_variable_set = mmgsiege_$RESOURCE$_stockpile
+	}
+}

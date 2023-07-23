@@ -149,3 +149,11 @@ mmgsiege_consumer_goods_budget_value = {
 		# dumby effect, do nothing
 	}
 }
+
+mmgsiege_budget_shipping_cost = {
+	potential = { roci_shipping_module_active = yes }
+	allow = { always = yes }
+	effect = {
+		# dumby effect, do nothing
+	}
+}

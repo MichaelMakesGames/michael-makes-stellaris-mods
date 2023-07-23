@@ -13,6 +13,7 @@ on_game_start_country = {
 on_single_player_save_game_load = {
 	events = {
 		mmgsiege_stockpile_automation.502 # set default budget
+		mmgsiege_stockpile_automation.511 # clean up mmgsiege_stockpile_automation_open
 	}
 }
 

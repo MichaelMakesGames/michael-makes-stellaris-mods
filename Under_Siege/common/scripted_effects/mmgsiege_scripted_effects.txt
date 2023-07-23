@@ -470,55 +470,12 @@ mmgsiege_increase_local_stockpile = {
 				value = 0
 			}
 		}
-		# don't spend more than is in empire stockpile
-		if = {
-			limit = {
-				owner = {
-					resource_stockpile_compare = {
-						resource = $RESOURCE$
-						value < prev.mmgsiege_$RESOURCE$_stockpile_add
-					}
-				}
-			}
-			owner = {
-				export_resource_stockpile_to_variable = {
-					resource = $RESOURCE$
-					variable = mmgsiege_$RESOURCE$_empire_stockpile
-				}
-			}
-			set_variable = {
-				which = mmgsiege_$RESOURCE$_stockpile_add
-				value = owner.mmgsiege_$RESOURCE$_empire_stockpile
-			}
-			floor_variable = mmgsiege_$RESOURCE$_stockpile_add
-			owner = {
-				clear_variable = mmgsiege_$RESOURCE$_empire_stockpile
-			}
-		}
-		# don't spend more than can fit
+		# don't spend more than can fit and be afforded
 		set_variable = {
-			which = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
-			value = value:mmgsiege_stockpile_maximum
+			which = mmgsiege_$RESOURCE$_stockpile_add
+			value = value:mmgsiege_max_transferable_to_local_stockpile|RESOURCE|$RESOURCE$|SHIPPING_COST|$SHIPPING_COST$|ENERGY|$ENERGY$|MAX|$AMOUNT$|
 		}
-		subtract_variable = {
-			which = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
-			value = mmgsiege_$RESOURCE$_stockpile
-		}
-		if = {
-			limit = {
-				check_variable = {
-					which = mmgsiege_$RESOURCE$_stockpile_add
-					value > mmgsiege_$RESOURCE$_stockpile_remaining_capacity
-				}
-			}
-			set_variable = {
-				which = mmgsiege_$RESOURCE$_stockpile_add
-				value = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
-			}
-		}
-		clear_variable = mmgsiege_$RESOURCE$_stockpile_remaining_capacity
-		# finally
-		# add to stockpile
+		# add to local stockpile
 		change_variable = {
 			which = mmgsiege_$RESOURCE$_stockpile
 			value = mmgsiege_$RESOURCE$_stockpile_add
@@ -528,6 +485,14 @@ mmgsiege_increase_local_stockpile = {
 			add_resource = {
 				$RESOURCE$ = -1
 				mult = prev.mmgsiege_$RESOURCE$_stockpile_add
+			}
+			# pay for shipping
+			if = {
+				limit = { roci_shipping_module_active = yes }
+				add_resource = {
+					energy = -1
+					mult = prev.value:shipping_cost|balance|mmgsiege_$RESOURCE$_stockpile_add|shipping_cost|$SHIPPING_COST$|
+				}
 			}
 		}
 		# and clear temp variable
@@ -613,38 +578,11 @@ mmgsiege_max_stockpile = {
 				which = mmgsiege_$RESOURCE$_amount_to_stockpile
 				value = mmgsiege_$RESOURCE$_stockpile
 			}
-			# don't spend more than available in empire stockpile
-			owner = {
-				export_resource_stockpile_to_variable = {
-					resource = $RESOURCE$
-					variable = mmgsiege_$RESOURCE$_empire_stockpile
-				}
-			}
-			if = {
-				limit = {
-					check_variable = {
-						which = mmgsiege_$RESOURCE$_amount_to_stockpile
-						value > owner.mmgsiege_$RESOURCE$_empire_stockpile
-					}
-				}
-				set_variable = {
-					which = mmgsiege_$RESOURCE$_amount_to_stockpile
-					value = owner.mmgsiege_$RESOURCE$_empire_stockpile
-				}
-				floor_variable = mmgsiege_$RESOURCE$_amount_to_stockpile
-			}
-			# update stockpile
-			change_variable = {
-				which = mmgsiege_$RESOURCE$_stockpile
-				value = mmgsiege_$RESOURCE$_amount_to_stockpile
-			}
-			# spend resource and clean variables
-			owner = {
-				add_resource = {
-					$RESOURCE$ = -1
-					mult = prev.mmgsiege_$RESOURCE$_amount_to_stockpile
-				}
-				clear_variable = mmgsiege_$RESOURCE$_empire_stockpile
+			mmgsiege_increase_local_stockpile = {
+				RESOURCE = $RESOURCE$
+				AMOUNT = mmgsiege_$RESOURCE$_amount_to_stockpile
+				SHIPPING_COST = $SHIPPING_COST$
+				ENERGY = $ENERGY$
 			}
 			clear_variable = mmgsiege_$RESOURCE$_amount_to_stockpile
 		}
@@ -689,6 +627,7 @@ mmgsiege_increase_stockpile_budget = {
 	}
 
 	mmgsiege_set_stockpile_budget_from_percent = { RESOURCE = $RESOURCE$ }
+	mmgsiege_calculate_stockpile_budget_shipping_cost = yes
 	mmgsiege_toggle_stockpile_automation_alt = yes
 }
 
@@ -735,6 +674,88 @@ mmgsiege_toggle_stockpile_automation_alt = {
 	} else = {
 		set_country_flag = mmgsiege_stockpile_automation_alt
 	}
+}
+
+mmgsiege_calculate_stockpile_budget_shipping_cost = {
+	set_variable = {
+		which = mmgsiege_stockpile_budget_shipping_cost
+		value = 0
+	}
+	change_variable = {
+		which = mmgsiege_stockpile_budget_shipping_cost
+		value = value:shipping_cost|balance|mmgsiege_energy_stockpile_budget|shipping_cost|@base_shipping_cost|
+	}
+	change_variable = {
+		which = mmgsiege_stockpile_budget_shipping_cost
+		value = value:shipping_cost|balance|mmgsiege_minerals_stockpile_budget|shipping_cost|@base_shipping_cost|
+	}
+	change_variable = {
+		which = mmgsiege_stockpile_budget_shipping_cost
+		value = value:shipping_cost|balance|mmgsiege_food_stockpile_budget|shipping_cost|@base_shipping_cost|
+	}
+	change_variable = {
+		which = mmgsiege_stockpile_budget_shipping_cost
+		value = value:shipping_cost|balance|mmgsiege_consumer_goods_stockpile_budget|shipping_cost|@adv_shipping_cost|
+	}
+}
+
+# AI spends at most 50% of energy income on stockpile budget shipping
+mmgsiege_scale_ai_budget_by_shipping_cost = {
+	export_trigger_value_to_variable = {
+		trigger = resource_income_compare
+		parameters = { resource = energy }
+		variable = mmgsiege_ai_stockpile_budget_scale
+	}
+	multiply_variable = {
+		which = mmgsiege_ai_stockpile_budget_scale
+		value = 0.5
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = mmgsiege_ai_stockpile_budget_scale
+				value < 0
+			}
+		}
+		set_variable = {
+			which = mmgsiege_ai_stockpile_budget_scale
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = mmgsiege_stockpile_budget_shipping_cost
+				value > mmgsiege_ai_stockpile_budget_scale
+			}
+		}
+		divide_variable = {
+			which = mmgsiege_ai_stockpile_budget_scale
+			value = mmgsiege_stockpile_budget_shipping_cost
+		}
+		multiply_variable = {
+			which = mmgsiege_energy_stockpile_budget
+			value = mmgsiege_ai_stockpile_budget_scale
+		}
+		round_variable = mmgsiege_energy_stockpile_budget
+		multiply_variable = {
+			which = mmgsiege_minerals_stockpile_budget
+			value = mmgsiege_ai_stockpile_budget_scale
+		}
+		round_variable = mmgsiege_minerals_stockpile_budget
+		multiply_variable = {
+			which = mmgsiege_food_stockpile_budget
+			value = mmgsiege_ai_stockpile_budget_scale
+		}
+		round_variable = mmgsiege_food_stockpile_budget
+		multiply_variable = {
+			which = mmgsiege_consumer_goods_stockpile_budget
+			value = mmgsiege_ai_stockpile_budget_scale
+		}
+		round_variable = mmgsiege_consumer_goods_stockpile_budget
+		mmgsiege_calculate_stockpile_budget_shipping_cost = yes
+	}
+	clear_variable = mmgsiege_ai_stockpile_budget_scale
 }
 
 mmgsiege_allocate_stockpile_budget = {
@@ -859,13 +880,27 @@ mmgsiege_allocate_stockpile_budget = {
 						value = prev.mmgsiege_$RESOURCE$_to_stockpile
 					}
 				}
+				# refund half shipping cost if capital
+				if = {
+					limit = {
+						mmgsiege_is_capital_or_orbits_capital = yes
+						roci_shipping_module_active = yes
+					}
+					owner = {
+						add_resource = {
+							energy = 0.5
+							multiplier = prev.value:shipping_cost|balance|mmgsiege_$RESOURCE$_stockpile_budget_unallocated|shipping_cost|$SHIPPING_COST$|
+						}
+					}
+				}
+				# cleanup
 				clear_variable = mmgsiege_$RESOURCE$_to_stockpile
 				# recalc priority
 				mmgsiege_calculate_stockpile_priority = { RESOURCE = $RESOURCE$ }
 			}
 		} # end main loop
 
-		# if there's any unallocated budget left
+		# refund if there's any unallocated budget left
 		# player only (AI hasn't payed yet)
 		if = {
 			limit = {
@@ -878,6 +913,14 @@ mmgsiege_allocate_stockpile_budget = {
 			add_resource = {
 				$RESOURCE$ = 1
 				multiplier = mmgsiege_$RESOURCE$_stockpile_budget_unallocated
+			}
+			# refund roci shipping
+			if = {
+				limit = { roci_shipping_module_active = yes }
+				add_resource = {
+					energy = 1
+					multiplier = value:shipping_cost|balance|mmgsiege_$RESOURCE$_stockpile_budget_unallocated|shipping_cost|$SHIPPING_COST$|
+				}
 			}
 		}
 		# charge the AI (player is charged by the edict)
@@ -900,6 +943,14 @@ mmgsiege_allocate_stockpile_budget = {
 			add_resource = {
 				$RESOURCE$ = -1
 				multiplier = mmgsiege_$RESOURCE$_stockpile_budget_used
+			}
+			# charge roci shipping
+			if = {
+				limit = { roci_shipping_module_active = yes }
+				add_resource = {
+					energy = -1
+					multiplier = value:shipping_cost|balance|mmgsiege_$RESOURCE$_stockpile_budget_used|shipping_cost|$SHIPPING_COST$|
+				}
 			}
 			clear_variable = mmgsiege_$RESOURCE$_stockpile_budget_used
 		}
