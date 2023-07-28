@@ -12,5 +12,12 @@ event = {
 				mmgfhp_convert_planet = yes
 			}
 		}
+		every_system = {
+			limit = { has_special_star_flag_trigger = no }
+			random = {
+				chance = 75
+				remove_system_terraforming_candidates = yes
+			}
+		}
 	}
 }
