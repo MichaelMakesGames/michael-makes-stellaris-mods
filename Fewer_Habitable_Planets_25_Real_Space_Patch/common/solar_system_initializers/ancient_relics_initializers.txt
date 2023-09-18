@@ -172,7 +172,7 @@ relic_system_1 = {
 	}
 }
 
-### Zrocursor Home System
+# Zrocursor Home System
 Zrocursor_system = {
 	name = "NAME_Zron"
 	class = "sc_f"
@@ -615,7 +615,6 @@ relic_system_4 = {
 			clear_deposits = yes
 			relic_world_deposits = yes
 			create_archaeological_site = omnirelic_site
-			
 		}
 
 		moon = {
@@ -819,11 +818,10 @@ last_baol_system = {
 	}
 }
 
-####### The Planetary Mechanocalibrator #######
-
+# The Planetary Mechanocalibrator
 mechanocalibrator_system = {
 	class = "sc_binary_10"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 90000

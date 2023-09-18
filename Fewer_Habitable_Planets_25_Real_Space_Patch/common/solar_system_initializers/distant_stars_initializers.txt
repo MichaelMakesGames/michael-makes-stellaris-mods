@@ -343,19 +343,19 @@ big_rip_system = {
 	class = sc_f
 	usage = misc_system_init
 	usage_odds = {
-	    base = 90000
-	    modifier = {
-	        factor = 0
-	        has_distar = no
-	    }
-	    modifier = {
-	        factor = 0
-	        is_fe_cluster = yes
-	    }
+		base = 90000
 		modifier = {
-	        factor = 0
-	        has_star_flag = empire_cluster
-	    }
+			factor = 0
+			has_distar = no
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 	max_instances = 1
 	scaled_spawn_chance = 2 # OVERWRITE (from 8)
@@ -405,7 +405,6 @@ big_rip_system = {
 	}
 }
 
-
 time_loop_world_system = {
 	class = sc_b
 	prevent_anomalies = yes
@@ -424,6 +423,10 @@ time_loop_world_system = {
 		modifier = {
 			factor = 0
 			has_star_flag = empire_cluster
+		}
+		modifier = {
+			factor = 0
+			blocks_disruptive_gameplay = yes
 		}
 	}
 	max_instances = 1
@@ -593,9 +596,9 @@ toxic_planet_toxic_moon = {
 			has_distar = no
 		}
 		modifier = {
-	        factor = 0
-	        has_star_flag = empire_cluster
-	    }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	max_instances = 1
@@ -1241,6 +1244,7 @@ hostile_init_amoeba = {
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 100
+						set_fleet_flag = is_garrison_fleet
 					}
 				}
 			}
@@ -1264,9 +1268,9 @@ hostile_init_void_cloud = {
 			is_bottleneck_system = yes
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-	    }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
 	flags = { hostile_system void3_system }
@@ -3438,7 +3442,7 @@ living_planet_system = {
 
 # Elderly Tiyanki System
 elderly_tiyanki_system = {
-	class = "rl_misc_stars"
+	class = "rl_standard_stars"
 
 	usage = misc_system_init
 	usage_odds = {
@@ -4480,7 +4484,7 @@ ratling_1_3 = {
 	}
 }
 
-# Simple System: Crystals (Free Feature)
+# Simple System: Crystals
 distar_crystal_system = {
 	class = "sc_b"
 
@@ -4595,7 +4599,7 @@ distar_crystal_system = {
 
 # Sealed System Entry Point
 distar_sealed_1_1 = {
-	class = "rl_misc_stars"
+	class = "rl_standard_stars"
 
 	flags = { sealed_entry_system }
 
@@ -5161,9 +5165,8 @@ distantstars_init_00 = {
 distantstars_init_06 = {
 	class = sc_black_hole
 
-
 	flags = { hostile_system lgate lgate_guaranteed }
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 0

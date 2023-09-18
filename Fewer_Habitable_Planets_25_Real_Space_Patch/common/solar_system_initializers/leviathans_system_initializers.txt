@@ -190,13 +190,13 @@ guardians_artist_init_01 = {
 		orbit_angle = { min = 90 max = 270 }
 		size = 45
 	}
-	
+
 	init_effect = {
 		###
 	}
 }
 
-# Artists II 
+# Artists II
 guardians_artist_init_02 = {
 	class = "rl_standard_stars"
 	usage = misc_system_init
@@ -217,7 +217,6 @@ guardians_artist_init_02 = {
 	}
 
 	max_instances = 1
-	#spawn_chance = 100
 	scaled_spawn_chance = 16	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_artists_system enclave }
@@ -602,8 +601,6 @@ guardians_curator_init_01 = {
 	}
 
 	max_instances = 1
-	#spawn_chance = 100
-	#sigma (2) always spawns
 	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_curators_system enclave }
@@ -626,7 +623,6 @@ guardians_curator_init_01 = {
 						ideal_planet_class = pc_habitat
 						trait = random_traits
 					}
-					#homeworld = this
 				}
 				create_country = {
 					name = "NAME_Curator_Order"
@@ -773,7 +769,6 @@ guardians_curator_init_02 = {
 
 	max_instances = 1
 	spawn_chance = 100
-	#scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_curators_system enclave }
 
@@ -918,7 +913,6 @@ guardians_curator_init_03 = {
 	}
 
 	max_instances = 1
-	#spawn_chance = 100
 	scaled_spawn_chance = 16	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_curators_system enclave }
@@ -1297,7 +1291,6 @@ guardians_trader_init_02 = {
 	}
 
 	max_instances = 1
-	#spawn_chance = 100
 	scaled_spawn_chance = 16	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_traders_system enclave }
@@ -1501,7 +1494,6 @@ guardians_trader_init_03 = {
 	}
 
 	max_instances = 1
-	#spawn_chance = 100
 	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
 
 	flags = { guardians_traders_system enclave }
@@ -1731,7 +1723,7 @@ guardians_init_stellarites = {
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = 10 max = 25 }
 		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -2595,7 +2587,6 @@ guardians_init_technosphere = {
 
 		init_effect = {
 			set_name = "NAME_Gargantua"
-			#change_planet_size = 20
 			prevent_anomaly = yes
 		}
 	}

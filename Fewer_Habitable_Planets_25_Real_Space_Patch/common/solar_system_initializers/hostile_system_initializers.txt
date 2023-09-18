@@ -2,9 +2,8 @@
 # Crystal Entities - Blue
 hostile_init_01 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
-	#usage_odds = 2
 	usage_odds = {
 		base = 6 #4
 		modifier = {
@@ -12,17 +11,17 @@ hostile_init_01 = {
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
+
 	max_instances = 1
-	flags = { hostile_system blue_system shield_system }
+	flags = { hostile_system blue_system shield_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -234,7 +233,7 @@ hostile_init_01 = {
 # Crystal Entities - Blue VARIATION
 hostile_init_02 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 3 #2
@@ -243,16 +242,16 @@ hostile_init_02 = {
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
-	flags = { hostile_system blue2_system }
+
+	flags = { hostile_system blue2_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -262,9 +261,9 @@ hostile_init_02 = {
 		size = { min = @standard_min max = @standard_max }
 		has_ring = no
 	}
-	
+
 	change_orbit = { min = 30 max = 60 }
-	
+
 	planet = {
 		count = 1
 		orbit_angle = { min = 90 max = 270 }
@@ -515,7 +514,7 @@ hostile_init_02 = {
 # Crystal Entities - Green (Patrol)
 hostile_init_03 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 2 #1
@@ -535,8 +534,8 @@ hostile_init_03 = {
 
 	max_instances = 1
 
-	flags = { hostile_system green_system }
-	
+	flags = { hostile_system green_system space_critter_system }
+
 	planet = {
 		count = 1
 		class = star
@@ -789,7 +788,7 @@ hostile_init_03 = {
 # Crystal Entities - Green (Patrol) VARIATION
 hostile_init_04 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 3 #2
@@ -799,15 +798,15 @@ hostile_init_04 = {
 		}
 		modifier = {
             factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
-	flags = { hostile_system green2_system }
+
+	flags = { hostile_system green2_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -1070,7 +1069,7 @@ hostile_init_04 = {
 # Crystal Entities - Red
 hostile_init_05 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 3 #2
@@ -1080,15 +1079,15 @@ hostile_init_05 = {
 		}
 		modifier = {
             factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
-	flags = { hostile_system red_system }
+
+	flags = { hostile_system red_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -1368,7 +1367,7 @@ hostile_init_05 = {
 # Crystal Entities - Red VARIATION
 hostile_init_06 = {
 	class = "rl_standard_stars"
-	
+
 	spawn_chance = 25 # OVERWRITE (added)
 	usage = misc_system_init
 	usage_odds = {
@@ -1378,17 +1377,17 @@ hostile_init_06 = {
 			NOT = { is_in_cluster = resource_cluster_1 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
+
 	max_instances = 1
-	flags = { hostile_system red2_system }
+	flags = { hostile_system red2_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -1754,9 +1753,9 @@ hostile_init_07 = {
 
 	max_instances = 1
 	spawn_chance = 100
-	
-	flags = { hostile_system elite_system crystal_home_system }
-	
+
+	flags = { hostile_system elite_system crystal_home_system space_critter_system }
+
 	planet = {
 		class = star
 		orbit_distance = 0
@@ -2091,7 +2090,7 @@ hostile_init_08 = {
 		type = rocky_asteroid_belt
 		radius = 90
 	}
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -2100,17 +2099,17 @@ hostile_init_08 = {
 			NOT = { is_in_cluster = resource_cluster_2 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
+
 	flags = { hostile_system void_system }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -2247,7 +2246,7 @@ hostile_init_08 = {
 # Space Amoeba, Large pack
 hostile_init_10 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -2257,15 +2256,15 @@ hostile_init_10 = {
 		}
 		modifier = {
             factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
-	flags = { hostile_system amoeba_1_system }
+
+	flags = { hostile_system amoeba_1_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -2450,6 +2449,7 @@ hostile_init_10 = {
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 100
+						set_fleet_flag = is_garrison_fleet
 					}
 				}
 			}
@@ -2460,7 +2460,7 @@ hostile_init_10 = {
 # Space Amoeba, Small pack
 hostile_init_10_small_amoeba_pack = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -2469,12 +2469,12 @@ hostile_init_10_small_amoeba_pack = {
 			NOT = { is_in_cluster = resource_cluster_3 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
-	
-	flags = { hostile_system amoeba_2_system }
+
+	flags = { hostile_system amoeba_2_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -2658,6 +2658,7 @@ hostile_init_10_small_amoeba_pack = {
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 100
+						set_fleet_flag = is_garrison_fleet
 					}
 				}
 			}
@@ -2668,7 +2669,7 @@ hostile_init_10_small_amoeba_pack = {
 # Space Amoeba ROAMING VARIATION
 hostile_init_11 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -2677,13 +2678,13 @@ hostile_init_11 = {
 			NOT = { is_in_cluster = resource_cluster_3 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
-	
-	flags = { hostile_system amoeba_3_system }
-	
+
+	flags = { hostile_system amoeba_3_system space_critter_system }
+
 	planet = {
 		count = 1
 		class = star
@@ -2872,6 +2873,7 @@ hostile_init_11 = {
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = self
 						set_aggro_range = 20
+						set_fleet_flag = NAME_Space_Amoeba_Hunters
 
 						if = {
 							limit = { has_fleet_flag = tiyanki_hunter }
@@ -2905,7 +2907,7 @@ hostile_init_12 = {
 		type = rocky_asteroid_belt
 		radius = 95
 	}
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -2914,13 +2916,13 @@ hostile_init_12 = {
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
-	
+
 	flags = { hostile_system drone_system_1 }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -3086,7 +3088,7 @@ hostile_init_12_mining_drones = {
 		type = rocky_asteroid_belt
 		radius = 95
 	}
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -3095,13 +3097,13 @@ hostile_init_12_mining_drones = {
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
-	
+
 	flags = { hostile_system drone_system_2 }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -3274,7 +3276,7 @@ hostile_init_12_drone_destroyer = {
 		type = rocky_asteroid_belt
 		radius = 95
 	}
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 2 #1
@@ -3284,16 +3286,16 @@ hostile_init_12_drone_destroyer = {
 		}
 		modifier = {
             factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
 	}
-	
+
 	flags = { hostile_system drone_destroyer_system }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -3464,13 +3466,13 @@ hostile_init_13 = {
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
-	
+
 	flags = { hostile_system drone_system_3 }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -3666,7 +3668,7 @@ hostile_init_14 = {
 		type = rocky_asteroid_belt
 		radius = 120
 	}
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 15 #10
@@ -3675,10 +3677,10 @@ hostile_init_14 = {
 			NOT = { is_in_cluster = resource_cluster_4 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
@@ -3686,9 +3688,9 @@ hostile_init_14 = {
 
 	max_instances = 1
 	spawn_chance = 100
-	
+
 	flags = { hostile_system drone_home_system }
-	
+
 	planet = {
 		count = 1
 		class = star
@@ -3830,7 +3832,7 @@ hostile_init_14 = {
 # Tiyanki
 hostile_init_15 = {
 	class = "rl_standard_stars"
-	
+
 	usage = misc_system_init
 	usage_odds = {
 		base = 6 #4
@@ -3839,13 +3841,13 @@ hostile_init_15 = {
 			NOT = { is_in_cluster = resource_cluster_5 }
 		}
 		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
+			factor = 0
+			has_star_flag = empire_cluster
+		}
 	}
 
-	flags = { tiyanki_home_system }
-	
+	flags = { tiyanki_home_system space_critter_system }
+
 	planet = {
 		count = 1
 		class = star
@@ -3949,7 +3951,7 @@ hostile_init_16 = {
 	}
 	max_instances = 1
 
-	flags = { tiyanki_spawn_system }
+	flags = { tiyanki_spawn_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -4082,7 +4084,7 @@ hostile_init_16 = {
 	}
 }
 
-### Privateer Conglomerate
+# Privateer Conglomerate
 hostile_init_18 = {
 	class = "rl_standard_stars"
 	asteroid_belt = {
@@ -4098,13 +4100,13 @@ hostile_init_18 = {
 			NOT = { is_in_cluster = resource_cluster_0 }
 		}
 		modifier = {
-            factor = 0
-            OR = {
+			factor = 0
+			OR = {
 				has_star_flag = empire_cluster
 				host_has_dlc = "Apocalypse"
 			}
-        }
-        modifier = {
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
@@ -4273,7 +4275,6 @@ hostile_init_18 = {
 	}
 }
 
-
 # Amoeba Home System
 hostile_init_20 = {
 	class = "rl_trinary_stars"
@@ -4283,14 +4284,14 @@ hostile_init_20 = {
 	usage_odds = {
 		base = 5000
 		modifier = {
-            factor = 0
-            OR = {
+			factor = 0
+			OR = {
 				has_star_flag = empire_cluster
 				is_fe_cluster = yes
 				is_marauder_cluster = yes
 			}
-        }
-        modifier = {
+		}
+		modifier = {
 			factor = 0
 			is_bottleneck_system = yes
 		}
@@ -4300,7 +4301,7 @@ hostile_init_20 = {
 	inner_radius_offset = 100
 	outer_radius_offset = 100
 
-	flags = { hostile_system amoeba_home_system }
+	flags = { hostile_system amoeba_home_system space_critter_system }
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -4311,13 +4312,13 @@ hostile_init_20 = {
 		radius = 280
 	}
 
-    planet = {
-        count = 1
-        class = pc_b_star
+	planet = {
+		count = 1
+		class = pc_b_star
 		name = "NAME_Amor_Alveo"
-        orbit_distance = 25
-        orbit_angle = 0
-        size = 36
+		orbit_distance = 25
+		orbit_angle = 0
+		size = 36
 		has_ring = no
 
 		init_effect = {
@@ -4419,7 +4420,7 @@ hostile_init_20 = {
 		name = "NAME_Tharonax"
 		orbit_distance = 12
         orbit_angle = 98
-		
+
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -4432,7 +4433,7 @@ hostile_init_20 = {
 		name = "NAME_Narnax"
 		orbit_distance = 12
         orbit_angle = 128
-		
+
 		init_effect = {
 			prevent_anomaly = yes
 		}
@@ -4579,7 +4580,6 @@ hostile_init_20 = {
 	}
 }
 
-
 # Tiyanki graveyard
 hostile_init_21 = {
 	name = "NAME_Tiyun_Ort"
@@ -4603,7 +4603,7 @@ hostile_init_21 = {
 	}
 
 	max_instances = 1
-	flags = { tiyanki_graveyard_system }
+	flags = { tiyanki_graveyard_system space_critter_system }
 
 	planet = {
 		count = 1
@@ -4728,7 +4728,7 @@ hostile_init_21 = {
 	}
 }
 
-
+# Mining Drones 4
 hostile_init_22 = {
 	name = NAME_Klendath
 	class = "rl_standard_stars"
@@ -4754,8 +4754,6 @@ hostile_init_22 = {
 	}
 
 	max_instances = 1
-	init_effect = {
-	}
 
 	planet = {
 		class = star
