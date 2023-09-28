@@ -886,15 +886,6 @@ void_dweller_system = {
 			init_effect = {
 				set_deposit = d_minerals_4
 			}
-
-			moon = {
-				class = pc_habitat
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 5
-				size = 6
-				flags = { void_dweller_habitat_2 megastructure habitat mining_habitat }
-				deposit_blockers = none
-			}
 		}
 
 		 planet = {
@@ -976,16 +967,7 @@ void_dweller_system = {
 			flags = { ignore_startup_effect habitat_3_planet has_megastructure }
 
 			init_effect = {
-				set_deposit = d_energy_6
-			}
-
-			moon = {
-				class = pc_habitat
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 5
-				size = 6
-				flags = { void_dweller_habitat_3 megastructure habitat energy_habitat }
-				deposit_blockers = none
+				set_deposit = d_energy_4
 			}
 		}
 	}
@@ -1022,7 +1004,7 @@ void_dweller_system = {
 		name = "NAME_The_Fragments"
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = 16 max = 20 }
-		flags = { ignore_startup_effect has_megastructure }
+		flags = { ignore_startup_effect has_megastructure habitat_1_planet }
 
 		init_effect = {
 			set_deposit = d_physics_3
@@ -1034,7 +1016,7 @@ void_dweller_system = {
 			orbit_distance = 5
 			size = 6
 			starting_planet = yes
-			flags = { void_dweller_habitat_1 special_start_planet megastructure habitat research_habitat }
+			flags = { void_dweller_habitat_1 special_start_planet megastructure habitat }
 			deposit_blockers = none
 		}
 	}
@@ -1065,7 +1047,6 @@ void_dweller_system = {
 		initializer = "neighbor_t1_first_colony"
 	}
 }
-
 
 # Lost Colony Parent System 1
 lost_colony_1 = {
@@ -1507,7 +1488,7 @@ lost_colony_neighbor_t1_first_colony = {
 		
 		change_orbit = @base_moon_distance
 		
-		moon = {			
+		moon = {
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
 		}
