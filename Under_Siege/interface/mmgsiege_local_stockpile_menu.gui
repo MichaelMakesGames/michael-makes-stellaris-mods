@@ -308,7 +308,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_empty_energy_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 17 y = -10 }
+				position = { x = 17 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_empty"
@@ -319,7 +319,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_energy_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 71 y = -10 }
+				position = { x = 71 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-1000"
@@ -330,7 +330,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_energy_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 124 y = -10 }
+				position = { x = 124 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-100"
@@ -341,7 +341,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_energy_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = -10 }
+				position = { x = 162 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-10"
@@ -353,7 +353,7 @@ guiTypes = {
 				name = mmgsiege_energy_stockpile_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = -2 }
+				position = { x = 206 y = -142 }
 				size = { x = 60 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
@@ -365,7 +365,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_energy_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = -10 }
+				position = { x = 256 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+10"
@@ -376,7 +376,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_energy_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 294 y = -10 }
+				position = { x = 294 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+100"
@@ -387,7 +387,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_energy_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 332 y = -10 }
+				position = { x = 332 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+1000"
@@ -398,7 +398,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_max_energy_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 385 y = -10 }
+				position = { x = 385 y = -150 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_max"
@@ -413,7 +413,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_empty_minerals_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 17 y = 20 }
+				position = { x = 17 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_empty"
@@ -424,7 +424,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_minerals_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 71 y = 20 }
+				position = { x = 71 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-1000"
@@ -435,7 +435,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_minerals_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 124 y = 20 }
+				position = { x = 124 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-100"
@@ -446,7 +446,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_minerals_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 20 }
+				position = { x = 162 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-10"
@@ -458,7 +458,7 @@ guiTypes = {
 				name = mmgsiege_minerals_stockpile_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 28 }
+				position = { x = 206 y = -112 }
 				size = { x = 60 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
@@ -470,7 +470,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_minerals_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 20 }
+				position = { x = 256 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+10"
@@ -481,7 +481,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_minerals_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 294 y = 20 }
+				position = { x = 294 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+100"
@@ -492,7 +492,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_minerals_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 332 y = 20 }
+				position = { x = 332 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+1000"
@@ -503,7 +503,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_max_minerals_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 385 y = 20 }
+				position = { x = 385 y = -120 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_max"
@@ -518,7 +518,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_empty_food_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 17 y = 50 }
+				position = { x = 17 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_empty"
@@ -529,7 +529,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_food_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 71 y = 50 }
+				position = { x = 71 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-1000"
@@ -540,7 +540,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_food_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 124 y = 50 }
+				position = { x = 124 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-100"
@@ -551,7 +551,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_food_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 50 }
+				position = { x = 162 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-10"
@@ -563,7 +563,7 @@ guiTypes = {
 				name = mmgsiege_food_stockpile_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 58 }
+				position = { x = 206 y = -82 }
 				size = { x = 60 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
@@ -575,7 +575,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_food_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 50 }
+				position = { x = 256 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+10"
@@ -586,7 +586,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_food_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 294 y = 50 }
+				position = { x = 294 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+100"
@@ -597,7 +597,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_food_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 332 y = 50 }
+				position = { x = 332 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+1000"
@@ -608,7 +608,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_max_food_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 385 y = 50 }
+				position = { x = 385 y = -90 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_max"
@@ -623,7 +623,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_empty_consumer_goods_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 17 y = 80 }
+				position = { x = 17 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_empty"
@@ -634,7 +634,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_consumer_goods_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 71 y = 80 }
+				position = { x = 71 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-1000"
@@ -645,7 +645,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_consumer_goods_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 124 y = 80 }
+				position = { x = 124 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-100"
@@ -656,7 +656,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_decrease_consumer_goods_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 162 y = 80 }
+				position = { x = 162 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "-10"
@@ -668,7 +668,7 @@ guiTypes = {
 				name = mmgsiege_consumer_goods_stockpile_value
 				# quadTextureSprite = "GFX_mmgsiege_bounty_square"
 				quadTextureSprite = "GFX_tiled_window_transparent"
-				position = { x = 206 y = 88 }
+				position = { x = 206 y = -52 }
 				size = { x = 60 y = 32 }
 				scale = 1
 				buttonFont = cg_16b
@@ -680,7 +680,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_consumer_goods_stockpile_10
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 256 y = 80 }
+				position = { x = 256 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+10"
@@ -691,7 +691,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_consumer_goods_stockpile_100
 				quadTextureSprite = "GFX_button_35_24"
-				position = { x = 294 y = 80 }
+				position = { x = 294 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+100"
@@ -702,7 +702,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_increase_consumer_goods_stockpile_1000
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 332 y = 80 }
+				position = { x = 332 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "+1000"
@@ -713,7 +713,7 @@ guiTypes = {
 			effectbuttonType = {
 				name = mmgsiege_max_consumer_goods_stockpile
 				quadTextureSprite = "GFX_button_50_24"
-				position = { x = 385 y = 80 }
+				position = { x = 385 y = -60 }
 				scale = 1
 				buttonFont = cg_16b
 				buttonText = "mmgsiege_stockpile_max"
