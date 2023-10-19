@@ -1,4 +1,4 @@
-Fewer Habitable Planets: 25% (For 3.9.2)
+Fewer Habitable Planets: 25% (For 3.9.3)
 
 Reduces the number of habitable planets from unique and randomly generated systems to 25%. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work...
 
@@ -13,7 +13,7 @@ Want a number other than 25%? Let me know. If there's enough demand, I'll make a
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.9.2
+  [*] For Stellaris 3.9.3
   [*] NOT achievement compatible
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url]
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
