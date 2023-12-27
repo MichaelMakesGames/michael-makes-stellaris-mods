@@ -3,6 +3,7 @@
 @jumps = 3
 @planet_min_size = 10
 @planet_max_size = 25
+@base_moon_distance = 10
 @moon_min_size = 6
 @moon_max_size = 10
 @homeworld_min_size = 18
@@ -30,7 +31,6 @@ hauer_system_initializer = {
 		class = "pc_g_star"
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
 		has_ring = no
 	}
 
@@ -47,7 +47,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Baage"
 		class = random
-		orbit_distance = { min = 15 max = 20 }
+		orbit_distance = 25
 		orbit_angle = -20
 		has_ring = no
 	}
@@ -56,7 +56,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Piyhl"
 		class = random
-		orbit_distance = { min = 20 max = 25 }
+		orbit_distance = 32
 		orbit_angle = -10
 		has_ring = no
 
@@ -104,7 +104,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Straeng"
 		class = random
-		orbit_distance = { min = 25 max = 30 }
+		orbit_distance = 33
 		orbit_angle = -160
 		has_ring = no
 
@@ -129,7 +129,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Bhete"
 		class = random
-		orbit_distance = { min = 30 max = 35 }
+		orbit_distance = 78
 		orbit_angle = 62
 		has_ring = no
 
@@ -144,7 +144,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Floe"
 		class = random
-		orbit_distance = { min = 35 max = 40 }
+		orbit_distance = 6
 		orbit_angle = -39
 		has_ring = no
 	}
@@ -153,7 +153,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Snaara"
 		class = random
-		orbit_distance = { min = 40 max = 50 }
+		orbit_distance = 42
 		orbit_angle = 197
 		has_ring = no
 
@@ -170,7 +170,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Spjuuht"
 		class = random
-		orbit_distance = { min = 50 max = 60 }
+		orbit_distance = 20
 		orbit_angle = -160
 		has_ring = no
 
@@ -186,7 +186,7 @@ hauer_system_initializer = {
 	planet = {
 		name = "NAME_Baelte"
 		class = random
-		orbit_distance = { min = 60 max = 70 }
+		orbit_distance = 9
 		orbit_angle = 115
 		has_ring = no
 	}
@@ -206,47 +206,20 @@ intercepting_history_system_initializer_01 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	# Inner misc. planets
 	planet = {
-		count = 1
+		count = { min = 1 max = 3 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 20 max = 25 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -257,7 +230,7 @@ intercepting_history_system_initializer_01 = {
 	# Abandoned Station planet
 	planet = {
 		count = 1
-		orbit_distance = { min = 25 max = 30 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
@@ -308,40 +281,12 @@ intercepting_history_system_initializer_01 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 1
-		orbit_distance = { min = 30 max = 35 }
+		count = { min = 1 max = 3 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 35 max = 40 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 40 max = 50 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 2 }
 			orbit_angle = { min = 90 max = 270 }
@@ -368,33 +313,20 @@ intercepting_history_system_initializer_02 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	# Inner misc. planets
 	planet = {
-		count = 1
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -405,7 +337,7 @@ intercepting_history_system_initializer_02 = {
 	# Benefactor Homeworld planet
 	planet = {
 		class = "pc_continental"
-		orbit_distance = { min = 20 max = 25 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		size = 25
 		change_orbit = @base_moon_distance
@@ -441,40 +373,12 @@ intercepting_history_system_initializer_02 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 1
-		orbit_distance = { min = 25 max = 30 }
+		count = { min = 2 max = 3 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
-		
+
 		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 30 max = 35 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 35 max = 40 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -501,75 +405,20 @@ relentless_pursuit_system_initializer_01 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	# Inner misc. planets
 	planet = {
-		count = 1
+		count = { min = 2 max = 5 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 15 max = 20 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 20 max = 25 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 25 max = 30 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 30 max = 35 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -580,7 +429,7 @@ relentless_pursuit_system_initializer_01 = {
 	# Abandoned Freighter planet
 	planet = {
 		count = 1
-		orbit_distance = { min = 35 max = 40 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
@@ -618,40 +467,12 @@ relentless_pursuit_system_initializer_01 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 1
-		orbit_distance = { min = 40 max = 50 }
+		count = { min = 2 max = 3 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 50 max = 60 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 60 max = 70 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 2 }
 			orbit_angle = { min = 90 max = 270 }
@@ -678,33 +499,20 @@ relentless_pursuit_system_initializer_02 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	# Inner misc. planets
 	planet = {
-		count = 1
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -715,7 +523,7 @@ relentless_pursuit_system_initializer_02 = {
 	# The Mind-Wipe Satellite planet
 	planet = {
 		count = 1
-		orbit_distance = { min = 20 max = 25 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
@@ -741,7 +549,7 @@ relentless_pursuit_system_initializer_02 = {
 	# Relentless Homeworld planet
 	planet = {
 		class = "pc_tundra"
-		orbit_distance = { min = 25 max = 30 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 		size = 25
 		change_orbit = @base_moon_distance
@@ -777,40 +585,12 @@ relentless_pursuit_system_initializer_02 = {
 
 	# Outer misc. planets
 	planet = {
-		count = 1
-		orbit_distance = { min = 30 max = 35 }
+		count = { min = 2 max = 3 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 35 max = 40 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 40 max = 50 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -840,26 +620,26 @@ void_dweller_system = {
 	}
 
 	planet = {
-        count = 1
-        class = star
-        orbit_distance = 0
-        orbit_angle = 0
-        size = { min = @standard_min max = @standard_max }
-        has_ring = no
-    }
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = { min = 30 max = 35 }
+		has_ring = no
+	}
 
-    planet = {
-        count = 1
-        class = star
-        orbit_distance = 240
-      	orbit_angle = { min = 90 max = 270 }
-        size = { min = @standard_min max = @standard_max }
-        has_ring = no
-        satellite_naming_policy = upper_case_roman_numerals
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 240
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 20 max = 30 }
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
 
-        change_orbit = 30
+		change_orbit = 30
 
-        planet = {
+		planet = {
 			orbit_angle = { min = 90 max = 270 }
 			class = random_non_colonizable
 			orbit_distance = 25
@@ -891,7 +671,7 @@ void_dweller_system = {
 		 planet = {
 			orbit_angle = { min = 90 max = 270 }
 			class = pc_gas_giant
-			orbit_distance = 30
+			orbit_distance = 25
 			satellite_naming_policy = lower_case_latin_letters
 			flags = { ignore_startup_effect mining_planet }
 
@@ -910,18 +690,18 @@ void_dweller_system = {
 		}
 	}
 
-    planet = {
-        count = 1
-        class = star
-        orbit_distance = 0
-        orbit_angle = { min = 90 max = 270 }
-        size = { min = @standard_sat_min max = @standard_sat_max }
-        has_ring = no
-        satellite_naming_policy = upper_case_roman_numerals
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 30 }
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
 
-        change_orbit = 30
+		change_orbit = 30
 
-         planet = {
+		 planet = {
 			orbit_angle = { min = 90 max = 270 }
 			class = random_non_colonizable
 			orbit_distance = 25
@@ -972,9 +752,9 @@ void_dweller_system = {
 		}
 	}
 
-    change_orbit = -210
+	change_orbit = -210
 
-    planet = {
+	planet = {
 		orbit_angle = { min = 90 max = 270 }
 		class = pc_molten
 		orbit_distance = 15
@@ -989,7 +769,7 @@ void_dweller_system = {
 	planet = {
 		orbit_angle = { min = 90 max = 270 }
 		class = random_non_colonizable
-		orbit_distance = 20
+		orbit_distance = 15
 
 		flags = { ignore_startup_effect mining_planet }
 
@@ -999,7 +779,7 @@ void_dweller_system = {
 	}
 
 	planet = {
-		orbit_distance = 25
+		orbit_distance = 20
 		class = pc_shattered
 		name = "NAME_The_Fragments"
 		orbit_angle = { min = 90 max = 270 }
@@ -1022,7 +802,7 @@ void_dweller_system = {
 	}
 
 	planet = {
-		orbit_distance = 30
+		orbit_distance = 20
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
 
@@ -1096,7 +876,7 @@ lost_colony_1 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
@@ -1110,8 +890,8 @@ lost_colony_1 = {
 	}
 
 	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 20 max = 25 }
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
 
@@ -1124,26 +904,10 @@ lost_colony_1 = {
 			orbit_distance = 5
 		}
 	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 25 max = 30 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
 	planet = {
 		count = 1
-		orbit_distance = { min = 30 max = 35 }
+		orbit_distance = 20
 		home_planet = yes
 		class = pc_continental
 		orbit_angle = { min = 90 max = 270 }
@@ -1198,13 +962,13 @@ lost_colony_1 = {
 			orbit_distance = 5
 		}
 	}
-	
+
 	planet = {
-		count = 1
-		orbit_distance = { min = 35 max = 40 }
+		count = { min = 2 max = 4 }
+		orbit_distance = 20
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
-		
+
 		change_orbit = @base_moon_distance
 
 		moon = {
@@ -1214,77 +978,13 @@ lost_colony_1 = {
 			orbit_distance = 5
 		}
 	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 40 max = 45 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
 	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 45 max = 50 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 50 max = 60 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 60 max = 70 }
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 3 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 70 max = 80 }
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
-		
 		change_orbit = @base_moon_distance
 
 		moon = {
@@ -1349,14 +1049,15 @@ lost_colony_neighbor_t1 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	planet = {
-		count = { min = 0 max = 1 }
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
 		change_orbit = @base_moon_distance
 
 		moon = {
@@ -1366,39 +1067,8 @@ lost_colony_neighbor_t1 = {
 	}
 
 	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 20 max = 25 }
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 25 max = 30 }
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 30 max = 40 }
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 40 max = 50 }
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 50 max = 60 }
+		count = { min = 2 max = 5 }
+		orbit_distance = 20
 	}
 
 	init_effect = {
@@ -1428,38 +1098,27 @@ lost_colony_neighbor_t1_first_colony = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 45
 
 	planet = {
-		count = { min = 0 max = 1 }
-		
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+
 		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
 		}
 	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
+
 	planet = {
 		count = 1
-		orbit_distance = { min = 20 max = 25 }
+		orbit_distance = 25
 		class = pc_continental
 		modifiers = none
 		anomaly = none
@@ -1483,60 +1142,12 @@ lost_colony_neighbor_t1_first_colony = {
 	}
 
 	planet = {
-		count = 1
-		orbit_distance = { min = 25 max = 30 }
-		
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+
 		change_orbit = @base_moon_distance
-		
+
 		moon = {
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 30 max = 35 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {			
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 35 max = 40 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {			
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 40 max = 50 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {			
-			count = { min = 0 max = 1 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 50 max = 60 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {			
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
 		}
@@ -1569,26 +1180,21 @@ lost_colony_neighbor_t2_second_colony = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
-	
+	change_orbit = 25
+
 	planet = {
-		count = 1
+		count = 2
 		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
 	}
 
 	planet = {
 		count = 1
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = { min = 15 max = 20 }
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 20 max = 25 }
+		orbit_distance = 25
 		class = pc_continental
 		modifiers = none
 		anomaly = none
@@ -1609,36 +1215,6 @@ lost_colony_neighbor_t2_second_colony = {
 				add_building = building_offspring_nest
 			}
 		}
-		
-		change_orbit = @base_moon_distance	
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = { min = 25 max = 30 }
-		
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = { min = 30 max = 35 }
 
 		change_orbit = @base_moon_distance
 
@@ -1649,17 +1225,26 @@ lost_colony_neighbor_t2_second_colony = {
 			orbit_distance = 5
 		}
 	}
-	
+
 	planet = {
-		count = { min = 0 max = 1 }
+		count = 2
 		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = { min = 35 max = 40 }
+		orbit_distance = 20
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
 	}
-	
+
 	planet = {
-		count = { min = 0 max = 1 }
+		count = { min = 0 max = 2 }
 		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = { min = 40 max = 50 }
+		orbit_distance = 20
 	}
 
 	init_effect = {
@@ -1684,7 +1269,7 @@ scion_fallen_1 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
@@ -1699,7 +1284,7 @@ scion_fallen_1 = {
 
 	planet = {
 		name = "NAME_Great_Nexus"
-		orbit_distance = { min = 15 max = 20 }
+		orbit_distance = 15
 		class = pc_city
 		orbit_angle = { min = 90 max = 270 }
 		size = 20
@@ -1930,7 +1515,7 @@ scion_fallen_2 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
@@ -1944,24 +1529,8 @@ scion_fallen_2 = {
 	}
 
 	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 20 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 15 max = 25 }
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
 
@@ -1977,7 +1546,7 @@ scion_fallen_2 = {
 
 	planet = {
 		name = "NAME_Celestial_Throne"
-		orbit_distance = { min = 25 max = 30 }
+		orbit_distance = 20
 		class = pc_gaia
 		orbit_angle = { min = 90 max = 270 }
 		size = 30
@@ -2128,7 +1697,7 @@ scion_fallen_2 = {
 
 	planet = {
 		name = "NAME_Sky_Temple"
-		orbit_distance = { min = 30 max = 35 }
+		orbit_distance = 30
 		class = pc_gaia
 		orbit_angle = { min = 90 max = 270 }
 		size = 22
@@ -2175,56 +1744,8 @@ scion_fallen_2 = {
 	}
 
 	planet = {
-		count = 1
-		orbit_distance = { min = 35 max = 40 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 40 max = 45 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 45 max = 50 }
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 50 max = 60 }
+		count = { min = 2 max = 4 }
+		orbit_distance = 20
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
 
@@ -2239,24 +1760,8 @@ scion_fallen_2 = {
 	}
 
 	planet = {
-		count = 1
-		orbit_distance = { min = 60 max = 70 }
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 3 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 70 max = 80 }
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
 
@@ -2330,7 +1835,6 @@ shattered_ring_start = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 0
-		size = { min = @standard_min max = @standard_max }
 	}
 
 	change_orbit = 45
@@ -2379,7 +1883,7 @@ shattered_ring_start = {
 		init_effect = {
 			create_ambient_object = {
 				type = "medium_debris_01_object"
-				entity_offset_height = -5
+				entity_offset_height = -15
 				location = this
 			}
 			last_created_ambient_object = {
@@ -2450,103 +1954,20 @@ mega_shipyard_init_01 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
 
-	change_orbit = { min = 40 max = 60 }
+	change_orbit = 35
 
 	# Inner misc. planets
 	planet = {
-		count = 1
+		count = { min = 3 max = 7 }
+		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
 
 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 15 max = 20 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = { min = 20 max = 25 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 25 max = 30 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 30 max = 35 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 35 max = 40 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = { min = 40 max = 50 }
-		orbit_angle = { min = 90 max = 270 }
-		
-		change_orbit = @base_moon_distance
-		
 		moon = {
 			count = { min = 0 max = 2 }
 			orbit_angle = { min = 90 max = 270 }
@@ -2610,7 +2031,7 @@ planet_with_too_many_moons_system = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = @standard_min max = @standard_max }
+		size = { min = 20 max = 30 }
 		has_ring = no
 		init_effect = {
 			save_event_target_as = too_many_moons_system_star
@@ -2835,23 +2256,9 @@ planet_with_too_many_moons_system = {
 	change_orbit = 25
 
 	planet = {
-		count = 1
+		count = 3
 		class = pc_gas_giant
-		orbit_distance = { min = 40 max = 50 }
-		orbit_angle = { min = 35 max = 325 }
-	}
-	
-	planet = {
-		count = 1
-		class = pc_gas_giant
-		orbit_distance = { min = 50 max = 60 }
-		orbit_angle = { min = 35 max = 325 }
-	}
-	
-	planet = {
-		count = 1
-		class = pc_gas_giant
-		orbit_distance = { min = 60 max = 70 }
+		orbit_distance = 45
 		orbit_angle = { min = 35 max = 325 }
 	}
 
@@ -3007,7 +2414,7 @@ wenkwort_initializer = {
 	}
 	flags = { wenkwort_system }
 
-	spawn_chance = 25 # OVERWRITE (added)
+	spawn_chance = 10 # OVERWRITE (added)
 	usage = misc_system_init	#The game can pick this initialiser randomly for misc. purposes, i.e those which have not been initialised by empires or fallen empires
 	usage_odds = {
 		base = 1
@@ -3025,7 +2432,6 @@ wenkwort_initializer = {
 
 	planet = {
 		class = star
-		size = { min = @standard_min max = @standard_max }
 		orbit_distance = 0
 		init_effect = {
 			prevent_anomaly = yes
@@ -3102,7 +2508,7 @@ wenkwort_initializer = {
 		name = "NAME_wenkwort_3"
 		class = "pc_toxic"
 
-		orbit_distance = { min = 40 max = 50 }
+		orbit_distance = 30
 		orbit_angle = 35
 		size = { min = 15 max = 30 }
 		has_ring = no
@@ -3118,7 +2524,7 @@ wenkwort_initializer = {
 		name = "NAME_wenkwort_4"
 		class = "pc_gas_giant"
 
-		orbit_distance = { min = 50 max = 60 }
+		orbit_distance = 30
 		orbit_angle = 55
 		size = { min = 25 max = 50 }
 		has_ring = no
@@ -3140,11 +2546,11 @@ sol_system_void_dweller_system = {
 	usage = origin
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 115
+		radius = 145
 	}
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 460
+		radius = 290
 	}
 
 	flags = { empire_home_system sol_system sol }
@@ -3171,10 +2577,9 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Mercury"
 		class = "pc_molten"
-		flags = { mercury }
-		orbit_distance = 25
+		orbit_distance = 40
 		orbit_angle = 15
-		size = 8
+		size = 10
 		has_ring = no
 		init_effect = {
 			set_planet_entity = {
@@ -3192,10 +2597,9 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Venus"
 		class = "pc_toxic"
-		flags = { venus }
-		orbit_distance = 15
+		orbit_distance = 25
 		orbit_angle = 125
-		size = 16
+		size = 17
 		has_ring = no
 		init_effect = {
 			set_planet_entity = {
@@ -3210,7 +2614,7 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Old_Earth"
 		class = "pc_toxic"
-		orbit_distance = 20
+		orbit_distance = 25
 		orbit_angle = 120
 		size = 18
 		has_ring = no
@@ -3232,9 +2636,8 @@ sol_system_void_dweller_system = {
 		moon = {
 			name = "NAME_Luna"
 			class = "pc_barren_cold"
-			flags = { luna }
 			size = 5
-			orbit_distance = 8
+			orbit_distance = 12
 			orbit_angle = 40
 			has_ring = no
 			entity = "cold_barren_planet_luna_entity"
@@ -3279,7 +2682,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_1_Ceres"
 		class = "pc_asteroid"
-		flags = { ceres }
 		orbit_distance = 30
 		orbit_angle = -210
 		size = 5
@@ -3289,7 +2691,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_2_Pallas"
 		class = "pc_asteroid"
-		flags = { pallas }
 		orbit_distance = 0
 		orbit_angle = -95
 		size = 5
@@ -3299,7 +2700,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_3_Juno"
 		class = "pc_asteroid"
-		flags = { juno }
 		orbit_distance = 0
 		orbit_angle = 285
 		size = 5
@@ -3309,7 +2709,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_4_Vesta"
 		class = "pc_asteroid"
-		flags = { vesta }
 		orbit_distance = 0
 		orbit_angle = -80
 		size = 5
@@ -3319,10 +2718,9 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Jupiter"
 		class = "pc_gas_giant"
-		flags = { jupiter }
-		orbit_distance = 45
+		orbit_distance = 40
 		orbit_angle = -160
-		size = 40
+		size = 35
 		has_ring = no
 		entity = "gas_giant_jupiter_entity"
 		change_orbit = 6
@@ -3330,7 +2728,6 @@ sol_system_void_dweller_system = {
 		moon = {
 			name = "NAME_Io"
 			class = "pc_molten"
-			flags = { io }
 			size = 6
 			orbit_distance = 10
 			orbit_angle = 110
@@ -3339,17 +2736,14 @@ sol_system_void_dweller_system = {
 		moon = {
 			name = "NAME_Europa"
 			class = "pc_frozen"
-			flags = { europa }
 			size = 6
 			orbit_distance = 2.5
 			orbit_angle = 190
 			has_ring = no
-
 		}
 		moon = {
 			name = "NAME_Ganymede"
 			class = "pc_frozen"
-			flags = { ganymede }
 			size = 9
 			orbit_distance = 2.5
 			orbit_angle = 80
@@ -3357,7 +2751,6 @@ sol_system_void_dweller_system = {
 		}
 		moon = {
 			name = "NAME_Callisto"
-			flags = { callisto }
 			class = "pc_frozen"
 			size = 7
 			orbit_distance = 2.5
@@ -3369,14 +2762,13 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Saturn"
 		class = "pc_gas_giant"
-		orbit_distance = 55
+		orbit_distance = 25
 		orbit_angle = 170
-		size = 35
+		size = 30
 		has_ring = yes
-		entity = "gas_giant_saturn_entity"
+		entity = "gas_giant_05_entity"
 		change_orbit = 7
 		flags = {
-			saturn
 			ignore_startup_effect
 			habitat_3_planet
 			has_megastructure
@@ -3391,7 +2783,6 @@ sol_system_void_dweller_system = {
 		moon = {
 			name = "NAME_Titan"
 			class = "pc_frozen"
-			flags = { titan }
 			size = 8
 			orbit_distance = 12
 			orbit_angle = 320
@@ -3402,12 +2793,11 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Uranus"
 		class = "pc_gas_giant"
-		flags = { uranus }
-		orbit_distance = 70
+		orbit_distance = 25
 		orbit_angle = 125
 		size = 20
 		has_ring = no
-		entity = "gas_giant_uranus_entity"
+		entity = "gas_giant_03_entity"
 		init_effect = {
 			set_planet_entity = {
 				entity = gas_giant_uranus_entity
@@ -3421,18 +2811,16 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_Neptune"
 		class = "pc_gas_giant"
-		flags = { neptune }
-		orbit_distance = 85
+		orbit_distance = 25
 		orbit_angle = -195
 		size = 20
 		has_ring = no
-		entity = "gas_giant_neptune_entity"
+		entity = "gas_giant_02_entity"
 		change_orbit = 4
 
 		moon = {
 			name = "NAME_Triton"
 			class = "pc_frozen"
-			flags = { triton }
 			size = 6
 			orbit_distance = 7
 			orbit_angle = 115
@@ -3452,8 +2840,7 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_134340_Pluto"
 		class = "pc_asteroid"
-		flags = { pluto }
-		orbit_distance = 90
+		orbit_distance = 30
 		orbit_angle = -210
 		size = 5
 		has_ring = no
@@ -3462,7 +2849,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_136472_Makemake"
 		class = "pc_ice_asteroid"
-		flags = { makemake }
 		orbit_distance = 0
 		orbit_angle = -95
 		size = 5
@@ -3472,7 +2858,6 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_136108_Haumea"
 		class = "pc_ice_asteroid"
-		flags = { haumea }
 		orbit_distance = 0
 		orbit_angle = 285
 		size = 5
@@ -3482,56 +2867,24 @@ sol_system_void_dweller_system = {
 	planet = {
 		name = "NAME_20000_Varuna"
 		class = "pc_ice_asteroid"
-		flags = { varuna }
 		orbit_distance = 0
 		orbit_angle = -80
 		size = 5
 		has_ring = no
 	}
 
-
 	neighbor_system = {
-		distance = { min = 15 max = 40 }	
-		initializer = "bernards_star_mediumsector"
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1"
 	}
 	neighbor_system = {
 		trigger = { num_guaranteed_colonies >= 1 }
-		distance = { min = 10 max = 40 }	
-		initializer = "alpha_centauri_mediumsector"
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1_first_colony"
 	}
 	neighbor_system = {
 		trigger = { num_guaranteed_colonies = 0 }
-		distance = { min = 10 max = 40 }	
-		initializer = "alpha_centauri_mediumsector_no_col"
-	}
-	neighbor_system = {
-		trigger = { num_guaranteed_colonies >= 2 }
-		distance = { min = 15 max = 50 }
-		initializer = "sirius_mediumsector"
-	}
-	neighbor_system = {
-		trigger = { num_guaranteed_colonies = 0 }
-		distance = { min = 15 max = 50 }
-		initializer = "sirius_mediumsector_no_col"
-	}
-	neighbor_system = {
-		distance = { min = 20 max = 60 }
-		initializer = "tau_ceti_mediumsector"
-	}
-	neighbor_system = {
-		distance = { min = 20 max = 55 }
-		initializer = "epsilon_eridani_system"
-	}
-	neighbor_system = {
-		distance = { min = 30 max = 70 }
-		initializer = "fomalhaut_mediumsector"
-	}
-	neighbor_system = {
-		distance = { min = 20 max = 60 }
-		initializer = "eta_cassiopeiae_mediumsector"
-	}
-	neighbor_system = {
-		distance = { min = 20 max = 60 }
-		initializer = "sigma_draconis_system"
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1_no_guaranteed_colony"
 	}
 }

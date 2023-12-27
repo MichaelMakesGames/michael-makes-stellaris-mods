@@ -3007,7 +3007,7 @@ wenkwort_initializer = {
 	}
 	flags = { wenkwort_system }
 
-	spawn_chance = 25 # OVERWRITE (added)
+	spawn_chance = 10 # OVERWRITE (added)
 	usage = misc_system_init	#The game can pick this initialiser randomly for misc. purposes, i.e those which have not been initialised by empires or fallen empires
 	usage_odds = {
 		base = 1

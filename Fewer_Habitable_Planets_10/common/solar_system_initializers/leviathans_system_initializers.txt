@@ -1813,7 +1813,7 @@ guardians_init_dreadnought = {
 	}
 
 	max_instances = 1
-	scaled_spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 1 # OVERWRITE (from 8)
 
 	planet = {
 		count = 1
@@ -2416,7 +2416,7 @@ guardians_init_fortress = {
 	}
 
 	max_instances = 1
-	scaled_spawn_chance = 2 # OVERWRITE (from 8)
+	scaled_spawn_chance = 1 # OVERWRITE (from 8)
 
 	flags = { guardians_fortress_system guardian enigmatic_system hostile_system }
 

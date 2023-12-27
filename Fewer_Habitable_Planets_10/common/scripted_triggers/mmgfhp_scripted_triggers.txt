@@ -1,0 +1,59 @@
+mmgfhp_can_convert_planet = {
+	is_colonizable = yes
+	has_owner = no
+	NOR = {
+		exists = archaeological_site
+		has_anomaly = yes
+		is_preventing_anomaly = yes
+		solar_system = { has_special_star_flag_trigger = yes }
+		has_planet_flag = pre_sapient_planet
+		is_artificial = yes
+	}
+}
+
+mmgfhp_in_range_of_star = {
+	OR = {
+		AND = {
+			exists = orbit
+			orbit = { is_star = yes }
+			distance = {
+				source = orbit
+				min_distance >= @mmgfhp_star_$RANGE$_min
+				max_distance <= @mmgfhp_star_$RANGE$_max
+				type = euclidean
+				same_solar_system = yes
+			}
+		}
+		AND = {
+			exists = orbit
+			orbit = { is_star = no }
+			exists = orbit.orbit
+			orbit.orbit = { is_star = yes }
+			distance = {
+				source = orbit.orbit
+				min_distance >= @mmgfhp_star_$RANGE$_min
+				max_distance <= @mmgfhp_star_$RANGE$_max
+				type = euclidean
+				same_solar_system = yes
+			}
+		}
+		AND = {
+			OR = {
+				NOT = { exists = orbit }
+				AND = {
+					exists = orbit
+					orbit = { is_star = no }
+					NOT = { exists = orbit.orbit }
+				}
+			}
+			exists = star
+			distance = {
+				source = star
+				min_distance >= @mmgfhp_star_$RANGE$_min
+				max_distance <= @mmgfhp_star_$RANGE$_max
+				type = euclidean
+				same_solar_system = yes
+			}
+		}
+	}
+}

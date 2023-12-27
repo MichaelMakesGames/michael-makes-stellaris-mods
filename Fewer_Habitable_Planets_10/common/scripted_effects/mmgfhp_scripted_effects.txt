@@ -1,0 +1,44 @@
+mmgfhp_convert_planet = {
+	random_list = {
+		1000 = {
+			modifier = {
+				multiply = 0
+				NOT = { mmgfhp_in_range_of_star = { RANGE = close } }
+			}
+			change_pc = pc_molten
+		}
+		1000 = {
+			modifier = {
+				multiply = 0
+				NOT = { mmgfhp_in_range_of_star = { RANGE = mid } }
+			}
+			change_pc = pc_toxic
+		}
+		1000 = {
+			modifier = {
+				multiply = 0
+				NOT = { mmgfhp_in_range_of_star = { RANGE = mid } }
+			}
+			change_pc = pc_barren
+		}
+		1000 = {
+			modifier = {
+				multiply = 0
+				NOT = { mmgfhp_in_range_of_star = { RANGE = far } }
+			}
+			change_pc = pc_barren_cold
+		}
+		1000 = {
+			modifier = {
+				multiply = 0
+				NOR = {
+					mmgfhp_in_range_of_star = { RANGE = far }
+					mmgfhp_in_range_of_star = { RANGE = very_far }
+				}
+			}
+			change_pc = pc_barren_cold
+		}
+		1 = { change_pc = pc_barren } # fallback
+	}
+	reroll_planet = yes
+}

@@ -1597,7 +1597,7 @@ ghost_ship_system_initializer_01 = {
 		type = rocky_asteroid_belt
 		radius = 150
 	}
-	spawn_chance = 25 # OVERWRITE (added)
+	spawn_chance = 10 # OVERWRITE (added)
 	usage = misc_system_init
 	usage_odds = {
 		base = 10
@@ -2057,7 +2057,7 @@ locust_system_initializer_01 = {
 	}
 	flags = { lost_swarm_system }
 
-	spawn_chance = 25 # OVERWRITE (added)
+	spawn_chance = 10 # OVERWRITE (added)
 	usage = misc_system_init
 	usage_odds = {
 		base = 4
@@ -2316,7 +2316,7 @@ Holibrae_initializer = {
 		}
 	}
 	max_instances = 1
-	scaled_spawn_chance = 2 # OVERWRITE (from 10)
+	scaled_spawn_chance = 1 # OVERWRITE (from 10)
 	flags = { holibrae_system hostile_system }
 
 	#create nebula

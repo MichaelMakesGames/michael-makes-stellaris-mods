@@ -54,6 +54,7 @@ overwrite_allow_list = {
     "distar_phaseshift_system",  # this has a guaranteed gaia world that isn't in the system_initializer
     "locust_system_initializer_01",  # Locust Swarm system
     "legendary_leader_start_site",  # Exakeides system, spawns a bunch of neighbor systems with habitables
+    "astral_scar_system",  # Astral Scar system; Astral Planes exclusive; no essential events
 }
 # these come with lots of planets, so scale them even more
 extra_scale_list = {
@@ -114,6 +115,7 @@ non_colonizable_planet_classes = {
     "pc_machine_broken",
     "pc_molten",
     "pc_rare_crystal_asteroid",
+    "pc_rift_star",
     "pc_ringworld_habitable",
     "pc_ringworld_seam_damaged",
     "pc_ringworld_seam",
