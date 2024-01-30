@@ -8,14 +8,14 @@ event = {
 		every_galaxy_planet = {
 			limit = { mmgfhp_can_convert_planet = yes }
 			random = {
-				chance = 75
+				chance = 90
 				mmgfhp_convert_planet = yes
 			}
 		}
 		every_system = {
 			limit = { has_special_star_flag_trigger = no }
 			random = {
-				chance = 75
+				chance = 90
 				remove_system_terraforming_candidates = yes
 			}
 		}
