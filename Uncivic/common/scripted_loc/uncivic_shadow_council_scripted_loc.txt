@@ -1,4 +1,0 @@
-defined_text = {
-	name = UncivicShadowCouncilRisk
-	value = value:uncivic_shadow_council_risk
-}

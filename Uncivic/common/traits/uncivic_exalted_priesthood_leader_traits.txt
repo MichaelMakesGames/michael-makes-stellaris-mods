@@ -4,7 +4,6 @@ uncivic_exalted_priesthood_leader_trait_unorthodox = {
 		ICON = "GFX_leader_trait_mind_wipe"
 		COUNCIL = no
 	}
-	is_councilor_trait_for_ruler = yes
 	custom_tooltip = uncivic_exalted_priesthood_leader_trait_unorthodox_tooltip
 	leader_class = { admiral scientist general governor }
 	initial = no
@@ -17,7 +16,6 @@ uncivic_exalted_priesthood_leader_trait_hardliner = {
 		ICON = "GFX_leader_trait_venerated"
 		COUNCIL = no
 	}
-	is_councilor_trait_for_ruler = yes
 	custom_tooltip = uncivic_exalted_priesthood_leader_trait_hardliner_tooltip
 	leader_class = { admiral scientist general governor }
 	initial = no

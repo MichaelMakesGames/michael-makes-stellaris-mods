@@ -10,13 +10,6 @@ on_game_start = {
 	}
 }
 
-on_game_start_country = {
-	events = {
-		uncivic_shadow_council.421 # appoint initial leader to shadow council
-		uncivic_technocracy.211 # add technocrat to starting governor
-	}
-}
-
 on_single_player_save_game_load = {
 	events = {
 		uncivic_menu.101 # register mod menu and init mod
@@ -41,21 +34,12 @@ on_monthly_pulse_country = {
 		uncivic_exalted_priesthood.201 # spread unorthodoxy/heresy
 		uncivic_exalted_priesthood.621 # recalc and validation
 		uncivic_exalted_priesthood.701 # AI requests to join faith
-		uncivic_nationalistic_zeal.201 # start zeal situation
-		uncivic_shadow_council.401 # shadow council monthly updates/maintenance
 	}
 }
 
 on_yearly_pulse_country = {
 	events = {
 		uncivic_exalted_priesthood.715 # AI invites player to join faith
-		uncivic_shadow_council.301 # shadow council exposure
-		uncivic_shadow_council.411 # shadow council envoy extortion
-	}
-}
-
-on_five_year_pulse_country = {
-	events = {
 	}
 }
 
@@ -124,62 +108,10 @@ on_leader_spawned = {
 	}
 }
 
-on_added_to_leader_pool = {
-	events = {
-		uncivic_technocracy.201 # technocrats in leader pool
-	}
-}
-
-on_leader_level_up = {
-	events = {
-		uncivic_technocracy.221 # specialize technocrat
-	}
-}
-
-# 88""Yb    db    888888 888888 88     888888 .dP"Y8
-# 88__dP   dPYb     88     88   88     88__   `Ybo."
-# 88""Yb  dP__Yb    88     88   88  .o 88""   o.`Y8b
-# 88oodP dP""""Yb   88     88   88ood8 888888 8bodP'
-
-on_space_battle_won = {
-	events = {
-		uncivic_nationalistic_zeal.301 # gain zeal
-	}
-}
-
-on_space_battle_lost = {
-	events = {
-		uncivic_nationalistic_zeal.302 # lose zeal
-	}
-}
-
-# .dP"Y8 Yb  dP .dP"Y8 888888 888888 8b    d8 .dP"Y8
-# `Ybo."  YbdP  `Ybo."   88   88__   88b  d88 `Ybo."
-# o.`Y8b   8P   o.`Y8b   88   88""   88YbdP88 o.`Y8b
-# 8bodP'  dP    8bodP'   88   888888 88 YY 88 8bodP'
-
-on_system_gained = {
-	events = {
-		uncivic_nationalistic_zeal.311 # gain zeal
-	}
-}
-
-on_system_lost = {
-	events = {
-		uncivic_nationalistic_zeal.312 # lose zeal, get disgraced
-	}
-}
-
 # Yb        dP    db    88""Yb .dP"Y8
 #  Yb  db  dP    dPYb   88__dP `Ybo."
 #   YbdPYbdP    dP__Yb  88"Yb  o.`Y8b
 #    YP  YP    dP""""Yb 88  Yb 8bodP'
-
-on_war_lost = {
-	events = {
-		uncivic_nationalistic_zeal.321 # get disgraced
-	}
-}
 
 on_war_won = {
 	events = {

@@ -1,6 +1,9 @@
-New Mechanics for Vanilla Civics (For 3.9.*)
+New Mechanics for Vanilla Civics (For 3.10.0)
 
 Many civics in Stellaris are boring, simply providing modifiers. Sometimes boring is good, especially when you're first learning the game, but eventually, you might want something more. DLCs and mods provide interesting civics, but don't the base game civics deserve some love too?
+
+[h1]Development Update[/h1]
+For now, I'm only maintaining this mod, but not adding new features. Long term, I'd like to expand on the Exalted Priesthood and Parliamentary System mechanics, and release them as standalone religion and democracy mods. All other civic expansions (Nationalistic Zeal, Shadow Council, and Technocracy) have been removed.
 
 [h1]Design Principles[/h1]
 [list]
@@ -12,25 +15,14 @@ Many civics in Stellaris are boring, simply providing modifiers. Sometimes borin
 [h1]Exalted Priesthood[/h1]
 Invite other spiritualist empires to join your Galactic Faith, gaining influence and diplomatic weight. Compete with other Exalted Priesthoods to win followers with diplomacy or by force. Experience the spread of new beliefs, and decide whether to incorporate them into your orthodoxy or declare a heresy and launch an inquisition.
 
-[h1]Nationalistic Zeal[/h1]
-Balance the spirit of your nation. As your Zeal gets higher, you get stronger military bonuses and larger diplomatic penalties. If it gets too high, you'll suffer the consequences of Nationalistic Hubris. On the other hand, if it gets too low, you'll suffer Nationalistic Disgrace.
-
 [h1]Parliamentary System[/h1]
 Planets with upgraded capitals hold Parliamentary elections every 10 years, electing a politician from one of your factions to represent them, giving the planet a modifier according to the faction. Don't like the election results? Just find some votes for the other guy, but risk upsetting the planet. Shadow Council pairs nicely with this, substantially reducing the risk.
 
 Minor incompatibility: new modded faction types do not have special planet modifiers. Built-in support for Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
 
-[h1]Shadow Council[/h1]
-Appoint leaders to the Shadow Council for unique and powerful effects, but your Councilors gain less experience as they become mere figureheads.
-
-[h1]Technocracy[/h1]
-Your non-scientist leaders can start with the Technocrat trait, producing a small amount of research. At Level 4, they specialize into one of the 3 branches of science with effects depending on their class.
-
-[h1]More to come![/h1]
-
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.9.*
+  [*] For Stellaris 3.10.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] No overwrites, so should be compatible with most other mods. Advanced integration with Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).

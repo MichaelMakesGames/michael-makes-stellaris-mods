@@ -13,16 +13,10 @@ event = {
 			limit = { NOT = { has_global_flag = uncivic_installed } }
 			set_global_flag = uncivic_installed
 			set_global_flag = uncivic_exalted_priesthood_enabled
-			set_global_flag = uncivic_nationalistic_zeal_enabled
 			set_global_flag = uncivic_parliamentary_system_enabled
-			set_global_flag = uncivic_shadow_council_enabled
-			set_global_flag = uncivic_technocracy_enabled
 			event_target:global_event_country = {
 				country_event = { id = uncivic_exalted_priesthood.111 }
 				country_event = { id = uncivic_parliamentary_system.111 }
-				country_event = { id = uncivic_nationalistic_zeal.111 }
-				country_event = { id = uncivic_shadow_council.111 }
-				country_event = { id = uncivic_technocracy.111 }
 			}
 		}
 		set_global_flag = uncivic_installed
@@ -83,42 +77,6 @@ country_event = {
 			text = uncivic_menu_parliamentary_system_enabled
 		}
 		uncivic_menu_option = { CIVIC = parliamentary_system }
-	}
-
-	option = {
-		name = {
-			trigger = { NOT = { has_global_flag = uncivic_nationalistic_zeal_enabled } }
-			text = uncivic_menu_nationalistic_zeal_disabled
-		}
-		name = {
-			trigger = { has_global_flag = uncivic_nationalistic_zeal_enabled }
-			text = uncivic_menu_nationalistic_zeal_enabled
-		}
-		uncivic_menu_option = { CIVIC = nationalistic_zeal }
-	}
-
-	option = {
-		name = {
-			trigger = { NOT = { has_global_flag = uncivic_shadow_council_enabled } }
-			text = uncivic_menu_shadow_council_disabled
-		}
-		name = {
-			trigger = { has_global_flag = uncivic_shadow_council_enabled }
-			text = uncivic_menu_shadow_council_enabled
-		}
-		uncivic_menu_option = { CIVIC = shadow_council }
-	}
-	
-	option = {
-		name = {
-			trigger = { NOT = { has_global_flag = uncivic_technocracy_enabled } }
-			text = uncivic_menu_technocracy_disabled
-		}
-		name = {
-			trigger = { has_global_flag = uncivic_technocracy_enabled }
-			text = uncivic_menu_technocracy_enabled
-		}
-		uncivic_menu_option = { CIVIC = technocracy }
 	}
 
 	option = {
