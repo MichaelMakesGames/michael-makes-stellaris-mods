@@ -1,5 +1,4 @@
-Adds siege warfare to Stellaris! (For 3.9.*)
-[url=https://steamcommunity.com/workshop/filedetails/discussion/2786268200/6077070109432532833/?tscn=1697541526]Русский[/url]
+Adds siege warfare to Stellaris!
 
 Have you wondered how that ecumenopolis feeds itself when you control the skies above it? How does that besieged forge world get all its minerals? This is the mod for you!
 
@@ -34,7 +33,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.9.*
+  [*] For Stellaris 3.11.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Advanced integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2670609971]Rise of Cosmic Industry[/url]

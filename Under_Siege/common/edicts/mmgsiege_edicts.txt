@@ -147,7 +147,7 @@ mmgsiege_stockpile_automation_with_shipping_alt = {
 }
 
 mmgsiege_manage_stockpile_automation = {
-	icon = "GFX_edict_type_time"
+	icon = "GFX_edict_type_policy"
 	length = 1
 	potential = {
 		always = yes

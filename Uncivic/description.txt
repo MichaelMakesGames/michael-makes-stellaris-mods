@@ -1,4 +1,4 @@
-New Mechanics for Vanilla Civics (For 3.10.0)
+New Mechanics for Vanilla Civics
 
 Many civics in Stellaris are boring, simply providing modifiers. Sometimes boring is good, especially when you're first learning the game, but eventually, you might want something more. DLCs and mods provide interesting civics, but don't the base game civics deserve some love too?
 
@@ -22,7 +22,7 @@ Minor incompatibility: new modded faction types do not have special planet modif
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.10.*
+  [*] For Stellaris 3.11.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] No overwrites, so should be compatible with most other mods. Advanced integration with Divided Loyalties and most Ethics & Civics branches (including Bug Branch, FunEFork, and Stellaris Evolved).
