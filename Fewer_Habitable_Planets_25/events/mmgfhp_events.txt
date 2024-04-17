@@ -5,19 +5,85 @@ event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		every_galaxy_planet = {
-			limit = { mmgfhp_can_convert_planet = yes }
-			random = {
-				chance = 75
-				mmgfhp_convert_planet = yes
+		# calculate the conversion chance
+		event_target:global_event_country = {
+			export_trigger_value_to_variable = {
+				trigger = count_galaxy_planet
+				parameters = {
+					limit = {
+						has_owner = no
+						is_colonizable = yes
+						NOT = { has_planet_flag = prescripted_ideal }
+					}
+				}
+				variable = mmgfhp_starting_habitable_count
 			}
-		}
-		every_system = {
-			limit = { has_special_star_flag_trigger = no }
-			random = {
-				chance = 75
-				remove_system_terraforming_candidates = yes
+			set_variable = {
+				which = mmgfhp_target_convert_count
+				value = mmgfhp_starting_habitable_count
 			}
+			multiply_variable = {
+				which = mmgfhp_target_convert_count
+				value = 0.75
+			}
+			export_trigger_value_to_variable = {
+				trigger = count_galaxy_planet
+				parameters = {
+					limit = {
+						mmgfhp_can_convert_planet = yes
+					}
+				}
+				variable = mmgfhp_can_convert_count
+			}
+			set_variable = {
+				which = mmgfhp_convert_chance
+				value = mmgfhp_target_convert_count
+			}
+			divide_variable = {
+				which = mmgfhp_convert_chance
+				value = mmgfhp_can_convert_count
+			}
+			multiply_variable = {
+				which = mmgfhp_convert_chance
+				value = 100
+			}
+			round_variable = mmgfhp_convert_chance
+			if = {
+				limit = {
+					check_variable = {
+						which = mmgfhp_convert_chance
+						value > 100
+					}
+				}
+				set_variable = {
+					which = mmgfhp_convert_chance
+					value = 100
+				}
+			}
+
+			# convert planets
+			every_galaxy_planet = {
+				limit = { mmgfhp_can_convert_planet = yes }
+				random = {
+					chance = prev.mmgfhp_convert_chance
+					mmgfhp_convert_planet = yes
+				}
+			}
+
+			# convert terraforming candidates
+			every_system = {
+				limit = { has_special_star_flag_trigger = no }
+				random = {
+					chance = 75
+					remove_system_terraforming_candidates = yes
+				}
+			}
+
+			# clean up variables
+			clear_variable = mmgfhp_starting_habitable_count
+			clear_variable = mmgfhp_target_convert_count
+			clear_variable = mmgfhp_can_convert_count
+			clear_variable = mmgfhp_convert_chance
 		}
 	}
 }

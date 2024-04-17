@@ -5,9 +5,10 @@ mmgfhp_can_convert_planet = {
 		exists = archaeological_site
 		has_anomaly = yes
 		is_preventing_anomaly = yes
-		solar_system = { has_special_star_flag_trigger = yes }
-		has_planet_flag = pre_sapient_planet
+		has_planet_flag = prescripted_ideal
 		is_artificial = yes
+		is_ideal = yes
+		is_planet_class = pc_relic
 	}
 }
 

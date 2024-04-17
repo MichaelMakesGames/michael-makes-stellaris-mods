@@ -2,11 +2,12 @@ Fewer Habitable Planets: 25%
 
 Reduces the number of habitable planets from unique and randomly generated systems to 25%. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work... Even accounting for unique systems and starting systems, the 0.25x setting produces twice as many planets as it should.
 
-Number of uncolonized habitable planets in a huge galaxy, not counting Guaranteed Habitable Worlds or Holy Worlds:
+Number of uncolonized habitable planets in a huge galaxy, with Guaranteed Habitable Worlds off (averaged across 5 galaxies):
 [list]
-  [*] Vanilla 1x Habitable Worlds: 190
-	[*] Vanilla 0.25x Habitable Worlds: 109 (57% of vanilla 1x)
-	[*] This Mod 1x Habitable Worlds: 50 (26% of vanilla 1x)
+  [*] Vanilla 1x Habitable Worlds: 188
+  [*] Vanilla 0.25x Habitable Worlds: 106 (56% of vanilla 1x)
+  [*] This Mod 1x Habitable Worlds: 46 (24% of vanilla 1x)
+  [*] This Mod 0.25x Habitable Worlds: 24 (13% of vanilla 1x, 23% of vanilla 0.25x)
 [/list]
 
 What makes this mod different than others that "do the same thing"?
@@ -19,7 +20,7 @@ What makes this mod different than others that "do the same thing"?
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.11.2
+  [*] For Stellaris 3.11.3
   [*] NOT achievement compatible
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url] ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415369]10% version[/url])
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
