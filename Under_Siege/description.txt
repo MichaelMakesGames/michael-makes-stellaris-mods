@@ -33,7 +33,7 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.11.*
+  [*] For Stellaris 3.12.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Advanced integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2670609971]Rise of Cosmic Industry[/url]
