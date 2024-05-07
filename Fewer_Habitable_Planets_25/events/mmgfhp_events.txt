@@ -72,10 +72,25 @@ event = {
 
 			# convert terraforming candidates
 			every_system = {
-				limit = { has_special_star_flag_trigger = no }
-				random = {
-					chance = 75
-					remove_system_terraforming_candidates = yes
+				# empire_cluster flag makes it count as special system, but is too broad (all systems within 2 jumps of homeworld)
+				# remove it (but make a backup)
+				if = {
+					limit = { has_star_flag = empire_cluster }
+					remove_star_flag = empire_cluster
+					set_star_flag = mmgfhp_empire_cluster
+				}
+				if = {
+					limit = { has_special_star_flag_trigger = no }
+					random = {
+						chance = 75
+						remove_system_terraforming_candidates = yes
+					}
+				}
+				# restore empire_cluster flag
+				if = {
+					limit = { has_star_flag = mmgfhp_empire_cluster }
+					remove_star_flag = mmgfhp_empire_cluster
+					set_star_flag = empire_cluster
 				}
 			}
 

@@ -130,6 +130,7 @@ non_colonizable_planet_classes = {
     "rl_no_atmosphere_planets",
     "rl_unhabitable_planets",
     "rl_voidspawn_egg",
+    "rl_barren_planets",
     "star",
     # real space
     "pc_o_super_star",
