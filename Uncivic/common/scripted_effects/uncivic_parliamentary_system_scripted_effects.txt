@@ -1,124 +1,48 @@
 uncivic_parliamentary_system_clear_planet = {
-	switch = {
-		trigger = has_modifier
-		uncivic_parliamentary_system_imperialist = {
-			remove_modifier = uncivic_parliamentary_system_imperialist
-		}
-		uncivic_parliamentary_system_isolationist = {
-			remove_modifier = uncivic_parliamentary_system_isolationist
-		}
-		uncivic_parliamentary_system_manifesti = {
-			remove_modifier = uncivic_parliamentary_system_manifesti
-		}
-		uncivic_parliamentary_system_progressive = {
-			remove_modifier = uncivic_parliamentary_system_progressive
-		}
-		uncivic_parliamentary_system_prosperity = {
-			remove_modifier = uncivic_parliamentary_system_prosperity
-		}
-		uncivic_parliamentary_system_supremacist = {
-			remove_modifier = uncivic_parliamentary_system_supremacist
-		}
-		uncivic_parliamentary_system_technologist = {
-			remove_modifier = uncivic_parliamentary_system_technologist
-		}
-		uncivic_parliamentary_system_totalitarian = {
-			remove_modifier = uncivic_parliamentary_system_totalitarian
-		}
-		uncivic_parliamentary_system_traditionalist = {
-			remove_modifier = uncivic_parliamentary_system_traditionalist
-		}
-		uncivic_parliamentary_system_xenoist = {
-			remove_modifier = uncivic_parliamentary_system_xenoist
-		}
-		uncivic_parliamentary_system_nonpartisan = {
-			remove_modifier = uncivic_parliamentary_system_nonpartisan
-		}
-		uncivic_parliamentary_system_separatist = {
-			remove_modifier = uncivic_parliamentary_system_separatist
-		}
-		uncivic_parliamentary_system_capitalist = {
-			remove_modifier = uncivic_parliamentary_system_capitalist
-		}
-		uncivic_parliamentary_system_conservative = {
-			remove_modifier = uncivic_parliamentary_system_conservative
-		}
-		uncivic_parliamentary_system_environmentalist = {
-			remove_modifier = uncivic_parliamentary_system_environmentalist
-		}
-		uncivic_parliamentary_system_industrialist = {
-			remove_modifier = uncivic_parliamentary_system_industrialist
-		}
-		uncivic_parliamentary_system_populist = {
-			remove_modifier = uncivic_parliamentary_system_populist
-		}
-		uncivic_parliamentary_system_socialist = {
-			remove_modifier = uncivic_parliamentary_system_socialist
-		}
-		uncivic_parliamentary_system_bankers = {
-			remove_modifier = uncivic_parliamentary_system_bankers
-		}
-		uncivic_parliamentary_system_conservatives = {
-			remove_modifier = uncivic_parliamentary_system_conservatives
-		}
-		uncivic_parliamentary_system_environmentalists = {
-			remove_modifier = uncivic_parliamentary_system_environmentalists
-		}
-		uncivic_parliamentary_system_labourites = {
-			remove_modifier = uncivic_parliamentary_system_labourites
-		}
-		uncivic_parliamentary_system_manufacturers = {
-			remove_modifier = uncivic_parliamentary_system_manufacturers
-		}
-		uncivic_parliamentary_system_socialists = {
-			remove_modifier = uncivic_parliamentary_system_socialists
-		}
-		uncivic_parliamentary_system_aristocrat = {
-			remove_modifier = uncivic_parliamentary_system_aristocrat
-		}
-		uncivic_parliamentary_system_indentured = {
-			remove_modifier = uncivic_parliamentary_system_indentured
-		}
-		uncivic_parliamentary_system_elitist = {
-			remove_modifier = uncivic_parliamentary_system_elitist
-		}
-		uncivic_parliamentary_system_labourite = {
-			remove_modifier = uncivic_parliamentary_system_labourite
-		}
-		uncivic_parliamentary_system_adopter = {
-			remove_modifier = uncivic_parliamentary_system_adopter
-		}
-		uncivic_parliamentary_system_perfectionist = {
-			remove_modifier = uncivic_parliamentary_system_perfectionist
-		}
-		uncivic_parliamentary_system_survivalist = {
-			remove_modifier = uncivic_parliamentary_system_survivalist
-		}
-		uncivic_parliamentary_system_warmaker = {
-			remove_modifier = uncivic_parliamentary_system_warmaker
-		}
-		uncivic_parliamentary_system_activist = {
-			remove_modifier = uncivic_parliamentary_system_activist
-		}
-		uncivic_parliamentary_system_industrialist_divided_loyalties = {
-			remove_modifier = uncivic_parliamentary_system_industrialist_divided_loyalties
-		}
-		uncivic_parliamentary_system_crusader = {
-			remove_modifier = uncivic_parliamentary_system_crusader
-		}
-		uncivic_parliamentary_system_shepherd = {
-			remove_modifier = uncivic_parliamentary_system_shepherd
-		}
-		uncivic_parliamentary_system_holistic = {
-			remove_modifier = uncivic_parliamentary_system_holistic
-		}
-		uncivic_parliamentary_system_preservationist = {
-			remove_modifier = uncivic_parliamentary_system_preservationist
-		}
-		uncivic_parliamentary_system_enslaver = {
-			remove_modifier = uncivic_parliamentary_system_enslaver
-		}
-	}
+	remove_modifier = uncivic_parliamentary_system_imperialist
+	remove_modifier = uncivic_parliamentary_system_isolationist
+	remove_modifier = uncivic_parliamentary_system_manifesti
+	remove_modifier = uncivic_parliamentary_system_progressive
+	remove_modifier = uncivic_parliamentary_system_prosperity
+	remove_modifier = uncivic_parliamentary_system_supremacist
+	remove_modifier = uncivic_parliamentary_system_technologist
+	remove_modifier = uncivic_parliamentary_system_totalitarian
+	remove_modifier = uncivic_parliamentary_system_traditionalist
+	remove_modifier = uncivic_parliamentary_system_xenoist
+	remove_modifier = uncivic_parliamentary_system_cyber_creed_labor
+	remove_modifier = uncivic_parliamentary_system_cyber_creed_war
+	remove_modifier = uncivic_parliamentary_system_cyber_creed_construction
+	remove_modifier = uncivic_parliamentary_system_cyber_creed_research
+	remove_modifier = uncivic_parliamentary_system_cyber_creed_general
+	remove_modifier = uncivic_parliamentary_system_nonpartisan
+	remove_modifier = uncivic_parliamentary_system_separatist
+	remove_modifier = uncivic_parliamentary_system_capitalist
+	remove_modifier = uncivic_parliamentary_system_conservative
+	remove_modifier = uncivic_parliamentary_system_environmentalist
+	remove_modifier = uncivic_parliamentary_system_industrialist
+	remove_modifier = uncivic_parliamentary_system_populist
+	remove_modifier = uncivic_parliamentary_system_socialist
+	remove_modifier = uncivic_parliamentary_system_bankers
+	remove_modifier = uncivic_parliamentary_system_conservatives
+	remove_modifier = uncivic_parliamentary_system_environmentalists
+	remove_modifier = uncivic_parliamentary_system_labourites
+	remove_modifier = uncivic_parliamentary_system_manufacturers
+	remove_modifier = uncivic_parliamentary_system_socialists
+	remove_modifier = uncivic_parliamentary_system_aristocrat
+	remove_modifier = uncivic_parliamentary_system_indentured
+	remove_modifier = uncivic_parliamentary_system_elitist
+	remove_modifier = uncivic_parliamentary_system_labourite
+	remove_modifier = uncivic_parliamentary_system_adopter
+	remove_modifier = uncivic_parliamentary_system_perfectionist
+	remove_modifier = uncivic_parliamentary_system_survivalist
+	remove_modifier = uncivic_parliamentary_system_warmaker
+	remove_modifier = uncivic_parliamentary_system_activist
+	remove_modifier = uncivic_parliamentary_system_industrialist_divided_loyalties
+	remove_modifier = uncivic_parliamentary_system_crusader
+	remove_modifier = uncivic_parliamentary_system_shepherd
+	remove_modifier = uncivic_parliamentary_system_holistic
+	remove_modifier = uncivic_parliamentary_system_preservationist
+	remove_modifier = uncivic_parliamentary_system_enslaver
 	if = {
 		limit = { has_deposit = uncivic_parliamentary_system_deposit }
 		remove_deposit = uncivic_parliamentary_system_deposit
@@ -163,6 +87,16 @@ uncivic_parliamentary_system_finalize_election = {
 					is_pop_faction_type = totalitarian
 					is_pop_faction_type = traditionalist
 					is_pop_faction_type = xenoist
+					# vanilla cyber creeds
+					is_pop_faction_type = cyber_creed_labor
+					is_pop_faction_type = cyber_creed_labor_2
+					is_pop_faction_type = cyber_creed_war
+					is_pop_faction_type = cyber_creed_war_2
+					is_pop_faction_type = cyber_creed_construction
+					is_pop_faction_type = cyber_creed_construction_2
+					is_pop_faction_type = cyber_creed_research
+					is_pop_faction_type = cyber_creed_research_2
+					is_pop_faction_type = cyber_creed_general
 					# ethics and civics
 					is_pop_faction_type = capitalist
 					is_pop_faction_type = conservative
@@ -229,6 +163,33 @@ uncivic_parliamentary_system_finalize_election = {
 				}
 				xenoist = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_xenoist } }
+				}
+				cyber_creed_labor = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_labor } }
+				}
+				cyber_creed_labor_2 = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_labor } }
+				}
+				cyber_creed_war = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_war } }
+				}
+				cyber_creed_war_2 = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_war } }
+				}
+				cyber_creed_construction = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_construction } }
+				}
+				cyber_creed_construction_2 = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_construction } }
+				}
+				cyber_creed_research = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_research } }
+				}
+				cyber_creed_research_2 = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_research } }
+				}
+				cyber_creed_general = {
+					prev = { add_modifier = { modifier = uncivic_parliamentary_system_cyber_creed_general } }
 				}
 				capitalist = {
 					prev = { add_modifier = { modifier = uncivic_parliamentary_system_capitalist } }

@@ -66,7 +66,7 @@ def main():
             parse_file(child, [], previous_target_strings[target_language])
 
     if stash:
-        subprocess.run(["git" ,"stash", "apply"])
+        subprocess.run(["git" ,"stash", "pop"])
 
     for target_language in target_languages:
         untranslated_keys = []

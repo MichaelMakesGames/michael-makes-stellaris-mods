@@ -20,6 +20,16 @@
  uncivic_parliamentary_system_traditionalist_desc: "Dieser Planet hat ein Mitglied der traditionalistischen Fraktion gewählt, um sie im Parlament zu vertreten."
  uncivic_parliamentary_system_xenoist: "Xenoistischer Parliamentarier"
  uncivic_parliamentary_system_xenoist_desc: "Dieser Planet hat ein Mitglied der Xenoisten-Fraktion gewählt, um sie im Parlament zu vertreten."
+ uncivic_parliamentary_system_cyber_creed_labor: "Toil Parliamentarian" # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_labor_desc: "This planet has elected a member of the Commune of Toil to represent them in Parliament." # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_war: "Templar Parliamentarian" # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_war_desc: "This planet has elected a member of the Templar of Steel to represent them in Parliament." # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_construction: "Hammer Parliamentarian" # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_construction_desc: "This planet has elected a member of the Fellowship of the Hammer to represent them in Parliament." # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_research: "Choir Parliamentarian" # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_research_desc: "This planet has elected a member of the Choir of the Mind to represent them in Parliament." # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_general: "United Creeds Parliamentarian" # UNTRANSLATED
+ uncivic_parliamentary_system_cyber_creed_general_desc: "This planet has elected a member of the General Creeds to represent them in Parliament." # UNTRANSLATED
  uncivic_parliamentary_system_nonpartisan: "Unparteiischer Parliamentarier"
  uncivic_parliamentary_system_nonpartisan_desc: "Dieser Planet hat einen fraktionslosen Politiker gewählt, der sie im Parlament vertritt."
  uncivic_parliamentary_system_separatist: "Seperatistischer Parlamentarier"
@@ -48,6 +58,16 @@
  uncivic_parliamentary_system_rig_election_for_totalitarian: "Lasst uns mehr Stimmen für den totalitären Politiker finden..."
  uncivic_parliamentary_system_rig_election_for_traditionalist: "Lasst uns mehr Stimmen für den traditionalistischen Politiker finden..."
  uncivic_parliamentary_system_rig_election_for_xenoist: "Lasst uns mehr Stimmen für den xenoistischen Politiker finden..."
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_labor: "Let's find more votes for the Commune of Toil politician..." # UNTRANSLATED
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_war: "Let's find more votes for the Templar of Steel politician..." # UNTRANSLATED
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_construction: "Let's find more votes for the Fellowship of the Hammer politician..." # UNTRANSLATED
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_research: "Let's find more votes for the Choir of the Mind politician..." # UNTRANSLATED
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_general: "Let's find more votes for the United Creeds politician..." # UNTRANSLATED
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_labor_2: "$uncivic_parliamentary_system_rig_election_for_cyber_creed_labor$" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_war_2: "$uncivic_parliamentary_system_rig_election_for_cyber_creed_war$" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_construction_2: "$uncivic_parliamentary_system_rig_election_for_cyber_creed_construction$" # DO NOT TRANSLATE
+ uncivic_parliamentary_system_rig_election_for_cyber_creed_research_2: "$uncivic_parliamentary_system_rig_election_for_cyber_creed_research$" # DO NOT TRANSLATE
+
 
  # notification pref
  uncivic_parliamentary_system_disable_notifications_effect: "Benachrichtigungen zu Parlamentswahlen deaktivieren"

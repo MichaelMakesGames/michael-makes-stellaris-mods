@@ -441,6 +441,78 @@ planet_event = {
 		POTENTIAL = "always = yes"
 		BOOST = "always = no"
 	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_labor
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_labor_2
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { has_rural_designation = yes has_generator_designation = yes has_farming_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_war
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "has_fortress_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_war_2
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "has_fortress_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_construction
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_construction_2
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "OR = { has_foundry_designation = yes has_factory_designation = yes has_industrial_designation = yes }"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_research
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "has_research_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_research_2
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "has_research_designation = yes"
+	}
+	inline_script = {
+		script = uncivic_parliamentary_system_rig_election
+		FACTION = cyber_creed_general
+		ETHIC = spiritualist
+		OPPOSITE = materialist
+		POTENTIAL = "always = yes"
+		BOOST = "always = yes"
+	}
 	# special
 	option = {
 		name = uncivic_parliamentary_system_rig_election_for_manifesti
