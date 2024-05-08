@@ -1,0 +1,3 @@
+lotor_has_hyper_relay = {
+	always = no
+}

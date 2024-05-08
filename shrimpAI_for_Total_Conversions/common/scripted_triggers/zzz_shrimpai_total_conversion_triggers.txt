@@ -4,3 +4,11 @@
 shrimpai_autobuild_active = {
 	always = no
 }
+
+shrimpai_has_hyper_relay = {
+	OR = {
+		has_megastructure = hyper_relay
+		has_megastructure = hyper_relay_restored
+		lotor_has_hyper_relay = yes
+	}
+}

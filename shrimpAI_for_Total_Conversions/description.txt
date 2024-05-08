@@ -2,7 +2,7 @@
 
 This mod makes the AI hyper relay placement logic of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Smarter Hyper Relays: Improved AI (shrimpAI)[/url] available for total conversion mods to use (mod authors: see below for how to integrate).
 
-When using a supported total conversion, you just need to enable that mod and this mod. Load order does not matter. Do NOT subscribe to the independent version of shrimpAI, or you will likely 
+When using a supported total conversion, you just need to enable that mod and this mod. Load order does not matter. Do NOT enable to the independent version of shrimpAI; it will probably cause bugs with the total conversion.
 
 [h1]Supported Total Conversions[/h1]
 [list]
@@ -42,7 +42,9 @@ ai_weight = {
   # if you want to make changes to weight on top of what shrimpAI's weight, do so here
 }
 [/code]
-If you have any questions, please reach out here or in the linked Discord server. If you integrate this mod with your total conversion, please let me know so I can add it to the list of supported conversions!
+If your mod changes what should be considered a gateway or hyper relay (for example, you add a new upgraded hyper relay megastructure, or an additional separate gateway network), some more steps might be needed. Please reach out to discuss!
+
+If you have any questions, please reach out here or in the linked Discord server. And if you integrate this mod with your total conversion, please let me know so I can add it to the list of supported conversions!
 
 [h1]Sharing[/h1]
 Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
