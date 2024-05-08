@@ -1,0 +1,4 @@
+# for mod compat
+shrimpai_active = {
+	always = yes
+}

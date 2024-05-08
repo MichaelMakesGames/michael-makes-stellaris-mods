@@ -1,4 +1,4 @@
-mmghyper_initialize_distance_origin = {
+shrimpai_initialize_distance_origin = {
 	set_star_flag = $DISTANCE$_active_node
 	set_variable = {
 		which = $DISTANCE$
@@ -6,12 +6,12 @@ mmghyper_initialize_distance_origin = {
 	}
 }
 
-mmghyper_initialize_path_origin = {
+shrimpai_initialize_path_origin = {
 	set_star_flag = $PATH$@ROOT
 	set_star_flag = $PATH$_active_node
 }
 
-mmghyper_calculate_distances = {
+shrimpai_calculate_distances = {
 	while = {
 		limit = {
 			count_system = {
@@ -30,7 +30,7 @@ mmghyper_calculate_distances = {
 				limit = {
 					[[SAME_OWNER]
 					OR = {
-						mmghyper_is_starless = yes
+						shrimpai_is_starless = yes
 						AND = {
 							exists = owner
 							owner = { is_same_empire = root }
@@ -47,7 +47,7 @@ mmghyper_calculate_distances = {
 					]
 					[[SAME_OVERLORD]
 					OR = {
-						mmghyper_is_starless = yes
+						shrimpai_is_starless = yes
 						AND = {
 							exists = owner
 							owner = {
@@ -68,9 +68,9 @@ mmghyper_calculate_distances = {
 						NOT = { is_variable_set = $DISTANCE$ }
 						OR = {
 							AND = {
-								mmghyper_has_hyper_relay = yes
+								shrimpai_has_hyper_relay = yes
 								prev = {
-									mmghyper_has_hyper_relay = yes
+									shrimpai_has_hyper_relay = yes
 									check_variable_arithmetic = {
 										which = $DISTANCE$
 										add = 0.5
@@ -95,8 +95,8 @@ mmghyper_calculate_distances = {
 				}
 				if = {
 					limit = {
-						mmghyper_has_hyper_relay = yes
-						prev = { mmghyper_has_hyper_relay = yes }
+						shrimpai_has_hyper_relay = yes
+						prev = { shrimpai_has_hyper_relay = yes }
 					}
 					change_variable = {
 						which = $DISTANCE$
@@ -115,7 +115,7 @@ mmghyper_calculate_distances = {
 	}
 }
 
-mmghyper_find_paths = {
+shrimpai_find_paths = {
 	while = {
 		limit = {
 			count_system = {
@@ -155,7 +155,7 @@ mmghyper_find_paths = {
 	}
 }
 
-mmghyper_spawn_hyper_relay = {
+shrimpai_spawn_hyper_relay = {
 	spawn_megastructure = {
 		type = hyper_relay
 		random_pos = yes
@@ -165,9 +165,9 @@ mmghyper_spawn_hyper_relay = {
 	}
 	root = {
 		add_resource = {
-			alloys = @mmghyper_alloys_cost
-			rare_crystals = @mmghyper_rare_crystals_cost
-			influence = @mmghyper_influence_cost
+			alloys = @shrimpai_alloys_cost
+			rare_crystals = @shrimpai_rare_crystals_cost
+			influence = @shrimpai_influence_cost
 			multiplier = -1
 		}
 	}

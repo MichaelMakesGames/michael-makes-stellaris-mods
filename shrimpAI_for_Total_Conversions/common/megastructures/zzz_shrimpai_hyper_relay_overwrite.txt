@@ -1,0 +1,1 @@
+# keeping this empty file around so it can overwrite the standard shrimpAI if someone mistakenly subscribes to both

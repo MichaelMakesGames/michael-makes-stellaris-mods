@@ -1,3 +1,0 @@
-@mmghyper_alloys_cost = 500
-@mmghyper_rare_crystals_cost = 100
-@mmghyper_influence_cost = 25

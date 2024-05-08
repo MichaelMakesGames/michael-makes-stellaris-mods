@@ -1,0 +1,6 @@
+# overwrites for shrimpAI for Total Conversions
+# keeping these in a separate for file, so it's easier to keep this and the main mod in sync
+
+shrimpai_autobuild_active = {
+	always = no
+}

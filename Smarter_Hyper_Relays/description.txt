@@ -23,7 +23,7 @@ This has been tested for performance on a huge galaxy and has no noticeable impa
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.11.*
+  [*] For Stellaris 3.12.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
   [*] Can be removed from an existing game

@@ -1,0 +1,51 @@
+[h1]This mod does nothing on its own![/h1]
+
+This mod makes the AI hyper relay placement logic of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Smarter Hyper Relays: Improved AI (shrimpAI)[/url] available for total conversion mods to use (mod authors: see below for how to integrate).
+
+When using a supported total conversion, you just need to enable that mod and this mod. Load order does not matter. Do NOT subscribe to the independent version of shrimpAI, or you will likely 
+
+[h1]Supported Total Conversions[/h1]
+[list]
+  [*] Nothing yet :(
+[/list]
+
+[h1]Other Compatibility Notes[/h1]
+[list]
+  [*] For Stellaris 3.12.*
+  [*] NOT achievement compatible
+  [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
+  [*] Can be removed from an existing game
+[/list]
+
+[h1]Mod Authors: How to Integrate[/h1]
+First, you need to define some placeholders.
+A scripted trigger:
+[code]
+shrimpai_active = { always = no }
+[/code]
+And a script value:
+[code]
+shrimpai_ai_weight = { base = 0 }
+[/code]
+Finally, you need to change the ai_weight of your hyper_relay megastructure definition:
+[code]
+ai_weight = {
+  # keep all the ai_weight logic you already have, then add the following below it
+  modifier = {
+    factor = 0
+    shrimpai_active = yes
+  }
+  modifier = {
+    add = value:shrimpai_ai_weight
+    shrimpai_active = yes
+  }
+  # if you want to make changes to weight on top of what shrimpAI's weight, do so here
+}
+[/code]
+If you have any questions, please reach out here or in the linked Discord server. If you integrate this mod with your total conversion, please let me know so I can add it to the list of supported conversions!
+
+[h1]Sharing[/h1]
+Feel free to update, pack, patch, translate, fork, or incorporate this mod, no prior permission required. Credit, linking to the original mod, and letting me know is appreciated!
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+Come chat in #michael-makes-mods

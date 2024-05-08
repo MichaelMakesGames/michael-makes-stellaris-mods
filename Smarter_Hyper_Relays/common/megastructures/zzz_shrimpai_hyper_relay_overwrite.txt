@@ -14,9 +14,9 @@ hyper_relay = {
 				NOT = { has_country_flag = flash_forge_hyper_relay_activated }
 			}
 			# OVERWRITE for easier submodding
-			alloys = @mmghyper_alloys_cost
-			rare_crystals = @mmghyper_rare_crystals_cost
-			influence = @mmghyper_influence_cost
+			alloys = @shrimpai_alloys_cost
+			rare_crystals = @shrimpai_rare_crystals_cost
+			influence = @shrimpai_influence_cost
 		}
 
 		upkeep = {
@@ -35,7 +35,7 @@ hyper_relay = {
 		custom_tooltip = {
 			fail_text = "requires_inside_border_or_subject"
 			OR = {
-				mmghyper_is_starless = yes # OVERWRITE sparsity / wild space support
+				shrimpai_is_starless = yes # OVERWRITE sparsity / wild space support
 				is_inside_border = from
 				AND = {
 					exists = owner
@@ -92,51 +92,8 @@ hyper_relay = {
 	# root = system
 	# from = country
 	ai_weight = { # OVERWRITE entire AI weight for main functionality of mod
-		# double base factor
-		factor = 10
-
-		# get started in capital very quickly
-		modifier = {
-			factor = 10
-			is_capital_system = yes
-		}
-
-		# then expand quickly into capital sector
-		modifier = {
-			factor = 5
-			exists = sector
-			sector.sector_capital = {
-				is_capital = yes
-			}
-		}
-
-		# then prioritize paths to other sectors
-		modifier = {
-			factor = 3
-			has_star_flag = mmghyper_path_to_capital@FROM
-		}
-
-		# then paths within sector
-		modifier = {
-			factor = 2
-			has_star_flag = mmghyper_path_to_sector_capital@FROM
-		}
-
-		# small boost for connecting planets to network
-		modifier = {
-			factor = 1.5
-			any_system_planet = {
-				is_colony = yes
-			}
-		}
-
-		# don't build if not target (on path, etc)
-		modifier = {
-			factor = 0
-			NOT = {
-				mmghyper_is_ai_build_target = { COUNTRY = from }
-			}
-		}
+		factor = 0
+		add = value:shrimpai_ai_weight
 	}
 
 	bypass_type = relay_bypass
@@ -166,7 +123,7 @@ hyper_relay = {
 		}
 		solar_system = { # OVERWRITE
 			system_event = {
-				id = mmghyper.11 # convert starless hyper relay to unowned
+				id = shrimpai.11 # convert starless hyper relay to unowned
 				days = 1 # doing this immediately doesn't seem to work
 			}
 		}
