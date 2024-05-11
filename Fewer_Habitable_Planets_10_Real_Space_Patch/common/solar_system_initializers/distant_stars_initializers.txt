@@ -1894,6 +1894,8 @@ great_wound_system = {
 	max_instances = 1
 	scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
 
+	flags = { great_wound }
+
 	planet = {
 		class = star
 		orbit_distance = 0
@@ -3413,7 +3415,7 @@ living_planet_system = {
 		size = 25
 
 		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 1 max = 4 }
 			size = { min = 8 max = 20 }
@@ -5245,7 +5247,7 @@ distantstars_init_01 = {
 		radius = 215
 	}
 
-	flags = { hostile_system lcluster lcluster1 lcluster_lgate suppress_archaeological_sites }
+	flags = { hostile_system lcluster lcluster1 lcluster_lgate suppress_archaeological_sites terminal_egress }
 
 	planet = {
 		name = "NAME_Final_Egress"
