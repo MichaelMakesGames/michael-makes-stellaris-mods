@@ -1,12 +1,13 @@
 [h1]This mod does nothing on its own![/h1]
 
-This mod makes the AI hyper relay placement logic of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Smarter Hyper Relays: Improved AI (shrimpAI)[/url] available for total conversion mods to use (mod authors: see below for how to integrate).
+This mod makes the AI hyper relay placement logic of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2815767345]Smarter Hyper Relays: Improved AI (shrimpAI)[/url] available for total conversion mods to use (mod authors: see below for how to integrate). It does not enable construction-ship-less relay building for the AI.
 
 When using a supported total conversion, you just need to enable that mod and this mod. Load order does not matter. Do NOT enable to the independent version of shrimpAI; it will probably cause bugs with the total conversion.
 
 [h1]Supported Total Conversions[/h1]
 [list]
-  [*] Nothing yet :(
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2791119024]Star Wars: Legacy of the Old Republic[/url] (for Stellaris 3.12+)
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721]Star Wars: New Dawn[/url] (for Stellaris 3.12+)
 [/list]
 
 [h1]Other Compatibility Notes[/h1]

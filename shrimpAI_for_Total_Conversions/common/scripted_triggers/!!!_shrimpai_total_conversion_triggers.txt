@@ -1,3 +1,7 @@
 lotor_has_hyper_relay = {
 	always = no
 }
+
+swnd_has_gateway = {
+	always = no
+}

@@ -12,3 +12,19 @@ shrimpai_has_hyper_relay = {
 		lotor_has_hyper_relay = yes
 	}
 }
+
+shrimpai_has_wormhole_gate_or_catapult = {
+	OR = {
+		has_natural_wormhole = yes
+		has_megastructure = lgate_base
+		has_megastructure = gateway_final
+		has_megastructure = gateway_restored
+		has_megastructure = quantum_catapult_1
+		has_megastructure = quantum_catapult_2
+		has_megastructure = quantum_catapult_3
+		has_megastructure = quantum_catapult_restored
+		has_megastructure = quantum_catapult_restored_slingshot
+		has_megastructure = quantum_catapult_improved_slingshot
+		swnd_has_gateway = yes
+	}
+}
