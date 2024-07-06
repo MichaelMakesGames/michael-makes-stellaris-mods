@@ -1,6 +1,6 @@
-Fewer Habitable Planets: 25%
+Fewer Habitable Planets: 0.25x
 
-Reduces the number of habitable planets from unique and randomly generated systems to 25%. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work... Even accounting for unique systems and starting systems, the 0.25x setting produces twice as many planets as it should.
+Reduces the number of habitable planets from unique and randomly generated systems to 0.25x. Why not just use the 0.25x Habitable Worlds slider? Well, it doesn't actually work... Even accounting for unique systems and starting systems, the 0.25x setting produces twice as many planets as it should.
 
 Number of uncolonized habitable planets in a huge galaxy, with Guaranteed Habitable Worlds off (averaged across 5 galaxies):
 [list]
@@ -16,13 +16,13 @@ What makes this mod different than others that "do the same thing"?
   [*] This mod also reduces the spawn chance of unique systems containing habitable planets, which others do not change
 [/list]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415179]Want even fewer planets? Check out the 10% version here.[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415179]Want even fewer planets? Check out the 0.10x version here.[/url]
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.12.1
+  [*] For Stellaris 3.12.5
   [*] NOT achievement compatible
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url] ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415369]10% version[/url])
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url] ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415369]0.10x version[/url])
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)
   [*] If you are using any mods that add special solar systems (such as Gigastructural Engineering, Planetary Diversity, or More Events Mod), I recommend using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
 [/list]

@@ -1,6 +1,6 @@
-Fewer Habitable Planets: 10%
+Fewer Habitable Planets: 0.10x
 
-This is a 10% version of Fewer Habitable Planets: 25%. Do NOT use both versions; only load one. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997968164]See the 25% mod page for more details.[/url]
+This is a 0.10x version of Fewer Habitable Planets: 0.25x. Do NOT use both versions; only load one. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997968164]See the 0.25x mod page for more details.[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415369]Real Space Patch[/url]
 
