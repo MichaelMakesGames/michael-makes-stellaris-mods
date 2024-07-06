@@ -93,8 +93,9 @@ on_planet_attackers_win = {
 	}
 }
 
-on_capital_changed = {
+on_tech_increased = {
 	events = {
+		mmgsiege.14 # recalc stockpile max if tech_construction_templates researched
 	}
 }
 

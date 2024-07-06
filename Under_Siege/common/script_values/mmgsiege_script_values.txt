@@ -34,11 +34,36 @@ mmgsiege_country_base_production_minerals = {
 	modifier = {
 		add = 10
 		is_country_type = default
+		# Either
 		OR = {
-			is_regular_empire = yes
-			is_hive_empire = yes
+			# You're a lithoid regular empire or hive mind
+			AND = {
+				is_lithoid_empire = yes
+				OR = {
+					is_regular_empire = yes
+					is_hive_empire = yes
+				}
+			}
+			# Or a machine empire with a lithoid secondary species
+			AND = {
+				has_country_flag = lithoid_subspecies
+				is_machine_empire = yes
+			}
+			# Or a machine empire with no secondary species
+			AND = {
+				is_machine_empire = yes
+				NOR = {
+					has_country_flag = lithoid_subspecies
+					has_country_flag = non_lithoid_subspecies
+				}
+			}
 		}
+	}
+	modifier = {
+		subtract = 5
+		is_country_type = default
 		is_lithoid_empire = yes
+		has_valid_civic = civic_hive_cordyceptic_drones
 	}
 	modifier = {
 		add = 250
@@ -62,11 +87,38 @@ mmgsiege_country_base_production_food = {
 	modifier = {
 		add = 10
 		is_country_type = default
-		OR = {
-			is_regular_empire = yes
-			is_hive_empire = yes
+		OR = { #Either
+			# You're a non-lithoid non-individual machine, regular empire or hive mind
+			AND = {
+				is_individual_machine = no
+				is_lithoid_empire = no
+				OR = {
+					is_regular_empire = yes
+					is_hive_empire = yes
+				}
+			}
+			# You are a lithoid empire with a non-lithoid subspecies
+			AND = {
+				is_lithoid_empire = yes
+				has_country_flag = non_lithoid_subspecies
+			}
+			# Or a machine empire with a non-lithoid secondary species
+			AND = {
+				has_country_flag = non_lithoid_subspecies
+				is_machine_empire = yes
+			}
+			# Or an individual machine with a non-lithoid species
+			AND = {
+				is_individual_machine = yes
+				has_country_flag = non_lithoid_subspecies
+			}
 		}
-		is_lithoid_empire = no
+	}
+	modifier = {
+		add = 5
+		is_country_type = default
+		is_lithoid_empire = yes
+		has_valid_civic = civic_hive_cordyceptic_drones
 	}
 	modifier = {
 		add = 100
@@ -237,36 +289,81 @@ mmgsiege_planet_average_army_supply_shortage = {
 mmgsiege_stockpile_maximum = {
 	base = 0
 	add = value:mmgsiege_stockpile_maximum_from_capital
-	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|resource_silo|MULT|1000|
-	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|stronghold|MULT|100|
-	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fortress|MULT|200|
+
+	# VANILLA
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|resource_silo|MULT|500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fe_silo_1|MULT|5000|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fe_silo_2|MULT|10000|
+
+	# AVB
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|avb_resource_silo_2|MULT|1000|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|avb_resource_silo_3|MULT|2000|TECH_BONUS|500|
+
+	# Evolved
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_resource_silo_2|MULT|1000|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_resource_silo_3|MULT|1500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_biohive_resource_silo_1|MULT|500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_biohive_resource_silo_2|MULT|1000|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_biohive_resource_silo_3|MULT|1500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_vault_of_plenty|MULT|1000|TECH_BONUS|1000|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_vault_of_acquisition|MULT|500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_vault_of_unity|MULT|500|TECH_BONUS|500|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|tec_vault_of_wealth|MULT|500|TECH_BONUS|500|
+
+	# ZOFE
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fallen_silo_1|MULT|5000|
+	add = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fallen_silo_2|MULT|10000|
+}
+
+# this is just for display
+# deriving this from value:mmgsiege_stockpile_maximum (instead of vice versa) to avoid potential call depth issues
+mmgsiege_stockpile_maximum_from_silos = {
+	base = 0
+	add = value:mmgsiege_stockpile_maximum
+	subtract = value:mmgsiege_stockpile_maximum_from_capital
 }
 
 mmgsiege_stockpile_maximum_from_capital = {
 	base = 100
 	modifier = {
-		add = 200
+		add = 200 # total: 300
 		has_upgraded_capital = yes
 	}
 	modifier = {
-		add = 200
+		add = 200 # total: 500
 		has_major_upgraded_capital = yes
 	}
 	modifier = {
-		add = 500
+		add = 500 # total: 1000
 		has_fully_upgraded_capital = yes
+	}
+	modifier = {
+		add = 1000 # total: 2000
+		has_upgraded_capital_4 = yes
+	}
+	modifier = {
+		add = 3000 # total: 5000
+		has_upgraded_capital_5 = yes
+	}
+	modifier = {
+		add = 5000 # total: 10000
+		has_upgraded_capital_6 = yes
 	}
 }
 
 mmgsiege_stockpile_maximum_from_buildings = {
-	base = 0
+	base = $MULT$
+	modifier = {
+		add = $TECH_BONUS|0$
+		exists = owner
+		owner = { has_technology = tech_construction_templates }
+	}
 	complex_trigger_modifier = {
 		trigger = num_buildings
 		parameters = {
 			type = building_$BUILDING_TYPE$
 		}
-		mode = add
-		mult = $MULT$
+		mode = multiply
 	}
 }
 

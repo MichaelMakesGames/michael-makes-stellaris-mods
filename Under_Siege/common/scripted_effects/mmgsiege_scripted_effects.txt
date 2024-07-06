@@ -298,6 +298,21 @@ mmgsiege_calculate_stockpile_maximum = {
 				value > mmgsiege_stockpile_maximum
 			}
 		}
+		# refund difference to country stockpile if not under siege
+		if = {
+			limit = { mmgsiege_is_under_siege = no }
+			subtract_variable = {
+				which = mmgsiege_energy_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+			owner = {
+				add_resource = {
+					energy = 1
+					mult = prev.mmgsiege_energy_stockpile_add
+				}
+			}
+		}
+		# set to stockpile max
 		set_variable = {
 			which = mmgsiege_energy_stockpile
 			value = mmgsiege_stockpile_maximum
@@ -311,6 +326,21 @@ mmgsiege_calculate_stockpile_maximum = {
 				value > mmgsiege_stockpile_maximum
 			}
 		}
+		# refund difference to country stockpile if not under siege
+		if = {
+			limit = { mmgsiege_is_under_siege = no }
+			subtract_variable = {
+				which = mmgsiege_minerals_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+			owner = {
+				add_resource = {
+					minerals = 1
+					mult = prev.mmgsiege_minerals_stockpile_add
+				}
+			}
+		}
+		# set to stockpile max
 		set_variable = {
 			which = mmgsiege_minerals_stockpile
 			value = mmgsiege_stockpile_maximum
@@ -324,6 +354,21 @@ mmgsiege_calculate_stockpile_maximum = {
 				value > mmgsiege_stockpile_maximum
 			}
 		}
+		# refund difference to country stockpile if not under siege
+		if = {
+			limit = { mmgsiege_is_under_siege = no }
+			subtract_variable = {
+				which = mmgsiege_food_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+			owner = {
+				add_resource = {
+					food = 1
+					mult = prev.mmgsiege_food_stockpile_add
+				}
+			}
+		}
+		# set to stockpile max
 		set_variable = {
 			which = mmgsiege_food_stockpile
 			value = mmgsiege_stockpile_maximum
@@ -337,6 +382,21 @@ mmgsiege_calculate_stockpile_maximum = {
 				value > mmgsiege_stockpile_maximum
 			}
 		}
+		# refund difference to country stockpile if not under siege
+		if = {
+			limit = { mmgsiege_is_under_siege = no }
+			subtract_variable = {
+				which = mmgsiege_consumer_goods_stockpile
+				value = mmgsiege_stockpile_maximum
+			}
+			owner = {
+				add_resource = {
+					consumer_goods = 1
+					mult = prev.mmgsiege_consumer_goods_stockpile_add
+				}
+			}
+		}
+		# set to stockpile max
 		set_variable = {
 			which = mmgsiege_consumer_goods_stockpile
 			value = mmgsiege_stockpile_maximum

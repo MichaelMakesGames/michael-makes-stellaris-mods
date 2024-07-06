@@ -43,13 +43,11 @@ mmgsiege_shortage_feature = {
 			mmgsiege_has_resource_shortage = { RESOURCE = energy }
 			exists = owner
 			any_owned_species = {
-				OR = {
-					is_archetype = ROBOT
 					is_archetype = MACHINE
-				}
 				species_has_happiness_with_owner = prev.owner
 			}
 		}
+		MACHINE_pop_happiness = 1
 		ROBOT_pop_happiness = 1
 		mult = value:mmgsiege_shortage_robot_pop_happiness|FOR_DISPLAY|no|
 	}
@@ -130,6 +128,15 @@ mmgsiege_shortage_feature = {
 	# o.  88 Yb   dP 88""Yb     Yb   dP Y8   8P   88   88"""  Y8   8P   88
 	# "bodP'  YbodP  88oodP      YbodP  `YbodP'   88   88     `YbodP'   88
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_virtual_empire = yes }
+			mmgsiege_has_resource_shortage = { RESOURCE = energy }
+		}
+		planet_virtual_jobs_produces_mult = 1
+		mult = value:mmgsiege_shortage_virtual_produces|FOR_DISPLAY|no|
+	}
 	triggered_planet_modifier = {
 		potential = {
 			mmgsiege_has_resource_shortage = { RESOURCE = minerals }

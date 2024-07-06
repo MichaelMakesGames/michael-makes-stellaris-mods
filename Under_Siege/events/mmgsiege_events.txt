@@ -125,6 +125,20 @@ event = {
 	}
 }
 
+country_event = {
+	id = mmgsiege.14
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		last_increased_tech = tech_construction_templates
+	}
+	immediate = {
+		every_owned_planet = {
+			mmgsiege_calculate_stockpile_maximum = yes
+		}
+	}
+}
+
 # update planet status on_system_controller_changed
 system_event = {
 	id = mmgsiege.31

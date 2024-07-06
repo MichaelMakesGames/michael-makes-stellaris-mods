@@ -313,6 +313,30 @@ mmgsiege_shortage_artisans_produces = {
 	}
 }
 
+mmgsiege_shortage_virtual_produces = {
+	base = 0
+	modifier = {
+		add = @mmgsiege_resource_shortage_job_produces_base
+		mmgsiege_has_resource_shortage = { RESOURCE = energy }
+	}
+	modifier = {
+		multiply = @mmgsiege_resource_shortage_level_2_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 2 }
+	}
+	modifier = {
+		multiply = @mmgsiege_resource_shortage_level_3_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 3 }
+	}
+	modifier = {
+		multiply = @mmgsiege_resource_shortage_level_4_multiply
+		mmgsiege_has_resource_shortage = { RESOURCE = energy LEVEL = 4 }
+	}
+	modifier = {
+		multiply = 100
+		always = $FOR_DISPLAY|yes$
+	}
+}
+
 mmgsiege_shortage_metallurgists_produces = {
 	base = 0
 	modifier = {

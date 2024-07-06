@@ -21,7 +21,7 @@ report_languages = [
 #   "japanese",
 #   "korean",
 #   "polish",
-#   "russian",
+  "russian",
 #   "simp_chinese",
 #   "spanish",
 ]

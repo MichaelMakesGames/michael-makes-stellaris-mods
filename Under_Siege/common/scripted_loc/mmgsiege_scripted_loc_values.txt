@@ -31,6 +31,10 @@ defined_text = {
 	value = value:mmgsiege_shortage_pop_assembly_organic_reduction
 }
 defined_text = {
+	name = mmgsiege_shortage_virtual_produces
+	value = value:mmgsiege_shortage_virtual_produces
+}
+defined_text = {
 	name = mmgsiege_shortage_artisans_produces
 	value = value:mmgsiege_shortage_artisans_produces
 }
@@ -213,20 +217,3 @@ defined_text = {
 	name = mmgsiege_stockpile_maximum
 	value = value:mmgsiege_stockpile_maximum
 }
-defined_text = {
-	name = mmgsiege_stockpile_maximum_from_capital
-	value = value:mmgsiege_stockpile_maximum_from_capital
-}
-defined_text = {
-	name = mmgsiege_stockpile_maximum_from_building_resource_silo
-	value = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|resource_silo|MULT|1000|
-}
-defined_text = {
-	name = mmgsiege_stockpile_maximum_from_building_stronghold
-	value = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|stronghold|MULT|100|
-}
-defined_text = {
-	name = mmgsiege_stockpile_maximum_from_building_fortress
-	value = value:mmgsiege_stockpile_maximum_from_buildings|BUILDING_TYPE|fortress|MULT|200|
-}
-

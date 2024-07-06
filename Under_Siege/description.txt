@@ -21,7 +21,7 @@ You can budget some of your resource income to be transferred to local planet st
 
 If you ever need more control, you can manually transfer to/from the local stockpile.
 
-A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier, +100 per stronghold, +200 per fortress, and +1000 per resource silo. Finally, a good use for resource silos! 
+A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier (+2000/5000/10000 for higher tier modded capitals supported, using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url] is highly recommended), and +500 (+1000 with tech construction templates) per resource silo. Finally, a good use for resource silos! (Modded resource silos from the follow mods are supported, providing 1/10 of their country capacity as local capacity: Additional Vanilla Buildings, Stellaris Evolved, Zenith of the Fallen Empires; other mods were checked but did not contain modded silos: )
 
 [h1]Strategic Implications[/h1]
 [list]
@@ -36,11 +36,36 @@ A planet can only stockpile so much! The maximum is determined by +100/300/500/1
   [*] For Stellaris 3.12.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
-  [*] Advanced integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2670609971]Rise of Cosmic Industry[/url]
+  [*] Integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] (dome stations do not provide jobs/housing during a siege)
+  [*] Integration with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2670609971]Rise of Cosmic Industry[/url]
   [list]
     [*] Shortages affect Autofab production
     [*] Pay shipping costs to transfer resources to local stockpiles
     [*] Planets do not pay shipping costs while under siege
+  [/list]
+  [*] Supports modded capital buildings via [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url]
+  [*] Supports modded resource silos from the following:
+  [list]
+    [*] Additional Vanilla Buildings
+    [*] Stellaris: Evolved
+    [*] Zenith of the Fallen Empires
+    [*] Additional mods were verified to not contain modded resource silos (but let me know if I missed anything):
+    [list]
+      [*] Acquisition of Technology
+      [*] Ancient Cache of Technology
+      [*] Ethics and Civics: Bug Branch
+      [*] Ethos Unique Techs and Buildings
+      [*] Gigastructural Engineering & More
+      [*] Guilli's Planet Modifiers and Features
+      [*] More Events Mod
+      [*] Planetary Diversity + submods
+      [*] Real Space + submods
+      [*] Rise of Cosmic Industry
+      [*] Star Trek: New Civilizations
+      [*] Star Wars: Legacy of the Old Republic
+      [*] Star Wars: New Dawn
+      [*] Technology Ascendent
+    [/list]
   [/list]
   [*] Should be compatible with all other mods
   [list]

@@ -13,13 +13,14 @@
  concept_mmgsiege_local_stockpile: "Планетарное Хранилище"
  concept_mmgsiege_local_stockpile_desc: "['concept_mmgsiege_local_resource_shortages'] - серьёзная проблема для каждой колонии. Во избежание водобной катастрофы - каждая планета может накапливать запасы следующих ресурсов: £energy£ энергокредиты, £minerals£ минералы, £food£ пища, а так-же £consumer_goods£ ТМС, которые может потреблять находясь ['concept_mmgsiege_under_siege'].\n\nВы можете проверить состояние вашего планетарного хранилища используя для этого следующее планетарное решение: §I['mmgsiege_decision_manage_stockpile']§!."
 
- mod_ROBOT_pop_happiness: "Счастье синтетичеких форм жизни"
+ mod_ROBOT_pop_happiness: "Mechanical Pop Happiness" # UNTRANSLATED
+ mod_MACHINE_pop_happiness: "Machine Pop Happiness" # UNTRANSLATED
  mmgsiege_zero: "0" # DO NOT TRANSLATE
  mmgsiege_newline_tab_no_effect: "\n$tt$$NO_EFFECT$" # DO NOT TRANSLATE
  mmgsiege_month: "Месяц"
  mmgsiege_months: "Месяцы"
 
- mmgsiege_local_resource_shortage_energy: "£energy£ [This.MmgsiegeEnergyShortageStatus] [This.MmgsiegeEnergyShortageSubstatus][This.MmgsiegeEnergyShortageRobotPopHappiness][This.MmgsiegeEnergyShortagePopAssemblyReduction][This.MmgsiegeEnergyShortageAdministratorsProduces][This.MmgsiegeEnergyShortageResearchersProduces][This.MmgsiegeEnergyShortageJobAmenities][This.MmgsiegeEnergyShortageOrbitalBombardmentDamage][This.MmgsiegeEnergyShortageNoEffect]" # DO NOT TRANSLATE
+ mmgsiege_local_resource_shortage_energy: "£energy£ [This.MmgsiegeEnergyShortageStatus] [This.MmgsiegeEnergyShortageSubstatus][This.MmgsiegeEnergyShortageRobotPopHappiness][This.MmgsiegeEnergyShortagePopAssemblyReduction][This.MmgsiegeEnergyShortageVirtualProduces][This.MmgsiegeEnergyShortageAdministratorsProduces][This.MmgsiegeEnergyShortageResearchersProduces][This.MmgsiegeEnergyShortageJobAmenities][This.MmgsiegeEnergyShortageOrbitalBombardmentDamage][This.MmgsiegeEnergyShortageNoEffect]" # DO NOT TRANSLATE
  mmgsiege_local_resource_shortage_minerals: "£minerals£ [This.MmgsiegeMineralsShortageStatus] [This.MmgsiegeMineralsShortageSubstatus][This.MmgsiegeMineralsShortageLithoidPopHappiness][This.MmgsiegeMineralShortageLithoidPopGrowthReduction][This.MmgsiegeMineralsShortagePopAssemblyOrganicReduction][This.MmgsiegeMineralShortageArtisansProduces][This.MmgsiegeMineralShortageMetallurgistsProduces][This.MmgsiegeMineralsShortageAdministratorsProduces][This.MmgsiegeMineralsShortageResearchersProduces][This.MmgsiegeMineralsShortageJobAmenities][This.MmgsiegeMineralsShortageOrbitalBombardmentDamage][This.MmgsiegeMineralsShortageNoEffect]" # DO NOT TRANSLATE
  mmgsiege_local_resource_shortage_food: "£food£ [This.MmgsiegeFoodShortageStatus] [This.MmgsiegeFoodShortageSubstatus][This.MmgsiegeFoodShortageBiologicalPopHappiness][This.MmgsiegeFoodShortageBiologicalPopGrowthReduction][This.MmgsiegeFoodShortagePopAssemblyOrganicReduction][This.MmgsiegeFoodShortageMetallurgistsProduces][This.MmgsiegeFoodShortageAdministratorsProduces][This.MmgsiegeFoodShortageJobAmenities][This.MmgsiegeFoodShortageNoEffect]" # DO NOT TRANSLATE
  mmgsiege_local_resource_shortage_consumer_goods: "£consumer_goods£ [This.MmgsiegeConsumerGoodsShortageStatus] [This.MmgsiegeConsumerGoodsShortageSubstatus][This.MmgsiegeConsumerGoodsShortageBioTrophyHappiness][This.MmgsiegeConsumerGoodsShortageAdministratorsProduces][This.MmgsiegeConsumerGoodsShortageResearchersProduces][This.MmgsiegeConsumerGoodsShortageJobAmenities][This.MmgsiegeConsumerGoodsShortageNoEffect]" # DO NOT TRANSLATE
@@ -35,6 +36,7 @@
  mmgsiege_shortage_pop_assembly_reduction: "\n$tt$§T$MOD_PLANET_POP_ASSEMBLY_REDUCTION$:§! §R[This.mmgsiege_shortage_pop_assembly_reduction]%§!" # DO NOT TRANSLATE
  mmgsiege_shortage_pop_assembly_organic_reduction: "\n$tt$§T$MOD_PLANET_POP_ASSEMBLY_ORGANIC_REDUCTION$:§! §R[This.mmgsiege_shortage_pop_assembly_organic_reduction]%§!" # DO NOT TRANSLATE
 
+ mmgsiege_shortage_virtual_produces: "\n$tt$§T$mod_planet_virtual_jobs_produces_mult$:§! §R[This.mmgsiege_shortage_virtual_produces]%§!" # DO NOT TRANSLATE
  mmgsiege_shortage_artisans_produces: "\n$tt$§T$mod_planet_artisans_produces_mult$:§! §R[This.mmgsiege_shortage_artisans_produces]%§!" # DO NOT TRANSLATE
  mmgsiege_shortage_metallurgists_produces: "\n$tt$§T$mod_planet_metallurgists_produces_mult$:§! §R[This.mmgsiege_shortage_metallurgists_produces]%§!" # DO NOT TRANSLATE
  mmgsiege_shortage_administrators_produces: "\n$tt$§T$mod_planet_administrators_produces_mult$:§! §R[This.mmgsiege_shortage_administrators_produces]%§!" # DO NOT TRANSLATE
@@ -70,7 +72,7 @@
  mmgsiege_shortage_feature_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
 
  mmgsiege_decision_manage_stockpile: "Открыть Хранилище"
- mmgsiege_decision_manage_stockpile_desc: "Размер Хранилища увеличивается за счёт:\n - §Hпланетарной столицы§! на §Y+100/300/500/1000§! контейнеров\n - §Hцитадели§! §Y+100§! контейнеров за каждую\n - §Hкрепости§! §Y+200§! контейнеров за каждую\n - §Hресурсного бункера§! §Y+1000§! контейнеров за каждый"
+ mmgsiege_decision_manage_stockpile_desc: "Stockpile maximum is increased by:\n+100/300/500/1000 from Planet Capital\n+1/10 of the country max provided by any silos on the planet" # UNTRANSLATED
  mmgsiege_decision_manage_stockpile_effect: "Управление складом.\n\nТекущее хранилище:\n£energy£ [This.GetEnergyStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£minerals£ [This.GetMineralsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£food£ [This.GetFoodStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£consumer_goods£ [This.GetConsumerGoodsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!"
 
  mmgsiege_energy_budget_percent_and_value: "£energy£ [From.mmgsiege_energy_stockpile_budget_percent]% ([From.mmgsiege_energy_stockpile_budget])" # DO NOT TRANSLATE
