@@ -21,7 +21,7 @@ You can budget some of your resource income to be transferred to local planet st
 
 If you ever need more control, you can manually transfer to/from the local stockpile.
 
-A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier (+2000/5000/10000 for higher tier modded capitals supported, using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url] is highly recommended), and +500 (+1000 with tech construction templates) per resource silo. Finally, a good use for resource silos! (Modded resource silos from the follow mods are supported, providing 1/10 of their country capacity as local capacity: Additional Vanilla Buildings, Stellaris Evolved, Zenith of the Fallen Empires; other mods were checked but did not contain modded silos: )
+A planet can only stockpile so much! The maximum is determined by +100/300/500/1000 from planet capital tier (+2000/5000/10000 for higher tier modded capitals supported, using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164]the Merger of Rules[/url] is highly recommended), and +500 (+1000 with tech construction templates) per resource silo. Finally, a good use for resource silos! (Modded resource silos from the follow mods are supported, providing 1/10 of their country capacity as local capacity: see supported mods below in the Compatibility section.)
 
 [h1]Strategic Implications[/h1]
 [list]
