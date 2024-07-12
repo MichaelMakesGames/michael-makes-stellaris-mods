@@ -13,8 +13,8 @@
  concept_mmgsiege_local_stockpile: "Планетарное Хранилище"
  concept_mmgsiege_local_stockpile_desc: "['concept_mmgsiege_local_resource_shortages'] - серьёзная проблема для каждой колонии. Во избежание водобной катастрофы - каждая планета может накапливать запасы следующих ресурсов: £energy£ энергокредиты, £minerals£ минералы, £food£ пища, а так-же £consumer_goods£ ТМС, которые может потреблять находясь ['concept_mmgsiege_under_siege'].\n\nВы можете проверить состояние вашего планетарного хранилища используя для этого следующее планетарное решение: §I['mmgsiege_decision_manage_stockpile']§!."
 
- mod_ROBOT_pop_happiness: "Mechanical Pop Happiness" # UNTRANSLATED
- mod_MACHINE_pop_happiness: "Machine Pop Happiness" # UNTRANSLATED
+ mod_ROBOT_pop_happiness: "Счастье синтетичеких форм жизни"
+ mod_MACHINE_pop_happiness: "Счастье кибернетических форм жизни"
  mmgsiege_zero: "0" # DO NOT TRANSLATE
  mmgsiege_newline_tab_no_effect: "\n$tt$$NO_EFFECT$" # DO NOT TRANSLATE
  mmgsiege_month: "Месяц"
@@ -72,7 +72,7 @@
  mmgsiege_shortage_feature_desc: "$BLANK_STRING$" # DO NOT TRANSLATE
 
  mmgsiege_decision_manage_stockpile: "Открыть Хранилище"
- mmgsiege_decision_manage_stockpile_desc: "Stockpile maximum is increased by:\n+100/300/500/1000 from Planet Capital\n+1/10 of the country max provided by any silos on the planet" # UNTRANSLATED
+ mmgsiege_decision_manage_stockpile_desc: "Размер Хранилища увеличивается за счёт:\n - §Hпланетарной столицы§! на §Y+100/300/500/1000§! контейнеров\n+1/10 от максимального объема хранилищ государства, обеспечиваемого планетарными строениями вида §Hресурсный бункер§!"
  mmgsiege_decision_manage_stockpile_effect: "Управление складом.\n\nТекущее хранилище:\n£energy£ [This.GetEnergyStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£minerals£ [This.GetMineralsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£food£ [This.GetFoodStockpile]§L/[This.mmgsiege_stockpile_maximum]§!\n£consumer_goods£ [This.GetConsumerGoodsStockpile]§L/[This.mmgsiege_stockpile_maximum]§!"
 
  mmgsiege_energy_budget_percent_and_value: "£energy£ [From.mmgsiege_energy_stockpile_budget_percent]% ([From.mmgsiege_energy_stockpile_budget])" # DO NOT TRANSLATE
