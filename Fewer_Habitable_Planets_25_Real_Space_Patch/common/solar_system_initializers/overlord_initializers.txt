@@ -319,7 +319,7 @@ salvager_enclave_init_03 = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 25 max = 35 }
+		size = { min = 15 max = 25 }
 		has_ring = no
 		init_effect = {
 			prevent_anomaly = yes
@@ -328,7 +328,7 @@ salvager_enclave_init_03 = {
 				type = ruined_quantum_catapult_object
 				location = prev
 			    use_3d_location = yes
-			    entity_offset_height = -12
+			    entity_offset_height = @salvager_ruined_quantum_catapult
 			}
 
 			create_ambient_object = {

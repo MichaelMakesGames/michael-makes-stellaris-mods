@@ -587,6 +587,7 @@ guardians_curator_init_01 = {
 			OR = {
 				has_leviathans = yes
 				has_distar = yes
+				has_grand_archive_dlc = yes
 			}
 			add = 100
 		}
@@ -754,6 +755,7 @@ guardians_curator_init_02 = {
 			OR = {
 				has_leviathans = yes
 				has_distar = yes
+				has_grand_archive_dlc = yes
 			}
 			add = 100
 		}
@@ -899,6 +901,7 @@ guardians_curator_init_03 = {
 			OR = {
 				has_leviathans = yes
 				has_distar = yes
+				has_grand_archive_dlc = yes
 			}
 			add = 100
 		}
@@ -1303,17 +1306,17 @@ guardians_trader_init_02 = {
 		size = { min = @standard_min max = @standard_max }
 		has_ring = no
 	}
-	
+
 	change_orbit = { min = 30 max = 60 }
-	
+
 	planet = {
 		count = 1
 		orbit_distance = { min = 15 max = 20 }
 		orbit_angle = { min = 90 max = 270 }
 		flags = { hot_zone }
-		
+
 		change_orbit = @base_moon_distance
-		
+
 		moon = {
 			count = { min = 0 max = 1 }
 			orbit_angle = { min = 90 max = 270 }
@@ -1769,7 +1772,7 @@ guardians_init_stellarites = {
 			orbit_distance = 5
 		}
 	}
-	
+
 	planet = {
 		count = { min = 0 max = 1 }
 		orbit_distance = { min = 30 max = 35 }

@@ -20,7 +20,7 @@ What makes this mod different than others that "do the same thing"?
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.12.5
+  [*] For Stellaris 3.14.159
   [*] NOT achievement compatible
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3002468170]Real Space Patch[/url] ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=3124415369]0.10x version[/url])
   [*] Broadly compatible with other mods that change galaxy generation. Place this mod near the top of your load order so other mods can overwrite my changes (I overwrite event distar.290 and many files in common/solar_system_initializers)

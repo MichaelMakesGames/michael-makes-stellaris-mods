@@ -6,13 +6,13 @@ When using a supported total conversion, you just need to enable that mod and th
 
 [h1]Supported Total Conversions[/h1]
 [list]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2791119024]Star Wars: Legacy of the Old Republic[/url] (for Stellaris 3.12+)
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721]Star Wars: New Dawn[/url] (for Stellaris 3.12+)
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2791119024]Star Wars: Legacy of the Old Republic[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721]Star Wars: New Dawn[/url]
 [/list]
 
 [h1]Other Compatibility Notes[/h1]
 [list]
-  [*] For Stellaris 3.12.*
+  [*] For Stellaris 3.14.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game, but works best if the AI has not started building hyper relays yet
   [*] Can be removed from an existing game

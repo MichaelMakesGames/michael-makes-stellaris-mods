@@ -21,7 +21,7 @@ This does not modify the vanilla bonuses from Commercial Pacts; border trade val
 
 [h1]Compatibility[/h1]
 [list]
-  [*] For Stellaris 3.12.*
+  [*] For Stellaris 3.14.*
   [*] NOT achievement compatible
   [*] Can be added to an existing game
   [*] Can be removed from an existing game. You might see "empty" modifiers on stars
